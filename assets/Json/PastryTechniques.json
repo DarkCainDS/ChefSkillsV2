@@ -1,0 +1,81 @@
+{
+  "techniques": [
+    {
+      "id": 1,
+      "name": "Batido",
+      "description": "Incorporación de aire para obtener masas y mezclas ligeras y con volumen estable.",
+      "imageUrl": "https://example.com/images/batido.jpg",
+      "detailedInfo": "**Qué es:** Técnica que incorpora aire en una mezcla para crear volumen y ligereza, esencial en preparaciones como bizcochos, mousses y cremas.  \n\n**Tipos de Batido:** Se distingue entre el batido por cremado (mantequilla + azúcar, ideal para bizcochos) y el batido por incorporación (alternando secos y líquidos para masas equilibradas).  \n\n**Función de los Ingredientes:** La mantequilla y el azúcar ayudan a atrapar aire; los huevos aportan estructura y emulsión.  \n\n**Consejos:** Utilizar ingredientes a temperatura ambiente y no sobrebatir para evitar colapsos.  \n\n**Usos Comunes:** Bizcochos, muffins, cremas aireadas y batidos base de pastelería."
+    },
+    {
+      "id": 2,
+      "name": "Crema Batida",
+      "description": "Emulsión aireada de crema con grasa estable para decoración y rellenos.",
+      "imageUrl": "https://example.com/images/crema_batida.jpg",
+      "detailedInfo": "**Qué es:** La crema batida es una emulsión de grasa láctea y aire. Su textura depende de la cantidad de aire incorporado durante el batido.  \n\n**Puntos de Montado:**  \n- Pico suave: textura cremosa, ideal para mousses.  \n- Pico firme: más estable, usada en decoración.  \n\n**Temperatura:** Debe mantenerse entre 4°C y 8°C para lograr un batido firme sin formar mantequilla.  \n\n**Estabilizantes Naturales:** Se pueden añadir pequeñas cantidades de gelatina, leche en polvo o almidón de maíz para aumentar la resistencia al calor.  \n\n**Consejos:** Usar crema con al menos 35% de grasa y enfriar previamente los utensilios."
+    },
+    {
+      "id": 3,
+      "name": "Templado de Chocolate",
+      "description": "Control de temperatura del chocolate para lograr brillo y textura firme.",
+      "imageUrl": "https://example.com/images/templado_chocolate.jpg",
+      "detailedInfo": "**Qué es:** Proceso de calentamiento, enfriamiento y reactivación del chocolate para estabilizar su estructura cristalina.  \n\n**Temperaturas Clave:**  \n- Fusión (45–50°C): destruye cristales irregulares.  \n- Enfriado (26–28°C): forma cristales estables tipo V (Beta).  \n- Trabajo (31–32°C): mantiene la fluidez y brillo.  \n\n**Cristalización Beta:** Son cristales de manteca de cacao que aportan brillo, textura firme y un 'snap' característico.  \n\n**Consejos:** Evitar humedad, usar utensilios secos y mezclar con suavidad.  \n\n**Usos Comunes:** Bombones, coberturas, tabletas y decoraciones finas."
+    },
+    {
+      "id": 4,
+      "name": "Hojaldrado",
+      "description": "Formación de capas alternadas de masa y mantequilla mediante pliegues controlados.",
+      "imageUrl": "https://example.com/images/hojaldrado.jpg",
+      "detailedInfo": "**Qué es:** Técnica para crear múltiples capas finas de masa separadas por mantequilla, generando una textura crujiente y aireada.  \n\n**Temperatura:** Masa y mantequilla deben tener temperatura similar (alrededor de 15°C) para evitar que la grasa se derrita o rompa.  \n\n**Pliegues Comunes:**  \n- Simple: doblar la masa en tres partes.  \n- Doble: doblar en cuatro partes.  \n\n**Consejos:** Trabajar en superficie fría, descansar la masa entre pliegues y no presionar en exceso.  \n\n**Usos Comunes:** Croissants, milhojas, empanadas y pasteles laminados."
+    },
+    {
+      "id": 5,
+      "name": "Punto de Almíbar y Caramelo",
+      "description": "Etapas de cocción del azúcar determinadas por su temperatura y textura.",
+      "imageUrl": "https://example.com/images/almibar_caramelo.jpg",
+      "detailedInfo": "**Qué es:** Técnica que describe los distintos grados de cocción del azúcar, desde almíbar ligero hasta caramelo oscuro.  \n\n**Puntos Principales:**  \n- Hilo: 103–105°C.  \n- Bola blanda: 112–116°C.  \n- Bola dura: 128–130°C.  \n- Quebrado: 145–150°C.  \n- Caramelo: 155–170°C.  \n\n**Consejos:** No revolver una vez que el azúcar hierve para evitar cristalización. Usar termómetro de cocina para precisión.  \n\n**Usos Comunes:** Merengues italianos, praliné, toffee, y caramelos duros."
+    },
+    {
+      "id": 6,
+      "name": "Gelificación y Esferificación",
+      "description": "Formación de geles y esferas mediante agentes naturales o reacciones químicas.",
+      "imageUrl": "https://example.com/images/gelificacion_esferificacion.jpg",
+      "detailedInfo": "**Qué es:** Procesos que modifican la textura líquida mediante gelificantes o interacción química entre calcio y alginato.  \n\n**Diferencias Texturales:** La gelatina es termorreversible (se derrite con calor), mientras que el agar-agar es termoestable (resiste el calor).  \n\n**Ingredientes Clave:** Alginato de sodio y calcio para esferificación directa; Gluconolactato de calcio para esferificación inversa sin sabor añadido.  \n\n**Consejos:** Controlar el pH y evitar batir en exceso para mantener la transparencia.  \n\n**Usos Comunes:** Caviar de frutas, geles, y postres de vanguardia."
+    },
+    {
+      "id": 7,
+      "name": "Glaseado o Frosting",
+      "description": "Cobertura cremosa o brillante usada para decorar y proteger preparaciones.",
+      "imageUrl": "https://example.com/images/glaseado_frosting.jpg",
+      "detailedInfo": "**Qué es:** Mezcla dulce utilizada como cobertura o decoración para tortas y cupcakes.  \n\n**Diferencia:** Un glaseado (icing) es más fino y brillante (azúcar glas + líquido), mientras que el frosting es una crema espesa con grasa (mantequilla o queso crema).  \n\n**Tipos de Buttercream:**  \n- Americana: mantequilla + azúcar glas.  \n- Suiza: merengue + mantequilla.  \n- Italiana: almíbar + merengue + mantequilla.  \n\n**Consejos:** Batir hasta lograr textura sedosa. Mantener refrigerado y suavizar antes de usar.  \n\n**Usos Comunes:** Coberturas, rellenos y decoración de pasteles."
+    },
+    {
+      "id": 8,
+      "name": "Montado de Claras (Merengue)",
+      "description": "Batido de claras de huevo con azúcar para crear espumas estables y brillantes.",
+      "imageUrl": "https://example.com/images/merengue.jpg",
+      "detailedInfo": "**Qué es:** Técnica de batido de claras para incorporar aire y obtener una espuma ligera, usada en postres y coberturas.  \n\n**Tipos:**  \n- Francés: azúcar añadido en seco.  \n- Suizo: claras y azúcar a baño maría (60°C).  \n- Italiano: almíbar caliente sobre claras batidas.  \n\n**Puntos de Batido:**  \n- Pico suave: textura cremosa.  \n- Pico firme: estructura estable.  \n- Pico seco: merengue quebradizo.  \n\n**Función del Ácido:** Añadir unas gotas de limón o cremor tártaro estabiliza la espuma.  \n\n**Consejos:** Evitar grasa o yema en las claras. Usar bol metálico limpio."
+    },
+    {
+      "id": 9,
+      "name": "Caramelizado",
+      "description": "Proceso de dorado del azúcar por acción del calor, generando color, sabor y aroma.",
+      "imageUrl": "https://example.com/images/caramelizado.jpg",
+      "detailedInfo": "**Qué es:** Reacción del azúcar al calor que produce compuestos aromáticos, color ámbar y sabor tostado.  \n\n**Métodos:**  \n- Seco: calentar azúcar sin agua.  \n- Húmedo: disolver azúcar en agua antes de calentar.  \n\n**Consejos:** Evitar que se cristalice limpiando los bordes del cazo con pincel húmedo o añadiendo unas gotas de limón.  \n\n**Desglasado:** Al añadir agua, crema o licor, se detiene la cocción y se crea una salsa de caramelo suave.  \n\n**Usos Comunes:** Flanes, pralinés, caramelos y salsas dulces."
+    },
+    {
+      "id": 10,
+      "name": "Fondant",
+      "description": "Pasta dulce elástica utilizada para cubrir tortas o modelar decoraciones.",
+      "imageUrl": "https://example.com/images/fondant.jpg",
+      "detailedInfo": "**Qué es:** Mezcla de azúcar, glucosa y gelatina que crea una masa elástica y lisa para cobertura o modelado.  \n\n**Variantes:**  \n- Fondant extendido: usado para cubrir.  \n- Fondant líquido: usado para glaseados brillantes.  \n- Gum Paste: versión más elástica que seca rápido, ideal para flores finas.  \n\n**Función de la Glucosa:** Aporta elasticidad y evita la cristalización del azúcar.  \n\n**Consejos:** Amasar bien antes de usar y mantener cubierto para evitar que se seque."
+    },
+    {
+      "id": 11,
+      "name": "Ganache",
+      "description": "Emulsión suave de chocolate y crema, base de rellenos, coberturas y trufas.",
+      "imageUrl": "https://example.com/images/ganache.jpg",
+      "detailedInfo": "**Qué es:** Mezcla de chocolate y crema caliente que, al emulsionarse, crea una textura brillante y cremosa.  \n\n**Proporciones:**  \n- Rellenos: 1 parte crema / 2 partes chocolate.  \n- Coberturas: 1:1.  \n- Salsas: 2:1 (más fluida).  \n\n**Método Correcto:** Mezclar desde el centro lentamente para formar una emulsión estable.  \n\n**Calidad del Chocolate:** Usar chocolate de cobertura (couverture) con alto contenido de manteca de cacao para mejor textura y brillo.  \n\n**Consejos:** No sobrecalentar la crema. Reposar y remover antes de usar."
+    }
+  ]
+}

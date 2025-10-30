@@ -1,0 +1,150 @@
+    {
+      "id": 1,
+      "name": "Corte Brunoise",
+      "description": "Corte en cubos muy pequeños, ideal para sofritos y guarniciones.",
+      "detailedInfo": "El corte Brunoise consiste en cortar los alimentos en cubos diminutos de aproximadamente 1 a 2 mm. Se utiliza comúnmente en verduras como zanahorias, cebollas y apio, y es muy adecuado para sofritos y bases aromáticas de salsas y guisos. La técnica ayuda a una cocción uniforme y rápida, liberando al mismo tiempo los sabores de los ingredientes.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Brunoise/Brunoisse+de+Papa.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Brunoise/Brunoisse+de+pimiento.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Brunoise/Brunoisse+de+Remolacha.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Brunoise/Brunoisse+de+Zanahoria.webp"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Corte Juliana",
+      "description": "Corte en tiras finas, ideal para ensaladas o salteados.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/juliana/Juliana+de+Cebolla.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/juliana/Juliana+de+Pimientos.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/juliana/Juliana+de+Repollo.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/juliana/Juliana+de+Zucchini.webp"
+      ],
+      "detailedInfo": "El corte Juliana se caracteriza por producir tiras largas y finas, de unos 5 cm de largo y entre 1 y 2 mm de ancho. Se utiliza comúnmente en pimientos, zanahorias y otras verduras. Es un corte perfecto para salteados, ensaladas y platos donde los ingredientes deben ser visibles y cocerse rápidamente sin perder textura."
+    },
+    {
+      "id": 3,
+      "name": "Corte Mirepoix",
+      "description": "Corte en cubos medianos, base aromática para caldos y guisos.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Mirepoix/Mirepoix+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Mirepoix/Mirepoix+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Mirepoix/Mirepoix+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Mirepoix/Mirepoix+4.webp"
+      ],
+      "detailedInfo": "La Mirepoix es un tipo de corte rústico en cubos de aproximadamente 1 a 2 cm, generalmente para cebolla, zanahoria y apio. Es la base aromática clásica en caldos, sopas y guisos, aportando profundidad de sabor a los platos debido a su cocción prolongada que permite extraer los jugos y sabores de las verduras."
+    },
+    {
+      "id": 4,
+      "name": "Corte Bastones",
+      "description": "Tiras gruesas y rectangulares, típicas para papas fritas y verduras al vapor.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Bastones/Bastones+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Bastones/Bastones+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Bastones/Bastones+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Bastones/Bastones+4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Bastones/Bastones+5.webp"
+      ],
+      "detailedInfo": "El corte en bastones consiste en cortar los ingredientes en tiras gruesas y rectangulares de aproximadamente 1 cm de ancho. Es comúnmente utilizado en papas para papas fritas, pero también puede aplicarse a otras verduras que serán asadas, salteadas o al vapor."
+    },
+    {
+      "id": 5,
+      "name": "Corte en Rodajas",
+      "description": "Discos delgados, ideales para guarniciones o gratinados.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Rodajas/Rodajas+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Rodajas/Rodajas+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Rodajas/Rodajas+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Rodajas/Rodajas+4.webp"
+      ],
+      "detailedInfo": "El corte en rodajas produce discos uniformes de ingredientes, generalmente de 2 a 5 mm de grosor. Es ideal para tomates, zanahorias y otros vegetales que se utilicen en ensaladas, guarniciones o platos gratinados."
+    },
+    {
+      "id": 6,
+      "name": "Chips",
+      "description": "Láminas muy finas, perfectas para freír.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chips/Chips+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chips/Chips+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chips/Chips+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chips/Chips+4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chips/Chips+5.webp"
+      ],
+      "detailedInfo": "El corte \"chips\" se aplica generalmente a tubérculos como la papa y el camote, así como a algunas raíces como la zanahoria y la betarraga. Se caracteriza por ser rodajas redondas y muy delgadas, con un grosor menor a 1 mm. Este tipo de corte se utiliza comúnmente para: Freír: Las clásicas papas fritas \"chips\" que son crujientes y delgadas. Decoración: Por su forma y la crocancia que aportan al freírse u hornearse, se utilizan para decorar diversos platos, añadiendo altura y textura. Para obtener un corte \"chips\" uniforme, a menudo se utiliza una mandolina, aunque con un cuchillo muy afilado y práctica también se puede lograr."
+    },
+    {
+      "id": 7,
+      "name": "Corte Chiffonade",
+      "description": "Tiras finas de hojas, ideal para ensaladas y guarniciones.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chiffonade/Chiffonade+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chiffonade/Chiffonade+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chiffonade/Chiffonade+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chiffonade/Chiffonade+4.webp"
+      ],
+      "detailedInfo": "El corte chiffonade es una técnica de corte utilizada principalmente en verduras de hoja ancha y algunas hierbas. El término proviene del francés \"chiffonner\", que significa \"arrugar\" o \"enrollar\".\n\n¿Cómo se realiza?\n\nLa técnica consiste en apilar varias hojas (como espinaca, lechuga, albahaca, menta, etc.), enrollarlas firmemente formando un cilindro y luego cortar este rollo transversalmente en tiras finas y alargadas, de aproximadamente 2 a 3 milímetros de ancho.\n\n¿Para qué se utiliza?\n\nEl corte chiffonade se utiliza principalmente para:\n\nGarnitura: Las finas tiras aportan un toque visual elegante y fresco a diversos platos como sopas, ensaladas, pastas, pizzas y carnes.\nIncorporación en preparaciones: Al cortar las hojas de esta manera, se facilita su mezcla y distribución uniforme en ensaladas o como parte de rellenos.\nLiberación de aromas: En el caso de las hierbas, este corte ayuda a liberar mejor sus aceites esenciales y aromas.\nTextura: Las tiras finas pueden aportar una textura delicada a las preparaciones.\n\nEjemplos comunes:\n\nAlbahaca chiffonade sobre una pizza margarita.\nEspinacas chiffonade en una sopa.\nLechuga romana cortada en chiffonade para una ensalada César.\nMenta chiffonade como decoración en un postre o bebida.\n\nEs importante utilizar un cuchillo afilado para realizar este corte de manera limpia y evitar magullar las hojas."
+    },
+    {
+      "id": 8,
+      "name": "Corte Concassé",
+      "description": "Tomates pelados, sin semillas y picados.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Concasse/Concasse+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Concasse/Concasse+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Concasse/Concasse+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Concasse/Concasse+5.webp"
+      ],
+      "detailedInfo": "El corte concassé es una técnica culinaria francesa que se refiere a cortar verduras, generalmente tomates, en cubos pequeños y uniformes después de haberles quitado la piel y las semillas.\n\nEn esencia, el proceso para hacer un concassé de tomate implica los siguientes pasos:\n\n1. Escaldar los tomates: Se sumergen brevemente en agua hirviendo para aflojar la piel.\n2. Enfriar en agua helada: Esto detiene la cocción y facilita la manipulación.\n3. Pelar los tomates: La piel se desprende fácilmente después del escaldado.\n4. Cortar por la mitad y retirar las semillas: Se elimina la parte interior jugosa y las semillas.\n5. Cortar la pulpa en cubos: Finalmente, la carne del tomate se corta en pequeños dados de aproximadamente 5 mm por lado.\n\nAunque el término \"concassé\" se asocia principalmente con los tomates, la técnica de pelar, quitar las semillas y cortar en cubos también se puede aplicar a otras verduras.\n\nEl corte concassé es muy utilizado en la cocina para preparar salsas, guisos, ensaladas, rellenos y muchas otras preparaciones donde se busca una textura definida y un sabor puro de la verdura, sin la presencia de piel o semillas."
+    },
+    {
+      "id": 9,
+      "name": "Corte Torneado",
+      "description": "Verduras con forma de cilindro, para presentaciones elegantes.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Torneado/Torneado+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Torneado/Torneado+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Torneado/Torneado+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Torneado/Torneado+4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Torneado/Torneado+5.webp"
+      ],
+      "detailedInfo": "El corte torneado es una técnica culinaria clásica que consiste en dar a verduras firmes una forma ovalada y regular, como pequeños barriles. Se utiliza un cuchillo puntilla para pelar la verdura y luego tallar sus lados, creando generalmente entre 5 y 7 caras curvas.\n\nEl objetivo principal es doble:\n\n- **Mejorar la presentación del plato**: Las verduras torneadas lucen más elegantes y uniformes.\n- **Lograr una cocción más pareja**: La forma regular permite que el calor se distribuya de manera más uniforme.\n\nSe aplica comúnmente a zanahorias, papas, calabacines y otras hortalizas que se sirven como guarnición. Aunque requiere práctica, el resultado final realza la calidad visual de las preparaciones."
+    },
+    {
+      "id": 10,
+      "name": "Corte Paysana",
+      "description": "Cubos pequeños e irregulares, para sopas y guisos.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Paysana/Paysana+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Paysana/Paysana+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Paysana/Paysana+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Paysana/Paysana+4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Paysana/Paysana+5.webp"
+      ],
+      "detailedInfo": "El Corte Paysana, también conocido como paysanne, es un tipo de corte de verduras que se caracteriza por producir piezas planas, cuadradas, rectangulares o triangulares, de aproximadamente 1 cm de lado y unos 2 mm de grosor.\n\nCaracterísticas principales del Corte Paysana:\n\n- **Forma**: Cuadrados, rectángulos o triángulos delgados. La forma puede ser un poco irregular para mantener la apariencia natural de la verdura, especialmente en platos tradicionales.\n- **Tamaño**: Aproximadamente 1 cm de lado y 2 mm de grosor.\n- **Usos comunes**: Se utiliza principalmente para verduras en preparaciones como:\n  - Sopas de cocción rápida: Debido a su pequeño tamaño, las verduras se cocinan rápidamente.\n  - Guarniciones salteadas: Aportan una presentación uniforme y se cocinan de manera homogénea.\n  - Pistos y menestras: Donde se busca una variedad de verduras cortadas de forma similar.\n  - Relleno para tortillas.\n\n**Cómo se realiza el Corte Paysana:**\n\nGeneralmente, se siguen estos pasos:\n\n1. Cortar la verdura en rodajas del grosor deseado (aproximadamente 2 mm).\n2. Apilar las rodajas y cortar tiras de aproximadamente 1 cm de ancho.\n3. Cortar las tiras transversalmente para obtener los cuadrados o rectángulos. Para obtener triángulos, se pueden cortar los cuadrados o rectángulos por la diagonal.\n\nEn resumen, el Corte Paysana es una técnica culinaria fundamental para cortar verduras en piezas pequeñas, planas y uniformes, ideal para una variedad de preparaciones donde la cocción rápida y una presentación prolija son importantes."
+    },
+    {
+      "id": 11,
+      "name": "Corte Batonnet",
+      "description": "Tiras rectangulares gruesas, ideales para cocciones largas y uniformes.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Batonnet/Batonnet+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Batonnet/Batonnet+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Batonnet/Batonnet+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Batonnet/Batonnet+4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Batonnet/Batonnet+5.webp"
+      ],
+      "detailedInfo": "El corte batonnet es una técnica culinaria que produce bastones rectangulares de vegetales, con una medida estándar de aproximadamente 6-7 cm de largo y 1 cm de grosor. Este corte es fundamental para lograr uniformidad en la cocción y una presentación ordenada. A menudo, se utiliza como base para otros cortes más pequeños, como el brunoise. Se aplica comúnmente a verduras firmes como zanahorias, papas, pepinos y otras hortalizas."
+    },
+    {
+      "id": 12,
+      "name": "Corte Vichy",
+      "description": "Rodajas finas y uniformes, ideales para zanahorias y tubérculos.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Vichy/Vichy+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Vichy/Vichy+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Vichy/Vichy+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Vichy/Vichy+4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Vichy/Vichy+5.webp"
+      ],
+      "detailedInfo": "El corte Vichy consiste en cortar vegetales, principalmente zanahorias o papas, en rodajas finas de aproximadamente 2 a 3 mm de grosor. Es común en preparaciones donde los vegetales se cocinan de forma uniforme en caldo ligero, agua con mantequilla o glaseados, resaltando su sabor y textura. Este corte es característico de la cocina francesa y se asocia especialmente con guarniciones elegantes."
+    },

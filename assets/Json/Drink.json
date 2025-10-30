@@ -1,0 +1,619 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "uid": "R-DRINK_000001",
+      "name": "Mojito",
+      "description": "Cóctel refrescante con ron, menta y lima.",
+      "imageUrl": "https://example.com/mojito.jpg",
+      "detailedInfo": "Ideal para días calurosos y reuniones al aire libre.",
+      "ingredients": [
+        { "name": "Ron blanco", "quantity": "50ml" },
+        { "name": "Hojas de menta", "quantity": "10" },
+        { "name": "Azúcar", "quantity": "2 cditas" },
+        { "name": "Jugo de lima", "quantity": "25ml" },
+        { "name": "Agua con gas", "quantity": "100ml" },
+        { "name": "Hielo", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Macerar menta con azúcar y jugo de lima." },
+        { "step": "Añadir ron y hielo." },
+        { "step": "Completar con agua con gas y revolver suavemente." }
+      ],
+      "images": [
+        "https://example.com/mojito1.webp",
+        "https://example.com/mojito2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 2,
+      "uid": "R-DRINK_000002",
+      "name": "Margarita",
+      "description": "Cóctel mexicano clásico con tequila y lima.",
+      "imageUrl": "https://example.com/margarita.jpg",
+      "detailedInfo": "Perfecta para fiestas y celebraciones, con borde de sal opcional.",
+      "ingredients": [
+        { "name": "Tequila", "quantity": "50ml" },
+        { "name": "Triple sec", "quantity": "25ml" },
+        { "name": "Jugo de lima", "quantity": "25ml" },
+        { "name": "Hielo", "quantity": "Al gusto" },
+        { "name": "Sal para el borde", "quantity": "Opcional" }
+      ],
+      "steps": [
+        { "step": "Humedece el borde del vaso y agrega sal." },
+        { "step": "Agita tequila, triple sec y jugo de lima con hielo." },
+        { "step": "Sirve colado en vaso preparado." }
+      ],
+      "images": [
+        "https://example.com/margarita1.webp",
+        "https://example.com/margarita2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 3,
+      "uid": "R-DRINK_000003",
+      "name": "Piña Colada",
+      "description": "Cóctel tropical dulce de piña y coco.",
+      "imageUrl": "https://example.com/pina-colada.jpg",
+      "detailedInfo": "Ideal para playas o climas cálidos, servido frío.",
+      "ingredients": [
+        { "name": "Ron blanco", "quantity": "50ml" },
+        { "name": "Crema de coco", "quantity": "50ml" },
+        { "name": "Jugo de piña", "quantity": "100ml" },
+        { "name": "Hielo", "quantity": "Al gusto" },
+        { "name": "Rodaja de piña", "quantity": "1 para decorar" }
+      ],
+      "steps": [
+        { "step": "Licuar todos los ingredientes con hielo." },
+        { "step": "Servir en vaso alto y decorar con rodaja de piña." }
+      ],
+      "images": [
+        "https://example.com/pinacolada1.webp",
+        "https://example.com/pinacolada2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 4,
+      "uid": "R-DRINK_000004",
+      "name": "Negroni",
+      "description": "Cóctel italiano clásico, amargo y aromático.",
+      "imageUrl": "https://example.com/negroni.jpg",
+      "detailedInfo": "Perfecto como aperitivo antes de la cena.",
+      "ingredients": [
+        { "name": "Gin", "quantity": "30ml" },
+        { "name": "Campari", "quantity": "30ml" },
+        { "name": "Vermouth rojo", "quantity": "30ml" },
+        { "name": "Hielo", "quantity": "Al gusto" },
+        { "name": "Rodaja de naranja", "quantity": "1 para decorar" }
+      ],
+      "steps": [
+        { "step": "Verter todos los ingredientes en vaso con hielo." },
+        { "step": "Revolver suavemente y decorar con naranja." }
+      ],
+      "images": [
+        "https://example.com/negroni1.webp",
+        "https://example.com/negroni2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 5,
+      "uid": "R-DRINK_000005",
+      "name": "Martini",
+      "description": "Cóctel elegante con gin y vermouth seco.",
+      "imageUrl": "https://example.com/martini.jpg",
+      "detailedInfo": "Ideal para ocasiones sofisticadas, con aceituna o twist de limón.",
+      "ingredients": [
+        { "name": "Gin", "quantity": "60ml" },
+        { "name": "Vermouth seco", "quantity": "10ml" },
+        { "name": "Aceituna o twist de limón", "quantity": "Para decorar" },
+        { "name": "Hielo", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "En vaso mezclador con hielo, agregar gin y vermouth." },
+        { "step": "Revolver y colar en copa fría." },
+        { "step": "Decorar con aceituna o twist de limón." }
+      ],
+      "images": [
+        "https://example.com/martini1.webp",
+        "https://example.com/martini2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 6,
+      "uid": "R-DRINK_000006",
+      "name": "Caipirinha",
+      "description": "Cóctel brasileño refrescante con cachaça y lima.",
+      "imageUrl": "https://example.com/caipirinha.jpg",
+      "detailedInfo": "Perfecto para días soleados y celebraciones informales.",
+      "ingredients": [
+        { "name": "Cachaça", "quantity": "50ml" },
+        { "name": "Lima", "quantity": "1/2 cortada en trozos" },
+        { "name": "Azúcar", "quantity": "2 cditas" },
+        { "name": "Hielo", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Macerar la lima con azúcar en un vaso." },
+        { "step": "Agregar cachaça y hielo triturado." },
+        { "step": "Revolver suavemente y servir." }
+      ],
+      "images": [
+        "https://example.com/caipirinha1.webp",
+        "https://example.com/caipirinha2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 7,
+      "uid": "R-DRINK_000007",
+      "name": "Old Fashioned",
+      "description": "Cóctel clásico con bourbon, azúcar y angostura.",
+      "imageUrl": "https://example.com/old-fashioned.jpg",
+      "detailedInfo": "Ideal para tomar lentamente y disfrutar de sus aromas.",
+      "ingredients": [
+        { "name": "Bourbon", "quantity": "50ml" },
+        { "name": "Azúcar", "quantity": "1 terrón" },
+        { "name": "Angostura", "quantity": "2 gotas" },
+        { "name": "Hielo", "quantity": "1 bloque grande" },
+        { "name": "Cáscara de naranja", "quantity": "Para decorar" }
+      ],
+      "steps": [
+        { "step": "Disolver el azúcar con angostura en el vaso." },
+        { "step": "Añadir bourbon y hielo." },
+        { "step": "Revolver suavemente y decorar con naranja." }
+      ],
+      "images": [
+        "https://example.com/oldfashioned1.webp",
+        "https://example.com/oldfashioned2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 8,
+      "uid": "R-DRINK_000008",
+      "name": "Daiquiri",
+      "description": "Cóctel cubano con ron, lima y azúcar.",
+      "imageUrl": "https://example.com/daiquiri.jpg",
+      "detailedInfo": "Perfecto para cócteles frescos y afrutados, se sirve frío y colado.",
+      "ingredients": [
+        { "name": "Ron blanco", "quantity": "50ml" },
+        { "name": "Jugo de lima", "quantity": "25ml" },
+        { "name": "Azúcar", "quantity": "2 cditas" },
+        { "name": "Hielo", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Agitar todos los ingredientes con hielo en coctelera." },
+        { "step": "Colar en copa fría y servir." }
+      ],
+      "images": [
+        "https://example.com/daiquiri1.webp",
+        "https://example.com/daiquiri2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 9,
+      "uid": "R-DRINK_000009",
+      "name": "Cosmopolitan",
+      "description": "Cóctel elegante con vodka, triple sec y arándano.",
+      "imageUrl": "https://example.com/cosmopolitan.jpg",
+      "detailedInfo": "Perfecto para ocasiones sofisticadas y cócteles de tarde.",
+      "ingredients": [
+        { "name": "Vodka", "quantity": "40ml" },
+        { "name": "Triple sec", "quantity": "15ml" },
+        { "name": "Jugo de arándano", "quantity": "30ml" },
+        { "name": "Jugo de lima", "quantity": "10ml" },
+        { "name": "Hielo", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Agitar todos los ingredientes con hielo." },
+        { "step": "Colar en copa de cóctel fría y decorar con twist de lima." }
+      ],
+      "images": [
+        "https://example.com/cosmopolitan1.webp",
+        "https://example.com/cosmopolitan2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 10,
+      "uid": "R-DRINK_000010",
+      "name": "Whiskey Sour",
+      "description": "Cóctel cítrico y balanceado con whiskey.",
+      "imageUrl": "https://example.com/whiskeysour.jpg",
+      "detailedInfo": "Clásico cóctel americano, ideal para aperitivos.",
+      "ingredients": [
+        { "name": "Whiskey", "quantity": "50ml" },
+        { "name": "Jugo de limón", "quantity": "25ml" },
+        { "name": "Azúcar", "quantity": "2 cditas" },
+        { "name": "Clara de huevo", "quantity": "Opcional para espumar" },
+        { "name": "Hielo", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Agitar todos los ingredientes con hielo vigorosamente." },
+        { "step": "Colar en vaso corto con hielo." },
+        { "step": "Decorar con rodaja de limón o cereza." }
+      ],
+      "images": [
+        "https://example.com/whiskeysour1.webp",
+        "https://example.com/whiskeysour2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 11,
+      "uid": "R-DRINK_000011",
+      "name": "Bloody Mary",
+      "description": "Cóctel salado y picante a base de vodka y tomate.",
+      "imageUrl": "https://example.com/bloodymary.jpg",
+      "detailedInfo": "Ideal como brunch o aperitivo, muy popular con sabor intenso.",
+      "ingredients": [
+        { "name": "Vodka", "quantity": "50ml" },
+        { "name": "Jugo de tomate", "quantity": "100ml" },
+        { "name": "Salsa Worcestershire", "quantity": "1 cdita" },
+        { "name": "Jugo de limón", "quantity": "15ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" },
+        { "name": "Tabasco", "quantity": "Al gusto" },
+        { "name": "Apio", "quantity": "Para decorar" }
+      ],
+      "steps": [
+        { "step": "Mezclar todos los ingredientes en vaso con hielo." },
+        { "step": "Revolver suavemente y decorar con apio." }
+      ],
+      "images": [
+        "https://example.com/bloodymary1.webp",
+        "https://example.com/bloodymary2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 12,
+      "uid": "R-DRINK_000012",
+      "name": "Tequila Sunrise",
+      "description": "Cóctel colorido con tequila y jugo de naranja.",
+      "imageUrl": "https://example.com/tequila-sunrise.jpg",
+      "detailedInfo": "Perfecto para vistas al atardecer y bebidas tropicales.",
+      "ingredients": [
+        { "name": "Tequila", "quantity": "50ml" },
+        { "name": "Jugo de naranja", "quantity": "100ml" },
+        { "name": "Granadina", "quantity": "10ml" },
+        { "name": "Hielo", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Verter tequila y jugo de naranja en vaso con hielo." },
+        { "step": "Añadir granadina lentamente para efecto degradado." }
+      ],
+      "images": [
+        "https://example.com/tequilasunrise1.webp",
+        "https://example.com/tequilasunrise2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 13,
+      "uid": "R-DRINK_000013",
+      "name": "Gin Tonic",
+      "description": "Cóctel refrescante con gin y tónica.",
+      "imageUrl": "https://example.com/gintonic.jpg",
+      "detailedInfo": "Clásico aperitivo, se sirve con hielo y rodaja de limón o pepino.",
+      "ingredients": [
+        { "name": "Gin", "quantity": "50ml" },
+        { "name": "Agua tónica", "quantity": "100ml" },
+        { "name": "Hielo", "quantity": "Al gusto" },
+        { "name": "Rodaja de limón o pepino", "quantity": "Para decorar" }
+      ],
+      "steps": [
+        { "step": "Verter gin en vaso con hielo." },
+        { "step": "Completar con agua tónica y decorar." }
+      ],
+      "images": [
+        "https://example.com/gintonic1.webp",
+        "https://example.com/gintonic2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 14,
+      "uid": "R-DRINK_000014",
+      "name": "Pisco Sour",
+      "description": "Cóctel emblemático de Perú y Chile con pisco y cítricos.",
+      "imageUrl": "https://example.com/pisco-sour.jpg",
+      "detailedInfo": "Muy popular como aperitivo, con espuma de clara de huevo.",
+      "ingredients": [
+        { "name": "Pisco", "quantity": "50ml" },
+        { "name": "Jugo de limón", "quantity": "25ml" },
+        { "name": "Azúcar", "quantity": "2 cditas" },
+        { "name": "Clara de huevo", "quantity": "1" },
+        { "name": "Hielo", "quantity": "Al gusto" },
+        { "name": "Amargo de angostura", "quantity": "1 gota para decorar" }
+      ],
+      "steps": [
+        { "step": "Agitar todos los ingredientes en coctelera con hielo." },
+        { "step": "Colar en copa fría y agregar una gota de angostura sobre la espuma." }
+      ],
+      "images": [
+        "https://example.com/piscosour1.webp",
+        "https://example.com/piscosour2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 15,
+      "uid": "R-DRINK_000015",
+      "name": "Mai Tai",
+      "description": "Cóctel tropical con ron y sabores cítricos.",
+      "imageUrl": "https://example.com/maitai.jpg",
+      "detailedInfo": "Ideal para fiestas y bebidas exóticas, muy colorido.",
+      "ingredients": [
+        { "name": "Ron blanco", "quantity": "30ml" },
+        { "name": "Ron oscuro", "quantity": "30ml" },
+        { "name": "Triple sec", "quantity": "15ml" },
+        { "name": "Jugo de lima", "quantity": "15ml" },
+        { "name": "Orgeat (jarabe de almendra)", "quantity": "15ml" },
+        { "name": "Hielo", "quantity": "Al gusto" },
+        { "name": "Rodaja de lima y menta", "quantity": "Para decorar" }
+      ],
+      "steps": [
+        { "step": "Agitar todos los ingredientes con hielo." },
+        { "step": "Servir en vaso con hielo y decorar." }
+      ],
+      "images": [
+        "https://example.com/maitai1.webp",
+        "https://example.com/maitai2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 16,
+      "uid": "R-DRINK_000016",
+      "name": "Margarita",
+      "description": "Cóctel mexicano con tequila, triple sec y lima.",
+      "imageUrl": "https://example.com/margarita.jpg",
+      "detailedInfo": "Refrescante y cítrico, ideal para tardes cálidas.",
+      "ingredients": [
+        { "name": "Tequila", "quantity": "50ml" },
+        { "name": "Triple sec", "quantity": "20ml" },
+        { "name": "Jugo de lima", "quantity": "25ml" },
+        { "name": "Sal", "quantity": "Para escarchar el borde" },
+        { "name": "Hielo", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Escarchar el borde del vaso con sal." },
+        { "step": "Agitar tequila, triple sec y jugo de lima con hielo." },
+        { "step": "Colar en copa escarchada y servir." }
+      ],
+      "images": [
+        "https://example.com/margarita1.webp",
+        "https://example.com/margarita2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 17,
+      "uid": "R-DRINK_000017",
+      "name": "Mojito",
+      "description": "Cóctel cubano fresco con ron, hierbabuena y lima.",
+      "imageUrl": "https://example.com/mojito.jpg",
+      "detailedInfo": "Refrescante, perfecto para días calurosos y fiestas informales.",
+      "ingredients": [
+        { "name": "Ron blanco", "quantity": "50ml" },
+        { "name": "Lima", "quantity": "1/2 cortada" },
+        { "name": "Azúcar", "quantity": "2 cditas" },
+        { "name": "Hierbabuena", "quantity": "8 hojas" },
+        { "name": "Soda", "quantity": "Al gusto" },
+        { "name": "Hielo", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Macerar hierbabuena, lima y azúcar en vaso." },
+        { "step": "Agregar ron y hielo, completar con soda." },
+        { "step": "Revolver suavemente y servir." }
+      ],
+      "images": [
+        "https://example.com/mojito1.webp",
+        "https://example.com/mojito2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 18,
+      "uid": "R-DRINK_000018",
+      "name": "Martini",
+      "description": "Cóctel elegante con gin y vermut.",
+      "imageUrl": "https://example.com/martini.jpg",
+      "detailedInfo": "Clásico sofisticado, se sirve frío y decorado con oliva o twist de limón.",
+      "ingredients": [
+        { "name": "Gin", "quantity": "60ml" },
+        { "name": "Vermut seco", "quantity": "10ml" },
+        { "name": "Hielo", "quantity": "Al gusto" },
+        { "name": "Oliva o twist de limón", "quantity": "Para decorar" }
+      ],
+      "steps": [
+        { "step": "Mezclar gin y vermut con hielo en vaso mezclador." },
+        { "step": "Colar en copa fría y decorar." }
+      ],
+      "images": [
+        "https://example.com/martini1.webp",
+        "https://example.com/martini2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 19,
+      "uid": "R-DRINK_000019",
+      "name": "Negroni",
+      "description": "Cóctel italiano fuerte con gin, vermut rojo y Campari.",
+      "imageUrl": "https://example.com/negroni.jpg",
+      "detailedInfo": "Amargo y aromático, perfecto como aperitivo.",
+      "ingredients": [
+        { "name": "Gin", "quantity": "30ml" },
+        { "name": "Vermut rojo", "quantity": "30ml" },
+        { "name": "Campari", "quantity": "30ml" },
+        { "name": "Hielo", "quantity": "Al gusto" },
+        { "name": "Rodaja de naranja", "quantity": "Para decorar" }
+      ],
+      "steps": [
+        { "step": "Mezclar todos los ingredientes en vaso con hielo." },
+        { "step": "Revolver suavemente y decorar con naranja." }
+      ],
+      "images": [
+        "https://example.com/negroni1.webp",
+        "https://example.com/negroni2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 20,
+      "uid": "R-DRINK_000020",
+      "name": "Screwdriver",
+      "description": "Cóctel sencillo con vodka y jugo de naranja.",
+      "imageUrl": "https://example.com/screwdriver.jpg",
+      "detailedInfo": "Fácil de preparar, refrescante y cítrico.",
+      "ingredients": [
+        { "name": "Vodka", "quantity": "50ml" },
+        { "name": "Jugo de naranja", "quantity": "100ml" },
+        { "name": "Hielo", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Verter vodka en vaso con hielo." },
+        { "step": "Completar con jugo de naranja y servir." }
+      ],
+      "images": [
+        "https://example.com/screwdriver1.webp",
+        "https://example.com/screwdriver2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 21,
+      "uid": "R-DRINK_000021",
+      "name": "Long Island Iced Tea",
+      "description": "Cóctel potente con varios licores y refresco de cola.",
+      "imageUrl": "https://example.com/long-island.jpg",
+      "detailedInfo": "Ideal para quienes buscan un trago fuerte pero refrescante.",
+      "ingredients": [
+        { "name": "Vodka", "quantity": "15ml" },
+        { "name": "Gin", "quantity": "15ml" },
+        { "name": "Ron blanco", "quantity": "15ml" },
+        { "name": "Tequila", "quantity": "15ml" },
+        { "name": "Triple sec", "quantity": "15ml" },
+        { "name": "Jugo de limón", "quantity": "25ml" },
+        { "name": "Refresco de cola", "quantity": "30ml" },
+        { "name": "Hielo", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Mezclar todos los licores y jugo de limón en vaso con hielo." },
+        { "step": "Completar con refresco de cola y servir." }
+      ],
+      "images": [
+        "https://example.com/longisland1.webp",
+        "https://example.com/longisland2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 22,
+      "uid": "R-DRINK_000022",
+      "name": "Singapore Sling",
+      "description": "Cóctel frutal y aromático con gin y cereza.",
+      "imageUrl": "https://example.com/singapore-sling.jpg",
+      "detailedInfo": "Perfecto para tragos largos y tropicales.",
+      "ingredients": [
+        { "name": "Gin", "quantity": "30ml" },
+        { "name": "Cointreau", "quantity": "15ml" },
+        { "name": "Cherry brandy", "quantity": "15ml" },
+        { "name": "Jugo de piña", "quantity": "50ml" },
+        { "name": "Jugo de limón", "quantity": "15ml" },
+        { "name": "Soda", "quantity": "Al gusto" },
+        { "name": "Hielo", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Agitar todos los ingredientes menos la soda con hielo." },
+        { "step": "Servir en vaso alto con hielo y completar con soda." }
+      ],
+      "images": [
+        "https://example.com/singaporesling1.webp",
+        "https://example.com/singaporesling2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 23,
+      "uid": "R-DRINK_000023",
+      "name": "Tequila Mojito",
+      "description": "Variante del mojito usando tequila en lugar de ron.",
+      "imageUrl": "https://example.com/tequila-mojito.jpg",
+      "detailedInfo": "Refrescante y con un toque mexicano, ideal para fiestas.",
+      "ingredients": [
+        { "name": "Tequila blanco", "quantity": "50ml" },
+        { "name": "Lima", "quantity": "1/2 cortada" },
+        { "name": "Azúcar", "quantity": "2 cditas" },
+        { "name": "Hierbabuena", "quantity": "8 hojas" },
+        { "name": "Soda", "quantity": "Al gusto" },
+        { "name": "Hielo", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Macerar lima, azúcar y hierbabuena en vaso." },
+        { "step": "Agregar tequila y hielo, completar con soda." },
+        { "step": "Revolver suavemente y servir." }
+      ],
+      "images": [
+        "https://example.com/tequilamojito1.webp",
+        "https://example.com/tequilamojito2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 24,
+      "uid": "R-DRINK_000024",
+      "name": "Rum Punch",
+      "description": "Cóctel tropical con ron y jugos de frutas.",
+      "imageUrl": "https://example.com/rum-punch.jpg",
+      "detailedInfo": "Ideal para fiestas, refrescante y colorido.",
+      "ingredients": [
+        { "name": "Ron blanco", "quantity": "30ml" },
+        { "name": "Ron oscuro", "quantity": "30ml" },
+        { "name": "Jugo de piña", "quantity": "60ml" },
+        { "name": "Jugo de naranja", "quantity": "60ml" },
+        { "name": "Granadina", "quantity": "10ml" },
+        { "name": "Hielo", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Mezclar todos los ingredientes en vaso con hielo." },
+        { "step": "Revolver y decorar con rodaja de naranja o cereza." }
+      ],
+      "images": [
+        "https://example.com/rumpunch1.webp",
+        "https://example.com/rumpunch2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 25,
+      "uid": "R-DRINK_000025",
+      "name": "French 75",
+      "description": "Cóctel elegante con gin y champagne.",
+      "imageUrl": "https://example.com/french75.jpg",
+      "detailedInfo": "Refrescante y sofisticado, ideal para celebraciones.",
+      "ingredients": [
+        { "name": "Gin", "quantity": "30ml" },
+        { "name": "Jugo de limón", "quantity": "15ml" },
+        { "name": "Azúcar", "quantity": "1 cdita" },
+        { "name": "Champagne", "quantity": "Completar" },
+        { "name": "Hielo", "quantity": "Opcional" }
+      ],
+      "steps": [
+        { "step": "Agitar gin, limón y azúcar con hielo (si se desea)." },
+        { "step": "Colar en copa de champagne y completar con champagne." }
+      ],
+      "images": [
+        "https://example.com/french751.webp",
+        "https://example.com/french752.webp"
+      ],
+      "rating": null
+    }
+  ]
+}

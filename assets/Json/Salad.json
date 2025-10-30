@@ -1,0 +1,686 @@
+{
+  "recipes": [
+{
+  "id": 1,
+  "uid": "R-SAL_000001",
+  "name": "Ensalada Mediterránea de Garbanzos",
+  "description": "Una ensalada fresca y colorida con garbanzos, vegetales crujientes y un aderezo de limón y miel, inspirada en los sabores del Mediterráneo.",
+  "imageUrl": "https://example.com/ensalada-mediterranea.jpg",
+  "detailedInfo": "Esta ensalada es altamente personalizable y combina garbanzos, pepino, tomates, pimientos y cebolla morada con un toque de hierbas frescas, queso feta y aceitunas Kalamata. El aderezo de limón, miel y aceite de oliva le da un equilibrio perfecto entre frescura y acidez. Ideal para preparar con antelación y disfrutar durante la semana.",
+  "ingredients": [
+    { "name": "Garbanzos", "quantity": "850 g (≈2 latas de 425 g cada una)", "notes": "Enjuagados y escurridos." },
+    { "name": "Tomates cherry o uva", "quantity": "150 g (≈1 pinta)", "notes": "Cortados por la mitad o en cuartos si son grandes." },
+    { "name": "Pepino inglés", "quantity": "1 unidad (≈200 g)", "notes": "Cortar en cubos." },
+    { "name": "Pimiento morrón verde", "quantity": "1 unidad (≈120 g)", "notes": "Cortar en trozos pequeños del tamaño de un bocado." },
+    { "name": "Cebolla roja", "quantity": "1 pequeña (≈50 g)", "notes": "Cortar en rodajas finas." },
+    { "name": "Aceitunas Kalamata", "quantity": "70 g (≈½ taza)", "notes": "Cortadas en rodajas." },
+    { "name": "Queso feta", "quantity": "70 g (≈½ taza)", "notes": "Desmoronado." },
+    { "name": "Albahaca fresca", "quantity": "2 cucharadas (≈5 g)", "notes": "Picada finamente; solo las hojas." },
+    { "name": "Menta fresca", "quantity": "2 cucharadas (≈5 g)", "notes": "Picada finamente; solo las hojas." }
+  ],
+  "dressing": [
+    { "name": "Miel", "quantity": "30 g (≈2 cucharadas)", "notes": "Se puede calentar 10 segundos para facilitar la mezcla." },
+    { "name": "Aceite de oliva extra virgen", "quantity": "45 ml (≈3 cucharadas)", "notes": "Buena calidad." },
+    { "name": "Jugo de limón", "quantity": "30 ml (≈2 cucharadas)", "notes": "Recién exprimido." },
+    { "name": "Vinagre de vino blanco", "quantity": "30 ml (≈2 cucharadas)", "notes": "Opcional: puede usarse vinagre tinto." },
+    { "name": "Sal", "quantity": "1 g (¼ cucharadita)", "notes": "Agregar con moderación por el contenido salado de feta y aceitunas." },
+    { "name": "Pimienta negra", "quantity": "1 g (¼ cucharadita)", "notes": "Al gusto." }
+  ],
+  "steps": [
+    { "step": "En un tazón grande mezcla garbanzos, tomates, pepino, pimiento, cebolla roja, aceitunas, queso feta, albahaca y menta." },
+    { "step": "Para el aderezo, coloca la miel en un recipiente apto para microondas y calienta 10-15 segundos para licuar." },
+    { "step": "Añade aceite de oliva, jugo de limón, vinagre, sal y pimienta. Mezcla bien hasta emulsionar." },
+    { "step": "Vierte el aderezo sobre la ensalada y mezcla suavemente hasta integrar todos los ingredientes." },
+    { "step": "Refrigera hasta el momento de servir." }
+  ],
+  "tips": [
+    "Corta todos los ingredientes en trozos uniformes para una textura equilibrada.",
+    "Puedes sustituir albahaca o menta por perejil fresco si lo deseas.",
+    "Prueba la ensalada antes de ajustar la sal del aderezo.",
+    "Calienta ligeramente la miel para facilitar su mezcla en la vinagreta.",
+    "Se conserva bien en el refrigerador varios días, ideal para preparar con antelación."
+  ],
+  "images": [
+    "https://example.com/ensalada-mediterranea1.webp",
+    "https://example.com/ensalada-mediterranea2.webp"
+  ],
+  "rating": null
+},
+{
+  "id": 2,
+  "uid": "R-SAL_000002",
+  "name": "Ensalada Griega (Horiatiki)",
+  "description": "Ensalada rústica con vegetales frescos, aceitunas Kalamata y queso feta, aderezada con el jugo natural del tomate, aceite de oliva y vinagre.",
+  "imageUrl": "https://example.com/ensalada-griega.jpg",
+  "detailedInfo": "Esta ensalada se caracteriza por su rusticidad y sabor intenso. Los vegetales se cortan en trozos grandes para mantener textura, y el líquido que se forma con el jugo del tomate, el aceite de oliva y el vinagre sirve como vinagreta natural. El queso feta se desmorona al final para conservar su textura.",
+  "ingredients": [
+    { "name": "Tomates", "quantity": "3 unidades (≈450 g)", "notes": "Cortar en trozos rústicos, sin pelar ni quitar semillas." },
+    { "name": "Queso feta", "quantity": "45 g (≈3 cucharadas)", "notes": "Desmoronar a mano sobre la ensalada al final." },
+    { "name": "Aceitunas Kalamata", "quantity": "45 g (≈3 cucharadas)", "notes": "Cortar por la mitad; opcional quitar semilla." },
+    { "name": "Cebolla roja", "quantity": "1 unidad (≈50 g)", "notes": "Cortar lo más fina posible." },
+    { "name": "Orégano fresco", "quantity": "1 cucharadita (≈1 g)", "notes": "Usar solo las hojas, retirar del tallo." },
+    { "name": "Pepino europeo", "quantity": "1 unidad (≈150 g)", "notes": "Cortar en cubos grandes de 2 cm, dejar piel." }
+  ],
+  "dressing": [
+    { "name": "Aceite de oliva extra virgen", "quantity": "30-45 ml", "notes": "Buen chorro; se puede ajustar al gusto." },
+    { "name": "Vinagre de vino tinto", "quantity": "30-45 ml", "notes": "Buen chorro; se puede ajustar al gusto." },
+    { "name": "Sal", "quantity": "1 g (al gusto)", "notes": "Agregar con moderación; el queso feta aporta salinidad." },
+    { "name": "Pimienta negra", "quantity": "1 g (al gusto)", "notes": "Opcional." }
+  ],
+  "steps": [
+    { "step": "Corta los tomates en trozos rústicos." },
+    { "step": "Corta la cebolla roja lo más fina posible." },
+    { "step": "Corta las aceitunas Kalamata por la mitad y retira las hojas de orégano del tallo." },
+    { "step": "Corta el pepino en cubos grandes de aproximadamente 2 cm." },
+    { "step": "Coloca los vegetales y el orégano en un bowl, agrega sal y pimienta al gusto." },
+    { "step": "Añade un buen chorro de aceite de oliva extra virgen y vinagre de vino tinto." },
+    { "step": "Revuelve bien la ensalada con las manos limpias para integrar los sabores." },
+    { "step": "Desmorona el queso feta sobre la ensalada con las manos." },
+    { "step": "Sirve asegurándote de verter el líquido que se forma con el tomate, vinagre y aceite sobre la ensalada." }
+  ],
+  "tips": [
+    "Cortar los ingredientes en trozos grandes conserva textura y rusticidad.",
+    "Usa un cuchillo de sierra para los tomates para no dañar el filo del cuchillo de chef.",
+    "No excederse con la sal; el queso feta aporta bastante salinidad.",
+    "Agregar el queso feta al final mantiene su textura y presentación.",
+    "No descartar el líquido que se acumula en el fondo del bowl; es la vinagreta natural."
+  ],
+  "images": [
+    "https://example.com/ensalada-griega1.webp",
+    "https://example.com/ensalada-griega2.webp"
+  ],
+  "rating": null
+},
+{
+  "id": 3,
+  "uid": "R-SAL_000003",
+  "name": "Ensalada de Pasta con Aderezo Cremoso de Palta",
+  "description": "Ensalada cremosa y fresca que reutiliza fideos del día anterior y se complementa con un aderezo de palta y mayonesa.",
+  "imageUrl": "https://example.com/ensalada-pasta-palta.jpg",
+  "detailedInfo": "Esta ensalada es perfecta para aprovechar la pasta sobrante. Combina fideos cortos con atún, vegetales crujientes y un aderezo de palta que le aporta cremosidad y un color verde vibrante. La inclusión de apio y zanahoria rallada añade textura y el jugo de limón evita que la palta se oxide.",
+  "ingredients": [
+    { "name": "Fideos o pasta corta", "quantity": "200-250 g (sobrantes del día anterior)", "notes": "Cualquier pasta corta funciona; asegúrate de que no estén pegados." },
+    { "name": "Atún en lata", "quantity": "2 latas (aprox. 280 g escurrido)", "notes": "Escurrido antes de mezclar." },
+    { "name": "Cebolla morada", "quantity": "50 g", "notes": "Picada finamente." },
+    { "name": "Pimiento morrón rojo", "quantity": "80 g", "notes": "Cortado en cubitos pequeños." },
+    { "name": "Apio", "quantity": "50 g", "notes": "Picado finamente o en juliana." },
+    { "name": "Zanahoria cruda", "quantity": "50 g", "notes": "Rallada para dar crunch." },
+    { "name": "Verdeo/Cebolleta", "quantity": "10 g", "notes": "Picado fino." },
+    { "name": "Maíz o choclo en grano", "quantity": "70 g", "notes": "Cocido o de lata, escurrido." }
+  ],
+  "dressing": [
+    { "name": "Mayonesa", "quantity": "60-80 g", "notes": "Para darle cuerpo y sabor a la base del aderezo." },
+    { "name": "Palta (aguacate)", "quantity": "1 unidad (≈150 g pulpa)", "notes": "Aporta cremosidad y color verde." },
+    { "name": "Jugo de limón", "quantity": "15 ml (1 cucharada)", "notes": "Evita que la palta se oxide." },
+    { "name": "Sal", "quantity": "1 g (al gusto)", "notes": "" },
+    { "name": "Pimienta negra", "quantity": "1 g (al gusto)", "notes": "" },
+    { "name": "Ajo en polvo", "quantity": "1 g (½ cucharadita)", "notes": "Opcional para aroma." },
+    { "name": "Leche", "quantity": "15 ml", "notes": "Para aligerar y suavizar la mezcla." }
+  ],
+  "steps": [
+    { "step": "En un bowl grande, mezcla los fideos sobrantes con el atún escurrido." },
+    { "step": "Agrega la cebolla morada picada, el pimiento rojo en cubitos, el apio, la zanahoria rallada, el verdeo y el maíz." },
+    { "step": "En una licuadora o con minipimer, mezcla la mayonesa, la palta, el jugo de limón, sal, pimienta, ajo en polvo y un poco de leche hasta obtener un aderezo cremoso." },
+    { "step": "Agrega el aderezo a la ensalada junto con un chorrito de aceite de oliva y mezcla bien." },
+    { "step": "Sirve con un poco de perejil o cilantro fresco por encima." }
+  ],
+  "tips": [
+    "Ideal para reutilizar fideos sobrantes del día anterior; asegúrate de que no estén pegados.",
+    "El aderezo cremoso de palta es el secreto de la ensalada: mantiene el color verde y aporta cremosidad.",
+    "Incluye apio y zanahoria rallada para dar textura crujiente.",
+    "Corta la cebolla y el pimiento rojo bien pequeños para que los sabores se integren uniformemente."
+  ],
+  "images": [
+    "https://example.com/ensalada-pasta-palta1.webp",
+    "https://example.com/ensalada-pasta-palta2.webp"
+  ],
+  "rating": null
+},
+{
+  "id": 4,
+  "uid": "R-SAL_000004",
+  "name": "Ensalada de Pasta con Atún y Aderezo Cremoso",
+  "description": "Ensalada de pasta con atún y vegetales frescos, combinada con un aderezo cremoso a base de mayonesa, mostaza, ketchup y salsa de soja/inglesa.",
+  "imageUrl": "https://example.com/ensalada-pasta-atun.jpg",
+  "detailedInfo": "Esta ensalada destaca por la frescura de sus vegetales, la textura de la pasta perfectamente enfriada y un aderezo cremoso que combina mayonesa, mostaza, ketchup y salsa de soya. Escurrir bien el atún y enjuagar la pasta después de cocerla es clave para evitar exceso de líquido y mantener la textura perfecta.",
+  "ingredients": [
+    { "name": "Pasta (corta, tipo codos)", "quantity": "340 g", "notes": "Cocer con agua y sal; enjuagar con agua fría después de cocer." },
+    { "name": "Atún en lata", "quantity": "2 latas (aprox. 280 g escurrido)", "notes": "Escurrir completamente antes de añadir." },
+    { "name": "Pepino", "quantity": "130 g (≈1 taza picada)", "notes": "Usar con cáscara y picado finamente." },
+    { "name": "Maíz precocido", "quantity": "150 g (≈1 taza)", "notes": "Cocido o de lata, escurrido." },
+    { "name": "Pimiento verde", "quantity": "60 g (½ taza picado)", "notes": "" },
+    { "name": "Pimiento rojo", "quantity": "60 g (½ taza picado)", "notes": "" },
+    { "name": "Cebolla blanca", "quantity": "60 g (½ taza picada)", "notes": "" },
+    { "name": "Sal", "quantity": "10 g (1 cucharadita para pasta + 1 cucharadita para ensalada)", "notes": "" },
+    { "name": "Pimienta negra", "quantity": "1 g (al gusto)", "notes": "" }
+  ],
+  "dressing": [
+    { "name": "Jugo de limón", "quantity": "30 ml (2 cucharadas)", "notes": "" },
+    { "name": "Salsa soya o inglesa", "quantity": "15 ml (1 cucharada)", "notes": "" },
+    { "name": "Mostaza", "quantity": "30 ml (2 cucharadas)", "notes": "" },
+    { "name": "Ketchup", "quantity": "15 g (3 cucharaditas)", "notes": "" },
+    { "name": "Mayonesa", "quantity": "45 g (3 cucharadas)", "notes": "Clave para la cremosidad." },
+    { "name": "Aceite de oliva", "quantity": "15 ml (1 cucharada)", "notes": "Ayuda a mantener frescura." },
+    { "name": "Sal", "quantity": "2 g (½ cucharadita)", "notes": "Opcional, ajustar al gusto." },
+    { "name": "Pimienta negra", "quantity": "1 g (¼ cucharadita)", "notes": "Opcional, ajustar al gusto." }
+  ],
+  "steps": [
+    { "step": "Cocina la pasta en agua hirviendo con sal hasta que esté al dente." },
+    { "step": "Enjuaga la pasta con agua fría para detener la cocción y evitar que se pegue. Escurre bien." },
+    { "step": "Mezcla todos los ingredientes del aderezo en un bowl hasta integrar completamente." },
+    { "step": "En un recipiente grande, agrega la pasta enfriada, el pepino, los pimientos, la cebolla y el maíz." },
+    { "step": "Añade el atún escurrido y mezcla suavemente." },
+    { "step": "Vierte el aderezo sobre la ensalada y mezcla hasta que todos los ingredientes estén bien cubiertos." },
+    { "step": "Tapa el recipiente y refrigera por al menos 2 horas antes de servir." }
+  ],
+  "tips": [
+    "Enjuagar la pasta con agua fría después de cocerla evita que se vuelva pegajosa.",
+    "Escurrir completamente el atún es crucial para evitar que la ensalada quede aguada.",
+    "Agregar una cucharada de aceite de oliva al aderezo ayuda a mantener la frescura durante varios días.",
+    "El aderezo cremoso combina mayonesa, mostaza, ketchup y salsa de soya para un sabor único.",
+    "Dejar la cáscara del pepino aporta beneficios y textura a la ensalada."
+  ],
+  "images": [
+    "https://example.com/ensalada-pasta-atun1.webp",
+    "https://example.com/ensalada-pasta-atun2.webp"
+  ],
+  "rating": null
+},
+    {
+      "id": 7,
+      "uid": "R-SAL_000007",
+      "name": "Ensalada de Lentejas",
+      "description": "Ensalada nutritiva con lentejas, zanahoria y pimientos.",
+      "imageUrl": "https://example.com/lentejas.jpg",
+      "detailedInfo": "Perfecta para una comida completa, rica en proteínas y fibra vegetal, fácil de preparar.",
+      "ingredients": [
+        { "name": "Lentejas cocidas", "quantity": "200g" },
+        { "name": "Zanahoria rallada", "quantity": "50g" },
+        { "name": "Pimiento rojo", "quantity": "50g" },
+        { "name": "Cebolla", "quantity": "30g" },
+        { "name": "Aceite de oliva", "quantity": "20ml" },
+        { "name": "Vinagre balsámico", "quantity": "10ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Mezcla lentejas cocidas con las verduras cortadas o ralladas." },
+        { "step": "Aliña con aceite de oliva, vinagre, sal y pimienta." },
+        { "step": "Refrigera 10 minutos antes de servir." }
+      ],
+      "images": [
+        "https://example.com/lentejas1.webp",
+        "https://example.com/lentejas2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 8,
+      "uid": "R-SAL_000008",
+      "name": "Ensalada Tabulé",
+      "description": "Ensalada de trigo bulgur, perejil y menta fresca.",
+      "imageUrl": "https://example.com/tabule.jpg",
+      "detailedInfo": "Refrescante y ligera, perfecta como acompañamiento o plato principal en verano.",
+      "ingredients": [
+        { "name": "Trigo bulgur", "quantity": "100g" },
+        { "name": "Perejil fresco", "quantity": "30g" },
+        { "name": "Menta fresca", "quantity": "10g" },
+        { "name": "Tomate", "quantity": "100g" },
+        { "name": "Pepino", "quantity": "50g" },
+        { "name": "Aceite de oliva", "quantity": "20ml" },
+        { "name": "Jugo de limón", "quantity": "10ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Hidrata el bulgur según instrucciones del paquete." },
+        { "step": "Corta verduras y hierbas y mézclalas con el bulgur." },
+        { "step": "Aliña con aceite de oliva, limón, sal y pimienta." }
+      ],
+      "images": [
+        "https://example.com/tabule1.webp",
+        "https://example.com/tabule2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 9,
+      "uid": "R-SAL_000009",
+      "name": "Ensalada de Arroz Integral",
+      "description": "Ensalada completa con arroz integral, maíz y pimientos.",
+      "imageUrl": "https://example.com/arroz-integral.jpg",
+      "detailedInfo": "Rápida de preparar, ideal para llevar al trabajo o picnic.",
+      "ingredients": [
+        { "name": "Arroz integral cocido", "quantity": "150g" },
+        { "name": "Maíz dulce", "quantity": "50g" },
+        { "name": "Pimiento rojo", "quantity": "50g" },
+        { "name": "Aceitunas verdes", "quantity": "20g" },
+        { "name": "Aceite de oliva", "quantity": "20ml" },
+        { "name": "Vinagre", "quantity": "10ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Mezcla el arroz cocido con todas las verduras y aceitunas." },
+        { "step": "Aliña con aceite, vinagre, sal y pimienta." }
+      ],
+      "images": [
+        "https://example.com/arroz1.webp",
+        "https://example.com/arroz2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 10,
+      "uid": "R-SAL_000010",
+      "name": "Ensalada de Espinacas y Fresas",
+      "description": "Ensalada fresca con espinacas, fresas y nueces.",
+      "imageUrl": "https://example.com/espinacas-fresas.jpg",
+      "detailedInfo": "Combinación dulce y salada, ideal para un almuerzo ligero o acompañamiento elegante.",
+      "ingredients": [
+        { "name": "Espinacas frescas", "quantity": "100g" },
+        { "name": "Fresas", "quantity": "100g" },
+        { "name": "Nueces", "quantity": "30g" },
+        { "name": "Queso de cabra", "quantity": "30g" },
+        { "name": "Vinagreta balsámica", "quantity": "20ml" }
+      ],
+      "steps": [
+        { "step": "Coloca las espinacas en un bol." },
+        { "step": "Añade fresas cortadas, nueces y queso de cabra." },
+        { "step": "Aliña con vinagreta y sirve inmediatamente." }
+      ],
+      "images": [
+        "https://example.com/espinacas-fresas1.webp",
+        "https://example.com/espinacas-fresas2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 11,
+      "uid": "R-SAL_000011",
+      "name": "Ensalada César",
+      "description": "Clásica ensalada con lechuga, croutons y aderezo César.",
+      "imageUrl": "https://example.com/cesar.jpg",
+      "detailedInfo": "Perfecta como acompañamiento o plato principal con pollo a la parrilla.",
+      "ingredients": [
+        { "name": "Lechuga romana", "quantity": "100g" },
+        { "name": "Croutons", "quantity": "30g" },
+        { "name": "Queso parmesano rallado", "quantity": "20g" },
+        { "name": "Aderezo César", "quantity": "30ml" },
+        { "name": "Pollo a la parrilla (opcional)", "quantity": "100g" }
+      ],
+      "steps": [
+        { "step": "Lava y corta la lechuga." },
+        { "step": "Añade croutons, queso y pollo si deseas." },
+        { "step": "Vierte el aderezo y mezcla suavemente." }
+      ],
+      "images": [
+        "https://example.com/cesar1.webp",
+        "https://example.com/cesar2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 12,
+      "uid": "R-SAL_000012",
+      "name": "Ensalada Caprese",
+      "description": "Ensalada italiana con tomate, mozzarella y albahaca.",
+      "imageUrl": "https://example.com/caprese.jpg",
+      "detailedInfo": "Refrescante y sencilla, ideal como entrada o acompañamiento de pasta.",
+      "ingredients": [
+        { "name": "Tomates maduros", "quantity": "150g" },
+        { "name": "Mozzarella fresca", "quantity": "100g" },
+        { "name": "Hojas de albahaca", "quantity": "10g" },
+        { "name": "Aceite de oliva virgen", "quantity": "20ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Corta tomates y mozzarella en rodajas." },
+        { "step": "Intercala rodajas de tomate y mozzarella en un plato." },
+        { "step": "Decora con albahaca, sal, pimienta y aceite de oliva." }
+      ],
+      "images": [
+        "https://example.com/caprese1.webp",
+        "https://example.com/caprese2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 13,
+      "uid": "R-SAL_000013",
+      "name": "Ensalada de Quinoa",
+      "description": "Ensalada nutritiva con quinoa, aguacate y vegetales frescos.",
+      "imageUrl": "https://example.com/quinoa.jpg",
+      "detailedInfo": "Rica en proteínas y fibra, perfecta para comidas saludables y completas.",
+      "ingredients": [
+        { "name": "Quinoa cocida", "quantity": "150g" },
+        { "name": "Aguacate", "quantity": "1 mediano" },
+        { "name": "Tomate cherry", "quantity": "100g" },
+        { "name": "Pepino", "quantity": "50g" },
+        { "name": "Aceite de oliva", "quantity": "20ml" },
+        { "name": "Jugo de limón", "quantity": "10ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Corta los vegetales y el aguacate en cubos." },
+        { "step": "Mezcla con la quinoa cocida." },
+        { "step": "Aliña con aceite de oliva, limón, sal y pimienta." }
+      ],
+      "images": [
+        "https://example.com/quinoa1.webp",
+        "https://example.com/quinoa2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 14,
+      "uid": "R-SAL_000014",
+      "name": "Ensalada de Couscous",
+      "description": "Ensalada ligera con couscous, verduras y hierbas frescas.",
+      "imageUrl": "https://example.com/couscous.jpg",
+      "detailedInfo": "Ideal como acompañamiento frío o plato principal vegetariano.",
+      "ingredients": [
+        { "name": "Couscous cocido", "quantity": "150g" },
+        { "name": "Pimiento rojo", "quantity": "50g" },
+        { "name": "Pepino", "quantity": "50g" },
+        { "name": "Cebolla morada", "quantity": "30g" },
+        { "name": "Perejil fresco", "quantity": "10g" },
+        { "name": "Aceite de oliva", "quantity": "20ml" },
+        { "name": "Jugo de limón", "quantity": "10ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Mezcla el couscous con las verduras cortadas en cubos pequeños." },
+        { "step": "Añade perejil picado y aliña con aceite y limón." }
+      ],
+      "images": [
+        "https://example.com/couscous1.webp",
+        "https://example.com/couscous2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 15,
+      "uid": "R-SAL_000015",
+      "name": "Ensalada Griega",
+      "description": "Ensalada mediterránea con queso feta, aceitunas y pepino.",
+      "imageUrl": "https://example.com/greca.jpg",
+      "detailedInfo": "Sabor fresco y equilibrado, excelente como acompañamiento o plato principal ligero.",
+      "ingredients": [
+        { "name": "Pepino", "quantity": "100g" },
+        { "name": "Tomate", "quantity": "100g" },
+        { "name": "Cebolla morada", "quantity": "30g" },
+        { "name": "Queso feta", "quantity": "50g" },
+        { "name": "Aceitunas negras", "quantity": "20g" },
+        { "name": "Aceite de oliva", "quantity": "20ml" },
+        { "name": "Orégano seco", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Corta todos los vegetales en cubos y mezcla en un bol." },
+        { "step": "Añade queso feta desmenuzado y aceitunas." },
+        { "step": "Aliña con aceite de oliva y orégano." }
+      ],
+      "images": [
+        "https://example.com/greca1.webp",
+        "https://example.com/greca2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 16,
+      "uid": "R-SAL_000016",
+      "name": "Ensalada de Remolacha y Queso de Cabra",
+      "description": "Ensalada colorida con remolacha asada y queso de cabra.",
+      "imageUrl": "https://example.com/remolacha.jpg",
+      "detailedInfo": "Excelente combinación de sabores dulces y salados, ideal para un plato gourmet.",
+      "ingredients": [
+        { "name": "Remolacha asada", "quantity": "150g" },
+        { "name": "Queso de cabra", "quantity": "50g" },
+        { "name": "Nueces", "quantity": "30g" },
+        { "name": "Lechuga mixta", "quantity": "100g" },
+        { "name": "Aceite de oliva", "quantity": "20ml" },
+        { "name": "Vinagre balsámico", "quantity": "10ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Corta la remolacha en cubos y mézclala con la lechuga." },
+        { "step": "Añade queso de cabra desmenuzado y nueces." },
+        { "step": "Aliña con aceite de oliva y vinagre balsámico." }
+      ],
+      "images": [
+        "https://example.com/remolacha1.webp",
+        "https://example.com/remolacha2.webp"
+      ],
+      "rating": null
+    },
+     {
+      "id": 17,
+      "uid": "R-SAL_000017",
+      "name": "Ensalada de Espinaca y Fresas",
+      "description": "Ensalada fresca con espinacas, fresas y nueces.",
+      "imageUrl": "https://example.com/espinaca-fresas.jpg",
+      "detailedInfo": "Ideal para un almuerzo ligero o acompañamiento de carnes blancas.",
+      "ingredients": [
+        { "name": "Espinaca fresca", "quantity": "100g" },
+        { "name": "Fresas", "quantity": "100g" },
+        { "name": "Nueces", "quantity": "30g" },
+        { "name": "Queso feta", "quantity": "30g" },
+        { "name": "Vinagre balsámico", "quantity": "10ml" },
+        { "name": "Aceite de oliva", "quantity": "20ml" }
+      ],
+      "steps": [
+        { "step": "Lava las espinacas y fresas, corta las fresas en rodajas." },
+        { "step": "Mezcla todos los ingredientes en un bol." },
+        { "step": "Aliña con aceite de oliva y vinagre balsámico." }
+      ],
+      "images": [
+        "https://example.com/espinaca-fresas1.webp",
+        "https://example.com/espinaca-fresas2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 18,
+      "uid": "R-SAL_000018",
+      "name": "Ensalada de Garbanzos y Atún",
+      "description": "Ensalada proteica con garbanzos, atún y vegetales frescos.",
+      "imageUrl": "https://example.com/garbanzos-atun.jpg",
+      "detailedInfo": "Rápida y nutritiva, ideal para comidas saludables y completas.",
+      "ingredients": [
+        { "name": "Garbanzos cocidos", "quantity": "150g" },
+        { "name": "Atún en aceite", "quantity": "100g" },
+        { "name": "Tomate", "quantity": "100g" },
+        { "name": "Cebolla morada", "quantity": "30g" },
+        { "name": "Aceite de oliva", "quantity": "20ml" },
+        { "name": "Jugo de limón", "quantity": "10ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Mezcla garbanzos, atún y vegetales en un bol." },
+        { "step": "Aliña con aceite de oliva, limón, sal y pimienta." }
+      ],
+      "images": [
+        "https://example.com/garbanzos1.webp",
+        "https://example.com/garbanzos2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 19,
+      "uid": "R-SAL_000019",
+      "name": "Ensalada de Pollo y Aguacate",
+      "description": "Ensalada cremosa con pollo, aguacate y lechuga.",
+      "imageUrl": "https://example.com/pollo-aguacate.jpg",
+      "detailedInfo": "Ideal para un almuerzo completo y saludable.",
+      "ingredients": [
+        { "name": "Lechuga", "quantity": "100g" },
+        { "name": "Pollo cocido", "quantity": "150g" },
+        { "name": "Aguacate", "quantity": "1 mediano" },
+        { "name": "Tomate cherry", "quantity": "100g" },
+        { "name": "Mayonesa ligera", "quantity": "20ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Corta pollo, aguacate y tomates en cubos." },
+        { "step": "Mezcla con lechuga y adereza con mayonesa, sal y pimienta." }
+      ],
+      "images": [
+        "https://example.com/pollo-aguacate1.webp",
+        "https://example.com/pollo-aguacate2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 20,
+      "uid": "R-SAL_000020",
+      "name": "Ensalada de Manzana y Apio",
+      "description": "Ensalada crujiente y fresca con manzana, apio y nueces.",
+      "imageUrl": "https://example.com/manzana-apio.jpg",
+      "detailedInfo": "Perfecta como entrante o acompañamiento ligero.",
+      "ingredients": [
+        { "name": "Manzana", "quantity": "1 mediana" },
+        { "name": "Apio", "quantity": "50g" },
+        { "name": "Nueces", "quantity": "30g" },
+        { "name": "Yogur natural", "quantity": "30ml" },
+        { "name": "Jugo de limón", "quantity": "10ml" }
+      ],
+      "steps": [
+        { "step": "Corta la manzana y el apio en cubos pequeños." },
+        { "step": "Mezcla con nueces y aliña con yogur y limón." }
+      ],
+      "images": [
+        "https://example.com/manzana-apio1.webp",
+        "https://example.com/manzana-apio2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 21,
+      "uid": "R-SAL_000021",
+      "name": "Ensalada Mediterránea",
+      "description": "Ensalada fresca con pepino, tomate, aceitunas y queso feta.",
+      "imageUrl": "https://example.com/mediterranea.jpg",
+      "detailedInfo": "Sabor fresco y aromático, ideal para acompañar carnes o pastas.",
+      "ingredients": [
+        { "name": "Pepino", "quantity": "100g" },
+        { "name": "Tomate", "quantity": "100g" },
+        { "name": "Cebolla roja", "quantity": "30g" },
+        { "name": "Aceitunas negras", "quantity": "20g" },
+        { "name": "Queso feta", "quantity": "50g" },
+        { "name": "Aceite de oliva", "quantity": "20ml" },
+        { "name": "Orégano", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Corta vegetales y mezcla en un bol." },
+        { "step": "Añade queso feta y aceitunas." },
+        { "step": "Aliña con aceite y orégano." }
+      ],
+      "images": [
+        "https://example.com/mediterranea1.webp",
+        "https://example.com/mediterranea2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 22,
+      "uid": "R-SAL_000022",
+      "name": "Ensalada de Remolacha y Naranja",
+      "description": "Ensalada refrescante con remolacha cocida y naranja.",
+      "imageUrl": "https://example.com/remolacha-naranja.jpg",
+      "detailedInfo": "Combinación dulce y ácida, ideal como entrante ligero.",
+      "ingredients": [
+        { "name": "Remolacha cocida", "quantity": "150g" },
+        { "name": "Naranja", "quantity": "1 mediana" },
+        { "name": "Lechuga mixta", "quantity": "100g" },
+        { "name": "Aceite de oliva", "quantity": "15ml" },
+        { "name": "Vinagre balsámico", "quantity": "10ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Corta la remolacha y la naranja en cubos o rodajas." },
+        { "step": "Mezcla con la lechuga y aliña con aceite y vinagre." }
+      ],
+      "images": [
+        "https://example.com/remolacha-naranja1.webp",
+        "https://example.com/remolacha-naranja2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 23,
+      "uid": "R-SAL_000023",
+      "name": "Ensalada de Pasta Fría",
+      "description": "Ensalada colorida con pasta, vegetales y aderezo ligero.",
+      "imageUrl": "https://example.com/pasta-fria.jpg",
+      "detailedInfo": "Perfecta para picnic o almuerzos frescos.",
+      "ingredients": [
+        { "name": "Pasta cocida", "quantity": "150g" },
+        { "name": "Tomate cherry", "quantity": "100g" },
+        { "name": "Pepino", "quantity": "50g" },
+        { "name": "Aceitunas", "quantity": "20g" },
+        { "name": "Queso rallado", "quantity": "30g" },
+        { "name": "Aceite de oliva", "quantity": "20ml" },
+        { "name": "Jugo de limón", "quantity": "10ml" }
+      ],
+      "steps": [
+        { "step": "Mezcla la pasta con los vegetales y queso." },
+        { "step": "Aliña con aceite de oliva y jugo de limón." }
+      ],
+      "images": [
+        "https://example.com/pasta-fria1.webp",
+        "https://example.com/pasta-fria2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 24,
+      "uid": "R-SAL_000024",
+      "name": "Ensalada de Mango y Aguacate",
+      "description": "Ensalada tropical con mango, aguacate y lechuga.",
+      "imageUrl": "https://example.com/mango-aguacate.jpg",
+      "detailedInfo": "Fresca y ligera, ideal para días calurosos.",
+      "ingredients": [
+        { "name": "Mango", "quantity": "1 mediano" },
+        { "name": "Aguacate", "quantity": "1 mediano" },
+        { "name": "Lechuga mixta", "quantity": "100g" },
+        { "name": "Cilantro fresco", "quantity": "5g" },
+        { "name": "Aceite de oliva", "quantity": "15ml" },
+        { "name": "Jugo de limón", "quantity": "10ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Corta mango y aguacate en cubos." },
+        { "step": "Mezcla con la lechuga y el cilantro." },
+        { "step": "Aliña con aceite, limón, sal y pimienta." }
+      ],
+      "images": [
+        "https://example.com/mango-aguacate1.webp",
+        "https://example.com/mango-aguacate2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 25,
+      "uid": "R-SAL_000025",
+      "name": "Ensalada de Kale y Manzana",
+      "description": "Ensalada nutritiva con kale, manzana y frutos secos.",
+      "imageUrl": "https://example.com/kale-manzana.jpg",
+      "detailedInfo": "Rica en vitaminas y antioxidantes, ideal como plato principal saludable.",
+      "ingredients": [
+        { "name": "Kale", "quantity": "100g" },
+        { "name": "Manzana", "quantity": "1 mediana" },
+        { "name": "Nueces", "quantity": "30g" },
+        { "name": "Queso rallado", "quantity": "20g" },
+        { "name": "Aceite de oliva", "quantity": "15ml" },
+        { "name": "Jugo de limón", "quantity": "10ml" }
+      ],
+      "steps": [
+        { "step": "Lava y trocea el kale." },
+        { "step": "Corta la manzana en cubos y mezcla con el kale." },
+        { "step": "Añade nueces, queso y aliña con aceite y limón." }
+      ],
+      "images": [
+        "https://example.com/kale-manzana1.webp",
+        "https://example.com/kale-manzana2.webp"
+      ],
+      "rating": null
+    }
+  ]
+}

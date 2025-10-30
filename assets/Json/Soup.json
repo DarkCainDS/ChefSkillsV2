@@ -1,0 +1,464 @@
+{
+  "recipes": [
+{
+  "id": 1,
+  "uid": "R-SOUP_000001",
+  "name": "Sopa de Verduras Saludable",
+  "description": "Sopa fácil, económica y sabrosa, con un truco de licuado de zanahoria y tomate tatemado para lograr una textura cremosa.",
+  "imageUrl": "https://example.com/sopa-verduras-saludable.jpg",
+  "detailedInfo": "Una sopa casera ideal para cualquier día, rica en vegetales y con una textura suave y natural gracias al licuado de zanahoria y tomate tatemado.",
+  "ingredients": [
+    { "name": "Habichuelas (ejotes)", "quantity": "1 puñado", "notes": "Picadas finamente en rodajitas" },
+    { "name": "Pimentón rojo mediano", "quantity": "1 unidad", "notes": "Picado en cuadritos pequeños" },
+    { "name": "Cebolla blanca mediana", "quantity": "1 unidad", "notes": "Picada en cuadritos o julianas" },
+    { "name": "Zanahoria grande", "quantity": "1 unidad", "notes": "Mitad picada y mitad reservada" },
+    { "name": "Cebolla larga (cebolleta)", "quantity": "2 ramas", "notes": "Cortadas en rodajitas" },
+    { "name": "Arvejas (chícharos)", "quantity": "Al gusto", "notes": "" },
+    { "name": "Papa", "quantity": "1 unidad", "notes": "Picada en cubos medianos" },
+    { "name": "Ajo", "quantity": "3 dientes", "notes": "Finamente picados" },
+    { "name": "Aceite de oliva o vegetal", "quantity": "1 chorrito", "notes": "Para sofreír" },
+    { "name": "Agua", "quantity": "1.5 litros", "notes": "Ajustar según porciones" },
+    { "name": "Tomate", "quantity": "1 unidad", "notes": "Tatemado en sartén" },
+    { "name": "Caldo de la sopa", "quantity": "1-2 cucharadas", "notes": "Usado para licuar" },
+    { "name": "Sal", "quantity": "Al gusto", "notes": "" },
+    { "name": "Pimienta negra", "quantity": "Al gusto", "notes": "Recién molida" },
+    { "name": "Comino molido", "quantity": "1 cucharadita", "notes": "" },
+    { "name": "Orégano seco", "quantity": "1 cucharadita", "notes": "" },
+    { "name": "Cilantro", "quantity": "Al gusto", "notes": "Finamente picado" },
+    { "name": "Pimienta de cayena", "quantity": "1 pizca (opcional)", "notes": "Omitir si hay niños" }
+  ],
+  "steps": [
+    { "step": "Picar finamente las habichuelas, el pimentón, la cebolla blanca, la mitad de la zanahoria y la cebolla larga. Cortar la papa en cubos y reservar la otra mitad de la zanahoria." },
+    { "step": "En una olla amplia, calentar un chorrito de aceite y sofreír el ajo picado sin dejar que se queme." },
+    { "step": "Agregar el agua, sal y pimienta al gusto. Cuando hierva, añadir las verduras: zanahoria, arvejas, pimentón, habichuelas, cebolla blanca, papa y cebolla larga." },
+    { "step": "Condimentar con comino, orégano y pimienta de cayena opcional. Cocinar a fuego medio." },
+    { "step": "Tatemar el tomate en sartén hasta que tome color asado, sin quemarse." },
+    { "step": "Retirar la media zanahoria entera de la sopa junto con el tomate tatemado, licuar con 1-2 cucharadas del caldo hasta obtener una mezcla suave." },
+    { "step": "Verter el licuado en la olla para espesar la sopa y mezclar bien." },
+    { "step": "Agregar cilantro picado, cocinar 10 minutos más y ajustar sal o condimentos al gusto." },
+    { "step": "Servir caliente, opcionalmente con trocitos de queso o parte verde de cebolla larga picada." }
+  ],
+  "images": [
+    "https://example.com/sopa-verduras1.webp",
+    "https://example.com/sopa-verduras2.webp"
+  ],
+  "rating": null
+},
+{
+  "id": 2,
+  "uid": "R-SOUP_000002",
+  "name": "Sopa de Verduras Muy Fácil",
+  "description": "Sopa ligera y reconfortante, ideal para una cena caliente. Su preparación es rápida y sencilla, perfecta para cualquier día.",
+  "imageUrl": "https://example.com/sopa-verduras-facil.jpg",
+  "detailedInfo": "Una receta práctica que utiliza verduras comunes y condimentos simples para crear una sopa casera nutritiva y suave.",
+  "ingredients": [
+    { "name": "Aceite", "quantity": "1 chorrito", "notes": "Para sofreír" },
+    { "name": "Caldo o agua", "quantity": "A gusto", "notes": "Suficiente para cubrir las verduras" },
+    { "name": "Cebolla", "quantity": "1 unidad", "notes": "Picada en cubitos" },
+    { "name": "Papa", "quantity": "1 unidad", "notes": "Picada en cubos pequeños" },
+    { "name": "Zanahoria", "quantity": "1 unidad", "notes": "Picada en cubos pequeños" },
+    { "name": "Ajo", "quantity": "1 diente", "notes": "Finamente picado" },
+    { "name": "Zapallo (calabaza)", "quantity": "1 trozo", "notes": "Cortado en cubitos" },
+    { "name": "Zapallito verde (zucchini)", "quantity": "1 unidad", "notes": "Cortado en cubitos" },
+    { "name": "Tomate", "quantity": "1 unidad", "notes": "Picado" },
+    { "name": "Arvejas (guisantes)", "quantity": "Al gusto", "notes": "" },
+    { "name": "Sal y condimentos", "quantity": "Al gusto", "notes": "Agregar junto con el líquido" }
+  ],
+  "steps": [
+    { "step": "Cortar todas las verduras en cubitos de tamaño uniforme." },
+    { "step": "En una olla con un chorrito de aceite, agregar la cebolla, papa y zanahoria. Sofreír por 5 minutos." },
+    { "step": "Añadir el ajo, el zapallo, el zapallito verde, el tomate y las arvejas. Cocinar 5 minutos más." },
+    { "step": "Incorporar el caldo o agua, condimentar con sal y especias al gusto, tapar y cocinar a fuego medio durante 30 minutos." },
+    { "step": "Servir caliente, ideal para la cena." }
+  ],
+  "images": [
+    "https://example.com/sopa-verduras-facil1.webp",
+    "https://example.com/sopa-verduras-facil2.webp"
+  ],
+  "rating": null
+},
+{
+  "id": 3,
+  "uid": "R-SOUP_000003",
+  "name": "Sopa de Verduras y Fideos",
+  "description": "Sopa sencilla y rápida, con verduras salteadas que extraen todo su sabor y fideos al dente para una textura perfecta.",
+  "imageUrl": "https://example.com/sopa-verduras-fideos.jpg",
+  "detailedInfo": "Receta ligera para 4 personas, con un sofrito inicial que potencia los aromas y el sabor de las verduras.",
+  "ingredients": [
+    { "name": "Caldo de pollo", "quantity": "1.5 L", "notes": "Se puede usar caldo de puchero, carne o verduras; se recomienda de calidad" },
+    { "name": "Calabacín", "quantity": "½ unidad", "notes": "Picado en dados pequeños" },
+    { "name": "Puerro", "quantity": "¼ unidad", "notes": "Picado en dados pequeños" },
+    { "name": "Judías verdes", "quantity": "6 unidades", "notes": "Picadas en dados pequeños" },
+    { "name": "Zanahorias", "quantity": "2 unidades", "notes": "Picadas en dados pequeños" },
+    { "name": "Pimiento amarillo", "quantity": "¼ unidad", "notes": "Picado en dados pequeños" },
+    { "name": "Rama de apio", "quantity": "¼ unidad", "notes": "Picada en dados pequeños" },
+    { "name": "Tomillo fresco", "quantity": "2 ramas", "notes": "Para aromatizar; retirar antes de añadir los fideos" },
+    { "name": "Fideos nº4", "quantity": "100 g", "notes": "Se pueden usar otros fideos al gusto" },
+    { "name": "Aceite de oliva", "quantity": "1 chorrito", "notes": "Para sofrito" },
+    { "name": "Sal", "quantity": "Al gusto", "notes": "" }
+  ],
+  "steps": [
+    { "step": "Picar todas las verduras en dados pequeños y lavarlas bien." },
+    { "step": "En una cazuela amplia, cubrir el fondo con aceite de oliva caliente y añadir las verduras picadas. Remover durante unos segundos." },
+    { "step": "Agregar las ramitas de tomillo fresco para aromatizar." },
+    { "step": "Cocinar a fuego vivo durante 5 minutos, removiendo continuamente, hasta que las verduras comiencen a dorarse ligeramente." },
+    { "step": "Verter el caldo de pollo, subir el fuego y sazonar con sal al gusto. Cuando hierva, bajar el fuego y mantener un hervor suave durante 15 minutos." },
+    { "step": "Retirar las ramas de tomillo y añadir los fideos. Cocer 6-7 minutos hasta que estén al dente." },
+    { "step": "Apagar el fuego y dejar reposar un par de minutos antes de servir." }
+  ],
+  "images": [
+    "https://example.com/sopa-verduras-fideos1.webp",
+    "https://example.com/sopa-verduras-fideos2.webp"
+  ],
+  "rating": null
+},
+{
+  "id": 4,
+  "uid": "R-SOUP_000004",
+  "name": "Sopa de Verduras Ligera y Deliciosa",
+  "description": "Sopa saludable y ligera, fácil de preparar con verduras disponibles en casa, con un sabor natural y reconfortante.",
+  "imageUrl": "https://example.com/sopa-verduras-ligera.jpg",
+  "detailedInfo": "Receta flexible que permite usar distintas verduras según disponibilidad, aromatizada con hojas de verduras para un sabor más intenso.",
+  "ingredients": [
+    { "name": "Agua o caldo de pollo/verduras", "quantity": "A gusto", "notes": "Suficiente para cubrir las verduras" },
+    { "name": "Zanahoria", "quantity": "1-2 unidades", "notes": "Picadas en cubos medianos" },
+    { "name": "Apio", "quantity": "2 ramas", "notes": "Picado en cubos o rodajas" },
+    { "name": "Choclo/Maíz", "quantity": "½ taza", "notes": "Puede ser fresco o congelado" },
+    { "name": "Vainitas (ejotes/judías verdes)", "quantity": "½ taza", "notes": "Picadas" },
+    { "name": "Zapallo/Calabaza", "quantity": "½ unidad", "notes": "Picada en cubos medianos" },
+    { "name": "Papa", "quantity": "1 unidad", "notes": "Picada en cubos" },
+    { "name": "Hojas de verduras (apio, zanahoria)", "quantity": "Al gusto", "notes": "Para aromatizar" },
+    { "name": "Sal y pimienta", "quantity": "Al gusto", "notes": "" },
+    { "name": "Tostadas o pan frito", "quantity": "Opcional", "notes": "Para acompañar al servir" }
+  ],
+  "steps": [
+    { "step": "Picar todas las verduras en cubos o trozos medianos." },
+    { "step": "En una olla grande, poner a hervir el agua o caldo." },
+    { "step": "Agregar las hojas de las verduras al caldo para que suelten aroma." },
+    { "step": "Incorporar primero las verduras más duras (zanahoria, papa) y luego las más blandas (arvejas, choclo). Cocinar hasta que estén tiernas." },
+    { "step": "Ajustar la sal y la pimienta al gusto." },
+    { "step": "Servir caliente, acompañado de tostadas o pan frito si se desea." }
+  ],
+  "images": [
+    "https://example.com/sopa-verduras-ligera1.webp",
+    "https://example.com/sopa-verduras-ligera2.webp"
+  ],
+  "rating": null
+},
+{
+  "id": 5,
+  "uid": "R-SOUP_000005",
+  "name": "Sopa de Verduras Rápida (Olla a Presión)",
+  "description": "Sopa saludable y rápida, preparada en olla a presión con un orden específico de rehogado para maximizar el sabor y la textura de las verduras.",
+  "imageUrl": "https://example.com/sopa-verduras-rapida.jpg",
+  "detailedInfo": "Receta práctica que permite tener una sopa lista en pocos minutos, conservando el sabor y la textura de cada verdura.",
+  "ingredients": [
+    { "name": "Calabaza", "quantity": "500 g", "notes": "Cortada en taquitos" },
+    { "name": "Calabacín", "quantity": "1 unidad", "notes": "Cortado en dados" },
+    { "name": "Coliflor", "quantity": "½ unidad", "notes": "Cortada en taquitos" },
+    { "name": "Puerro", "quantity": "1 unidad", "notes": "Cortado en taquitos, incluir parte del tallo verde" },
+    { "name": "Agua o caldo de verduras", "quantity": "1.2 L", "notes": "Suficiente para cubrir las verduras" },
+    { "name": "Aceite", "quantity": "2 cucharadas", "notes": "Para rehogar" },
+    { "name": "Sal", "quantity": "Al gusto", "notes": "" },
+    { "name": "Ajo en polvo con pimienta", "quantity": "1 cucharadita", "notes": "" }
+  ],
+  "steps": [
+    { "step": "Cortar todas las verduras en dados o taquitos." },
+    { "step": "En la olla a presión, calentar el aceite y rehogar primero la coliflor y la calabaza durante 5 minutos." },
+    { "step": "Añadir el calabacín y saltear por 5 minutos más." },
+    { "step": "Incorporar finalmente el puerro y continuar rehogando hasta que las verduras estén blanditas." },
+    { "step": "Agregar sal y la cucharadita de ajo en polvo con pimienta. Remover bien durante unos minutos." },
+    { "step": "Verter el agua o caldo, cerrar la olla y poner a hervir a fuego fuerte hasta que suba la presión." },
+    { "step": "Bajar el fuego al mínimo y cocinar 10 minutos. Apagar el fuego y dejar reposar unos minutos antes de servir." }
+  ],
+  "images": [
+    "https://example.com/sopa-verduras-rapida1.webp",
+    "https://example.com/sopa-verduras-rapida2.webp"
+  ],
+  "rating": null
+},
+     {
+      "id": 6,
+      "uid": "R-SOUP_000006",
+      "name": "Sopa de Champiñones",
+      "description": "Sopa cremosa y aromática de champiñones frescos.",
+      "imageUrl": "https://example.com/sopa-champinones.jpg",
+      "detailedInfo": "Ideal como entrada elegante o acompañamiento para pan tostado.",
+      "ingredients": [
+        { "name": "Champiñones", "quantity": "200g" },
+        { "name": "Cebolla", "quantity": "50g" },
+        { "name": "Ajo", "quantity": "1 diente" },
+        { "name": "Caldo de verduras", "quantity": "500ml" },
+        { "name": "Crema de leche", "quantity": "50ml" },
+        { "name": "Aceite de oliva", "quantity": "15ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Sofríe cebolla y ajo en aceite." },
+        { "step": "Agrega champiñones y cocina 5-7 min." },
+        { "step": "Añade caldo y cocina 10 min." },
+        { "step": "Licúa y añade crema, sazona al gusto." }
+      ],
+      "images": [
+        "https://example.com/champinones1.webp",
+        "https://example.com/champinones2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 7,
+      "uid": "R-SOUP_000007",
+      "name": "Sopa de Mariscos",
+      "description": "Sopa ligera y sabrosa con camarones, mejillones y pescado.",
+      "imageUrl": "https://example.com/sopa-mariscos.jpg",
+      "detailedInfo": "Perfecta para cenas elegantes o como plato principal de mariscos.",
+      "ingredients": [
+        { "name": "Camarones", "quantity": "100g" },
+        { "name": "Mejillones", "quantity": "100g" },
+        { "name": "Filete de pescado", "quantity": "100g" },
+        { "name": "Cebolla", "quantity": "50g" },
+        { "name": "Ajo", "quantity": "1 diente" },
+        { "name": "Caldo de pescado", "quantity": "500ml" },
+        { "name": "Pimiento rojo", "quantity": "50g" },
+        { "name": "Perejil fresco", "quantity": "5g" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Sofríe cebolla, ajo y pimiento en aceite." },
+        { "step": "Agrega el pescado y cocina 5 min." },
+        { "step": "Añade caldo y cocina 10 min." },
+        { "step": "Incorpora mariscos, cocina 5 min y sazona al gusto." },
+        { "step": "Decora con perejil fresco antes de servir." }
+      ],
+      "images": [
+        "https://example.com/mariscos1.webp",
+        "https://example.com/mariscos2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 8,
+      "uid": "R-SOUP_000008",
+      "name": "Sopa de Caldo Verde",
+      "description": "Sopa portuguesa de patata y col rizada con chorizo.",
+      "imageUrl": "https://example.com/caldo-verde.jpg",
+      "detailedInfo": "Rica y tradicional, perfecta para acompañar pan rústico.",
+      "ingredients": [
+        { "name": "Patatas", "quantity": "200g" },
+        { "name": "Cebolla", "quantity": "50g" },
+        { "name": "Ajo", "quantity": "1 diente" },
+        { "name": "Col rizada", "quantity": "50g" },
+        { "name": "Chorizo", "quantity": "50g" },
+        { "name": "Caldo de verduras", "quantity": "500ml" },
+        { "name": "Aceite de oliva", "quantity": "15ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Sofríe cebolla y ajo en aceite." },
+        { "step": "Añade patatas y caldo, cocina hasta ablandar." },
+        { "step": "Tritura ligeramente las patatas para espesar." },
+        { "step": "Añade col y chorizo en rodajas, cocina 5 min." },
+        { "step": "Sazona y sirve caliente." }
+      ],
+      "images": [
+        "https://example.com/caldoverde1.webp",
+        "https://example.com/caldoverde2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 9,
+      "uid": "R-SOUP_000009",
+      "name": "Sopa de Cebolla Francesa",
+      "description": "Sopa tradicional con cebolla caramelizada y queso gratinado.",
+      "imageUrl": "https://example.com/sopa-cebolla.jpg",
+      "detailedInfo": "Perfecta como entrada elegante, gratinada con pan y queso.",
+      "ingredients": [
+        { "name": "Cebolla", "quantity": "200g" },
+        { "name": "Mantequilla", "quantity": "20g" },
+        { "name": "Caldo de res", "quantity": "500ml" },
+        { "name": "Pan", "quantity": "2 rebanadas" },
+        { "name": "Queso gruyere rallado", "quantity": "50g" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Carameliza cebolla en mantequilla a fuego medio-bajo." },
+        { "step": "Añade caldo y cocina 10 min." },
+        { "step": "Vierte la sopa en tazones resistentes al horno." },
+        { "step": "Coloca pan y queso encima, gratina hasta dorar." }
+      ],
+      "images": [
+        "https://example.com/cebolla1.webp",
+        "https://example.com/cebolla2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 10,
+      "uid": "R-SOUP_000010",
+      "name": "Sopa Tom Yum",
+      "description": "Sopa tailandesa picante y ácida con camarones y hierbas aromáticas.",
+      "imageUrl": "https://example.com/tom-yum.jpg",
+      "detailedInfo": "Perfecta para los amantes de sabores intensos y exóticos.",
+      "ingredients": [
+        { "name": "Camarones", "quantity": "100g" },
+        { "name": "Setas", "quantity": "50g" },
+        { "name": "Caldo de pollo", "quantity": "500ml" },
+        { "name": "Hierba limón (lemongrass)", "quantity": "1 tallo" },
+        { "name": "Hojas de lima kaffir", "quantity": "3" },
+        { "name": "Galanga", "quantity": "1 rodaja" },
+        { "name": "Chiles", "quantity": "2" },
+        { "name": "Jugo de lima", "quantity": "1 cda" },
+        { "name": "Salsa de pescado", "quantity": "1 cdita" }
+      ],
+      "steps": [
+        { "step": "Hierve caldo con hierba limón, hojas de lima y galanga." },
+        { "step": "Agrega setas y cocina 5 min." },
+        { "step": "Añade camarones y chiles, cocina 3 min." },
+        { "step": "Retira del fuego, añade jugo de lima y salsa de pescado." }
+      ],
+      "images": [
+        "https://example.com/tomyum1.webp",
+        "https://example.com/tomyum2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 11,
+      "uid": "R-SOUP_000011",
+      "name": "Sopa de Zanahoria y Jengibre",
+      "description": "Sopa cremosa con sabor dulce y picante.",
+      "imageUrl": "https://example.com/sopa-zanahoria-jengibre.jpg",
+      "detailedInfo": "Perfecta como entrada ligera o reconfortante en días fríos.",
+      "ingredients": [
+        { "name": "Zanahoria", "quantity": "200g" },
+        { "name": "Cebolla", "quantity": "50g" },
+        { "name": "Jengibre fresco", "quantity": "10g" },
+        { "name": "Caldo de verduras", "quantity": "500ml" },
+        { "name": "Crema de leche", "quantity": "50ml" },
+        { "name": "Aceite de oliva", "quantity": "15ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Sofríe cebolla y jengibre en aceite." },
+        { "step": "Añade zanahoria y caldo, cocina 20 min." },
+        { "step": "Licúa, añade crema y sazona al gusto." }
+      ],
+      "images": [
+        "https://example.com/zanahoria1.webp",
+        "https://example.com/zanahoria2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 12,
+      "uid": "R-SOUP_000012",
+      "name": "Sopa de Calabacín y Puerro",
+      "description": "Sopa suave y ligera de verduras verdes.",
+      "imageUrl": "https://example.com/sopa-calabacin-puerro.jpg",
+      "detailedInfo": "Apta para dietas ligeras, muy digestiva y fresca.",
+      "ingredients": [
+        { "name": "Calabacín", "quantity": "200g" },
+        { "name": "Puerro", "quantity": "50g" },
+        { "name": "Patata", "quantity": "50g" },
+        { "name": "Caldo de verduras", "quantity": "500ml" },
+        { "name": "Aceite de oliva", "quantity": "15ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Sofríe puerro y patata en aceite." },
+        { "step": "Añade calabacín y caldo, cocina 15 min." },
+        { "step": "Licúa y sazona al gusto." }
+      ],
+      "images": [
+        "https://example.com/calabacin1.webp",
+        "https://example.com/calabacin2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 13,
+      "uid": "R-SOUP_000013",
+      "name": "Sopa de Brócoli y Queso",
+      "description": "Sopa cremosa y reconfortante de brócoli con queso cheddar.",
+      "imageUrl": "https://example.com/sopa-brocoli-queso.jpg",
+      "detailedInfo": "Ideal como plato principal ligero o acompañamiento de pan tostado.",
+      "ingredients": [
+        { "name": "Brócoli", "quantity": "200g" },
+        { "name": "Cebolla", "quantity": "50g" },
+        { "name": "Caldo de verduras", "quantity": "500ml" },
+        { "name": "Queso cheddar rallado", "quantity": "50g" },
+        { "name": "Crema de leche", "quantity": "50ml" },
+        { "name": "Aceite de oliva", "quantity": "15ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Sofríe cebolla en aceite." },
+        { "step": "Añade brócoli y caldo, cocina 10 min." },
+        { "step": "Licúa, añade queso y crema, sazona al gusto." }
+      ],
+      "images": [
+        "https://example.com/brocoli1.webp",
+        "https://example.com/brocoli2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 14,
+      "uid": "R-SOUP_000014",
+      "name": "Sopa de Papa y Ajo Asado",
+      "description": "Sopa cremosa con sabor intenso a ajo asado.",
+      "imageUrl": "https://example.com/sopa-papa-ajo.jpg",
+      "detailedInfo": "Perfecta para noches frías, acompañada de pan rústico.",
+      "ingredients": [
+        { "name": "Papas", "quantity": "200g" },
+        { "name": "Ajo", "quantity": "5 dientes" },
+        { "name": "Cebolla", "quantity": "50g" },
+        { "name": "Caldo de verduras", "quantity": "500ml" },
+        { "name": "Aceite de oliva", "quantity": "15ml" },
+        { "name": "Crema de leche", "quantity": "50ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Asa el ajo hasta dorar." },
+        { "step": "Sofríe cebolla en aceite." },
+        { "step": "Añade papas, ajo asado y caldo, cocina 15 min." },
+        { "step": "Licúa, añade crema y sazona al gusto." }
+      ],
+      "images": [
+        "https://example.com/papaajo1.webp",
+        "https://example.com/papaajo2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 15,
+      "uid": "R-SOUP_000015",
+      "name": "Sopa Ramen",
+      "description": "Sopa japonesa con caldo sabroso, fideos y toppings variados.",
+      "imageUrl": "https://example.com/sopa-ramen.jpg",
+      "detailedInfo": "Ideal para los amantes de la cocina asiática, con sabores intensos.",
+      "ingredients": [
+        { "name": "Fideos ramen", "quantity": "100g" },
+        { "name": "Caldo de pollo", "quantity": "500ml" },
+        { "name": "Huevo", "quantity": "1" },
+        { "name": "Cebolla de verdeo", "quantity": "10g" },
+        { "name": "Setas", "quantity": "50g" },
+        { "name": "Salsa de soja", "quantity": "1 cda" },
+        { "name": "Aceite de sésamo", "quantity": "5ml" },
+        { "name": "Pechuga de pollo o cerdo", "quantity": "50g" }
+      ],
+      "steps": [
+        { "step": "Cocina fideos según instrucciones." },
+        { "step": "Hierve caldo con pollo o cerdo y setas." },
+        { "step": "Añade fideos al caldo y sazona con soja y aceite de sésamo." },
+        { "step": "Agrega huevo cocido y cebolla de verdeo antes de servir." }
+      ],
+      "images": [
+        "https://example.com/ramen1.webp",
+        "https://example.com/ramen2.webp"
+      ],
+      "rating": null
+    }
+  ]
+}

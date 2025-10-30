@@ -1,0 +1,30 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "uid": "Ap-TZ_000001",
+      "name": "Mojito",
+      "description": "Cóctel refrescante con ron, menta y lima.",
+      "imageUrl": "https://example.com/mojito.jpg",
+      "detailedInfo": "Ideal para días calurosos y reuniones al aire libre.",
+      "ingredients": [
+        { "name": "Ron blanco", "quantity": "50ml" },
+        { "name": "Hojas de menta", "quantity": "10" },
+        { "name": "Azúcar", "quantity": "2 cditas" },
+        { "name": "Jugo de lima", "quantity": "25ml" },
+        { "name": "Agua con gas", "quantity": "100ml" },
+        { "name": "Hielo", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Macerar menta con azúcar y jugo de lima." },
+        { "step": "Añadir ron y hielo." },
+        { "step": "Completar con agua con gas y revolver suavemente." }
+      ],
+      "images": [
+        "https://example.com/mojito1.webp",
+        "https://example.com/mojito2.webp"
+      ],
+      "rating": null
+    }
+]
+}

@@ -1,0 +1,544 @@
+{
+  "recipes": [
+{
+  "id": 1,
+  "uid": "R-S_000001",
+  "name": "Chimichurri Fresco Casero",
+  "description": "Salsa tradicional argentina a base de hierbas frescas, vinagre y aceite de oliva, ideal para carnes asadas y parrillas.",
+  "imageUrl": "https://example.com/chimichurri.jpg",
+  "detailedInfo": "Esta receta utiliza ingredientes frescos y se enfoca en el corte manual para obtener la textura deseada, sin usar licuadora. El chimichurri se prepara picando a mano perejil, orégano, ajo y ají, mezclados con vinagre, aceite de oliva y un toque de sal y pimienta. Su textura artesanal y el equilibrio entre vinagre y aceite lo hacen perfecto para carnes, empanadas o panes. Se conserva hasta un mes en frascos de vidrio, manteniendo su sabor intenso y natural.",
+  "ingredients": [
+    { "name": "Perejil fresco", "quantity": "2 ramos", "notes": "Fresco, lavado. Picar finamente." },
+    { "name": "Orégano fresco", "quantity": "Hojas al gusto", "notes": "Descartar tallos, usar solo hojas." },
+    { "name": "Ajo", "quantity": "10 dientes", "notes": "Quitar la raíz de la punta. Se puede usar menos al gusto." },
+    { "name": "Ají / Chile Fresno", "quantity": "1 unidad", "notes": "Muy picante. Usar semillas y vaina." },
+    { "name": "Agua caliente o tibia", "quantity": "1 taza", "notes": "Para hidratar y mezclar." },
+    { "name": "Vinagre de vino o manzana", "quantity": "2 tazas", "notes": "El chef comienza con 1.5 tazas y añade 0.5 al final." },
+    { "name": "Aceite de oliva extravirgen", "quantity": "2 tazas", "notes": "Usar la misma cantidad que el vinagre." },
+    { "name": "Sal", "quantity": "Al gusto", "notes": "Cualquier tipo de sal." },
+    { "name": "Pimienta negra", "quantity": "Al gusto", "notes": "Al gusto, recién molida si es posible." }
+  ],
+  "steps": [
+    { "step": "Corte de Hierbas: Pica el perejil y las hojas de orégano muy finamente. No uses licuadora ni procesadora." },
+    { "step": "Corte de Ajo y Ají: Pica los dientes de ajo y el ají rojo en cuadritos pequeños. Lava bien las manos después de cortar el ají." },
+    { "step": "Mezclado Inicial: Junta todos los ingredientes sólidos picados en un recipiente amplio." },
+    { "step": "Líquidos y Emulsión: Agrega el agua caliente o tibia, el vinagre y el aceite de oliva. Mezcla bien hasta emulsionar y que la mezcla tome color." },
+    { "step": "Ajuste y Sazón: Rectifica la cantidad de vinagre y aceite si deseas. Sazona con sal y pimienta al gusto." },
+    { "step": "Conservación: Guarda la salsa en frascos de vidrio limpios. Se conserva hasta un mes, refrigerada o a temperatura ambiente." }
+  ],
+  "tips": [
+    "No uses licuadora ni procesadora; la textura se logra picando todo a mano.",
+    "Picar todos los ingredientes muy finamente es clave para un chimichurri auténtico.",
+    "Usa orégano fresco para un aroma y sabor óptimos; descarta los tallos.",
+    "Mantén la proporción equilibrada de vinagre y aceite (1:1) y ajusta al gusto.",
+    "Si usas chile muy picante, lava bien las manos después de manipularlo.",
+    "No temas usar una cantidad generosa de ajo para potenciar sabor y aroma."
+  ],
+  "images": [
+    "https://example.com/chimichurri1.webp",
+    "https://example.com/chimichurri2.webp"
+  ],
+  "rating": null
+},
+{
+  "id": 2,
+  "uid": "R-S_000002",
+  "name": "Mayonesa de Ajo y Albahaca",
+  "description": "Una mayonesa cremosa con base de huevo duro, ajo fresco y albahaca, ideal para sándwiches, milanesas o como aderezo versátil.",
+  "imageUrl": "https://example.com/mayonesa-ajo-albahaca.jpg",
+  "detailedInfo": "Esta mayonesa casera combina la suavidad de los huevos duros con el sabor intenso del ajo y la frescura de la albahaca. La mezcla se emulsiona con aceite de oliva y un chorrito de leche, logrando una textura cremosa y ligera. Perfecta para untar, acompañar carnes o usar como aderezo de ensaladas.",
+  "ingredients": [
+    { "name": "Huevos duros", "quantity": "3 unidades", "notes": "Cocidos y pelados." },
+    { "name": "Ajo", "quantity": "1 diente", "notes": "Pelado y picado." },
+    { "name": "Albahaca fresca", "quantity": "Hojas al gusto", "notes": "Lavar y secar antes de usar." },
+    { "name": "Aceite de oliva", "quantity": "Cantidad necesaria", "notes": "Para emulsionar y lograr la textura deseada." },
+    { "name": "Jugo de limón", "quantity": "Al gusto", "notes": "Para equilibrar acidez y frescura." },
+    { "name": "Leche", "quantity": "Un chorrito", "notes": "Para suavizar y dar cremosidad a la mayonesa." },
+    { "name": "Sal y pimienta", "quantity": "Al gusto", "notes": "Ajustar al final según preferencia." }
+  ],
+  "steps": [
+    { "step": "Coloca los huevos duros, el diente de ajo, las hojas de albahaca, el aceite de oliva, el jugo de limón, sal y pimienta en un recipiente." },
+    { "step": "Mezcla todos los ingredientes hasta obtener una pasta uniforme. Puedes usar un procesador o licuadora pequeña." },
+    { "step": "Agrega un chorrito de leche y mezcla nuevamente hasta lograr una textura cremosa y ligera." },
+    { "step": "Prueba y ajusta la sazón con más sal, pimienta o jugo de limón según tu gusto." },
+    { "step": "Guarda en un frasco hermético en refrigeración. Se conserva de 3 a 5 días." }
+  ],
+  "tips": [
+    "Usa huevos frescos y cocidos correctamente para una textura más suave.",
+    "Pica el ajo finamente si no quieres usar licuadora para mantener textura artesanal.",
+    "La albahaca fresca potencia el aroma y sabor de la mayonesa; evita albahaca seca.",
+    "Agrega el aceite de oliva lentamente para una emulsión más estable.",
+    "Si quieres un sabor más intenso, deja reposar la mayonesa en refrigeración al menos 30 minutos antes de usar."
+  ],
+  "images": [
+    "https://example.com/mayonesa-ajo-albahaca1.webp",
+    "https://example.com/mayonesa-ajo-albahaca2.webp"
+  ],
+  "rating": null
+},
+{
+  "id": 3,
+  "uid": "R-S_000003",
+  "name": "Babaganoush (Dip de Berenjena Quemada)",
+  "description": "Una crema ligera con sabor ahumado de berenjena, ideal para dips, untables o acompañar pan de pita.",
+  "imageUrl": "https://example.com/babaganoush.jpg",
+  "detailedInfo": "El Babaganoush es un dip cremoso y ligero que se caracteriza por el sabor intenso de la berenjena quemada. La berenjena se asa o quema en sartén hasta que su piel esté completamente negra, aportando un aroma ahumado único. Se mezcla con ajo, perejil, semillas de sésamo, jugo de limón, aceite de oliva y un toque de miel y pimentón ahumado. Perfecto para untar en panes, servir con vegetales frescos o como acompañamiento de platos mediterráneos.",
+  "ingredients": [
+    { "name": "Berenjena", "quantity": "1 unidad", "notes": "Entera, con cáscara, para quemar y obtener sabor ahumado." },
+    { "name": "Ajo", "quantity": "1 diente", "notes": "Pelado y picado." },
+    { "name": "Perejil fresco", "quantity": "Hojas al gusto", "notes": "Lavar y secar antes de usar." },
+    { "name": "Semillas de sésamo", "quantity": "Cantidad al gusto", "notes": "Se pueden tostar ligeramente para más aroma." },
+    { "name": "Jugo de limón", "quantity": "Al gusto", "notes": "Para equilibrar acidez y frescura." },
+    { "name": "Miel", "quantity": "1 cucharadita", "notes": "Opcional, aporta un toque dulce." },
+    { "name": "Pimentón ahumado", "quantity": "Un toque", "notes": "Opcional, para potenciar sabor ahumado." },
+    { "name": "Aceite de oliva", "quantity": "Cantidad necesaria", "notes": "Para emulsionar y dar cremosidad." },
+    { "name": "Sal y pimienta", "quantity": "Al gusto", "notes": "Ajustar al final según preferencia." }
+  ],
+  "steps": [
+    { "step": "Quemar la berenjena: Coloca la berenjena entera, con cáscara, en una sartén a fuego alto y gírala hasta que la piel quede completamente negra y la pulpa suave." },
+    { "step": "Retira la piel quemada y coloca la pulpa en un procesador de alimentos o recipiente para triturar manualmente." },
+    { "step": "Agrega el ajo, perejil, semillas de sésamo, jugo de limón, miel, pimentón ahumado, sal, pimienta y aceite de oliva." },
+    { "step": "Procesa o mezcla hasta obtener una textura de dip suave y cremosa." },
+    { "step": "Prueba y ajusta la sazón con más sal, pimienta o jugo de limón según tu gusto." },
+    { "step": "Sirve frío o a temperatura ambiente, acompañado de pan, vegetales o como acompañamiento de otros platos." }
+  ],
+  "tips": [
+    "El sabor ahumado es clave: no retires la piel antes de quemar la berenjena.",
+    "Para un aroma más intenso, tuesta ligeramente las semillas de sésamo antes de agregarlas.",
+    "La miel es opcional; solo agrega si quieres un toque dulce que contraste con el ahumado.",
+    "Puedes usar un procesador para textura homogénea o mezclar a mano para un dip rústico.",
+    "Ajusta el pimentón ahumado según tu preferencia de intensidad."
+  ],
+  "images": [
+    "https://example.com/babaganoush1.webp",
+    "https://example.com/babaganoush2.webp"
+  ],
+  "rating": null
+},
+{
+  "id": 4,
+  "uid": "R-S_000004",
+  "name": "Salsa Big Mc Saludable",
+  "description": "Una salsa cremosa y ligera, perfecta para burritos, tacos o sandwiches, con un sabor delicioso pero saludable.",
+  "imageUrl": "https://example.com/salsa-big-mc.jpg",
+  "detailedInfo": "Esta salsa combina yogurt natural, mayonesa light, pepinillos y especias para crear un aderezo cremoso y sabroso. Su preparación es rápida y sencilla, y aporta un toque fresco y equilibrado a burritos, ensaladas o sándwiches. Por ser casera y contener ingredientes frescos, se recomienda consumir en pocos días.",
+  "ingredients": [
+    { "name": "Yogurt natural", "quantity": "3 cucharadas (C)", "notes": "Preferiblemente sin azúcar." },
+    { "name": "Mayonesa light", "quantity": "1 cucharada (C)", "notes": "Puedes usar sustituto más saludable si prefieres." },
+    { "name": "Pepinillos", "quantity": "Al gusto", "notes": "Picar finamente." },
+    { "name": "Vinagre de pepinillos", "quantity": "2 cucharadas (C)", "notes": "Aporta acidez y sabor característico." },
+    { "name": "Mostaza", "quantity": "1 cucharadita (c)", "notes": "Preferiblemente Dijon o similar." },
+    { "name": "Miel", "quantity": "1 cucharadita (c)", "notes": "Opcional, aporta un toque dulce." },
+    { "name": "Ajo en polvo", "quantity": "Al gusto", "notes": "Usar moderadamente." },
+    { "name": "Cebolla en polvo", "quantity": "Al gusto", "notes": "Para complementar sabor." },
+    { "name": "Pimentón ahumado", "quantity": "Un toque", "notes": "Si es ahumado, mejor aroma." },
+    { "name": "Sal y pimienta", "quantity": "Al gusto", "notes": "Ajustar según preferencia." }
+  ],
+  "steps": [
+    { "step": "Coloca en un bowl el yogurt natural, la mayonesa light y los pepinillos picados." },
+    { "step": "Agrega el vinagre de pepinillos, la mostaza, la miel, ajo en polvo, cebolla en polvo y pimentón." },
+    { "step": "Mezcla bien todos los ingredientes hasta lograr una salsa homogénea y cremosa." },
+    { "step": "Prueba y ajusta la sazón con sal, pimienta o un poco más de vinagre si deseas más acidez." },
+    { "step": "Usa inmediatamente para armar burritos, sandwiches o como aderezo. Mantener refrigerado y consumir dentro de 4 días." }
+  ],
+  "tips": [
+    "Picar los pepinillos finamente para integrar mejor en la salsa.",
+    "Agregar la miel solo si quieres un toque dulce equilibrado.",
+    "Por ser casera, no conservar más de 4 días en refrigeración.",
+    "Puedes ajustar especias en polvo según tu preferencia de sabor.",
+    "Ideal para burritos con queso, carne, lechuga y tomate."
+  ],
+  "images": [
+    "https://example.com/salsa-big-mc1.webp",
+    "https://example.com/salsa-big-mc2.webp"
+  ],
+  "rating": null
+},
+{
+  "id": 5,
+  "uid": "R-S_000005",
+  "name": "Salsa Cremosa de Champiñones",
+  "description": "Salsa cremosa y sabrosa, ideal para acompañar carnes blancas, cerdo o pastas, con un delicado equilibrio entre mantequilla, crema y champiñones.",
+  "imageUrl": "https://example.com/salsa-champinones.jpg",
+  "detailedInfo": "Esta salsa combina champiñones salteados en mantequilla con ajo y hierbas frescas, desglasados con vino o caldo, y terminados con crema de leche y mostaza Dijon. La clave es controlar la humedad de los champiñones, desglasar para aprovechar todo el sabor caramelizado, y añadir las hierbas frescas al final para mantener aroma y color. Se sirve caliente y puede complementarse con queso parmesano rallado.",
+  "ingredients": [
+    { "name": "Champiñones", "quantity": "200 g", "notes": "Rebanados y limpios" },
+    { "name": "Cebolla", "quantity": "1/2 pieza", "notes": "Picada finamente" },
+    { "name": "Ajo", "quantity": "1 diente", "notes": "Picado finamente" },
+    { "name": "Mantequilla", "quantity": "10 g" },
+    { "name": "Aceite vegetal", "quantity": "Para freír" },
+    { "name": "Caldo de carne o verduras", "quantity": "150 g" },
+    { "name": "Crema de leche (nata espesa)", "quantity": "100 g" },
+    { "name": "Mostaza Dijon", "quantity": "1 cucharadita", "notes": "Ayuda a emulsionar la salsa" },
+    { "name": "Orégano", "quantity": "1/2 pieza", "notes": "Opcional, para aroma" },
+    { "name": "Sal", "quantity": "Al gusto" },
+    { "name": "Pimienta negra", "quantity": "Al gusto" },
+    { "name": "Parmesano rallado", "quantity": "15 g", "notes": "Para servir" },
+    { "name": "Perejil fresco", "quantity": "Al gusto", "notes": "Picado al final" }
+  ],
+  "steps": [
+    { "step": "Prepara mise en place: pica finamente las hierbas, cebolla y ajo; limpia y rebana los champiñones." },
+    { "step": "Derrite la mantequilla en una sartén con un poco de aceite. Saltea los champiñones hasta que suelten y reabsorban su agua, concentrando sabor." },
+    { "step": "Agrega el ajo picado y cocina por 1 minuto hasta que dore ligeramente." },
+    { "step": "Sazona con sal y pimienta. Desglasa la sartén con vino blanco o caldo, raspando el fondo para incorporar el sabor caramelizado." },
+    { "step": "Vierte la crema de leche y revuelve a fuego bajo hasta que la salsa comience a espesar." },
+    { "step": "Añade la mostaza Dijon y mezcla bien para emulsionar." },
+    { "step": "Incorpora las hierbas frescas picadas al final y sirve caliente. Espolvorea parmesano rallado por encima al servir." }
+  ],
+  "tips": [
+    "Saltear los champiñones a fuego medio-alto hasta que suelten y reabsorban su agua para intensificar el sabor.",
+    "No agregar ajo o crema demasiado pronto para evitar que la salsa quede aguada.",
+    "Desglasar con vino o caldo es esencial para aprovechar el sabor caramelizado del fondo de la sartén.",
+    "Añadir las hierbas frescas al final mantiene aroma y color vibrante.",
+    "La mostaza actúa como emulsionante, integrando mantequilla y crema sin que se corte la salsa."
+  ],
+  "images": [
+    "https://example.com/salsa-champinones1.webp",
+    "https://example.com/salsa-champinones2.webp"
+  ],
+  "rating": null
+},
+    {
+      "id": 7,
+      "uid": "R-S_000007",
+      "name": "Salsa Holandesa",
+      "description": "Salsa emulsionada ideal para huevos benedictinos y verduras al vapor.",
+      "imageUrl": "https://example.com/holandesa.jpg",
+      "detailedInfo": "Se elabora con yemas de huevo, mantequilla derretida y limón, creando una textura suave y mantequillosa.",
+      "ingredients": [
+        { "name": "Yemas de huevo", "quantity": "3" },
+        { "name": "Mantequilla derretida", "quantity": "100g" },
+        { "name": "Jugo de limón", "quantity": "1 cdita" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Bate las yemas al baño maría hasta que espesen." },
+        { "step": "Añade la mantequilla lentamente mientras sigues batiendo." },
+        { "step": "Incorpora el jugo de limón y sazona al gusto." }
+      ],
+      "images": [
+        "https://example.com/holandesa1.webp",
+        "https://example.com/holandesa2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 8,
+      "uid": "R-S_000008",
+      "name": "Salsa Romesco",
+      "description": "Salsa española a base de pimientos y almendras.",
+      "imageUrl": "https://example.com/romesco.jpg",
+      "detailedInfo": "Tradicional de Cataluña, combina pimientos rojos asados, almendras, ajo, tomate y aceite de oliva.",
+      "ingredients": [
+        { "name": "Pimientos rojos asados", "quantity": "2" },
+        { "name": "Almendras tostadas", "quantity": "50g" },
+        { "name": "Ajo", "quantity": "1 diente" },
+        { "name": "Tomate triturado", "quantity": "100g" },
+        { "name": "Aceite de oliva", "quantity": "50ml" },
+        { "name": "Sal", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Tritura todos los ingredientes hasta obtener una pasta homogénea." },
+        { "step": "Ajusta con sal y aceite de oliva si es necesario." }
+      ],
+      "images": [
+        "https://example.com/romesco1.webp",
+        "https://example.com/romesco2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 9,
+      "uid": "R-S_000009",
+      "name": "Salsa de Mostaza",
+      "description": "Salsa picante y cremosa para carnes y ensaladas.",
+      "imageUrl": "https://example.com/mostaza.jpg",
+      "detailedInfo": "Se prepara con mostaza Dijon, crema y un toque de miel para balancear el picante.",
+      "ingredients": [
+        { "name": "Mostaza Dijon", "quantity": "3 cditas" },
+        { "name": "Crema de leche", "quantity": "100ml" },
+        { "name": "Miel", "quantity": "1 cdita" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes hasta obtener una salsa homogénea." },
+        { "step": "Ajusta la dulzura con miel y sazona al gusto." }
+      ],
+      "images": [
+        "https://example.com/mostaza1.webp",
+        "https://example.com/mostaza2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 10,
+      "uid": "R-S_000010",
+      "name": "Salsa Chimichurri",
+      "description": "Salsa argentina de hierbas ideal para carnes a la parrilla.",
+      "imageUrl": "https://example.com/chimichurri.jpg",
+      "detailedInfo": "Combina perejil, ajo, orégano, vinagre y aceite de oliva para un sabor fresco y picante.",
+      "ingredients": [
+        { "name": "Perejil fresco", "quantity": "50g" },
+        { "name": "Ajo", "quantity": "2 dientes" },
+        { "name": "Orégano seco", "quantity": "1 cdita" },
+        { "name": "Vinagre de vino", "quantity": "50ml" },
+        { "name": "Aceite de oliva", "quantity": "100ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Pica finamente el perejil y el ajo." },
+        { "step": "Mezcla todos los ingredientes hasta homogeneizar." },
+        { "step": "Deja reposar 30 min antes de usar." }
+      ],
+      "images": [
+        "https://example.com/chimichurri1.webp",
+        "https://example.com/chimichurri2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 11,
+      "uid": "R-S_000011",
+      "name": "Salsa Barbacoa",
+      "description": "Salsa dulce y ahumada ideal para carnes a la parrilla.",
+      "imageUrl": "https://example.com/barbacoa.jpg",
+      "detailedInfo": "Mezcla ketchup, miel, vinagre y especias para crear una salsa espesa y sabrosa.",
+      "ingredients": [
+        { "name": "Ketchup", "quantity": "150ml" },
+        { "name": "Miel", "quantity": "2 cditas" },
+        { "name": "Vinagre de manzana", "quantity": "1 cda" },
+        { "name": "Ajo en polvo", "quantity": "1 cdita" },
+        { "name": "Pimentón dulce", "quantity": "1 cdita" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes en un cazo." },
+        { "step": "Cocina a fuego medio 5-7 min hasta espesar." },
+        { "step": "Deja enfriar antes de servir." }
+      ],
+      "images": [
+        "https://example.com/barbacoa1.webp",
+        "https://example.com/barbacoa2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 12,
+      "uid": "R-S_000012",
+      "name": "Salsa Pesto",
+      "description": "Salsa italiana de albahaca y piñones para pastas y panes.",
+      "imageUrl": "https://example.com/pesto.jpg",
+      "detailedInfo": "Se prepara triturando albahaca fresca, ajo, piñones, queso parmesano y aceite de oliva.",
+      "ingredients": [
+        { "name": "Albahaca fresca", "quantity": "50g" },
+        { "name": "Piñones", "quantity": "30g" },
+        { "name": "Ajo", "quantity": "1 diente" },
+        { "name": "Queso parmesano rallado", "quantity": "50g" },
+        { "name": "Aceite de oliva", "quantity": "80ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Tritura todos los ingredientes hasta obtener una pasta uniforme." },
+        { "step": "Ajusta con aceite de oliva y sazona al gusto." }
+      ],
+      "images": [
+        "https://example.com/pesto1.webp",
+        "https://example.com/pesto2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 13,
+      "uid": "R-S_000013",
+      "name": "Salsa Tártara",
+      "description": "Salsa cremosa con pepinillos y alcaparras, ideal para pescados.",
+      "imageUrl": "https://example.com/tartara.jpg",
+      "detailedInfo": "Hecha a base de mayonesa, pepinillos picados, alcaparras y un toque de limón.",
+      "ingredients": [
+        { "name": "Mayonesa", "quantity": "150g" },
+        { "name": "Pepinillos picados", "quantity": "50g" },
+        { "name": "Alcaparras", "quantity": "20g" },
+        { "name": "Jugo de limón", "quantity": "1 cda" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes en un bol." },
+        { "step": "Refrigera 30 min antes de servir." }
+      ],
+      "images": [
+        "https://example.com/tartara1.webp",
+        "https://example.com/tartara2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 14,
+      "uid": "R-S_000014",
+      "name": "Salsa Teriyaki",
+      "description": "Salsa japonesa dulce y salada para carnes y vegetales.",
+      "imageUrl": "https://example.com/teriyaki.jpg",
+      "detailedInfo": "Se prepara con salsa de soja, azúcar, sake y mirin, ideal para marinar.",
+      "ingredients": [
+        { "name": "Salsa de soja", "quantity": "50ml" },
+        { "name": "Azúcar moreno", "quantity": "2 cditas" },
+        { "name": "Sake", "quantity": "30ml" },
+        { "name": "Mirin", "quantity": "30ml" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes en un cazo." },
+        { "step": "Cocina a fuego lento 5 min hasta espesar ligeramente." }
+      ],
+      "images": [
+        "https://example.com/teriyaki1.webp",
+        "https://example.com/teriyaki2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 15,
+      "uid": "R-S_000015",
+      "name": "Salsa de Yogur y Hierbas",
+      "description": "Salsa fresca y ligera ideal para ensaladas y vegetales.",
+      "imageUrl": "https://example.com/yogur-herbas.jpg",
+      "detailedInfo": "Combina yogur natural con hierbas frescas picadas, limón y sal para una salsa refrescante.",
+      "ingredients": [
+        { "name": "Yogur natural", "quantity": "150g" },
+        { "name": "Perejil picado", "quantity": "1 cda" },
+        { "name": "Cebollino picado", "quantity": "1 cda" },
+        { "name": "Jugo de limón", "quantity": "1 cdita" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes hasta obtener una salsa homogénea." },
+        { "step": "Refrigera 15 min antes de servir." }
+      ],
+      "images": [
+        "https://example.com/yogur-herbas1.webp",
+        "https://example.com/yogur-herbas2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 21,
+      "uid": "R-S_000021",
+      "name": "Salsa Tártara",
+      "description": "Salsa cremosa con pepinillos y alcaparras, ideal para pescados.",
+      "imageUrl": "https://example.com/tartara.jpg",
+      "detailedInfo": "Se elabora mezclando mayonesa, pepinillos, alcaparras y un toque de limón para un sabor fresco y ácido.",
+      "ingredients": [
+        { "name": "Mayonesa", "quantity": "100g" },
+        { "name": "Pepinillos picados", "quantity": "30g" },
+        { "name": "Alcaparras", "quantity": "10g" },
+        { "name": "Jugo de limón", "quantity": "1 cdita" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes hasta obtener una salsa homogénea." },
+        { "step": "Refrigera 15 min antes de servir." }
+      ],
+      "images": [
+        "https://example.com/tartara1.webp",
+        "https://example.com/tartara2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 22,
+      "uid": "R-S_000022",
+      "name": "Salsa Barbacoa",
+      "description": "Salsa dulce y ahumada, ideal para carnes a la parrilla.",
+      "imageUrl": "https://example.com/barbacoa.jpg",
+      "detailedInfo": "Combina tomate, azúcar, vinagre y especias para un sabor intenso y caramelizado.",
+      "ingredients": [
+        { "name": "Tomate triturado", "quantity": "150ml" },
+        { "name": "Azúcar moreno", "quantity": "2 cditas" },
+        { "name": "Vinagre de manzana", "quantity": "1 cda" },
+        { "name": "Pimentón dulce", "quantity": "1 cdita" },
+        { "name": "Ajo picado", "quantity": "1 diente" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes en un cazo y cocina 10 min a fuego medio." },
+        { "step": "Deja enfriar antes de usar." }
+      ],
+      "images": [
+        "https://example.com/barbacoa1.webp",
+        "https://example.com/barbacoa2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 23,
+      "uid": "R-S_000023",
+      "name": "Salsa Pesto",
+      "description": "Salsa italiana verde, ideal para pastas y panes.",
+      "imageUrl": "https://example.com/pesto.jpg",
+      "detailedInfo": "Se elabora con albahaca fresca, piñones, ajo, queso parmesano y aceite de oliva.",
+      "ingredients": [
+        { "name": "Hojas de albahaca", "quantity": "50g" },
+        { "name": "Piñones", "quantity": "20g" },
+        { "name": "Ajo", "quantity": "1 diente" },
+        { "name": "Queso parmesano rallado", "quantity": "30g" },
+        { "name": "Aceite de oliva", "quantity": "60ml" },
+        { "name": "Sal", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Tritura todos los ingredientes hasta obtener una pasta homogénea." },
+        { "step": "Añade aceite poco a poco hasta conseguir la textura deseada." }
+      ],
+      "images": [
+        "https://example.com/pesto1.webp",
+        "https://example.com/pesto2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 24,
+      "uid": "R-S_000024",
+      "name": "Salsa de Soja con Jengibre",
+      "description": "Salsa asiática ligera, perfecta para salteados y dumplings.",
+      "imageUrl": "https://example.com/soja-jengibre.jpg",
+      "detailedInfo": "Se combina salsa de soja, jengibre fresco rallado y un toque de ajo para resaltar sabores.",
+      "ingredients": [
+        { "name": "Salsa de soja", "quantity": "60ml" },
+        { "name": "Jengibre fresco rallado", "quantity": "1 cdita" },
+        { "name": "Ajo picado", "quantity": "1 diente" },
+        { "name": "Aceite de sésamo", "quantity": "1 cdita" },
+        { "name": "Azúcar", "quantity": "1/2 cdita" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes hasta disolver el azúcar." },
+        { "step": "Sirve directamente o utiliza como marinada." }
+      ],
+      "images": [
+        "https://example.com/soja-jengibre1.webp",
+        "https://example.com/soja-jengibre2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 25,
+      "uid": "R-S_000025",
+      "name": "Salsa Romana",
+      "description": "Salsa cremosa con tomate y hierbas, ideal para pasta y carnes.",
+      "imageUrl": "https://example.com/romana.jpg",
+      "detailedInfo": "Se elabora con tomate, nata, ajo y hierbas frescas, logrando un sabor equilibrado y suave.",
+      "ingredients": [
+        { "name": "Tomate triturado", "quantity": "100ml" },
+        { "name": "Nata para cocinar", "quantity": "50ml" },
+        { "name": "Ajo picado", "quantity": "1 diente" },
+        { "name": "Hierbas frescas (albahaca, orégano)", "quantity": "Al gusto" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Derrite el ajo en un poco de aceite." },
+        { "step": "Añade tomate y hierbas, cocina 5 min." },
+        { "step": "Incorpora la nata y mezcla hasta obtener salsa cremosa." }
+      ],
+      "images": [
+        "https://example.com/romana1.webp",
+        "https://example.com/romana2.webp"
+      ],
+      "rating": null
+   }
+  ]
+}

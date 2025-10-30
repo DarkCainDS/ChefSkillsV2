@@ -1,0 +1,211 @@
+{
+  "recipes": [
+{
+  "id": 1,
+  "uid": "R-Vegan_000001",
+  "name": "Poke Bowl de Tofu (Vegano/Vegetariano)",
+  "description": "Poke bowl fresco y saludable con tofu marinado, arroz integral y toppings vegetales/frutales. Apto para veganos y vegetarianos.",
+  "ingredients": [
+    { "name": "Tofu", "quantity": "100 g", "notes": "O usar pollo, atún o salmón como alternativa. Cortar en cubos." },
+    { "name": "Salsa de soja", "quantity": "Un poquito", "notes": "Para marinar el tofu." },
+    { "name": "Especias picantes", "quantity": "Un poquito", "notes": "Para marinar el tofu." },
+    { "name": "Arroz integral", "quantity": "100 g", "notes": "Base del poke bowl." },
+    { "name": "Agua", "quantity": "250 ml", "notes": "Para cocer el arroz." },
+    { "name": "Aguacate", "quantity": "Al gusto", "notes": "Cortar en cubos." },
+    { "name": "Pepino", "quantity": "Al gusto", "notes": "Cortar en tiras o cubos." },
+    { "name": "Zanahoria", "quantity": "Al gusto", "notes": "Juliana o cubos." },
+    { "name": "Fresas", "quantity": "Al gusto", "notes": "Cortar en láminas o cubos, opcional para toque fresco." }
+  ],
+  "steps": [
+    "Cortar el tofu en cubos y marinar con salsa de soja y especias picantes.",
+    "Dejar reposar el tofu marinado durante 15 minutos.",
+    "Preparar los toppings: cortar aguacate, pepino, zanahoria y fresas.",
+    "Cocer el arroz integral con 250 ml de agua hasta que esté listo.",
+    "Saltear el tofu marinado en sartén hasta que esté cocido y doradito.",
+    "Montar el poke bowl: colocar arroz como base, luego el tofu y finalmente los toppings."
+  ],
+  "tips": [
+    "La proteína es versátil: aunque se use tofu, se puede reemplazar por pollo, atún o salmón.",
+    "Agregar fresas da un toque fresco y frutal al poke bowl.",
+    "Ideal para un plato saludable y fresco, perfecto para días calurosos.",
+    "Apto para veganos y vegetarianos si se mantiene el tofu."
+  ]
+},
+{
+  "id": 2,
+  "uid": "R-Vegan_000002",
+  "name": "Poke Bowl Vegano con Sandía Marinada",
+  "description": "Un poke bowl fresco y colorido donde la sandía se transforma en una sorprendente alternativa vegetal al pescado marinado. Ideal para los días de verano o para quienes buscan una opción vegana sin sacrificar sabor.",
+  "imageUrl": "https://example.com/poke-bowl-sandia.jpg",
+  "detailedInfo": "Inspirado por la versión de Living Like A Panda, este poke bowl utiliza sandía marinada con tahini, soja, vinagre y limón para replicar la textura y el sabor del pescado. Tras hornearla y dejarla enfriar, la sandía adquiere una consistencia firme y un sabor umami que engaña al paladar. Se sirve sobre arroz con toppings frescos como edamame, pepino, zanahoria y aguacate.",
+  "ingredients": [
+    { "name": "Sandía", "quantity": "450 g", "notes": "Sin piel ni pepitas, cortada en cubos." },
+    { "name": "Tahini", "quantity": "1 cucharadita", "notes": "Aporta textura cremosa y sabor a sésamo." },
+    { "name": "Salsa de soja o Tamari", "quantity": "2 cucharadas", "notes": "Preferiblemente sin gluten." },
+    { "name": "Vinagre de arroz", "quantity": "1 cucharada", "notes": "Aporta acidez equilibrada." },
+    { "name": "Jugo de limón", "quantity": "1 cucharada", "notes": "Refresca y complementa la marinada." },
+    { "name": "Salsa de humo", "quantity": "1/8 cucharadita", "notes": "Opcional, da toque ahumado." },
+    { "name": "Ajo en polvo", "quantity": "1/4 cucharadita", "notes": "Sabor base de la marinada." },
+    { "name": "Cebolla en polvo", "quantity": "1/4 cucharadita", "notes": "Acentúa el sabor salado." },
+    { "name": "Jengibre en polvo", "quantity": "1/8 cucharadita", "notes": "Da aroma y frescura." },
+    { "name": "Arroz blanco", "quantity": "200 g", "notes": "Base del bowl, cocido al gusto." },
+    { "name": "Edamame", "quantity": "100 g", "notes": "Guisado y enfriado." },
+    { "name": "Pepino", "quantity": "1/2 unidad", "notes": "En rodajas finas o en bastones." },
+    { "name": "Cebolla roja", "quantity": "1/2 unidad", "notes": "En juliana fina, para contraste." },
+    { "name": "Zanahoria", "quantity": "2 unidades", "notes": "Ralladas o en tiras finas." },
+    { "name": "Granada", "quantity": "1/2 unidad", "notes": "Opcional, aporta dulzor y color." },
+    { "name": "Aguacate", "quantity": "1/2 unidad", "notes": "Opcional, para cremosidad." },
+    { "name": "Mango", "quantity": "1/2 unidad", "notes": "Opcional, para contraste dulce." },
+    { "name": "Algas Wakame", "quantity": "Al gusto", "notes": "Opcional, refuerza sabor marino." },
+    { "name": "Sésamo negro", "quantity": "Al gusto", "notes": "Para decorar." },
+    { "name": "Limón", "quantity": "Al gusto", "notes": "Para decorar y dar frescura final." }
+  ],
+  "steps": [
+    { "step": "Quita la piel y pepitas a la sandía, luego córtala en cubitos parejos." },
+    { "step": "En un recipiente mezcla tahini, salsa de soja, vinagre de arroz, jugo de limón, salsa de humo (opcional) y los sazonadores." },
+    { "step": "Coloca los cubos de sandía en una fuente y vierte la marinada, mezclando para cubrir completamente." },
+    { "step": "Marina durante 30 minutos (o hasta 24 horas para más intensidad)." },
+    { "step": "Hornea la sandía a 180°C durante 1 hora o hasta que se haya reducido y absorba bien la marinada." },
+    { "step": "Si suelta mucha agua, retira el exceso con una cuchara y deja hornear unos minutos más." },
+    { "step": "Deja enfriar completamente por unos 30 minutos antes de usarla." },
+    { "step": "Cocina el arroz y prepara los toppings: pepino, zanahoria, cebolla, edamame y frutas opcionales." },
+    { "step": "Emplata colocando el arroz en la base y distribuye los toppings alrededor." },
+    { "step": "Agrega los cubos de sandía marinada encima y decora con sésamo negro y un toque de limón." }
+  ],
+  "tips": [
+    "Deja enfriar la sandía marinada antes de servir para mejorar su textura.",
+    "Si buscas un sabor más intenso, deja la sandía marinando toda la noche.",
+    "El tahini puede sustituirse por mantequilla de maní o pasta de sésamo suave.",
+    "El toque ahumado es opcional, pero potencia el sabor umami y realza la ilusión de pescado.",
+    "Añadir mango o aguacate aporta contraste de dulzor y cremosidad.",
+    "Si no tienes vinagre de arroz, puedes usar vinagre de manzana suave."
+  ],
+  "images": [
+    "https://example.com/poke-bowl-sandia1.webp",
+    "https://example.com/poke-bowl-sandia2.webp"
+  ],
+  "rating": null
+},
+{
+  "id": 3,
+  "uid": "R-Vegan_000003",
+  "name": "Arroz Primavera Vegano",
+  "description": "Un arroz colorido y lleno de sabor con verduras frescas. Su técnica de dorado asegura granos sueltos y textura perfecta. Totalmente vegano, usando caldo de verduras o agua sazonada.",
+  "imageUrl": "https://example.com/arroz-primavera.jpg",
+  "detailedInfo": "El arroz se remoja antes de cocinar, se dora en un sofrito de ajo y cebolla, y luego se cocina con caldo de verduras y vegetales como zanahoria, chícharos, pimiento y maíz. El cilantro fresco al final potencia sabor y aroma. La técnica de dorado es clave para que los granos queden sueltos y bien cocidos. Para un sabor más intenso, el caldo vegetal puede ser casero o sazonado con hierbas y especias.",
+  "ingredients": [
+    { "name": "Arroz", "quantity": "2 tazas", "notes": "Previamente remojado en agua caliente durante 20 minutos." },
+    { "name": "Caldo de verduras", "quantity": "3 tazas", "notes": "Puede ser casero o preparado, sazonado al gusto." },
+    { "name": "Chícharo (guisantes)", "quantity": "½ taza", "notes": "Cocido previamente." },
+    { "name": "Zanahoria", "quantity": "1 unidad", "notes": "Pelada y picada, cocida hasta suavizar." },
+    { "name": "Pimiento morrón", "quantity": "1 unidad", "notes": "Picado, sin semillas ni tallo, se añade al final." },
+    { "name": "Elote (maíz)", "quantity": "1 lata pequeña", "notes": "Escurrido, se incorpora al final de la cocción." },
+    { "name": "Ajo", "quantity": "1 diente", "notes": "Picado, para sofrito." },
+    { "name": "Cebolla", "quantity": "¼ unidad", "notes": "Picada, para sofrito." },
+    { "name": "Aceite de oliva", "quantity": "2 cucharadas", "notes": "Para dorar el arroz y el sofrito." },
+    { "name": "Sal", "quantity": "Al gusto", "notes": "" },
+    { "name": "Cilantro fresco", "quantity": "Al gusto", "notes": "Hojitas para añadir al final y dar frescura." }
+  ],
+  "steps": [
+    { "step": "Remoja el arroz en agua caliente durante 20 minutos y escúrrelo." },
+    { "step": "Pela y pica la zanahoria. Cocina la zanahoria y los chícharos hasta que estén suaves y escúrrelos." },
+    { "step": "Pica el pimiento morrón, el ajo y la cebolla." },
+    { "step": "En una olla caliente con aceite de oliva, sofríe el ajo y la cebolla hasta que estén aromáticos." },
+    { "step": "Agrega el arroz escurrido y muévelo constantemente hasta que quede dorado y bien mezclado con el sofrito." },
+    { "step": "Incorpora las 4 tazas de caldo de verduras, el pimiento morrón, el elote escurrido, la zanahoria, los chícharos y el cilantro fresco." },
+    { "step": "Añade sal al gusto, tapa la olla y cocina a fuego medio-bajo durante 20-25 minutos hasta que el arroz esté suave y graneado." }
+  ],
+  "tips": [
+    "Usa caldo de verduras casero para más sabor y frescura.",
+    "El dorado del arroz antes de agregar el líquido es crucial para que los granos queden sueltos y con textura perfecta.",
+    "Sigue la regla de oro: por cada taza de arroz, dos tazas de líquido para obtener la cocción ideal.",
+    "No mezcles demasiado el arroz después de agregar el líquido, deja que se cocine con vapor para mantener los granos intactos."
+  ],
+  "images": [
+    "https://example.com/arroz-primavera1.webp",
+    "https://example.com/arroz-primavera2.webp"
+  ],
+  "rating": null
+},
+{
+  "id": 4,
+  "uid": "R-Vegan_000004",
+  "name": "Sopa de Verduras Saludable",
+  "description": "Sopa fácil, económica y sabrosa, con un truco de licuado de zanahoria y tomate tatemado para lograr una textura cremosa.",
+  "imageUrl": "https://example.com/sopa-verduras-saludable.jpg",
+  "detailedInfo": "Una sopa casera ideal para cualquier día, rica en vegetales y con una textura suave y natural gracias al licuado de zanahoria y tomate tatemado.",
+  "ingredients": [
+    { "name": "Habichuelas (ejotes)", "quantity": "1 puñado", "notes": "Picadas finamente en rodajitas" },
+    { "name": "Pimentón rojo mediano", "quantity": "1 unidad", "notes": "Picado en cuadritos pequeños" },
+    { "name": "Cebolla blanca mediana", "quantity": "1 unidad", "notes": "Picada en cuadritos o julianas" },
+    { "name": "Zanahoria grande", "quantity": "1 unidad", "notes": "Mitad picada y mitad reservada" },
+    { "name": "Cebolla larga (cebolleta)", "quantity": "2 ramas", "notes": "Cortadas en rodajitas" },
+    { "name": "Arvejas (chícharos)", "quantity": "Al gusto", "notes": "" },
+    { "name": "Papa", "quantity": "1 unidad", "notes": "Picada en cubos medianos" },
+    { "name": "Ajo", "quantity": "3 dientes", "notes": "Finamente picados" },
+    { "name": "Aceite de oliva o vegetal", "quantity": "1 chorrito", "notes": "Para sofreír" },
+    { "name": "Agua", "quantity": "1.5 litros", "notes": "Ajustar según porciones" },
+    { "name": "Tomate", "quantity": "1 unidad", "notes": "Tatemado en sartén" },
+    { "name": "Caldo de la sopa", "quantity": "1-2 cucharadas", "notes": "Usado para licuar" },
+    { "name": "Sal", "quantity": "Al gusto", "notes": "" },
+    { "name": "Pimienta negra", "quantity": "Al gusto", "notes": "Recién molida" },
+    { "name": "Comino molido", "quantity": "1 cucharadita", "notes": "" },
+    { "name": "Orégano seco", "quantity": "1 cucharadita", "notes": "" },
+    { "name": "Cilantro", "quantity": "Al gusto", "notes": "Finamente picado" },
+    { "name": "Pimienta de cayena", "quantity": "1 pizca (opcional)", "notes": "Omitir si hay niños" }
+  ],
+  "steps": [
+    { "step": "Picar finamente las habichuelas, el pimentón, la cebolla blanca, la mitad de la zanahoria y la cebolla larga. Cortar la papa en cubos y reservar la otra mitad de la zanahoria." },
+    { "step": "En una olla amplia, calentar un chorrito de aceite y sofreír el ajo picado sin dejar que se queme." },
+    { "step": "Agregar el agua, sal y pimienta al gusto. Cuando hierva, añadir las verduras: zanahoria, arvejas, pimentón, habichuelas, cebolla blanca, papa y cebolla larga." },
+    { "step": "Condimentar con comino, orégano y pimienta de cayena opcional. Cocinar a fuego medio." },
+    { "step": "Tatemar el tomate en sartén hasta que tome color asado, sin quemarse." },
+    { "step": "Retirar la media zanahoria entera de la sopa junto con el tomate tatemado, licuar con 1-2 cucharadas del caldo hasta obtener una mezcla suave." },
+    { "step": "Verter el licuado en la olla para espesar la sopa y mezclar bien." },
+    { "step": "Agregar cilantro picado, cocinar 10 minutos más y ajustar sal o condimentos al gusto." },
+    { "step": "Servir caliente, opcionalmente con trocitos de queso o parte verde de cebolla larga picada." }
+  ],
+  "images": [
+    "https://example.com/sopa-verduras1.webp",
+    "https://example.com/sopa-verduras2.webp"
+  ],
+  "rating": null
+},
+{
+  "id": 5,
+  "uid": "R-Vegan_000005",
+  "name": "Sopa de Verduras Muy Fácil",
+  "description": "Sopa ligera y reconfortante, ideal para una cena caliente. Su preparación es rápida y sencilla, perfecta para cualquier día.",
+  "imageUrl": "https://example.com/sopa-verduras-facil.jpg",
+  "detailedInfo": "Una receta práctica que utiliza verduras comunes y condimentos simples para crear una sopa casera nutritiva y suave.",
+  "ingredients": [
+    { "name": "Aceite", "quantity": "1 chorrito", "notes": "Para sofreír" },
+    { "name": "Caldo o agua", "quantity": "A gusto", "notes": "Suficiente para cubrir las verduras" },
+    { "name": "Cebolla", "quantity": "1 unidad", "notes": "Picada en cubitos" },
+    { "name": "Papa", "quantity": "1 unidad", "notes": "Picada en cubos pequeños" },
+    { "name": "Zanahoria", "quantity": "1 unidad", "notes": "Picada en cubos pequeños" },
+    { "name": "Ajo", "quantity": "1 diente", "notes": "Finamente picado" },
+    { "name": "Zapallo (calabaza)", "quantity": "1 trozo", "notes": "Cortado en cubitos" },
+    { "name": "Zapallito verde (zucchini)", "quantity": "1 unidad", "notes": "Cortado en cubitos" },
+    { "name": "Tomate", "quantity": "1 unidad", "notes": "Picado" },
+    { "name": "Arvejas (guisantes)", "quantity": "Al gusto", "notes": "" },
+    { "name": "Sal y condimentos", "quantity": "Al gusto", "notes": "Agregar junto con el líquido" }
+  ],
+  "steps": [
+    { "step": "Cortar todas las verduras en cubitos de tamaño uniforme." },
+    { "step": "En una olla con un chorrito de aceite, agregar la cebolla, papa y zanahoria. Sofreír por 5 minutos." },
+    { "step": "Añadir el ajo, el zapallo, el zapallito verde, el tomate y las arvejas. Cocinar 5 minutos más." },
+    { "step": "Incorporar el caldo o agua, condimentar con sal y especias al gusto, tapar y cocinar a fuego medio durante 30 minutos." },
+    { "step": "Servir caliente, ideal para la cena." }
+  ],
+  "images": [
+    "https://example.com/sopa-verduras-facil1.webp",
+    "https://example.com/sopa-verduras-facil2.webp"
+  ],
+  "rating": null
+}
+
+
+
+  ]
+}

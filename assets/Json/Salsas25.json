@@ -1,0 +1,495 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "uid": "R-S_000001",
+      "name": "Salsa Bechamel",
+      "description": "Salsa blanca cremosa, base de muchas preparaciones.",
+      "imageUrl": "https://example.com/bechamel.jpg",
+      "detailedInfo": "La bechamel se prepara con mantequilla, harina y leche, logrando una textura cremosa ideal para lasañas y gratinados.",
+      "ingredients": [
+        { "name": "Mantequilla", "quantity": "50g" },
+        { "name": "Harina", "quantity": "50g" },
+        { "name": "Leche", "quantity": "500ml" },
+        { "name": "Sal", "quantity": "Al gusto" },
+        { "name": "Nuez moscada", "quantity": "Una pizca" }
+      ],
+      "steps": [
+        { "step": "Derrite la mantequilla a fuego medio." },
+        { "step": "Agrega la harina y cocina 2 min removiendo." },
+        { "step": "Añade la leche poco a poco, mezclando bien para evitar grumos." },
+        { "step": "Cocina hasta que espese y añade sal y nuez moscada." }
+      ],
+      "images": [
+        "https://example.com/bechamel1.webp",
+        "https://example.com/bechamel2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 2,
+      "uid": "R-S_000002",
+      "name": "Salsa Pesto",
+      "description": "Salsa italiana de albahaca, ideal para pastas.",
+      "imageUrl": "https://example.com/pesto.jpg",
+      "detailedInfo": "El pesto combina albahaca fresca, ajo, piñones, queso parmesano y aceite de oliva para un sabor intenso y fresco.",
+      "ingredients": [
+        { "name": "Albahaca fresca", "quantity": "50g" },
+        { "name": "Ajo", "quantity": "1 diente" },
+        { "name": "Piñones", "quantity": "30g" },
+        { "name": "Queso parmesano", "quantity": "50g" },
+        { "name": "Aceite de oliva", "quantity": "100ml" },
+        { "name": "Sal", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Tritura todos los ingredientes en un procesador hasta obtener una pasta homogénea." },
+        { "step": "Ajusta con aceite de oliva y sal al gusto." }
+      ],
+      "images": [
+        "https://example.com/pesto1.webp",
+        "https://example.com/pesto2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 3,
+      "uid": "R-S_000003",
+      "name": "Salsa Barbacoa",
+      "description": "Salsa dulce y ahumada perfecta para carnes a la parrilla.",
+      "imageUrl": "https://example.com/barbacoa.jpg",
+      "detailedInfo": "La salsa barbacoa combina tomate, azúcar, vinagre y especias para un sabor característico ahumado y dulce.",
+      "ingredients": [
+        { "name": "Tomate triturado", "quantity": "400g" },
+        { "name": "Azúcar moreno", "quantity": "50g" },
+        { "name": "Vinagre de manzana", "quantity": "50ml" },
+        { "name": "Pimentón dulce", "quantity": "1 cdita" },
+        { "name": "Ajo en polvo", "quantity": "1/2 cdita" },
+        { "name": "Sal", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes en una olla." },
+        { "step": "Cocina a fuego lento 15-20 min hasta espesar." }
+      ],
+      "images": [
+        "https://example.com/barbacoa1.webp",
+        "https://example.com/barbacoa2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 4,
+      "uid": "R-S_000004",
+      "name": "Salsa de Soja y Miel",
+      "description": "Salsa dulce-salada ideal para saltear vegetales y carnes.",
+      "imageUrl": "https://example.com/soja-miel.jpg",
+      "detailedInfo": "Combina la salinidad de la salsa de soja con la dulzura de la miel, creando un glaseado delicioso.",
+      "ingredients": [
+        { "name": "Salsa de soja", "quantity": "100ml" },
+        { "name": "Miel", "quantity": "50ml" },
+        { "name": "Ajo picado", "quantity": "1 diente" },
+        { "name": "Jengibre rallado", "quantity": "1 cdita" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes en un bol." },
+        { "step": "Calienta ligeramente y mezcla hasta que espese un poco." }
+      ],
+      "images": [
+        "https://example.com/soja-miel1.webp",
+        "https://example.com/soja-miel2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 5,
+      "uid": "R-S_000005",
+      "name": "Salsa de Tomate Casera",
+      "description": "Salsa básica y versátil para pasta y pizzas.",
+      "imageUrl": "https://example.com/tomate.jpg",
+      "detailedInfo": "Preparada con tomates frescos, ajo, cebolla y especias, ideal para múltiples recetas.",
+      "ingredients": [
+        { "name": "Tomates maduros", "quantity": "500g" },
+        { "name": "Ajo", "quantity": "2 dientes" },
+        { "name": "Cebolla", "quantity": "1 mediana" },
+        { "name": "Aceite de oliva", "quantity": "2 cditas" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Sofríe ajo y cebolla en aceite." },
+        { "step": "Añade los tomates y cocina 15-20 min." },
+        { "step": "Tritura la mezcla y sazona al gusto." }
+      ],
+      "images": [
+        "https://example.com/tomate1.webp",
+        "https://example.com/tomate2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 6,
+      "uid": "R-S_000006",
+      "name": "Salsa Alfredo",
+      "description": "Salsa cremosa de queso ideal para pastas.",
+      "imageUrl": "https://example.com/alfredo.jpg",
+      "detailedInfo": "Elaborada con mantequilla, crema de leche y queso parmesano, perfecta para fettuccine y lasañas.",
+      "ingredients": [
+        { "name": "Mantequilla", "quantity": "50g" },
+        { "name": "Crema de leche", "quantity": "200ml" },
+        { "name": "Queso parmesano rallado", "quantity": "50g" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Derrite la mantequilla a fuego medio." },
+        { "step": "Añade la crema y cocina 2-3 min." },
+        { "step": "Incorpora el queso parmesano y mezcla hasta que se derrita." },
+        { "step": "Sazona con sal y pimienta al gusto." }
+      ],
+      "images": [
+        "https://example.com/alfredo1.webp",
+        "https://example.com/alfredo2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 7,
+      "uid": "R-S_000007",
+      "name": "Salsa Holandesa",
+      "description": "Salsa emulsionada ideal para huevos benedictinos y verduras al vapor.",
+      "imageUrl": "https://example.com/holandesa.jpg",
+      "detailedInfo": "Se elabora con yemas de huevo, mantequilla derretida y limón, creando una textura suave y mantequillosa.",
+      "ingredients": [
+        { "name": "Yemas de huevo", "quantity": "3" },
+        { "name": "Mantequilla derretida", "quantity": "100g" },
+        { "name": "Jugo de limón", "quantity": "1 cdita" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Bate las yemas al baño maría hasta que espesen." },
+        { "step": "Añade la mantequilla lentamente mientras sigues batiendo." },
+        { "step": "Incorpora el jugo de limón y sazona al gusto." }
+      ],
+      "images": [
+        "https://example.com/holandesa1.webp",
+        "https://example.com/holandesa2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 8,
+      "uid": "R-S_000008",
+      "name": "Salsa Romesco",
+      "description": "Salsa española a base de pimientos y almendras.",
+      "imageUrl": "https://example.com/romesco.jpg",
+      "detailedInfo": "Tradicional de Cataluña, combina pimientos rojos asados, almendras, ajo, tomate y aceite de oliva.",
+      "ingredients": [
+        { "name": "Pimientos rojos asados", "quantity": "2" },
+        { "name": "Almendras tostadas", "quantity": "50g" },
+        { "name": "Ajo", "quantity": "1 diente" },
+        { "name": "Tomate triturado", "quantity": "100g" },
+        { "name": "Aceite de oliva", "quantity": "50ml" },
+        { "name": "Sal", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Tritura todos los ingredientes hasta obtener una pasta homogénea." },
+        { "step": "Ajusta con sal y aceite de oliva si es necesario." }
+      ],
+      "images": [
+        "https://example.com/romesco1.webp",
+        "https://example.com/romesco2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 9,
+      "uid": "R-S_000009",
+      "name": "Salsa de Mostaza",
+      "description": "Salsa picante y cremosa para carnes y ensaladas.",
+      "imageUrl": "https://example.com/mostaza.jpg",
+      "detailedInfo": "Se prepara con mostaza Dijon, crema y un toque de miel para balancear el picante.",
+      "ingredients": [
+        { "name": "Mostaza Dijon", "quantity": "3 cditas" },
+        { "name": "Crema de leche", "quantity": "100ml" },
+        { "name": "Miel", "quantity": "1 cdita" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes hasta obtener una salsa homogénea." },
+        { "step": "Ajusta la dulzura con miel y sazona al gusto." }
+      ],
+      "images": [
+        "https://example.com/mostaza1.webp",
+        "https://example.com/mostaza2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 10,
+      "uid": "R-S_000010",
+      "name": "Salsa Chimichurri",
+      "description": "Salsa argentina de hierbas ideal para carnes a la parrilla.",
+      "imageUrl": "https://example.com/chimichurri.jpg",
+      "detailedInfo": "Combina perejil, ajo, orégano, vinagre y aceite de oliva para un sabor fresco y picante.",
+      "ingredients": [
+        { "name": "Perejil fresco", "quantity": "50g" },
+        { "name": "Ajo", "quantity": "2 dientes" },
+        { "name": "Orégano seco", "quantity": "1 cdita" },
+        { "name": "Vinagre de vino", "quantity": "50ml" },
+        { "name": "Aceite de oliva", "quantity": "100ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Pica finamente el perejil y el ajo." },
+        { "step": "Mezcla todos los ingredientes hasta homogeneizar." },
+        { "step": "Deja reposar 30 min antes de usar." }
+      ],
+      "images": [
+        "https://example.com/chimichurri1.webp",
+        "https://example.com/chimichurri2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 11,
+      "uid": "R-S_000011",
+      "name": "Salsa Barbacoa",
+      "description": "Salsa dulce y ahumada ideal para carnes a la parrilla.",
+      "imageUrl": "https://example.com/barbacoa.jpg",
+      "detailedInfo": "Mezcla ketchup, miel, vinagre y especias para crear una salsa espesa y sabrosa.",
+      "ingredients": [
+        { "name": "Ketchup", "quantity": "150ml" },
+        { "name": "Miel", "quantity": "2 cditas" },
+        { "name": "Vinagre de manzana", "quantity": "1 cda" },
+        { "name": "Ajo en polvo", "quantity": "1 cdita" },
+        { "name": "Pimentón dulce", "quantity": "1 cdita" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes en un cazo." },
+        { "step": "Cocina a fuego medio 5-7 min hasta espesar." },
+        { "step": "Deja enfriar antes de servir." }
+      ],
+      "images": [
+        "https://example.com/barbacoa1.webp",
+        "https://example.com/barbacoa2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 12,
+      "uid": "R-S_000012",
+      "name": "Salsa Pesto",
+      "description": "Salsa italiana de albahaca y piñones para pastas y panes.",
+      "imageUrl": "https://example.com/pesto.jpg",
+      "detailedInfo": "Se prepara triturando albahaca fresca, ajo, piñones, queso parmesano y aceite de oliva.",
+      "ingredients": [
+        { "name": "Albahaca fresca", "quantity": "50g" },
+        { "name": "Piñones", "quantity": "30g" },
+        { "name": "Ajo", "quantity": "1 diente" },
+        { "name": "Queso parmesano rallado", "quantity": "50g" },
+        { "name": "Aceite de oliva", "quantity": "80ml" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Tritura todos los ingredientes hasta obtener una pasta uniforme." },
+        { "step": "Ajusta con aceite de oliva y sazona al gusto." }
+      ],
+      "images": [
+        "https://example.com/pesto1.webp",
+        "https://example.com/pesto2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 13,
+      "uid": "R-S_000013",
+      "name": "Salsa Tártara",
+      "description": "Salsa cremosa con pepinillos y alcaparras, ideal para pescados.",
+      "imageUrl": "https://example.com/tartara.jpg",
+      "detailedInfo": "Hecha a base de mayonesa, pepinillos picados, alcaparras y un toque de limón.",
+      "ingredients": [
+        { "name": "Mayonesa", "quantity": "150g" },
+        { "name": "Pepinillos picados", "quantity": "50g" },
+        { "name": "Alcaparras", "quantity": "20g" },
+        { "name": "Jugo de limón", "quantity": "1 cda" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes en un bol." },
+        { "step": "Refrigera 30 min antes de servir." }
+      ],
+      "images": [
+        "https://example.com/tartara1.webp",
+        "https://example.com/tartara2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 14,
+      "uid": "R-S_000014",
+      "name": "Salsa Teriyaki",
+      "description": "Salsa japonesa dulce y salada para carnes y vegetales.",
+      "imageUrl": "https://example.com/teriyaki.jpg",
+      "detailedInfo": "Se prepara con salsa de soja, azúcar, sake y mirin, ideal para marinar.",
+      "ingredients": [
+        { "name": "Salsa de soja", "quantity": "50ml" },
+        { "name": "Azúcar moreno", "quantity": "2 cditas" },
+        { "name": "Sake", "quantity": "30ml" },
+        { "name": "Mirin", "quantity": "30ml" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes en un cazo." },
+        { "step": "Cocina a fuego lento 5 min hasta espesar ligeramente." }
+      ],
+      "images": [
+        "https://example.com/teriyaki1.webp",
+        "https://example.com/teriyaki2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 15,
+      "uid": "R-S_000015",
+      "name": "Salsa de Yogur y Hierbas",
+      "description": "Salsa fresca y ligera ideal para ensaladas y vegetales.",
+      "imageUrl": "https://example.com/yogur-herbas.jpg",
+      "detailedInfo": "Combina yogur natural con hierbas frescas picadas, limón y sal para una salsa refrescante.",
+      "ingredients": [
+        { "name": "Yogur natural", "quantity": "150g" },
+        { "name": "Perejil picado", "quantity": "1 cda" },
+        { "name": "Cebollino picado", "quantity": "1 cda" },
+        { "name": "Jugo de limón", "quantity": "1 cdita" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes hasta obtener una salsa homogénea." },
+        { "step": "Refrigera 15 min antes de servir." }
+      ],
+      "images": [
+        "https://example.com/yogur-herbas1.webp",
+        "https://example.com/yogur-herbas2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 21,
+      "uid": "R-S_000021",
+      "name": "Salsa Tártara",
+      "description": "Salsa cremosa con pepinillos y alcaparras, ideal para pescados.",
+      "imageUrl": "https://example.com/tartara.jpg",
+      "detailedInfo": "Se elabora mezclando mayonesa, pepinillos, alcaparras y un toque de limón para un sabor fresco y ácido.",
+      "ingredients": [
+        { "name": "Mayonesa", "quantity": "100g" },
+        { "name": "Pepinillos picados", "quantity": "30g" },
+        { "name": "Alcaparras", "quantity": "10g" },
+        { "name": "Jugo de limón", "quantity": "1 cdita" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes hasta obtener una salsa homogénea." },
+        { "step": "Refrigera 15 min antes de servir." }
+      ],
+      "images": [
+        "https://example.com/tartara1.webp",
+        "https://example.com/tartara2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 22,
+      "uid": "R-S_000022",
+      "name": "Salsa Barbacoa",
+      "description": "Salsa dulce y ahumada, ideal para carnes a la parrilla.",
+      "imageUrl": "https://example.com/barbacoa.jpg",
+      "detailedInfo": "Combina tomate, azúcar, vinagre y especias para un sabor intenso y caramelizado.",
+      "ingredients": [
+        { "name": "Tomate triturado", "quantity": "150ml" },
+        { "name": "Azúcar moreno", "quantity": "2 cditas" },
+        { "name": "Vinagre de manzana", "quantity": "1 cda" },
+        { "name": "Pimentón dulce", "quantity": "1 cdita" },
+        { "name": "Ajo picado", "quantity": "1 diente" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes en un cazo y cocina 10 min a fuego medio." },
+        { "step": "Deja enfriar antes de usar." }
+      ],
+      "images": [
+        "https://example.com/barbacoa1.webp",
+        "https://example.com/barbacoa2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 23,
+      "uid": "R-S_000023",
+      "name": "Salsa Pesto",
+      "description": "Salsa italiana verde, ideal para pastas y panes.",
+      "imageUrl": "https://example.com/pesto.jpg",
+      "detailedInfo": "Se elabora con albahaca fresca, piñones, ajo, queso parmesano y aceite de oliva.",
+      "ingredients": [
+        { "name": "Hojas de albahaca", "quantity": "50g" },
+        { "name": "Piñones", "quantity": "20g" },
+        { "name": "Ajo", "quantity": "1 diente" },
+        { "name": "Queso parmesano rallado", "quantity": "30g" },
+        { "name": "Aceite de oliva", "quantity": "60ml" },
+        { "name": "Sal", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Tritura todos los ingredientes hasta obtener una pasta homogénea." },
+        { "step": "Añade aceite poco a poco hasta conseguir la textura deseada." }
+      ],
+      "images": [
+        "https://example.com/pesto1.webp",
+        "https://example.com/pesto2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 24,
+      "uid": "R-S_000024",
+      "name": "Salsa de Soja con Jengibre",
+      "description": "Salsa asiática ligera, perfecta para salteados y dumplings.",
+      "imageUrl": "https://example.com/soja-jengibre.jpg",
+      "detailedInfo": "Se combina salsa de soja, jengibre fresco rallado y un toque de ajo para resaltar sabores.",
+      "ingredients": [
+        { "name": "Salsa de soja", "quantity": "60ml" },
+        { "name": "Jengibre fresco rallado", "quantity": "1 cdita" },
+        { "name": "Ajo picado", "quantity": "1 diente" },
+        { "name": "Aceite de sésamo", "quantity": "1 cdita" },
+        { "name": "Azúcar", "quantity": "1/2 cdita" }
+      ],
+      "steps": [
+        { "step": "Mezcla todos los ingredientes hasta disolver el azúcar." },
+        { "step": "Sirve directamente o utiliza como marinada." }
+      ],
+      "images": [
+        "https://example.com/soja-jengibre1.webp",
+        "https://example.com/soja-jengibre2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 25,
+      "uid": "R-S_000025",
+      "name": "Salsa Romana",
+      "description": "Salsa cremosa con tomate y hierbas, ideal para pasta y carnes.",
+      "imageUrl": "https://example.com/romana.jpg",
+      "detailedInfo": "Se elabora con tomate, nata, ajo y hierbas frescas, logrando un sabor equilibrado y suave.",
+      "ingredients": [
+        { "name": "Tomate triturado", "quantity": "100ml" },
+        { "name": "Nata para cocinar", "quantity": "50ml" },
+        { "name": "Ajo picado", "quantity": "1 diente" },
+        { "name": "Hierbas frescas (albahaca, orégano)", "quantity": "Al gusto" },
+        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+      ],
+      "steps": [
+        { "step": "Derrite el ajo en un poco de aceite." },
+        { "step": "Añade tomate y hierbas, cocina 5 min." },
+        { "step": "Incorpora la nata y mezcla hasta obtener salsa cremosa." }
+      ],
+      "images": [
+        "https://example.com/romana1.webp",
+        "https://example.com/romana2.webp"
+      ],
+      "rating": null
+   }
+  ]
+}

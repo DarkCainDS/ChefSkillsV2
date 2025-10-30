@@ -1,0 +1,270 @@
+[
+  {
+    "id": 301,
+    "title": "Filete Mignon",
+    "shortDescription": "Guía de Términos de Cocción para cortes gruesos de res.",
+    "images": [
+      "https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/FileteMignon/1.webp",
+      "https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/FileteMignon/2.webp"
+    ],
+    "detailedInfo": "La guía muestra la temperatura al salir del calor versus la temperatura final después del reposo de 10 minutos, garantizando jugosidad y textura perfecta.",
+    "temperatureGuide": [
+      {"term": "AZUL","timeMin":6,"tempExitC":49,"tempExitF":120,"tempFinalC":51,"tempFinalF":125},
+      {"term": "ROJO INGLÉS","timeMin":7,"tempExitC":55,"tempExitF":130,"tempFinalC":57,"tempFinalF":135},
+      {"term": "MEDIO","timeMin":8,"tempExitC":60,"tempExitF":140,"tempFinalC":63,"tempFinalF":145},
+      {"term": "TRES CUARTOS","timeMin":9,"tempExitC":65,"tempExitF":150,"tempFinalC":69,"tempFinalF":155},
+      {"term": "BIEN COCIDO","timeMin":10,"tempExitC":71,"tempExitF":160,"tempFinalC":74,"tempFinalF":165}
+    ],
+    "processExplanation": "Retirar la carne unos grados antes del término deseado y dejar reposar 10 min para redistribuir los jugos."
+  },
+  {
+    "id": 302,
+    "title": "Ribeye",
+    "shortDescription": "Corte marmoleado ideal para parrilla.",
+    "images": [
+      "https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/Ribeye/1.webp",
+      "https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/Ribeye/2.webp"
+    ],
+    "detailedInfo": "El Ribeye es jugoso y sabroso gracias a su marmoleo. Perfecto a la parrilla o sartén.",
+    "temperatureGuide":[
+      {"term":"POCO COCIDO","timeMin":5,"tempExitC":50,"tempExitF":122,"tempFinalC":55,"tempFinalF":131},
+      {"term":"MEDIO","timeMin":8,"tempExitC":60,"tempExitF":140,"tempFinalC":63,"tempFinalF":145},
+      {"term":"BIEN COCIDO","timeMin":10,"tempExitC":70,"tempExitF":158,"tempFinalC":75,"tempFinalF":167}
+    ],
+    "processExplanation":"Dejar reposar 10 min para que el calor residual termine la cocción y los jugos se redistribuyan."
+  },
+  {
+    "id": 303,
+    "title": "Pechuga de Pollo",
+    "shortDescription":"Cocción segura sin resecar la carne.",
+    "images":["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/ChickenBreast/1.webp"],
+    "detailedInfo":"Alcanza temperatura segura sin perder jugosidad.",
+    "temperatureGuide":[
+      {"term":"SUAVE","timeMin":15,"tempExitC":70,"tempExitF":158,"tempFinalC":74,"tempFinalF":165}
+    ],
+    "processExplanation":"Dejar reposar 5 min tras la cocción para mantener jugos."
+  },
+  {
+    "id": 304,
+    "title":"Salmón",
+    "shortDescription":"Cocción delicada para mantener textura.",
+    "images":["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/Salmon/1.webp"],
+    "detailedInfo":"El salmón se cocina suavemente para preservar jugos y sabor.",
+    "temperatureGuide":[
+      {"term":"POCO COCIDO","timeMin":5,"tempExitC":45,"tempExitF":113,"tempFinalC":50,"tempFinalF":122},
+      {"term":"MEDIO","timeMin":7,"tempExitC":50,"tempExitF":122,"tempFinalC":55,"tempFinalF":131},
+      {"term":"BIEN COCIDO","timeMin":10,"tempExitC":60,"tempExitF":140,"tempFinalC":63,"tempFinalF":145}
+    ],
+    "processExplanation":"Retirar ligeramente antes de la temperatura deseada y reposar 5 min."
+  },
+  {
+    "id": 305,
+    "title":"Huevos Pochados",
+    "shortDescription":"Cocción suave en líquido caliente.",
+    "images":["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/PoachedEggs/1.webp"],
+    "detailedInfo":"Huevos cocidos en agua o caldo a baja temperatura.",
+    "temperatureGuide":[
+      {"term":"SUAVE","timeMin":3,"tempExitC":75,"tempExitF":167,"tempFinalC":78,"tempFinalF":172}
+    ],
+    "processExplanation":"Cocer hasta que la clara esté firme y la yema jugosa, retirar y reposar 1 min."
+  },
+  {
+    "id": 306,
+    "title":"Trucha",
+    "shortDescription":"Pescado de sabor delicado.",
+    "images":["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/Trout/1.webp"],
+    "detailedInfo":"Cocinar suavemente para mantener jugos y textura.",
+    "temperatureGuide":[
+      {"term":"MEDIO","timeMin":8,"tempExitC":55,"tempExitF":131,"tempFinalC":60,"tempFinalF":140}
+    ],
+    "processExplanation":"Reposar 3-5 min antes de servir."
+  },
+  {
+    "id": 307,
+    "title":"Camarones",
+    "shortDescription":"Cocción rápida y delicada.",
+    "images":["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/Shrimp/1.webp"],
+    "detailedInfo":"Cocer hasta que cambien a color rosa y textura firme.",
+    "temperatureGuide":[
+      {"term":"COCIDO","timeMin":3,"tempExitC":60,"tempExitF":140,"tempFinalC":65,"tempFinalF":149}
+    ],
+    "processExplanation":"Sacar inmediatamente y servir para evitar sobrecocción."
+  },
+  {
+    "id": 308,
+    "title":"Langosta",
+    "shortDescription":"Cocción delicada para carne firme.",
+    "images":["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/Lobster/1.webp"],
+    "detailedInfo":"Cocer en agua hirviendo hasta que la carne sea opaca y firme.",
+    "temperatureGuide":[
+      {"term":"COCIDO","timeMin":8,"tempExitC":60,"tempExitF":140,"tempFinalC":65,"tempFinalF":149}
+    ],
+    "processExplanation":"Reposar 2-3 min antes de servir."
+  },
+  {
+    "id": 309,
+    "title":"Pavo",
+    "shortDescription":"Cocción completa para aves grandes.",
+    "images":["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/Turkey/1.webp"],
+    "detailedInfo":"Horno lento, temperatura uniforme.",
+    "temperatureGuide":[
+      {"term":"BIEN COCIDO","timeMin":120,"tempExitC":75,"tempExitF":167,"tempFinalC":80,"tempFinalF":176}
+    ],
+    "processExplanation":"Reposar 15-20 min para redistribuir jugos."
+  },
+  {
+    "id": 310,
+    "title":"Pechuga de Pavo",
+    "shortDescription":"Corte magro de pavo, jugoso.",
+    "images":["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/TurkeyBreast/1.webp"],
+    "detailedInfo":"Hornear lentamente para evitar resecar.",
+    "temperatureGuide":[
+      {"term":"MEDIO","timeMin":40,"tempExitC":68,"tempExitF":154,"tempFinalC":73,"tempFinalF":163},
+      {"term":"BIEN COCIDO","timeMin":60,"tempExitC":75,"tempExitF":167,"tempFinalC":80,"tempFinalF":176}
+    ],
+    "processExplanation":"Reposar 10 min antes de cortar."
+  },
+  {
+    "id": 311,
+    "title":"Chuleta de Cerdo",
+    "shortDescription":"Corte jugoso de cerdo para sartén o parrilla.",
+    "images":["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/PorkChop/1.webp"],
+    "detailedInfo":"Cocinar uniformemente para conservar jugos.",
+    "temperatureGuide":[
+      {"term":"MEDIO","timeMin":20,"tempExitC":63,"tempExitF":145,"tempFinalC":68,"tempFinalF":154},
+      {"term":"BIEN COCIDO","timeMin":25,"tempExitC":70,"tempExitF":158,"tempFinalC":75,"tempFinalF":167}
+    ],
+    "processExplanation":"Reposar 5-10 min antes de servir."
+  },
+  {
+    "id": 312,
+    "title":"Costilla de Res",
+    "shortDescription":"Corte con hueso, cocción lenta para deshacer colágeno.",
+    "images":["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/BeefRibs/1.webp"],
+    "detailedInfo":"Ideal para horno lento o ahumador.",
+    "temperatureGuide":[
+      {"term":"TIERNO","timeMin":180,"tempExitC":70,"tempExitF":158,"tempFinalC":75,"tempFinalF":167},
+      {"term":"MUY TIERNO","timeMin":240,"tempExitC":75,"tempExitF":167,"tempFinalC":80,"tempFinalF":176}
+    ],
+    "processExplanation":"Reposar 15 min antes de cortar."
+  },
+  {
+    "id": 313,
+    "title":"Pato",
+    "shortDescription":"Carne de ave con piel grasa, mantener jugosidad.",
+    "images":["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/Duck/1.webp"],
+    "detailedInfo":"Cocción al horno o sartén lento para mantener textura y sabor.",
+    "temperatureGuide":[
+      {"term":"MEDIO","timeMin":45,"tempExitC":65,"tempExitF":149,"tempFinalC":70,"tempFinalF":158},
+      {"term":"BIEN COCIDO","timeMin":60,"tempExitC":70,"tempExitF":158,"tempFinalC":75,"tempFinalF":167}
+    ],
+    "processExplanation":"Reposar 10 min antes de cortar para que los jugos se redistribuyan."
+  },
+  {
+    "id": 314,
+    "title":"Codorniz",
+    "shortDescription":"Ave pequeña, cocción rápida.",
+    "images":["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/Quail/1.webp"],
+    "detailedInfo":"Ideal para horno o sartén, evitando sobrecocción.",
+    "temperatureGuide":[
+      {"term":"SUAVE","timeMin":15,"tempExitC":65,"tempExitF":149,"tempFinalC":70,"tempFinalF":158}
+    ],
+    "processExplanation":"Reposar 5 min antes de servir."
+  },
+{
+  "id": 315,
+  "title": "Cordero",
+  "shortDescription": "Corte jugoso, ideal para cocción lenta o asado.",
+  "images": ["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/Lamb/1.webp"],
+  "detailedInfo": "Cocinar lentamente para mantener el interior jugoso y el exterior dorado. Pinchar la piel y frotar con manteca de cerdo, aceite, ajo y perejil. Rociar con agua y vino blanco. Subir la temperatura al final para dorar la piel.",
+  "temperatureGuide": [
+    { "term": "POCO COCIDO", "timeMin": 15, "tempExitC": 55, "tempExitF": 131, "tempFinalC": 60, "tempFinalF": 140 },
+    { "term": "MEDIO", "timeMin": 20, "tempExitC": 60, "tempExitF": 140, "tempFinalC": 65, "tempFinalF": 149 },
+    { "term": "BIEN COCIDO", "timeMin": 25, "tempExitC": 70, "tempExitF": 158, "tempFinalC": 75, "tempFinalF": 167 }
+  ],
+  "processExplanation": "Reposar 10 minutos antes de cortar.",
+  "sideDish": "Patatas panaderas y cebolla cocinadas debajo de la carne para absorber los jugos.",
+  "seasoning": "Sal gorda, pimienta negra, ajo; opcionalmente romero o tomillo.",
+  "cookingNotes": "Rociar con agua y vino blanco durante la cocción para mantener la humedad.",
+  "servingTemperature": {
+    "general": "La temperatura ideal para comer una chuleta de cordero depende del punto de cocción deseado, pero se recomienda entre 54 °C y 63 °C (130-145 °F) para un cordero jugoso y rosado. Usar un termómetro de alimentos y retirar antes de la temperatura máxima para que continúe cocinándose con el reposo.",
+    "temperatureRanges": [
+      { "term": "Poco hecho (Raro)", "tempC": "49-52", "tempF": "120-125" },
+      { "term": "Medio crudo", "tempC": "54-57", "tempF": "130-135" },
+      { "term": "Medio (Rosado)", "tempC": "60-63", "tempF": "140-145" },
+      { "term": "Bien cocido", "tempC": "70+", "tempF": "160+" }
+    ],
+    "recommendations": [
+      "Usa un termómetro: la forma más fiable de asegurar la cocción perfecta y segura.",
+      "Deja reposar la carne unos minutos para que los jugos se redistribuyan y la temperatura interna siga aumentando.",
+      "Evita el exceso de cocción: el sabor del cordero puede volverse fuerte si se cocina demasiado."
+    ],
+      "carreTutorialSteps": [
+    { "step": 1, "title": "Preparar el costillar", "description": "Pedir que corten las puntas de antemano y tener listo el hilo de bridar y deshuesador.", "videoTime": "00:00-00:20" },
+    { "step": 2, "title": "Separar las partes", "description": "Dividir el costillar en exterior (duro) y interior (tierno). Reservar la parte exterior para otra receta.", "videoTime": "00:29-01:10" },
+    { "step": 3, "title": "Quitar la grasa", "description": "Sacar el exceso de grasa de la pieza interior con cuidado.", "videoTime": "00:43-00:53" },
+    { "step": 4, "title": "Hacer cortes en la carne", "description": "Realizar cortes hasta la veta del carré.", "videoTime": "01:39-01:50" },
+    { "step": 5, "title": "Limpiar los huesos", "description": "Rascar la carne pegada a los huesos (limpieza francesa).", "videoTime": "02:33-02:40" },
+    { "step": 6, "title": "Golpear la membrana", "description": "Cortar cuidadosamente la membrana interior y dar pequeños golpes para retirarla.", "videoTime": "02:43-03:04" },
+    { "step": 7, "title": "Atado (Bridar)", "description": "Usar hilo de bridar para atar la pieza limpia, comenzando con un nudo suave.", "videoTime": "02:01-02:23" },
+    { "step": 8, "title": "Resultado final", "description": "El carré queda limpio y listo para cocinar al horno.", "videoTime": "03:04" }
+  ]
+  }
+},
+  {
+    "id": 316,
+    "title":"Cerdo Asado",
+    "shortDescription":"Asado lento para mantener jugosidad.",
+    "images":["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/RoastPork/1.webp"],
+    "detailedInfo":"Ideal para horno lento, corte uniforme.",
+    "temperatureGuide":[
+      {"term":"BIEN COCIDO","timeMin":120,"tempExitC":75,"tempExitF":167,"tempFinalC":80,"tempFinalF":176}
+    ],
+    "processExplanation":"Reposar 15 min antes de cortar."
+  },
+  {
+    "id": 317,
+    "title":"Atún",
+    "shortDescription":"Cocción breve para mantener textura y sabor.",
+    "images":["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/Tuna/1.webp"],
+    "detailedInfo":"Ideal a la plancha, sellado rápido.",
+    "temperatureGuide":[
+      {"term":"POCO COCIDO","timeMin":3,"tempExitC":45,"tempExitF":113,"tempFinalC":50,"tempFinalF":122},
+      {"term":"MEDIO","timeMin":5,"tempExitC":50,"tempExitF":122,"tempFinalC":55,"tempFinalF":131}
+    ],
+    "processExplanation":"Reposar 2-3 min antes de servir."
+  },
+  {
+    "id": 318,
+    "title":"Pulpo",
+    "shortDescription":"Cocción lenta para tiernizar.",
+    "images":["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/Octopus/1.webp"],
+    "detailedInfo":"Hervir lentamente para carne tierna.",
+    "temperatureGuide":[
+      {"term":"TIERNO","timeMin":45,"tempExitC":75,"tempExitF":167,"tempFinalC":80,"tempFinalF":176}
+    ],
+    "processExplanation":"Reposar 5-10 min antes de servir."
+  },
+  {
+    "id": 319,
+    "title":"Calamares",
+    "shortDescription":"Cocción rápida para no endurecer.",
+    "images":["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/Squid/1.webp"],
+    "detailedInfo":"Sartén o plancha rápida para mantener textura.",
+    "temperatureGuide":[
+      {"term":"COCIDO","timeMin":3,"tempExitC":60,"tempExitF":140,"tempFinalC":65,"tempFinalF":149}
+    ],
+    "processExplanation":"Servir inmediatamente tras cocción."
+  },
+  {
+    "id": 320,
+    "title":"Vieiras",
+    "shortDescription":"Cocción rápida para mantener textura suave.",
+    "images":["https://d3rbsa8yi0571o.cloudfront.net/FoodNotes/Scallops/1.webp"],
+    "detailedInfo":"Sartén muy caliente, breve cocción.",
+    "temperatureGuide":[
+      {"term":"POCO COCIDO","timeMin":2,"tempExitC":50,"tempExitF":122,"tempFinalC":55,"tempFinalF":131}
+    ],
+    "processExplanation":"Reposar 1-2 min antes de servir."
+  }
+]

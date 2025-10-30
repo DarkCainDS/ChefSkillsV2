@@ -1,0 +1,781 @@
+{
+  "techniques": [
+    {
+      "id": 1,
+      "name": "Corte Brunoise",
+      "description": "Corte en cubos muy pequeños, ideal para sofritos y guarniciones.",
+      "detailedInfo": "El corte Brunoise consiste en cortar los alimentos en cubos diminutos y regulares, de entre 1 y 2 mm por lado. Se usa principalmente en verduras como zanahoria, cebolla o apio, cuando se busca una cocción rápida y una textura suave.\n\nEs muy utilizado en sofritos, salsas y guarniciones donde los ingredientes se integran completamente con otros sabores. Su precisión permite una cocción uniforme y una mejor presentación final.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Brunoise/Brunoisse+de+Papa.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Brunoise/Brunoisse+de+pimiento.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Brunoise/Brunoisse+de+Remolacha.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Brunoise/Brunoisse+de+Zanahoria.webp"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Corte Juliana",
+      "description": "Corte en tiras finas, ideal para ensaladas o salteados.",
+      "detailedInfo": "El corte Juliana produce tiras finas y alargadas, de unos 5 cm de largo y 1–2 mm de grosor. Se aplica comúnmente en verduras como pimientos, zanahorias o cebollas, para lograr una cocción rápida y una presentación elegante.\n\nEs perfecto para salteados, ensaladas y platos donde los vegetales deben mantener su forma y textura. Su objetivo es combinar uniformidad visual con ligereza al cocinar.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/juliana/Juliana+de+Cebolla.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/juliana/Juliana+de+Pimientos.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/juliana/Juliana+de+Repollo.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/juliana/Juliana+de+Zucchini.webp"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Corte Mirepoix",
+      "description": "Corte en cubos medianos, base aromática para caldos y guisos.",
+      "detailedInfo": "La Mirepoix es una combinación de verduras cortadas en cubos grandes o medianos, de 1 a 2 cm, utilizada como base aromática en caldos, sopas y guisos. Tradicionalmente se compone de cebolla, zanahoria y apio, en proporción 2:1:1.\n\nDurante la cocción, estas verduras liberan sus jugos y aromas, aportando profundidad y equilibrio de sabor a las preparaciones. Es una técnica esencial en cocina clásica.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Mirepoix/Mirepoix+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Mirepoix/Mirepoix+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Mirepoix/Mirepoix+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Mirepoix/Mirepoix+4.webp"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Corte Bastones",
+      "description": "Tiras gruesas y rectangulares, típicas para papas fritas y verduras al vapor.",
+      "detailedInfo": "El corte en bastones consiste en obtener tiras gruesas y rectangulares de aproximadamente 1 cm de ancho por 6 cm de largo. Se utiliza en papas fritas, zanahorias o calabacines, especialmente cuando se busca una cocción pareja y una textura firme.\n\nEs un corte ideal para cocciones al horno, fritura o vapor, manteniendo la estructura del vegetal sin que se ablande en exceso.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Bastones/Bastones+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Bastones/Bastones+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Bastones/Bastones+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Bastones/Bastones+4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Bastones/Bastones+5.webp"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Corte en Rodajas",
+      "description": "Discos delgados, ideales para guarniciones o gratinados.",
+      "detailedInfo": "El corte en rodajas consiste en obtener discos uniformes de 2 a 5 mm de grosor. Es común en vegetales como papas, zanahorias, pepinos o tomates, y se usa tanto en crudo como en preparaciones horneadas.\n\nDependiendo del ángulo del cuchillo, las rodajas pueden ser rectas o en diagonal, logrando presentaciones más estéticas. Es la base de platos como el gratin o las chips vegetales.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Rodajas/Rodajas+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Rodajas/Rodajas+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Rodajas/Rodajas+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Rodajas/Rodajas+4.webp"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Chips",
+      "description": "Láminas muy finas, perfectas para freír.",
+      "detailedInfo": "El corte tipo chips produce láminas redondas y delgadas, de menos de 1 mm de grosor. Se aplica principalmente a papas, camotes o betarragas, para obtener frituras crocantes y ligeras.\n\nEl secreto está en lograr un espesor uniforme, preferiblemente con una mandolina. Las láminas se fríen u hornean hasta quedar doradas, usándose tanto como snack como decoración crujiente en platos.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chips/Chips+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chips/Chips+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chips/Chips+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chips/Chips+4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chips/Chips+5.webp"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Corte Chiffonade",
+      "description": "Tiras finas de hojas, ideal para ensaladas y guarniciones.",
+      "detailedInfo": "El corte Chiffonade se aplica a hojas grandes como espinaca, lechuga o albahaca. Se apilan varias hojas, se enrollan en forma de cilindro y se cortan transversalmente en tiras finas de unos 2–3 mm.\n\nEs perfecto para dar un toque fresco o aromático a sopas, ensaladas y pastas. Permite incorporar las hojas sin que se apelmacen y mantiene sus aromas naturales.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chiffonade/Chiffonade+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chiffonade/Chiffonade+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chiffonade/Chiffonade+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Chiffonade/Chiffonade+4.webp"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Corte Concassé",
+      "description": "Tomates pelados, sin semillas y picados.",
+      "detailedInfo": "El corte Concassé consiste en pelar, retirar las semillas y cortar en cubos pequeños los tomates u otras verduras. El proceso se realiza escaldando los tomates unos segundos en agua hirviendo, enfriándolos en agua con hielo y luego pelándolos con facilidad.\n\nLa pulpa limpia se corta en cubos de unos 5 mm. Este método permite obtener una textura fina y sin pieles, ideal para salsas, rellenos o ensaladas.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Concasse/Concasse+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Concasse/Concasse+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Concasse/Concasse+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Concasse/Concasse+5.webp"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Corte Torneado",
+      "description": "Verduras con forma de cilindro, para presentaciones elegantes.",
+      "detailedInfo": "El corte Torneado da forma ovalada o de barril a verduras firmes como papas o zanahorias. Se talla la pieza con un cuchillo puntilla, girándola para obtener una forma regular con 5 a 7 caras curvas.\n\nSu objetivo es mejorar la presentación y lograr una cocción uniforme. Es un corte clásico de cocina francesa, utilizado en guarniciones finas y platos de presentación cuidada.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Torneado/Torneado+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Torneado/Torneado+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Torneado/Torneado+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Torneado/Torneado+4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Torneado/Torneado+5.webp"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Corte Paysana",
+      "description": "Cubos pequeños e irregulares, para sopas y guisos.",
+      "detailedInfo": "El corte Paysana consiste en cortar las verduras en piezas planas y delgadas, de forma cuadrada, triangular o rectangular, con un tamaño aproximado de 1 cm de lado por 2 mm de grosor.\n\nSe utiliza para sopas, menestras y guarniciones salteadas. Su apariencia ligeramente irregular da un aspecto rústico, manteniendo una cocción pareja y una textura equilibrada.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Paysana/Paysana+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Paysana/Paysana+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Paysana/Paysana+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Paysana/Paysana+4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Paysana/Paysana+5.webp"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Corte Batonnet",
+      "description": "Tiras rectangulares gruesas, ideales para cocciones largas y uniformes.",
+      "detailedInfo": "El corte Batonnet genera tiras rectangulares de unos 6–7 cm de largo por 1 cm de grosor. Es la base para otros cortes más pequeños como el Brunoise.\n\nSe aplica en verduras firmes como zanahorias, papas o pepinos, logrando piezas de tamaño uniforme que aseguran una cocción pareja y una presentación ordenada.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Batonnet/Batonnet+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Batonnet/Batonnet+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Batonnet/Batonnet+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Batonnet/Batonnet+4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Batonnet/Batonnet+5.webp"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Corte Vichy",
+      "description": "Rodajas finas y uniformes, ideales para zanahorias y tubérculos.",
+      "detailedInfo": "El corte Vichy consiste en obtener rodajas finas y regulares de unos 2 a 3 mm de grosor, principalmente en zanahorias, papas o nabos. Su objetivo es lograr una cocción uniforme y una textura tierna sin que el vegetal pierda su forma.\n\nEs característico de la cocina francesa y se asocia con preparaciones glaseadas o salteadas, donde las rodajas se cocinan en mantequilla y caldo hasta quedar brillantes y llenas de sabor natural.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Vichy/Vichy+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Vichy/Vichy+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Vichy/Vichy+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Vichy/Vichy+4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Vichy/Vichy+5.webp"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Corte Macedoine",
+      "description": "Cubos pequeños de aproximadamente 5 mm, usados en ensaladas y guarniciones.",
+      "detailedInfo": "El corte Macedoine produce cubos regulares de unos 5 mm por lado, obtenidos a partir de tiras tipo juliana para mantener uniformidad. Se usa en ensaladas, guarniciones y mezclas de frutas o verduras cocidas.\n\nEste corte busca equilibrio visual y cocción homogénea. Para realizarlo correctamente, se recomienda trabajar con alimentos firmes, cortando primero tiras finas y luego cubos parejos. Es una técnica clásica para platos coloridos y bien presentados.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Macedoine/Macedoine+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Macedoine/Macedoine+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Macedoine/Macedoine+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Macedoine/Macedoine+4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Macedoine/Macedoine+5.webp"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Blanquear",
+      "description": "Cocción breve en agua hirviendo seguida de enfriado en agua con hielo.",
+      "detailedInfo": "Blanquear es una técnica culinaria que consiste en sumergir temporalmente los alimentos, sobre todo vegetales, en agua hirviendo (100 °C) durante unos segundos o hasta 2 minutos, para luego enfriarlos de inmediato en agua con hielo.\n\nEste proceso fija el color verde intenso de los vegetales, suaviza su textura y reduce sabores amargos o fuertes. También facilita el pelado de tomates, almendras o duraznos, y detiene la acción enzimática antes de congelar alimentos.\n\nEl éxito del blanqueado depende de controlar el tiempo y asegurar un choque térmico adecuado. Si se excede la cocción, los vegetales pierden color, textura y valor nutritivo. Es una técnica base en la cocina profesional, ideal como paso previo antes de saltear, congelar o preparar ensaladas.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Blanquear/Blanquear+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Blanquear/Blanquear+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Blanquear/Blanquear+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Blanquear/Blanquear+4.webp"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Glaseado",
+      "description": "Cocción con mantequilla y azúcar que da un brillo atractivo.",
+      "detailedInfo": "El glaseado es una técnica en la que los vegetales se cocinan lentamente en una mezcla de mantequilla, azúcar y un poco de agua o caldo. Durante la cocción, el líquido se reduce formando un jarabe brillante que recubre los alimentos.\n\nSe aplica en zanahorias, nabos o cebollitas, logrando un acabado brillante y un sabor dulce-salado. Puede variarse con miel o jugos cítricos. La clave está en controlar la reducción sin que el azúcar se queme.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Glaseado/Glaseado+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Glaseado/Glaseado+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Glaseado/Glaseado+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Glaseado/Glaseado+4.webp"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Salteado",
+      "description": "Cocción rápida a alta temperatura con poco aceite.",
+      "detailedInfo": "El salteado es una cocción breve y enérgica a fuego alto, usando una mínima cantidad de aceite o grasa. Los ingredientes se mueven constantemente para evitar que se quemen y lograr una cocción uniforme.\n\nIdeal para vegetales y carnes en trozos pequeños, esta técnica conserva los colores, la textura y los nutrientes. La temperatura ideal ronda los 180–200 °C. Es esencial no sobrecargar la sartén para mantener el calor constante y el efecto de sellado.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Salteado/Salteado+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Salteado/Salteado+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Salteado/Salteado+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Salteado/Salteado+4.webp"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Confitar",
+      "description": "Cocción lenta en grasa, ideal para carnes, ajos y frutas.",
+      "detailedInfo": "Confitar es cocinar un alimento sumergido en grasa (aceite o manteca) a baja temperatura, entre 70 y 90 °C, sin llegar a freír. El resultado es una textura tierna y jugosa, con sabores intensos.\n\nSe utiliza para carnes como el confit de pato, ajos o tomates. El proceso es lento y controlado: el alimento se cocina durante una o más horas y puede conservarse en la misma grasa. También existe el confitado en azúcar, usado en frutas para repostería.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Confitar/Confitar+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Confitar/Confitar+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Confitar/Confitar+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Confitar/Confitar+4.webp"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Emulsificar",
+      "description": "Mezcla estable entre líquidos que no se combinan naturalmente.",
+      "detailedInfo": "Emulsionar significa unir dos líquidos que normalmente no se mezclan, como el agua y el aceite, creando una textura homogénea. Se logra mediante batido o agitación y se mantiene estable gracias a un agente emulsificante (como yema o mostaza).\n\nHay emulsiones temporales (vinagreta) y permanentes (mayonesa). El secreto está en agregar el aceite lentamente mientras se bate con energía, permitiendo que el líquido lo atrape poco a poco hasta lograr una mezcla cremosa y estable.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Emulsionar/Emulsionar+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Emulsionar/Emulsionar+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Emulsionar/Emulsionar+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Emulsionar/Emulsionar+4.webp"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Montar",
+      "description": "Batido para incorporar aire y aumentar volumen.",
+      "detailedInfo": "Montar consiste en batir un ingrediente para incorporar aire y darle volumen. Se aplica en claras, nata o salsas ligeras. El aire atrapado crea una textura esponjosa y estable.\n\nPara lograr un buen resultado, los ingredientes deben estar fríos y los utensilios limpios y secos. Hay dos montados principales: claras a punto de nieve y nata montada. Evita batir en exceso para que la mezcla no se corte o pierda firmeza.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Montar/Montar+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Montar/Montar+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Montar/Montar+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Montar/Montar+4.webp"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Reducción",
+      "description": "Evaporación controlada para concentrar sabor, textura y color en líquidos o salsas.",
+      "detailedInfo": "La reducción es una técnica culinaria que consiste en cocinar un líquido —como un fondo, vino, caldo o jugo de cocción— a fuego medio o medio-alto sin tapa, permitiendo que parte del agua se evapore y los sabores se concentren.\n\nEste proceso espesa naturalmente la preparación, intensifica su sabor y aporta brillo, densidad y color. Durante la cocción, es importante remover ocasionalmente para evitar que el contenido se adhiera o se queme en el fondo.\n\nUna reducción correcta debe napar el dorso de una cuchara, es decir, cubrirla con una fina capa que no escurra fácilmente. Cuanto más tiempo se reduce, más potente y denso será el resultado. Se utiliza como base de salsas clásicas como el demi-glace, glaseados, reducciones balsámicas o vinos concentrados.\n\n**Consejo:** controla la temperatura y evita reducir en exceso, ya que puede intensificar demasiado la salinidad o amargor si el líquido contiene vino o especias fuertes.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Reduccion/Reduccion+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Reduccion/Reduccion+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Reduccion/Reduccion+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Reduccion/Reduccion+4.webp"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Pochar",
+      "description": "Cocción suave en líquido a baja temperatura.",
+      "detailedInfo": "Pochar o escalfar es cocinar suavemente los alimentos en un líquido caliente, como agua, caldo o vino, manteniendo la temperatura entre 70 y 80 °C sin llegar a hervir.\n\nEs ideal para huevos, pescados o frutas delicadas. El método permite conservar jugos y texturas suaves. Se logra un resultado uniforme controlando el calor y evitando burbujeo intenso.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Pochar/Pochar+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Pochar/Pochar+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Pochar/Pochar+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Pochar/Pochar+4.webp"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Rostizar",
+      "description": "Cocción en horno o asador para dorar y caramelizar.",
+      "detailedInfo": "Rostizar es cocinar con calor seco y directo en horno o asador, a temperaturas de 180–220 °C. El calor dora el exterior, carameliza los jugos y mantiene el interior jugoso.\n\nSe aplica a carnes, aves y vegetales. Durante la cocción, los jugos que se desprenden pueden usarse para salsas o glaseados. El resultado es una textura crujiente por fuera y tierna por dentro, con sabor profundo y aroma tostado.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Rostizar/Rostizar+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Rostizar/Rostizar+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Rostizar/Rostizar+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Rostizar/Rostizar+4.webp"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Curado",
+      "description": "Conservación mediante sal, azúcar u otros agentes deshidratantes.",
+      "detailedInfo": "El curado es un método de conservación que emplea sal, azúcar o ambos para extraer la humedad de los alimentos y evitar el crecimiento de bacterias. Existen tres variantes: seco (frotado con sal), en salmuera (sumergido en líquido salado) y mixto (con agentes adicionales como nitratos).\n\nSe usa para jamones, salmón o embutidos, y además de preservar, intensifica sabor y firmeza. Dependiendo del alimento, puede durar desde horas hasta varios meses.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Curado/Curado+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Curado/Curado+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Curado/Curado+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Curado/Curado+4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Curado/Curado+5.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Curado/Curado+6.webp"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Ahumado",
+      "description": "Cocción o conservación mediante exposición al humo.",
+      "detailedInfo": "El ahumado conserva y aromatiza los alimentos con el humo de maderas naturales. Se aplica a carnes, pescados, quesos y vegetales, aportando aroma, sabor y color característicos.\n\nExisten dos métodos principales:\n- **Ahumado en frío (20–30 °C):** aromatiza sin cocinar, ideal para salmón o jamón curado.\n- **Ahumado en caliente (60–90 °C):** cocina y ahúma al mismo tiempo, típico en carnes y embutidos.\n\nLas maderas definen el perfil del sabor: roble (intenso), manzano (suave), cerezo (dulce) o nogal (fuerte). El proceso requiere curar o salar previamente, controlar la temperatura y mantener una corriente constante de humo.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ahumado/Ahumado+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ahumado/Ahumado+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ahumado/Ahumado+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ahumado/Ahumado+4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ahumado/Ahumado+5.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ahumado/Ahumado+6.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ahumado/Ahumado+7.webp"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Escabechar",
+      "description": "Técnica de cocción y conservación en vinagre, aceite y especias.",
+      "detailedInfo": "Escabechar combina cocción y conservación en una mezcla de vinagre, aceite y aromáticos. Se usa en pescados, aves y vegetales, aportando sabor ácido y prolongando su duración.\n\nEl líquido de escabeche se prepara con vinagre, aceite de oliva, ajo, laurel, pimienta y verduras como cebolla o zanahoria. Tras hervir unos minutos, se añade el ingrediente principal y se deja cocinar brevemente. Luego se enfría y se conserva en refrigeración, donde los sabores se integran con el tiempo.\n\nEl resultado es un alimento aromático, brillante y duradero, que puede servirse frío o templado como entrada o guarnición.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Escabechar/Escabechar+1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Escabechar/Escabechar+2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Escabechar/Escabechar+3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Escabechar/Escabechar+4.webp"
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Baño María",
+      "description": "Cocción indirecta mediante el calor del agua para control de temperatura suave.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ba%C3%B1o+Maria/Ba%C3%B1o_Maria1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ba%C3%B1o+Maria/Ba%C3%B1o_Maria2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ba%C3%B1o+Maria/Ba%C3%B1o_Maria3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ba%C3%B1o+Maria/Ba%C3%B1o_Maria4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ba%C3%B1o+Maria/Ba%C3%B1o_Maria5.webp"
+      ],
+      "detailedInfo": "El baño María es una técnica de cocción indirecta que utiliza el calor suave del agua para cocinar o fundir alimentos sin que se quemen ni se separen. Consiste en colocar un recipiente con la preparación dentro de otro con agua caliente, manteniendo una temperatura controlada entre 60 y 90 °C. Se utiliza para flanes, salsas delicadas, chocolate o cremas. Es importante que el agua no hierva bruscamente y que no entre en contacto con la mezcla. Garantiza una cocción uniforme y texturas suaves."
+    },
+    {
+      "id": 27,
+      "name": "Fermentación",
+      "description": "Proceso biológico que genera gases y aromas, dando volumen y sabor a las masas.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Fermentacion/Fermentacion1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Fermentacion/Fermentacion2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Fermentacion/Fermentacion3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Fermentacion/Fermentacion4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Fermentacion/Fermentacion5.webp"
+      ],
+      "detailedInfo": "La fermentación es un proceso natural en el que levaduras o bacterias transforman azúcares en gases y compuestos aromáticos. En panadería, estos gases hacen que las masas aumenten de volumen y desarrollen sabor. La temperatura ideal oscila entre 24 y 28 °C, y el tiempo depende de la humedad y la fuerza del fermento. Un reposo adecuado mejora la textura y el aroma del pan. Un exceso produce acidez y debilita el gluten. Se recomienda cubrir la masa para evitar que se seque."
+    },
+    {
+      "id": 28,
+      "name": "Reposo de Masas",
+      "description": "Tiempo de descanso que relaja el gluten y mejora la manejabilidad de la masa.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Reposo+de+masa/ReposoM1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Reposo+de+masa/ReposoM2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Reposo+de+masa/ReposoM3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Reposo+de+masa/ReposoM4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Reposo+de+masa/ReposoM5.webp"
+      ],
+      "detailedInfo": "El reposo de la masa permite que el gluten se relaje y la hidratación sea uniforme, facilitando el estirado y evitando que se encoja al trabajarla. Durante este tiempo, las enzimas actúan sobre los almidones y proteínas, mejorando sabor y textura. El tiempo varía según la receta, desde minutos hasta varias horas, siempre cubriendo la masa para evitar que se seque. Un reposo adecuado es clave para obtener masas más elásticas y suaves."
+    },
+    {
+      "id": 29,
+      "name": "Horneado Controlado",
+      "description": "Uso adecuado del calor para lograr cocciones uniformes y texturas precisas.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Horneado+Controlado/HorneadoC1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Horneado+Controlado/HorneadoC2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Horneado+Controlado/HorneadoC3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Horneado+Controlado/HorneadoC4.webp"
+      ],
+      "detailedInfo": "El horneado controlado consiste en manejar correctamente temperatura, ventilación y tiempo para asegurar una cocción pareja. El calor seco transforma los almidones y proteínas, generando color, textura y volumen. Es esencial precalentar el horno, ubicar correctamente las bandejas y evitar abrir la puerta con frecuencia. En repostería, una diferencia de pocos grados puede afectar el resultado final. Cada tipo de masa requiere un rango ideal: bizcochos entre 160 y 180 °C, panes entre 200 y 230 °C."
+    },
+    {
+      "id": 30,
+      "name": "Desmoldado",
+      "description": "Técnica de extracción cuidadosa para conservar forma y textura.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Desmoldado/Desmoldado1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Desmoldado/Desmoldado2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Desmoldado/Desmoldado3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Desmoldado/Desmoldado4.webp"
+      ],
+      "detailedInfo": "El desmoldado es el proceso de retirar una preparación de su molde sin dañarla. Requiere que el molde esté bien engrasado y, en algunos casos, cubierto con papel manteca. En tortas o flanes, se recomienda dejar enfriar parcialmente antes de desmoldar para evitar rupturas. Para piezas frías, un breve paso por agua tibia o calor suave facilita el desprendimiento. Un desmoldado correcto mantiene la presentación intacta y evita pérdidas de textura o forma."
+    },
+    {
+      "id": 31,
+      "name": "Decoración con Manga",
+      "description": "Uso de boquillas y presión controlada para crear formas precisas y estéticas.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Decoraci%C3%B3n+con+Manga/DecoracionCM1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Decoraci%C3%B3n+con+Manga/DecoracionCM2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Decoraci%C3%B3n+con+Manga/DecoracionCM3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Decoraci%C3%B3n+con+Manga/DecoracionCM4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Decoraci%C3%B3n+con+Manga/DecoracionCM5.webp"
+      ],
+      "detailedInfo": "La decoración con manga permite aplicar cremas, glaseados o masas con precisión estética. Se utiliza una manga pastelera con boquillas de distintos tamaños y formas para lograr diseños definidos. La presión constante y el ángulo correcto son esenciales para un trazo uniforme. Se recomienda practicar sobre papel antes de decorar la pieza final. Esta técnica combina control y creatividad, ideal para cupcakes, tortas y galletas decoradas."
+    },
+    {
+      "id": 32,
+      "name": "Baño de Espejo",
+      "description": "Cobertura brillante de textura fluida para tortas y postres fríos.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ba%C3%B1o+de+Espejo/Ba%C3%B1oE1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ba%C3%B1o+de+Espejo/Ba%C3%B1oE2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ba%C3%B1o+de+Espejo/Ba%C3%B1oE3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ba%C3%B1o+de+Espejo/Ba%C3%B1oE4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ba%C3%B1o+de+Espejo/Ba%C3%B1oE5.webp"
+      ],
+      "detailedInfo": "El baño de espejo es una cobertura brillante elaborada a base de glucosa, azúcar, leche condensada, gelatina y chocolate o colorante. Se aplica sobre postres fríos o congelados, creando un acabado liso y reflejante. La mezcla se calienta y se deja enfriar a unos 32 °C antes de verterla, asegurando una textura uniforme. Es importante tamizar y eliminar burbujas antes de aplicar. Su resultado aporta un efecto visual elegante y una superficie impecable."
+    },
+    {
+      "id": 33,
+      "name": "Atemperado de Gelatinas",
+      "description": "Proceso de incorporación gradual de gelatina fundida para evitar grumos o separación.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Atemperado+de+Gelatinas/AtemperadoDG1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Atemperado+de+Gelatinas/AtemperadoDG2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Atemperado+de+Gelatinas/AtemperadoDG3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Atemperado+de+Gelatinas/AtemperadoDG4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Atemperado+de+Gelatinas/AtemperadoDG5.webp"
+      ],
+      "detailedInfo": "El atemperado de gelatinas consiste en igualar la temperatura de una gelatina fundida con la de una mezcla fría para evitar que se formen grumos o capas separadas. Se logra añadiendo una pequeña parte de la mezcla fría a la gelatina líquida, removiendo, y luego incorporando todo de vuelta. Este proceso asegura una textura uniforme y una estructura firme sin burbujas. Es fundamental no exceder los 60 °C para no debilitar el poder gelificante."
+    },
+    {
+      "id": 34,
+      "name": "Deshidratado",
+      "description": "Eliminación de humedad para conservar alimentos y concentrar sabores.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Deshidratado/Deshidratado1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Deshidratado/Deshidratado2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Deshidratado/Deshidratado3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Deshidratado/Deshidratado4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Deshidratado/Deshidratado5.webp"
+      ],
+      "detailedInfo": "El deshidratado es una técnica que elimina el agua de los alimentos mediante calor suave o aire circulante, concentrando su sabor y alargando su vida útil. Se realiza a temperaturas bajas (entre 40 y 70 °C) durante varias horas. Puede hacerse en horno, deshidratador o al sol. Se usa en frutas, hierbas, vegetales y hasta masas finas como chips de frutas o merengues. Un deshidratado correcto conserva color, aroma y textura crujiente."
+    },
+    {
+      "id": 35,
+      "name": "Pulverizado",
+      "description": "Transformación de ingredientes secos en polvo fino mediante molienda o trituración.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Pulverizado/Pulverizado1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Pulverizado/Pulverizado2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Pulverizado/Pulverizado3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Pulverizado/Pulverizado4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Pulverizado/Pulverizado5.webp"
+      ],
+      "detailedInfo": "El pulverizado consiste en triturar o moler ingredientes secos hasta obtener un polvo fino y uniforme. Se utiliza para preparar harinas especiales, coberturas decorativas o bases aromáticas. Los molinos o procesadores permiten controlar el grosor del polvo. Es importante tamizar el resultado para eliminar grumos y lograr una textura homogénea. Se aplica en repostería, chocolatería y cocina molecular para crear efectos visuales y sabores concentrados."
+    },
+    {
+      "id": 36,
+      "name": "Sellado",
+      "description": "Doración inicial para conservar jugos y potenciar el sabor.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Sellado/Sellado1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Sellado/Sellado2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Sellado/Sellado3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Sellado/Sellado4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Sellado/Sellado5.webp"
+      ],
+      "detailedInfo": "El sellado consiste en dorar rápidamente la superficie de una carne o pescado a alta temperatura para formar una costra que retiene los jugos internos. Esta reacción de Maillard aporta color, aroma y sabor profundo. Se realiza en sartén o plancha caliente con poco aceite, sin mover la pieza hasta que se forme la costra. No busca cocinar completamente, sino preparar el alimento para una cocción posterior más lenta como braseado o asado."
+    },
+    {
+      "id": 37,
+      "name": "Desglasado",
+      "description": "Disolución de jugos caramelizados para formar una base de salsa.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Desglasado/Desglasado1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Desglasado/Desglasado2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Desglasado/Desglasado3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Desglasado/Desglasado4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Desglasado/Desglasado5.webp"
+      ],
+      "detailedInfo": "El desglasado aprovecha los residuos dorados que quedan en el fondo de la sartén después de sellar carnes o vegetales. Al añadir vino, caldo o agua caliente, esos jugos caramelizados se disuelven y forman una base sabrosa para salsas. El líquido se reduce ligeramente mientras se raspa con una espátula de madera. Este paso es clave para intensificar sabores y aprovechar todos los matices de la cocción."
+    },
+    {
+      "id": 38,
+      "name": "Clarificación",
+      "description": "Proceso para eliminar impurezas y obtener caldos transparentes.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Clarificacion/Clarificacion1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Clarificacion/Clarificacion2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Clarificacion/Clarificacion3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Clarificacion/Clarificacion4.webp"
+      ],
+      "detailedInfo": "La clarificación se utiliza para obtener caldos o consomés limpios y brillantes. Se realiza mezclando claras de huevo batidas con el caldo frío; al calentarse lentamente, las claras coagulan y atrapan impurezas, formando una 'cápsula' que asciende a la superficie. Tras colar con cuidado, el resultado es un líquido claro y de sabor concentrado. Este método es un clásico de la alta cocina, donde la pureza visual es esencial."
+    },
+    {
+      "id": 39,
+      "name": "Braseado",
+      "description": "Cocción lenta en líquido aromático para carnes tiernas y sabrosas.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Braseado/Braseado1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Braseado/Braseado2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Braseado/Braseado3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Braseado/Braseado4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Braseado/Braseado5.webp"
+      ],
+      "detailedInfo": "El braseado combina sellado inicial con una cocción lenta y húmeda. Las carnes se doran primero para desarrollar sabor, luego se cuecen en un líquido aromático (vino, caldo o salsa) a fuego bajo y tapado. Esta técnica ablanda fibras duras y crea salsas intensas. Es ideal para cortes con colágeno, como osobuco o costillas. La clave está en mantener una temperatura constante sin hervir."
+    },
+    {
+      "id": 40,
+      "name": "Reducción Balsámica",
+      "description": "Concentración de vinagre balsámico para obtener una salsa espesa y dulce.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Reducci%C3%B3n+Bals%C3%A1mica/ReduccionB1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Reducci%C3%B3n+Bals%C3%A1mica/ReduccionB2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Reducci%C3%B3n+Bals%C3%A1mica/ReduccionB3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Reducci%C3%B3n+Bals%C3%A1mica/ReduccionB4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Reducci%C3%B3n+Bals%C3%A1mica/ReduccionB5.webp"
+      ],
+      "detailedInfo": "La reducción balsámica se obtiene calentando vinagre balsámico hasta evaporar parte del agua, concentrando su sabor y espesando su textura. Puede endulzarse con miel o azúcar para equilibrar la acidez. Se cocina a fuego medio sin tapa, removiendo ocasionalmente, hasta alcanzar la densidad deseada. Es ideal para decorar platos, glasear carnes o acompañar frutas asadas."
+    },
+    {
+      "id": 41,
+      "name": "Sofrito",
+      "description": "Base de cebolla, ajo y tomate usada para dar sabor a guisos y salsas.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Sofrito/Sofrito1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Sofrito/Sofrito2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Sofrito/Sofrito3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Sofrito/Sofrito4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Sofrito/Sofrito5.webp"
+      ],
+      "detailedInfo": "El sofrito es la base aromática de muchas cocinas. Consiste en cocinar lentamente cebolla, ajo y tomate (a veces pimiento o zanahoria) en aceite hasta obtener una textura suave y dulce. El fuego bajo permite que los sabores se fundan sin quemarse. Este fondo aporta profundidad a guisos, arroces y salsas, y puede adaptarse con hierbas o especias según la preparación."
+    },
+    {
+      "id": 42,
+      "name": "Escalfado",
+      "description": "Cocción suave de alimentos en líquido sin que hierva.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Escalfado/Escalfado1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Escalfado/Escalfado2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Escalfado/Escalfado3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Escalfado/Escalfado4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Escalfado/Escalfado5.webp"
+      ],
+      "detailedInfo": "El escalfado cocina los alimentos en líquido caliente entre 70 y 80 °C, sin llegar a hervir. Se utiliza para preparaciones delicadas como huevos, pescados o frutas. El calor controlado preserva la textura y evita la desintegración. En el caso de los huevos, se añaden unas gotas de vinagre para facilitar la coagulación de la clara. El resultado es una cocción uniforme, suave y sin grasa añadida."
+    },
+    {
+      "id": 43,
+      "name": "Marinado",
+      "description": "Inmersión en líquido aromático para ablandar y aromatizar alimentos.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Marinado/Marinado1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Marinado/Marinado2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Marinado/Marinado3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Marinado/Marinado4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Marinado/Marinado5.webp"
+      ],
+      "detailedInfo": "El marinado consiste en dejar carnes, pescados o vegetales en una mezcla de líquidos y especias durante varias horas para mejorar su sabor y textura. Los componentes básicos son un ácido (vinagre, vino, jugo cítrico), un cuerpo graso (aceite) y aromáticos (hierbas, ajo, especias). El tiempo de marinado varía según el alimento: desde 20 minutos para pescados hasta 24 horas para carnes rojas. También ayuda a conservar y aporta complejidad de sabor."
+    },
+    {
+      "id": 44,
+      "name": "Ahumado Rápido",
+      "description": "Técnica breve de aromatización con humo sin cocción prolongada.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ahumado+Rapido/AhumadoR1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ahumado+Rapido/AhumadoR2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ahumado+Rapido/AhumadoR3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ahumado+Rapido/AhumadoR4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ahumado+Rapido/AhumadoR5.webp"
+      ],
+      "detailedInfo": "El ahumado rápido utiliza pequeñas cantidades de madera o hierbas aromáticas para impregnar alimentos con notas ahumadas en pocos minutos. Se realiza en sartén, wok o campana con tapa, generando humo controlado que cubre el alimento sin cocinarlo completamente. Es ideal para quesos, pescados o vegetales. Aporta aroma intenso sin necesidad de ahumadores grandes ni tiempos prolongados."
+    },
+    {
+      "id": 45,
+      "name": "Montado de Salsas",
+      "description": "Incorporación final de grasa fría para dar brillo y cuerpo.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Montado+de+Salsa/MontadoDS1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Montado+de+Salsa/MontadoDS2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Montado+de+Salsa/MontadoDS3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Montado+de+Salsa/MontadoDS4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Montado+de+Salsa/MontadoDS5.webp"
+      ],
+      "detailedInfo": "Montar una salsa es integrar mantequilla o grasa fría al final de la cocción para lograr una textura aterciopelada y un brillo intenso. Se hace fuera del fuego, moviendo la sartén en círculos hasta que la grasa se emulsione sin separarse. Este paso aporta suavidad y equilibra sabores. Es fundamental controlar la temperatura: si está demasiado alta, la grasa se separa y se pierde la emulsión."
+    },
+    {
+      "id": 46,
+      "name": "Cocción al Vacío (Sous-vide)",
+      "description": "Cocción precisa en bolsas selladas al vacío a temperatura constante.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Cocci%C3%B3n+al+Vac%C3%ADo+(Sous-vide)/SousV1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Cocci%C3%B3n+al+Vac%C3%ADo+(Sous-vide)/SousV2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Cocci%C3%B3n+al+Vac%C3%ADo+(Sous-vide)/SousV3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Cocci%C3%B3n+al+Vac%C3%ADo+(Sous-vide)/SousV4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Cocci%C3%B3n+al+Vac%C3%ADo+(Sous-vide)/SousV5.webp"
+      ],
+      "detailedInfo": "La cocción al vacío consiste en sellar alimentos en bolsas herméticas y sumergirlos en agua a temperatura controlada, generalmente entre 55 y 80 °C. Este método permite una cocción uniforme, conserva jugos y mantiene la textura exacta deseada. Es ideal para carnes, pescados y vegetales. Tras la cocción, se suelen sellar o dorar brevemente para obtener color y aroma. Precisión y seguridad son esenciales para resultados perfectos."
+    },
+    {
+      "id": 47,
+      "name": "Degustación Sensorial",
+      "description": "Evaluación de textura, aroma y sabor para calibrar la preparación.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Degustaci%C3%B3n+Sensorial/DegustacionS1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Degustaci%C3%B3n+Sensorial/DegustacionS2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Degustaci%C3%B3n+Sensorial/DegustacionS3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Degustaci%C3%B3n+Sensorial/DegustacionS4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Degustaci%C3%B3n+Sensorial/DegustacionS5.webp"
+      ],
+      "detailedInfo": "La degustación sensorial es la técnica de analizar un plato a través del gusto, el olfato, la vista y la textura, con el fin de ajustar equilibrio, salinidad, acidez y temperatura antes de servir. Un cocinero debe entrenar este proceso para detectar excesos o carencias. No es un paso estético, sino una herramienta esencial de control de calidad que define la precisión de una preparación profesional."
+    },
+    {
+      "id": 48,
+      "name": "Mise en Place",
+      "description": "Organización y preparación previa de ingredientes y utensilios.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Mise+en+place/MiseEP1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Mise+en+place/MiseEP2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Mise+en+place/MiseEP3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Mise+en+place/MiseEP4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Mise+en+place/MiseEP5.webp"
+      ],
+      "detailedInfo": "La mise en place —'poner en su lugar'— es la base del trabajo culinario profesional. Consiste en preparar y disponer todos los ingredientes, utensilios y equipos antes de cocinar. Este método garantiza fluidez, limpieza y precisión en cada etapa. Una buena mise en place ahorra tiempo, reduce errores y permite enfocarse en la ejecución de la técnica sin interrupciones. Es el primer paso de toda cocina organizada."
+    },
+    {
+      "id": 49,
+      "name": "Precisión Culinaria",
+      "description": "Dominio del tiempo, temperatura y detalle: la base de toda técnica.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Precisi%C3%B3n+Culinaria/PrecisionC1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Precisi%C3%B3n+Culinaria/PrecisionC2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Precisi%C3%B3n+Culinaria/PrecisionC3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Precisi%C3%B3n+Culinaria/PrecisionC4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Precisi%C3%B3n+Culinaria/PrecisionC5.webp"
+      ],
+      "detailedInfo": "La precisión es lo que separa cocinar de simplemente mezclar ingredientes. Cada técnica depende de tres factores: tiempo, temperatura y atención al detalle. Unos segundos o grados pueden cambiar por completo una textura o un sabor. No se trata de rigidez, sino de control consciente: medir, observar, ajustar. La cocina profesional no busca la perfección absoluta, sino la repetibilidad, esa capacidad de obtener el mismo resultado cada vez. Quien domina la precisión transforma la práctica en arte, porque sabe exactamente qué está ocurriendo y por qué."
+    },
+    {
+      "id": 50,
+      "name": "Equilibrio de Sabores",
+      "description": "El punto donde dulce, ácido, salado, amargo y umami se encuentran.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Equilibrio+de+Sabores/EquilibroDS1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Equilibrio+de+Sabores/EquilibroDS2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Equilibrio+de+Sabores/EquilibroDS3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Equilibrio+de+Sabores/EquilibroDS4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Equilibrio+de+Sabores/EquilibroDS5.webp"
+      ],
+      "detailedInfo": "El equilibrio de sabores es el corazón de toda cocina. Cada plato se construye sobre cinco pilares: dulce, salado, ácido, amargo y umami. Ninguno debe dominar por completo, sino complementarse. Un toque ácido despierta un plato graso, una nota dulce suaviza un amargo, la sal resalta lo oculto. Cocinar bien es aprender a ajustar ese diálogo constante entre contrastes. Probar, comparar y corregir es tan importante como cortar o cocinar. Cuando los sabores están en equilibrio, el paladar lo sabe incluso antes de entenderlo."
+    },
+    {
+      "id": 51,
+      "name": "Batido",
+      "description": "Incorporación de aire para obtener masas y mezclas ligeras y con volumen estable.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Batido/Batido1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Batido/Batido2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Batido/Batido3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Batido/Batido4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Batido/Batido5.webp"
+      ],
+      "detailedInfo": "El batido es una técnica que incorpora aire en una mezcla para aumentar su volumen y ligereza. Es esencial en preparaciones como bizcochos, mousses y cremas, donde la textura depende de la cantidad de aire atrapado. Existen dos métodos principales: el batido por cremado, que combina mantequilla y azúcar para obtener una base aireada, y el batido por incorporación, que alterna ingredientes secos y líquidos para lograr una masa equilibrada. La mantequilla y el azúcar atrapan aire, mientras que los huevos aportan estructura y estabilidad. Se recomienda usar ingredientes a temperatura ambiente y detener el batido justo cuando la mezcla esté homogénea, evitando colapsar el aire incorporado."
+    },
+    {
+      "id": 52,
+      "name": "Crema Batida",
+      "description": "Emulsión aireada de crema con grasa estable para decoración y rellenos.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Crema+Batida/CremaB1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Crema+Batida/CremaB2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Crema+Batida/CremaB3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Crema+Batida/CremaB4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Crema+Batida/CremaB5.webp"
+      ],
+      "detailedInfo": "La crema batida es una emulsión de grasa y aire que se logra batiendo crema con alto contenido de grasa hasta obtener una textura firme y estable. La cantidad de aire incorporado define su consistencia: con picos suaves resulta ideal para mousses y postres ligeros, mientras que con picos firmes se usa en decoración o rellenos. Para un resultado óptimo, los utensilios y la crema deben estar fríos, entre 4 y 8 °C. Se puede estabilizar con pequeñas cantidades de gelatina o leche en polvo para resistir el calor. Una crema con al menos 35% de grasa garantiza una textura sedosa y duradera."
+    },
+    {
+      "id": 53,
+      "name": "Templado de Chocolate",
+      "description": "Control de temperatura del chocolate para lograr brillo y textura firme.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Templado+de+Chocolate/TempladoC1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Templado+de+Chocolate/TempladoC2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Templado+de+Chocolate/TempladoC3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Templado+de+Chocolate/TempladoC4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Templado+de+Chocolate/TempladoC5.webp"
+      ],
+      "detailedInfo": "El templado es el proceso que estabiliza los cristales de manteca de cacao en el chocolate para darle brillo, textura firme y un quiebre limpio. Se calienta hasta 45–50 °C para fundir los cristales, se enfría a 26–28 °C para formar los cristales estables tipo V (beta), y luego se eleva a 31–32 °C para mantener la fluidez ideal de trabajo. Es fundamental evitar la humedad y usar utensilios completamente secos. Un templado correcto garantiza coberturas brillantes y resistentes al calor, ideales para bombones, tabletas y decoraciones."
+    },
+    {
+      "id": 54,
+      "name": "Hojaldrado",
+      "description": "Formación de capas alternadas de masa y mantequilla mediante pliegues controlados.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Hojaldrado/Hojaldrado1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Hojaldrado/Hojaldrado2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Hojaldrado/Hojaldrado3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Hojaldrado/Hojaldrado4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Hojaldrado/Hojaldrado5.webp"
+      ],
+      "detailedInfo": "El hojaldrado consiste en formar múltiples capas delgadas de masa separadas por mantequilla. Al hornear, el vapor genera una textura crujiente y aireada. La mantequilla y la masa deben tener una temperatura similar (alrededor de 15 °C) para evitar que la grasa se derrita o rompa la estructura. Se emplean pliegues simples (en tres partes) o dobles (en cuatro). Es importante trabajar en una superficie fría, dejar reposar la masa entre pliegues y no presionar en exceso para mantener las capas definidas. Se usa en croissants, milhojas, empanadas y pasteles laminados."
+    },
+    {
+      "id": 55,
+      "name": "Punto de Almíbar y Caramelo",
+      "description": "Etapas de cocción del azúcar determinadas por su temperatura y textura.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Punto+de+Alm%C3%ADbar+y+Caramelo/PuntoAC1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Punto+de+Alm%C3%ADbar+y+Caramelo/PuntoAC2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Punto+de+Alm%C3%ADbar+y+Caramelo/PuntoAC3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Punto+de+Alm%C3%ADbar+y+Caramelo/PuntoAC4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Punto+de+Alm%C3%ADbar+y+Caramelo/PuntoAC5.webp"
+      ],
+      "detailedInfo": "Los puntos de almíbar y caramelo describen las distintas fases del azúcar durante su cocción. A medida que la temperatura aumenta, el almíbar pasa de líquido ligero a caramelo oscuro. Los puntos más comunes son: hilo (103–105 °C), bola blanda (112–116 °C), bola dura (128–130 °C), quebrado (145–150 °C) y caramelo (155–170 °C). Es importante no remover una vez que el azúcar hierve para evitar la cristalización. Se recomienda usar un termómetro de cocina para lograr precisión. Estas etapas son esenciales en pralinés, merengues italianos, toffee o caramelos duros."
+    },
+    {
+      "id": 56,
+      "name": "Gelificación y Esferificación",
+      "description": "Formación de geles y esferas mediante agentes naturales o reacciones químicas.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Gelificaci%C3%B3n+y+Esferificaci%C3%B3n/GelificaionYE1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Gelificaci%C3%B3n+y+Esferificaci%C3%B3n/GelificaionYE2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Gelificaci%C3%B3n+y+Esferificaci%C3%B3n/GelificaionYE3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Gelificaci%C3%B3n+y+Esferificaci%C3%B3n/GelificaionYE4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Gelificaci%C3%B3n+y+Esferificaci%C3%B3n/GelificaionYE5.webp"
+      ],
+      "detailedInfo": "La gelificación y la esferificación son técnicas modernas que transforman líquidos en texturas sólidas o semisólidas. En la gelificación se utilizan agentes como gelatina o agar-agar: la primera es termorreversible y se derrite con calor, mientras que el agar se mantiene estable a altas temperaturas. La esferificación, en cambio, se basa en la reacción entre alginato de sodio y calcio, creando una fina membrana que encierra líquidos. Es ideal para caviar de frutas, salsas o postres. Se debe controlar el pH y evitar el exceso de aire para mantener la transparencia y la forma perfecta."
+    },
+    {
+      "id": 57,
+      "name": "Glaseado o Frosting",
+      "description": "Cobertura cremosa o brillante usada para decorar y proteger preparaciones.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Glaseado+o+Frosting/GlaseadoOrF1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Glaseado+o+Frosting/GlaseadoOrF2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Glaseado+o+Frosting/GlaseadoOrF3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Glaseado+o+Frosting/GlaseadoOrF4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Glaseado+o+Frosting/GlaseadoOrF5.webp"
+      ],
+      "detailedInfo": "El glaseado o frosting es una mezcla dulce que se aplica como cobertura o decoración. El glaseado clásico (icing) tiene una textura más fluida y brillante, hecho con azúcar glas y líquido, mientras que el frosting es más espeso y cremoso gracias a la mantequilla o queso crema. Entre los tipos más usados están el buttercream americano, suizo e italiano, cada uno con un nivel distinto de suavidad y estabilidad. Para lograr una textura sedosa, se debe batir hasta que la mezcla sea uniforme y mantener refrigerado antes de usar. Se emplea en tortas, cupcakes y postres decorativos."
+    },
+    {
+      "id": 58,
+      "name": "Montado de Claras (Merengue)",
+      "description": "Batido de claras de huevo con azúcar para crear espumas estables y brillantes.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Montado+de+Claras+(Merengue)/MontadoDC1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Montado+de+Claras+(Merengue)/MontadoDC2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Montado+de+Claras+(Merengue)/MontadoDC3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Montado+de+Claras+(Merengue)/MontadoDC4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Montado+de+Claras+(Merengue)/MontadoDC5.webp"
+      ],
+      "detailedInfo": "El merengue se obtiene al batir claras de huevo con azúcar para incorporar aire y crear una espuma ligera y estable. Existen tres tipos: el francés, con azúcar añadido en seco; el suizo, en el que claras y azúcar se calientan a baño maría antes de batir; y el italiano, donde se incorpora un almíbar caliente. Según el punto de batido, se puede obtener una textura cremosa, firme o seca. Añadir unas gotas de limón o cremor tártaro ayuda a estabilizar la mezcla. Es importante que el bol y las varillas estén limpios y sin grasa para lograr un batido perfecto."
+    },
+    {
+      "id": 59,
+      "name": "Caramelizado",
+      "description": "Proceso de dorado del azúcar por acción del calor, generando color, sabor y aroma.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Caramelizado/Caramelizado1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Caramelizado/Caramelizado2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Caramelizado/Caramelizado3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Caramelizado/Caramelizado4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Caramelizado/Caramelizado5.webp"
+      ],
+      "detailedInfo": "El caramelizado es la reacción del azúcar al calor, en la que se transforman sus moléculas para generar un color ámbar, aroma tostado y sabor profundo. Puede hacerse en seco, calentando el azúcar directamente, o en húmedo, disolviéndolo primero en agua. Para evitar la cristalización, se puede limpiar el borde del cazo con un pincel húmedo o agregar unas gotas de limón. Si se desea una salsa suave, se detiene la cocción añadiendo crema, agua o licor. Es una técnica base para flanes, pralinés, salsas de caramelo y diversas decoraciones."
+    },
+    {
+      "id": 60,
+      "name": "Fondant",
+      "description": "Pasta dulce elástica utilizada para cubrir tortas o modelar decoraciones.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Fondant/Fondant1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Fondant/Fondant2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Fondant/Fondant3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Fondant/Fondant4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Fondant/Fondant5.webp"
+      ],
+      "detailedInfo": "El fondant es una masa dulce y elástica elaborada con azúcar, glucosa y gelatina. Su textura lisa permite cubrir tortas o modelar figuras decorativas. Existen distintas variantes: el fondant extendido, más flexible y brillante; el fondant líquido, usado para glaseados; y el gum paste, más elástico y de secado rápido, ideal para flores finas. La glucosa previene la cristalización y aporta maleabilidad. Se recomienda amasar antes de usar y mantener cubierto para evitar que se seque."
+    },
+    {
+      "id": 61,
+      "name": "Ganache",
+      "description": "Emulsión suave de chocolate y crema, base de rellenos, coberturas y trufas.",
+      "imageUrls": [
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ganache/Ganache1.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ganache/Ganache2.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ganache/Ganache3.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ganache/Ganache4.webp",
+        "https://d3rbsa8yi0571o.cloudfront.net/Techniques/Ganache/Ganache5.webp"
+      ],
+      "detailedInfo": "La ganache es una mezcla de chocolate y crema caliente que, al emulsionarse, forma una textura suave, brillante y cremosa. Las proporciones varían según el uso: para rellenos se usa más chocolate, para coberturas partes iguales, y para salsas más crema. Se mezcla lentamente desde el centro para crear una emulsión estable. Es fundamental usar chocolate de buena calidad con alto contenido de manteca de cacao. La ganache se deja reposar antes de usar y se puede aromatizar con licor, café o especias según la preparación."
+    }
+  ]
+}

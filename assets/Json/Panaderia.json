@@ -1,0 +1,622 @@
+{
+  "recipes": [
+{
+  "id": 1,
+  "uid": "P-AN_000001",
+  "name": "Masa Perfecta para Gyoza, Dumplings y Empanadillas Chinas",
+  "description": "Una masa elástica, suave y fácil de trabajar, ideal para preparar gyozas, dumplings o empanadillas chinas. Su textura es el secreto de un sellado perfecto y una cocción uniforme.",
+  "imageUrl": "https://example.com/masa-perfecta-gyoza.jpg",
+  "detailedInfo": "Esta masa es la base esencial para empanadillas asiáticas como gyozas japonesas, dumplings chinos o guotie. Al usar agua caliente en lugar de fría, la harina se gelatiniza parcialmente, dando una textura más elástica y maleable. Tras el reposo, la masa se vuelve lisa y manejable, perfecta para estirar en discos finos que no se rompen al rellenar ni durante la cocción.",
+  "ingredients": [
+    {
+      "name": "Harina de trigo multiuso",
+      "quantity": "200 g",
+      "notes": "Base principal de la masa."
+    },
+    {
+      "name": "Agua caliente (no hirviendo)",
+      "quantity": "90 ml (+10 ml extra si es necesario)",
+      "notes": "Usar caliente para lograr una textura elástica."
+    },
+    {
+      "name": "Sal",
+      "quantity": "10 g",
+      "notes": "Aporta sabor y estructura."
+    },
+    {
+      "name": "Maicena (fécula de maíz)",
+      "quantity": "50 g",
+      "notes": "Para enharinar y evitar que las tortillas se peguen."
+    }
+  ],
+  "steps": [
+    { "step": "Colocar la harina de trigo multiuso en un bol y mezclar con la sal." },
+    { "step": "Añadir el agua caliente poco a poco mientras se remueve para integrar." },
+    { "step": "Trabajar la masa con la mano hasta formar una bola homogénea y despegar la harina del bol." },
+    { "step": "Pasar la masa a una superficie lisa y amasar durante unos 10 minutos hasta obtener una textura suave y elástica." },
+    { "step": "Envolver la masa en papel film y dejar reposar 2 horas a temperatura ambiente, o en refrigeración hasta el día siguiente." },
+    { "step": "Dividir la masa en dos partes y formar un cilindro con una de ellas, manteniendo la otra envuelta para que no se seque." },
+    { "step": "Cortar el cilindro en 14 piezas iguales, cubrir con un paño húmedo y aplanar cada una con la mano." },
+    { "step": "Espolvorear maicena sobre cada pieza y estirar con rodillo hasta obtener discos finos." }
+  ],
+  "tips": [
+    "Usar agua caliente (no hirviendo) ayuda a gelatinizar la harina y mejora la textura.",
+    "Durante el estirado, dejar la parte central del disco ligeramente más gruesa que los bordes para evitar roturas.",
+    "Cubrir siempre las piezas que no se estén trabajando con un paño húmedo para evitar que se sequen.",
+    "Si la masa queda seca, añadir pequeñas cantidades de agua caliente adicional hasta obtener la textura deseada."
+  ],
+  "images": [
+    "https://example.com/masa-gyoza-1.webp",
+    "https://example.com/masa-gyoza-2.webp"
+  ],
+  "rating": null
+},
+    {
+      "id": 2,
+      "uid": "R-B_000002",
+      "name": "Croissant",
+      "description": "Masa hojaldrada y mantequillosa, ideal para desayuno.",
+      "imageUrl": "https://example.com/croissant.jpg",
+      "detailedInfo": "El croissant es un bollo francés elaborado con masa laminada con mantequilla, logrando capas crujientes y aireadas.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "250g" },
+        { "name": "Mantequilla fría", "quantity": "150g" },
+        { "name": "Levadura seca", "quantity": "5g" },
+        { "name": "Azúcar", "quantity": "25g" },
+        { "name": "Sal", "quantity": "5g" },
+        { "name": "Leche", "quantity": "125ml" }
+      ],
+      "steps": [
+        { "step": "Mezcla harina, levadura, azúcar, sal y leche hasta formar masa." },
+        { "step": "Refrigera 30 min, luego añade mantequilla y lamina varias veces." },
+        { "step": "Forma croissants y deja levar 1 hora." },
+        { "step": "Hornea a 200°C por 15-20 min hasta dorar." }
+      ],
+      "images": [
+        "https://example.com/croissant1.webp",
+        "https://example.com/croissant2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 3,
+      "uid": "R-B_000003",
+      "name": "Pan de Chocolate",
+      "description": "Bollo dulce relleno de chocolate, perfecto para desayuno o merienda.",
+      "imageUrl": "https://example.com/pan-chocolate.jpg",
+      "detailedInfo": "Pan dulce elaborado con masa enriquecida y relleno de chocolate, con corteza dorada y textura suave y esponjosa.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "300g" },
+        { "name": "Levadura fresca", "quantity": "10g" },
+        { "name": "Azúcar", "quantity": "50g" },
+        { "name": "Leche", "quantity": "150ml" },
+        { "name": "Mantequilla", "quantity": "50g" },
+        { "name": "Chocolate para relleno", "quantity": "100g" },
+        { "name": "Sal", "quantity": "5g" }
+      ],
+      "steps": [
+        { "step": "Mezcla harina, levadura, azúcar, sal y leche hasta formar masa." },
+        { "step": "Añade mantequilla y amasa hasta integrar." },
+        { "step": "Deja levar 1 hora hasta que doble tamaño." },
+        { "step": "Forma bollos y coloca chocolate en el centro." },
+        { "step": "Hornea a 180°C por 20-25 min hasta dorar." }
+      ],
+      "images": [
+        "https://example.com/pan-chocolate1.webp",
+        "https://example.com/pan-chocolate2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 4,
+      "uid": "R-B_000004",
+      "name": "Muffins de Arándanos",
+      "description": "Bollos individuales con arándanos frescos y textura esponjosa.",
+      "imageUrl": "https://example.com/muffins-arandanos.jpg",
+      "detailedInfo": "Los muffins son pequeños bollos dulces elaborados con harina, huevos, leche y arándanos, ideales para desayunos o meriendas.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "250g" },
+        { "name": "Azúcar", "quantity": "100g" },
+        { "name": "Huevos", "quantity": "2 U" },
+        { "name": "Leche", "quantity": "125ml" },
+        { "name": "Mantequilla derretida", "quantity": "50g" },
+        { "name": "Arándanos", "quantity": "100g" },
+        { "name": "Polvo de hornear", "quantity": "10g" },
+        { "name": "Sal", "quantity": "1 pizca" }
+      ],
+      "steps": [
+        { "step": "Mezcla harina, azúcar, polvo de hornear y sal." },
+        { "step": "Bate huevos, leche y mantequilla; añade a los secos." },
+        { "step": "Incorpora arándanos con cuidado." },
+        { "step": "Llena moldes para muffins hasta 3/4 de capacidad." },
+        { "step": "Hornea a 180°C por 20-25 min hasta dorar." }
+      ],
+      "images": [
+        "https://example.com/muffins1.webp",
+        "https://example.com/muffins2.webp"
+      ],
+      "rating": null
+    },
+    {
+      "id": 5,
+      "uid": "R-B_000005",
+      "name": "Brioche",
+      "description": "Pan dulce francés con textura suave, mantequillosa y ligeramente dulce.",
+      "imageUrl": "https://example.com/brioche.jpg",
+      "detailedInfo": "El brioche es un pan enriquecido con mantequilla y huevos, caracterizado por su textura tierna, esponjosa y sabor ligeramente dulce.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "300g" },
+        { "name": "Azúcar", "quantity": "50g" },
+        { "name": "Levadura seca", "quantity": "7g" },
+        { "name": "Huevos", "quantity": "3 U" },
+        { "name": "Mantequilla", "quantity": "100g" },
+        { "name": "Leche", "quantity": "100ml" },
+        { "name": "Sal", "quantity": "5g" }
+      ],
+      "steps": [
+        { "step": "Mezcla harina, azúcar, sal y levadura." },
+        { "step": "Añade huevos y leche, amasa hasta obtener masa suave." },
+        { "step": "Incorpora mantequilla poco a poco y amasa 10 min más." },
+        { "step": "Deja levar 1-2 horas hasta duplicar tamaño." },
+        { "step": "Forma brioche, deja levar 30 min y hornea a 180°C por 25-30 min." }
+      ],
+      "images": [
+        "https://example.com/brioche1.webp",
+        "https://example.com/brioche2.webp"
+      ],
+      "rating": null
+    },
+     {
+      "id": 6,
+      "uid": "R-B_000006",
+      "name": "Pan Francés",
+      "description": "Pan crujiente por fuera y suave por dentro, clásico en desayunos.",
+      "imageUrl": "https://example.com/pan-frances.jpg",
+      "detailedInfo": "Conocido como baguette, se elabora con harina, agua, sal y levadura, amasado y fermentado correctamente para obtener su textura característica.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "500g" },
+        { "name": "Agua", "quantity": "325ml" },
+        { "name": "Levadura fresca", "quantity": "15g" },
+        { "name": "Sal", "quantity": "10g" }
+      ],
+      "steps": [
+        { "step": "Mezclar harina, agua y levadura hasta formar una masa suave." },
+        { "step": "Dejar reposar 30 min (autólisis)." },
+        { "step": "Agregar sal y amasar 10 min." },
+        { "step": "Fermentar 1-2 horas hasta duplicar volumen." },
+        { "step": "Formar baguettes, hacer cortes superficiales y fermentar 30 min más." },
+        { "step": "Hornear a 230°C con vapor los primeros 10-15 min." }
+      ]
+    },
+    {
+      "id": 7,
+      "uid": "R-B_000007",
+      "name": "Hallulla",
+      "description": "Pan tradicional chileno, redondo y suave, ideal para acompañar comidas.",
+      "imageUrl": "https://example.com/hallulla.jpg",
+      "detailedInfo": "Su miga es esponjosa y se caracteriza por ser plana y redonda. Se puede comer sola o con pebre y mantequilla.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "500g" },
+        { "name": "Agua", "quantity": "250ml" },
+        { "name": "Levadura seca", "quantity": "7g" },
+        { "name": "Aceite", "quantity": "50ml" },
+        { "name": "Sal", "quantity": "10g" },
+        { "name": "Azúcar", "quantity": "10g" }
+      ],
+      "steps": [
+        { "step": "Disolver levadura y azúcar en agua tibia." },
+        { "step": "Mezclar con harina, aceite y sal hasta formar masa suave." },
+        { "step": "Amasar 10 min y dejar fermentar 1 hora." },
+        { "step": "Formar bollos redondos, aplastar ligeramente y dejar reposar 20-30 min." },
+        { "step": "Hornear a 200°C por 20-25 min hasta dorar." }
+      ]
+    },
+    {
+      "id": 8,
+      "uid": "R-B_000008",
+      "name": "Brioche de Chocolate",
+      "description": "Versión dulce del brioche con pepitas de chocolate.",
+      "imageUrl": "https://example.com/brioche-chocolate.jpg",
+      "detailedInfo": "Su miga es muy tierna y aromática, ideal para desayunos o meriendas, con toques de cacao o chocolate en trozos.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "500g" },
+        { "name": "Huevos", "quantity": "4" },
+        { "name": "Mantequilla", "quantity": "100g" },
+        { "name": "Levadura fresca", "quantity": "20g" },
+        { "name": "Azúcar", "quantity": "50g" },
+        { "name": "Sal", "quantity": "10g" },
+        { "name": "Chispas de chocolate", "quantity": "100g" }
+      ],
+      "steps": [
+        { "step": "Mezclar harina, azúcar y levadura disuelta en un poco de leche tibia." },
+        { "step": "Agregar huevos y amasar hasta obtener masa elástica." },
+        { "step": "Incorporar mantequilla y continuar amasando." },
+        { "step": "Añadir chocolate y mezclar suavemente." },
+        { "step": "Fermentar 1-2 horas hasta duplicar volumen." },
+        { "step": "Formar bollos o pan en molde y hornear a 180°C por 25-30 min." }
+      ]
+    },
+    {
+      "id": 9,
+      "uid": "R-B_000009",
+      "name": "Focaccia Italiana",
+      "description": "Pan plano italiano, aromatizado con aceite de oliva y hierbas.",
+      "imageUrl": "https://example.com/focaccia.jpg",
+      "detailedInfo": "Pan muy suave y esponjoso, se puede cubrir con romero, sal gruesa, aceitunas u otros ingredientes al gusto.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "500g" },
+        { "name": "Agua", "quantity": "300ml" },
+        { "name": "Levadura seca", "quantity": "7g" },
+        { "name": "Aceite de oliva", "quantity": "50ml" },
+        { "name": "Sal", "quantity": "10g" },
+        { "name": "Romero fresco", "quantity": "al gusto" }
+      ],
+      "steps": [
+        { "step": "Disolver levadura en agua tibia y mezclar con harina y aceite." },
+        { "step": "Amasar 10 min y dejar fermentar 1 hora." },
+        { "step": "Extender la masa en bandeja, presionando con dedos para formar hoyuelos." },
+        { "step": "Añadir aceite, sal y romero por encima." },
+        { "step": "Dejar reposar 20-30 min y hornear a 220°C por 20-25 min." }
+      ]
+    },
+    {
+      "id": 10,
+      "uid": "R-B_000010",
+      "name": "Bagel Clásico",
+      "description": "Pan redondo con agujero central, cocido y luego horneado.",
+      "imageUrl": "https://example.com/bagel.jpg",
+      "detailedInfo": "Típico pan de desayuno neoyorquino, denso y masticable, ideal para untar con queso crema o acompañar con salmón ahumado.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "500g" },
+        { "name": "Agua", "quantity": "250ml" },
+        { "name": "Levadura seca", "quantity": "7g" },
+        { "name": "Azúcar", "quantity": "25g" },
+        { "name": "Sal", "quantity": "10g" },
+        { "name": "Miel o maltosa", "quantity": "1 cucharada" }
+      ],
+      "steps": [
+        { "step": "Mezclar harina, levadura, azúcar, sal y agua hasta formar masa." },
+        { "step": "Amasar 10 min y fermentar 1 hora." },
+        { "step": "Formar bollos con agujero central y reposar 20 min." },
+        { "step": "Hervir cada bagel 1 min por lado en agua con miel." },
+        { "step": "Hornear a 200°C por 15-20 min hasta dorar." }
+      ]
+    },
+    {
+      "id": 11,
+      "uid": "R-B_000011",
+      "name": "Pan de Molde Integral",
+      "description": "Pan suave y nutritivo, perfecto para sándwiches.",
+      "imageUrl": "https://example.com/pan-molde-integral.jpg",
+      "detailedInfo": "El pan integral tiene un sabor más profundo y fibra adicional, ideal para desayunos saludables.",
+      "ingredients": [
+        { "name": "Harina integral", "quantity": "400g" },
+        { "name": "Harina de trigo", "quantity": "100g" },
+        { "name": "Agua", "quantity": "300ml" },
+        { "name": "Levadura seca", "quantity": "7g" },
+        { "name": "Azúcar", "quantity": "20g" },
+        { "name": "Sal", "quantity": "10g" },
+        { "name": "Aceite", "quantity": "30ml" }
+      ],
+      "steps": [
+        { "step": "Mezclar harinas, levadura, azúcar y agua hasta formar masa." },
+        { "step": "Agregar sal y aceite, amasar 10 min." },
+        { "step": "Fermentar 1 hora hasta duplicar volumen." },
+        { "step": "Formar pan en molde y dejar reposar 30 min." },
+        { "step": "Hornear a 180°C por 35-40 min." }
+      ]
+    },
+    {
+      "id": 12,
+      "uid": "R-B_000012",
+      "name": "Pan de Ajo",
+      "description": "Pan aromático con mantequilla y ajo, ideal como acompañamiento.",
+      "imageUrl": "https://example.com/pan-de-ajo.jpg",
+      "detailedInfo": "El pan de ajo combina una textura esponjosa con el sabor intenso del ajo y hierbas.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "500g" },
+        { "name": "Agua", "quantity": "300ml" },
+        { "name": "Levadura seca", "quantity": "7g" },
+        { "name": "Sal", "quantity": "10g" },
+        { "name": "Mantequilla", "quantity": "50g" },
+        { "name": "Ajo picado", "quantity": "2 dientes" },
+        { "name": "Perejil picado", "quantity": "al gusto" }
+      ],
+      "steps": [
+        { "step": "Preparar masa con harina, levadura, agua y sal." },
+        { "step": "Amasar 10 min y fermentar 1 hora." },
+        { "step": "Formar pan y colocar mezcla de mantequilla, ajo y perejil encima." },
+        { "step": "Hornear a 200°C por 25-30 min hasta dorar." }
+      ]
+    },
+    {
+      "id": 13,
+      "uid": "R-B_000013",
+      "name": "Croissant Clásico",
+      "description": "Pan francés hojaldrado, mantecoso y crujiente.",
+      "imageUrl": "https://example.com/croissant.jpg",
+      "detailedInfo": "El croissant requiere un laminado preciso de la masa con mantequilla para crear las capas características.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "500g" },
+        { "name": "Levadura fresca", "quantity": "20g" },
+        { "name": "Azúcar", "quantity": "50g" },
+        { "name": "Sal", "quantity": "10g" },
+        { "name": "Leche", "quantity": "250ml" },
+        { "name": "Mantequilla", "quantity": "250g" }
+      ],
+      "steps": [
+        { "step": "Preparar masa madre con harina, levadura, leche, azúcar y sal." },
+        { "step": "Dejar reposar 1 hora." },
+        { "step": "Laminado: incorporar mantequilla y plegar 3 veces con reposo en frío." },
+        { "step": "Cortar y formar croissants, fermentar 1-2 horas." },
+        { "step": "Hornear a 200°C por 15-20 min hasta dorar." }
+      ]
+    },
+    {
+      "id": 14,
+      "uid": "R-B_000014",
+      "name": "Pan Ciabatta",
+      "description": "Pan italiano alargado, con corteza crujiente y miga alveolada.",
+      "imageUrl": "https://example.com/ciabatta.jpg",
+      "detailedInfo": "La ciabatta se caracteriza por su hidratación alta, lo que genera una miga abierta y burbujeante.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "500g" },
+        { "name": "Agua", "quantity": "400ml" },
+        { "name": "Levadura seca", "quantity": "7g" },
+        { "name": "Aceite de oliva", "quantity": "30ml" },
+        { "name": "Sal", "quantity": "10g" }
+      ],
+      "steps": [
+        { "step": "Mezclar todos los ingredientes hasta obtener masa pegajosa." },
+        { "step": "Fermentar 1 hora, hacer pliegues y dejar 30 min más." },
+        { "step": "Formar panes alargados y dejar reposar 20 min." },
+        { "step": "Hornear a 220°C con vapor 20-25 min." }
+      ]
+    },
+    {
+      "id": 15,
+      "uid": "R-B_000015",
+      "name": "Pan de Centeno",
+      "description": "Pan oscuro, con sabor profundo y ligeramente ácido.",
+      "imageUrl": "https://example.com/pan-centeno.jpg",
+      "detailedInfo": "Ideal para sándwiches fuertes, combina harina de centeno con trigo y masa madre opcional.",
+      "ingredients": [
+        { "name": "Harina de centeno", "quantity": "300g" },
+        { "name": "Harina de trigo", "quantity": "200g" },
+        { "name": "Agua", "quantity": "350ml" },
+        { "name": "Levadura seca", "quantity": "7g" },
+        { "name": "Sal", "quantity": "10g" }
+      ],
+      "steps": [
+        { "step": "Mezclar harinas, agua y levadura hasta formar masa." },
+        { "step": "Amasar 10 min, fermentar 1 hora." },
+        { "step": "Formar pan y dejar reposar 30 min." },
+        { "step": "Hornear a 200°C por 30-35 min." }
+      ]
+    },
+    {
+      "id": 16,
+      "uid": "R-B_000016",
+      "name": "Pan de Molde Blanco",
+      "description": "Pan clásico, suave y esponjoso para sandwiches o tostadas.",
+      "imageUrl": "https://example.com/pan-molde-blanco.jpg",
+      "detailedInfo": "Perfecto para el desayuno, con miga uniforme y corteza ligera.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "500g" },
+        { "name": "Agua", "quantity": "300ml" },
+        { "name": "Levadura seca", "quantity": "7g" },
+        { "name": "Azúcar", "quantity": "20g" },
+        { "name": "Sal", "quantity": "10g" },
+        { "name": "Mantequilla", "quantity": "30g" }
+      ],
+      "steps": [
+        { "step": "Mezclar harina, levadura, azúcar y agua." },
+        { "step": "Agregar sal y mantequilla, amasar 10 min." },
+        { "step": "Fermentar 1 hora, formar pan y reposar 20 min." },
+        { "step": "Hornear a 180°C por 35 min." }
+      ]
+    },
+    {
+      "id": 17,
+      "uid": "R-B_000017",
+      "name": "Pan de Nuez y Pasas",
+      "description": "Pan dulce con trozos de nuez y pasas, ideal para acompañar té o café.",
+      "imageUrl": "https://example.com/pan-nuez-pasas.jpg",
+      "detailedInfo": "El pan combina masa enriquecida con mantequilla, azúcar y frutas secas.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "500g" },
+        { "name": "Agua", "quantity": "200ml" },
+        { "name": "Levadura fresca", "quantity": "20g" },
+        { "name": "Azúcar", "quantity": "50g" },
+        { "name": "Mantequilla", "quantity": "50g" },
+        { "name": "Nueces picadas", "quantity": "100g" },
+        { "name": "Pasas", "quantity": "100g" }
+      ],
+      "steps": [
+        { "step": "Preparar masa con harina, levadura, azúcar y agua." },
+        { "step": "Agregar mantequilla y amasar hasta incorporar." },
+        { "step": "Añadir nueces y pasas, mezclar suavemente." },
+        { "step": "Fermentar 1-2 horas, formar pan y hornear a 180°C por 30 min." }
+      ]
+    },
+    {
+      "id": 18,
+      "uid": "R-B_000018",
+      "name": "Pan de Leche",
+      "description": "Pan suave y ligeramente dulce, perfecto para niños y meriendas.",
+      "imageUrl": "https://example.com/pan-de-leche.jpg",
+      "detailedInfo": "Muy tierno, con miga fina y corteza ligera, se puede rellenar con mermelada o chocolate.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "500g" },
+        { "name": "Leche", "quantity": "250ml" },
+        { "name": "Levadura seca", "quantity": "7g" },
+        { "name": "Azúcar", "quantity": "50g" },
+        { "name": "Sal", "quantity": "10g" },
+        { "name": "Mantequilla", "quantity": "50g" }
+      ],
+      "steps": [
+        { "step": "Mezclar harina, levadura, azúcar y leche." },
+        { "step": "Agregar sal y mantequilla, amasar 10 min." },
+        { "step": "Fermentar 1 hora, formar pan y reposar 20 min." },
+        { "step": "Hornear a 180°C por 25-30 min." }
+      ]
+    },
+    {
+      "id": 19,
+      "uid": "R-B_000019",
+      "name": "Pan de Campo",
+      "description": "Pan rústico, con corteza crujiente y miga densa.",
+      "imageUrl": "https://example.com/pan-de-campo.jpg",
+      "detailedInfo": "Ideal para acompañar guisos o sopas, mezcla harinas blanca y integral para un sabor más profundo.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "300g" },
+        { "name": "Harina integral", "quantity": "200g" },
+        { "name": "Agua", "quantity": "300ml" },
+        { "name": "Levadura seca", "quantity": "7g" },
+        { "name": "Sal", "quantity": "10g" }
+      ],
+      "steps": [
+        { "step": "Mezclar harinas, agua y levadura hasta formar masa." },
+        { "step": "Amasar 10 min y fermentar 1 hora." },
+        { "step": "Formar pan, reposar 30 min y hornear a 220°C por 30 min." }
+      ]
+    },
+    {
+      "id": 20,
+      "uid": "R-B_000020",
+      "name": "Pan de Olivas",
+      "description": "Pan aromático con aceitunas, perfecto para picadas o aperitivos.",
+      "imageUrl": "https://example.com/pan-olivas.jpg",
+      "detailedInfo": "Ideal para acompañar quesos o embutidos, con masa suave y trozos de aceituna integrados.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "500g" },
+        { "name": "Agua", "quantity": "300ml" },
+        { "name": "Levadura seca", "quantity": "7g" },
+        { "name": "Aceitunas negras picadas", "quantity": "150g" },
+        { "name": "Aceite de oliva", "quantity": "30ml" },
+        { "name": "Sal", "quantity": "10g" }
+      ],
+      "steps": [
+        { "step": "Preparar masa con harina, agua, levadura y sal." },
+        { "step": "Amasar 10 min e incorporar aceitunas y aceite." },
+        { "step": "Fermentar 1 hora, formar pan y reposar 20 min." },
+        { "step": "Hornear a 200°C por 25-30 min." }
+      ]
+    },
+    {
+      "id": 21,
+      "uid": "R-B_000021",
+      "name": "Brioche Clásico",
+      "description": "Pan dulce francés, muy esponjoso y mantecoso.",
+      "imageUrl": "https://example.com/brioche.jpg",
+      "detailedInfo": "Masa enriquecida con mantequilla y huevos, ideal para desayunos o tostadas francesas.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "500g" },
+        { "name": "Huevos", "quantity": "4" },
+        { "name": "Levadura fresca", "quantity": "20g" },
+        { "name": "Azúcar", "quantity": "50g" },
+        { "name": "Mantequilla", "quantity": "200g" },
+        { "name": "Sal", "quantity": "10g" },
+        { "name": "Leche", "quantity": "100ml" }
+      ],
+      "steps": [
+        { "step": "Mezclar harina, levadura, azúcar, sal, huevos y leche." },
+        { "step": "Amasar y agregar mantequilla poco a poco, hasta masa suave." },
+        { "step": "Fermentar 1-2 horas hasta duplicar volumen." },
+        { "step": "Formar bollos o trenzas, reposar 1 hora." },
+        { "step": "Hornear a 180°C por 25-30 min." }
+      ]
+    },
+    {
+      "id": 22,
+      "uid": "R-B_000022",
+      "name": "Hallulla",
+      "description": "Pan chileno redondo y plano, ideal para acompañar comidas.",
+      "imageUrl": "https://example.com/hallulla.jpg",
+      "detailedInfo": "Su corteza es ligeramente crujiente y miga suave, perfecta para empanadas y sánguches.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "500g" },
+        { "name": "Agua", "quantity": "250ml" },
+        { "name": "Levadura fresca", "quantity": "15g" },
+        { "name": "Azúcar", "quantity": "10g" },
+        { "name": "Sal", "quantity": "10g" },
+        { "name": "Manteca", "quantity": "30g" }
+      ],
+      "steps": [
+        { "step": "Mezclar harina, levadura, azúcar y agua hasta formar masa." },
+        { "step": "Agregar manteca y sal, amasar 10 min." },
+        { "step": "Fermentar 1 hora." },
+        { "step": "Formar discos planos y reposar 20 min." },
+        { "step": "Hornear a 200°C por 20-25 min." }
+      ]
+    },
+    {
+      "id": 23,
+      "uid": "R-B_000023",
+      "name": "Pan Frances (Baguette)",
+      "description": "Pan largo y delgado, con corteza dorada y crujiente.",
+      "imageUrl": "https://example.com/baguette.jpg",
+      "detailedInfo": "La baguette clásica tiene miga ligera y alveolada, con corteza crujiente.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "500g" },
+        { "name": "Agua", "quantity": "350ml" },
+        { "name": "Levadura seca", "quantity": "7g" },
+        { "name": "Sal", "quantity": "10g" }
+      ],
+      "steps": [
+        { "step": "Mezclar harina, agua y levadura hasta formar masa." },
+        { "step": "Agregar sal y amasar 10 min." },
+        { "step": "Fermentar 1 hora, hacer pliegues y reposar 30 min." },
+        { "step": "Formar baguettes, reposar 20 min." },
+        { "step": "Hornear a 220°C con vapor 20-25 min." }
+      ]
+    },
+    {
+      "id": 24,
+      "uid": "R-B_000024",
+      "name": "Pan de Chocolate",
+      "description": "Pan dulce relleno de chocolate, perfecto para merienda.",
+      "imageUrl": "https://example.com/pan-chocolate.jpg",
+      "detailedInfo": "Masa enriquecida y esponjosa, con trozos o barras de chocolate en su interior.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "500g" },
+        { "name": "Agua", "quantity": "200ml" },
+        { "name": "Levadura fresca", "quantity": "20g" },
+        { "name": "Azúcar", "quantity": "50g" },
+        { "name": "Mantequilla", "quantity": "50g" },
+        { "name": "Chocolate negro", "quantity": "150g" },
+        { "name": "Sal", "quantity": "5g" }
+      ],
+      "steps": [
+        { "step": "Preparar masa con harina, levadura, azúcar y agua." },
+        { "step": "Agregar mantequilla y sal, amasar hasta integrar." },
+        { "step": "Fermentar 1 hora." },
+        { "step": "Formar bollos y rellenar con chocolate, reposar 30 min." },
+        { "step": "Hornear a 180°C por 20-25 min." }
+      ]
+    },
+    {
+      "id": 25,
+      "uid": "R-B_000025",
+      "name": "Pan de Queso",
+      "description": "Pan suave con trozos de queso, ideal para acompañar sopas.",
+      "imageUrl": "https://example.com/pan-queso.jpg",
+      "detailedInfo": "Masa esponjosa con queso rallado, se puede servir caliente o frío.",
+      "ingredients": [
+        { "name": "Harina de trigo", "quantity": "500g" },
+        { "name": "Agua", "quantity": "250ml" },
+        { "name": "Levadura seca", "quantity": "7g" },
+        { "name": "Sal", "quantity": "10g" },
+        { "name": "Mantequilla", "quantity": "50g" },
+        { "name": "Queso rallado", "quantity": "150g" }
+      ],
+      "steps": [
+        { "step": "Mezclar harina, levadura, sal y agua hasta formar masa." },
+        { "step": "Agregar mantequilla y amasar 10 min." },
+        { "step": "Fermentar 1 hora." },
+        { "step": "Incorporar el queso, formar bollos y reposar 20 min." },
+        { "step": "Hornear a 200°C por 20-25 min." }
+      ]
+    }
+  ]
+}

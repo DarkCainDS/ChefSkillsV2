@@ -1,0 +1,166 @@
+{
+    "techniques": [
+      {
+        "id": 1,
+        "name": "Batido",
+        "description": "Incorporación de aire para obtener mezclas ligeras.",
+        "imageUrl": "https://example.com/batido.jpg",
+        "detailedInfo": "Esta técnica consiste en batir ingredientes, como huevos y azúcar, para incorporar aire y dar una textura esponjosa. Es esencial en la preparación de bizcochos, mousses y merengues. Dependiendo de la intensidad del batido y el tiempo, se puede obtener una textura más o menos aireada."
+      },
+      {
+        "id": 2,
+        "name": "Crema Batida",
+        "description": "Batido de crema para lograr una textura suave y aireada.",
+        "imageUrl": "https://example.com/crema-batida.jpg",
+        "detailedInfo": "La crema batida o nata montada se logra al batir crema de leche con un mínimo de 30% de grasa, hasta que se formen picos. Es importante no sobrebatir para evitar que se convierta en mantequilla. Esta técnica se utiliza en postres como tartas, helados y decoraciones."
+      },
+      {
+        "id": 3,
+        "name": "Templado de Chocolate",
+        "description": "Control de temperatura para dar brillo y firmeza al chocolate.",
+        "imageUrl": "https://example.com/templado.jpg",
+        "detailedInfo": "El templado de chocolate es un proceso de calentado y enfriado para controlar la cristalización de la manteca de cacao, proporcionando una textura brillante y crujiente. Las temperaturas varían según el tipo de chocolate:\n- **Chocolate oscuro:** calentar a 50°C, enfriar a 27°C y recalentar a 31-32°C.\n- **Chocolate con leche:** calentar a 45°C, enfriar a 26°C y recalentar a 29-30°C.\n- **Chocolate blanco:** calentar a 40°C, enfriar a 25°C y recalentar a 28-29°C.\nEste proceso es crucial para elaborar bombones, coberturas y decoraciones."
+      },
+      {
+        "id": 4,
+        "name": "Hojaldrado",
+        "description": "Creación de capas en masa mediante plegado con mantequilla.",
+        "imageUrl": "https://example.com/hojaldrado.jpg",
+        "detailedInfo": "El hojaldrado se logra al plegar masa y mantequilla para formar capas que se expanden al hornearse. Esta técnica requiere varias rondas de estirado y plegado para crear cientos de capas. Es esencial en la elaboración de croissants, milhojas y otros pasteles."
+      },
+      {
+        "id": 5,
+        "name": "Punto de Almíbar y Caramelo",
+        "description": "Diversos puntos de cocción del azúcar.",
+        "imageUrl": "https://example.com/almíbar.jpg",
+        "detailedInfo": "Los puntos de almíbar se utilizan para diferentes preparaciones. Estos son:\n- **Hilo Fino (105°C):** azúcar disuelta para jarabes ligeros.\n- **Hilo Grueso (108°C):** para merengues y glaseados suaves.\n- **Bola Blanda (112-115°C):** usada en caramelos blandos y fondant.\n- **Bola Firme (120-125°C):** para caramelos y fondant más consistentes.\n- **Caramelo Claro (160°C):** ligeramente dorado, ideal para decoraciones.\n- **Caramelo Oscuro (180°C):** color ámbar intenso, usado para caramelo líquido o salsas con un sabor más profundo.\nControlar la temperatura es fundamental para evitar que se queme o cristalice."
+      },
+      {
+        "id": 6,
+        "name": "Gelificación y Esferificación",
+        "description": "Transformación de líquidos en sólidos mediante gelatina y agar-agar.",
+        "imageUrl": "https://example.com/gelificacion.jpg",
+        "detailedInfo": "La gelificación usa agentes como gelatina o agar-agar para solidificar líquidos, creando texturas firmes pero suaves. En esferificación, se mezclan alginato de sodio con el líquido deseado y calcio en el baño, formando esferas con una textura de gel. Este proceso se utiliza en platos vanguardistas para crear 'caviar' de frutas, salsas, entre otros."
+      },
+      {
+        "id": 7,
+        "name": "Glaseado o Frosting",
+        "description": "Cubrir postres con mezclas de azúcar y mantequilla.",
+        "imageUrl": "https://example.com/glaseado.jpg",
+        "detailedInfo": "El glaseado es una mezcla de azúcar, mantequilla y, en algunos casos, crema o leche. Se aplica en la superficie de pasteles para darle un acabado brillante y sabor. Variedades incluyen glaseado de mantequilla, fondant y glaseado real."
+      },
+      {
+        "id": 8,
+        "name": "Montado de Claras (Merengue)",
+        "description": "Batido de claras para obtener diferentes tipos de merengue.",
+        "imageUrl": "https://example.com/merengue.jpg",
+        "detailedInfo": "Existen tres tipos principales de merengue:\n- **Francés:** claras de huevo batidas con azúcar. Ideal para hornear o como base en postres.\n- **Italiano:** almíbar caliente vertido sobre las claras montadas, creando un merengue estable y brillante, común en coberturas de tartas.\n- **Suizo:** claras batidas a baño maría con azúcar, usado en decoraciones de pasteles y como base de buttercream. Es el más firme de los tres y menos propenso a desmoronarse."
+      },
+      {
+        "id": 9,
+        "name": "Caramelizado",
+        "description": "Cocción del azúcar hasta su punto de caramelo.",
+        "imageUrl": "https://example.com/caramelizado.jpg",
+        "detailedInfo": "El proceso de caramelización implica calentar azúcar hasta que se derrite y adquiere un color dorado o ámbar oscuro. Usado en salsas, postres y decoraciones, el caramelo oscuro aporta un sabor amargo-sutil, mientras que el caramelo claro es más dulce y delicado."
+      },
+      {
+        "id": 10,
+        "name": "Fondant",
+        "description": "Masa flexible de azúcar utilizada en decoraciones.",
+        "imageUrl": "https://example.com/fondant.jpg",
+        "detailedInfo": "El fondant es una pasta a base de azúcar con textura suave y flexible. Se utiliza para recubrir pasteles y crear figuras decorativas, proporcionando un acabado limpio y brillante."
+      },
+      {
+        "id": 11,
+        "name": "Ganache",
+        "description": "Mezcla de chocolate y crema para rellenos o coberturas.",
+        "imageUrl": "https://example.com/ganache.jpg",
+        "detailedInfo": "El ganache es una mezcla de chocolate y crema caliente que, dependiendo de las proporciones, puede usarse como relleno, cobertura o salsa. También se puede batir una vez enfriado para obtener una textura más esponjosa."
+      }
+    ]
+  }
+  //V2
+  /*
+  {
+  "techniques": [
+    {
+      "id": 1,
+      "name": "Batido",
+      "description": "Incorporación de aire para obtener mezclas ligeras.",
+      "imageUrl": "https://example.com/batido.jpg",
+      "detailedInfo": "**Qué es:**\nEl batido consiste en incorporar aire a una mezcla mediante el movimiento continuo de un batidor o batidora. Esto otorga ligereza y volumen, siendo esencial para preparaciones como bizcochos, merengues o mousses.\n\n**Herramientas:**\nBatidor de globo, batidora eléctrica o manual.\n\n**Consejos:**\n- Batir a velocidad media para obtener una textura uniforme.\n- La mezcla debe verse pálida, espumosa y aumentar su volumen.\n- Si se sobrebate, puede perder aire y volverse líquida.\n\n**Usos comunes:**\nBizcochos, mousses, cremas aireadas y salsas emulsionadas."
+    },
+    {
+      "id": 2,
+      "name": "Crema Batida",
+      "description": "Batido de crema para lograr una textura suave y aireada.",
+      "imageUrl": "https://example.com/crema-batida.jpg",
+      "detailedInfo": "**Qué es:**\nLa crema batida se obtiene al incorporar aire en crema de leche con al menos 30% de grasa. El resultado es una textura ligera, firme y estable.\n\n**Temperatura:**\nDebe estar bien fría (entre 4°C y 6°C) para lograr un montado adecuado.\n\n**Proporciones:**\n100 ml de crema rinde aproximadamente 200 ml batida.\n\n**Consejos:**\n- No sobrebatir, ya que puede transformarse en mantequilla.\n- Para estabilizarla, se puede añadir azúcar glas o una pequeña cantidad de gelatina sin sabor.\n\n**Usos comunes:**\nDecoraciones, rellenos de tartas, helados, postres y mousses."
+    },
+    {
+      "id": 3,
+      "name": "Templado de Chocolate",
+      "description": "Control de temperatura para dar brillo y firmeza al chocolate.",
+      "imageUrl": "https://example.com/templado.jpg",
+      "detailedInfo": "**Qué es:**\nEl templado de chocolate es un proceso de control térmico que permite cristalizar correctamente la manteca de cacao, otorgando brillo, textura crujiente y estabilidad.\n\n**Temperaturas según tipo:**\n- Chocolate oscuro: Calentar a 50°C, enfriar a 27°C y recalentar a 31–32°C.\n- Chocolate con leche: Calentar a 45°C, enfriar a 26°C y recalentar a 29–30°C.\n- Chocolate blanco: Calentar a 40°C, enfriar a 25°C y recalentar a 28–29°C.\n\n**Prueba visual:**\nSumergir una espátula: debe endurecer y brillar en menos de 2 minutos.\n\n**Métodos:**\nTablage, siembra o microondas.\n\n**Usos comunes:**\nBombones, coberturas, decoraciones y tabletas."
+    },
+    {
+      "id": 4,
+      "name": "Hojaldrado",
+      "description": "Creación de capas en masa mediante plegado con mantequilla.",
+      "imageUrl": "https://example.com/hojaldrado.jpg",
+      "detailedInfo": "**Qué es:**\nEl hojaldrado consiste en alternar capas de masa y mantequilla, que al hornearse se separan gracias al vapor, generando una textura crujiente y laminada.\n\n**Proporciones:**\nRelación masa/mantequilla de 2:1 o 1:1 según la receta.\n\n**Proceso:**\nRequiere entre 4 y 6 pliegues simples para obtener más de 200 capas.\n\n**Temperatura de horneado:**\nEntre 180°C y 200°C.\n\n**Usos comunes:**\nCroissants, milhojas, palmeras, empanadas hojaldradas."
+    },
+    {
+      "id": 5,
+      "name": "Punto de Almíbar y Caramelo",
+      "description": "Diversos puntos de cocción del azúcar.",
+      "imageUrl": "https://example.com/almíbar.jpg",
+      "detailedInfo": "**Qué es:**\nLos puntos de almíbar y caramelo indican el estado del azúcar durante la cocción, determinando su textura y uso en repostería.\n\n**Proporción base:**\nAzúcar y agua en relación 2:1.\n\n**Puntos principales:**\n- Hilo Fino (105°C): Jarabes ligeros.\n- Hilo Grueso (108°C): Merengues suaves y glaseados.\n- Bola Blanda (112–115°C): Fondant y caramelos blandos.\n- Bola Firme (120–125°C): Caramelos más consistentes.\n- Caramelo Claro (160°C): Decoraciones.\n- Caramelo Oscuro (180°C): Salsas o caramelo líquido.\n\n**Consejos:**\nUsar termómetro o prueba del hilo entre los dedos.\nEvitar mover la mezcla una vez disuelta para prevenir cristalización."
+    },
+    {
+      "id": 6,
+      "name": "Gelificación y Esferificación",
+      "description": "Transformación de líquidos en sólidos mediante gelificantes.",
+      "imageUrl": "https://example.com/gelificacion.jpg",
+      "detailedInfo": "**Qué es:**\nLa gelificación transforma líquidos en sólidos suaves usando agentes como gelatina o agar-agar. La esferificación crea pequeñas esferas con una fina capa de gel que retiene el líquido interior.\n\n**Proporciones:**\n- Gelatina: 10 g por 500 ml de líquido.\n- Agar-agar: 2 g por 250 ml (activar a 85°C y enfriar para gelificar).\n- Esferificación: 0.5–1% de alginato de sodio en el líquido + 0.5–1% de cloruro de calcio en el baño.\n\n**Tipos de esferificación:**\n- Directa: El líquido se mezcla con alginato.\n- Inversa: El calcio está en el líquido y el baño contiene alginato.\n\n**Usos comunes:**\nCocina molecular, cócteles, salsas, postres creativos.\n\n**Consejos:**\nEvitar ácidos fuertes en la mezcla con alginato (pueden inhibir el gel)."
+    },
+    {
+      "id": 7,
+      "name": "Glaseado o Frosting",
+      "description": "Cubrir postres con mezclas de azúcar y mantequilla.",
+      "imageUrl": "https://example.com/glaseado.jpg",
+      "detailedInfo": "**Qué es:**\nEl glaseado o frosting se utiliza para recubrir y decorar pasteles. Se prepara mezclando azúcar, mantequilla y líquidos como leche o crema.\n\n**Proporciones base:**\n2 partes de azúcar impalpable por 1 de mantequilla.\n\n**Tipos de glaseado:**\n- De mantequilla.\n- De queso crema.\n- Fondant o glaseado real.\n- Mirror glaze (brillante).\n\n**Consejos:**\nAplicar sobre el postre frío para evitar que se derrita.\n\n**Usos comunes:**\nTartas, cupcakes, galletas decoradas y tortas de celebración."
+    },
+    {
+      "id": 8,
+      "name": "Montado de Claras (Merengue)",
+      "description": "Batido de claras para obtener diferentes tipos de merengue.",
+      "imageUrl": "https://example.com/merengue.jpg",
+      "detailedInfo": "**Qué es:**\nEl montado de claras crea una estructura aireada y brillante al incorporar aire en las proteínas del huevo. Según el método, varía su estabilidad y textura.\n\n**Tipos principales:**\n- Francés: Claras batidas con azúcar (1:1). Ligero y aireado.\n- Suizo: Claras y azúcar calentadas a 60–65°C a baño maría (2:1). Firme y brillante.\n- Italiano: Almíbar caliente vertido sobre las claras montadas. Muy estable y cremoso.\n\n**Consejos:**\nLas claras deben estar limpias y sin restos de grasa.\n\n**Usos comunes:**\nMerengues secos, buttercream, coberturas de tartas, mousses y suflés."
+    },
+    {
+      "id": 9,
+      "name": "Caramelizado",
+      "description": "Cocción del azúcar hasta su punto de caramelo.",
+      "imageUrl": "https://example.com/caramelizado.jpg",
+      "detailedInfo": "**Qué es:**\nEl caramelizado es la transformación del azúcar en un jarabe espeso y dorado mediante el calor, desarrollando sabores complejos y aroma tostado.\n\n**Métodos:**\n- Seco: Solo azúcar en el recipiente.\n- Húmedo: Azúcar disuelta con poca agua.\n\n**Temperatura:**\nEntre 160°C y 180°C.\n\n**Consejos:**\nNo revolver una vez que el azúcar se funde; mover el recipiente suavemente.\n\n**Usos comunes:**\nSalsas de caramelo, decoraciones, flanes y postres caramelizados."
+    },
+    {
+      "id": 10,
+      "name": "Fondant",
+      "description": "Masa flexible de azúcar utilizada en decoraciones.",
+      "imageUrl": "https://example.com/fondant.jpg",
+      "detailedInfo": "**Qué es:**\nEl fondant es una masa dulce y elástica elaborada con azúcar glas, glucosa, gelatina y agua. Se usa para cubrir tortas o modelar figuras decorativas.\n\n**Tipos de fondant:**\n- Extendido: Flexible y moldeable.\n- Líquido: Usado para glasear o bañar pasteles.\n\n**Temperatura ideal de trabajo:**\n20°C a 24°C.\n\n**Consejos:**\nEvitar humedad excesiva, ya que vuelve el fondant pegajoso.\n\n**Usos comunes:**\nCobertura de tortas, modelado de figuras, flores y decoraciones detalladas."
+    },
+    {
+      "id": 11,
+      "name": "Ganache",
+      "description": "Mezcla de chocolate y crema para rellenos o coberturas.",
+      "imageUrl": "https://example.com/ganache.jpg",
+      "detailedInfo": "**Qué es:**\nEl ganache es una mezcla suave y brillante elaborada con chocolate y crema caliente. Su textura varía según las proporciones y el uso deseado.\n\n**Proporciones:**\n- 1:1 (chocolate:crema) para coberturas.\n- 2:1 para rellenos firmes.\n- 1:2 para salsas.\n\n**Temperatura:**\nLa crema debe estar a unos 80°C al verter sobre el chocolate picado.\n\n**Variantes:**\nPuede incluir mantequilla, licores o infusiones.\n\n**Usos comunes:**\nCoberturas, rellenos, trufas, glaseados y mousses."
+    }
+  ]
+}
+
+  */
