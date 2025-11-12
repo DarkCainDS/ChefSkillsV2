@@ -1,0 +1,145 @@
+import React, { useMemo } from 'react';
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image } from 'expo-image';
+import techniquesData from '../../assets/Json/Techniques.json';
+
+// Tipado automático desde el JSON (más defensivo)
+type TechniquesArray = NonNullable<typeof techniquesData.techniques>;
+export type Technique = NonNullable<TechniquesArray[number]>;
+
+interface TechniqueListProps {
+  onPressTechnique: (item: Technique) => void;
+}
+
+// Barajar array de forma segura
+const shuffleArray = <T,>(array: T[] | undefined | null): T[] => {
+  if (!Array.isArray(array)) return [];
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+};
+
+const placeholders = [
+  require('../../assets/404/placeholder1.webp'),
+  require('../../assets/404/placeholder2.webp'),
+  require('../../assets/404/placeholder3.webp'),
+];
+
+const TechniqueList: React.FC<TechniqueListProps> = ({ onPressTechnique }) => {
+  // Validar que los datos existan y sean un array
+  const validData = Array.isArray(techniquesData?.techniques)
+    ? techniquesData.techniques
+    : [];
+
+  // Mezclar solo si hay datos
+  const shuffledTechniques = useMemo(() => shuffleArray(validData), [validData]);
+
+  const getRandomPlaceholder = () =>
+    placeholders[Math.floor(Math.random() * placeholders.length)];
+
+  const renderTechnique = ({ item }: { item: Technique }) => {
+    if (!item || !item.name || !item.description) return null;
+
+    const imageUri = Array.isArray(item.imageUrls) && item.imageUrls[0];
+    const imageSource = imageUri ? { uri: imageUri } : getRandomPlaceholder();
+
+    return (
+      <TouchableOpacity
+        style={styles.card}
+        onPress={() => {
+          try {
+            onPressTechnique(item);
+          } catch (err) {
+            console.warn('Error al presionar técnica:', err);
+          }
+        }}
+        activeOpacity={0.8}
+      >
+        <Image
+          source={imageSource}
+          style={styles.image}
+          transition={300}
+          contentFit="contain"
+          cachePolicy="memory-disk"
+        />
+
+        <View style={styles.info}>
+          <Text numberOfLines={1} style={styles.title}>
+            {item.name || 'Técnica desconocida'}
+          </Text>
+          <Text numberOfLines={2} style={styles.description}>
+            {item.description || 'Sin descripción disponible.'}
+          </Text>
+        </View>
+      </TouchableOpacity>
+    );
+  };
+
+  if (!shuffledTechniques.length) {
+    return (
+      <View style={styles.emptyContainer}>
+        <Text style={styles.emptyText}>
+          No hay técnicas disponibles en este momento.
+        </Text>
+      </View>
+    );
+  }
+
+  return (
+    <FlatList
+      data={shuffledTechniques}
+      keyExtractor={(item, index) => item?.id?.toString() ?? `tech-${index}`}
+      renderItem={renderTechnique}
+      showsVerticalScrollIndicator={false}
+      removeClippedSubviews
+      initialNumToRender={10}
+    />
+  );
+};
+
+const styles = StyleSheet.create({
+  card: {
+    flexDirection: 'row',
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    padding: 10,
+    marginVertical: 8,
+    marginHorizontal: 15,
+    elevation: 5,
+  },
+  image: {
+    width: 80,
+    height: 80,
+    borderRadius: 10,
+    marginRight: 15,
+  },
+  info: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#111',
+  },
+  description: {
+    fontSize: 14,
+    color: '#333',
+    marginTop: 4,
+  },
+  emptyContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 30,
+  },
+  emptyText: {
+    fontSize: 16,
+    color: '#777',
+    textAlign: 'center',
+  },
+});
+
+export default TechniqueList;

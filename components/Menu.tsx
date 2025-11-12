@@ -1,301 +1,444 @@
-// components/Menu.tsx
-import { MaterialIcons } from '@expo/vector-icons';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { GoogleSignin } from '@react-native-google-signin/google-signin';
-import { CommonActions } from '@react-navigation/native';
-import { StackScreenProps } from '@react-navigation/stack';
-import { LinearGradient } from 'expo-linear-gradient';
-import { getAuth, signOut } from 'firebase/auth';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useMemo } from "react";
 import {
   Animated,
-  Dimensions,
   Easing,
   Image,
   Modal,
   StyleSheet,
   Text,
   TouchableOpacity,
-  View
-} from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
-import { app } from '../services/firebaseConfig';
-import { AppDispatch, RootState } from '../store/Index';
-import { clearUser } from '../store/Slices/userSlice';
+  View,
+  Dimensions,
+} from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import { MaterialIcons } from "@expo/vector-icons";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { GoogleSignin } from "@react-native-google-signin/google-signin";
+import { CommonActions } from "@react-navigation/native";
+import { getAuth, signOut } from "firebase/auth";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useSelector, useDispatch } from "react-redux";
+import { app } from "../services/firebaseConfig";
+import { AppDispatch, RootState } from "../store/Index";
+import { clearUser } from "../store/Slices/userSlice";
 
-const { height, width } = Dimensions.get('window');
+const { width, height } = Dimensions.get("window");
 
-export type RootStackParamList = {
-  Loading: undefined;
-  ChefSkills: undefined;
-  Menu: undefined;
-};
-
-type MenuProps = StackScreenProps<RootStackParamList, 'Menu'>;
-
-const logoutImages = [
-  require('../assets/Logout/1.webp'),
-  require('../assets/Logout/2.webp'),
-  require('../assets/Logout/3.webp'),
-  require('../assets/Logout/4.webp'),
-];
-
-const FloatingBubble = ({ style, duration = 4000, distance = 15 }: any) => {
-  const animY = useRef(new Animated.Value(0)).current;
+/* 🌋 Fondo lava cinematográfico con degradado negro arriba */
+const LavaBackground = () => {
+  const glowAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
     Animated.loop(
       Animated.sequence([
-        Animated.timing(animY, {
-          toValue: -distance,
-          duration,
-          easing: Easing.inOut(Easing.sin),
-          useNativeDriver: true,
-        }),
-        Animated.timing(animY, {
-          toValue: 0,
-          duration,
-          easing: Easing.inOut(Easing.sin),
-          useNativeDriver: true,
-        }),
+        Animated.timing(glowAnim, { toValue: 1, duration: 4000, easing: Easing.inOut(Easing.sin), useNativeDriver: false }),
+        Animated.timing(glowAnim, { toValue: 0, duration: 4000, easing: Easing.inOut(Easing.sin), useNativeDriver: false }),
       ])
     ).start();
-  }, [animY]);
+  }, []);
 
-  return <Animated.View style={[style, { transform: [{ translateY: animY }] }]} />;
+  const intensity = glowAnim.interpolate({ inputRange: [0, 1], outputRange: [0.3, 0.8] });
+
+  const sparks = useMemo(() => Array.from({ length: 14 }).map((_, i) => ({
+    key: `spark-${i}`,
+    left: Math.random() * width,
+    delay: i * 250,
+  })), []);
+
+  const ashes = useMemo(() => Array.from({ length: 6 }).map((_, i) => ({
+    key: `ash-${i}`,
+    left: Math.random() * width,
+    delay: i * 400,
+  })), []);
+
+  return (
+    <View style={StyleSheet.absoluteFill}>
+      {/* 🎨 Degradado principal con negro arriba */}
+<LinearGradient
+  colors={[
+    "#000000", // negro puro (arriba izquierda)
+    "#1a0000", // transición oscura
+    "#330000", // rojo oscuro
+    "#601000", // rojo intenso
+    "#ff3d00", // lava brillante (abajo derecha)
+  ]}
+  locations={[0, 0.25, 0.5, 0.75, 1]}
+  start={{ x: 0, y: 0 }}
+  end={{ x: 1, y: 1 }}
+  style={StyleSheet.absoluteFill}
+/>
+
+
+      {/* 🔥 Luz interna dinámica */}
+      <Animated.View style={[StyleSheet.absoluteFill, { opacity: intensity }]}>
+        <LinearGradient
+          colors={["rgba(255,100,0,0.2)", "rgba(255,50,0,0.15)", "rgba(255,0,0,0.1)"]}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          style={StyleSheet.absoluteFill}
+        />
+      </Animated.View>
+
+      {/* ✨ Partículas */}
+      {sparks.map(({ key, left, delay }) => (
+        <Spark key={key} left={left} delay={delay} />
+      ))}
+      {ashes.map(({ key, left, delay }) => (
+        <Ash key={key} left={left} delay={delay} />
+      ))}
+
+      {/* 🌑 Vignette superior (oscurece el borde de arriba) */}
+      <LinearGradient
+        colors={["rgba(0,0,0,0.8)", "transparent"]}
+        start={{ x: 0.5, y: 0 }}
+        end={{ x: 0.5, y: 0.6 }}
+        style={StyleSheet.absoluteFill}
+      />
+    </View>
+  );
 };
 
-const NeonMockTimer = () => {
-  const user = useSelector((state: RootState) => state.user) || {};
+/* ✨ Chispas ascendentes */
+const Spark = ({ left, delay }: { left: number; delay: number }) => {
+  const anim = useRef(new Animated.Value(0)).current;
+  const colors = ["#ff9100", "#ffc107", "#ff3d00"];
+  const color = colors[Math.floor(Math.random() * colors.length)];
+  const size = 2 + Math.random() * 3;
 
-  if (user.isPremium) {
-    const mockTime = { days: 3, hours: 5, minutes: 27 };
-    return (
-      <View style={styles.timerContainer}>
-        <Text style={styles.timerLabel}>Suscripción activa</Text>
-        <View style={styles.mockTimerBox}>
-          <Text style={styles.mockTimerText}>
-            {`${mockTime.days}d : ${mockTime.hours}h : ${mockTime.minutes}m`}
-          </Text>
-        </View>
-      </View>
-    );
-  } else {
-    return (
-      <View style={styles.timerContainer}>
-        <Text style={styles.timerLabel}>No suscrito</Text>
-        <View style={[styles.mockTimerBox, { backgroundColor: '#33000055' }]}>
-          <Text style={[styles.mockTimerText, { color: '#e63946' }]}>
-            Suscríbete y activa beneficios
-          </Text>
-        </View>
-      </View>
-    );
-  }
+  useEffect(() => {
+    Animated.loop(
+      Animated.sequence([
+        Animated.timing(anim, {
+          toValue: 1,
+          duration: 7000 + Math.random() * 4000,
+          delay,
+          easing: Easing.out(Easing.quad),
+          useNativeDriver: true,
+        }),
+        Animated.timing(anim, { toValue: 0, duration: 0, useNativeDriver: true }),
+      ])
+    ).start();
+  }, []);
+
+  const translateY = anim.interpolate({ inputRange: [0, 1], outputRange: [height + 60, -200] });
+  const opacity = anim.interpolate({ inputRange: [0, 0.2, 0.8, 1], outputRange: [0, 1, 0.9, 0] });
+
+  return (
+    <Animated.View
+      style={{
+        position: "absolute",
+        left,
+        bottom: 0,
+        width: size,
+        height: size,
+        borderRadius: size / 2,
+        backgroundColor: color,
+        shadowColor: color,
+        shadowOpacity: 1,
+        shadowRadius: 10,
+        opacity,
+        transform: [{ translateY }],
+      }}
+    />
+  );
 };
 
-const Menu: React.FC<MenuProps> = ({ navigation }) => {
-  const [logoutImage, setLogoutImage] = useState(logoutImages[0]);
+/* 🌫 Cenizas descendentes */
+const Ash = ({ left, delay }: { left: number; delay: number }) => {
+  const anim = useRef(new Animated.Value(0)).current;
+  const size = 1.5 + Math.random() * 2;
+
+  useEffect(() => {
+    Animated.loop(
+      Animated.sequence([
+        Animated.timing(anim, {
+          toValue: 1,
+          duration: 10000 + Math.random() * 5000,
+          delay,
+          easing: Easing.linear,
+          useNativeDriver: true,
+        }),
+        Animated.timing(anim, { toValue: 0, duration: 0, useNativeDriver: true }),
+      ])
+    ).start();
+  }, []);
+
+  const translateY = anim.interpolate({ inputRange: [0, 1], outputRange: [-150, height + 100] });
+  const opacity = anim.interpolate({ inputRange: [0, 0.3, 0.8, 1], outputRange: [0, 0.3, 0.5, 0] });
+
+  return (
+    <Animated.View
+      style={{
+        position: "absolute",
+        left,
+        top: 0,
+        width: size,
+        height: size,
+        borderRadius: size / 2,
+        backgroundColor: "#888",
+        opacity,
+        transform: [{ translateY }],
+      }}
+    />
+  );
+};
+
+/* ⏳ Timer translúcido */
+const SubscriptionTimer = () => {
+  const [remaining, setRemaining] = useState<any>(null);
+  const [planName, setPlanName] = useState<string | null>(null);
+
+  useEffect(() => {
+    const load = async () => {
+      const data = await AsyncStorage.getItem("subscriptionData");
+      if (!data) return;
+      const sub = JSON.parse(data);
+      setPlanName(sub.planName);
+      if (!sub.expiresAt) return;
+      const update = () => {
+        const expiresAt = new Date(sub.expiresAt).getTime();
+        const diff = expiresAt - Date.now();
+        if (diff <= 0) return setRemaining(null);
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        setRemaining({ days, hours, minutes, seconds });
+      };
+      update();
+      const interval = setInterval(update, 1000);
+      return () => clearInterval(interval);
+    };
+    load();
+  }, []);
+
+  if (!remaining)
+    return (
+      <View style={styles.timerCard}>
+        <Text style={[styles.timerLabel, { color: "#ff784e" }]}>No suscrito</Text>
+        <Text style={styles.timerSub}>Activa ChefSkills+ y desbloquea beneficios</Text>
+      </View>
+    );
+
+  return (
+    <LinearGradient
+      colors={["rgba(255, 90, 0, 0.25)", "rgba(255, 50, 0, 0.1)"]}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+      style={styles.timerCard}
+    >
+      <Text style={styles.timerLabel}>🔥 {planName} activo</Text>
+      <Text style={styles.timerSub}>
+        Restan {remaining.days}d {remaining.hours}h {remaining.minutes}m {remaining.seconds}s
+      </Text>
+    </LinearGradient>
+  );
+};
+
+const Menu_LavaElite_ParticlesV4 = ({ navigation }) => {
+  const [logoutImage, setLogoutImage] = useState(require("../assets/Logout/1.webp"));
   const [showDialog, setShowDialog] = useState(false);
   const [loadingLogout, setLoadingLogout] = useState(false);
+  const user = useSelector((state: RootState) => state.user);
   const dispatch = useDispatch<AppDispatch>();
-  const user = useSelector((state: RootState) => state.user) || {};
   const auth = getAuth(app);
 
   useEffect(() => {
-    const randomIndex = Math.floor(Math.random() * logoutImages.length);
-    setLogoutImage(logoutImages[randomIndex]);
+    const imgs = [
+      require("../assets/Logout/1.webp"),
+      require("../assets/Logout/2.webp"),
+      require("../assets/Logout/3.webp"),
+      require("../assets/Logout/4.webp"),
+    ];
+    setLogoutImage(imgs[Math.floor(Math.random() * imgs.length)]);
   }, []);
 
-  const handleLogoutConfirm = async () => {
-    setLoadingLogout(true);
+  const handleLogout = async () => {
     setShowDialog(false);
-
+    setLoadingLogout(true);
     try {
-      // 🔹 Firebase logout
-      if (auth.currentUser) {
-        try {
-          await signOut(auth);
-        } catch (e) {
-          console.warn('[Logout] Error cerrando sesión en Firebase:', e);
-        }
-      }
-
-      // 🔹 Google logout
-      try {
-        const currentUser = await GoogleSignin.getCurrentUser();
-        if (currentUser) {
-          await GoogleSignin.revokeAccess();
-          await GoogleSignin.signOut();
-        }
-      } catch (e) {
-        console.warn('[Logout] Error cerrando sesión en Google:', e);
-      }
-
-      // 🔹 Limpieza de Redux
+      await signOut(auth);
+      await GoogleSignin.signOut();
       dispatch(clearUser());
-
-      // 🔹 Limpieza de AsyncStorage (solo el usuario)
-      try {
-        await AsyncStorage.removeItem('user');
-      } catch (e) {
-        console.warn('[Logout] Error limpiando AsyncStorage:', e);
-      }
-
-      // 🔹 Reset de navegación a LoadingScreen seguro
-      navigation.dispatch(
-        CommonActions.reset({
-          index: 0,
-          routes: [{ name: 'Loading' }],
-        })
-      );
-
-    } catch (error) {
-      console.error('[Logout] Error general:', error);
+      await AsyncStorage.clear();
+      navigation.dispatch(CommonActions.reset({ index: 0, routes: [{ name: "Loading" }] }));
+    } catch (e) {
+      console.error("[Logout] Error:", e);
     } finally {
       setLoadingLogout(false);
     }
   };
 
   return (
-    <LinearGradient colors={['#0f0c29', '#302b63']} style={styles.menuContainer}>
-      {/* Avatar */}
-      <View style={styles.avatarContainer}>
-        <View style={styles.avatarGlow}>
-          <Image
-            source={
-              user?.photo
-                ? { uri: user.photo }
-                : require('../assets/usedImages/Unkown.png')
-            }
-            style={styles.avatarImage}
-          />
-          <LinearGradient
-            colors={['#39ff14', '#0ff']}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 1 }}
-            style={styles.subscriptionBadge}
-          >
-            <Text style={styles.subscriptionText}>
-              {user?.isPremium ? 'Premium' : 'Free'}
+    <View style={{ flex: 1 }}>
+      <LavaBackground />
+
+      <SafeAreaView style={styles.container}>
+        <View style={styles.header}>
+          {/* 🌟 Avatar con aura */}
+          <View style={styles.avatarWrapper}>
+            <Animated.View style={styles.glowAura} />
+            <Image
+              source={user?.photo ? { uri: user.photo } : require("../assets/usedImages/Unkown.png")}
+              style={styles.avatar}
+            />
+          </View>
+
+          <View style={[styles.badge, { backgroundColor: user?.isPremium ? "#ff5722" : "#ff8a65" }]}>
+            <Text style={styles.badgeText}>
+              {user?.isPremium ? "🔥 Premium" : "🌋 Free"}
             </Text>
-          </LinearGradient>
+          </View>
+
+          <Text style={styles.name}>{user?.name || "Chef Volcánico"}</Text>
+          <Text style={styles.email}>{user?.email}</Text>
         </View>
 
-        {/* Burbujas flotantes */}
-        <FloatingBubble
-          style={[styles.neonBubble, { top: 5, left: 10, width: 8, height: 8 }]}
-          duration={3000}
-          distance={12}
-        />
-        <FloatingBubble
-          style={[styles.neonBubble, { top: 40, right: 25, width: 14, height: 14 }]}
-          duration={4200}
-          distance={18}
-        />
-        <FloatingBubble
-          style={[styles.neonBubble, { bottom: 15, left: 45, width: 10, height: 10 }]}
-          duration={3800}
-          distance={15}
-        />
-        <FloatingBubble
-          style={[styles.neonBubble, { bottom: 25, right: 55, width: 12, height: 12 }]}
-          duration={4600}
-          distance={20}
-        />
-      </View>
+        <SubscriptionTimer />
 
-      {/* Mensaje */}
-      <View style={styles.messageContainer}>
-        <NeonMockTimer />
-        <LinearGradient
-          colors={['#1c1c1caa', '#1c1c1c33']}
-          style={styles.messageCard}
-        >
-          <Text style={styles.messageText}>{`¡Hola, ${user?.name || 'Chef'}! 👨‍🍳`}</Text>
-          <Text style={styles.messageSubText}>
-            Explora nuevas recetas, sube tu nivel y crea platillos que brillen. ⚡🍰
-          </Text>
-        </LinearGradient>
-      </View>
+        {/* 🚪 Logout button */}
+        <View style={styles.logoutContainer}>
+          <TouchableOpacity onPress={() => setShowDialog(true)} style={styles.logoutButton}>
+            <Image source={logoutImage} style={styles.logoutImage} resizeMode="contain" />
+            <LinearGradient
+              colors={["#ff3d00", "#ff9100", "#ff3d00"]}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+              style={styles.logoutGradient}
+            >
+              <Text style={styles.logoutLabel}>Cerrar sesión</Text>
+            </LinearGradient>
+          </TouchableOpacity>
+        </View>
 
-      {/* Logout */}
-      <TouchableOpacity onPress={() => setShowDialog(true)} style={styles.logoutButton}>
-        <Image source={logoutImage} style={styles.logoutImage} />
-      </TouchableOpacity>
-
-      {/* Modal de confirmación */}
-      <Modal
-        visible={showDialog}
-        transparent
-        animationType="fade"
-        onRequestClose={() => setShowDialog(false)}
-      >
-        <View style={styles.overlay}>
-          <View style={styles.dialog}>
-            <View style={styles.iconCircle}>
-              <MaterialIcons name="logout" size={40} color="#00001" />
-            </View>
-            <Text style={styles.dialogTitle}>¿Seguro que quieres cerrar sesión?</Text>
-            <Text style={styles.dialogSubtitle}>
-              Puedes volver a iniciar sesión en cualquier momento.{"\n"}
-              ✦ Tus <Text style={{ fontWeight: '600' }}>suscripciones</Text> se mantendrán activas.{"\n"}
-              ✦ Las <Text style={{ fontWeight: '600' }}>suscripciones</Text> no se congelarán mientras estés desconectado.{"\n"}
-              ✦ Tus <Text style={{ fontWeight: '600' }}>favoritos</Text> se borrarán de este dispositivo.
-            </Text>
-            <View style={styles.buttonRow}>
-              <TouchableOpacity
-                style={[styles.btn, styles.cancelBtn]}
-                onPress={() => setShowDialog(false)}
-              >
-                <Text style={styles.cancelText}>Cancelar</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={[styles.btn, styles.logoutBtn]}
-                onPress={handleLogoutConfirm}
-                disabled={loadingLogout}
-              >
-                <Text style={styles.logoutText}>
-                  {loadingLogout ? 'Cerrando...' : 'Cerrar sesión'}
-                </Text>
-              </TouchableOpacity>
+        {/* Modal */}
+        <Modal transparent visible={showDialog} animationType="fade">
+          <View style={styles.overlay}>
+            <View style={styles.dialog}>
+              <MaterialIcons name="logout" size={50} color="#ff7043" />
+              <Text style={styles.dialogTitle}>¿Cerrar sesión?</Text>
+              <Text style={styles.dialogText}>Tus datos se enfriarán lentamente... 🌋</Text>
+              <View style={styles.dialogButtons}>
+                <TouchableOpacity style={styles.cancelBtn} onPress={() => setShowDialog(false)}>
+                  <Text style={styles.cancelText}>Cancelar</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.confirmBtn}
+                  onPress={handleLogout}
+                  disabled={loadingLogout}
+                >
+                  <Text style={styles.confirmText}>
+                    {loadingLogout ? "Cerrando..." : "Cerrar sesión"}
+                  </Text>
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
-        </View>
-      </Modal>
-    </LinearGradient>
+        </Modal>
+      </SafeAreaView>
+    </View>
   );
 };
 
+/* 🎨 Estilos */
 const styles = StyleSheet.create({
-  menuContainer: { flex: 1, justifyContent: 'space-around', alignItems: 'center', paddingVertical: 20 },
-  avatarContainer: { width: width * 0.7, height: height * 0.28, position: 'relative', alignItems: 'center', justifyContent: 'center' },
-  avatarGlow: { width: 120, height: 120, borderRadius: 60, padding: 3, shadowColor: '#0ff', shadowOffset: { width: 0, height: 0 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 6, alignItems: 'center', justifyContent: 'center', backgroundColor: '#000' },
-  avatarImage: { width: 110, height: 110, borderRadius: 55, borderWidth: 1.5, borderColor: '#39ff14' },
-  subscriptionBadge: { position: 'absolute', bottom: 10, right: 10, paddingVertical: 5, paddingHorizontal: 12, borderRadius: 16, minWidth: 60 },
-  subscriptionText: { color: '#fff', fontWeight: '700', fontSize: 16 },
-  neonBubble: { position: 'absolute', borderRadius: 10, backgroundColor: '#0ff', shadowColor: '#0ff', shadowOffset: { width: 0, height: 0 }, shadowOpacity: 0.8, shadowRadius: 8 },
-  messageContainer: { paddingHorizontal: 20, width: '90%' },
-  messageCard: { borderRadius: 20, padding: 20, alignItems: 'center', shadowColor: '#0ff', shadowOffset: { width: 0, height: 8 }, shadowOpacity: 0.25, shadowRadius: 12, elevation: 8 },
-  messageText: { fontSize: 22, color: '#39ff14', fontWeight: '700', textAlign: 'center', marginBottom: 10 },
-  messageSubText: { fontSize: 14, color: '#0ff', textAlign: 'center' },
-  logoutButton: { alignItems: 'center', justifyContent: 'center', marginVertical: 20 },
-  logoutImage: { width: 110, height: 110 },
-  overlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.6)', justifyContent: 'center', alignItems: 'center' },
-  dialog: { backgroundColor: '#1c1c1e', borderRadius: 20, padding: 25, alignItems: 'center', width: '82%' },
-  iconCircle: { backgroundColor: '#5a86c3', width: 80, height: 80, borderRadius: 40, justifyContent: 'center', alignItems: 'center', marginBottom: 15, elevation: 5 },
-  dialogTitle: { color: 'white', fontSize: 18, fontWeight: "700", textAlign: 'center', marginBottom: 8 },
-  dialogSubtitle: { color: '#ddd', fontSize: 14, textAlign: 'center', marginBottom: 22, lineHeight: 20 },
-  buttonRow: { flexDirection: 'row', gap: 15 },
-  btn: { paddingVertical: 12, paddingHorizontal: 22, borderRadius: 10, minWidth: 120, alignItems: "center" },
-  cancelBtn: { backgroundColor: "#f1f1f1" },
-  cancelText: { color: "#333", fontWeight: "600" },
-  logoutBtn: { backgroundColor: "#e63946" },
-  logoutText: { color: "#fff", fontWeight: "600" },
-  timerContainer: { marginBottom: 8, alignItems: 'center' },
-  timerLabel: { color: '#39ff14', fontWeight: '700', fontSize: 14, marginBottom: 4, textShadowColor: '#0ff', textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 5 },
-  mockTimerBox: { paddingVertical: 6, paddingHorizontal: 14, borderRadius: 12, backgroundColor: '#0f0c29cc', marginBottom: 8 },
-  mockTimerText: { color: '#39ff14', fontWeight: '700', fontSize: 14, textAlign: 'center' },
+  container: { flex: 1, justifyContent: "space-between", alignItems: "center", paddingVertical: 40 },
+  header: { alignItems: "center" },
+  avatarWrapper: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 10,
+  },
+  glowAura: {
+    position: "absolute",
+    width: 140,
+    height: 140,
+    borderRadius: 70,
+    backgroundColor: "rgba(255,80,0,0.2)",
+    shadowColor: "#ff3d00",
+    shadowOpacity: 1,
+    shadowRadius: 25,
+  },
+  avatar: {
+    width: 110,
+    height: 110,
+    borderRadius: 55,
+    borderWidth: 2,
+    borderColor: "#ff6a00",
+  },
+  badge: { borderRadius: 12, paddingVertical: 4, paddingHorizontal: 12, marginTop: 10 },
+  badgeText: { color: "#fff", fontWeight: "700", fontSize: 14 },
+  name: { color: "#ffe0b2", fontSize: 22, fontWeight: "700", marginTop: 8 },
+  email: { color: "#ffbfa4", fontSize: 14, marginBottom: 10 },
+  timerCard: {
+    borderRadius: 20,
+    paddingVertical: 15,
+    paddingHorizontal: 25,
+    alignItems: "center",
+    marginTop: 10,
+    borderWidth: 1,
+    borderColor: "rgba(255,90,0,0.4)",
+    shadowColor: "#ff5722",
+    shadowOpacity: 0.8,
+    shadowRadius: 20,
+  },
+  timerLabel: { color: "#ffab91", fontWeight: "700", fontSize: 16, marginBottom: 5 },
+  timerSub: { color: "#ffcbb2", fontSize: 14 },
+  logoutContainer: { alignItems: "center" },
+  logoutButton: { alignItems: "center" },
+  logoutImage: { width: 80, height: 80, marginBottom: 5 },
+  logoutGradient: {
+    borderRadius: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    shadowColor: "#ff3d00",
+    shadowOpacity: 0.8,
+    shadowRadius: 10,
+  },
+  logoutLabel: { color: "#fff", fontSize: 16, fontWeight: "700", textShadowColor: "#ff3d00", textShadowRadius: 10 },
+  overlay: {
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,0.75)",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  dialog: {
+    backgroundColor: "rgba(25,10,10,0.95)",
+    borderRadius: 25,
+    padding: 30,
+    width: "80%",
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: "rgba(255,80,0,0.8)",
+    shadowColor: "#ff5722",
+    shadowOpacity: 0.8,
+    shadowRadius: 20,
+  },
+  dialogTitle: { fontSize: 20, fontWeight: "700", color: "#ffe0b2", marginBottom: 8 },
+  dialogText: { color: "#ffbfa4", textAlign: "center", marginBottom: 20 },
+  dialogButtons: { flexDirection: "row", gap: 10 },
+  cancelBtn: { backgroundColor: "#333", borderRadius: 8, paddingVertical: 10, paddingHorizontal: 20 },
+  cancelText: { color: "#ff8a65", fontWeight: "600" },
+  confirmBtn: {
+    backgroundColor: "#ff3d00",
+    borderRadius: 8,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    shadowColor: "#ff6f00",
+    shadowOpacity: 1,
+    shadowRadius: 10,
+  },
+  confirmText: { color: "#fff", fontWeight: "700" },
 });
 
-export default Menu;
+export default Menu_LavaElite_ParticlesV4;
+
+/*
+7	Chef Arcade	Retro 8-bit pixelado.	🕹️ Naranja, violeta, negro.	Inspirado en Donkey Kong o Kirby — botones pixel, tipografía 8bit, Chefy animado saltando.
+8	Ocean Breeze	Acuático y fresco, con ondas animadas.	🌊 Azul claro, verde agua, blanco.	Gradiente de mar con partículas tipo burbujas ascendiendo, suave movimiento del fondo.
+9	Lava Elite	Oscuro con toques incandescentes.	🔥 Negro, rojo, naranja brillante.	Fondo tipo volcán, bordes incandescentes y animaciones tipo resplandor. Ideal para ChefSkills “Volcánico”.
+10	Golden Prestige	Ultra premium con brillos metálicos y efectos dorados.	👑 Oro, negro y blanco.	Tarjetas con reflejos, degradados metálicos y microbrillos. Perfecto para el plan ChefSkills+ Ultra.
+*/
