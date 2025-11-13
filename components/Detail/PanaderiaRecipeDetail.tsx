@@ -21,6 +21,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite, removeFavorite } from '../../store/Slices/FavoriteSlice';
 import { saveFavoritesToStorage } from '../../store/storage/FavoriteStorage';
 import LinearGradient from 'react-native-linear-gradient';
+import CategoryHeader from '../UI/CSHeader_ModernPro';
+import { useNavigation } from "@react-navigation/native";
+
 
 interface Ingredient { name: string; quantity: string; }
 interface Step { step: string; }
@@ -37,6 +40,8 @@ interface Recipe {
 interface Props { route: { params: { recipe: Recipe } }; }
 
 const PanaderiaRecipeDetail: React.FC<Props> = ({ route }) => {
+    const navigation = useNavigation();
+
   const [fontLoaded] = useFonts({ MateSC: require('../../assets/fonts/MateSC-Regular.ttf') });
   const { recipe } = route.params;
 
@@ -145,6 +150,15 @@ const PanaderiaRecipeDetail: React.FC<Props> = ({ route }) => {
 
   return (
     <ScrollView style={styles.container}>
+<CategoryHeader
+  title="Panadería"
+  icon="🍞"
+  color="#A67C52"
+  titleColor="#fdf4e2"   // <--- Ahora puedes cambiarlo
+  onBack={() => navigation.goBack()}
+/>
+
+
       {/* Header */}
       <View style={styles.headerContainer}>
         <Text style={styles.recipeTitle}>{recipe.name}</Text>
@@ -279,7 +293,7 @@ const PanaderiaRecipeDetail: React.FC<Props> = ({ route }) => {
 
 // Estilos idénticos al componente MainDish
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 15, backgroundColor: '#fff' },
+  container: { flex: 1, padding: 20, backgroundColor: '#fff' },
   headerContainer: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 },
   recipeTitle: { fontFamily: 'MateSC', fontSize: 35, marginBottom: 10, padding: 5, elevation: 5, borderWidth: 2, textDecorationLine: 'underline', borderRadius: 10, textShadowOffset: { width: 1, height: 1 }, textShadowRadius: 2, textAlign: 'center', flex: 1 },
   favoriteIcon: { marginLeft: 10 },

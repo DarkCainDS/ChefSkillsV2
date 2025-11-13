@@ -17,16 +17,22 @@ const InterstitialAdManager: React.FC = memo(() => {
 
   const appState = useRef<AppStateStatus>(AppState.currentState);
 
-  const [delayDone, setDelayDone] = useState(false);      // compuerta 1 (60s)
-  const [firstShown, setFirstShown] = useState(false);    // ya mostramos el 1°?
-  const [enableRecurrent, setEnableRecurrent] = useState(false); // activar cada 5 min
+  const [delayDone, setDelayDone] = useState(false);
+  const [firstShown, setFirstShown] = useState(false);
+  const [enableRecurrent, setEnableRecurrent] = useState(false);
 
   const { isLoaded, isClosed, load, show } = useInterstitialAd(
     AdUnitIds.interstitial,
     { requestNonPersonalizedAdsOnly: true }
   );
 
-  // 📱 estado de la app
+  // 🕒 Utilidad para timestamp
+  const getTimestamp = () => {
+    const now = new Date();
+    return now.toLocaleTimeString("es-CL", { hour12: false });
+  };
+
+  // 📱 Estado de la app
   useEffect(() => {
     const sub = AppState.addEventListener("change", (next) => {
       appState.current = next;
@@ -43,7 +49,7 @@ const InterstitialAdManager: React.FC = memo(() => {
     }
   }, [adsRemoved, isPremium, load]);
 
-  // 🔁 Si se cierra, volvemos a cargar
+  // 🔁 Si se cierra, recargar
   useEffect(() => {
     if (isClosed && !adsRemoved && !isPremium) {
       if (__DEV__) console.log("🔁 Interstitial cerrado, recargando...");
@@ -51,7 +57,7 @@ const InterstitialAdManager: React.FC = memo(() => {
     }
   }, [isClosed, adsRemoved, isPremium, load]);
 
-  // ⏳ Compuerta 1: esperar SIEMPRE 60s antes del 1° anuncio
+  // ⏳ Compuerta: esperar 60 s antes del 1º
   useEffect(() => {
     if (adsRemoved || isPremium || firstShown) return;
     setDelayDone(false);
@@ -60,18 +66,12 @@ const InterstitialAdManager: React.FC = memo(() => {
     return () => clearTimeout(t);
   }, [adsRemoved, isPremium, firstShown]);
 
-  // 🚀 Mostrar primer interstitial SOLO cuando:
-  // - delayDone === true
-  // - isLoaded === true
-  // - appState === "active"
-  // - aún no se ha mostrado
+  // 🚀 Mostrar primer interstitial
   useEffect(() => {
     if (adsRemoved || isPremium) return;
-    if (!delayDone) return;
-    if (firstShown) return;
+    if (!delayDone || firstShown) return;
 
     if (!isLoaded) {
-      // Si ya pasaron los 60s pero aún no carga, nos aseguramos de pedir carga
       load();
       return;
     }
@@ -79,24 +79,24 @@ const InterstitialAdManager: React.FC = memo(() => {
     if (appState.current !== "active") return;
 
     try {
-      if (__DEV__) console.log("📢 Mostrando primer interstitial (tras 60 s)");
+      console.log(`📢 [${getTimestamp()}] Mostrando primer interstitial (tras 60 s)`);
       show();
       setFirstShown(true);
-      setEnableRecurrent(true); // ahora sí activamos los de cada 5 min
+      setEnableRecurrent(true);
     } catch (err) {
       console.log("⚠️ Error al mostrar primer interstitial:", err);
       load();
     }
   }, [delayDone, isLoaded, isPremium, adsRemoved, firstShown, load, show]);
 
-  // ⏱️ Recurrente cada 5 min (solo después del 1°)
+  // ⏱️ Recurrente cada 5 min
   useAdTimer(() => {
     if (!enableRecurrent || adsRemoved || isPremium) return;
     if (appState.current !== "active") return;
 
     if (isLoaded) {
       try {
-        if (__DEV__) console.log("📢 Mostrando interstitial recurrente (cada 5 min)");
+        console.log(`📢 [${getTimestamp()}] Mostrando interstitial recurrente (cada 5 min)`);
         show();
       } catch (err) {
         console.log("⚠️ Error al mostrar interstitial recurrente:", err);
@@ -108,9 +108,7 @@ const InterstitialAdManager: React.FC = memo(() => {
     }
   }, enableRecurrent, 5 * 60 * 1000);
 
-  // 🛡️ Premium: no renderiza nada
   if (isPremium) return null;
-
   return null;
 });
 

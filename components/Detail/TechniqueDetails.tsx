@@ -8,11 +8,13 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
 } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import { Image } from 'expo-image';
 import { useFonts } from 'expo-font';
-import { RouteProp, useRoute } from '@react-navigation/native';
+import { RouteProp, useRoute, useNavigation } from '@react-navigation/native';
+import CategoryHeader from '../UI/CSHeader_ModernPro';
 
-// --- Tipado de los parámetros que recibe el componente ---
+// --- Tipado ---
 interface TechniqueParams {
   name?: string;
   description?: string;
@@ -24,6 +26,7 @@ type TechniqueDetailsRouteProp = RouteProp<Record<string, TechniqueParams>, stri
 
 // --- Componente principal ---
 const TechniqueDetails: React.FC = () => {
+  const navigation = useNavigation();
   const route = useRoute<TechniqueDetailsRouteProp>();
   const { name, description, imageUrls, detailedInfo } = route.params ?? {};
 
@@ -44,140 +47,159 @@ const TechniqueDetails: React.FC = () => {
     setSelectedImageIndex(null);
   };
 
-  // 🔒 Si no hay fuente cargada o los datos son inválidos, no renderizamos
   if (!fontLoaded) return null;
 
-  const safeImages = Array.isArray(imageUrls) && imageUrls.length > 0 ? imageUrls : [];
+  const safeImages = Array.isArray(imageUrls) ? imageUrls : [];
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      {/* 🔤 Título seguro */}
-      <Text style={styles.name}>{name ?? 'Técnica sin nombre'}</Text>
+    <LinearGradient
+      colors={['#D8EEFF', '#A7D8FF', '#82C2FF']}   // 🌾 DEGRADADO CÁLIDO
+      style={{ flex: 1 }}
+    >
+      <ScrollView contentContainerStyle={styles.container}>
 
-      {/* 🖼️ Galería de imágenes (solo si hay imágenes válidas) */}
-      {safeImages.length > 0 ? (
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          style={styles.gallery}
-          
-        >
-          {safeImages.map((url, index) => (
-            <TouchableOpacity
-              key={`image-${index}`}
-              onPress={() => openModal(index)}
-              activeOpacity={0.8}
-            >
-              <Image
-                source={{ uri: url }}
-                style={styles.image}
-                transition={300}
-                contentFit="contain"
-                cachePolicy="memory-disk"
-              />
-            </TouchableOpacity>
-          ))}
-        </ScrollView>
-      ) : (
-        <Text style={styles.noImages}>No hay imágenes disponibles.</Text>
-      )}
+        {/* HEADER */}
+        <CategoryHeader
+          title="Técnicas"
+          icon="🔪"
+          color="#3BA7FF"
+          titleColor="#ffffff"
+          onBack={() => navigation.goBack()}
+        />
 
-      {/* 🧾 Descripción segura */}
-      {description ? (
-        <Text style={styles.description}>{description}</Text>
-      ) : (
-        <Text style={styles.placeholderText}>Sin descripción disponible.</Text>
-      )}
+        {/* TÍTULO */}
+        <Text style={styles.name}>{name ?? 'Técnica sin nombre'}</Text>
 
-      {/* 📚 Detalles seguros */}
-      {detailedInfo ? (
-        <Text style={styles.detailedInfo}>{detailedInfo}</Text>
-      ) : (
-        <Text style={styles.placeholderText}>No hay información detallada.</Text>
-      )}
-
-      {/* 🔍 Modal de imagen ampliada */}
-      <Modal
-        visible={modalVisible}
-        transparent
-        animationType="fade"
-        onRequestClose={closeModal}
-      >
-        <TouchableWithoutFeedback onPress={closeModal}>
-          <View style={styles.modalBackground}>
-            {selectedImageIndex !== null && safeImages[selectedImageIndex] ? (
-              <TouchableWithoutFeedback>
+        {/* GALERÍA */}
+        {safeImages.length > 0 ? (
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.gallery}>
+            {safeImages.map((url, index) => (
+              <TouchableOpacity key={index} onPress={() => openModal(index)} activeOpacity={0.8}>
                 <Image
-                  source={{ uri: safeImages[selectedImageIndex] }}
-                  style={styles.fullImage}
-                  transition={300}
-                  contentFit="contain"
-                  cachePolicy="memory-disk"
+                  source={{ uri: url }}
+                  style={styles.image}
+                  transition={200}
+                  contentFit="cover"
                 />
-              </TouchableWithoutFeedback>
-            ) : null}
-          </View>
-        </TouchableWithoutFeedback>
-      </Modal>
-    </ScrollView>
+              </TouchableOpacity>
+            ))}
+          </ScrollView>
+        ) : (
+          <Text style={styles.noImages}>No hay imágenes disponibles.</Text>
+        )}
+
+        {/* DESCRIPCIÓN */}
+        {description ? (
+          <>
+            <View style={styles.sectionDivider}>
+              <Text style={styles.sectionTitle}>Descripción</Text>
+            </View>
+            <Text style={styles.description}>{description}</Text>
+          </>
+        ) : null}
+
+        {/* INFO DETALLADA EN CAJA PREMIUM */}
+        {detailedInfo ? (
+          <>
+            <View style={styles.sectionDivider}>
+              <Text style={styles.sectionTitle}>Información detallada</Text>
+            </View>
+
+            <View style={styles.detailBox}>
+              <Text style={styles.detailedInfo}>{detailedInfo}</Text>
+            </View>
+          </>
+        ) : null}
+
+        {/* MODAL */}
+        <Modal visible={modalVisible} transparent animationType="fade" onRequestClose={closeModal}>
+          <TouchableWithoutFeedback onPress={closeModal}>
+            <View style={styles.modalBackground}>
+              {selectedImageIndex !== null && safeImages[selectedImageIndex] ? (
+                <TouchableWithoutFeedback>
+                  <Image
+                    source={{ uri: safeImages[selectedImageIndex] }}
+                    style={styles.fullImage}
+                    contentFit="contain"
+                  />
+                </TouchableWithoutFeedback>
+              ) : null}
+            </View>
+          </TouchableWithoutFeedback>
+        </Modal>
+
+      </ScrollView>
+    </LinearGradient>
   );
 };
 
-// --- Estilos idénticos con algunos refinamientos ---
+// --- Estilos premium cálidos ---
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 0.2,
     padding: 20,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    paddingBottom: 40,
+    alignItems: 'stretch',
   },
+
   name: {
     fontFamily: 'MateSC',
-    fontSize: 35,
-    marginBottom: 10,
-    padding: 5,
-    elevation: 5,
-    borderWidth: 2,
+    fontSize: 36,
+    marginBottom: 20,
     textDecorationLine: 'underline',
-    borderRadius: 10,
     textAlign: 'center',
   },
+
   gallery: {
     flexDirection: 'row',
-    marginVertical: 10,
-
+    marginBottom: 25,
+    paddingLeft: 5,
   },
   image: {
     width: 150,
     height: 150,
-    borderRadius: 10,
-    marginHorizontal: 10,
+    borderRadius: 12,
+    marginRight: 10,
   },
-  noImages: {
-    fontSize: 16,
-    color: '#777',
-    marginVertical: 15,
-    textAlign: 'center',
+
+  sectionDivider: {
+    width: '100%',
+    alignItems: 'center',
+    marginTop: 10,
+    marginBottom: 10,
   },
+  sectionTitle: {
+    fontSize: 22,
+    fontFamily: 'MateSC',
+    textDecorationLine: 'underline',
+  },
+
   description: {
     fontSize: 18,
-    marginTop: 10,
     textAlign: 'center',
+    lineHeight: 24,
+    marginBottom: 20,
+    paddingHorizontal: 10,
   },
+
+  // ⭐ CAJA PREMIUM CÁLIDA
+  detailBox: {
+    borderWidth: 1,
+    borderColor: '#E9E2D8', // 🌾 borde beige cálido
+    borderRadius: 12,
+    padding: 15,
+    marginBottom: 20,
+    backgroundColor: 'rgba(255,255,255,0.7)',
+  },
+
   detailedInfo: {
-    fontSize: 16,
-    marginTop: 15,
-    textAlign: 'center',
+    fontSize: 17,
+    textAlign: 'left',
+    lineHeight: 25,
   },
-  placeholderText: {
-    fontSize: 16,
-    marginTop: 10,
-    color: '#999',
-    textAlign: 'center',
-  },
+
   modalBackground: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.8)',
+    backgroundColor: 'rgba(0,0,0,0.85)',
     justifyContent: 'center',
     alignItems: 'center',
   },

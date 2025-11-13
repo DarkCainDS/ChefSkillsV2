@@ -1,3 +1,4 @@
+// Menu_LavaElite_ParticlesV4.tsx
 import React, { useEffect, useRef, useState, useMemo } from "react";
 import {
   Animated,
@@ -10,6 +11,7 @@ import {
   View,
   Dimensions,
 } from "react-native";
+
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialIcons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -22,9 +24,14 @@ import { app } from "../services/firebaseConfig";
 import { AppDispatch, RootState } from "../store/Index";
 import { clearUser } from "../store/Slices/userSlice";
 
+import CSHeader from "../components/CSHeader"; 
+
 const { width, height } = Dimensions.get("window");
 
-/* 🌋 Fondo lava cinematográfico con degradado negro arriba */
+/* ============================================================================================
+   🔥 LAVA BACKGROUND + PARTICLES 
+============================================================================================ */
+
 const LavaBackground = () => {
   const glowAnim = useRef(new Animated.Value(0)).current;
 
@@ -53,23 +60,16 @@ const LavaBackground = () => {
 
   return (
     <View style={StyleSheet.absoluteFill}>
-      {/* 🎨 Degradado principal con negro arriba */}
-<LinearGradient
-  colors={[
-    "#000000", // negro puro (arriba izquierda)
-    "#1a0000", // transición oscura
-    "#330000", // rojo oscuro
-    "#601000", // rojo intenso
-    "#ff3d00", // lava brillante (abajo derecha)
-  ]}
-  locations={[0, 0.25, 0.5, 0.75, 1]}
-  start={{ x: 0, y: 0 }}
-  end={{ x: 1, y: 1 }}
-  style={StyleSheet.absoluteFill}
-/>
+      {/* Fondo lava */}
+      <LinearGradient
+        colors={["#000000", "#1a0000", "#330000", "#601000", "#ff3d00"]}
+        locations={[0, 0.25, 0.5, 0.75, 1]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+        style={StyleSheet.absoluteFill}
+      />
 
-
-      {/* 🔥 Luz interna dinámica */}
+      {/* Glow lava */}
       <Animated.View style={[StyleSheet.absoluteFill, { opacity: intensity }]}>
         <LinearGradient
           colors={["rgba(255,100,0,0.2)", "rgba(255,50,0,0.15)", "rgba(255,0,0,0.1)"]}
@@ -79,7 +79,7 @@ const LavaBackground = () => {
         />
       </Animated.View>
 
-      {/* ✨ Partículas */}
+      {/* Partículas */}
       {sparks.map(({ key, left, delay }) => (
         <Spark key={key} left={left} delay={delay} />
       ))}
@@ -87,7 +87,7 @@ const LavaBackground = () => {
         <Ash key={key} left={left} delay={delay} />
       ))}
 
-      {/* 🌑 Vignette superior (oscurece el borde de arriba) */}
+      {/* Vignette */}
       <LinearGradient
         colors={["rgba(0,0,0,0.8)", "transparent"]}
         start={{ x: 0.5, y: 0 }}
@@ -98,8 +98,7 @@ const LavaBackground = () => {
   );
 };
 
-/* ✨ Chispas ascendentes */
-const Spark = ({ left, delay }: { left: number; delay: number }) => {
+const Spark = ({ left, delay }: any) => {
   const anim = useRef(new Animated.Value(0)).current;
   const colors = ["#ff9100", "#ffc107", "#ff3d00"];
   const color = colors[Math.floor(Math.random() * colors.length)];
@@ -143,8 +142,7 @@ const Spark = ({ left, delay }: { left: number; delay: number }) => {
   );
 };
 
-/* 🌫 Cenizas descendentes */
-const Ash = ({ left, delay }: { left: number; delay: number }) => {
+const Ash = ({ left, delay }: any) => {
   const anim = useRef(new Animated.Value(0)).current;
   const size = 1.5 + Math.random() * 2;
 
@@ -183,7 +181,10 @@ const Ash = ({ left, delay }: { left: number; delay: number }) => {
   );
 };
 
-/* ⏳ Timer translúcido */
+/* ============================================================================================
+   🔥 SUBSCRIPTION TIMER
+============================================================================================ */
+
 const SubscriptionTimer = () => {
   const [remaining, setRemaining] = useState<any>(null);
   const [planName, setPlanName] = useState<string | null>(null);
@@ -194,17 +195,22 @@ const SubscriptionTimer = () => {
       if (!data) return;
       const sub = JSON.parse(data);
       setPlanName(sub.planName);
+
       if (!sub.expiresAt) return;
+
       const update = () => {
         const expiresAt = new Date(sub.expiresAt).getTime();
         const diff = expiresAt - Date.now();
         if (diff <= 0) return setRemaining(null);
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+        const days = Math.floor(diff / 86400000);
+        const hours = Math.floor((diff / 3600000) % 24);
+        const minutes = Math.floor((diff / 60000) % 60);
         const seconds = Math.floor((diff / 1000) % 60);
+
         setRemaining({ days, hours, minutes, seconds });
       };
+
       update();
       const interval = setInterval(update, 1000);
       return () => clearInterval(interval);
@@ -235,10 +241,15 @@ const SubscriptionTimer = () => {
   );
 };
 
+/* ============================================================================================
+   🔥 MAIN MENU COMPONENT
+============================================================================================ */
+
 const Menu_LavaElite_ParticlesV4 = ({ navigation }) => {
   const [logoutImage, setLogoutImage] = useState(require("../assets/Logout/1.webp"));
   const [showDialog, setShowDialog] = useState(false);
   const [loadingLogout, setLoadingLogout] = useState(false);
+
   const user = useSelector((state: RootState) => state.user);
   const dispatch = useDispatch<AppDispatch>();
   const auth = getAuth(app);
@@ -273,9 +284,12 @@ const Menu_LavaElite_ParticlesV4 = ({ navigation }) => {
     <View style={{ flex: 1 }}>
       <LavaBackground />
 
+      {/* ⭐ HEADER ELEGANTE PARA VOLVER */}
+      <CSHeader title="Menú" />
+
       <SafeAreaView style={styles.container}>
+        {/* HEADER DATA */}
         <View style={styles.header}>
-          {/* 🌟 Avatar con aura */}
           <View style={styles.avatarWrapper}>
             <Animated.View style={styles.glowAura} />
             <Image
@@ -296,7 +310,7 @@ const Menu_LavaElite_ParticlesV4 = ({ navigation }) => {
 
         <SubscriptionTimer />
 
-        {/* 🚪 Logout button */}
+        {/* LOGOUT */}
         <View style={styles.logoutContainer}>
           <TouchableOpacity onPress={() => setShowDialog(true)} style={styles.logoutButton}>
             <Image source={logoutImage} style={styles.logoutImage} resizeMode="contain" />
@@ -311,17 +325,19 @@ const Menu_LavaElite_ParticlesV4 = ({ navigation }) => {
           </TouchableOpacity>
         </View>
 
-        {/* Modal */}
+        {/* MODAL */}
         <Modal transparent visible={showDialog} animationType="fade">
           <View style={styles.overlay}>
             <View style={styles.dialog}>
               <MaterialIcons name="logout" size={50} color="#ff7043" />
               <Text style={styles.dialogTitle}>¿Cerrar sesión?</Text>
               <Text style={styles.dialogText}>Tus datos se enfriarán lentamente... 🌋</Text>
+
               <View style={styles.dialogButtons}>
                 <TouchableOpacity style={styles.cancelBtn} onPress={() => setShowDialog(false)}>
                   <Text style={styles.cancelText}>Cancelar</Text>
                 </TouchableOpacity>
+
                 <TouchableOpacity
                   style={styles.confirmBtn}
                   onPress={handleLogout}
@@ -332,6 +348,7 @@ const Menu_LavaElite_ParticlesV4 = ({ navigation }) => {
                   </Text>
                 </TouchableOpacity>
               </View>
+
             </View>
           </View>
         </Modal>
@@ -340,10 +357,14 @@ const Menu_LavaElite_ParticlesV4 = ({ navigation }) => {
   );
 };
 
-/* 🎨 Estilos */
+/* ============================================================================================
+   🎨 ESTILOS
+============================================================================================ */
+
 const styles = StyleSheet.create({
   container: { flex: 1, justifyContent: "space-between", alignItems: "center", paddingVertical: 40 },
   header: { alignItems: "center" },
+
   avatarWrapper: {
     width: 120,
     height: 120,
@@ -352,6 +373,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 10,
   },
+
   glowAura: {
     position: "absolute",
     width: 140,
@@ -362,6 +384,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 25,
   },
+
   avatar: {
     width: 110,
     height: 110,
@@ -369,10 +392,12 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: "#ff6a00",
   },
+
   badge: { borderRadius: 12, paddingVertical: 4, paddingHorizontal: 12, marginTop: 10 },
   badgeText: { color: "#fff", fontWeight: "700", fontSize: 14 },
   name: { color: "#ffe0b2", fontSize: 22, fontWeight: "700", marginTop: 8 },
   email: { color: "#ffbfa4", fontSize: 14, marginBottom: 10 },
+
   timerCard: {
     borderRadius: 20,
     paddingVertical: 15,
@@ -385,11 +410,14 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 20,
   },
+
   timerLabel: { color: "#ffab91", fontWeight: "700", fontSize: 16, marginBottom: 5 },
   timerSub: { color: "#ffcbb2", fontSize: 14 },
+
   logoutContainer: { alignItems: "center" },
   logoutButton: { alignItems: "center" },
   logoutImage: { width: 80, height: 80, marginBottom: 5 },
+
   logoutGradient: {
     borderRadius: 10,
     paddingVertical: 10,
@@ -398,13 +426,15 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 10,
   },
-  logoutLabel: { color: "#fff", fontSize: 16, fontWeight: "700", textShadowColor: "#ff3d00", textShadowRadius: 10 },
+  logoutLabel: { color: "#fff", fontSize: 16, fontWeight: "700" },
+
   overlay: {
     flex: 1,
     backgroundColor: "rgba(0,0,0,0.75)",
     justifyContent: "center",
     alignItems: "center",
   },
+
   dialog: {
     backgroundColor: "rgba(25,10,10,0.95)",
     borderRadius: 25,
@@ -417,11 +447,15 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 20,
   },
+
   dialogTitle: { fontSize: 20, fontWeight: "700", color: "#ffe0b2", marginBottom: 8 },
   dialogText: { color: "#ffbfa4", textAlign: "center", marginBottom: 20 },
+
   dialogButtons: { flexDirection: "row", gap: 10 },
+
   cancelBtn: { backgroundColor: "#333", borderRadius: 8, paddingVertical: 10, paddingHorizontal: 20 },
   cancelText: { color: "#ff8a65", fontWeight: "600" },
+
   confirmBtn: {
     backgroundColor: "#ff3d00",
     borderRadius: 8,
@@ -435,6 +469,7 @@ const styles = StyleSheet.create({
 });
 
 export default Menu_LavaElite_ParticlesV4;
+
 
 /*
 7	Chef Arcade	Retro 8-bit pixelado.	🕹️ Naranja, violeta, negro.	Inspirado en Donkey Kong o Kirby — botones pixel, tipografía 8bit, Chefy animado saltando.
