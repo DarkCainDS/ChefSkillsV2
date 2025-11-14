@@ -42,6 +42,28 @@
     "https://example.com/sopa-verduras1.webp",
     "https://example.com/sopa-verduras2.webp"
   ],
+              "tips": [
+        {
+          "title": "Marinar el tiempo suficiente",
+          "description": "Aunque 8 horas es el mínimo, se recomienda dejarlo uno o dos días en la nevera para intensificar el sabor."
+        },
+        {
+          "title": "Atemperar la carne",
+          "description": "Dejar que la carne alcance temperatura ambiente antes de hornear asegura una cocción uniforme."
+        },
+        {
+          "title": "Usar una base de cebolla",
+          "description": "Las cebollas evitan que la carne toque directamente la bandeja y ayudan a mantenerla jugosa."
+        },
+        {
+          "title": "No exceder el tiempo de cocción inicial",
+          "description": "Hornea 35 minutos por kilo durante la primera cocción para evitar que el lomo quede seco."
+        },
+        {
+          "title": "Dejar reposar antes de cortar",
+          "description": "Reposar 10 minutos tras sacarlo del horno evita que se pierdan los jugos y mejora la textura."
+        }
+      ],
   "rating": null
 },
 {

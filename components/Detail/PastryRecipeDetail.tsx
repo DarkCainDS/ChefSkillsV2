@@ -1,5 +1,4 @@
 // screens/PastryRecipeDetail.tsx
-// screens/PastryRecipeDetail.tsx
 import { MaterialIcons } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
 import { Image } from 'expo-image';
@@ -15,13 +14,17 @@ import {
   Animated,
   Alert,
 } from 'react-native';
+
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite, removeFavorite } from '../../store/Slices/FavoriteSlice';
 import { saveFavoritesToStorage } from '../../store/storage/FavoriteStorage';
 import LinearGradient from 'react-native-linear-gradient';
-import { useRoute, RouteProp } from '@react-navigation/native';
+import { useRoute, RouteProp, useNavigation } from '@react-navigation/native';
 
+import CategoryHeader from '../UI/CSHeader_ModernPro';
+
+// TYPES
 interface Ingredient { name: string; quantity: string; }
 interface Step { step: string; }
 interface Tip { title: string; description: string; }
@@ -39,10 +42,14 @@ type RootStackParamList = {
 };
 
 export default function PastryRecipeDetail() {
+  const navigation = useNavigation();
   const route = useRoute<RouteProp<RootStackParamList, 'PastryRecipeDetail'>>();
   const recipe = route.params?.recipe;
 
-  const [fontLoaded] = useFonts({ MateSC: require('../../assets/fonts/MateSC-Regular.ttf') });
+  const [fontLoaded] = useFonts({
+    MateSC: require('../../assets/fonts/MateSC-Regular.ttf'),
+  });
+
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [multiplier, setMultiplier] = useState<number>(1);
   const [buttonText, setButtonText] = useState<string>('x1');
@@ -59,14 +66,13 @@ export default function PastryRecipeDetail() {
     try {
       await saveFavoritesToStorage(updated);
     } catch (error) {
-      console.error('Error guardando favoritos', error);
-      Alert.alert('Error', 'No se pudo guardar el favorito localmente.');
+      Alert.alert('Error', 'No se pudo guardar los favoritos.');
     }
   };
 
   const animateHeart = () => {
     Animated.sequence([
-      Animated.timing(heartAnim, { toValue: 1.3, duration: 150, useNativeDriver: true }),
+      Animated.timing(heartAnim, { toValue: 1.25, duration: 150, useNativeDriver: true }),
       Animated.timing(heartAnim, { toValue: 1, duration: 150, useNativeDriver: true }),
     ]).start();
   };
@@ -75,6 +81,7 @@ export default function PastryRecipeDetail() {
     if (!recipe) return;
 
     let updatedFavorites: Recipe[];
+
     if (!isFavorite) {
       dispatch(addFavorite(recipe));
       updatedFavorites = [...favorites, recipe];
@@ -87,7 +94,9 @@ export default function PastryRecipeDetail() {
   };
 
   const modifyQuantity = (quantity: string, multiplier: number) =>
-    quantity.replace(/-?\d+(\.\d+)?/g, (match) => String(parseFloat(match) * multiplier));
+    quantity.replace(/-?\d+(\.\d+)?/g, (match) =>
+      String(parseFloat(match) * multiplier)
+    );
 
   const handleButtonPress = () => {
     const states = [
@@ -102,188 +111,409 @@ export default function PastryRecipeDetail() {
     setMultiplier(next.multiplier);
     setButtonText(next.text);
   };
+const getButtonColor = (m: number) => {
+  switch (m) {
+    case 1: return '#6B7280';  // Neutral-500
+    case 2: return '#3B82F6';  // Blue-500
+    case 3: return '#22C55E';  // Green-500
+    case 4: return '#EF4444';  // Red-500
+    case 0.5: return '#FACC15'; // Yellow-400
+    default: return '#3B82F6';
+  }
+};
 
-  const getButtonColor = (multiplier: number) => {
-    switch (multiplier) {
-      case 1: return '#6c757d';
-      case 2: return '#007BFF';
-      case 3: return '#28a745';
-      case 4: return '#dc3545';
-      case 0.5: return '#ffc107';
-      default: return '#007BFF';
-    }
-  };
 
-  const tipColors = ['#FFF9C4', '#C8E6C9', '#BBDEFB', '#FFCCBC', '#E1BEE7', '#F8BBD0', '#D7CCC8'];
+  const tipColors = ['#FFE6EF', '#FFD4E3', '#F8C3D8', '#F5B7D1'];
 
   const openTipsModal = () => {
     setTipsVisible(true);
     fadeAnim.setValue(0);
-    Animated.spring(fadeAnim, { toValue: 1, useNativeDriver: true, friction: 6, tension: 80 }).start();
+    Animated.spring(fadeAnim, {
+      toValue: 1,
+      useNativeDriver: true,
+      friction: 6,
+      tension: 80,
+    }).start();
   };
 
   const closeTipsModal = () => {
-    Animated.timing(fadeAnim, { toValue: 0, duration: 250, useNativeDriver: true }).start(() => setTipsVisible(false));
+    Animated.timing(fadeAnim, {
+      toValue: 0,
+      duration: 200,
+      useNativeDriver: true,
+    }).start(() => setTipsVisible(false));
   };
 
   if (!fontLoaded || !recipe) {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Cargando receta...</Text>
-      </View>
-    );
+    return <View><Text>Cargando...</Text></View>;
   }
 
   return (
-    <ScrollView style={styles.container}>
-      <View style={styles.headerContainer}>
-        <Text style={styles.recipeTitle}>{recipe.name}</Text>
-        <TouchableOpacity onPress={handleFavoritePress} style={styles.favoriteIcon}>
-          <Animated.View style={{ transform: [{ scale: heartAnim }] }}>
-            <MaterialIcons
-              name={isFavorite ? 'favorite' : 'favorite-border'}
-              size={50}
-              color={isFavorite ? 'red' : 'black'}
-            />
-          </Animated.View>
-        </TouchableOpacity>
-      </View>
+    <LinearGradient
+      colors={['#FFE6EF', '#FFD4E3', '#F8C3D8']}
+      style={{ flex: 1 }}
+    >
+      <ScrollView style={{ flex: 1, padding: 15 }}>
 
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} pagingEnabled style={styles.imageContainer}>
-        {recipe.images?.map((img, idx) => (
-          <TouchableOpacity key={idx} onPress={() => setSelectedImage(img)}>
-            <Image source={img} style={styles.image} contentFit="cover" transition={300} cachePolicy="memory-disk" />
+        {/* HEADER */}
+        <CategoryHeader
+          title="Pastelería"
+          icon="🧁"
+          color="#FF8EB8"
+          titleColor="#FFFFFF"
+          onBack={() => navigation.goBack()}
+        />
+
+        {/* TITLE + HEART */}
+        <View style={styles.headerContainer}>
+          <Text style={styles.recipeTitle}>{recipe.name}</Text>
+
+          <TouchableOpacity onPress={handleFavoritePress} style={styles.favoriteIcon}>
+            <Animated.View style={{ transform: [{ scale: heartAnim }] }}>
+              <MaterialIcons
+                name={isFavorite ? 'favorite' : 'favorite-border'}
+                size={48}
+                color={isFavorite ? '#FF2F81' : 'black'}
+              />
+            </Animated.View>
           </TouchableOpacity>
-        ))}
-      </ScrollView>
-
-      <Modal visible={!!selectedImage} transparent animationType="fade" onRequestClose={() => setSelectedImage(null)}>
-        <TouchableWithoutFeedback onPress={() => setSelectedImage(null)}>
-          <View style={styles.modalBackground}>
-            {selectedImage && <Image source={selectedImage} style={styles.modalImageLarge} contentFit="contain" transition={300} />}
-          </View>
-        </TouchableWithoutFeedback>
-      </Modal>
-
-      <View style={styles.headerWithButton}>
-        <Text style={styles.sectionTitle}>Ingredientes</Text>
-        <TouchableOpacity
-          style={[styles.multiplicarButton, { backgroundColor: getButtonColor(multiplier) }]}
-          onPress={handleButtonPress}
-        >
-          <Text style={styles.buttonText}>{buttonText}</Text>
-        </TouchableOpacity>
-      </View>
-
-      <View style={styles.ingredientsContainer}>
-        <View style={[styles.tableRow, { backgroundColor: '#f5f5f5' }]}>
-          <Text style={[styles.tableCellName, styles.tableHeader]}>Ingrediente</Text>
-          <Text style={[styles.tableCellQuantity, styles.tableHeader]}>Cantidad</Text>
-          <Text style={[styles.tableCellCheckbox, styles.tableHeader]}>✔</Text>
         </View>
-        {recipe.ingredients?.map((ing, idx) => (
-          <View key={idx} style={styles.tableRow}>
-            <Text style={styles.tableCellName}>{ing.name}</Text>
-            <Text style={styles.tableCellQuantity}>{modifyQuantity(ing.quantity, multiplier)}</Text>
-            <View style={styles.tableCellCheckbox}>
-              <BouncyCheckbox size={18} fillColor="green" unFillColor="#fff" disableBuiltInState />
-            </View>
-          </View>
-        ))}
-      </View>
 
-      <Text style={styles.sectionTitle}>Pasos</Text>
-      <View style={styles.stepsContainer}>
-        {recipe.steps?.map((step, idx) => (
-          <View key={idx} style={styles.stepItem}>
-            <View style={styles.stepTextContainer}>
-              <Text style={styles.stepNumber}>Paso {idx + 1}</Text>
-              <Text style={styles.stepDescription}>{step.step}</Text>
-            </View>
-            <View style={styles.checkboxContainer}>
-              <BouncyCheckbox size={25} fillColor="green" unFillColor="#fff" disableBuiltInState />
-            </View>
-          </View>
-        ))}
-      </View>
+        {/* IMAGES */}
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} pagingEnabled style={styles.imageContainer}>
+          {recipe.images?.map((img, idx) => (
+            <TouchableOpacity key={idx} onPress={() => setSelectedImage(img)}>
+              <Image source={img} style={styles.image} contentFit="cover" />
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
 
-      {recipe.tips?.length > 0 && (
-        <>
+        {/* MODAL IMAGE */}
+        <Modal visible={!!selectedImage} transparent animationType="fade">
+          <TouchableWithoutFeedback onPress={() => setSelectedImage(null)}>
+            <View style={styles.modalBackground}>
+              {selectedImage && (
+                <Image
+                  source={selectedImage}
+                  style={styles.modalImageLarge}
+                  contentFit="contain"
+                />
+              )}
+            </View>
+          </TouchableWithoutFeedback>
+        </Modal>
+
+        {/* INGREDIENTES + MULTIPLIER */}
+        <View style={styles.rowHeader}>
+          <Text style={styles.sectionTitle}>Ingredientes</Text>
+
+          <TouchableOpacity
+            style={[
+              styles.multiplicarButton,
+              { backgroundColor: getButtonColor(multiplier) },
+            ]}
+            onPress={handleButtonPress}
+          >
+            <Text style={styles.buttonText}>{buttonText}</Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* TABLA INGREDIENTES */}
+        <View style={styles.ingredientsContainer}>
+          <View style={[styles.tableRow, { backgroundColor: '#ffeaf2' }]}>
+            <Text style={[styles.tableCellName, styles.tableHeader]}>Ingrediente</Text>
+            <Text style={[styles.tableCellQuantity, styles.tableHeader]}>Cantidad</Text>
+            <Text style={[styles.tableCellCheckbox, styles.tableHeader]}>✔</Text>
+          </View>
+
+          {recipe.ingredients?.map((ing, idx) => (
+            <View key={idx} style={styles.tableRow}>
+              <Text style={styles.tableCellName}>{ing.name}</Text>
+              <Text style={styles.tableCellQuantity}>{modifyQuantity(ing.quantity, multiplier)}</Text>
+              <View style={styles.tableCellCheckbox}>
+                <BouncyCheckbox size={20} fillColor="#E91E63" unFillColor="#fff" disableBuiltInState />
+              </View>
+            </View>
+          ))}
+        </View>
+
+        {/* TIPS — BEFORE STEPS */}
+        {recipe.tips?.length > 0 && (
           <TouchableOpacity style={styles.tipsButton} onPress={openTipsModal}>
             <MaterialIcons name="lightbulb" size={28} color="white" />
             <Text style={styles.tipsButtonText}>Tips</Text>
           </TouchableOpacity>
+        )}
 
-          <Modal visible={tipsVisible} transparent animationType="fade" onRequestClose={closeTipsModal}>
-            <TouchableWithoutFeedback onPress={closeTipsModal}>
-              <View style={styles.tipsModalOverlay}>
-                <TouchableWithoutFeedback>
-                  <Animated.View style={[styles.tipsModal, { opacity: fadeAnim, transform: [{ scale: fadeAnim }] }]}>
-                    <Text style={styles.tipsTitle}>💡 Consejos útiles</Text>
-                    <ScrollView showsVerticalScrollIndicator nestedScrollEnabled keyboardShouldPersistTaps="handled">
-                      {recipe.tips.map((tip, idx) => (
-                        <LinearGradient
-                          key={idx}
-                          colors={[tipColors[idx % tipColors.length] + 'FF', tipColors[idx % tipColors.length] + 'CC']}
-                          start={{ x: 0, y: 0 }}
-                          end={{ x: 1, y: 1 }}
-                          style={styles.tipCard}
-                        >
-                          <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 5 }}>
-                            <MaterialIcons name="lightbulb-outline" size={20} color="#333" style={{ marginRight: 6 }} />
-                            <Text style={styles.tipTitle}>{tip.title}</Text>
-                          </View>
-                          <Text style={styles.tipDescription}>{tip.description}</Text>
-                        </LinearGradient>
-                      ))}
-                    </ScrollView>
-                    <TouchableOpacity style={styles.closeTipsButton} onPress={closeTipsModal}>
-                      <Text style={styles.closeTipsText}>Cerrar</Text>
-                    </TouchableOpacity>
-                  </Animated.View>
-                </TouchableWithoutFeedback>
+        {/* PASOS TITLE */}
+        <Text style={styles.sectionTitle}>Pasos</Text>
+
+        {/* PASOS */}
+        <View style={styles.stepsContainer}>
+          {recipe.steps?.map((step, idx) => (
+            <View key={idx} style={styles.stepItem}>
+              <View style={styles.stepTextContainer}>
+                <Text style={styles.stepNumber}>Paso {idx + 1}</Text>
+                <Text style={styles.stepDescription}>{step.step}</Text>
               </View>
+              <View style={styles.checkboxContainer}>
+                <BouncyCheckbox size={24} fillColor="#E91E63" unFillColor="#fff" disableBuiltInState />
+              </View>
+            </View>
+          ))}
+        </View>
+      </ScrollView>
+
+      {/* MODAL TIPS */}
+      <Modal visible={tipsVisible} transparent animationType="fade">
+        <TouchableWithoutFeedback onPress={closeTipsModal}>
+          <View style={styles.tipsModalOverlay}>
+            <TouchableWithoutFeedback>
+              <Animated.View style={[styles.tipsModal, { opacity: fadeAnim, transform: [{ scale: fadeAnim }] }]}>
+                <Text style={styles.tipsTitle}>💡 Consejos útiles</Text>
+
+                <ScrollView showsVerticalScrollIndicator={false}>
+                  {recipe.tips?.map((tip, idx) => (
+                    <LinearGradient
+                      key={idx}
+                      colors={[tipColors[idx % tipColors.length], tipColors[idx % tipColors.length] + 'CC']}
+                      style={styles.tipCard}
+                    >
+                      <Text style={styles.tipTitle}>{tip.title}</Text>
+                      <Text style={styles.tipDescription}>{tip.description}</Text>
+                    </LinearGradient>
+                  ))}
+                </ScrollView>
+
+                <TouchableOpacity style={styles.closeTipsButton} onPress={closeTipsModal}>
+                  <Text style={styles.closeTipsText}>Cerrar</Text>
+                </TouchableOpacity>
+              </Animated.View>
             </TouchableWithoutFeedback>
-          </Modal>
-        </>
-      )}
-    </ScrollView>
+          </View>
+        </TouchableWithoutFeedback>
+      </Modal>
+    </LinearGradient>
   );
 }
 
+// STYLES
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 15, backgroundColor: '#fff' },
-  headerContainer: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 },
-  recipeTitle: { fontFamily: 'MateSC', fontSize: 35, marginBottom: 10, padding: 5, elevation: 5, borderWidth: 2, textDecorationLine: 'underline', borderRadius: 10, textShadowOffset: { width: 1, height: 1 }, textShadowRadius: 2, textAlign: 'center', flex: 1 },
-  favoriteIcon: { marginLeft: 10 },
-  imageContainer: { flexDirection: 'row', marginBottom: 20 },
-  image: { width: 150, height: 150, marginHorizontal: 10, borderRadius: 10 },
-  modalBackground: { flex: 1, backgroundColor: 'rgba(0,0,0,0.8)', justifyContent: 'center', alignItems: 'center' },
-  modalImageLarge: { width: '90%', height: '70%', borderRadius: 15 },
-  headerWithButton: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 },
-  multiplicarButton: { padding: 5, borderRadius: 15, width: 55, height: 50, justifyContent: 'center', alignItems: 'center' },
-  buttonText: { color: '#fff', fontSize: 18, fontWeight: 'bold' },
-  sectionTitle: { fontSize: 20, fontWeight: 'bold', marginBottom: 15, marginTop: 20, textAlign: 'center', fontStyle: 'italic', borderBottomWidth: 5, borderBottomColor: '#000', borderTopColor: '#FF9800', borderTopWidth: 2, paddingBottom: 5, marginHorizontal: 20, elevation: 5, flex: 1 },
-  ingredientsContainer: { marginHorizontal: 5 },
-  tableRow: { flexDirection: 'row', borderBottomWidth: 1, borderBottomColor: '#ccc' },
-  tableCellName: { flex: 1, textAlign: 'left', padding: 8, borderRightWidth: 1, borderRightColor: '#ccc' },
-  tableCellQuantity: { flex: 1, textAlign: 'center', padding: 8, borderRightWidth: 1, borderRightColor: '#ccc' },
-  tableCellCheckbox: { flex: 0.5, alignItems: 'center', justifyContent: 'center', padding: 8 },
-  tableHeader: { fontWeight: 'bold', fontSize: 15 },
-  stepsContainer: { marginBottom: 40, paddingHorizontal: 15 },
-  stepItem: { flexDirection: 'row', alignItems: 'center', marginBottom: 12, backgroundColor: '#f9f9f9', borderRadius: 12, padding: 10, elevation: 2 },
-  stepTextContainer: { flex: 0.85 },
-  stepNumber: { fontWeight: 'bold', marginBottom: 5, fontSize: 15, color: '#333' },
-  stepDescription: { fontSize: 14, color: '#555' },
-  checkboxContainer: { flex: 0.15, alignItems: 'flex-end' },
-  tipsButton: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', backgroundColor: '#BA68C8', paddingVertical: 12, borderRadius: 25, marginVertical: 20, width: '50%', alignSelf: 'center' },
-  tipsButtonText: { color: 'white', fontWeight: 'bold', fontSize: 18, marginLeft: 8 },
-  tipsModalOverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.6)', justifyContent: 'center', alignItems: 'center' },
-  tipsModal: { backgroundColor: '#fff', borderRadius: 1 },
-  tipsTitle: { fontSize: 22, fontWeight: 'bold', textAlign: 'center', marginBottom: 15 },
-  tipCard: { padding: 15, borderRadius: 18, marginBottom: 12, elevation: 6, shadowColor: '#000', shadowOffset: { width: 2, height: 2 }, shadowOpacity: 0.3, shadowRadius: 4 },
-  tipTitle: { fontSize: 17, fontWeight: 'bold', color: '#333' },
-  tipDescription: { fontSize: 15, color: '#555', lineHeight: 20 },
-  closeTipsButton: { backgroundColor: '#BA68C8', padding: 10, borderRadius: 12, marginTop: 10, alignSelf: 'center', width: '40%' },
-  closeTipsText: { color: '#fff', textAlign: 'center', fontWeight: 'bold' },
+  headerContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 15,
+  },
+
+  recipeTitle: {
+    fontFamily: 'MateSC',
+    fontSize: 32,
+    textAlign: 'center',
+    flex: 1,
+    padding: 6,
+    borderWidth: 2,
+    borderRadius: 12,
+    backgroundColor: 'rgba(255,255,255,0.85)',
+  },
+
+  favoriteIcon: {
+    marginLeft: 10,
+  },
+
+  imageContainer: {
+    flexDirection: 'row',
+    marginBottom: 20,
+  },
+
+  image: {
+    width: 150,
+    height: 150,
+    marginHorizontal: 10,
+    borderRadius: 10,
+  },
+
+  modalBackground: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.8)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  modalImageLarge: {
+    width: '88%',
+    height: '70%',
+    borderRadius: 12,
+  },
+
+  rowHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 10,
+    marginBottom: 10,
+  },
+
+  sectionTitle: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    fontStyle: 'italic',
+    flex: 1,
+    borderBottomWidth: 3,
+    paddingBottom: 3,
+    borderBottomColor: '#D46C9E',
+    color: '#8A2F61',
+  },
+
+  multiplicarButton: {
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    borderRadius: 12,
+  },
+
+  buttonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 20,
+    fontStyle: 'italic',
+  },
+
+  ingredientsContainer: {
+    backgroundColor: 'rgba(255,255,255,0.75)',
+    borderRadius: 10,
+    overflow: 'hidden',
+  },
+
+  tableRow: {
+    flexDirection: 'row',
+    borderBottomWidth: 1,
+    borderBottomColor: '#ddd',
+  },
+
+  tableCellName: {
+    flex: 1,
+    padding: 8,
+  },
+
+  tableCellQuantity: {
+    flex: 1,
+    padding: 8,
+    textAlign: 'center',
+  },
+
+  tableCellCheckbox: {
+    flex: 0.4,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 8,
+  },
+
+  tableHeader: {
+    fontWeight: 'bold',
+  },
+
+  stepsContainer: {
+    marginBottom: 100,
+    marginTop: 10,
+  },
+
+  stepItem: {
+    flexDirection: 'row',
+    backgroundColor: 'rgba(255,255,255,0.75)',
+    padding: 12,
+    borderRadius: 12,
+    marginBottom: 12,
+  },
+
+  stepTextContainer: {
+    flex: 0.85,
+  },
+
+  stepNumber: {
+    fontWeight: 'bold',
+    marginBottom: 5,
+  },
+
+  stepDescription: {
+    fontSize: 14,
+    color: '#444',
+  },
+
+  checkboxContainer: {
+    flex: 0.15,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  tipsButton: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    backgroundColor: '#FF6BAA',
+    paddingVertical: 12,
+    borderRadius: 30,
+    width: '60%',
+    alignSelf: 'center',
+    marginVertical: 35,
+    elevation: 3,
+  },
+
+  tipsButtonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    marginLeft: 8,
+    fontSize: 18,
+  },
+
+  tipsModalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.6)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  tipsModal: {
+    backgroundColor: '#fff',
+    padding: 16,
+    borderRadius: 15,
+    width: '85%',
+    maxHeight: '70%',
+  },
+
+  tipsTitle: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    textAlign: 'center',
+  },
+
+  tipCard: {
+    padding: 14,
+    borderRadius: 14,
+    marginBottom: 14,
+  },
+
+  tipTitle: {
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
+
+  tipDescription: {
+    fontSize: 14,
+    lineHeight: 20,
+  },
+
+  closeTipsButton: {
+    backgroundColor: '#D46C9E',
+    padding: 10,
+    borderRadius: 10,
+    marginTop: 10,
+    alignSelf: 'center',
+    width: '40%',
+  },
+
+  closeTipsText: {
+    color: '#fff',
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
 });

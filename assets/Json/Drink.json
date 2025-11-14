@@ -23,7 +23,14 @@
       "images": [
         "https://example.com/mojito1.webp",
         "https://example.com/mojito2.webp"
-      ],
+      ], 
+       "tips": [
+    "Corta todos los ingredientes en trozos uniformes para una textura equilibrada.",
+    "Puedes sustituir albahaca o menta por perejil fresco si lo deseas.",
+    "Prueba la ensalada antes de ajustar la sal del aderezo.",
+    "Calienta ligeramente la miel para facilitar su mezcla en la vinagreta.",
+    "Se conserva bien en el refrigerador varios días, ideal para preparar con antelación."
+  ],
       "rating": null
     },
     {
