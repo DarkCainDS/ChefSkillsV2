@@ -1,5 +1,5 @@
-// store/Slices/FavoriteSlice.ts
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+// store/Slices/favoritesSlice.ts
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface Recipe {
   uid: string;
@@ -11,31 +11,50 @@ export interface Recipe {
 
 interface FavoriteState {
   recipes: Recipe[];
-  maxFavorites: number;
+  maxFavorites: number;   // ← valor FINAL desde suscripción
 }
 
 const initialState: FavoriteState = {
   recipes: [],
-  maxFavorites: 10,
+  maxFavorites: 10,        // base por defecto
 };
 
 const favoriteSlice = createSlice({
-  name: 'favorites',
+  name: "favorites",
   initialState,
   reducers: {
     setFavorites: (state, action: PayloadAction<Recipe[]>) => {
       state.recipes = action.payload;
     },
+
     addFavorite: (state, action: PayloadAction<Recipe>) => {
       if (state.recipes.length < state.maxFavorites) {
         state.recipes.push(action.payload);
       }
     },
+
     removeFavorite: (state, action: PayloadAction<string>) => {
-      state.recipes = state.recipes.filter(r => r.uid !== action.payload);
+      state.recipes = state.recipes.filter((r) => r.uid !== action.payload);
+    },
+
+    // 👇 Se alimenta DIRECTAMENTE desde userSlice/subscripción
+    setMaxFavorites: (state, action: PayloadAction<number>) => {
+      state.maxFavorites = action.payload;
+    },
+
+    clearFavorites: (state) => {
+      state.recipes = [];
+      state.maxFavorites = 10;
     },
   },
 });
 
-export const { setFavorites, addFavorite, removeFavorite } = favoriteSlice.actions;
+export const {
+  setFavorites,
+  addFavorite,
+  removeFavorite,
+  setMaxFavorites,
+  clearFavorites,
+} = favoriteSlice.actions;
+
 export default favoriteSlice.reducer;

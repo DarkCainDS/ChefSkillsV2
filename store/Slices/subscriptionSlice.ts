@@ -1,21 +1,20 @@
 // store/Slices/subscriptionSlice.ts
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface Plan {
+interface SubscriptionPlan {
   id: string;
   name: string;
   price: number;
   currency: string;
-  benefits?: string[];
   expiresAt?: string | null;
 }
 
 interface SubscriptionState {
   isPremium: boolean;
-  plan: Plan | null;
+  plan: SubscriptionPlan | null;
   adsRemoved: boolean;
-  expiresAt?: string | null;
-  loading?: boolean;
+  expiresAt: string | null;
+  loading: boolean;
 }
 
 const initialState: SubscriptionState = {
@@ -30,7 +29,10 @@ const subscriptionSlice = createSlice({
   name: "subscription",
   initialState,
   reducers: {
-    subscribePlan: (state, action: PayloadAction<Plan>) => {
+    setSubscriptionLoading: (state, action: PayloadAction<boolean>) => {
+      state.loading = action.payload;
+    },
+    subscribePlan: (state, action: PayloadAction<SubscriptionPlan>) => {
       state.isPremium = true;
       state.plan = action.payload;
       state.expiresAt = action.payload.expiresAt || null;
@@ -45,10 +47,20 @@ const subscriptionSlice = createSlice({
     setPremium: (state, action: PayloadAction<boolean>) => {
       state.isPremium = action.payload;
       state.adsRemoved = action.payload;
+      if (!action.payload) {
+        state.plan = null;
+        state.expiresAt = null;
+      }
     },
   },
 });
 
-export const { subscribePlan, unsubscribe, setAdsRemoved, setPremium } =
-  subscriptionSlice.actions;
+export const {
+  setSubscriptionLoading,
+  subscribePlan,
+  unsubscribe,
+  setAdsRemoved,
+  setPremium,
+} = subscriptionSlice.actions;
+
 export default subscriptionSlice.reducer;

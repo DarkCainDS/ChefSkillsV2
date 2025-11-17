@@ -1,18 +1,38 @@
-// App.tsx
 import React, { useEffect, useState } from "react";
 import { ActivityIndicator, View, Text } from "react-native";
 import { Provider, useDispatch } from "react-redux";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { NavigationContainer, useNavigationContainerRef } from "@react-navigation/native";
+import {
+  NavigationContainer,
+  useNavigationContainerRef,
+} from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import store from "./store/Index";
-import { setUser, setPremium, setSubscriptionResolved } from "./store/Slices/userSlice";
+
+// USER
+import {
+  setUser,
+  setPlan,
+  setPremium,
+  setSubscriptionResolved,
+} from "./store/Slices/userSlice";
+
+// SUBSCRIPTION
+import {
+  unsubscribe as clearSubRedux,
+  subscribePlan as setSubscriptionUI,
+} from "./store/Slices/subscriptionSlice";
+
+// FAVORITES
+import { setMaxFavorites, clearFavorites } from "./store/Slices/FavoriteSlice";
+
+// SERVICES
 import { checkSubscriptionStatus } from "./services/subscriptionService";
 
-// 🔹 Screens principales
+// SCREENS
 import HomeScreen from "./components/HomeScreen";
 import LoadingScreen from "./components/LoadingScreen";
 import TechniqueDetails from "./components/Detail/TechniqueDetails";
@@ -26,102 +46,162 @@ import DrinkRecipeDetail from "./components/Detail/DrinkRecipeDetail";
 import FavoriteRecipeDetail from "./components/Detail/FavoriteRecipeDetail";
 import Menu from "./components/Menu";
 
-// 🔸 Anuncios globales
+// ADS
 import InterstitialAdManager from "./components/ads/InterstitialAdManager";
 
 const Stack = createStackNavigator();
+const FAVORITES_BASE_LIMIT = 10;
 
+// ============================================================
+//    MAIN APP CONTROLLER
+// ============================================================
 const AppContent = () => {
   const dispatch = useDispatch();
-  const [initializing, setInitializing] = useState(true);
-  const [user, setLocalUser] = useState<any>(null);
-  const [currentRouteName, setCurrentRouteName] = useState<string>("Unknown");
-
   const navigationRef = useNavigationContainerRef();
 
+  const [initializing, setInitializing] = useState(true);
+  const [firebaseUser, setFirebaseUser] = useState(null);
+  const [currentRouteName, setCurrentRouteName] = useState("Unknown");
+
+  // ============================================================
+  //    GLOBAL AUTH WATCHER
+  // ============================================================
   useEffect(() => {
     const auth = getAuth();
 
-    const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      setLocalUser(user);
+    const unsub = onAuthStateChanged(auth, async (user) => {
+      setFirebaseUser(user);
 
-      if (user) {
-        console.log("✅ Sesión restaurada:", user.email);
-        dispatch(setUser({
-          uid: user.uid,
-          name: user.displayName || null,
-          photo: user.photoURL || null,
-          email: user.email || null,
-        }));
-
-        let isPremium = false;
-        let subData = null;
-
-        const cached = await AsyncStorage.getItem("subscriptionData");
-        if (cached) {
-          const parsed = JSON.parse(cached);
-          const exp = new Date(parsed.expiresAt);
-          if (exp > new Date()) {
-            isPremium = true;
-            subData = parsed;
-            console.log("💎 Usuario premium (cache)");
-          }
-        }
-
-        if (!isPremium) {
-          console.log("📡 Verificando suscripción...");
-          subData = await checkSubscriptionStatus(user.uid, dispatch);
-          console.log("🔎 subData:", subData);
-          isPremium = !!(subData?.isActive);
-
-          if (subData)
-            await AsyncStorage.setItem("subscriptionData", JSON.stringify(subData));
-          else
-            await AsyncStorage.removeItem("subscriptionData");
-        }
-
-        dispatch(setPremium(isPremium));
-      } else {
+      // LOGGED OUT
+      if (!user) {
         console.log("👤 Sesión cerrada");
-        dispatch(setUser(null));
+
+        dispatch(clearSubRedux());
+        dispatch(clearFavorites());
+        dispatch(
+          setUser({
+            uid: null,
+            name: null,
+            email: null,
+            photo: null,
+          })
+        );
+
         dispatch(setPremium(false));
+        dispatch(setPlan({ planId: null, favoritesLimit: 10 }));
+        dispatch(setMaxFavorites(10));
+        dispatch(setSubscriptionResolved());
+
+        await AsyncStorage.removeItem("subscriptionData");
+
+        setInitializing(false);
+        return;
+      }
+
+      // LOGGED IN
+      console.log("✅ Sesión restaurada:", user.email);
+
+      dispatch(
+        setUser({
+          uid: user.uid,
+          name: user.displayName,
+          email: user.email,
+          photo: user.photoURL,
+        })
+      );
+
+      // 🔎 Check subscription in Firestore
+      const subData = await checkSubscriptionStatus(user.uid, dispatch);
+
+      if (!subData) {
+        // FREE
+        dispatch(setPremium(false));
+        dispatch(setPlan({ planId: null, favoritesLimit: 10 }));
+        dispatch(setMaxFavorites(10));
+        await AsyncStorage.removeItem("subscriptionData");
+      } else {
+        // PREMIUM
+        dispatch(setPremium(true));
+
+        dispatch(
+          setPlan({
+            planId: subData.planId,
+            favoritesLimit: subData.favoritesLimit,
+          })
+        );
+
+        dispatch(setMaxFavorites(subData.favoritesLimit));
+
+        dispatch(
+          setSubscriptionUI({
+            id: subData.planId,
+            name: subData.planName,
+            price: subData.pricePaid,
+            currency: subData.currency,
+            expiresAt: subData.expiresAt,
+          })
+        );
+
+        // Save minimal info for startup
+        await AsyncStorage.setItem(
+          "subscriptionData",
+          JSON.stringify({
+            planName: subData.planName,
+            expiresAt: subData.expiresAt,
+          })
+        );
       }
 
       dispatch(setSubscriptionResolved());
       setInitializing(false);
     });
 
-    return () => unsubscribe();
+    return () => unsub();
   }, [dispatch]);
 
-  // 🌀 Pantalla de carga inicial
+  // ============================================================
+  // LOADING SCREEN (NO ADS HERE)
+  // ============================================================
   if (initializing) {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#000" }}>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "#000",
+        }}
+      >
         <ActivityIndicator size="large" color="#40E0D0" />
         <Text style={{ color: "white", marginTop: 10 }}>Cargando sesión...</Text>
       </View>
     );
   }
 
+  // ============================================================
+  // NAVIGATION + ADS
+  // ============================================================
   return (
     <NavigationContainer
       ref={navigationRef}
-      onReady={() => {
-        setCurrentRouteName(navigationRef.getCurrentRoute()?.name ?? "Unknown");
-      }}
+      onReady={() =>
+        setCurrentRouteName(
+          navigationRef.getCurrentRoute()?.name ?? "Unknown"
+        )
+      }
       onStateChange={() => {
         const route = navigationRef.getCurrentRoute()?.name;
         if (route) setCurrentRouteName(route);
       }}
     >
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {user ? (
+        {firebaseUser ? (
           <Stack.Screen name="Home" component={HomeScreen} />
         ) : (
           <Stack.Screen name="Loading" component={LoadingScreen} />
         )}
-        {/* Detalles */}
+
+        {/* DETAILS */}
         <Stack.Screen name="TechniqueDetails" component={TechniqueDetails} />
         <Stack.Screen name="MainDishRecipeDetail" component={MainDishRecipeDetail} />
         <Stack.Screen name="PastryRecipeDetail" component={PastryRecipeDetail} />
@@ -134,12 +214,14 @@ const AppContent = () => {
         <Stack.Screen name="Menu" component={Menu} />
       </Stack.Navigator>
 
-      {/* 💥 Interstitial: recibe ruta actual como prop */}
       <InterstitialAdManager currentRoute={currentRouteName} />
     </NavigationContainer>
   );
 };
 
+// ============================================================
+// ROOT WRAPPER
+// ============================================================
 export default function App() {
   return (
     <Provider store={store}>

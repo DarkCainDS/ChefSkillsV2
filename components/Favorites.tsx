@@ -6,24 +6,26 @@ import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native
 import { useDispatch, useSelector } from 'react-redux';
 import { setFavorites } from '../store/Slices/FavoriteSlice';
 import { loadFavoritesFromStorage, saveFavoritesToStorage } from '../store/storage/FavoriteStorage';
+import { getSafeImage } from '../utils/getImageSource';
 import type { Recipe } from '../store/Slices/FavoriteSlice';
 
-// Placeholder por si no hay imagen
-const placeholderImage = 'https://via.placeholder.com/80x80.png?text=Receta';
-
-// Card para cada favorito
 const FavoriteCard: React.FC<{ item: Recipe; onPress: () => void }> = ({ item, onPress }) => (
-  <TouchableOpacity style={styles.card} activeOpacity={0.7} onPress={onPress}>
+  <TouchableOpacity style={styles.card} activeOpacity={0.8} onPress={onPress}>
+    {/* 🔥 MISMO ESTILO QUE MAIN DISH */}
     <Image
-      source={{ uri: item.images?.[0] || placeholderImage }}
+      source={getSafeImage(item.images?.[0])}
       style={styles.image}
       contentFit="cover"
       transition={200}
       cachePolicy="memory-disk"
     />
+
     <View style={styles.info}>
       <Text style={styles.title}>{item.name}</Text>
-      <Text style={styles.description} numberOfLines={2} ellipsizeMode="tail">
+
+      <View style={styles.divider} />
+
+      <Text style={styles.description} numberOfLines={2}>
         {item.description}
       </Text>
     </View>
@@ -37,87 +39,122 @@ const Favorites: React.FC = () => {
   const favoritesRecipes = useSelector((state: any) => state.favorites.recipes) as Recipe[];
   const maxSlots = useSelector((state: any) => state.favorites.maxFavorites) as number;
 
-  // Cargar favoritos al iniciar
+  const used = favoritesRecipes.length;
+  const isFull = used >= maxSlots;
+
   useEffect(() => {
-    const loadData = async () => {
-      const storedFavorites = await loadFavoritesFromStorage();
-      dispatch(setFavorites(storedFavorites));
-    };
-    loadData();
+    (async () => {
+      const stored = await loadFavoritesFromStorage();
+      dispatch(setFavorites(stored));
+    })();
   }, [dispatch]);
 
-  // Guardar favoritos automáticamente al cambiar
   useEffect(() => {
     saveFavoritesToStorage(favoritesRecipes);
   }, [favoritesRecipes]);
 
-  if (favoritesRecipes.length === 0) {
-    return (
-      <View style={styles.emptyContainer}>
-        <Text style={styles.emptyText}>No tienes recetas favoritas aún.</Text>
-      </View>
-    );
-  }
-
   return (
     <View style={styles.container}>
-      {/* Contador en esquina superior */}
-      <View style={styles.counterContainer}>
+      {/* 🔥 Contador de favoritos */}
+      <View
+        style={[
+          styles.counterContainer,
+          { backgroundColor: isFull ? "#d32f2f" : "#8e44ad" }
+        ]}
+      >
         <Text style={styles.favoriteCount}>
-          {favoritesRecipes.length} / {maxSlots}
+          {used} / {maxSlots}
         </Text>
       </View>
 
-      <FlatList
-        data={favoritesRecipes}
-        keyExtractor={(item) => item.uid.toString()}
-        renderItem={({ item }) => (
-          <FavoriteCard
-            item={item}
-            onPress={() => navigation.navigate('FavoriteRecipeDetail', { recipe: item })}
-          />
-        )}
-        showsVerticalScrollIndicator={false}
-      />
+      {used === 0 ? (
+        <View style={styles.emptyContainer}>
+          <Text style={styles.emptyText}>No tienes recetas favoritas aún.</Text>
+        </View>
+      ) : (
+        <FlatList
+          data={favoritesRecipes}
+          keyExtractor={(item) => item.uid.toString()}
+          renderItem={({ item }) => (
+            <FavoriteCard
+              item={item}
+              onPress={() =>
+                navigation.navigate("FavoriteRecipeDetail", { recipe: item })
+              }
+            />
+          )}
+          showsVerticalScrollIndicator={false}
+        />
+      )}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 15 },
+
   counterContainer: {
-    position: 'absolute',
-    top: 10,
+    position: "absolute",
+    top: 15,
     right: 15,
-    backgroundColor: '#1ABC9C',
-    paddingHorizontal: 10,
-    paddingVertical: 5,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
     borderRadius: 20,
-    elevation: 5,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 3,
     zIndex: 10,
-    marginTop: -30,
-    marginRight: -20,
+    elevation: 8,
   },
-  favoriteCount: { fontSize: 14, fontWeight: 'bold', color: '#fff' },
+  favoriteCount: {
+    fontSize: 14,
+    fontWeight: "bold",
+    color: "#fff",
+  },
+
+  // ======== CARD IGUAL A MAIN DISH =========
   card: {
-    flexDirection: 'row',
-    backgroundColor: '#fff',
+    flexDirection: "row",
+    backgroundColor: "#ebeaeaff",
     borderRadius: 10,
     padding: 10,
     marginVertical: 3,
     marginBottom: 15,
     elevation: 5,
+    height: 105,
   },
-  image: { width: 80, height: 80, borderRadius: 10, marginRight: 15, resizeMode: 'contain' },
-  info: { flex: 1 },
-  title: { fontSize: 18, fontWeight: 'bold' },
-  description: { fontSize: 14, color: '#333' },
-  emptyContainer: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  emptyText: { fontSize: 16, color: '#555' },
+  image: {
+    width: 80,
+    height: 80,
+    borderRadius: 10,
+    resizeMode: "cover",
+  },
+
+  info: {
+    flex: 1,
+    justifyContent: "center",
+    marginLeft: 10,
+  },
+
+  title: {
+    fontSize: 16,
+    fontWeight: "bold",
+    marginBottom: 6,
+  },
+
+  divider: {
+    height: 1,
+    backgroundColor: "#ccc",
+    marginBottom: 6,
+    width: "100%",
+  },
+
+  description: {
+    fontSize: 14,
+    fontStyle: "italic",
+    color: "#333",
+    marginLeft: 2,
+  },
+
+  emptyContainer: { flex: 1, justifyContent: "center", alignItems: "center" },
+  emptyText: { fontSize: 16, color: "#555" },
 });
 
 export default Favorites;

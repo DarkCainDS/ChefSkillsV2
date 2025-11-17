@@ -22,6 +22,7 @@ import LinearGradient from "react-native-linear-gradient";
 import { useRoute, RouteProp, useNavigation } from "@react-navigation/native";
 
 import CategoryHeader from "../UI/CSHeader_ModernPro"; // 🔥 Header premium
+import { getSafeImage } from '../../utils/getImageSource';
 
 // TYPES
 interface Ingredient {
@@ -66,6 +67,7 @@ export default function FavoriteRecipeDetail() {
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const heartAnim = useRef(new Animated.Value(1)).current;
 
+
   const dispatch = useDispatch();
   const favorites = useSelector(
     (state: any) => state.favorites.recipes
@@ -73,6 +75,10 @@ export default function FavoriteRecipeDetail() {
   const isFavorite = recipe
     ? favorites.some((fav) => fav.uid === recipe.uid)
     : false;
+
+  const maxSlots = useSelector((state: any) => state.favorites.maxFavorites);
+  const usedSlots = favorites.length;
+  const isFull = usedSlots >= maxSlots;
 
   const persistFavorites = async (updated: Recipe[]) => {
     try {
@@ -101,7 +107,17 @@ export default function FavoriteRecipeDetail() {
   const handleFavoritePress = async () => {
     if (!recipe) return;
 
+    // ❌ No permitir agregar si está lleno
+    if (!isFavorite && isFull) {
+      Alert.alert(
+        "Límite alcanzado",
+        `Has ocupado tus ${maxSlots} favoritos.\nElimina alguno o activa ChefSkills+`
+      );
+      return;
+    }
+
     let updatedFavorites;
+
     if (!isFavorite) {
       dispatch(addFavorite(recipe));
       updatedFavorites = [...favorites, recipe];
@@ -137,20 +153,15 @@ export default function FavoriteRecipeDetail() {
 
   const getButtonColor = (m: number) => {
     switch (m) {
-      case 1:
-        return "#6c757d";
-      case 2:
-        return "#ECD487";
-      case 3:
-        return "#D6C16F";
-      case 4:
-        return "#C2AA54";
-      case 0.5:
-        return "#FFF4C4";
-      default:
-        return "#ECD487";
+      case 1: return '#6B7280';  // Neutral-500
+      case 2: return '#3B82F6';  // Blue-500
+      case 3: return '#22C55E';  // Green-500
+      case 4: return '#EF4444';  // Red-500
+      case 0.5: return '#FACC15'; // Yellow-400
+      default: return '#3B82F6';
     }
   };
+
 
   const tipColors = ["#FFF8D6", "#FCEBA5", "#ECD487", "#F7E8B1"];
 
@@ -180,6 +191,7 @@ export default function FavoriteRecipeDetail() {
       </View>
     );
   }
+
 
   return (
     <LinearGradient
@@ -221,10 +233,12 @@ export default function FavoriteRecipeDetail() {
           {recipe.images?.map((imgUrl, idx) => (
             <TouchableOpacity key={idx} onPress={() => setSelectedImage(imgUrl)}>
               <Image
-                source={imgUrl}
+                source={getSafeImage(imgUrl)}
                 style={styles.image}
                 contentFit="cover"
+                transition={200}
               />
+
             </TouchableOpacity>
           ))}
         </ScrollView>
@@ -235,10 +249,11 @@ export default function FavoriteRecipeDetail() {
             <View style={styles.modalBackground}>
               {selectedImage && (
                 <Image
-                  source={selectedImage}
+                  source={getSafeImage(selectedImage)}
                   style={styles.modalImageLarge}
                   contentFit="contain"
                 />
+
               )}
             </View>
           </TouchableWithoutFeedback>

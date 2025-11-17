@@ -2,8 +2,10 @@
 import { useFonts } from "expo-font";
 import { LinearGradient } from "expo-linear-gradient";
 import { getAuth } from "firebase/auth";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
+  ActivityIndicator,
+  Alert,
   Dimensions,
   Image,
   Modal,
@@ -11,40 +13,32 @@ import {
   StyleSheet,
   Text,
   View,
-  Alert,
-  ActivityIndicator,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useDispatch } from "react-redux";
 import { subscribeUser } from "../services/subscriptionService";
-import { subscribePlan } from "../store/Slices/subscriptionSlice";
-import { setPremium } from "../store/Slices/userSlice";
+import {
+  subscribePlan as subscribePlanAction,
+  setPremium as setSubscriptionPremium,
+} from "../store/Slices/subscriptionSlice";
+import { setPlan } from "../store/Slices/userSlice";
+import { setMaxFavorites } from "../store/Slices/FavoriteSlice";
+import { getActivePlans } from "../services/plansService";
+import { Plan } from "../components/types/plan";
 
 const { width, height } = Dimensions.get("window");
-
-interface Plan {
-  name: string;
-  price: string;
-  currency: string;
-}
 
 interface MarketplaceProps {
   visible: boolean;
   onClose: () => void;
 }
 
-const plans: Plan[] = [
-  { name: "1 mes", price: "3.49", currency: "USD" },
-  { name: "3 meses", price: "9.42", currency: "USD" },
-  { name: "6 meses", price: "17.80", currency: "USD" },
-  { name: "12 meses", price: "33.40", currency: "USD" },
-];
-
+// Imagen por plan (usamos el ID del plan)
 const planImages: Record<string, any> = {
-  "1 mes": require("../assets/MarketPlace/1_mes.webp"),
-  "3 meses": require("../assets/MarketPlace/3_meses.webp"),
-  "6 meses": require("../assets/MarketPlace/6_meses.webp"),
-  "12 meses": require("../assets/MarketPlace/12_meses.webp"),
+  plan_monthly_basic: require("../assets/MarketPlace/1_mes.webp"),
+  plan_quarterly_plus: require("../assets/MarketPlace/3_meses.webp"),
+  plan_semiannual_pro: require("../assets/MarketPlace/6_meses.webp"),
+  plan_annual_elite: require("../assets/MarketPlace/12_meses.webp"),
 };
 
 const priceBackgrounds = [
@@ -54,20 +48,40 @@ const priceBackgrounds = [
   "rgba(246,140,0,0.4)",
 ];
 
+const FAVORITES_BASE_LIMIT = 10; // mismo que en userSlice
+
 export default function Marketplace({ visible, onClose }: MarketplaceProps) {
   const [infoVisible, setInfoVisible] = useState(false);
-  const [successVisible, setSuccessVisible] = useState(false); // 🎉 nuevo
+  const [successVisible, setSuccessVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [plans, setPlans] = useState<Plan[]>([]);
+
   const dispatch = useDispatch();
   const insets = useSafeAreaInsets();
-  const [loading, setLoading] = useState(false);
 
   const [fontsLoaded] = useFonts({
     Baloo2: require("../assets/fonts/Baloo2-VariableFont_wght.ttf"),
   });
+  
+useEffect(() => {
+  (async () => {
+    try {
+      const data = await getActivePlans();
+
+      // ORDEN ASCENDENTE POR DURACIÓN
+      const sorted = data.sort((a, b) => a.durationMonths - b.durationMonths);
+
+      setPlans(sorted);
+    } catch (e) {
+      console.error("❌ Error cargando planes:", e);
+      Alert.alert("Error", "No se pudieron cargar los planes.");
+    }
+  })();
+}, []);
+
 
   if (!fontsLoaded) return null;
 
-  // 💳 Maneja la suscripción
   const handleSubscribe = async (plan: Plan) => {
     try {
       const user = getAuth().currentUser;
@@ -78,21 +92,31 @@ export default function Marketplace({ visible, onClose }: MarketplaceProps) {
 
       setLoading(true);
 
-      const payload = {
-        planId: `chefskills_${plan.name.replace(" ", "")}`,
-        planName: plan.name,
-        pricePaid: parseFloat(plan.price),
-        currency: plan.currency,
-        purchaseProvider: "server" as const,
-        flashSaleApplied: false,
-      };
+      // 📦 Crear / actualizar la suscripción en Firestore
+      const subData = await subscribeUser(user.uid, plan);
 
-      // 📦 Crear o actualizar la suscripción en Firestore
-      const subData = await subscribeUser(user.uid, payload);
+      // 🔄 Redux: info para UI de suscripción
+      dispatch(
+        subscribePlanAction({
+          id: plan.id,
+          name: plan.name,
+          price: plan.basePriceCents / 100,
+          currency: plan.currency,
+          expiresAt: subData.expiresAt,
+        })
+      );
+      dispatch(setSubscriptionPremium(true));
 
-      // 🔄 Actualizar Redux
-      dispatch(subscribePlan(subData));
-      dispatch(setPremium(true));
+      // 🔄 Redux: info global de usuario + límite de favoritos
+      dispatch(
+        setPlan({
+          planId: plan.id,
+          favoritesBoost: plan.favoritesBoost,
+        })
+      );
+      dispatch(
+        setMaxFavorites(FAVORITES_BASE_LIMIT + (plan.favoritesBoost || 0))
+      );
 
       // 🎉 Feedback visual
       setSuccessVisible(true);
@@ -113,7 +137,7 @@ export default function Marketplace({ visible, onClose }: MarketplaceProps) {
         />
 
         <View style={[styles.modalWrapper, { marginTop: insets.top + 20 }]}>
-          <View style={styles.topBar}>
+          <View className="topBar" style={styles.topBar}>
             <Pressable onPress={() => setInfoVisible(true)} style={styles.infoButton}>
               <Text style={styles.infoIcon}>ℹ️</Text>
             </Pressable>
@@ -136,34 +160,41 @@ export default function Marketplace({ visible, onClose }: MarketplaceProps) {
               <ActivityIndicator size="large" color="#fff" style={{ marginBottom: 20 }} />
             )}
 
-            {plans.map((plan, i) => (
-              <View key={i} style={styles.optionRow}>
-                <Image
-                  source={planImages[plan.name]}
-                  style={[
-                    styles.optionImage,
-                    { width: 80 + i * 25, height: 80 + i * 25 },
-                  ]}
-                  resizeMode="contain"
-                />
-                <Pressable
-                  style={[
-                    styles.priceButton,
-                    { backgroundColor: priceBackgrounds[i] },
-                  ]}
-                  onPress={() => !loading && handleSubscribe(plan)}
-                  disabled={loading}
-                >
-                  <Text style={[styles.priceText, { fontSize: 22 + i * 3 }]}>
-                    {plan.price} {plan.currency}
-                  </Text>
-                </Pressable>
-              </View>
-            ))}
+            {plans.map((plan, i) => {
+              const price = (plan.basePriceCents / 100).toFixed(2);
+              const img = planImages[plan.id];
+
+              return (
+                <View key={plan.id} style={styles.optionRow}>
+                  {img && (
+                    <Image
+                      source={img}
+                      style={[
+                        styles.optionImage,
+                        { width: 80 + i * 25, height: 80 + i * 25 },
+                      ]}
+                      resizeMode="contain"
+                    />
+                  )}
+                  <Pressable
+                    style={[
+                      styles.priceButton,
+                      { backgroundColor: priceBackgrounds[i] || priceBackgrounds[0] },
+                    ]}
+                    onPress={() => !loading && handleSubscribe(plan)}
+                    disabled={loading}
+                  >
+                    <Text style={[styles.priceText, { fontSize: 22 + i * 3 }]}>
+                      {price} {plan.currency}
+                    </Text>
+                  </Pressable>
+                </View>
+              );
+            })}
           </LinearGradient>
         </View>
 
-        {/* 🧾 Modal de información */}
+        {/* 🧾 Modal info */}
         <Modal
           visible={infoVisible}
           transparent
@@ -181,7 +212,9 @@ export default function Marketplace({ visible, onClose }: MarketplaceProps) {
                 ¿Qué incluye cada plan?
               </Text>
               <Text style={styles.infoText}>
-                {"🎁 1 mes: Sin anuncios\n\n🌟 3 meses: Sin anuncios + 5 favoritos\n\n💎 6 meses: Sin anuncios + 10 favoritos\n\n👑 12 meses: Sin anuncios + 20 favoritos"}
+                {
+                  "🎁 1 mes: Sin anuncios\n\n🌟 3 meses: Sin anuncios + 5 favoritos\n\n💎 6 meses: Sin anuncios + 10 favoritos\n\n👑 12 meses: Sin anuncios + 20 favoritos"
+                }
               </Text>
               <Pressable
                 onPress={() => setInfoVisible(false)}
@@ -203,7 +236,7 @@ export default function Marketplace({ visible, onClose }: MarketplaceProps) {
           </View>
         </Modal>
 
-        {/* 🎉 Modal de éxito */}
+        {/* 🎉 Modal éxito */}
         <Modal
           visible={successVisible}
           transparent

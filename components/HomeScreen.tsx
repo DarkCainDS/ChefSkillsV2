@@ -31,7 +31,6 @@ import DrinksRecipeListMain from './List/DrinksRecipeListMain';
 import TechniqueList from '../components/List/TechniqueList';
 import Favorites from './Favorites';
 import Marketplace from '../components/MarketPlace';
-import { useDailyWatcher } from "../components/hooks/useDailyWatcher";
 
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
@@ -171,7 +170,6 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
     setIsLoading(false);
   };
 
-  useDailyWatcher();
 
   // 🔄 Cargar favoritos
   useEffect(() => {

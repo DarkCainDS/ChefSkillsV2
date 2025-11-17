@@ -1,4 +1,3 @@
-// Menu_LavaElite_ParticlesV4.tsx
 import React, { useEffect, useRef, useState, useMemo } from "react";
 import {
   Animated,
@@ -16,7 +15,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { MaterialIcons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
-import { CommonActions } from "@react-navigation/native";
+import { CommonActions, useIsFocused } from "@react-navigation/native"; // ⭐ AÑADIDO AQUÍ
 import { getAuth, signOut } from "firebase/auth";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useSelector, useDispatch } from "react-redux";
@@ -24,12 +23,12 @@ import { app } from "../services/firebaseConfig";
 import { AppDispatch, RootState } from "../store/Index";
 import { clearUser } from "../store/Slices/userSlice";
 
-import CSHeader from "../components/CSHeader"; 
+import CSHeader from "../components/CSHeader";
 
 const { width, height } = Dimensions.get("window");
 
 /* ============================================================================================
-   🔥 LAVA BACKGROUND + PARTICLES 
+   🔥 LAVA BACKGROUND + PARTICLES
 ============================================================================================ */
 
 const LavaBackground = () => {
@@ -46,21 +45,28 @@ const LavaBackground = () => {
 
   const intensity = glowAnim.interpolate({ inputRange: [0, 1], outputRange: [0.3, 0.8] });
 
-  const sparks = useMemo(() => Array.from({ length: 14 }).map((_, i) => ({
-    key: `spark-${i}`,
-    left: Math.random() * width,
-    delay: i * 250,
-  })), []);
+  const sparks = useMemo(
+    () =>
+      Array.from({ length: 14 }).map((_, i) => ({
+        key: `spark-${i}`,
+        left: Math.random() * width,
+        delay: i * 250,
+      })),
+    []
+  );
 
-  const ashes = useMemo(() => Array.from({ length: 6 }).map((_, i) => ({
-    key: `ash-${i}`,
-    left: Math.random() * width,
-    delay: i * 400,
-  })), []);
+  const ashes = useMemo(
+    () =>
+      Array.from({ length: 6 }).map((_, i) => ({
+        key: `ash-${i}`,
+        left: Math.random() * width,
+        delay: i * 400,
+      })),
+    []
+  );
 
   return (
     <View style={StyleSheet.absoluteFill}>
-      {/* Fondo lava */}
       <LinearGradient
         colors={["#000000", "#1a0000", "#330000", "#601000", "#ff3d00"]}
         locations={[0, 0.25, 0.5, 0.75, 1]}
@@ -69,7 +75,6 @@ const LavaBackground = () => {
         style={StyleSheet.absoluteFill}
       />
 
-      {/* Glow lava */}
       <Animated.View style={[StyleSheet.absoluteFill, { opacity: intensity }]}>
         <LinearGradient
           colors={["rgba(255,100,0,0.2)", "rgba(255,50,0,0.15)", "rgba(255,0,0,0.1)"]}
@@ -79,7 +84,6 @@ const LavaBackground = () => {
         />
       </Animated.View>
 
-      {/* Partículas */}
       {sparks.map(({ key, left, delay }) => (
         <Spark key={key} left={left} delay={delay} />
       ))}
@@ -87,7 +91,6 @@ const LavaBackground = () => {
         <Ash key={key} left={left} delay={delay} />
       ))}
 
-      {/* Vignette */}
       <LinearGradient
         colors={["rgba(0,0,0,0.8)", "transparent"]}
         start={{ x: 0.5, y: 0 }}
@@ -182,17 +185,23 @@ const Ash = ({ left, delay }: any) => {
 };
 
 /* ============================================================================================
-   🔥 SUBSCRIPTION TIMER
+   🔥 SUBSCRIPTION TIMER — con refresco al entrar al menú
 ============================================================================================ */
 
 const SubscriptionTimer = () => {
+  const isFocused = useIsFocused(); // ⭐ AÑADIDO
+
   const [remaining, setRemaining] = useState<any>(null);
   const [planName, setPlanName] = useState<string | null>(null);
 
   useEffect(() => {
     const load = async () => {
       const data = await AsyncStorage.getItem("subscriptionData");
-      if (!data) return;
+      if (!data) {
+        setRemaining(null);
+        return;
+      }
+
       const sub = JSON.parse(data);
       setPlanName(sub.planName);
 
@@ -215,8 +224,9 @@ const SubscriptionTimer = () => {
       const interval = setInterval(update, 1000);
       return () => clearInterval(interval);
     };
-    load();
-  }, []);
+
+    if (isFocused) load(); // ⭐ MEJORA
+  }, [isFocused]); // ⭐ ESCUCHA CAMBIO DE PANTALLA
 
   if (!remaining)
     return (
@@ -242,13 +252,67 @@ const SubscriptionTimer = () => {
 };
 
 /* ============================================================================================
-   🔥 MAIN MENU COMPONENT
+   🔥 PARTICULITAS DENTRO DEL MODAL
 ============================================================================================ */
 
-const Menu_LavaElite_ParticlesV4 = ({ navigation }) => {
+const ModalParticle = ({ delay }: { delay: number }) => {
+  const anim = useRef(new Animated.Value(0)).current;
+  const offsetX = useRef((Math.random() - 0.5) * 120).current;
+  const size = 2 + Math.random() * 3;
+
+  useEffect(() => {
+    Animated.loop(
+      Animated.sequence([
+        Animated.timing(anim, {
+          toValue: 1,
+          duration: 1800 + Math.random() * 800,
+          delay,
+          easing: Easing.inOut(Easing.sin),
+          useNativeDriver: true,
+        }),
+        Animated.timing(anim, {
+          toValue: 0,
+          duration: 1800 + Math.random() * 800,
+          easing: Easing.inOut(Easing.sin),
+          useNativeDriver: true,
+        }),
+      ])
+    ).start();
+  }, []);
+
+  const translateY = anim.interpolate({ inputRange: [0, 1], outputRange: [8, -8] });
+  const opacity = anim.interpolate({ inputRange: [0, 0.5, 1], outputRange: [0, 0.8, 0] });
+
+  return (
+    <Animated.View
+      style={{
+        position: "absolute",
+        top: 40,
+        alignSelf: "center",
+        marginLeft: offsetX,
+        width: size,
+        height: size,
+        borderRadius: size / 2,
+        backgroundColor: "#ffb74d",
+        opacity,
+        transform: [{ translateY }],
+      }}
+    />
+  );
+};
+
+/* ============================================================================================
+   🔥 MAIN MENU COMPONENT + MODAL ULTRA
+============================================================================================ */
+
+const Menu_LavaElite_ParticlesV6_Ultra = ({ navigation }) => {
   const [logoutImage, setLogoutImage] = useState(require("../assets/Logout/1.webp"));
   const [showDialog, setShowDialog] = useState(false);
   const [loadingLogout, setLoadingLogout] = useState(false);
+
+  const modalAnim = useRef(new Animated.Value(0.7)).current;
+  const auraAnim = useRef(new Animated.Value(0)).current;
+  const confirmScale = useRef(new Animated.Value(1)).current;
 
   const user = useSelector((state: RootState) => state.user);
   const dispatch = useDispatch<AppDispatch>();
@@ -263,6 +327,46 @@ const Menu_LavaElite_ParticlesV4 = ({ navigation }) => {
     ];
     setLogoutImage(imgs[Math.floor(Math.random() * imgs.length)]);
   }, []);
+
+  useEffect(() => {
+    if (showDialog) {
+      Animated.parallel([
+        Animated.sequence([
+          Animated.timing(modalAnim, {
+            toValue: 1.05,
+            duration: 220,
+            easing: Easing.out(Easing.quad),
+            useNativeDriver: true,
+          }),
+          Animated.spring(modalAnim, {
+            toValue: 1,
+            useNativeDriver: true,
+            friction: 5,
+            tension: 80,
+          }),
+        ]),
+        Animated.loop(
+          Animated.sequence([
+            Animated.timing(auraAnim, {
+              toValue: 1,
+              duration: 900,
+              easing: Easing.inOut(Easing.sin),
+              useNativeDriver: false,
+            }),
+            Animated.timing(auraAnim, {
+              toValue: 0.3,
+              duration: 900,
+              easing: Easing.inOut(Easing.sin),
+              useNativeDriver: false,
+            }),
+          ])
+        ),
+      ]).start();
+    } else {
+      modalAnim.setValue(0.7);
+      auraAnim.setValue(0);
+    }
+  }, [showDialog]);
 
   const handleLogout = async () => {
     setShowDialog(false);
@@ -280,28 +384,53 @@ const Menu_LavaElite_ParticlesV4 = ({ navigation }) => {
     }
   };
 
+  const handleConfirmPressIn = () => {
+    Animated.spring(confirmScale, {
+      toValue: 0.95,
+      useNativeDriver: true,
+      friction: 5,
+      tension: 120,
+    }).start();
+  };
+
+  const handleConfirmPressOut = () => {
+    Animated.spring(confirmScale, {
+      toValue: 1,
+      useNativeDriver: true,
+      friction: 5,
+      tension: 120,
+    }).start();
+  };
+
+  const auraOpacity = auraAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.2, 0.9],
+  });
+
+  const auraScale = auraAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0.98, 1.04],
+  });
+
   return (
     <View style={{ flex: 1 }}>
       <LavaBackground />
 
-      {/* ⭐ HEADER ELEGANTE PARA VOLVER */}
       <CSHeader title="Menú" />
 
       <SafeAreaView style={styles.container}>
-        {/* HEADER DATA */}
+        
         <View style={styles.header}>
           <View style={styles.avatarWrapper}>
-            <Animated.View style={styles.glowAura} />
+            <Animated.View style={[styles.glowAura, { opacity: 1 }]} />
             <Image
               source={user?.photo ? { uri: user.photo } : require("../assets/usedImages/Unkown.png")}
               style={styles.avatar}
             />
           </View>
 
-          <View style={[styles.badge, { backgroundColor: user?.isPremium ? "#ff5722" : "#ff8a65" }]}>
-            <Text style={styles.badgeText}>
-              {user?.isPremium ? "🔥 Premium" : "🌋 Free"}
-            </Text>
+          <View style={[styles.badge, { backgroundColor: user?.isPremium ? "#ff5722" : "#455a64" }]}>
+            <Text style={styles.badgeText}>{user?.isPremium ? "🔥 Premium" : "🧊 Free"}</Text>
           </View>
 
           <Text style={styles.name}>{user?.name || "Chef Volcánico"}</Text>
@@ -310,7 +439,6 @@ const Menu_LavaElite_ParticlesV4 = ({ navigation }) => {
 
         <SubscriptionTimer />
 
-        {/* LOGOUT */}
         <View style={styles.logoutContainer}>
           <TouchableOpacity onPress={() => setShowDialog(true)} style={styles.logoutButton}>
             <Image source={logoutImage} style={styles.logoutImage} resizeMode="contain" />
@@ -325,40 +453,85 @@ const Menu_LavaElite_ParticlesV4 = ({ navigation }) => {
           </TouchableOpacity>
         </View>
 
-        {/* MODAL */}
         <Modal transparent visible={showDialog} animationType="fade">
           <View style={styles.overlay}>
-            <View style={styles.dialog}>
-              <MaterialIcons name="logout" size={50} color="#ff7043" />
+            <Animated.View style={[styles.dialog, { transform: [{ scale: modalAnim }] }]}>
+             
+              <Animated.View
+                style={[
+                  styles.lavaAura,
+                  {
+                    opacity: auraOpacity,
+                    transform: [{ scale: auraScale }],
+                  },
+                ]}
+              />
+
+              {Array.from({ length: 12 }).map((_, i) => (
+                <ModalParticle key={`mp-${i}`} delay={i * 120} />
+              ))}
+
+              <View style={styles.iconCircle}>
+                <MaterialIcons name="logout" size={48} color="#ff8a65" />
+              </View>
+
               <Text style={styles.dialogTitle}>¿Cerrar sesión?</Text>
-              <Text style={styles.dialogText}>Tus datos se enfriarán lentamente... 🌋</Text>
+
+              <LinearGradient
+                colors={["#ff8a65", "#ff5722", "#ff8a65"]}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 0 }}
+                style={styles.divider}
+              />
+
+              <Text style={styles.dialogText}>Antes de salir, recuerda que:</Text>
+
+              <View style={styles.bulletList}>
+                <Text style={styles.bullet}>
+                  • Tu <Text style={styles.bold}>suscripción</Text> se mantiene activa.
+                </Text>
+                <Text style={styles.bullet}>
+                  • Tu <Text style={styles.bold}>progreso</Text> sigue intacto.
+                </Text>
+                <Text style={styles.bullet}>
+                  • Tus <Text style={styles.bold}>favoritos locales</Text> serán limpiados.
+                </Text>
+                <Text style={styles.bullet}>
+                  • Puedes volver cuando quieras, Chef 🔥
+                </Text>
+              </View>
 
               <View style={styles.dialogButtons}>
                 <TouchableOpacity style={styles.cancelBtn} onPress={() => setShowDialog(false)}>
                   <Text style={styles.cancelText}>Cancelar</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity
-                  style={styles.confirmBtn}
-                  onPress={handleLogout}
-                  disabled={loadingLogout}
-                >
-                  <Text style={styles.confirmText}>
-                    {loadingLogout ? "Cerrando..." : "Cerrar sesión"}
-                  </Text>
-                </TouchableOpacity>
+                <Animated.View style={{ transform: [{ scale: confirmScale }] }}>
+                  <TouchableOpacity
+                    style={styles.confirmBtn}
+                    onPress={handleLogout}
+                    disabled={loadingLogout}
+                    onPressIn={handleConfirmPressIn}
+                    onPressOut={handleConfirmPressOut}
+                  >
+                    <Text style={styles.confirmText}>
+                      {loadingLogout ? "Cerrando..." : "Cerrar sesión"}
+                    </Text>
+                  </TouchableOpacity>
+                </Animated.View>
               </View>
 
-            </View>
+            </Animated.View>
           </View>
         </Modal>
+
       </SafeAreaView>
     </View>
   );
 };
 
 /* ============================================================================================
-   🎨 ESTILOS
+   🎨 STYLES
 ============================================================================================ */
 
 const styles = StyleSheet.create({
@@ -395,6 +568,7 @@ const styles = StyleSheet.create({
 
   badge: { borderRadius: 12, paddingVertical: 4, paddingHorizontal: 12, marginTop: 10 },
   badgeText: { color: "#fff", fontWeight: "700", fontSize: 14 },
+
   name: { color: "#ffe0b2", fontSize: 22, fontWeight: "700", marginTop: 8 },
   email: { color: "#ffbfa4", fontSize: 14, marginBottom: 10 },
 
@@ -403,7 +577,7 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     paddingHorizontal: 25,
     alignItems: "center",
-    marginTop: 10,
+    marginTop: 15,
     borderWidth: 1,
     borderColor: "rgba(255,90,0,0.4)",
     shadowColor: "#ff5722",
@@ -444,32 +618,101 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "rgba(255,80,0,0.8)",
     shadowColor: "#ff5722",
-    shadowOpacity: 0.8,
-    shadowRadius: 20,
+    shadowOpacity: 1,
+    shadowRadius: 25,
+    overflow: "hidden",
   },
 
-  dialogTitle: { fontSize: 20, fontWeight: "700", color: "#ffe0b2", marginBottom: 8 },
-  dialogText: { color: "#ffbfa4", textAlign: "center", marginBottom: 20 },
+  lavaAura: {
+    position: "absolute",
+    top: -30,
+    bottom: -30,
+    left: -30,
+    right: -30,
+    borderRadius: 35,
+    backgroundColor: "rgba(255,80,0,0.18)",
+    shadowColor: "#ff3d00",
+    shadowOpacity: 0.95,
+    shadowRadius: 40,
+    zIndex: -1,
+  },
+
+  iconCircle: {
+    width: 90,
+    height: 90,
+    borderRadius: 45,
+    backgroundColor: "rgba(255,60,0,0.15)",
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 10,
+    borderWidth: 2,
+    borderColor: "#ff7043",
+    shadowColor: "#ff5722",
+    shadowOpacity: 1,
+    shadowRadius: 15,
+  },
+
+  divider: {
+    width: "85%",
+    height: 3,
+    borderRadius: 20,
+    marginVertical: 12,
+  },
+
+  dialogTitle: {
+    fontSize: 22,
+    fontWeight: "800",
+    color: "#ffe0b2",
+    textShadowColor: "#ff6a00",
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 10,
+  },
+
+  dialogText: {
+    color: "#ffbfa4",
+    textAlign: "center",
+    fontSize: 15,
+    marginBottom: 10,
+  },
+
+  bulletList: {
+    width: "100%",
+    paddingHorizontal: 10,
+    marginBottom: 20,
+    gap: 6,
+  },
+
+  bullet: {
+    color: "#ffcbb2",
+    fontSize: 14,
+    lineHeight: 20,
+  },
+
+  bold: { fontWeight: "700", color: "#ffe0b2" },
 
   dialogButtons: { flexDirection: "row", gap: 10 },
 
-  cancelBtn: { backgroundColor: "#333", borderRadius: 8, paddingVertical: 10, paddingHorizontal: 20 },
+  cancelBtn: {
+    backgroundColor: "#333",
+    borderRadius: 10,
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+  },
   cancelText: { color: "#ff8a65", fontWeight: "600" },
 
   confirmBtn: {
     backgroundColor: "#ff3d00",
-    borderRadius: 8,
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    borderRadius: 10,
+    paddingVertical: 12,
+    paddingHorizontal: 24,
     shadowColor: "#ff6f00",
     shadowOpacity: 1,
-    shadowRadius: 10,
+    shadowRadius: 12,
   },
   confirmText: { color: "#fff", fontWeight: "700" },
 });
 
-export default Menu_LavaElite_ParticlesV4;
-
+export default Menu_LavaElite_ParticlesV6_Ultra;
 
 /*
 7	Chef Arcade	Retro 8-bit pixelado.	🕹️ Naranja, violeta, negro.	Inspirado en Donkey Kong o Kirby — botones pixel, tipografía 8bit, Chefy animado saltando.
