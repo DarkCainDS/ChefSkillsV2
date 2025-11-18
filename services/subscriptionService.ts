@@ -16,71 +16,97 @@ import { setMaxFavorites } from "../store/Slices/FavoriteSlice";
 import { createTransaction } from "./transactionService";
 
 // ============================================================================
-// 🟩 FAVORITES LIMIT POR PLAN  (NO acumulativo)
+// 🟩 FAVORITES LIMIT POR PLAN (no acumulativo por compra, SOLO por topPlan)
 // ============================================================================
 export const getFavoritesLimitByPlan = (planId: string): number => {
   switch (planId) {
     case "plan_monthly_basic":
-      return 15; // +5
+      return 10;  // base 10 + 0
     case "plan_quarterly_plus":
-      return 20; // +10
+      return 15;  // base 10 + 5
     case "plan_semiannual_pro":
-      return 25; // +15
+      return 20;  // base 10 + 10
     case "plan_annual_elite":
-      return 30; // +20
+      return 30;  // base 10 + 20
     default:
-      return 10; // FREE
+      return 10;  // FREE
   }
 };
 
+// 🔢 Ranking de planes para saber cuál es "más alto"
+const PLAN_RANK: Record<string, number> = {
+  plan_monthly_basic: 1,
+  plan_quarterly_plus: 2,
+  plan_semiannual_pro: 3,
+  plan_annual_elite: 4,
+};
+
+const getPlanRank = (planId: string): number => PLAN_RANK[planId] ?? 0;
+
 // ============================================================================
-// 🟦 subscribeUser — CREA/ACTUALIZA LA SUBSCRIPCIÓN + ACUMULA MESES + HISTORIAL
+// 🟦 subscribeUser — CREA/ACTUALIZA LA SUBSCRIPCIÓN
+//   ✔ Acumula meses si la suscripción sigue activa
+//   ✔ Mantiene beneficios del plan MÁS ALTO mientras no expire
+//   ✔ Si se deja expirar → se resetea al plan que se compre
 // ============================================================================
 export const subscribeUser = async (userId: string, plan: any) => {
   try {
     const ref = doc(db, "subscriptions", userId);
+    const now = new Date();
 
-    // ===============================
-    // 1️⃣ RECUPERAR EXPIRACIÓN PREVIA
-    // ===============================
     const prevSnap = await getDoc(ref);
+    const prevData = prevSnap.exists() ? prevSnap.data() : null;
 
-    let baseDate = new Date(); // por defecto → HOY
+    // 1️⃣ Determinar si hay continuidad (expiresAt > ahora)
+    let prevExpires: Date | null = null;
 
-    if (prevSnap.exists() && prevSnap.data().expiresAt) {
-      const prev = prevSnap.data().expiresAt;
-
-      const prevDate =
-        typeof prev === "string" ? new Date(prev) : prev?.toDate?.() ?? null;
-
-      // Si la suscripción anterior sigue activa → acumulamos desde ahí
-      if (prevDate && prevDate > new Date()) {
-        baseDate = prevDate;
-      }
+    if (prevData?.expiresAt) {
+      prevExpires =
+        typeof prevData.expiresAt === "string"
+          ? new Date(prevData.expiresAt)
+          : prevData.expiresAt?.toDate?.() ?? null;
     }
 
-    // ===============================
-    // 2️⃣ SUMAR LA DURACIÓN DEL NUEVO PLAN
-    // ===============================
+    const hasContinuity = !!(prevExpires && prevExpires > now);
+
+    // 2️⃣ Base para nueva expiración (si hay continuidad → desde prevExpires)
+    const baseDate = hasContinuity ? prevExpires! : now;
+
     const expires = new Date(baseDate);
     expires.setMonth(expires.getMonth() + plan.durationMonths);
 
-    // ===============================
-    // 3️⃣ FAVORITOS FINALES (NO acumulativos)
-    // ===============================
-    const favoritesLimit = getFavoritesLimitByPlan(plan.id);
+    // 3️⃣ Determinar el "top plan" de la cadena continua
+    let previousTopPlanId: string | null =
+      prevData?.topPlanId || prevData?.planId || null;
 
-    // ===============================
-    // 4️⃣ DATA A GUARDAR
-    // ===============================
+    let topPlanId: string;
+
+    if (hasContinuity && previousTopPlanId) {
+      const prevRank = getPlanRank(previousTopPlanId);
+      const newRank = getPlanRank(plan.id);
+
+      topPlanId = newRank > prevRank ? plan.id : previousTopPlanId;
+    } else {
+      // No hay continuidad → se resetea el top al plan actual
+      topPlanId = plan.id;
+    }
+
+    const favoritesLimit = getFavoritesLimitByPlan(topPlanId);
+
+    // 4️⃣ Data a guardar en Firestore
     const data = {
       userId,
+
+      // Plan actual (último comprado, lo que verá el usuario en el menú)
       planId: plan.id,
       planName: plan.name,
 
+      // Plan más alto de la cadena continua (para beneficios reales)
+      topPlanId,
+
       isActive: true,
 
-      favoritesLimit, // límite final
+      favoritesLimit, // límite FINAL aplicado en la app
 
       durationMonths: plan.durationMonths,
       pricePaid: plan.basePriceCents / 100,
@@ -92,28 +118,21 @@ export const subscribeUser = async (userId: string, plan: any) => {
       updatedAt: serverTimestamp(),
     };
 
-    // ===============================
-    // 5️⃣ GUARDAR / ACTUALIZAR LA SUSCRIPCIÓN
-    // ===============================
     await setDoc(ref, data, { merge: true });
 
-    // ===============================
-    // 6️⃣ GUARDAR EN HISTORIAL DE COMPRAS
-    // ===============================
-    await createTransaction(
-      userId,
-      {
-        id: plan.id,
-        name: plan.name,
-        durationMonths: plan.durationMonths,
-        basePriceCents: plan.basePriceCents,
-        currency: plan.currency,
-      },
-      null, // purchaseToken
-      "internal" // provider (cuando tengamos IAP → cambia a "google_play")
-    );
+    // 5️⃣ Guardar en historial de compras
+    await createTransaction(userId, {
+      planId: plan.id,
+      planName: plan.name,
+      durationMonths: plan.durationMonths,
+      pricePaid: plan.basePriceCents / 100,
+      currency: plan.currency,
+      expiresAt: expires.toISOString(),
+      paymentProvider: "internal", // luego "google_play"
+      purchaseToken: null,
+    });
 
-    console.log("🔥 Suscripción creada/actualizada + historial guardado:", data);
+    console.log("🔥 Suscripción creada/actualizada + historial:", data);
     return data;
   } catch (error) {
     console.error("❌ Error en subscribeUser:", error);
@@ -140,6 +159,8 @@ export const unsubscribeUser = async (userId: string) => {
 
 // ============================================================================
 // 🟦 checkSubscriptionStatus — EJECUTADO EN App.tsx
+//   ✔ Respeta topPlanId
+//   ✔ Usa favoritesLimit guardado (si existe) o lo calcula
 // ============================================================================
 export const checkSubscriptionStatus = async (
   userId: string,
@@ -184,7 +205,24 @@ export const checkSubscriptionStatus = async (
     }
 
     // ✔ Activa
-    const limit = getFavoritesLimitByPlan(data.planId);
+    const storedLimit =
+      typeof data.favoritesLimit === "number" ? data.favoritesLimit : null;
+
+    const limit =
+      storedLimit ??
+      getFavoritesLimitByPlan(data.topPlanId || data.planId || "");
+
+    // Aseguramos que, si falta favoritesLimit, se re-escriba correcto
+    if (!storedLimit) {
+      await setDoc(
+        ref,
+        {
+          favoritesLimit: limit,
+          updatedAt: serverTimestamp(),
+        },
+        { merge: true }
+      );
+    }
 
     dispatch(
       subscribePlanAction({
@@ -206,6 +244,8 @@ export const checkSubscriptionStatus = async (
       planName: data.planName,
       favoritesLimit: limit,
       expiresAt: exp.toISOString(),
+      pricePaid: data.pricePaid,
+      currency: data.currency,
     };
   } catch (error) {
     console.error("❌ ERROR en checkSubscriptionStatus:", error);

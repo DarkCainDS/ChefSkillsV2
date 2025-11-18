@@ -1,8 +1,8 @@
 // screens/PastryRecipeDetail.tsx
-import { MaterialIcons } from '@expo/vector-icons';
-import { useFonts } from 'expo-font';
-import { Image } from 'expo-image';
-import React, { useState, useRef } from 'react';
+import { MaterialIcons } from "@expo/vector-icons";
+import { useFonts } from "expo-font";
+import { Image } from "expo-image";
+import React, { useState, useRef } from "react";
 import {
   Modal,
   ScrollView,
@@ -12,86 +12,44 @@ import {
   TouchableWithoutFeedback,
   View,
   Animated,
-  Alert,
-} from 'react-native';
+} from "react-native";
 
-import BouncyCheckbox from 'react-native-bouncy-checkbox';
-import { useDispatch, useSelector } from 'react-redux';
-import { addFavorite, removeFavorite } from '../../store/Slices/FavoriteSlice';
-import { saveFavoritesToStorage } from '../../store/storage/FavoriteStorage';
-import LinearGradient from 'react-native-linear-gradient';
-import { useRoute, RouteProp, useNavigation } from '@react-navigation/native';
+import BouncyCheckbox from "react-native-bouncy-checkbox";
+import LinearGradient from "react-native-linear-gradient";
+import { useRoute, RouteProp, useNavigation } from "@react-navigation/native";
 
-import CategoryHeader from '../UI/CSHeader_ModernPro';
+import CategoryHeader from "../UI/CSHeader_ModernPro";
+import { getSafeImage } from "../../utils/getImageSource";
+import { useFavoriteToggle } from "../hooks/useFavoriteToggle";
 
-// TYPES
-interface Ingredient { name: string; quantity: string; }
-interface Step { step: string; }
-interface Tip { title: string; description: string; }
-interface Recipe {
-  uid: string;
-  name: string;
-  images: string[];
-  ingredients: Ingredient[];
-  steps: Step[];
-  tips?: Tip[];
-}
+import type { Recipe } from "../../store/Slices/FavoriteSlice";
 
+// NAV TYPE
 type RootStackParamList = {
   PastryRecipeDetail: { recipe: Recipe };
 };
 
 export default function PastryRecipeDetail() {
   const navigation = useNavigation();
-  const route = useRoute<RouteProp<RootStackParamList, 'PastryRecipeDetail'>>();
-  const recipe = route.params?.recipe;
+  const route =
+    useRoute<RouteProp<RootStackParamList, "PastryRecipeDetail">>();
+  const recipe = route.params?.recipe as Recipe | undefined;
 
   const [fontLoaded] = useFonts({
-    MateSC: require('../../assets/fonts/MateSC-Regular.ttf'),
+    MateSC: require("../../assets/fonts/MateSC-Regular.ttf"),
   });
 
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [multiplier, setMultiplier] = useState<number>(1);
-  const [buttonText, setButtonText] = useState<string>('x1');
+  const [buttonText, setButtonText] = useState<string>("x1");
   const [tipsVisible, setTipsVisible] = useState<boolean>(false);
 
   const fadeAnim = useRef(new Animated.Value(0)).current;
-  const heartAnim = useRef(new Animated.Value(1)).current;
 
-  const dispatch = useDispatch();
-  const favorites = useSelector((state: any) => state.favorites.recipes) as Recipe[];
-  const isFavorite = recipe ? favorites.some(fav => fav.uid === recipe.uid) : false;
-
-  const persistFavorites = async (updated: Recipe[]) => {
-    try {
-      await saveFavoritesToStorage(updated);
-    } catch (error) {
-      Alert.alert('Error', 'No se pudo guardar los favoritos.');
-    }
-  };
-
-  const animateHeart = () => {
-    Animated.sequence([
-      Animated.timing(heartAnim, { toValue: 1.25, duration: 150, useNativeDriver: true }),
-      Animated.timing(heartAnim, { toValue: 1, duration: 150, useNativeDriver: true }),
-    ]).start();
-  };
-
-  const handleFavoritePress = async () => {
-    if (!recipe) return;
-
-    let updatedFavorites: Recipe[];
-
-    if (!isFavorite) {
-      dispatch(addFavorite(recipe));
-      updatedFavorites = [...favorites, recipe];
-      animateHeart();
-    } else {
-      dispatch(removeFavorite(recipe.uid));
-      updatedFavorites = favorites.filter(fav => fav.uid !== recipe.uid);
-    }
-    await persistFavorites(updatedFavorites);
-  };
+  // ❤️ Hook unificado
+  const { isFavorite, toggleFavorite, heartAnim } = useFavoriteToggle(
+    recipe ?? null
+  );
 
   const modifyQuantity = (quantity: string, multiplier: number) =>
     quantity.replace(/-?\d+(\.\d+)?/g, (match) =>
@@ -100,30 +58,36 @@ export default function PastryRecipeDetail() {
 
   const handleButtonPress = () => {
     const states = [
-      { multiplier: 1, text: 'x1' },
-      { multiplier: 2, text: 'x2' },
-      { multiplier: 3, text: 'x3' },
-      { multiplier: 4, text: 'x4' },
-      { multiplier: 0.5, text: '1/2' },
+      { multiplier: 1, text: "x1" },
+      { multiplier: 2, text: "x2" },
+      { multiplier: 3, text: "x3" },
+      { multiplier: 4, text: "x4" },
+      { multiplier: 0.5, text: "1/2" },
     ];
-    const idx = states.findIndex(s => s.multiplier === multiplier);
+    const idx = states.findIndex((s) => s.multiplier === multiplier);
     const next = states[(idx + 1) % states.length];
     setMultiplier(next.multiplier);
     setButtonText(next.text);
   };
-const getButtonColor = (m: number) => {
-  switch (m) {
-    case 1: return '#6B7280';  // Neutral-500
-    case 2: return '#3B82F6';  // Blue-500
-    case 3: return '#22C55E';  // Green-500
-    case 4: return '#EF4444';  // Red-500
-    case 0.5: return '#FACC15'; // Yellow-400
-    default: return '#3B82F6';
-  }
-};
 
+  const getButtonColor = (m: number) => {
+    switch (m) {
+      case 1:
+        return "#6B7280";
+      case 2:
+        return "#3B82F6";
+      case 3:
+        return "#22C55E";
+      case 4:
+        return "#EF4444";
+      case 0.5:
+        return "#FACC15";
+      default:
+        return "#3B82F6";
+    }
+  };
 
-  const tipColors = ['#FFE6EF', '#FFD4E3', '#F8C3D8', '#F5B7D1'];
+  const tipColors = ["#FFE6EF", "#FFD4E3", "#F8C3D8", "#F5B7D1"];
 
   const openTipsModal = () => {
     setTipsVisible(true);
@@ -145,16 +109,19 @@ const getButtonColor = (m: number) => {
   };
 
   if (!fontLoaded || !recipe) {
-    return <View><Text>Cargando...</Text></View>;
+    return (
+      <View>
+        <Text>Cargando...</Text>
+      </View>
+    );
   }
 
   return (
     <LinearGradient
-      colors={['#FFE6EF', '#FFD4E3', '#F8C3D8']}
+      colors={["#FFE6EF", "#FFD4E3", "#F8C3D8"]}
       style={{ flex: 1 }}
     >
       <ScrollView style={{ flex: 1, padding: 15 }}>
-
         {/* HEADER */}
         <CategoryHeader
           title="Pastelería"
@@ -168,33 +135,42 @@ const getButtonColor = (m: number) => {
         <View style={styles.headerContainer}>
           <Text style={styles.recipeTitle}>{recipe.name}</Text>
 
-          <TouchableOpacity onPress={handleFavoritePress} style={styles.favoriteIcon}>
+          <TouchableOpacity onPress={toggleFavorite} style={styles.favoriteIcon}>
             <Animated.View style={{ transform: [{ scale: heartAnim }] }}>
               <MaterialIcons
-                name={isFavorite ? 'favorite' : 'favorite-border'}
+                name={isFavorite ? "favorite" : "favorite-border"}
                 size={48}
-                color={isFavorite ? '#FF2F81' : 'black'}
+                color={isFavorite ? "#FF2F81" : "black"}
               />
             </Animated.View>
           </TouchableOpacity>
         </View>
 
         {/* IMAGES */}
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} pagingEnabled style={styles.imageContainer}>
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          pagingEnabled
+          style={styles.imageContainer}
+        >
           {recipe.images?.map((img, idx) => (
             <TouchableOpacity key={idx} onPress={() => setSelectedImage(img)}>
-              <Image source={img} style={styles.image} contentFit="cover" />
+              <Image
+                source={getSafeImage(img)}
+                style={styles.image}
+                contentFit="cover"
+              />
             </TouchableOpacity>
           ))}
         </ScrollView>
 
-        {/* MODAL IMAGE */}
+        {/* IMAGE MODAL */}
         <Modal visible={!!selectedImage} transparent animationType="fade">
           <TouchableWithoutFeedback onPress={() => setSelectedImage(null)}>
             <View style={styles.modalBackground}>
               {selectedImage && (
                 <Image
-                  source={selectedImage}
+                  source={getSafeImage(selectedImage)}
                   style={styles.modalImageLarge}
                   contentFit="contain"
                 />
@@ -220,24 +196,37 @@ const getButtonColor = (m: number) => {
 
         {/* TABLA INGREDIENTES */}
         <View style={styles.ingredientsContainer}>
-          <View style={[styles.tableRow, { backgroundColor: '#ffeaf2' }]}>
-            <Text style={[styles.tableCellName, styles.tableHeader]}>Ingrediente</Text>
-            <Text style={[styles.tableCellQuantity, styles.tableHeader]}>Cantidad</Text>
-            <Text style={[styles.tableCellCheckbox, styles.tableHeader]}>✔</Text>
+          <View style={[styles.tableRow, { backgroundColor: "#ffeaf2" }]}>
+            <Text style={[styles.tableCellName, styles.tableHeader]}>
+              Ingrediente
+            </Text>
+            <Text style={[styles.tableCellQuantity, styles.tableHeader]}>
+              Cantidad
+            </Text>
+            <Text style={[styles.tableCellCheckbox, styles.tableHeader]}>
+              ✔
+            </Text>
           </View>
 
           {recipe.ingredients?.map((ing, idx) => (
             <View key={idx} style={styles.tableRow}>
               <Text style={styles.tableCellName}>{ing.name}</Text>
-              <Text style={styles.tableCellQuantity}>{modifyQuantity(ing.quantity, multiplier)}</Text>
+              <Text style={styles.tableCellQuantity}>
+                {modifyQuantity(ing.quantity, multiplier)}
+              </Text>
               <View style={styles.tableCellCheckbox}>
-                <BouncyCheckbox size={20} fillColor="#E91E63" unFillColor="#fff" disableBuiltInState />
+                <BouncyCheckbox
+                  size={20}
+                  fillColor="#E91E63"
+                  unFillColor="#fff"
+                  disableBuiltInState
+                />
               </View>
             </View>
           ))}
         </View>
 
-        {/* TIPS — BEFORE STEPS */}
+        {/* TIPS */}
         {recipe.tips?.length > 0 && (
           <TouchableOpacity style={styles.tipsButton} onPress={openTipsModal}>
             <MaterialIcons name="lightbulb" size={28} color="white" />
@@ -257,7 +246,12 @@ const getButtonColor = (m: number) => {
                 <Text style={styles.stepDescription}>{step.step}</Text>
               </View>
               <View style={styles.checkboxContainer}>
-                <BouncyCheckbox size={24} fillColor="#E91E63" unFillColor="#fff" disableBuiltInState />
+                <BouncyCheckbox
+                  size={24}
+                  fillColor="#E91E63"
+                  unFillColor="#fff"
+                  disableBuiltInState
+                />
               </View>
             </View>
           ))}
@@ -269,23 +263,36 @@ const getButtonColor = (m: number) => {
         <TouchableWithoutFeedback onPress={closeTipsModal}>
           <View style={styles.tipsModalOverlay}>
             <TouchableWithoutFeedback>
-              <Animated.View style={[styles.tipsModal, { opacity: fadeAnim, transform: [{ scale: fadeAnim }] }]}>
+              <Animated.View
+                style={[
+                  styles.tipsModal,
+                  { opacity: fadeAnim, transform: [{ scale: fadeAnim }] },
+                ]}
+              >
                 <Text style={styles.tipsTitle}>💡 Consejos útiles</Text>
 
                 <ScrollView showsVerticalScrollIndicator={false}>
                   {recipe.tips?.map((tip, idx) => (
                     <LinearGradient
                       key={idx}
-                      colors={[tipColors[idx % tipColors.length], tipColors[idx % tipColors.length] + 'CC']}
+                      colors={[
+                        tipColors[idx % tipColors.length],
+                        tipColors[idx % tipColors.length] + "CC",
+                      ]}
                       style={styles.tipCard}
                     >
                       <Text style={styles.tipTitle}>{tip.title}</Text>
-                      <Text style={styles.tipDescription}>{tip.description}</Text>
+                      <Text style={styles.tipDescription}>
+                        {tip.description}
+                      </Text>
                     </LinearGradient>
                   ))}
                 </ScrollView>
 
-                <TouchableOpacity style={styles.closeTipsButton} onPress={closeTipsModal}>
+                <TouchableOpacity
+                  style={styles.closeTipsButton}
+                  onPress={closeTipsModal}
+                >
                   <Text style={styles.closeTipsText}>Cerrar</Text>
                 </TouchableOpacity>
               </Animated.View>
@@ -297,24 +304,24 @@ const getButtonColor = (m: number) => {
   );
 }
 
-// STYLES
+// STYLES (NO TOCADO)
 const styles = StyleSheet.create({
   headerContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     marginBottom: 15,
   },
 
   recipeTitle: {
-    fontFamily: 'MateSC',
+    fontFamily: "MateSC",
     fontSize: 32,
-    textAlign: 'center',
+    textAlign: "center",
     flex: 1,
     padding: 6,
     borderWidth: 2,
     borderRadius: 12,
-    backgroundColor: 'rgba(255,255,255,0.85)',
+    backgroundColor: "rgba(255,255,255,0.85)",
   },
 
   favoriteIcon: {
@@ -322,7 +329,7 @@ const styles = StyleSheet.create({
   },
 
   imageContainer: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginBottom: 20,
   },
 
@@ -335,34 +342,34 @@ const styles = StyleSheet.create({
 
   modalBackground: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.8)',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: "rgba(0,0,0,0.8)",
+    justifyContent: "center",
+    alignItems: "center",
   },
 
   modalImageLarge: {
-    width: '88%',
-    height: '70%',
+    width: "88%",
+    height: "70%",
     borderRadius: 12,
   },
 
   rowHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     marginTop: 10,
     marginBottom: 10,
   },
 
   sectionTitle: {
     fontSize: 22,
-    fontWeight: 'bold',
-    fontStyle: 'italic',
+    fontWeight: "bold",
+    fontStyle: "italic",
     flex: 1,
     borderBottomWidth: 3,
     paddingBottom: 3,
-    borderBottomColor: '#D46C9E',
-    color: '#8A2F61',
+    borderBottomColor: "#D46C9E",
+    color: "#8A2F61",
   },
 
   multiplicarButton: {
@@ -372,22 +379,22 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    color: '#fff',
-    fontWeight: 'bold',
+    color: "#fff",
+    fontWeight: "bold",
     fontSize: 20,
-    fontStyle: 'italic',
+    fontStyle: "italic",
   },
 
   ingredientsContainer: {
-    backgroundColor: 'rgba(255,255,255,0.75)',
+    backgroundColor: "rgba(255,255,255,0.75)",
     borderRadius: 10,
-    overflow: 'hidden',
+    overflow: "hidden",
   },
 
   tableRow: {
-    flexDirection: 'row',
+    flexDirection: "row",
     borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
+    borderBottomColor: "#ddd",
   },
 
   tableCellName: {
@@ -398,18 +405,18 @@ const styles = StyleSheet.create({
   tableCellQuantity: {
     flex: 1,
     padding: 8,
-    textAlign: 'center',
+    textAlign: "center",
   },
 
   tableCellCheckbox: {
     flex: 0.4,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     padding: 8,
   },
 
   tableHeader: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 
   stepsContainer: {
@@ -418,8 +425,8 @@ const styles = StyleSheet.create({
   },
 
   stepItem: {
-    flexDirection: 'row',
-    backgroundColor: 'rgba(255,255,255,0.75)',
+    flexDirection: "row",
+    backgroundColor: "rgba(255,255,255,0.75)",
     padding: 12,
     borderRadius: 12,
     marginBottom: 12,
@@ -430,60 +437,60 @@ const styles = StyleSheet.create({
   },
 
   stepNumber: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 5,
   },
 
   stepDescription: {
     fontSize: 14,
-    color: '#444',
+    color: "#444",
   },
 
   checkboxContainer: {
     flex: 0.15,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
 
   tipsButton: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    backgroundColor: '#FF6BAA',
+    flexDirection: "row",
+    justifyContent: "center",
+    backgroundColor: "#FF6BAA",
     paddingVertical: 12,
     borderRadius: 30,
-    width: '60%',
-    alignSelf: 'center',
+    width: "60%",
+    alignSelf: "center",
     marginVertical: 35,
     elevation: 3,
   },
 
   tipsButtonText: {
-    color: '#fff',
-    fontWeight: 'bold',
+    color: "#fff",
+    fontWeight: "bold",
     marginLeft: 8,
     fontSize: 18,
   },
 
   tipsModalOverlay: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.6)',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: "rgba(0,0,0,0.6)",
+    justifyContent: "center",
+    alignItems: "center",
   },
 
   tipsModal: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     padding: 16,
     borderRadius: 15,
-    width: '85%',
-    maxHeight: '70%',
+    width: "85%",
+    maxHeight: "70%",
   },
 
   tipsTitle: {
     fontSize: 22,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 10,
-    textAlign: 'center',
+    textAlign: "center",
   },
 
   tipCard: {
@@ -493,7 +500,7 @@ const styles = StyleSheet.create({
   },
 
   tipTitle: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     fontSize: 16,
   },
 
@@ -503,17 +510,17 @@ const styles = StyleSheet.create({
   },
 
   closeTipsButton: {
-    backgroundColor: '#D46C9E',
+    backgroundColor: "#D46C9E",
     padding: 10,
     borderRadius: 10,
     marginTop: 10,
-    alignSelf: 'center',
-    width: '40%',
+    alignSelf: "center",
+    width: "40%",
   },
 
   closeTipsText: {
-    color: '#fff',
-    textAlign: 'center',
-    fontWeight: 'bold',
+    color: "#fff",
+    textAlign: "center",
+    fontWeight: "bold",
   },
 });

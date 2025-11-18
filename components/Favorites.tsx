@@ -8,6 +8,8 @@ import { setFavorites } from '../store/Slices/FavoriteSlice';
 import { loadFavoritesFromStorage, saveFavoritesToStorage } from '../store/storage/FavoriteStorage';
 import { getSafeImage } from '../utils/getImageSource';
 import type { Recipe } from '../store/Slices/FavoriteSlice';
+import { useFavoritesWatchdog } from '../utils/favoritesWatchdog';
+
 
 const FavoriteCard: React.FC<{ item: Recipe; onPress: () => void }> = ({ item, onPress }) => (
   <TouchableOpacity style={styles.card} activeOpacity={0.8} onPress={onPress}>
@@ -41,7 +43,8 @@ const Favorites: React.FC = () => {
 
   const used = favoritesRecipes.length;
   const isFull = used >= maxSlots;
-
+  useFavoritesWatchdog(true)
+  
   useEffect(() => {
     (async () => {
       const stored = await loadFavoritesFromStorage();

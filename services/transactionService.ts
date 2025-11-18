@@ -17,13 +17,6 @@ import { db } from "./firebaseConfig";
 // ============================================================================
 // 🟩 createTransaction — Guarda una compra del usuario
 // ============================================================================
-/**
- * Crea una entrada en el historial de compras.
- * Esta función es llamada AUTOMÁTICAMENTE dentro de subscribeUser().
- *
- * @param userId  UID del usuario
- * @param payload Objeto con toda la info necesaria para registrar la transacción
- */
 export const createTransaction = async (
   userId: string,
   payload: {
@@ -45,7 +38,6 @@ export const createTransaction = async (
 
     const data = {
       ...payload,
-
       userId,
       purchasedAt: serverTimestamp(),
       status: "completed",

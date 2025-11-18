@@ -1,8 +1,8 @@
 // screens/SoupRecipeDetail.tsx
-import { MaterialIcons } from '@expo/vector-icons';
-import { useFonts } from 'expo-font';
-import { Image } from 'expo-image';
-import React, { useState, useRef } from 'react';
+import { MaterialIcons } from "@expo/vector-icons";
+import { useFonts } from "expo-font";
+import { Image } from "expo-image";
+import React, { useState, useRef } from "react";
 import {
   Modal,
   ScrollView,
@@ -12,31 +12,19 @@ import {
   TouchableWithoutFeedback,
   View,
   Animated,
-  Alert,
-} from 'react-native';
+} from "react-native";
 
 import BouncyCheckbox from "react-native-bouncy-checkbox";
-import { useDispatch, useSelector } from "react-redux";
-import { addFavorite, removeFavorite } from "../../store/Slices/FavoriteSlice";
-import { saveFavoritesToStorage } from "../../store/storage/FavoriteStorage";
 import LinearGradient from "react-native-linear-gradient";
 import { useRoute, RouteProp, useNavigation } from "@react-navigation/native";
 
 import CategoryHeader from "../UI/CSHeader_ModernPro";
+import { getSafeImage } from "../../utils/getImageSource";
+import { useFavoriteToggle } from "../hooks/useFavoriteToggle";
 
-// TYPES
-interface Ingredient { name: string; quantity: string; }
-interface Step { step: string; }
-interface Tip { title: string; description: string; }
-interface Recipe {
-  uid: string;
-  name: string;
-  images: string[];
-  ingredients: Ingredient[];
-  steps: Step[];
-  tips?: Tip[];
-}
+import type { Recipe } from "../../store/Slices/FavoriteSlice";
 
+// NAV TYPES
 type RootStackParamList = {
   SoupRecipeDetail: { recipe: Recipe };
 };
@@ -44,7 +32,7 @@ type RootStackParamList = {
 export default function SoupRecipeDetail() {
   const navigation = useNavigation();
   const route = useRoute<RouteProp<RootStackParamList, "SoupRecipeDetail">>();
-  const recipe = route.params?.recipe;
+  const recipe = route.params?.recipe as Recipe | undefined;
 
   const [fontLoaded] = useFonts({
     MateSC: require("../../assets/fonts/MateSC-Regular.ttf"),
@@ -56,43 +44,11 @@ export default function SoupRecipeDetail() {
   const [tipsVisible, setTipsVisible] = useState<boolean>(false);
 
   const fadeAnim = useRef(new Animated.Value(0)).current;
-  const heartAnim = useRef(new Animated.Value(1)).current;
 
-  const dispatch = useDispatch();
-  const favorites = useSelector((state: any) => state.favorites.recipes) as Recipe[];
-  const isFavorite = recipe ? favorites.some((fav) => fav.uid === recipe.uid) : false;
-
-  const persistFavorites = async (updated: Recipe[]) => {
-    try {
-      await saveFavoritesToStorage(updated);
-    } catch (error) {
-      console.error("Error guardando favoritos", error);
-      Alert.alert("Error", "No se pudo guardar el favorito localmente.");
-    }
-  };
-
-  const animateHeart = () => {
-    Animated.sequence([
-      Animated.timing(heartAnim, { toValue: 1.25, duration: 150, useNativeDriver: true }),
-      Animated.timing(heartAnim, { toValue: 1, duration: 150, useNativeDriver: true }),
-    ]).start();
-  };
-
-  const handleFavoritePress = async () => {
-    if (!recipe) return;
-
-    let updatedFavorites;
-    if (!isFavorite) {
-      dispatch(addFavorite(recipe));
-      updatedFavorites = [...favorites, recipe];
-      animateHeart();
-    } else {
-      dispatch(removeFavorite(recipe.uid));
-      updatedFavorites = favorites.filter((fav) => fav.uid !== recipe.uid);
-    }
-
-    await persistFavorites(updatedFavorites);
-  };
+  // ❤️ Hook universal
+  const { isFavorite, toggleFavorite, heartAnim } = useFavoriteToggle(
+    recipe ?? null
+  );
 
   const modifyQuantity = (quantity: string, multiplier: number) =>
     quantity.replace(/-?\d+(\.\d+)?/g, (match) =>
@@ -113,17 +69,22 @@ export default function SoupRecipeDetail() {
     setButtonText(next.text);
   };
 
-const getButtonColor = (m: number) => {
-  switch (m) {
-    case 1: return '#6B7280';  // Neutral-500
-    case 2: return '#3B82F6';  // Blue-500
-    case 3: return '#22C55E';  // Green-500
-    case 4: return '#EF4444';  // Red-500
-    case 0.5: return '#FACC15'; // Yellow-400
-    default: return '#3B82F6';
-  }
-};
-
+  const getButtonColor = (m: number) => {
+    switch (m) {
+      case 1:
+        return "#6B7280";
+      case 2:
+        return "#3B82F6";
+      case 3:
+        return "#22C55E";
+      case 4:
+        return "#EF4444";
+      case 0.5:
+        return "#FACC15";
+      default:
+        return "#3B82F6";
+    }
+  };
 
   const tipColors = ["#FFF7DA", "#FFE9A8", "#FFD87B", "#F7D27D"];
 
@@ -148,7 +109,9 @@ const getButtonColor = (m: number) => {
 
   if (!fontLoaded || !recipe) {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <View
+        style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+      >
         <Text>Cargando receta...</Text>
       </View>
     );
@@ -160,7 +123,6 @@ const getButtonColor = (m: number) => {
       style={{ flex: 1 }}
     >
       <ScrollView style={{ flex: 1, padding: 15 }}>
-
         {/* HEADER */}
         <CategoryHeader
           title="Sopas"
@@ -174,7 +136,7 @@ const getButtonColor = (m: number) => {
         <View style={styles.headerContainer}>
           <Text style={styles.recipeTitle}>{recipe.name}</Text>
 
-          <TouchableOpacity onPress={handleFavoritePress} style={styles.favoriteIcon}>
+          <TouchableOpacity onPress={toggleFavorite} style={styles.favoriteIcon}>
             <Animated.View style={{ transform: [{ scale: heartAnim }] }}>
               <MaterialIcons
                 name={isFavorite ? "favorite" : "favorite-border"}
@@ -195,7 +157,7 @@ const getButtonColor = (m: number) => {
           {recipe.images?.map((imgUrl, idx) => (
             <TouchableOpacity key={idx} onPress={() => setSelectedImage(imgUrl)}>
               <Image
-                source={imgUrl}
+                source={getSafeImage(imgUrl)}
                 style={styles.image}
                 contentFit="cover"
               />
@@ -209,7 +171,7 @@ const getButtonColor = (m: number) => {
             <View style={styles.modalBackground}>
               {selectedImage && (
                 <Image
-                  source={selectedImage}
+                  source={getSafeImage(selectedImage)}
                   style={styles.modalImageLarge}
                   contentFit="contain"
                 />
@@ -236,9 +198,15 @@ const getButtonColor = (m: number) => {
         {/* TABLA INGREDIENTES */}
         <View style={styles.ingredientsContainer}>
           <View style={[styles.tableRow, { backgroundColor: "#FFF0C7" }]}>
-            <Text style={[styles.tableCellName, styles.tableHeader]}>Ingrediente</Text>
-            <Text style={[styles.tableCellQuantity, styles.tableHeader]}>Cantidad</Text>
-            <Text style={[styles.tableCellCheckbox, styles.tableHeader]}>✔</Text>
+            <Text style={[styles.tableCellName, styles.tableHeader]}>
+              Ingrediente
+            </Text>
+            <Text style={[styles.tableCellQuantity, styles.tableHeader]}>
+              Cantidad
+            </Text>
+            <Text style={[styles.tableCellCheckbox, styles.tableHeader]}>
+              ✔
+            </Text>
           </View>
 
           {recipe.ingredients?.map((ing, idx) => (
@@ -259,7 +227,7 @@ const getButtonColor = (m: number) => {
           ))}
         </View>
 
-        {/* TIPS ANTES DE LOS PASOS */}
+        {/* TIPS */}
         {recipe.tips?.length > 0 && (
           <TouchableOpacity style={styles.tipsButton} onPress={openTipsModal}>
             <MaterialIcons name="lightbulb" size={28} color="white" />
@@ -293,7 +261,7 @@ const getButtonColor = (m: number) => {
       </ScrollView>
 
       {/* MODAL TIPS */}
-      <Modal visible={tipsVisible} transparent animationType="fade" onRequestClose={closeTipsModal}>
+      <Modal visible={tipsVisible} transparent animationType="fade">
         <TouchableWithoutFeedback onPress={closeTipsModal}>
           <View style={styles.tipsModalOverlay}>
             <TouchableWithoutFeedback>
@@ -309,19 +277,26 @@ const getButtonColor = (m: number) => {
                   {recipe.tips?.map((tip, idx) => (
                     <LinearGradient
                       key={idx}
-                      colors={[tipColors[idx % tipColors.length], tipColors[idx % tipColors.length] + "CC"]}
+                      colors={[
+                        tipColors[idx % tipColors.length],
+                        tipColors[idx % tipColors.length] + "CC",
+                      ]}
                       style={styles.tipCard}
                     >
                       <Text style={styles.tipTitle}>{tip.title}</Text>
-                      <Text style={styles.tipDescription}>{tip.description}</Text>
+                      <Text style={styles.tipDescription}>
+                        {tip.description}
+                      </Text>
                     </LinearGradient>
                   ))}
                 </ScrollView>
 
-                <TouchableOpacity style={styles.closeTipsButton} onPress={closeTipsModal}>
+                <TouchableOpacity
+                  style={styles.closeTipsButton}
+                  onPress={closeTipsModal}
+                >
                   <Text style={styles.closeTipsText}>Cerrar</Text>
                 </TouchableOpacity>
-
               </Animated.View>
             </TouchableWithoutFeedback>
           </View>
@@ -331,7 +306,7 @@ const getButtonColor = (m: number) => {
   );
 }
 
-// STYLES
+// STYLES ✔ NO SE CAMBIAN ✔
 const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: "row",

@@ -1,4 +1,4 @@
-// store/Slices/favoritesSlice.ts
+// store/Slices/FavoriteSlice.ts
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface Recipe {
@@ -11,12 +11,12 @@ export interface Recipe {
 
 interface FavoriteState {
   recipes: Recipe[];
-  maxFavorites: number;   // ← valor FINAL desde suscripción
+  maxFavorites: number; // ← valor FINAL desde suscripción
 }
 
 const initialState: FavoriteState = {
   recipes: [],
-  maxFavorites: 10,        // base por defecto
+  maxFavorites: 10, // base por defecto
 };
 
 const favoriteSlice = createSlice({

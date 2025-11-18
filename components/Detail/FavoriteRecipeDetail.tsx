@@ -12,39 +12,17 @@ import {
   TouchableWithoutFeedback,
   View,
   Animated,
-  Alert,
 } from "react-native";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
-import { useDispatch, useSelector } from "react-redux";
-import { addFavorite, removeFavorite } from "../../store/Slices/FavoriteSlice";
-import { saveFavoritesToStorage } from "../../store/storage/FavoriteStorage";
 import LinearGradient from "react-native-linear-gradient";
 import { useRoute, RouteProp, useNavigation } from "@react-navigation/native";
 
-import CategoryHeader from "../UI/CSHeader_ModernPro"; // 🔥 Header premium
-import { getSafeImage } from '../../utils/getImageSource';
+import CategoryHeader from "../UI/CSHeader_ModernPro";
+import { getSafeImage } from "../../utils/getImageSource";
+import type { Recipe } from "../../store/Slices/FavoriteSlice";
+import { useFavoriteToggle } from "../hooks/useFavoriteToggle";
 
-// TYPES
-interface Ingredient {
-  name: string;
-  quantity: string;
-}
-interface Step {
-  step: string;
-}
-interface Tip {
-  title: string;
-  description: string;
-}
-interface Recipe {
-  uid: string;
-  name: string;
-  images: string[];
-  ingredients: Ingredient[];
-  steps: Step[];
-  tips?: Tip[];
-}
-
+// NAV TYPES
 type RootStackParamList = {
   FavoriteRecipeDetail: { recipe: Recipe };
 };
@@ -53,7 +31,7 @@ export default function FavoriteRecipeDetail() {
   const navigation = useNavigation();
   const route =
     useRoute<RouteProp<RootStackParamList, "FavoriteRecipeDetail">>();
-  const recipe = route.params?.recipe;
+  const recipe = route.params?.recipe as Recipe | undefined;
 
   const [fontLoaded] = useFonts({
     MateSC: require("../../assets/fonts/MateSC-Regular.ttf"),
@@ -65,72 +43,12 @@ export default function FavoriteRecipeDetail() {
   const [tipsVisible, setTipsVisible] = useState<boolean>(false);
 
   const fadeAnim = useRef(new Animated.Value(0)).current;
-  const heartAnim = useRef(new Animated.Value(1)).current;
 
+  // ❤️ lógica unificada de favoritos
+  const { isFavorite, toggleFavorite, heartAnim } = useFavoriteToggle(
+    recipe ?? null
+  );
 
-  const dispatch = useDispatch();
-  const favorites = useSelector(
-    (state: any) => state.favorites.recipes
-  ) as Recipe[];
-  const isFavorite = recipe
-    ? favorites.some((fav) => fav.uid === recipe.uid)
-    : false;
-
-  const maxSlots = useSelector((state: any) => state.favorites.maxFavorites);
-  const usedSlots = favorites.length;
-  const isFull = usedSlots >= maxSlots;
-
-  const persistFavorites = async (updated: Recipe[]) => {
-    try {
-      await saveFavoritesToStorage(updated);
-    } catch (error) {
-      console.error("Error guardando favoritos", error);
-      Alert.alert("Error", "No se pudo guardar el favorito localmente.");
-    }
-  };
-
-  const animateHeart = () => {
-    Animated.sequence([
-      Animated.timing(heartAnim, {
-        toValue: 1.25,
-        duration: 150,
-        useNativeDriver: true,
-      }),
-      Animated.timing(heartAnim, {
-        toValue: 1,
-        duration: 150,
-        useNativeDriver: true,
-      }),
-    ]).start();
-  };
-
-  const handleFavoritePress = async () => {
-    if (!recipe) return;
-
-    // ❌ No permitir agregar si está lleno
-    if (!isFavorite && isFull) {
-      Alert.alert(
-        "Límite alcanzado",
-        `Has ocupado tus ${maxSlots} favoritos.\nElimina alguno o activa ChefSkills+`
-      );
-      return;
-    }
-
-    let updatedFavorites;
-
-    if (!isFavorite) {
-      dispatch(addFavorite(recipe));
-      updatedFavorites = [...favorites, recipe];
-      animateHeart();
-    } else {
-      dispatch(removeFavorite(recipe.uid));
-      updatedFavorites = favorites.filter((fav) => fav.uid !== recipe.uid);
-    }
-
-    await persistFavorites(updatedFavorites);
-  };
-
-  // Multiplicador
   const modifyQuantity = (quantity: string, multiplier: number) =>
     quantity.replace(/-?\d+(\.\d+)?/g, (match) =>
       String(parseFloat(match) * multiplier)
@@ -153,15 +71,20 @@ export default function FavoriteRecipeDetail() {
 
   const getButtonColor = (m: number) => {
     switch (m) {
-      case 1: return '#6B7280';  // Neutral-500
-      case 2: return '#3B82F6';  // Blue-500
-      case 3: return '#22C55E';  // Green-500
-      case 4: return '#EF4444';  // Red-500
-      case 0.5: return '#FACC15'; // Yellow-400
-      default: return '#3B82F6';
+      case 1:
+        return "#6B7280"; // Neutral-500
+      case 2:
+        return "#3B82F6"; // Blue-500
+      case 3:
+        return "#22C55E"; // Green-500
+      case 4:
+        return "#EF4444"; // Red-500
+      case 0.5:
+        return "#FACC15"; // Yellow-400
+      default:
+        return "#3B82F6";
     }
   };
-
 
   const tipColors = ["#FFF8D6", "#FCEBA5", "#ECD487", "#F7E8B1"];
 
@@ -192,7 +115,6 @@ export default function FavoriteRecipeDetail() {
     );
   }
 
-
   return (
     <LinearGradient
       colors={["#FFF8D6", "#FCEBA5", "#ECD487"]}
@@ -212,7 +134,10 @@ export default function FavoriteRecipeDetail() {
         <View style={styles.headerContainer}>
           <Text style={styles.recipeTitle}>{recipe.name}</Text>
 
-          <TouchableOpacity onPress={handleFavoritePress} style={styles.favoriteIcon}>
+          <TouchableOpacity
+            onPress={toggleFavorite}
+            style={styles.favoriteIcon}
+          >
             <Animated.View style={{ transform: [{ scale: heartAnim }] }}>
               <MaterialIcons
                 name={isFavorite ? "favorite" : "favorite-border"}
@@ -238,7 +163,6 @@ export default function FavoriteRecipeDetail() {
                 contentFit="cover"
                 transition={200}
               />
-
             </TouchableOpacity>
           ))}
         </ScrollView>
@@ -253,7 +177,6 @@ export default function FavoriteRecipeDetail() {
                   style={styles.modalImageLarge}
                   contentFit="contain"
                 />
-
               )}
             </View>
           </TouchableWithoutFeedback>
@@ -277,9 +200,15 @@ export default function FavoriteRecipeDetail() {
         {/* TABLA INGREDIENTES */}
         <View style={styles.ingredientsContainer}>
           <View style={[styles.tableRow, { backgroundColor: "#FCEBA5" }]}>
-            <Text style={[styles.tableCellName, styles.tableHeader]}>Ingrediente</Text>
-            <Text style={[styles.tableCellQuantity, styles.tableHeader]}>Cantidad</Text>
-            <Text style={[styles.tableCellCheckbox, styles.tableHeader]}>✔</Text>
+            <Text style={[styles.tableCellName, styles.tableHeader]}>
+              Ingrediente
+            </Text>
+            <Text style={[styles.tableCellQuantity, styles.tableHeader]}>
+              Cantidad
+            </Text>
+            <Text style={[styles.tableCellCheckbox, styles.tableHeader]}>
+              ✔
+            </Text>
           </View>
 
           {recipe.ingredients?.map((ing, idx) => (
@@ -361,7 +290,9 @@ export default function FavoriteRecipeDetail() {
                       style={styles.tipCard}
                     >
                       <Text style={styles.tipTitle}>{tip.title}</Text>
-                      <Text style={styles.tipDescription}>{tip.description}</Text>
+                      <Text style={styles.tipDescription}>
+                        {tip.description}
+                      </Text>
                     </LinearGradient>
                   ))}
                 </ScrollView>
@@ -381,7 +312,7 @@ export default function FavoriteRecipeDetail() {
   );
 }
 
-// STYLES
+// STYLES (SIN CAMBIOS)
 const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: "row",

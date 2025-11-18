@@ -1,6 +1,7 @@
+// App.tsx
 import React, { useEffect, useState } from "react";
 import { ActivityIndicator, View, Text } from "react-native";
-import { Provider, useDispatch } from "react-redux";
+import { Provider, useDispatch, useSelector } from "react-redux";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import {
   NavigationContainer,
@@ -10,7 +11,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-import store from "./store/Index";
+import store, { AppDispatch, RootState } from "./store/Index";
 
 // USER
 import {
@@ -27,7 +28,17 @@ import {
 } from "./store/Slices/subscriptionSlice";
 
 // FAVORITES
-import { setMaxFavorites, clearFavorites } from "./store/Slices/FavoriteSlice";
+import {
+  setMaxFavorites,
+  clearFavorites,
+  setFavorites,
+} from "./store/Slices/FavoriteSlice";
+
+// FAVORITES STORAGE
+import {
+  loadFavoritesFromStorage,
+  saveFavoritesToStorage,
+} from "./store/storage/FavoriteStorage";
 
 // SERVICES
 import { checkSubscriptionStatus } from "./services/subscriptionService";
@@ -50,18 +61,26 @@ import Menu from "./components/Menu";
 import InterstitialAdManager from "./components/ads/InterstitialAdManager";
 
 const Stack = createStackNavigator();
-const FAVORITES_BASE_LIMIT = 10;
+
+
 
 // ============================================================
 //    MAIN APP CONTROLLER
 // ============================================================
 const AppContent = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const navigationRef = useNavigationContainerRef();
 
   const [initializing, setInitializing] = useState(true);
-  const [firebaseUser, setFirebaseUser] = useState(null);
+  const [firebaseUser, setFirebaseUser] = useState<any>(null);
   const [currentRouteName, setCurrentRouteName] = useState("Unknown");
+
+  const favoritesLimit = useSelector(
+    (state: RootState) => state.favorites.maxFavorites
+  );
+  const subscriptionResolved = useSelector(
+    (state: RootState) => state.user.subscriptionResolved
+  );
 
   // ============================================================
   //    GLOBAL AUTH WATCHER
@@ -142,7 +161,7 @@ const AppContent = () => {
           })
         );
 
-        // Save minimal info for startup
+        // Save minimal info for startup (opcional)
         await AsyncStorage.setItem(
           "subscriptionData",
           JSON.stringify({
@@ -159,8 +178,9 @@ const AppContent = () => {
     return () => unsub();
   }, [dispatch]);
 
+
   // ============================================================
-  // LOADING SCREEN (NO ADS HERE)
+  // LOADING SCREEN (NO ADS AQUÍ)
   // ============================================================
   if (initializing) {
     return (

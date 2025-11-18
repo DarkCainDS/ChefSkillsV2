@@ -12,7 +12,7 @@ export interface UserState {
   subscriptionResolved: boolean;
   planId: string | null;
 
-  favoritesLimit: number;     // 👈 EL VALOR FINAL (10, 15, 20, 25, 30)
+  favoritesLimit: number; // 👈 EL VALOR FINAL (10, 15, 20, 25, 30)
 
   // progreso
   level: number;
@@ -60,7 +60,7 @@ const userSlice = createSlice({
       state.subscriptionResolved = true;
     },
 
-    // 👇 YA NO HAY BOOSTS — FAVORITES DEPENDE DEL PLAN
+    // 👇 FAVORITES DEPENDE DIRECTO DEL PLAN (no boosts separados)
     setPlan: (
       state,
       action: PayloadAction<{ planId: string | null; favoritesLimit: number }>
@@ -77,7 +77,6 @@ export const {
   setUser,
   clearUser,
   setPremium,
-  updateProgress,
   setSubscriptionResolved,
   setPlan,
 } = userSlice.actions;

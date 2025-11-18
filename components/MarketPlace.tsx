@@ -16,11 +16,13 @@ import {
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useDispatch } from "react-redux";
+
 import { subscribeUser } from "../services/subscriptionService";
 import {
   subscribePlan as subscribePlanAction,
   setPremium as setSubscriptionPremium,
 } from "../store/Slices/subscriptionSlice";
+
 import { setPlan } from "../store/Slices/userSlice";
 import { setMaxFavorites } from "../store/Slices/FavoriteSlice";
 import { getActivePlans } from "../services/plansService";
@@ -48,8 +50,6 @@ const priceBackgrounds = [
   "rgba(246,140,0,0.4)",
 ];
 
-const FAVORITES_BASE_LIMIT = 10; // mismo que en userSlice
-
 export default function Marketplace({ visible, onClose }: MarketplaceProps) {
   const [infoVisible, setInfoVisible] = useState(false);
   const [successVisible, setSuccessVisible] = useState(false);
@@ -62,26 +62,25 @@ export default function Marketplace({ visible, onClose }: MarketplaceProps) {
   const [fontsLoaded] = useFonts({
     Baloo2: require("../assets/fonts/Baloo2-VariableFont_wght.ttf"),
   });
-  
-useEffect(() => {
-  (async () => {
-    try {
-      const data = await getActivePlans();
 
-      // ORDEN ASCENDENTE POR DURACIÓN
-      const sorted = data.sort((a, b) => a.durationMonths - b.durationMonths);
-
-      setPlans(sorted);
-    } catch (e) {
-      console.error("❌ Error cargando planes:", e);
-      Alert.alert("Error", "No se pudieron cargar los planes.");
-    }
-  })();
-}, []);
-
+  useEffect(() => {
+    (async () => {
+      try {
+        const data = await getActivePlans();
+        const sorted = data.sort((a, b) => a.durationMonths - b.durationMonths);
+        setPlans(sorted);
+      } catch (e) {
+        console.error("❌ Error cargando planes:", e);
+        Alert.alert("Error", "No se pudieron cargar los planes.");
+      }
+    })();
+  }, []);
 
   if (!fontsLoaded) return null;
 
+  // ============================================================
+  //   HANDLE SUBSCRIBE — NUEVA LÓGICA
+  // ============================================================
   const handleSubscribe = async (plan: Plan) => {
     try {
       const user = getAuth().currentUser;
@@ -92,33 +91,33 @@ useEffect(() => {
 
       setLoading(true);
 
-      // 📦 Crear / actualizar la suscripción en Firestore
+      // 📦 Crear / actualizar suscripción en Firestore
       const subData = await subscribeUser(user.uid, plan);
 
-      // 🔄 Redux: info para UI de suscripción
+      // 🔄 Redux para UI básica de suscripción
       dispatch(
         subscribePlanAction({
-          id: plan.id,
-          name: plan.name,
-          price: plan.basePriceCents / 100,
-          currency: plan.currency,
+          id: subData.planId,
+          name: subData.planName,
+          price: subData.pricePaid,
+          currency: subData.currency,
           expiresAt: subData.expiresAt,
         })
       );
+
       dispatch(setSubscriptionPremium(true));
 
-      // 🔄 Redux: info global de usuario + límite de favoritos
+      // 🔄 Redux principal: plan y límite de favoritos FINAL
       dispatch(
         setPlan({
-          planId: plan.id,
-          favoritesBoost: plan.favoritesBoost,
+          planId: subData.planId,          // último comprado
+          favoritesLimit: subData.favoritesLimit, // LÍMITE FINAL
         })
       );
-      dispatch(
-        setMaxFavorites(FAVORITES_BASE_LIMIT + (plan.favoritesBoost || 0))
-      );
 
-      // 🎉 Feedback visual
+      dispatch(setMaxFavorites(subData.favoritesLimit));
+
+      // 🎉 Feedback
       setSuccessVisible(true);
     } catch (error) {
       console.error("❌ Error al suscribirse:", error);
@@ -137,7 +136,7 @@ useEffect(() => {
         />
 
         <View style={[styles.modalWrapper, { marginTop: insets.top + 20 }]}>
-          <View className="topBar" style={styles.topBar}>
+          <View style={styles.topBar}>
             <Pressable onPress={() => setInfoVisible(true)} style={styles.infoButton}>
               <Text style={styles.infoIcon}>ℹ️</Text>
             </Pressable>
