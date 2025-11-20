@@ -1,6 +1,6 @@
 // App.tsx
 import React, { useEffect, useState } from "react";
-import { ActivityIndicator, View, Text } from "react-native";
+import { ActivityIndicator, View, Text, Image } from "react-native";
 import { Provider, useDispatch, useSelector } from "react-redux";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import {
@@ -68,6 +68,7 @@ const Stack = createStackNavigator();
 //    MAIN APP CONTROLLER
 // ============================================================
 const AppContent = () => {
+  
   const dispatch = useDispatch<AppDispatch>();
   const navigationRef = useNavigationContainerRef();
 
@@ -82,6 +83,23 @@ const AppContent = () => {
     (state: RootState) => state.user.subscriptionResolved
   );
 
+const frases = [
+  "Quizá estamos batiendo algo 👨‍🍳✨",
+  "Preparando tu cocina virtual 🔧🔥",
+  "Cargando tus recetas favoritas 🍲💙",
+  "Nuestro chef está ajustando el horno 🍞🔥",
+  "Si tarda mucho, quizá el internet se fue a cocinar 🍳",
+    "Calentando los sartenes... con cariño 🥘💖",
+  "Amasando los últimos detalles 🍞👐",
+  "Cortando vegetales imaginarios 🥕🔪",
+  "Removiendo bits y bytes a fuego lento 💻🍲",
+  "Preparando un menú digno de ti 👑✨",
+  "Sazonando la experiencia... casi listo 🌿🔥",
+  "El chef pidió un minuto para probar la salsa 🍝😌",
+  "Precalentando tu aventura culinaria 🔥🍽️",
+  "Agitando la olla mágica... paciencia 🪄🍲",
+  "Verificando que no se queme el código 🔥💻😂",
+];
   // ============================================================
   //    GLOBAL AUTH WATCHER
   // ============================================================
@@ -178,25 +196,59 @@ const AppContent = () => {
     return () => unsub();
   }, [dispatch]);
 
-
-  // ============================================================
-  // LOADING SCREEN (NO ADS AQUÍ)
-  // ============================================================
-  if (initializing) {
-    return (
-      <View
+// ============================================================
+// LOADING SCREEN (INLINE - NO ADS)
+// ============================================================
+if (initializing) {
+  return (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#000",
+        paddingHorizontal: 20,
+      }}
+    >
+      {/* Logo */}
+      <Image
+        source={require("./assets/usedImages/Logo.png")}
         style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundColor: "#000",
+          width: 140,
+          height: 140,
+          marginBottom: 25,
+        }}
+        resizeMode="contain"
+      />
+
+      {/* Loading spinner */}
+      <ActivityIndicator size="large" color="#40E0D0" />
+
+      {/* Texto principal */}
+      <Text
+        style={{
+          color: "white",
+          marginTop: 15,
+          fontSize: 16,
+          fontWeight: "500",
         }}
       >
-        <ActivityIndicator size="large" color="#40E0D0" />
-        <Text style={{ color: "white", marginTop: 10 }}>Cargando sesión...</Text>
-      </View>
-    );
-  }
+        Cargando sesión...
+      </Text>
+
+      {/* Disclaimer amigable */}
+      <Text
+        style={{
+          color: "#aaaaaa",
+          marginTop: 10,
+          fontSize: 12,
+          textAlign: "center",
+          lineHeight: 16,
+        }}
+      >{frases[Math.floor(Math.random() * frases.length)]}</Text>
+    </View>
+  );
+}
 
   // ============================================================
   // NAVIGATION + ADS
