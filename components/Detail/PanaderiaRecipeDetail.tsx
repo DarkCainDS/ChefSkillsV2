@@ -46,7 +46,7 @@ export default function PanaderiaRecipeDetail() {
 
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
-  // ❤️ Hook favorito unificado
+  // ❤️ Hook favorito
   const { isFavorite, toggleFavorite, heartAnim } = useFavoriteToggle(
     recipe ?? null
   );
@@ -70,6 +70,7 @@ export default function PanaderiaRecipeDetail() {
     setButtonText(next.text);
   };
 
+  // colores del botón multiplicador
   const getButtonColor = (m: number) => {
     switch (m) {
       case 1:
@@ -87,7 +88,16 @@ export default function PanaderiaRecipeDetail() {
     }
   };
 
-  const tipColors = ["#FAF1E6", "#F1D6B8", "#E4B98A", "#F7E0C3"];
+  // 🎨 MISMA PALETA DE TIPS QUE EL MAINDISH (varios fuertes)
+  const tipColors = [
+    "#FFF9C4",
+    "#C8E6C9",
+    "#BBDEFB",
+    "#FFCCBC",
+    "#E1BEE7",
+    "#F8BBD0",
+    "#D7CCC8",
+  ];
 
   const openTipsModal = () => {
     setTipsVisible(true);
@@ -110,13 +120,7 @@ export default function PanaderiaRecipeDetail() {
 
   if (!fontLoaded || !recipe) {
     return (
-      <View
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <Text>Cargando receta...</Text>
       </View>
     );
@@ -165,12 +169,13 @@ export default function PanaderiaRecipeDetail() {
                 source={getSafeImage(imgUrl)}
                 style={styles.image}
                 contentFit="cover"
+                transition={300}
               />
             </TouchableOpacity>
           ))}
         </ScrollView>
 
-        {/* MODAL IMAGE */}
+        {/* IMAGE MODAL */}
         <Modal visible={!!selectedImage} transparent animationType="fade">
           <TouchableWithoutFeedback onPress={() => setSelectedImage(null)}>
             <View style={styles.modalBackground}>
@@ -202,20 +207,24 @@ export default function PanaderiaRecipeDetail() {
 
         {/* TABLA INGREDIENTES */}
         <View style={styles.ingredientsContainer}>
-          <View style={[styles.tableRow, { backgroundColor: "#F3E0C7" }]}>
+          <View style={[styles.tableRow, styles.tableHeaderRow]}>
             <Text style={[styles.tableCellName, styles.tableHeader]}>
               Ingrediente
             </Text>
             <Text style={[styles.tableCellQuantity, styles.tableHeader]}>
               Cantidad
             </Text>
-            <Text style={[styles.tableCellCheckbox, styles.tableHeader]}>
-              ✔
-            </Text>
+            <Text style={[styles.tableCellCheckbox, styles.tableHeader]}>✔</Text>
           </View>
 
           {recipe.ingredients?.map((ing, idx) => (
-            <View key={idx} style={styles.tableRow}>
+            <View
+              key={idx}
+              style={[
+                styles.tableRow,
+                idx % 2 === 0 && styles.tableRowAlt,
+              ]}
+            >
               <Text style={styles.tableCellName}>{ing.name}</Text>
               <Text style={styles.tableCellQuantity}>
                 {modifyQuantity(ing.quantity, multiplier)}
@@ -232,7 +241,7 @@ export default function PanaderiaRecipeDetail() {
           ))}
         </View>
 
-        {/* TIPS */}
+        {/* TIPS BUTTON */}
         {recipe.tips?.length > 0 && (
           <TouchableOpacity style={styles.tipsButton} onPress={openTipsModal}>
             <MaterialIcons name="lightbulb" size={28} color="white" />
@@ -240,10 +249,9 @@ export default function PanaderiaRecipeDetail() {
           </TouchableOpacity>
         )}
 
-        {/* TITLE PASOS */}
-        <Text style={styles.sectionTitle}>Pasos</Text>
-
         {/* PASOS */}
+        <Text style={[styles.sectionTitle, { marginTop: 10 }]}>Pasos</Text>
+
         <View style={styles.stepsContainer}>
           {recipe.steps?.map((step, idx) => (
             <View key={idx} style={styles.stepItem}>
@@ -266,7 +274,12 @@ export default function PanaderiaRecipeDetail() {
       </ScrollView>
 
       {/* MODAL TIPS */}
-      <Modal visible={tipsVisible} transparent animationType="fade">
+      <Modal
+        visible={tipsVisible}
+        transparent
+        animationType="fade"
+        onRequestClose={closeTipsModal}
+      >
         <TouchableWithoutFeedback onPress={closeTipsModal}>
           <View style={styles.tipsModalOverlay}>
             <TouchableWithoutFeedback>
@@ -283,7 +296,7 @@ export default function PanaderiaRecipeDetail() {
                     <LinearGradient
                       key={idx}
                       colors={[
-                        tipColors[idx % tipColors.length],
+                        tipColors[idx % tipColors.length] + "FF",
                         tipColors[idx % tipColors.length] + "CC",
                       ]}
                       style={styles.tipCard}
@@ -311,7 +324,7 @@ export default function PanaderiaRecipeDetail() {
   );
 }
 
-// STYLES (NO SE TOCARON)
+// --- STYLES (COPIA EXACTA DEL MAINDISH + PALETA PANADERÍA) ---
 const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: "row",
@@ -325,20 +338,21 @@ const styles = StyleSheet.create({
     fontSize: 32,
     textAlign: "center",
     flex: 1,
-    padding: 6,
+    paddingVertical: 8,
+    paddingHorizontal: 10,
     borderWidth: 2,
     borderRadius: 12,
-    backgroundColor: "rgba(255,255,255,0.85)",
+    backgroundColor: "rgba(255,255,255,0.96)",
+    borderColor: "#8B5A2B",
+    color: "#5A3B1F",
+    textShadowColor: "rgba(0,0,0,0.18)",
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 2,
   },
 
-  favoriteIcon: {
-    marginLeft: 10,
-  },
+  favoriteIcon: { marginLeft: 10 },
 
-  imageContainer: {
-    flexDirection: "row",
-    marginBottom: 20,
-  },
+  imageContainer: { flexDirection: "row", marginBottom: 20 },
 
   image: {
     width: 150,
@@ -355,7 +369,7 @@ const styles = StyleSheet.create({
   },
 
   modalImageLarge: {
-    width: "88%",
+    width: "90%",
     height: "70%",
     borderRadius: 12,
   },
@@ -369,19 +383,19 @@ const styles = StyleSheet.create({
   },
 
   sectionTitle: {
-    fontSize: 22,
+    fontSize: 24,
     fontWeight: "bold",
     fontStyle: "italic",
     flex: 1,
     borderBottomWidth: 3,
-    paddingBottom: 3,
+    paddingBottom: 4,
     borderBottomColor: "#8B5A2B",
     color: "#5A3B1F",
   },
 
   multiplicarButton: {
-    paddingVertical: 10,
-    paddingHorizontal: 16,
+    paddingVertical: 8,
+    paddingHorizontal: 14,
     borderRadius: 12,
   },
 
@@ -390,33 +404,50 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontStyle: "italic",
     fontSize: 20,
+    padding: 5,
   },
 
   ingredientsContainer: {
-    backgroundColor: "rgba(255,255,255,0.8)",
-    borderRadius: 10,
+    backgroundColor: "#FFFFFFEE",
+    borderRadius: 12,
     overflow: "hidden",
+    borderWidth: 1,
+    borderColor: "#D2B79A",
   },
 
   tableRow: {
     flexDirection: "row",
     borderBottomWidth: 1,
-    borderBottomColor: "#d0c1aa",
+    borderBottomColor: "#DEC7A9",
+  },
+
+  tableHeaderRow: {
+    backgroundColor: "#F3E5C6",
+  },
+
+  tableRowAlt: {
+    backgroundColor: "rgba(240,225,205,0.55)",
   },
 
   tableCellName: {
-    flex: 1,
-    padding: 8,
+    flex: 1.2,
+    paddingVertical: 10,
+    paddingHorizontal: 8,
+    fontSize: 14,
+    color: "#4B3827",
   },
 
   tableCellQuantity: {
     flex: 1,
     textAlign: "center",
-    padding: 8,
+    paddingVertical: 10,
+    paddingHorizontal: 4,
+    fontSize: 14,
+    color: "#4B3827",
   },
 
   tableCellCheckbox: {
-    flex: 0.4,
+    flex: 0.45,
     justifyContent: "center",
     alignItems: "center",
     padding: 8,
@@ -424,19 +455,23 @@ const styles = StyleSheet.create({
 
   tableHeader: {
     fontWeight: "bold",
+    fontSize: 14,
+    color: "#5A3B1F",
   },
 
   stepsContainer: {
-    marginBottom: 100,
+    marginBottom: 80,
     marginTop: 10,
   },
 
   stepItem: {
     flexDirection: "row",
-    backgroundColor: "rgba(255,255,255,0.8)",
-    padding: 12,
-    borderRadius: 12,
+    backgroundColor: "#FFFFFFEE",
+    padding: 14,
+    borderRadius: 14,
     marginBottom: 12,
+    borderWidth: 1,
+    borderColor: "#D2B79A",
   },
 
   stepTextContainer: {
@@ -446,17 +481,21 @@ const styles = StyleSheet.create({
   stepNumber: {
     fontWeight: "bold",
     marginBottom: 4,
+    fontSize: 16,
+    color: "#5A3B1F",
+    textDecorationLine: "underline",
   },
 
   stepDescription: {
-    fontSize: 14,
-    color: "#444",
+    fontSize: 15,
+    color: "#4B3827",
+    lineHeight: 21,
   },
 
   checkboxContainer: {
     flex: 0.15,
+    alignItems: "flex-end",
     justifyContent: "center",
-    alignItems: "center",
   },
 
   tipsButton: {
@@ -468,6 +507,7 @@ const styles = StyleSheet.create({
     width: "60%",
     alignSelf: "center",
     marginVertical: 35,
+    marginBottom: 20,
     elevation: 3,
   },
 
@@ -487,7 +527,7 @@ const styles = StyleSheet.create({
 
   tipsModal: {
     backgroundColor: "#fff",
-    padding: 16,
+    padding: 15,
     borderRadius: 15,
     width: "85%",
     maxHeight: "70%",
@@ -498,10 +538,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 10,
     textAlign: "center",
+    color: "#5A3B1F",
   },
 
   tipCard: {
-    padding: 14,
+    padding: 12,
     borderRadius: 14,
     marginBottom: 14,
   },
@@ -509,11 +550,15 @@ const styles = StyleSheet.create({
   tipTitle: {
     fontWeight: "bold",
     fontSize: 16,
+    color: "#3C2A19",
+    textDecorationLine: "underline",
+    marginBottom: 5,
   },
 
   tipDescription: {
     fontSize: 14,
     lineHeight: 20,
+    color: "#3A2A1F",
   },
 
   closeTipsButton: {

@@ -86,8 +86,16 @@ export default function SoupRecipeDetail() {
     }
   };
 
-  const tipColors = ["#FFF7DA", "#FFE9A8", "#FFD87B", "#F7D27D"];
-
+  const tipColors = [
+    "#FFF9C4",
+    "#C8E6C9",
+    "#BBDEFB",
+    "#FFCCBC",
+    "#E1BEE7",
+    "#F8BBD0",
+    "#D7CCC8",
+  ];
+  
   const openTipsModal = () => {
     setTipsVisible(true);
     fadeAnim.setValue(0);
@@ -119,6 +127,7 @@ export default function SoupRecipeDetail() {
 
   return (
     <LinearGradient
+      // versión amarilla del fondo
       colors={["#FFF7DA", "#FFE9A8", "#FFD87B"]}
       style={{ flex: 1 }}
     >
@@ -197,7 +206,7 @@ export default function SoupRecipeDetail() {
 
         {/* TABLA INGREDIENTES */}
         <View style={styles.ingredientsContainer}>
-          <View style={[styles.tableRow, { backgroundColor: "#FFF0C7" }]}>
+          <View style={[styles.tableRow, styles.tableHeaderRow]}>
             <Text style={[styles.tableCellName, styles.tableHeader]}>
               Ingrediente
             </Text>
@@ -210,7 +219,13 @@ export default function SoupRecipeDetail() {
           </View>
 
           {recipe.ingredients?.map((ing, idx) => (
-            <View key={idx} style={styles.tableRow}>
+            <View
+              key={idx}
+              style={[
+                styles.tableRow,
+                idx % 2 === 0 && styles.tableRowAlt, // zebra
+              ]}
+            >
               <Text style={styles.tableCellName}>{ing.name}</Text>
               <Text style={styles.tableCellQuantity}>
                 {modifyQuantity(ing.quantity, multiplier)}
@@ -236,7 +251,7 @@ export default function SoupRecipeDetail() {
         )}
 
         {/* TITLE PASOS */}
-        <Text style={styles.sectionTitle}>Pasos</Text>
+        <Text style={[styles.sectionTitle, { marginTop: 10 }]}>Pasos</Text>
 
         {/* PASOS */}
         <View style={styles.stepsContainer}>
@@ -261,7 +276,12 @@ export default function SoupRecipeDetail() {
       </ScrollView>
 
       {/* MODAL TIPS */}
-      <Modal visible={tipsVisible} transparent animationType="fade">
+      <Modal
+        visible={tipsVisible}
+        transparent
+        animationType="fade"
+        onRequestClose={closeTipsModal}
+      >
         <TouchableWithoutFeedback onPress={closeTipsModal}>
           <View style={styles.tipsModalOverlay}>
             <TouchableWithoutFeedback>
@@ -278,7 +298,7 @@ export default function SoupRecipeDetail() {
                     <LinearGradient
                       key={idx}
                       colors={[
-                        tipColors[idx % tipColors.length],
+                        tipColors[idx % tipColors.length] + "FF",
                         tipColors[idx % tipColors.length] + "CC",
                       ]}
                       style={styles.tipCard}
@@ -306,7 +326,7 @@ export default function SoupRecipeDetail() {
   );
 }
 
-// STYLES ✔ NO SE CAMBIAN ✔
+// --- STYLES (MISMA UI QUE MAINDISH, PERO SOPAS AMARILLAS) ---
 const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: "row",
@@ -320,13 +340,21 @@ const styles = StyleSheet.create({
     fontSize: 32,
     textAlign: "center",
     flex: 1,
-    padding: 6,
+    paddingVertical: 8,
+    paddingHorizontal: 10,
     borderWidth: 2,
     borderRadius: 12,
-    backgroundColor: "rgba(255,255,255,0.85)",
+    backgroundColor: "rgba(255,255,255,0.96)",
+    borderColor: "#D9A441",
+    color: "#5C4415",
+    textShadowColor: "rgba(0,0,0,0.15)",
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 2,
   },
 
-  favoriteIcon: { marginLeft: 10 },
+  favoriteIcon: {
+    marginLeft: 10,
+  },
 
   imageContainer: {
     flexDirection: "row",
@@ -348,7 +376,7 @@ const styles = StyleSheet.create({
   },
 
   modalImageLarge: {
-    width: "88%",
+    width: "90%",
     height: "70%",
     borderRadius: 12,
   },
@@ -362,19 +390,19 @@ const styles = StyleSheet.create({
   },
 
   sectionTitle: {
-    fontSize: 22,
+    fontSize: 24,
     fontWeight: "bold",
     fontStyle: "italic",
     flex: 1,
     borderBottomWidth: 3,
-    paddingBottom: 3,
+    paddingBottom: 4,
     borderBottomColor: "#D9A441",
     color: "#8A6C2E",
   },
 
   multiplicarButton: {
-    paddingVertical: 10,
-    paddingHorizontal: 16,
+    paddingVertical: 8,
+    paddingHorizontal: 14,
     borderRadius: 12,
   },
 
@@ -383,33 +411,50 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontStyle: "italic",
     fontSize: 20,
+    padding: 5,
   },
 
   ingredientsContainer: {
-    backgroundColor: "rgba(255,255,255,0.85)",
-    borderRadius: 10,
+    backgroundColor: "#FFFDF3",
+    borderRadius: 12,
     overflow: "hidden",
+    borderWidth: 1,
+    borderColor: "#E2C37A",
   },
 
   tableRow: {
     flexDirection: "row",
     borderBottomWidth: 1,
-    borderBottomColor: "#e0d6b2",
+    borderBottomColor: "#E4D3A5",
+  },
+
+  tableHeaderRow: {
+    backgroundColor: "#FFF0C7",
+  },
+
+  tableRowAlt: {
+    backgroundColor: "rgba(255,240,199,0.85)", // zebra amarilla
   },
 
   tableCellName: {
-    flex: 1,
-    padding: 8,
+    flex: 1.2,
+    paddingVertical: 10,
+    paddingHorizontal: 8,
+    fontSize: 14,
+    color: "#5C4415",
   },
 
   tableCellQuantity: {
     flex: 1,
     textAlign: "center",
-    padding: 8,
+    paddingVertical: 10,
+    paddingHorizontal: 4,
+    fontSize: 14,
+    color: "#5C4415",
   },
 
   tableCellCheckbox: {
-    flex: 0.4,
+    flex: 0.45,
     justifyContent: "center",
     alignItems: "center",
     padding: 8,
@@ -417,19 +462,23 @@ const styles = StyleSheet.create({
 
   tableHeader: {
     fontWeight: "bold",
+    fontSize: 14,
+    color: "#4A3610",
   },
 
   stepsContainer: {
-    marginBottom: 100,
+    marginBottom: 80,
     marginTop: 10,
   },
 
   stepItem: {
     flexDirection: "row",
-    backgroundColor: "rgba(255,255,255,0.85)",
-    padding: 12,
-    borderRadius: 12,
+    backgroundColor: "#FFFDF3",
+    padding: 14,
+    borderRadius: 14,
     marginBottom: 12,
+    borderWidth: 1,
+    borderColor: "#E6D4A3",
   },
 
   stepTextContainer: {
@@ -439,17 +488,21 @@ const styles = StyleSheet.create({
   stepNumber: {
     fontWeight: "bold",
     marginBottom: 4,
+    fontSize: 16,
+    color: "#5C4415",
+    textDecorationLine: "underline",
   },
 
   stepDescription: {
-    fontSize: 14,
-    color: "#444",
+    fontSize: 15,
+    color: "#444444",
+    lineHeight: 21,
   },
 
   checkboxContainer: {
     flex: 0.15,
+    alignItems: "flex-end",
     justifyContent: "center",
-    alignItems: "center",
   },
 
   tipsButton: {
@@ -461,6 +514,7 @@ const styles = StyleSheet.create({
     width: "60%",
     alignSelf: "center",
     marginVertical: 35,
+    marginBottom: 20,
     elevation: 3,
   },
 
@@ -480,7 +534,7 @@ const styles = StyleSheet.create({
 
   tipsModal: {
     backgroundColor: "#fff",
-    padding: 16,
+    padding: 15,
     borderRadius: 15,
     width: "85%",
     maxHeight: "70%",
@@ -491,10 +545,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 10,
     textAlign: "center",
+    color: "#222121ff",
   },
 
   tipCard: {
-    padding: 14,
+    padding: 12,
     borderRadius: 14,
     marginBottom: 14,
   },
@@ -502,15 +557,19 @@ const styles = StyleSheet.create({
   tipTitle: {
     fontWeight: "bold",
     fontSize: 16,
+    color: "black",
+    textDecorationLine: "underline",
+    marginBottom: 5,
   },
 
   tipDescription: {
     fontSize: 14,
     lineHeight: 20,
+    color: "#222121ff",
   },
 
   closeTipsButton: {
-    backgroundColor: "#D9A441",
+    backgroundColor: "#333",
     padding: 10,
     borderRadius: 10,
     marginTop: 10,

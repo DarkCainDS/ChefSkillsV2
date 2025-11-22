@@ -11,6 +11,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
+import { GoogleSignin } from "@react-native-google-signin/google-signin";  // ⭐ IMPORTANTE
+
 import store, { AppDispatch, RootState } from "./store/Index";
 
 // USER
@@ -62,13 +64,19 @@ import InterstitialAdManager from "./components/ads/InterstitialAdManager";
 
 const Stack = createStackNavigator();
 
-
+// ============================================================
+//   ⭐ GOOGLE SIGN-IN CONFIGURADO GLOBALMENTE
+// ============================================================
+GoogleSignin.configure({
+  webClientId:
+    "409946165927-k9u22r4jj9epr83f903d3ojdlnih12ee.apps.googleusercontent.com",
+  offlineAccess: true,
+});
 
 // ============================================================
 //    MAIN APP CONTROLLER
 // ============================================================
 const AppContent = () => {
-  
   const dispatch = useDispatch<AppDispatch>();
   const navigationRef = useNavigationContainerRef();
 
@@ -83,23 +91,24 @@ const AppContent = () => {
     (state: RootState) => state.user.subscriptionResolved
   );
 
-const frases = [
-  "Quizá estamos batiendo algo 👨‍🍳✨",
-  "Preparando tu cocina virtual 🔧🔥",
-  "Cargando tus recetas favoritas 🍲💙",
-  "Nuestro chef está ajustando el horno 🍞🔥",
-  "Si tarda mucho, quizá el internet se fue a cocinar 🍳",
+  const frases = [
+    "Quizá estamos batiendo algo 👨‍🍳✨",
+    "Preparando tu cocina virtual 🔧🔥",
+    "Cargando tus recetas favoritas 🍲💙",
+    "Nuestro chef está ajustando el horno 🍞🔥",
+    "Si tarda mucho, quizá el internet se fue a cocinar 🍳",
     "Calentando los sartenes... con cariño 🥘💖",
-  "Amasando los últimos detalles 🍞👐",
-  "Cortando vegetales imaginarios 🥕🔪",
-  "Removiendo bits y bytes a fuego lento 💻🍲",
-  "Preparando un menú digno de ti 👑✨",
-  "Sazonando la experiencia... casi listo 🌿🔥",
-  "El chef pidió un minuto para probar la salsa 🍝😌",
-  "Precalentando tu aventura culinaria 🔥🍽️",
-  "Agitando la olla mágica... paciencia 🪄🍲",
-  "Verificando que no se queme el código 🔥💻😂",
-];
+    "Amasando los últimos detalles 🍞👐",
+    "Cortando vegetales imaginarios 🥕🔪",
+    "Removiendo bits y bytes a fuego lento 💻🍲",
+    "Preparando un menú digno de ti 👑✨",
+    "Sazonando la experiencia... casi listo 🌿🔥",
+    "El chef pidió un minuto para probar la salsa 🍝😌",
+    "Precalentando tu aventura culinaria 🔥🍽️",
+    "Agitando la olla mágica... paciencia 🪄🍲",
+    "Verificando que no se queme el código 🔥💻😂",
+  ];
+
   // ============================================================
   //    GLOBAL AUTH WATCHER
   // ============================================================
@@ -151,13 +160,11 @@ const frases = [
       const subData = await checkSubscriptionStatus(user.uid, dispatch);
 
       if (!subData) {
-        // FREE
         dispatch(setPremium(false));
         dispatch(setPlan({ planId: null, favoritesLimit: 10 }));
         dispatch(setMaxFavorites(10));
         await AsyncStorage.removeItem("subscriptionData");
       } else {
-        // PREMIUM
         dispatch(setPremium(true));
 
         dispatch(
@@ -179,7 +186,6 @@ const frases = [
           })
         );
 
-        // Save minimal info for startup (opcional)
         await AsyncStorage.setItem(
           "subscriptionData",
           JSON.stringify({
@@ -196,59 +202,43 @@ const frases = [
     return () => unsub();
   }, [dispatch]);
 
-// ============================================================
-// LOADING SCREEN (INLINE - NO ADS)
-// ============================================================
-if (initializing) {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#000",
-        paddingHorizontal: 20,
-      }}
-    >
-      {/* Logo */}
-      <Image
-        source={require("./assets/usedImages/Logo.png")}
+  // ============================================================
+  // LOADING SCREEN
+  // ============================================================
+  if (initializing) {
+    return (
+      <View
         style={{
-          width: 140,
-          height: 140,
-          marginBottom: 25,
-        }}
-        resizeMode="contain"
-      />
-
-      {/* Loading spinner */}
-      <ActivityIndicator size="large" color="#40E0D0" />
-
-      {/* Texto principal */}
-      <Text
-        style={{
-          color: "white",
-          marginTop: 15,
-          fontSize: 16,
-          fontWeight: "500",
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "#000",
+          paddingHorizontal: 20,
         }}
       >
-        Cargando sesión...
-      </Text>
-
-      {/* Disclaimer amigable */}
-      <Text
-        style={{
-          color: "#aaaaaa",
-          marginTop: 10,
-          fontSize: 12,
-          textAlign: "center",
-          lineHeight: 16,
-        }}
-      >{frases[Math.floor(Math.random() * frases.length)]}</Text>
-    </View>
-  );
-}
+        <Image
+          source={require("./assets/usedImages/Logo.png")}
+          style={{ width: 140, height: 140, marginBottom: 25 }}
+          resizeMode="contain"
+        />
+        <ActivityIndicator size="large" color="#40E0D0" />
+        <Text style={{ color: "white", marginTop: 15, fontSize: 16 }}>
+          Cargando sesión...
+        </Text>
+        <Text
+          style={{
+            color: "#aaaaaa",
+            marginTop: 10,
+            fontSize: 12,
+            textAlign: "center",
+            lineHeight: 16,
+          }}
+        >
+          {frases[Math.floor(Math.random() * frases.length)]}
+        </Text>
+      </View>
+    );
+  }
 
   // ============================================================
   // NAVIGATION + ADS

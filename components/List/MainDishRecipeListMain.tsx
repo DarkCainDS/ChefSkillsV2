@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
   },
   image: { width: 80, height: 80, borderRadius: 10, resizeMode: 'cover' },
   info: { flex: 1, justifyContent: 'center', marginLeft: 10 },
-  title: { fontSize: 16, fontWeight: 'bold', marginBottom: 6 },
+  title: { fontSize: 16, fontWeight: 'bold', marginBottom: 6, color:"black" },
   divider: {
     height: 1,
     backgroundColor: '#ccc',

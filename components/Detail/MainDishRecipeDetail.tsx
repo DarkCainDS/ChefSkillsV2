@@ -45,7 +45,7 @@ export default function MainDishRecipeDetail() {
 
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
-  // ❤️ Hook unificado → NO más lógica duplicada
+  // ❤️ Hook favoritos
   const { isFavorite, toggleFavorite, heartAnim } = useFavoriteToggle(
     recipe ?? null
   );
@@ -125,7 +125,8 @@ export default function MainDishRecipeDetail() {
 
   return (
     <LinearGradient
-      colors={["#E9F7E4", "#BDECC0", "#9FD4A1"]}
+      // un poquito más intenso para no matar el contraste global
+      colors={["#D8F3DC", "#B7E4C7", "#95D5B2"]}
       style={{ flex: 1 }}
     >
       <ScrollView style={{ flex: 1, padding: 15 }}>
@@ -204,7 +205,7 @@ export default function MainDishRecipeDetail() {
 
         {/* TABLA INGREDIENTES */}
         <View style={styles.ingredientsContainer}>
-          <View style={[styles.tableRow, { backgroundColor: "#f0f0f0" }]}>
+          <View style={[styles.tableRow, styles.tableHeaderRow]}>
             <Text style={[styles.tableCellName, styles.tableHeader]}>
               Ingrediente
             </Text>
@@ -217,7 +218,13 @@ export default function MainDishRecipeDetail() {
           </View>
 
           {recipe.ingredients?.map((ing, idx) => (
-            <View key={idx} style={styles.tableRow}>
+            <View
+              key={idx}
+              style={[
+                styles.tableRow,
+                idx % 2 === 0 && styles.tableRowAlt, // zebra para más legibilidad
+              ]}
+            >
               <Text style={styles.tableCellName}>{ing.name}</Text>
               <Text style={styles.tableCellQuantity}>
                 {modifyQuantity(ing.quantity, multiplier)}
@@ -243,7 +250,7 @@ export default function MainDishRecipeDetail() {
         )}
 
         {/* PASOS */}
-        <Text style={styles.sectionTitle}>Pasos</Text>
+        <Text style={[styles.sectionTitle, { marginTop: 10 }]}>Pasos</Text>
 
         <View style={styles.stepsContainer}>
           {recipe.steps?.map((step, idx) => (
@@ -317,7 +324,7 @@ export default function MainDishRecipeDetail() {
   );
 }
 
-// --- STYLES (SIN CAMBIAR UI) ---
+// --- STYLES (MISMA UI, MÁS CONTRASTE) ---
 const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: "row",
@@ -331,10 +338,16 @@ const styles = StyleSheet.create({
     fontSize: 32,
     textAlign: "center",
     flex: 1,
-    padding: 6,
+    paddingVertical: 8,
+    paddingHorizontal: 10,
     borderWidth: 2,
     borderRadius: 12,
-    backgroundColor: "rgba(255,255,255,0.8)",
+    backgroundColor: "rgba(255,255,255,0.96)",
+    borderColor: "#4E7748",
+    color: "#243B2E", // texto bien oscuro
+    textShadowColor: "rgba(0,0,0,0.18)",
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 2,
   },
 
   favoriteIcon: {
@@ -375,14 +388,14 @@ const styles = StyleSheet.create({
   },
 
   sectionTitle: {
-    fontSize: 22,
+    fontSize: 24,
     fontWeight: "bold",
     fontStyle: "italic",
     flex: 1,
     borderBottomWidth: 3,
-    paddingBottom: 2,
+    paddingBottom: 4,
     borderBottomColor: "#4E7748",
-    color: "#2A4E27",
+    color: "#1F3B18", // más oscuro
   },
 
   multiplicarButton: {
@@ -396,33 +409,50 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontStyle: "italic",
     fontSize: 20,
+    padding:5
   },
 
   ingredientsContainer: {
-    backgroundColor: "rgba(255,255,255,0.7)",
-    borderRadius: 10,
+    backgroundColor: "#FAFFF7",
+    borderRadius: 12,
     overflow: "hidden",
+    borderWidth: 1,
+    borderColor: "#9DB68A",
   },
 
   tableRow: {
     flexDirection: "row",
     borderBottomWidth: 1,
-    borderBottomColor: "#ccc",
+    borderBottomColor: "#a0c298ff",
+  },
+
+  tableHeaderRow: {
+    backgroundColor: "#8bca81ff",
+  },
+
+  tableRowAlt: {
+    backgroundColor: "rgba(185, 223, 178, 0.9)", // zebra
   },
 
   tableCellName: {
-    flex: 1,
-    padding: 8,
+    flex: 1.2,
+    paddingVertical: 10,
+    paddingHorizontal: 8,
+    fontSize: 14,
+    color: "#243B2E",
   },
 
   tableCellQuantity: {
     flex: 1,
     textAlign: "center",
-    padding: 8,
+    paddingVertical: 10,
+    paddingHorizontal: 4,
+    fontSize: 14,
+    color: "#243B2E",
   },
 
   tableCellCheckbox: {
-    flex: 0.4,
+    flex: 0.45,
     justifyContent: "center",
     alignItems: "center",
     padding: 8,
@@ -430,6 +460,8 @@ const styles = StyleSheet.create({
 
   tableHeader: {
     fontWeight: "bold",
+    fontSize: 14,
+    color: "#1F3B18",
   },
 
   stepsContainer: {
@@ -439,10 +471,12 @@ const styles = StyleSheet.create({
 
   stepItem: {
     flexDirection: "row",
-    backgroundColor: "rgba(255,255,255,0.7)",
-    padding: 12,
-    borderRadius: 12,
+    backgroundColor: "#FAFFF7",
+    padding: 14,
+    borderRadius: 14,
     marginBottom: 12,
+    borderWidth: 1,
+    borderColor: "#C5D8BD",
   },
 
   stepTextContainer: {
@@ -452,11 +486,16 @@ const styles = StyleSheet.create({
   stepNumber: {
     fontWeight: "bold",
     marginBottom: 4,
+    fontSize: 16,
+    color: "#1F3B18",
+        textDecorationLine: 'underline',
+
   },
 
   stepDescription: {
-    fontSize: 14,
-    color: "#444",
+    fontSize: 15,
+    color: "#25352B",
+    lineHeight: 21,
   },
 
   checkboxContainer: {
@@ -505,6 +544,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 10,
     textAlign: "center",
+        color: "#222121ff"
+
   },
 
   tipCard: {
@@ -516,11 +557,16 @@ const styles = StyleSheet.create({
   tipTitle: {
     fontWeight: "bold",
     fontSize: 16,
+    color: "black",
+    textDecorationLine: 'underline',
+    marginBottom:5
   },
 
   tipDescription: {
     fontSize: 14,
     lineHeight: 20,
+    color: "#222121ff"
+
   },
 
   closeTipsButton: {

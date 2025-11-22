@@ -24,7 +24,6 @@ import { useFavoriteToggle } from "../hooks/useFavoriteToggle";
 
 import type { Recipe } from "../../store/Slices/FavoriteSlice";
 
-// NAV TYPES
 type RootStackParamList = {
   EnsaladaRecipeDetail: { recipe: Recipe };
 };
@@ -46,7 +45,6 @@ export default function EnsaladaRecipeDetail() {
 
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
-  // ❤️ FAVORITOS UNIFICADO
   const { isFavorite, toggleFavorite, heartAnim } = useFavoriteToggle(
     recipe ?? null
   );
@@ -72,22 +70,25 @@ export default function EnsaladaRecipeDetail() {
 
   const getButtonColor = (m: number) => {
     switch (m) {
-      case 1:
-        return "#6B7280";
-      case 2:
-        return "#3B82F6";
-      case 3:
-        return "#22C55E";
-      case 4:
-        return "#EF4444";
-      case 0.5:
-        return "#FACC15";
-      default:
-        return "#3B82F6";
+      case 1: return "#6B7280";
+      case 2: return "#3B82F6";
+      case 3: return "#22C55E";
+      case 4: return "#EF4444";
+      case 0.5: return "#FACC15";
+      default: return "#3B82F6";
     }
   };
 
-  const tipColors = ["#E9FBD6", "#C9F2A7", "#A7E676", "#9AD76A"];
+  // UNIVERSAL — EL ESTÁNDAR QUE PEDISTE ✔
+  const tipColors = [
+    "#FFF9C4",
+    "#C8E6C9",
+    "#BBDEFB",
+    "#FFCCBC",
+    "#E1BEE7",
+    "#F8BBD0",
+    "#D7CCC8",
+  ];
 
   const openTipsModal = () => {
     setTipsVisible(true);
@@ -118,20 +119,20 @@ export default function EnsaladaRecipeDetail() {
 
   return (
     <LinearGradient
-      colors={["#E9FBD6", "#C9F2A7", "#A7E676"]}
+      colors={["#E8FDD8", "#C8F4AA", "#A0E67A"]}
       style={{ flex: 1 }}
     >
       <ScrollView style={{ flex: 1, padding: 15 }}>
-        {/* HEADER */}
+
         <CategoryHeader
           title="Ensaladas"
           icon="🥗"
           color="#7EBE4A"
-          titleColor="#F0FFE3"
+          titleColor="#F6FFE8"
           onBack={() => navigation.goBack()}
         />
 
-        {/* TITLE + HEART */}
+        {/* TITLE */}
         <View style={styles.headerContainer}>
           <Text style={styles.recipeTitle}>{recipe.name}</Text>
 
@@ -164,7 +165,7 @@ export default function EnsaladaRecipeDetail() {
           ))}
         </ScrollView>
 
-        {/* MODAL IMAGE */}
+        {/* MODAL IMG */}
         <Modal visible={!!selectedImage} transparent animationType="fade">
           <TouchableWithoutFeedback onPress={() => setSelectedImage(null)}>
             <View style={styles.modalBackground}>
@@ -196,7 +197,7 @@ export default function EnsaladaRecipeDetail() {
 
         {/* TABLE */}
         <View style={styles.ingredientsContainer}>
-          <View style={[styles.tableRow, { backgroundColor: "#C9F2A7" }]}>
+          <View style={[styles.tableRow, styles.tableHeaderRow]}>
             <Text style={[styles.tableCellName, styles.tableHeader]}>
               Ingrediente
             </Text>
@@ -209,7 +210,13 @@ export default function EnsaladaRecipeDetail() {
           </View>
 
           {recipe.ingredients?.map((ing, idx) => (
-            <View key={idx} style={styles.tableRow}>
+            <View
+              key={idx}
+              style={[
+                styles.tableRow,
+                idx % 2 === 0 && styles.tableRowAlt,
+              ]}
+            >
               <Text style={styles.tableCellName}>{ing.name}</Text>
               <Text style={styles.tableCellQuantity}>
                 {modifyQuantity(ing.quantity, multiplier)}
@@ -235,7 +242,7 @@ export default function EnsaladaRecipeDetail() {
         )}
 
         {/* PASOS */}
-        <Text style={styles.sectionTitle}>Pasos</Text>
+        <Text style={[styles.sectionTitle, { marginTop: 10 }]}>Pasos</Text>
 
         <View style={styles.stepsContainer}>
           {recipe.steps?.map((step, idx) => (
@@ -304,7 +311,7 @@ export default function EnsaladaRecipeDetail() {
   );
 }
 
-// === STYLES IGUAL A TU ORIGINAL ===
+// === STYLES MAIN DISH ADAPTADOS ===
 const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: "row",
@@ -312,121 +319,175 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 15,
   },
+
   recipeTitle: {
     fontFamily: "MateSC",
     fontSize: 32,
     textAlign: "center",
     flex: 1,
-    padding: 6,
+    paddingVertical: 8,
+    paddingHorizontal: 10,
     borderWidth: 2,
     borderRadius: 12,
-    backgroundColor: "rgba(255,255,255,0.85)",
+    backgroundColor: "rgba(255,255,255,0.96)",
+    borderColor: "#7EBE4A",
+    color: "#2F4F1F",
+    textShadowColor: "rgba(0,0,0,0.18)",
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 2,
   },
+
   favoriteIcon: { marginLeft: 10 },
+
   imageContainer: {
     flexDirection: "row",
     marginBottom: 20,
   },
+
   image: {
     width: 150,
     height: 150,
     marginHorizontal: 10,
     borderRadius: 10,
   },
+
   modalBackground: {
     flex: 1,
     backgroundColor: "rgba(0,0,0,0.8)",
     justifyContent: "center",
     alignItems: "center",
   },
+
   modalImageLarge: {
-    width: "88%",
+    width: "90%",
     height: "70%",
     borderRadius: 12,
   },
+
   rowHeader: {
     flexDirection: "row",
+    alignItems: "center",
     justifyContent: "space-between",
     marginTop: 10,
     marginBottom: 10,
-    alignItems: "center",
   },
+
   sectionTitle: {
-    fontSize: 22,
+    fontSize: 24,
     fontWeight: "bold",
     fontStyle: "italic",
     flex: 1,
     borderBottomWidth: 3,
-    paddingBottom: 3,
+    paddingBottom: 4,
     borderBottomColor: "#7EBE4A",
-    color: "#4A7F2A",
+    color: "#2F4F1F",
   },
+
   multiplicarButton: {
-    paddingVertical: 10,
-    paddingHorizontal: 16,
+    paddingVertical: 8,
+    paddingHorizontal: 14,
     borderRadius: 12,
   },
+
   buttonText: {
     color: "#fff",
     fontWeight: "bold",
     fontStyle: "italic",
     fontSize: 20,
+    padding: 5,
   },
+
   ingredientsContainer: {
-    backgroundColor: "rgba(255,255,255,0.85)",
-    borderRadius: 10,
+    backgroundColor: "#F7FFF1",
+    borderRadius: 12,
     overflow: "hidden",
+    borderWidth: 1,
+    borderColor: "#A2D68C",
   },
+
   tableRow: {
     flexDirection: "row",
     borderBottomWidth: 1,
-    borderBottomColor: "#B6D99A",
+    borderBottomColor: "#CFE8BA",
   },
+
+  tableHeaderRow: {
+    backgroundColor: "#C9F2A7",
+  },
+
+  tableRowAlt: {
+    backgroundColor: "rgba(213, 238, 183, 0.8)",
+  },
+
   tableCellName: {
-    flex: 1,
-    padding: 8,
+    flex: 1.2,
+    paddingVertical: 10,
+    paddingHorizontal: 8,
+    fontSize: 14,
+    color: "#2F4F1F",
   },
+
   tableCellQuantity: {
     flex: 1,
     textAlign: "center",
-    padding: 8,
+    paddingVertical: 10,
+    paddingHorizontal: 4,
+    fontSize: 14,
+    color: "#2F4F1F",
   },
+
   tableCellCheckbox: {
-    flex: 0.4,
+    flex: 0.45,
     justifyContent: "center",
     alignItems: "center",
     padding: 8,
   },
+
   tableHeader: {
     fontWeight: "bold",
+    fontSize: 14,
+    color: "#2F4F1F",
   },
+
   stepsContainer: {
+    marginBottom: 80,
     marginTop: 10,
-    marginBottom: 100,
   },
+
   stepItem: {
     flexDirection: "row",
-    backgroundColor: "rgba(255,255,255,0.85)",
-    padding: 12,
-    borderRadius: 12,
+    backgroundColor: "#F7FFF1",
+    padding: 14,
+    borderRadius: 14,
     marginBottom: 12,
+    borderWidth: 1,
+    borderColor: "#C4E8B4",
   },
+
   stepTextContainer: {
     flex: 0.85,
   },
+
   stepNumber: {
     fontWeight: "bold",
     marginBottom: 4,
+    fontSize: 16,
+    color: "#2F4F1F",
+    textDecorationLine: "underline",
   },
+
   stepDescription: {
-    fontSize: 14,
-    color: "#444",
+    fontSize: 15,
+    color: "#2F4F1F",
+    lineHeight: 21,
   },
+
   checkboxContainer: {
     flex: 0.15,
+    alignItems: "flex-end",
     justifyContent: "center",
-    alignItems: "center",
   },
+
   tipsButton: {
     flexDirection: "row",
     justifyContent: "center",
@@ -436,46 +497,60 @@ const styles = StyleSheet.create({
     width: "60%",
     alignSelf: "center",
     marginVertical: 35,
+    marginBottom: 20,
     elevation: 3,
   },
+
   tipsButtonText: {
     color: "#fff",
     fontWeight: "bold",
     marginLeft: 8,
     fontSize: 18,
   },
+
   tipsModalOverlay: {
     flex: 1,
     backgroundColor: "rgba(0,0,0,0.6)",
     justifyContent: "center",
     alignItems: "center",
   },
+
   tipsModal: {
     backgroundColor: "#fff",
-    padding: 16,
+    padding: 15,
     borderRadius: 15,
     width: "85%",
     maxHeight: "70%",
   },
+
   tipsTitle: {
     fontSize: 22,
     fontWeight: "bold",
     marginBottom: 10,
     textAlign: "center",
+    color: "#2F4F1F",
   },
+
   tipCard: {
-    padding: 14,
+    padding: 12,
     borderRadius: 14,
     marginBottom: 14,
   },
+
   tipTitle: {
     fontWeight: "bold",
     fontSize: 16,
+    color: "#2F4F1F",
+    textDecorationLine: "underline",
+    marginBottom: 5,
   },
+
   tipDescription: {
     fontSize: 14,
     lineHeight: 20,
+    color: "#2F4F1F",
   },
+
   closeTipsButton: {
     backgroundColor: "#7EBE4A",
     padding: 10,
@@ -484,6 +559,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     width: "40%",
   },
+
   closeTipsText: {
     color: "#fff",
     textAlign: "center",

@@ -19,20 +19,20 @@ import LinearGradient from "react-native-linear-gradient";
 import { useRoute, RouteProp, useNavigation } from "@react-navigation/native";
 
 import CategoryHeader from "../UI/CSHeader_ModernPro";
-
 import { getSafeImage } from "../../utils/getImageSource";
 import { useFavoriteToggle } from "../hooks/useFavoriteToggle";
 
 import type { Recipe } from "../../store/Slices/FavoriteSlice";
 
-// TYPES
+// NAV TYPES
 type RootStackParamList = {
   TragosRecipeDetail: { recipe: Recipe };
 };
 
 export default function TragosRecipeDetail() {
   const navigation = useNavigation();
-  const route = useRoute<RouteProp<RootStackParamList, "TragosRecipeDetail">>();
+  const route =
+    useRoute<RouteProp<RootStackParamList, "TragosRecipeDetail">>();
   const recipe = route.params?.recipe;
 
   const [fontLoaded] = useFonts({
@@ -46,7 +46,7 @@ export default function TragosRecipeDetail() {
 
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
-  // ❤️ FAVORITOS UNIFICADO
+  // ❤️ FAVORITOS
   const { isFavorite, toggleFavorite, heartAnim } = useFavoriteToggle(
     recipe ?? null
   );
@@ -75,19 +75,28 @@ export default function TragosRecipeDetail() {
       case 1:
         return "#6B7280";
       case 2:
-        return "#3B82F6";
+        return "#007BFF";
       case 3:
-        return "#22C55E";
+        return "#00A6EF";
       case 4:
-        return "#EF4444";
+        return "#FF2E63";
       case 0.5:
         return "#FACC15";
       default:
-        return "#3B82F6";
+        return "#007BFF";
     }
   };
 
-  const tipColors = ["#DFFFFB", "#B3F4F5", "#8DE0E3", "#6AD3D7"];
+  // UNIVERSAL TIP COLORS (los 7)
+  const tipColors = [
+    "#FFF9C4",
+    "#C8E6C9",
+    "#BBDEFB",
+    "#FFCCBC",
+    "#E1BEE7",
+    "#F8BBD0",
+    "#D7CCC8",
+  ];
 
   const openTipsModal = () => {
     setTipsVisible(true);
@@ -118,15 +127,15 @@ export default function TragosRecipeDetail() {
 
   return (
     <LinearGradient
-      colors={["#DFFFFB", "#B3F4F5", "#8DE0E3"]}
+      colors={["#B3E5FC", "#81D4FA", "#4FC3F7"]}
       style={{ flex: 1 }}
     >
       <ScrollView style={{ flex: 1, padding: 15 }}>
         <CategoryHeader
           title="Bebidas"
           icon="🍹"
-          color="#46C1C8"
-          titleColor="#E8FFFF"
+          color="#007BFF"
+          titleColor="#FFFFFF"
           onBack={() => navigation.goBack()}
         />
 
@@ -139,7 +148,7 @@ export default function TragosRecipeDetail() {
               <MaterialIcons
                 name={isFavorite ? "favorite" : "favorite-border"}
                 size={48}
-                color={isFavorite ? "#1C6F73" : "black"}
+                color={isFavorite ? "#0051A8" : "black"}
               />
             </Animated.View>
           </TouchableOpacity>
@@ -163,7 +172,7 @@ export default function TragosRecipeDetail() {
           ))}
         </ScrollView>
 
-        {/* MODAL IMAGE */}
+        {/* MODAL */}
         <Modal visible={!!selectedImage} transparent animationType="fade">
           <TouchableWithoutFeedback onPress={() => setSelectedImage(null)}>
             <View style={styles.modalBackground}>
@@ -195,7 +204,7 @@ export default function TragosRecipeDetail() {
 
         {/* TABLE */}
         <View style={styles.ingredientsContainer}>
-          <View style={[styles.tableRow, { backgroundColor: "#B3F4F5" }]}>
+          <View style={[styles.tableRow, styles.tableHeaderRow]}>
             <Text style={[styles.tableCellName, styles.tableHeader]}>
               Ingrediente
             </Text>
@@ -208,7 +217,13 @@ export default function TragosRecipeDetail() {
           </View>
 
           {recipe.ingredients?.map((ing, idx) => (
-            <View key={idx} style={styles.tableRow}>
+            <View
+              key={idx}
+              style={[
+                styles.tableRow,
+                idx % 2 === 0 && styles.tableRowAlt,
+              ]}
+            >
               <Text style={styles.tableCellName}>{ing.name}</Text>
               <Text style={styles.tableCellQuantity}>
                 {modifyQuantity(ing.quantity, multiplier)}
@@ -216,7 +231,7 @@ export default function TragosRecipeDetail() {
               <View style={styles.tableCellCheckbox}>
                 <BouncyCheckbox
                   size={20}
-                  fillColor="#46C1C8"
+                  fillColor="#007BFF"
                   unFillColor="#fff"
                   disableBuiltInState
                 />
@@ -234,7 +249,7 @@ export default function TragosRecipeDetail() {
         )}
 
         {/* PASOS */}
-        <Text style={styles.sectionTitle}>Pasos</Text>
+        <Text style={[styles.sectionTitle, { marginTop: 10 }]}>Pasos</Text>
 
         <View style={styles.stepsContainer}>
           {recipe.steps?.map((step, idx) => (
@@ -247,7 +262,7 @@ export default function TragosRecipeDetail() {
               <View style={styles.checkboxContainer}>
                 <BouncyCheckbox
                   size={24}
-                  fillColor="#46C1C8"
+                  fillColor="#007BFF"
                   unFillColor="#fff"
                   disableBuiltInState
                 />
@@ -275,7 +290,7 @@ export default function TragosRecipeDetail() {
                     <LinearGradient
                       key={idx}
                       colors={[
-                        tipColors[idx % tipColors.length],
+                        tipColors[idx % tipColors.length] + "FF",
                         tipColors[idx % tipColors.length] + "CC",
                       ]}
                       style={styles.tipCard}
@@ -303,7 +318,7 @@ export default function TragosRecipeDetail() {
   );
 }
 
-// STYLES
+// === STYLES DUROS, LEGIBLES, IGUALES A MAINDISH ===
 const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: "row",
@@ -311,38 +326,48 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 15,
   },
+
   recipeTitle: {
     fontFamily: "MateSC",
     fontSize: 32,
     textAlign: "center",
     flex: 1,
-    padding: 6,
+    paddingVertical: 8,
+    paddingHorizontal: 10,
     borderWidth: 2,
     borderRadius: 12,
-    backgroundColor: "rgba(255,255,255,0.85)",
+    backgroundColor: "rgba(255,255,255,0.95)",
+    borderColor: "#0051A8",
+    color: "#0D1B2A",
   },
+
   favoriteIcon: { marginLeft: 10 },
+
   imageContainer: {
     flexDirection: "row",
     marginBottom: 20,
   },
+
   image: {
     width: 150,
     height: 150,
     marginHorizontal: 10,
     borderRadius: 10,
   },
+
   modalBackground: {
     flex: 1,
-    backgroundColor: "rgba(0,0,0,0.8)",
+    backgroundColor: "rgba(0,0,0,0.85)",
     justifyContent: "center",
     alignItems: "center",
   },
+
   modalImageLarge: {
-    width: "88%",
+    width: "90%",
     height: "70%",
     borderRadius: 12,
   },
+
   rowHeader: {
     flexDirection: "row",
     alignItems: "center",
@@ -350,86 +375,126 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
   },
+
   sectionTitle: {
-    fontSize: 22,
+    fontSize: 24,
     fontWeight: "bold",
     fontStyle: "italic",
     flex: 1,
     borderBottomWidth: 3,
-    paddingBottom: 3,
-    borderBottomColor: "#46C1C8",
-    color: "#1C6F73",
+    paddingBottom: 4,
+    borderBottomColor: "#0051A8",
+    color: "#0D1B2A",
   },
+
   multiplicarButton: {
-    paddingVertical: 10,
-    paddingHorizontal: 16,
+    paddingVertical: 8,
+    paddingHorizontal: 14,
     borderRadius: 12,
   },
+
   buttonText: {
     color: "#fff",
     fontWeight: "bold",
     fontStyle: "italic",
     fontSize: 20,
   },
+
   ingredientsContainer: {
-    backgroundColor: "rgba(255,255,255,0.85)",
-    borderRadius: 10,
+    backgroundColor: "#ffffffee",
+    borderRadius: 12,
     overflow: "hidden",
+    borderWidth: 1,
+    borderColor: "#007BFF",
   },
+
   tableRow: {
     flexDirection: "row",
     borderBottomWidth: 1,
-    borderBottomColor: "#A8E3E6",
+    borderBottomColor: "#C2E0FF",
   },
+
+  tableHeaderRow: {
+    backgroundColor: "#91CCFF",
+  },
+
+  tableRowAlt: {
+    backgroundColor: "#D7EDFF",
+  },
+
   tableCellName: {
-    flex: 1,
-    padding: 8,
+    flex: 1.2,
+    paddingVertical: 10,
+    paddingHorizontal: 8,
+    fontSize: 14,
+    color: "#0A0A0A",
   },
+
   tableCellQuantity: {
     flex: 1,
     textAlign: "center",
-    padding: 8,
+    paddingVertical: 10,
+    paddingHorizontal: 4,
+    fontSize: 14,
+    color: "#0A0A0A",
   },
+
   tableCellCheckbox: {
-    flex: 0.4,
+    flex: 0.45,
     justifyContent: "center",
     alignItems: "center",
     padding: 8,
   },
+
   tableHeader: {
     fontWeight: "bold",
+    fontSize: 14,
+    color: "#0D1B2A",
   },
+
   stepsContainer: {
-    marginBottom: 100,
+    marginBottom: 80,
     marginTop: 10,
   },
+
   stepItem: {
     flexDirection: "row",
-    backgroundColor: "rgba(255,255,255,0.85)",
-    padding: 12,
-    borderRadius: 12,
+    backgroundColor: "#ffffffee",
+    padding: 14,
+    borderRadius: 14,
     marginBottom: 12,
+    borderWidth: 1,
+    borderColor: "#A4D4FF",
   },
+
   stepTextContainer: {
     flex: 0.85,
   },
+
   stepNumber: {
     fontWeight: "bold",
     marginBottom: 4,
+    fontSize: 16,
+    color: "#0D1B2A",
+    textDecorationLine: "underline",
   },
+
   stepDescription: {
-    fontSize: 14,
-    color: "#444",
+    fontSize: 15,
+    color: "#1A1A1A",
+    lineHeight: 21,
   },
+
   checkboxContainer: {
     flex: 0.15,
+    alignItems: "flex-end",
     justifyContent: "center",
-    alignItems: "center",
   },
+
   tipsButton: {
     flexDirection: "row",
     justifyContent: "center",
-    backgroundColor: "#46C1C8",
+    backgroundColor: "#007BFF",
     paddingVertical: 12,
     borderRadius: 30,
     width: "60%",
@@ -437,52 +502,66 @@ const styles = StyleSheet.create({
     marginVertical: 35,
     elevation: 3,
   },
+
   tipsButtonText: {
     color: "#fff",
     fontWeight: "bold",
     marginLeft: 8,
     fontSize: 18,
   },
+
   tipsModalOverlay: {
     flex: 1,
     backgroundColor: "rgba(0,0,0,0.6)",
     justifyContent: "center",
     alignItems: "center",
   },
+
   tipsModal: {
     backgroundColor: "#fff",
-    padding: 16,
+    padding: 15,
     borderRadius: 15,
     width: "85%",
     maxHeight: "70%",
   },
+
   tipsTitle: {
     fontSize: 22,
     fontWeight: "bold",
     marginBottom: 10,
     textAlign: "center",
+    color: "#0D1B2A",
   },
+
   tipCard: {
-    padding: 14,
+    padding: 12,
     borderRadius: 14,
     marginBottom: 14,
   },
+
   tipTitle: {
     fontWeight: "bold",
     fontSize: 16,
+    color: "#0D1B2A",
+    textDecorationLine: "underline",
+    marginBottom: 5,
   },
+
   tipDescription: {
     fontSize: 14,
     lineHeight: 20,
+    color: "#1A1A1A",
   },
+
   closeTipsButton: {
-    backgroundColor: "#46C1C8",
+    backgroundColor: "#0051A8",
     padding: 10,
     borderRadius: 10,
     marginTop: 10,
     alignSelf: "center",
     width: "40%",
   },
+
   closeTipsText: {
     color: "#fff",
     textAlign: "center",

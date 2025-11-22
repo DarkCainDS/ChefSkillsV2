@@ -53,7 +53,7 @@ const TechniqueDetails: React.FC = () => {
 
   return (
     <LinearGradient
-      colors={['#D8EEFF', '#A7D8FF', '#82C2FF']}   // 🌾 DEGRADADO CÁLIDO
+      colors={['#A5D8FF', '#73C2FB', '#3FA9F5']}  // 🔵 Azul más fuerte y legible
       style={{ flex: 1 }}
     >
       <ScrollView contentContainerStyle={styles.container}>
@@ -62,7 +62,7 @@ const TechniqueDetails: React.FC = () => {
         <CategoryHeader
           title="Técnicas"
           icon="🔪"
-          color="#3BA7FF"
+          color="#2A7CC7"
           titleColor="#ffffff"
           onBack={() => navigation.goBack()}
         />
@@ -98,7 +98,7 @@ const TechniqueDetails: React.FC = () => {
           </>
         ) : null}
 
-        {/* INFO DETALLADA EN CAJA PREMIUM */}
+        {/* INFO DETALLADA */}
         {detailedInfo ? (
           <>
             <View style={styles.sectionDivider}>
@@ -133,7 +133,7 @@ const TechniqueDetails: React.FC = () => {
   );
 };
 
-// --- Estilos premium cálidos ---
+// --- ESTILOS FUERTES ---
 const styles = StyleSheet.create({
   container: {
     padding: 20,
@@ -147,6 +147,12 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textDecorationLine: 'underline',
     textAlign: 'center',
+    color: '#0D1B2A',
+    paddingVertical: 8,
+    borderWidth: 2,
+    borderRadius: 10,
+    borderColor: '#2A7CC7',
+    backgroundColor: 'rgba(255,255,255,0.95)',
   },
 
   gallery: {
@@ -167,10 +173,14 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
   },
+
   sectionTitle: {
-    fontSize: 22,
+    fontSize: 24,
     fontFamily: 'MateSC',
     textDecorationLine: 'underline',
+    color: '#0D1B2A',
+    borderBottomWidth: 3,
+    borderBottomColor: '#2A7CC7',
   },
 
   description: {
@@ -179,22 +189,28 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     marginBottom: 20,
     paddingHorizontal: 10,
+    color: '#1A1A1A',
   },
 
-  // ⭐ CAJA PREMIUM CÁLIDA
+  // ⭐ Caja premium fuerte
   detailBox: {
-    borderWidth: 1,
-    borderColor: '#E9E2D8', // 🌾 borde beige cálido
+    borderWidth: 2,
+    borderColor: '#2A7CC7',
     borderRadius: 12,
     padding: 15,
     marginBottom: 20,
-    backgroundColor: 'rgba(255,255,255,0.7)',
+    backgroundColor: '#FFFFFF',
+    shadowColor: '#000',
+    shadowOpacity: 0.15,
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 4,
   },
 
   detailedInfo: {
     fontSize: 17,
     textAlign: 'left',
     lineHeight: 25,
+    color: '#1A1A1A',
   },
 
   modalBackground: {

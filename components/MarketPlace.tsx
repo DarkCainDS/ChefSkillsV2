@@ -1,4 +1,3 @@
-// components/Marketplace.tsx
 import { useFonts } from "expo-font";
 import { LinearGradient } from "expo-linear-gradient";
 import { getAuth } from "firebase/auth";
@@ -34,6 +33,8 @@ interface MarketplaceProps {
   visible: boolean;
   onClose: () => void;
 }
+
+const scale = width / 390; // escala ligera, casi igual al original
 
 // Imagen por plan (usamos el ID del plan)
 const planImages: Record<string, any> = {
@@ -78,9 +79,6 @@ export default function Marketplace({ visible, onClose }: MarketplaceProps) {
 
   if (!fontsLoaded) return null;
 
-  // ============================================================
-  //   HANDLE SUBSCRIBE — NUEVA LÓGICA
-  // ============================================================
   const handleSubscribe = async (plan: Plan) => {
     try {
       const user = getAuth().currentUser;
@@ -91,10 +89,8 @@ export default function Marketplace({ visible, onClose }: MarketplaceProps) {
 
       setLoading(true);
 
-      // 📦 Crear / actualizar suscripción en Firestore
       const subData = await subscribeUser(user.uid, plan);
 
-      // 🔄 Redux para UI básica de suscripción
       dispatch(
         subscribePlanAction({
           id: subData.planId,
@@ -107,17 +103,15 @@ export default function Marketplace({ visible, onClose }: MarketplaceProps) {
 
       dispatch(setSubscriptionPremium(true));
 
-      // 🔄 Redux principal: plan y límite de favoritos FINAL
       dispatch(
         setPlan({
-          planId: subData.planId,          // último comprado
-          favoritesLimit: subData.favoritesLimit, // LÍMITE FINAL
+          planId: subData.planId,
+          favoritesLimit: subData.favoritesLimit,
         })
       );
 
       dispatch(setMaxFavorites(subData.favoritesLimit));
 
-      // 🎉 Feedback
       setSuccessVisible(true);
     } catch (error) {
       console.error("❌ Error al suscribirse:", error);
@@ -132,26 +126,51 @@ export default function Marketplace({ visible, onClose }: MarketplaceProps) {
       <View style={styles.modalBackdrop}>
         <Image
           source={require("../assets/MarketPlace/festive-chef.webp")}
-          style={[styles.topBannerCentered, { top: insets.top - 1 }]}
+          style={[
+            styles.topBannerCentered,
+            {
+              top: insets.top + 5,
+              width: 159 * scale,
+              height: 106 * scale,
+            },
+          ]}
         />
 
-        <View style={[styles.modalWrapper, { marginTop: insets.top + 20 }]}>
+        <View
+          style={[
+            styles.modalWrapper,
+            {
+              marginTop: insets.top + 50 * scale,
+              width: width * 0.9,
+              height: height * 0.75,
+            },
+          ]}
+        >
           <View style={styles.topBar}>
             <Pressable onPress={() => setInfoVisible(true)} style={styles.infoButton}>
-              <Text style={styles.infoIcon}>ℹ️</Text>
+              <Text style={[styles.infoIcon, { fontSize: 25 * scale }]}>ℹ️</Text>
             </Pressable>
+
             <Pressable onPress={onClose} style={styles.closeIconContainer}>
-              <Text style={styles.closeIcon}>×</Text>
+              <Text style={[styles.closeIcon, { fontSize: 25 * scale }]}>×</Text>
             </Pressable>
           </View>
 
           <LinearGradient
-            colors={["#FFB347", "#FF7043"]}
-            style={styles.modalContent}
+            colors={["#FFB347", "#FF8C5A", "#FF7043"]} // gradiente suave 3 colores
+            style={[styles.modalContent, { paddingTop: 90 * scale }]}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 1 }}
           >
-            <Text style={styles.modalTitle}>
+            <Text
+              style={[
+                styles.modalTitle,
+                {
+                  fontSize: 35 * scale,
+                  marginTop: -50 * scale,
+                },
+              ]}
+            >
               {loading ? "Procesando..." : "Suscríbete"}
             </Text>
 
@@ -163,27 +182,42 @@ export default function Marketplace({ visible, onClose }: MarketplaceProps) {
               const price = (plan.basePriceCents / 100).toFixed(2);
               const img = planImages[plan.id];
 
+              const baseSize = 80 + i * 25;
+
               return (
                 <View key={plan.id} style={styles.optionRow}>
                   {img && (
                     <Image
                       source={img}
-                      style={[
-                        styles.optionImage,
-                        { width: 80 + i * 25, height: 80 + i * 25 },
-                      ]}
-                      resizeMode="contain"
+                      style={{
+                        width: baseSize * scale,
+                        height: baseSize * scale,
+                        resizeMode: "contain",
+                        marginRight: 15 * scale,
+                      }}
                     />
                   )}
                   <Pressable
                     style={[
                       styles.priceButton,
-                      { backgroundColor: priceBackgrounds[i] || priceBackgrounds[0] },
+                      {
+                        backgroundColor: priceBackgrounds[i] || priceBackgrounds[0],
+                        paddingVertical: 10 * scale,
+                        paddingHorizontal: 20 * scale,
+                      },
                     ]}
                     onPress={() => !loading && handleSubscribe(plan)}
                     disabled={loading}
                   >
-                    <Text style={[styles.priceText, { fontSize: 22 + i * 3 }]}>
+                    <Text
+                      style={[
+                        styles.priceText,
+                        {
+                          fontSize: (22 + i * 3) * scale,
+                          textShadowOffset: { width: 3 * scale, height: 3 * scale },
+                        },
+                      ]}
+                    >
                       {price} {plan.currency}
                     </Text>
                   </Pressable>
@@ -193,7 +227,7 @@ export default function Marketplace({ visible, onClose }: MarketplaceProps) {
           </LinearGradient>
         </View>
 
-        {/* 🧾 Modal info */}
+        {/* ====================== MODAL INFO ====================== */}
         <Modal
           visible={infoVisible}
           transparent
@@ -204,30 +238,60 @@ export default function Marketplace({ visible, onClose }: MarketplaceProps) {
             <View
               style={[
                 styles.modalWrapper,
-                { height: height * 0.4, padding: 20, justifyContent: "center" },
+                {
+                  width: width * 0.85,
+                  height: height * 0.4,
+                  padding: 20 * scale,
+                  marginTop: insets.top + 100 * scale,
+                },
               ]}
             >
-              <Text style={[styles.modalTitle, { marginTop: 0 }]}>
+              <Text
+                style={[
+                  styles.modalTitle,
+                  {
+                    fontSize: 30 * scale,
+                    marginTop: 10 * scale,
+                    marginBottom: 10 * scale,
+                  },
+                ]}
+              >
                 ¿Qué incluye cada plan?
               </Text>
-              <Text style={styles.infoText}>
-                {
-                  "🎁 1 mes: Sin anuncios\n\n🌟 3 meses: Sin anuncios + 5 favoritos\n\n💎 6 meses: Sin anuncios + 10 favoritos\n\n👑 12 meses: Sin anuncios + 20 favoritos"
-                }
+
+              <Text
+                style={[
+                  styles.infoText,
+                  {
+                    fontSize: 18 * scale,
+                    lineHeight: 26 * scale,
+                  },
+                ]}
+              >
+                🎁 1 mes: Sin anuncios{"\n\n"}
+                🌟 3 meses: Sin anuncios + 5 favoritos{"\n\n"}
+                💎 6 meses: Sin anuncios + 10 favoritos{"\n\n"}
+                👑 12 meses: Sin anuncios + 20 favoritos
               </Text>
+
               <Pressable
                 onPress={() => setInfoVisible(false)}
                 style={[
                   styles.closeIconContainer,
                   {
+                    width: 50 * scale,
+                    height: 50 * scale,
                     alignSelf: "center",
                     backgroundColor: "#ffffffcc",
-                    width: 50,
-                    height: 50,
                   },
                 ]}
               >
-                <Text style={[styles.closeIcon, { fontSize: 28, color: "#8e44ad" }]}>
+                <Text
+                  style={[
+                    styles.closeIcon,
+                    { fontSize: 28 * scale, color: "#8e44ad" },
+                  ]}
+                >
                   ×
                 </Text>
               </Pressable>
@@ -235,7 +299,7 @@ export default function Marketplace({ visible, onClose }: MarketplaceProps) {
           </View>
         </Modal>
 
-        {/* 🎉 Modal éxito */}
+        {/* ====================== MODAL ÉXITO ====================== */}
         <Modal
           visible={successVisible}
           transparent
@@ -249,26 +313,50 @@ export default function Marketplace({ visible, onClose }: MarketplaceProps) {
             <View
               style={[
                 styles.modalWrapper,
-                { height: height * 0.45, padding: 25, justifyContent: "center" },
+                {
+                  width: width * 0.88,
+                  height: height * 0.45,
+                  padding: 25 * scale,
+                  justifyContent: "center",
+                  marginTop: insets.top + 80 * scale,
+                },
               ]}
             >
               <Image
                 source={require("../assets/MarketPlace/success.webp")}
-                style={{ width: 150, height: 150, alignSelf: "center", marginBottom: 20 }}
+                style={{
+                  width: 150 * scale,
+                  height: 150 * scale,
+                  alignSelf: "center",
+                  marginBottom: 20 * scale,
+                }}
                 resizeMode="contain"
               />
-              <Text style={[styles.modalTitle, { marginTop: 0 }]}>¡Compra exitosa!</Text>
+
+              <Text
+                style={[
+                  styles.modalTitle,
+                  {
+                    fontSize: 30 * scale,
+                    marginTop: 0,
+                  },
+                ]}
+              >
+                ¡Compra exitosa!
+              </Text>
+
               <Text
                 style={{
-                  fontSize: 18,
+                  fontSize: 18 * scale,
                   color: "#fff",
                   textAlign: "center",
-                  marginVertical: 20,
-                  lineHeight: 26,
+                  marginVertical: 20 * scale,
+                  lineHeight: 26 * scale,
                 }}
               >
                 Tu suscripción premium ha sido activada.{"\n"}Disfruta ChefSkills sin anuncios 🎉
               </Text>
+
               <Pressable
                 onPress={() => {
                   setSuccessVisible(false);
@@ -279,16 +367,16 @@ export default function Marketplace({ visible, onClose }: MarketplaceProps) {
                   {
                     alignSelf: "center",
                     backgroundColor: "#ffffffcc",
-                    width: 120,
-                    height: 46,
-                    borderRadius: 14,
+                    width: 120 * scale,
+                    height: 46 * scale,
+                    borderRadius: 14 * scale,
                   },
                 ]}
               >
                 <Text
                   style={{
                     color: "#8e44ad",
-                    fontSize: 18,
+                    fontSize: 18 * scale,
                     fontWeight: "bold",
                   }}
                 >
@@ -310,40 +398,39 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+
   modalWrapper: {
-    width: width * 0.9,
-    height: height * 0.75,
     borderRadius: 20,
     alignItems: "center",
     overflow: "visible",
+    backgroundColor: "transparent",
   },
+
   modalContent: {
     flex: 1,
-    padding: 20,
-    paddingTop: 100,
     width: "100%",
     borderRadius: 20,
     alignItems: "center",
   },
+
   modalTitle: {
-    fontSize: 35,
     color: "#fff",
-    marginTop: -60,
-    marginBottom: 20,
     fontFamily: "Baloo2",
     fontWeight: "800",
     fontStyle: "italic",
     textShadowColor: "#153991",
     textShadowOffset: { width: 3, height: 3 },
     textShadowRadius: 1,
-    width: "100%",
     textAlign: "center",
   },
-  optionRow: { flexDirection: "row", alignItems: "center", marginBottom: 20 },
-  optionImage: { resizeMode: "contain", marginRight: 15 },
+
+  optionRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 20,
+  },
+
   priceButton: {
-    paddingVertical: 10,
-    paddingHorizontal: 20,
     borderTopLeftRadius: 50,
     borderBottomRightRadius: 50,
     borderWidth: 1,
@@ -352,20 +439,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+
   priceText: {
     fontWeight: "bold",
-    textShadowColor: "black",
-    textShadowOffset: { width: 3, height: 3 },
-    textShadowRadius: 1,
     color: "#fff",
+    textShadowColor: "black",
   },
+
   infoText: {
-    fontSize: 18,
     color: "#fff",
     textAlign: "center",
     marginVertical: 20,
-    lineHeight: 28,
   },
+
   topBar: {
     position: "absolute",
     top: 15,
@@ -376,6 +462,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     zIndex: 20,
   },
+
   infoButton: {
     width: 50,
     height: 50,
@@ -383,7 +470,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  infoIcon: { color: "white", fontWeight: "100", fontSize: 25, marginTop: -40 },
+
+  infoIcon: {
+    color: "white",
+    fontWeight: "100",
+  },
+
   closeIconContainer: {
     backgroundColor: "#ffffff99",
     borderRadius: 50,
@@ -393,17 +485,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
     zIndex: 10,
   },
-  closeIcon: { fontSize: 25, fontWeight: "bold", color: "#333" },
+
+  closeIcon: {
+    fontWeight: "bold",
+    color: "#333",
+  },
+
   topBannerCentered: {
     position: "absolute",
-    alignSelf: "center",
-    width: 159,
-    height: 106,
-    resizeMode: "contain",
     borderRadius: 25,
-    zIndex: 30,
     backgroundColor: "#fff",
     borderWidth: 3,
     borderColor: "#8e44ad",
+    zIndex: 30,
   },
 });

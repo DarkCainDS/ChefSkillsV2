@@ -13,17 +13,21 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../store/Index";
 import { setUser, setPremium, setSubscriptionResolved } from "../store/Slices/userSlice";
+
 import {
   GoogleSignin,
   statusCodes,
 } from "@react-native-google-signin/google-signin";
+
 import {
   getAuth,
   GoogleAuthProvider,
   signInWithCredential,
 } from "firebase/auth";
+
 import { SafeAreaView } from "react-native-safe-area-context";
 import { checkSubscriptionStatus } from "../services/subscriptionService";
+
 import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
 import { db } from "../services/firebaseConfig";
 
@@ -65,7 +69,9 @@ const LoadingScreen = () => {
 
   const [backgroundImage, setBackgroundImage] = useState(loadingImages[0]);
 
-  // 🎨 Fondo aleatorio + fade
+  // ------------------------------------------------------------
+  // Fondo animado
+  // ------------------------------------------------------------
   useEffect(() => {
     const random = Math.floor(Math.random() * loadingImages.length);
     setBackgroundImage(loadingImages[random]);
@@ -76,7 +82,9 @@ const LoadingScreen = () => {
     }).start();
   }, []);
 
-  // 🔹 Configurar Google Sign-In
+  // ------------------------------------------------------------
+  // Config Google
+  // ------------------------------------------------------------
   useEffect(() => {
     GoogleSignin.configure({
       webClientId:
@@ -85,10 +93,13 @@ const LoadingScreen = () => {
     });
   }, []);
 
-  // 🧾 Crear o actualizar documento del usuario
+  // ------------------------------------------------------------
+  // (A) Crear / Actualizar usuario
+  // ------------------------------------------------------------
   const createOrUpdateUser = async (user: any) => {
     const ref = doc(db, "users", user.uid);
     const snap = await getDoc(ref);
+
     if (!snap.exists()) {
       await setDoc(ref, {
         uid: user.uid,
@@ -109,7 +120,66 @@ const LoadingScreen = () => {
     }
   };
 
-  // 🚀 Inicio de sesión + verificación de suscripción
+  // ------------------------------------------------------------
+  // (B) Maneja login tanto del botón como restauración
+  // ------------------------------------------------------------
+  const handleFirebaseUser = async (firebaseUser: any) => {
+    try {
+      setLoading(true);
+      setMessage("Cargando datos del usuario...");
+
+      // Crear o actualizar en Firestore
+      await createOrUpdateUser(firebaseUser);
+
+      // Guardar en Redux
+      dispatch(
+        setUser({
+          uid: firebaseUser.uid,
+          name: firebaseUser.displayName || null,
+          photo: firebaseUser.photoURL || null,
+          email: firebaseUser.email || null,
+        })
+      );
+
+      // Verificar suscripción
+      const subData = await checkSubscriptionStatus(firebaseUser.uid, dispatch);
+
+      const premiumStatus = !!subData?.isActive;
+      dispatch(setPremium(premiumStatus));
+
+      if (subData) {
+        await AsyncStorage.setItem("subscriptionData", JSON.stringify(subData));
+      } else {
+        await AsyncStorage.removeItem("subscriptionData");
+      }
+
+      dispatch(setSubscriptionResolved());
+      setMessage("¡Sesión iniciada con éxito!");
+
+    } catch (err) {
+      console.error("❌ ERROR handleFirebaseUser:", err);
+      setMessage("Error cargando tu sesión.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // ------------------------------------------------------------
+  // (C) Restauración de sesión → Crear usuario si no existe
+  // ------------------------------------------------------------
+  useEffect(() => {
+    const auth = getAuth();
+    const currentUser = auth.currentUser;
+
+    if (currentUser) {
+      console.log("🔄 Sesión ya activa en Firebase → creando usuario...");
+      handleFirebaseUser(currentUser);
+    }
+  }, []);
+
+  // ------------------------------------------------------------
+  // (D) Login manual con Google
+  // ------------------------------------------------------------
   const signInWithGoogle = async () => {
     setLoading(true);
     setMessage("Iniciando sesión con Google...");
@@ -124,37 +194,8 @@ const LoadingScreen = () => {
       const credential = GoogleAuthProvider.credential(idToken);
       const firebaseUser = (await signInWithCredential(auth, credential)).user;
 
-      await createOrUpdateUser(firebaseUser);
+      await handleFirebaseUser(firebaseUser);
 
-      // 🧭 Guardar usuario en Redux
-      dispatch(
-        setUser({
-          uid: firebaseUser.uid,
-          name: firebaseUser.displayName || null,
-          photo: firebaseUser.photoURL || null,
-          email: firebaseUser.email || null,
-        })
-      );
-
-      // ⚙️ Verificar suscripción
-      setMessage("Verificando suscripción...");
-      const subData = await checkSubscriptionStatus(firebaseUser.uid, dispatch);
-      console.log("🔎 subData (login):", subData);
-
-      const premiumStatus = !!(subData?.isActive);
-      dispatch(setPremium(premiumStatus));
-
-      // 💾 Guardar en cache o limpiar
-      if (subData) {
-        await AsyncStorage.setItem("subscriptionData", JSON.stringify(subData));
-      } else {
-        await AsyncStorage.removeItem("subscriptionData");
-      }
-
-      dispatch(setSubscriptionResolved()); // <- Marca verificación completa
-      setMessage("¡Sesión iniciada con éxito! 🚀");
-
-      // ✅ App.tsx redirige automáticamente según usuario logueado
     } catch (error: any) {
       console.error("[ERROR] Google Sign-In:", error);
       if (error.code === statusCodes.SIGN_IN_CANCELLED)
@@ -169,14 +210,19 @@ const LoadingScreen = () => {
     }
   };
 
+  // ------------------------------------------------------------
+  // UI
+  // ------------------------------------------------------------
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
+
       <AnimatedImageBackground
         source={backgroundImage}
         style={[StyleSheet.absoluteFillObject, { opacity: fadeAnim }]}
         resizeMode="cover"
       />
+
       <View style={styles.innerContainer}>
         {loading ? (
           <>
