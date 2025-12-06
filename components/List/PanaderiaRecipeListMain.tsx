@@ -1,31 +1,33 @@
 // screens/PanaderiaRecipeListMain.tsx
-import { Ionicons } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
-import { Image } from 'expo-image';
-import React, { useMemo, useState } from 'react';
-import { FlatList, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import panaderiaData from '../../assets/Json/Panaderia.json';
+import { Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+import { Image } from "expo-image";
+import React, { useMemo, useState, useCallback } from "react";
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
-// Importar imágenes locales de 404
-const placeholderImages = [
-  require('../../assets/404/placeholder1.webp'),
-  require('../../assets/404/placeholder2.webp'),
-  require('../../assets/404/placeholder3.webp'),
-  require('../../assets/404/placeholder4.webp'),
-  require('../../assets/404/placeholder5.webp'),
-  require('../../assets/404/placeholder6.webp'),
-  require('../../assets/404/placeholder7.webp'),
-  require('../../assets/404/placeholder8.webp'),
-  require('../../assets/404/placeholder9.webp'),
-  require('../../assets/404/placeholder10.webp'),
-  require('../../assets/404/placeholder11.webp'),
-  require('../../assets/404/placeholder12.webp'),
-  require('../../assets/404/placeholder13.webp'),
-  require('../../assets/404/placeholder14.webp'),
-  require('../../assets/404/placeholder15.webp'),
-  require('../../assets/404/placeholder16.webp'),
-];
+import panaderiaData from "../../assets/Json/Panaderia.json";
 
+// 🟢 Util unificado
+import { getSafeImage } from "../../utils/getImageSource";
+
+// 🔎 Normalizador PRO
+const normalizeText = (text: string) =>
+  text
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9 ]/gi, " ")
+    .replace(/\s+/g, " ")
+    .toLowerCase()
+    .trim();
+
+// 🔄 Mezcla segura
 const shuffleArray = (array: any[]) => {
   const arr = [...array];
   for (let i = arr.length - 1; i > 0; i--) {
@@ -35,108 +37,163 @@ const shuffleArray = (array: any[]) => {
   return arr;
 };
 
-const PanaderiaRecipeListMain = () => {
+function PanaderiaRecipeListMain() {
   const navigation = useNavigation();
   const [recipes] = useState(panaderiaData.recipes);
-  const [filteredRecipes, setFilteredRecipes] = useState(recipes);
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState("");
 
-  const filterRecipes = (text: string) => {
-    setSearchText(text);
-    if (text) {
-      const filtered = recipes.filter(
-        (recipe) =>
-          recipe.name.toLowerCase().includes(text.toLowerCase()) ||
-          recipe.description.toLowerCase().includes(text.toLowerCase())
-      );
-      setFilteredRecipes(filtered);
-    } else {
-      setFilteredRecipes(recipes);
-    }
-  };
+  // 🔍 Filtro avanzado
+  const filteredRecipes = useMemo(() => {
+    if (!searchText.trim()) return recipes;
 
-  const shuffledRecipes = useMemo(() => shuffleArray(filteredRecipes), [filteredRecipes]);
+    const nText = normalizeText(searchText);
 
-  const renderRecipe = ({ item }: any) => {
-    const imageSource = item.images?.[0]
-      ? { uri: item.images[0] }
-      : placeholderImages[Math.floor(Math.random() * placeholderImages.length)];
+    return recipes.filter((recipe) => {
+      const nName = normalizeText(recipe.name);
+      const nDesc = normalizeText(recipe.description);
 
-    return (
+      return nName.includes(nText) || nDesc.includes(nText);
+    });
+  }, [recipes, searchText]);
+
+  // 🎲 Barajar cada vez que cambia la búsqueda
+  const shuffledRecipes = useMemo(
+    () => shuffleArray(filteredRecipes),
+    [filteredRecipes]
+  );
+
+  // 🎴 Render optimizado
+  const renderRecipe = useCallback(
+    ({ item }) => (
       <TouchableOpacity
         style={styles.card}
-        onPress={() => navigation.navigate('PanaderiaRecipeDetail', { recipe: item })}
+        activeOpacity={0.8}
+        onPress={() =>
+          navigation.navigate("PanaderiaRecipeDetail", { recipe: item })
+        }
       >
         <Image
-          source={imageSource}
+          source={getSafeImage(item.imageUrl, item.images)}
           style={styles.image}
           contentFit="cover"
           transition={300}
-          cachePolicy="memory-disk"
         />
+
         <View style={styles.info}>
           <Text style={styles.title}>{item.name}</Text>
+
           <View style={styles.divider} />
-          <Text style={styles.description} numberOfLines={2} ellipsizeMode="tail">
+
+          <Text style={styles.description} numberOfLines={2}>
             {item.description}
           </Text>
         </View>
       </TouchableOpacity>
-    );
-  };
+    ),
+    [navigation]
+  );
 
   return (
     <View style={styles.container}>
+      {/* Barra de búsqueda */}
       <View style={styles.searchContainer}>
-        <Ionicons name="search" size={20} color="#888" style={styles.searchIcon} />
+        <Ionicons
+          name="search"
+          size={20}
+          color="#888"
+          style={styles.searchIcon}
+        />
+
         <TextInput
           style={styles.searchInput}
           placeholder="Buscar receta de panadería..."
           placeholderTextColor="#888"
           value={searchText}
-          onChangeText={filterRecipes}
+          onChangeText={setSearchText}
         />
       </View>
 
+      {/* Lista */}
       <FlatList
         data={shuffledRecipes}
         keyExtractor={(item) => item.id.toString()}
         renderItem={renderRecipe}
         showsVerticalScrollIndicator={false}
+        initialNumToRender={8}
+        maxToRenderPerBatch={6}
+        windowSize={5}
       />
     </View>
   );
-};
+}
 
+// 🎨 Estilos unificados (no dependemos de categoría)
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 15 },
+
   searchContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    borderColor: '#ccc',
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#fff",
+    borderColor: "#ccc",
     borderWidth: 1,
     borderRadius: 10,
     paddingHorizontal: 10,
     marginBottom: 15,
   },
+
   searchIcon: { marginRight: 10 },
-  searchInput: { flex: 1, height: 40, fontSize: 16, color: '#333' },
+
+  searchInput: {
+    flex: 1,
+    height: 40,
+    fontSize: 16,
+    color: "#333",
+  },
+
   card: {
-    flexDirection: 'row',
-    backgroundColor: '#ebeaeaff',
+    flexDirection: "row",
+    backgroundColor: "#ebeaeaff",
     borderRadius: 10,
     padding: 10,
-    marginVertical: 3,
     marginBottom: 15,
-    elevation: 5,
-    height: 105, // altura fija igual que MainDish
+    elevation: 4,
+    height: 105,
   },
-  image: { width: 80, height: 80, borderRadius: 10, resizeMode: 'cover' },
-  info: { flex: 1, justifyContent: 'center', marginLeft: 10 },
-  title: { fontSize: 16, fontWeight: 'bold', marginBottom: 6, color:"black" },
-  divider: { height: 1, backgroundColor: '#ccc', marginBottom: 6, width: '100%' },
-  description: { fontSize: 14, fontStyle: 'italic', color: '#333', marginLeft: 2 },
+
+  image: {
+    width: 80,
+    height: 80,
+    borderRadius: 10,
+  },
+
+  info: {
+    flex: 1,
+    justifyContent: "center",
+    marginLeft: 10,
+  },
+
+  title: {
+    fontSize: 16,
+    fontWeight: "bold",
+    marginBottom: 6,
+    color: "black",
+  },
+
+  divider: {
+    height: 1,
+    backgroundColor: "#ccc",
+    marginBottom: 6,
+    width: "100%",
+  },
+
+  description: {
+    fontSize: 14,
+    fontStyle: "italic",
+    color: "#333",
+    marginLeft: 2,
+  },
 });
 
-export default PanaderiaRecipeListMain;
+// 🟢 Optimizamos al máximo la lista completa
+export default React.memo(PanaderiaRecipeListMain);

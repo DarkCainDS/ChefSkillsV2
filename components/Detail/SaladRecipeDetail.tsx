@@ -266,47 +266,58 @@ export default function EnsaladaRecipeDetail() {
       </ScrollView>
 
       {/* MODAL TIPS */}
-      <Modal visible={tipsVisible} transparent animationType="fade">
-        <TouchableWithoutFeedback onPress={closeTipsModal}>
-          <View style={styles.tipsModalOverlay}>
-            <TouchableWithoutFeedback>
-              <Animated.View
-                style={[
-                  styles.tipsModal,
-                  { opacity: fadeAnim, transform: [{ scale: fadeAnim }] },
-                ]}
-              >
-                <Text style={styles.tipsTitle}>💡 Consejos útiles</Text>
+<Modal
+  visible={tipsVisible}
+  transparent
+  animationType="fade"
+  onRequestClose={closeTipsModal}
+>
+  <View style={styles.tipsModalOverlay} pointerEvents="box-none">
 
-                <ScrollView showsVerticalScrollIndicator={false}>
-                  {recipe.tips?.map((tip, idx) => (
-                    <LinearGradient
-                      key={idx}
-                      colors={[
-                        tipColors[idx % tipColors.length],
-                        tipColors[idx % tipColors.length] + "CC",
-                      ]}
-                      style={styles.tipCard}
-                    >
-                      <Text style={styles.tipTitle}>{tip.title}</Text>
-                      <Text style={styles.tipDescription}>
-                        {tip.description}
-                      </Text>
-                    </LinearGradient>
-                  ))}
-                </ScrollView>
+    {/* Tap fuera del modal = cerrar */}
+    <TouchableWithoutFeedback onPress={closeTipsModal}>
+      <View style={StyleSheet.absoluteFill} />
+    </TouchableWithoutFeedback>
 
-                <TouchableOpacity
-                  style={styles.closeTipsButton}
-                  onPress={closeTipsModal}
-                >
-                  <Text style={styles.closeTipsText}>Cerrar</Text>
-                </TouchableOpacity>
-              </Animated.View>
-            </TouchableWithoutFeedback>
-          </View>
-        </TouchableWithoutFeedback>
-      </Modal>
+    {/* Contenido del modal (scrollable y libre) */}
+    <Animated.View
+      style={[
+        styles.tipsModal,
+        { opacity: fadeAnim, transform: [{ scale: fadeAnim }] },
+      ]}
+      pointerEvents="box-none"
+    >
+      <Text style={styles.tipsTitle}>💡 Consejos útiles</Text>
+
+      <ScrollView
+        style={{ maxHeight: "70%" }}
+        showsVerticalScrollIndicator={false}
+      >
+        {recipe.tips?.map((tip, idx) => (
+          <LinearGradient
+            key={idx}
+            colors={[
+              tipColors[idx % tipColors.length] + "FF",
+              tipColors[idx % tipColors.length] + "CC",
+            ]}
+            style={styles.tipCard}
+          >
+            <Text style={styles.tipTitle}>{tip.title}</Text>
+            <Text style={styles.tipDescription}>{tip.description}</Text>
+          </LinearGradient>
+        ))}
+      </ScrollView>
+
+      <TouchableOpacity
+        style={styles.closeTipsButton}
+        onPress={closeTipsModal}
+      >
+        <Text style={styles.closeTipsText}>Cerrar</Text>
+      </TouchableOpacity>
+    </Animated.View>
+  </View>
+</Modal>
+
     </LinearGradient>
   );
 }

@@ -61,6 +61,7 @@ import Menu from "./components/Menu";
 
 // ADS
 import InterstitialAdManager from "./components/ads/InterstitialAdManager";
+import VeganRecipeDetail from "./components/Detail/VeganRecipeDetail";
 
 const Stack = createStackNavigator();
 
@@ -272,11 +273,15 @@ const AppContent = () => {
         <Stack.Screen name="SaladRecipeDetail" component={SaladRecipeDetail} />
         <Stack.Screen name="SoupRecipeDetail" component={SoupRecipeDetail} />
         <Stack.Screen name="DrinkRecipeDetail" component={DrinkRecipeDetail} />
+        <Stack.Screen name="VeganRecipeDetail" component={VeganRecipeDetail} />
         <Stack.Screen name="FavoriteRecipeDetail" component={FavoriteRecipeDetail} />
         <Stack.Screen name="Menu" component={Menu} />
       </Stack.Navigator>
 
-      <InterstitialAdManager currentRoute={currentRouteName} />
+      {firebaseUser && currentRouteName !== "Loading" && (
+        <InterstitialAdManager currentRoute={currentRouteName} />
+      )}
+
     </NavigationContainer>
   );
 };

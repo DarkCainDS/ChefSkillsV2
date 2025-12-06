@@ -1,4 +1,5 @@
 // utils/getImageSource.ts
+
 export const placeholderImages = [
   require("../assets/404/placeholder1.webp"),
   require("../assets/404/placeholder2.webp"),
@@ -18,16 +19,32 @@ export const placeholderImages = [
   require("../assets/404/placeholder16.webp"),
 ];
 
-export function getSafeImage(url?: string) {
-  if (!url || typeof url !== "string") {
-    return placeholderImages[Math.floor(Math.random() * placeholderImages.length)];
+// 🔥 FUNCIÓN MEJORADA
+export function getSafeImage(
+  mainUrl?: string,
+  imagesArray?: string[]
+) {
+  const placeholders = placeholderImages;
+  const randomPlaceholder =
+    placeholders[Math.floor(Math.random() * placeholders.length)];
+
+  // --- PRIORIDAD 1: imageUrl principal ---
+  if (mainUrl && typeof mainUrl === "string") {
+    if (mainUrl.startsWith("http://") || mainUrl.startsWith("https://")) {
+      return { uri: encodeURI(mainUrl) }; // encode fix
+    }
   }
 
-  // Si es URL remota válida
-  if (url.startsWith("http://") || url.startsWith("https://")) {
-    return { uri: url };
+  // --- PRIORIDAD 2: primera imagen del array ---
+  if (imagesArray && Array.isArray(imagesArray) && imagesArray.length > 0) {
+    const url = imagesArray[0];
+    if (url && typeof url === "string") {
+      if (url.startsWith("http://") || url.startsWith("https://")) {
+        return { uri: encodeURI(url) };
+      }
+    }
   }
 
-  // Si son imágenes locales incorrectas → placeholder
-  return placeholderImages[Math.floor(Math.random() * placeholderImages.length)];
+  // --- FALLBACK: placeholder aleatorio ---
+  return randomPlaceholder;
 }

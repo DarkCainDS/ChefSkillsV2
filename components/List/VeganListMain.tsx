@@ -1,4 +1,4 @@
-// screens/PastryRecipeListMain.tsx
+// screens/VeganRecipeListMain.tsx
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { Image } from "expo-image";
@@ -12,12 +12,12 @@ import {
   View,
 } from "react-native";
 
-import recipesData from "../../assets/Json/Pastry_Recipe.json";
+import veganData from "../../assets/Json/Vegan.json";
 
-// 🟣 Util universal de imágenes seguras
+// 🟢 Util universal para imágenes seguras
 import { getSafeImage } from "../../utils/getImageSource";
 
-// 🧠 Normalizador PRO para búsquedas inteligentes
+// 🔍 Normalización PRO de texto
 const normalizeText = (text: string) =>
   text
     .normalize("NFD")
@@ -27,7 +27,7 @@ const normalizeText = (text: string) =>
     .toLowerCase()
     .trim();
 
-// 🔄 Mezclar resultados
+// 🎲 Mezclar los resultados
 const shuffleArray = (array: any[]) => {
   const arr = [...array];
   for (let i = arr.length - 1; i > 0; i--) {
@@ -37,12 +37,12 @@ const shuffleArray = (array: any[]) => {
   return arr;
 };
 
-function PastryRecipeListMain() {
+function VeganRecipeListMain() {
   const navigation = useNavigation();
-  const [recipes] = useState(recipesData.recipes);
+  const [recipes] = useState(veganData.recipes);
   const [searchText, setSearchText] = useState("");
 
-  // 🔎 Filtrado robusto
+  // 🔎 Filtro inteligente
   const filteredRecipes = useMemo(() => {
     if (!searchText.trim()) return recipes;
 
@@ -51,25 +51,24 @@ function PastryRecipeListMain() {
     return recipes.filter((recipe) => {
       const nName = normalizeText(recipe.name);
       const nDesc = normalizeText(recipe.description);
-
       return nName.includes(nText) || nDesc.includes(nText);
     });
   }, [recipes, searchText]);
 
-  // 🎲 Barajar resultados
+  // 🌀 Mezclar cuando cambie el filtro
   const shuffledRecipes = useMemo(
     () => shuffleArray(filteredRecipes),
     [filteredRecipes]
   );
 
-  // 🎴 Render optimizado
+  // 🎨 Render de cada receta
   const renderRecipe = useCallback(
     ({ item }) => (
       <TouchableOpacity
         style={styles.card}
         activeOpacity={0.8}
         onPress={() =>
-          navigation.navigate("PastryRecipeDetail", { recipe: item })
+          navigation.navigate("VeganRecipeDetail", { recipe: item })
         }
       >
         <Image
@@ -93,20 +92,25 @@ function PastryRecipeListMain() {
 
   return (
     <View style={styles.container}>
-      {/* 🔍 Buscador */}
+      {/* 🔎 Barra de búsqueda */}
       <View style={styles.searchContainer}>
-        <Ionicons name="search" size={20} color="#888" style={styles.searchIcon} />
+        <Ionicons
+          name="search"
+          size={20}
+          color="#888"
+          style={styles.searchIcon}
+        />
 
         <TextInput
           style={styles.searchInput}
-          placeholder="Buscar receta..."
+          placeholder="Buscar receta vegana..."
           placeholderTextColor="#888"
           value={searchText}
           onChangeText={setSearchText}
         />
       </View>
 
-      {/* 📜 Lista de recetas */}
+      {/* 📜 Lista final */}
       <FlatList
         data={shuffledRecipes}
         keyExtractor={(item) => item.id.toString()}
@@ -120,6 +124,7 @@ function PastryRecipeListMain() {
   );
 }
 
+// 🎨 Estilos universales
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 15 },
 
@@ -136,12 +141,7 @@ const styles = StyleSheet.create({
 
   searchIcon: { marginRight: 10 },
 
-  searchInput: {
-    flex: 1,
-    height: 40,
-    fontSize: 16,
-    color: "#333",
-  },
+  searchInput: { flex: 1, height: 40, fontSize: 16, color: "#333" },
 
   card: {
     flexDirection: "row",
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 10,
     marginBottom: 15,
-    elevation: 4,
+    elevation: 5,
     height: 105,
   },
 
@@ -159,18 +159,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 
-  info: {
-    flex: 1,
-    justifyContent: "center",
-    marginLeft: 10,
-  },
+  info: { flex: 1, justifyContent: "center", marginLeft: 10 },
 
-  title: {
-    fontSize: 16,
-    fontWeight: "bold",
-    marginBottom: 6,
-    color: "black",
-  },
+  title: { fontSize: 16, fontWeight: "bold", marginBottom: 6, color: "black" },
 
   divider: {
     height: 1,
@@ -183,9 +174,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontStyle: "italic",
     color: "#333",
-    marginLeft: 2,
   },
 });
 
-// 🟢 OPTIMIZACIÓN GLOBAL
-export default React.memo(PastryRecipeListMain);
+export default React.memo(VeganRecipeListMain);

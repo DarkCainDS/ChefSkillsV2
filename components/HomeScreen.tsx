@@ -27,6 +27,7 @@ import SoupRecipeListMain from './List/SoupRecipeListMain';
 import SalsaRecipeListMain from './List/SalsaRecipeListMain';
 import SaladRecipeListMain from './List/SaladRecipeListMain';
 import DrinksRecipeListMain from './List/DrinksRecipeListMain';
+import VeganListMain from './List/VeganListMain';
 
 import TechniqueList from '../components/List/TechniqueList';
 import Favorites from './Favorites';
@@ -73,6 +74,7 @@ enum Sections {
   Salsas = 'Salsas 🍅',
   Ensaladas = 'Ensaladas 🥗',
   Tragos = 'Tragos 🍸',
+  Vegan = 'Vegan 🥑',
   Tecnicas = 'Tecnicas 🍳',
   Favoritos = 'Favoritos ⭐',
 }
@@ -256,6 +258,7 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
         {activeComponent === Sections.Salsas && <SalsaRecipeListMain />}
         {activeComponent === Sections.Ensaladas && <SaladRecipeListMain />}
         {activeComponent === Sections.Tragos && <DrinksRecipeListMain />}
+        {activeComponent === Sections.Vegan && <VeganListMain />}
         {activeComponent === Sections.Tecnicas && (
           <TechniqueList onPressTechnique={(item: any) => item && navigation.navigate('TechniqueDetails', { ...item })} />
         )}

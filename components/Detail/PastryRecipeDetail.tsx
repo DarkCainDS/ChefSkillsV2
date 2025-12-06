@@ -2,8 +2,9 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
 import { Image } from "expo-image";
-import React, { useState, useRef } from "react";
+import React, { useRef, useState } from "react";
 import {
+  Animated,
   Modal,
   ScrollView,
   StyleSheet,
@@ -11,7 +12,6 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   View,
-  Animated,
 } from "react-native";
 
 import BouncyCheckbox from "react-native-bouncy-checkbox";
@@ -24,15 +24,46 @@ import { useFavoriteToggle } from "../hooks/useFavoriteToggle";
 
 import type { Recipe } from "../../store/Slices/FavoriteSlice";
 
-// NAV TYPE
 type RootStackParamList = {
   PastryRecipeDetail: { recipe: Recipe };
 };
 
+// Acordeón básico sin interpolaciones gigantes (anti-scroll infinito)
+const SimpleAccordion = ({
+  title,
+  initiallyOpen = false,
+  children,
+}: {
+  title: string;
+  initiallyOpen?: boolean;
+  children: React.ReactNode;
+}) => {
+  const [open, setOpen] = useState(initiallyOpen);
+
+  return (
+    <View style={styles.accordionContainer}>
+      <TouchableOpacity
+        style={styles.accordionHeader}
+        onPress={() => setOpen((prev) => !prev)}
+      >
+        <Text style={styles.accordionTitle}>{title}</Text>
+        <MaterialIcons
+          name={open ? "keyboard-arrow-up" : "keyboard-arrow-down"}
+          size={26}
+          color="#7A2E55"
+        />
+      </TouchableOpacity>
+
+      {open && <View style={styles.accordionContent}>{children}</View>}
+    </View>
+  );
+};
+
 export default function PastryRecipeDetail() {
+
+
   const navigation = useNavigation();
-  const route =
-    useRoute<RouteProp<RootStackParamList, "PastryRecipeDetail">>();
+  const route = useRoute<RouteProp<RootStackParamList, "PastryRecipeDetail">>();
   const recipe = route.params?.recipe as Recipe | undefined;
 
   const [fontLoaded] = useFonts({
@@ -46,11 +77,12 @@ export default function PastryRecipeDetail() {
 
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
-  // ❤️ Hook favoritos
+  // ❤️ Favoritos
   const { isFavorite, toggleFavorite, heartAnim } = useFavoriteToggle(
     recipe ?? null
   );
 
+  // 🔢 Multiplicador que detecta números dentro de strings
   const modifyQuantity = (quantity: string, multiplier: number) =>
     quantity.replace(/-?\d+(\.\d+)?/g, (match) =>
       String(parseFloat(match) * multiplier)
@@ -72,22 +104,16 @@ export default function PastryRecipeDetail() {
 
   const getButtonColor = (m: number) => {
     switch (m) {
-      case 1:
-        return "#6B7280";
-      case 2:
-        return "#3B82F6";
-      case 3:
-        return "#22C55E";
-      case 4:
-        return "#EF4444";
-      case 0.5:
-        return "#FACC15";
-      default:
-        return "#3B82F6";
+      case 1: return "#6B7280";
+      case 2: return "#3B82F6";
+      case 3: return "#22C55E";
+      case 4: return "#EF4444";
+      case 0.5: return "#FACC15";
+      default: return "#3B82F6";
     }
   };
 
-  // ✅ MISMA PALETA DE TIPS QUE EL MAIN DISH (varios colores, no solo rosa)
+  // 🎨 Tip colors
   const tipColors = [
     "#FFF9C4",
     "#C8E6C9",
@@ -112,26 +138,26 @@ export default function PastryRecipeDetail() {
   const closeTipsModal = () => {
     Animated.timing(fadeAnim, {
       toValue: 0,
-      duration: 200,
+      duration: 180,
       useNativeDriver: true,
     }).start(() => setTipsVisible(false));
   };
 
   if (!fontLoaded || !recipe) {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <View style={styles.loading}>
         <Text>Cargando receta...</Text>
       </View>
     );
   }
 
+
+
   return (
-    <LinearGradient
-      colors={["#FFE6EF", "#FFD4E3", "#F8C3D8"]}
-      style={{ flex: 1 }}
-    >
+    <LinearGradient colors={["#FFE6EF", "#FFD4E3", "#F8C3D8"]} style={{ flex: 1 }}>
       <ScrollView style={{ flex: 1, padding: 15 }}>
-        {/* HEADER */}
+        
+        {/* HEADER PRINCIPAL */}
         <CategoryHeader
           title="Pastelería"
           icon="🧁"
@@ -140,7 +166,7 @@ export default function PastryRecipeDetail() {
           onBack={() => navigation.goBack()}
         />
 
-        {/* TITLE + HEART */}
+        {/* NOMBRE + FAVORITO */}
         <View style={styles.headerContainer}>
           <Text style={styles.recipeTitle}>{recipe.name}</Text>
 
@@ -148,14 +174,14 @@ export default function PastryRecipeDetail() {
             <Animated.View style={{ transform: [{ scale: heartAnim }] }}>
               <MaterialIcons
                 name={isFavorite ? "favorite" : "favorite-border"}
-                size={48}
-                color={isFavorite ? "#FF2F81" : "black"}
+                size={46}
+                color={isFavorite ? "#FF2F81" : "#52263A"}
               />
             </Animated.View>
           </TouchableOpacity>
         </View>
 
-        {/* IMAGES */}
+        {/* GALERÍA */}
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -174,7 +200,7 @@ export default function PastryRecipeDetail() {
           ))}
         </ScrollView>
 
-        {/* IMAGE MODAL */}
+        {/* MODAL IMAGEN */}
         <Modal visible={!!selectedImage} transparent animationType="fade">
           <TouchableWithoutFeedback onPress={() => setSelectedImage(null)}>
             <View style={styles.modalBackground}>
@@ -189,144 +215,211 @@ export default function PastryRecipeDetail() {
           </TouchableWithoutFeedback>
         </Modal>
 
-        {/* INGREDIENTES + MULTIPLIER  */}
-        <View style={styles.rowHeader}>
-          <Text style={styles.sectionTitle}>Ingredientes</Text>
+{/* ⭐ MINI-HEADER PREMIUM COMPLETO — Preparaciones + Multiplicador + Glossy */}
+<View style={styles.miniHeaderWrapper}>
+  <LinearGradient
+    colors={["#6A1BFF", "#3A0F78", "#000000"]}
+    start={{ x: 0, y: 0 }}
+    end={{ x: 1, y: 1 }}
+    style={styles.miniHeader}
+  >
+    {/* ICONO */}
+    <MaterialIcons name="content-paste" size={24} color="#fff" />
 
-          <TouchableOpacity
-            style={[
-              styles.multiplicarButton,
-              { backgroundColor: getButtonColor(multiplier) },
-            ]}
-            onPress={handleButtonPress}
+    {/* TEXTO */}
+    <Text style={styles.miniHeaderText}>Preparaciones</Text>
+
+    {/* BOTÓN MULTIPLICADOR */}
+    <TouchableOpacity
+      style={[
+        styles.multiplierMini,
+        { backgroundColor: getButtonColor(multiplier) },
+      ]}
+      onPress={handleButtonPress}
+    >
+      <Text style={styles.multiplierMiniText}>{buttonText}</Text>
+    </TouchableOpacity>
+
+
+  </LinearGradient>
+</View>
+
+
+        {/* SECCIONES */}
+        {recipe.sections?.map((section: any, idx: number) => (
+          <SimpleAccordion
+            key={idx}
+            title={section.title || `Sección ${idx + 1}`}
+            initiallyOpen={idx === 0}
           >
-            <Text style={styles.buttonText}>{buttonText}</Text>
-          </TouchableOpacity>
-        </View>
+            {/* INGREDIENTES */}
+            {section.ingredients && section.ingredients.length > 0 && (
+              <View style={styles.ingredientsContainer}>
+                <View style={[styles.tableRow, styles.tableHeaderRow]}>
+                  <Text style={[styles.tableCellName, styles.tableHeader]}>
+                    Ingrediente
+                  </Text>
+                  <Text style={[styles.tableCellQuantity, styles.tableHeader]}>
+                    Cantidad
+                  </Text>
+                  <Text style={[styles.tableCellCheckbox, styles.tableHeader]}>
+                    ✔
+                  </Text>
+                </View>
 
-        {/* TABLA INGREDIENTES */}
-        <View style={styles.ingredientsContainer}>
-          <View style={[styles.tableRow, styles.tableHeaderRow]}>
-            <Text style={[styles.tableCellName, styles.tableHeader]}>
-              Ingrediente
-            </Text>
-            <Text style={[styles.tableCellQuantity, styles.tableHeader]}>
-              Cantidad
-            </Text>
-            <Text style={[styles.tableCellCheckbox, styles.tableHeader]}>
-              ✔
-            </Text>
-          </View>
-
-          {recipe.ingredients?.map((ing, idx) => (
-            <View
-              key={idx}
-              style={[
-                styles.tableRow,
-                idx % 2 === 0 && styles.tableRowAlt, // zebra
-              ]}
-            >
-              <Text style={styles.tableCellName}>{ing.name}</Text>
-              <Text style={styles.tableCellQuantity}>
-                {modifyQuantity(ing.quantity, multiplier)}
-              </Text>
-              <View style={styles.tableCellCheckbox}>
-                <BouncyCheckbox
-                  size={20}
-                  fillColor="#E91E63"
-                  unFillColor="#fff"
-                  disableBuiltInState
-                />
+                {section.ingredients.map(
+                  (ing: { name: string; quantity: string }, i: number) => (
+                    <View
+                      key={i}
+                      style={[
+                        styles.tableRow,
+                        i % 2 === 0 && styles.tableRowAlt,
+                      ]}
+                    >
+                      <Text style={styles.tableCellName}>{ing.name}</Text>
+                      <Text style={styles.tableCellQuantity}>
+                        {modifyQuantity(ing.quantity, multiplier)}
+                      </Text>
+                      <View style={styles.tableCellCheckbox}>
+                        <BouncyCheckbox
+                          size={20}
+                          fillColor="#E91E63"
+                          unFillColor="#fff"
+                          disableBuiltInState
+                        />
+                      </View>
+                    </View>
+                  )
+                )}
               </View>
-            </View>
-          ))}
-        </View>
+            )}
 
-        {/* TIPS BTN */}
-        {recipe.tips?.length > 0 && (
+            {/* PASOS */}
+            {section.steps && section.steps.length > 0 && (
+              <>
+                <Text style={[styles.sectionSubtitle, { marginTop: 14 }]}>
+                  Pasos
+                </Text>
+
+                <View style={styles.stepsContainer}>
+                  {section.steps.map((stepText: string, sIdx: number) => (
+                    <View key={sIdx} style={styles.stepItem}>
+                      <View style={styles.stepTextContainer}>
+                        <Text style={styles.stepNumber}>
+                          Paso {sIdx + 1}
+                        </Text>
+                        <Text style={styles.stepDescription}>{stepText}</Text>
+                      </View>
+
+                      <View style={styles.checkboxContainer}>
+                        <BouncyCheckbox
+                          size={24}
+                          fillColor="#E91E63"
+                          unFillColor="#fff"
+                          disableBuiltInState
+                        />
+                      </View>
+                    </View>
+                  ))}
+                </View>
+              </>
+            )}
+          </SimpleAccordion>
+        ))}
+
+        {/* MONTAJE FINAL */}
+        {recipe.montage && recipe.montage.length > 0 && (
+          <SimpleAccordion title="Montaje final" initiallyOpen={false}>
+            <View style={styles.stepsContainer}>
+              {recipe.montage.map((stepText: string, idx: number) => (
+                <View key={idx} style={styles.stepItem}>
+                  <View style={styles.stepTextContainer}>
+                    <Text style={styles.stepNumber}>Paso {idx + 1}</Text>
+                    <Text style={styles.stepDescription}>{stepText}</Text>
+                  </View>
+                  <View style={styles.checkboxContainer}>
+                    <BouncyCheckbox
+                      size={24}
+                      fillColor="#E91E63"
+                      unFillColor="#fff"
+                      disableBuiltInState
+                    />
+                  </View>
+                </View>
+              ))}
+            </View>
+          </SimpleAccordion>
+        )}
+
+        {/* BOTÓN TIPS */}
+        {recipe.tips && recipe.tips.length > 0 && (
           <TouchableOpacity style={styles.tipsButton} onPress={openTipsModal}>
             <MaterialIcons name="lightbulb" size={28} color="white" />
             <Text style={styles.tipsButtonText}>Tips</Text>
           </TouchableOpacity>
         )}
-
-        {/* PASOS */}
-        <Text style={[styles.sectionTitle, { marginTop: 10 }]}>Pasos</Text>
-
-        <View style={styles.stepsContainer}>
-          {recipe.steps?.map((step, idx) => (
-            <View key={idx} style={styles.stepItem}>
-              <View style={styles.stepTextContainer}>
-                <Text style={styles.stepNumber}>Paso {idx + 1}</Text>
-                <Text style={styles.stepDescription}>{step.step}</Text>
-              </View>
-
-              <View style={styles.checkboxContainer}>
-                <BouncyCheckbox
-                  size={24}
-                  fillColor="#E91E63"
-                  unFillColor="#fff"
-                  disableBuiltInState
-                />
-              </View>
-            </View>
-          ))}
-        </View>
       </ScrollView>
 
       {/* MODAL TIPS */}
-      <Modal
-        visible={tipsVisible}
-        transparent
-        animationType="fade"
-        onRequestClose={closeTipsModal}
+<Modal
+  visible={tipsVisible}
+  transparent
+  animationType="fade"
+  onRequestClose={closeTipsModal}
+>
+  <View style={styles.tipsModalOverlay} pointerEvents="box-none">
+    
+    {/* Cerrar cuando tocas FUERA del modal */}
+    <TouchableWithoutFeedback onPress={closeTipsModal}>
+      <View style={StyleSheet.absoluteFill} />
+    </TouchableWithoutFeedback>
+
+    <Animated.View
+      style={[
+        styles.tipsModal,
+        { opacity: fadeAnim, transform: [{ scale: fadeAnim }] },
+      ]}
+      pointerEvents="box-none"
+    >
+      <Text style={styles.tipsTitle}>💡 Consejos útiles</Text>
+
+      <ScrollView
+        style={{ maxHeight: "70%" }}
+        showsVerticalScrollIndicator={false}
       >
-        <TouchableWithoutFeedback onPress={closeTipsModal}>
-          <View style={styles.tipsModalOverlay}>
-            <TouchableWithoutFeedback>
-              <Animated.View
-                style={[
-                  styles.tipsModal,
-                  { opacity: fadeAnim, transform: [{ scale: fadeAnim }] },
-                ]}
-              >
-                <Text style={styles.tipsTitle}>💡 Consejos útiles</Text>
+        {recipe.tips?.map((tip, idx) => (
+          <LinearGradient
+            key={idx}
+            colors={[
+              tipColors[idx % tipColors.length] + "FF",
+              tipColors[idx % tipColors.length] + "CC",
+            ]}
+            style={styles.tipCard}
+          >
+            <Text style={styles.tipTitle}>{tip.title}</Text>
+            <Text style={styles.tipDescription}>{tip.description}</Text>
+          </LinearGradient>
+        ))}
+      </ScrollView>
 
-                <ScrollView showsVerticalScrollIndicator={false}>
-                  {recipe.tips?.map((tip, idx) => (
-                    <LinearGradient
-                      key={idx}
-                      colors={[
-                        tipColors[idx % tipColors.length] + "FF",
-                        tipColors[idx % tipColors.length] + "CC",
-                      ]}
-                      style={styles.tipCard}
-                    >
-                      <Text style={styles.tipTitle}>{tip.title}</Text>
-                      <Text style={styles.tipDescription}>
-                        {tip.description}
-                      </Text>
-                    </LinearGradient>
-                  ))}
-                </ScrollView>
+      <TouchableOpacity
+        style={styles.closeTipsButton}
+        onPress={closeTipsModal}
+      >
+        <Text style={styles.closeTipsText}>Cerrar</Text>
+      </TouchableOpacity>
+    </Animated.View>
+  </View>
+</Modal>
 
-                <TouchableOpacity
-                  style={styles.closeTipsButton}
-                  onPress={closeTipsModal}
-                >
-                  <Text style={styles.closeTipsText}>Cerrar</Text>
-                </TouchableOpacity>
-              </Animated.View>
-            </TouchableWithoutFeedback>
-          </View>
-        </TouchableWithoutFeedback>
-      </Modal>
     </LinearGradient>
   );
 }
 
-// --- STYLES (COPIANDO LÓGICA DEL MAINDISH, ADAPTADO A PASTELERÍA) ---
+// --- ESTILOS ---
 const styles = StyleSheet.create({
+  loading: { flex: 1, justifyContent: "center", alignItems: "center" },
+
   headerContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -336,7 +429,7 @@ const styles = StyleSheet.create({
 
   recipeTitle: {
     fontFamily: "MateSC",
-    fontSize: 32,
+    fontSize: 30,
     textAlign: "center",
     flex: 1,
     paddingVertical: 8,
@@ -346,14 +439,9 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255,255,255,0.96)",
     borderColor: "#8A3A63",
     color: "#7A2E55",
-    textShadowColor: "rgba(0,0,0,0.18)",
-    textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 2,
   },
 
-  favoriteIcon: {
-    marginLeft: 10,
-  },
+  favoriteIcon: { marginLeft: 10 },
 
   imageContainer: {
     flexDirection: "row",
@@ -380,22 +468,36 @@ const styles = StyleSheet.create({
     borderRadius: 12,
   },
 
-  rowHeader: {
+  // ⭐ MINI-HEADER PREMIUM
+  miniHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 14,
+    borderRadius: 12,
+    marginBottom: 16,
+    elevation: 5,
+  },
+
+  miniHeaderText: {
+    fontFamily: "MateSC",
+    fontSize: 20,
+    color: "#FFFFFF",
+    letterSpacing: 1,
+  },
+
+  multiplierRow: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginTop: 10,
+    marginTop: 4,
     marginBottom: 10,
   },
 
-  sectionTitle: {
-    fontSize: 24,
+  sectionSubtitle: {
+    fontSize: 18,
     fontWeight: "bold",
-    fontStyle: "italic",
-    flex: 1,
-    borderBottomWidth: 3,
-    paddingBottom: 4,
-    borderBottomColor: "#8A3A63",
     color: "#7A2E55",
   },
 
@@ -408,11 +510,38 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "#fff",
     fontWeight: "bold",
-    fontStyle: "italic",
-    fontSize: 20,
-    padding: 5,
+    fontSize: 18,
   },
 
+  // ACORDEONES
+  accordionContainer: {
+    backgroundColor: "#FFFFFFEE",
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: "#E2A9C4",
+    marginBottom: 15,
+    overflow: "hidden",
+  },
+
+  accordionHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 12,
+    backgroundColor: "#FFE2EE",
+    alignItems: "center",
+  },
+
+  accordionTitle: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#7A2E55",
+  },
+
+  accordionContent: {
+    padding: 12,
+  },
+
+  // TABLA INGREDIENTES
   ingredientsContainer: {
     backgroundColor: "#FFFFFFEE",
     borderRadius: 12,
@@ -427,27 +556,16 @@ const styles = StyleSheet.create({
     borderBottomColor: "#EAC4D7",
   },
 
-  tableHeaderRow: {
-    backgroundColor: "#FFE2EE",
-  },
+  tableHeaderRow: { backgroundColor: "#FFE2EE" },
 
-  tableRowAlt: {
-    backgroundColor: "rgba(255,228,240,0.35)",
-  },
+  tableRowAlt: { backgroundColor: "rgba(255,228,240,0.35)" },
 
-  tableCellName: {
-    flex: 1.2,
-    paddingVertical: 10,
-    paddingHorizontal: 8,
-    fontSize: 14,
-    color: "#5A1F3F",
-  },
+  tableCellName: { flex: 1.2, padding: 10, fontSize: 14, color: "#5A1F3F" },
 
   tableCellQuantity: {
     flex: 1,
     textAlign: "center",
-    paddingVertical: 10,
-    paddingHorizontal: 4,
+    padding: 10,
     fontSize: 14,
     color: "#5A1F3F",
   },
@@ -465,8 +583,8 @@ const styles = StyleSheet.create({
     color: "#7A2E55",
   },
 
+  // PASOS
   stepsContainer: {
-    marginBottom: 80,
     marginTop: 10,
   },
 
@@ -480,16 +598,13 @@ const styles = StyleSheet.create({
     borderColor: "#E2A9C4",
   },
 
-  stepTextContainer: {
-    flex: 0.85,
-  },
+  stepTextContainer: { flex: 0.85 },
 
   stepNumber: {
     fontWeight: "bold",
     marginBottom: 4,
     fontSize: 16,
     color: "#7A2E55",
-    textDecorationLine: "underline",
   },
 
   stepDescription: {
@@ -504,6 +619,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 
+  // TIPS
   tipsButton: {
     flexDirection: "row",
     justifyContent: "center",
@@ -513,8 +629,8 @@ const styles = StyleSheet.create({
     width: "60%",
     alignSelf: "center",
     marginVertical: 35,
-    marginBottom: 20,
     elevation: 3,
+    marginBottom: 70,
   },
 
   tipsButtonText: {
@@ -544,7 +660,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 10,
     textAlign: "center",
-    color: "#222121ff",
+    color: "#222",
   },
 
   tipCard: {
@@ -556,15 +672,15 @@ const styles = StyleSheet.create({
   tipTitle: {
     fontWeight: "bold",
     fontSize: 16,
-    color: "black",
-    textDecorationLine: "underline",
+    color: "#000",
     marginBottom: 5,
+    textDecorationLine: "underline",
   },
 
   tipDescription: {
     fontSize: 14,
+    color: "#222",
     lineHeight: 20,
-    color: "#222121ff",
   },
 
   closeTipsButton: {
@@ -581,4 +697,51 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
   },
+  miniHeaderWrapper: {
+  marginTop: 10,
+  marginBottom: 16,
+},
+
+miniHeader: {
+  flexDirection: "row",
+  alignItems: "center",
+  paddingVertical: 12,
+  paddingHorizontal: 16,
+  borderRadius: 14,
+  elevation: 6,
+  overflow: "hidden",
+},
+
+miniHeaderText: {
+  flex: 1,
+  marginLeft: 8,
+  fontFamily: "MateSC",
+  fontSize: 22,
+  color: "#FFFFFF",
+  letterSpacing: 1,
+},
+
+multiplierMini: {
+  paddingVertical: 6,
+  paddingHorizontal: 14,
+  borderRadius: 10,
+},
+
+multiplierMiniText: {
+  color: "#fff",
+  fontWeight: "bold",
+  fontSize: 20,
+},
+
+glossy: {
+  position: "absolute",
+  top: 0,
+  bottom: 0,
+  width: 80,
+  backgroundColor: "rgba(255,255,255,0.35)",
+  opacity: 0.5,
+  borderRadius: 20,
+  transform: [{ rotate: "25deg" }],
+},
+
 });

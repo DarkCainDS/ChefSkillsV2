@@ -13,27 +13,21 @@ import {
 } from 'react-native';
 import recipesData from '../../assets/Json/Main_Dish.json';
 
-// Imágenes locales de respaldo
-const placeholderImages = [
-  require('../../assets/404/placeholder1.webp'),
-  require('../../assets/404/placeholder2.webp'),
-  require('../../assets/404/placeholder3.webp'),
-  require('../../assets/404/placeholder4.webp'),
-  require('../../assets/404/placeholder5.webp'),
-  require('../../assets/404/placeholder6.webp'),
-  require('../../assets/404/placeholder7.webp'),
-  require('../../assets/404/placeholder8.webp'),
-  require('../../assets/404/placeholder9.webp'),
-  require('../../assets/404/placeholder10.webp'),
-  require('../../assets/404/placeholder11.webp'),
-  require('../../assets/404/placeholder12.webp'),
-  require('../../assets/404/placeholder13.webp'),
-  require('../../assets/404/placeholder14.webp'),
-  require('../../assets/404/placeholder15.webp'),
-  require('../../assets/404/placeholder16.webp'),
-];
+// 👇 USAMOS tu util universal
+import { getSafeImage } from '../../utils/getImageSource';
 
-// Función para barajar elementos
+// --- Normalizador PRO para búsqueda smart ---
+const normalizeText = (text: string) => {
+  return text
+    .normalize("NFD")                      // separa letras y acentos
+    .replace(/[\u0300-\u036f]/g, "")       // borra acentos
+    .replace(/[^a-z0-9 ]/gi, " ")          // borra comas, puntos, símbolos
+    .replace(/\s+/g, " ")                  // limpia espacios dobles
+    .toLowerCase()
+    .trim();
+};
+
+// Barajar elementos
 const shuffleArray = (array: any[]) => {
   const arr = [...array];
   for (let i = arr.length - 1; i > 0; i--) {
@@ -48,36 +42,28 @@ const MainDishRecipeListMain = () => {
   const [recipes] = useState(recipesData.recipes);
   const [searchText, setSearchText] = useState('');
 
-  // Generador de placeholder aleatorio (memorizado)
-  const getPlaceholder = useCallback(() => {
-    const index = Math.floor(Math.random() * placeholderImages.length);
-    return placeholderImages[index];
-  }, []);
-
-  // Filtro de recetas según texto de búsqueda (memorizado)
+  // --- Filtro ultra robusto ---
   const filteredRecipes = useMemo(() => {
     if (!searchText.trim()) return recipes;
-    const lowerText = searchText.toLowerCase();
-    return recipes.filter(
-      (recipe) =>
-        recipe.name.toLowerCase().includes(lowerText) ||
-        recipe.description.toLowerCase().includes(lowerText)
-    );
+
+    const nText = normalizeText(searchText);
+
+    return recipes.filter((recipe) => {
+      const nName = normalizeText(recipe.name);
+      const nDesc = normalizeText(recipe.description);
+      return nName.includes(nText) || nDesc.includes(nText);
+    });
   }, [recipes, searchText]);
 
-  // Mezclar las recetas solo cuando cambia el filtro
+  // Mezclar resultados para variedad
   const shuffledRecipes = useMemo(
     () => shuffleArray(filteredRecipes),
     [filteredRecipes]
   );
 
-  // Render optimizado del ítem
+  // Render de cada tarjeta
   const renderRecipe = useCallback(
-    ({ item }: { item: any }) => {
-      const imageSource = item.images?.[0]
-        ? { uri: item.images[0] }
-        : getPlaceholder();
-
+    ({ item }) => {
       return (
         <TouchableOpacity
           style={styles.card}
@@ -87,12 +73,13 @@ const MainDishRecipeListMain = () => {
           }
         >
           <Image
-            source={imageSource}
+            source={getSafeImage(item.imageUrl, item.images)}
             style={styles.image}
             contentFit="cover"
             transition={300}
-            cachePolicy="memory-disk"
           />
+
+
           <View style={styles.info}>
             <Text style={styles.title}>{item.name}</Text>
             <View style={styles.divider} />
@@ -107,11 +94,12 @@ const MainDishRecipeListMain = () => {
         </TouchableOpacity>
       );
     },
-    [navigation, getPlaceholder]
+    [navigation]
   );
 
   return (
     <View style={styles.container}>
+
       {/* Barra de búsqueda */}
       <View style={styles.searchContainer}>
         <Ionicons name="search" size={20} color="#888" style={styles.searchIcon} />
@@ -124,13 +112,12 @@ const MainDishRecipeListMain = () => {
         />
       </View>
 
-      {/* Lista de recetas */}
+      {/* Lista */}
       <FlatList
         data={shuffledRecipes}
         keyExtractor={(item) => item.id.toString()}
         renderItem={renderRecipe}
         showsVerticalScrollIndicator={false}
-        removeClippedSubviews
         initialNumToRender={8}
         maxToRenderPerBatch={6}
         windowSize={5}
@@ -141,6 +128,7 @@ const MainDishRecipeListMain = () => {
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 15 },
+
   searchContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -151,27 +139,37 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     marginBottom: 15,
   },
+
   searchIcon: { marginRight: 10 },
   searchInput: { flex: 1, height: 40, fontSize: 16, color: '#333' },
+
   card: {
     flexDirection: 'row',
     backgroundColor: '#ebeaeaff',
     borderRadius: 10,
     padding: 10,
-    marginVertical: 3,
     marginBottom: 15,
     elevation: 5,
     height: 105,
   },
-  image: { width: 80, height: 80, borderRadius: 10, resizeMode: 'cover' },
+
+  image: {
+    width: 80,
+    height: 80,
+    borderRadius: 10,
+  },
+
   info: { flex: 1, justifyContent: 'center', marginLeft: 10 },
-  title: { fontSize: 16, fontWeight: 'bold', marginBottom: 6, color:"black" },
+
+  title: { fontSize: 16, fontWeight: 'bold', marginBottom: 6, color: 'black' },
+
   divider: {
     height: 1,
     backgroundColor: '#ccc',
     marginBottom: 6,
     width: '100%',
   },
+
   description: {
     fontSize: 14,
     fontStyle: 'italic',

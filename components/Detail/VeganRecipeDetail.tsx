@@ -1,4 +1,4 @@
-// screens/MainDishRecipeDetail.tsx
+// screens/VeganRecipeDetail.tsx
 import { MaterialIcons } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
 import { Image } from "expo-image";
@@ -13,26 +13,26 @@ import {
   View,
   Animated,
 } from "react-native";
+
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import LinearGradient from "react-native-linear-gradient";
 import { useRoute, RouteProp, useNavigation } from "@react-navigation/native";
 
 import CategoryHeader from "../UI/CSHeader_ModernPro";
 import { getSafeImage } from "../../utils/getImageSource";
+import { useFavoriteToggle } from "../hooks/useFavoriteToggle";
 
 import type { Recipe } from "../../store/Slices/FavoriteSlice";
-import { useFavoriteToggle } from "../hooks/useFavoriteToggle";
 
 // NAV TYPES
 type RootStackParamList = {
-  MainDishRecipeDetail: { recipe: Recipe };
+  VeganRecipeDetail: { recipe: Recipe };
 };
 
-export default function MainDishRecipeDetail() {
+export default function VeganRecipeDetail() {
   const navigation = useNavigation();
-  const route =
-    useRoute<RouteProp<RootStackParamList, "MainDishRecipeDetail">>();
-  const recipe = route.params?.recipe as Recipe | undefined;
+  const route = useRoute<RouteProp<RootStackParamList, "VeganRecipeDetail">>();
+  const recipe = route.params?.recipe;
 
   const [fontLoaded] = useFonts({
     MateSC: require("../../assets/fonts/MateSC-Regular.ttf"),
@@ -42,10 +42,9 @@ export default function MainDishRecipeDetail() {
   const [multiplier, setMultiplier] = useState<number>(1);
   const [buttonText, setButtonText] = useState<string>("x1");
   const [tipsVisible, setTipsVisible] = useState<boolean>(false);
-
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
-  // ❤️ Hook favoritos
+  // FAVORITOS
   const { isFavorite, toggleFavorite, heartAnim } = useFavoriteToggle(
     recipe ?? null
   );
@@ -71,21 +70,16 @@ export default function MainDishRecipeDetail() {
 
   const getButtonColor = (m: number) => {
     switch (m) {
-      case 1:
-        return "#6B7280";
-      case 2:
-        return "#3B82F6";
-      case 3:
-        return "#22C55E";
-      case 4:
-        return "#EF4444";
-      case 0.5:
-        return "#FACC15";
-      default:
-        return "#3B82F6";
+      case 1: return "#6B7280";
+      case 2: return "#7C3AED";  // púrpura fuerte
+      case 3: return "#A855F7";
+      case 4: return "#C084FC";
+      case 0.5: return "#E9D5FF";
+      default: return "#7C3AED";
     }
   };
 
+  // MISMA PALETA UNIVERSAL
   const tipColors = [
     "#FFF9C4",
     "#C8E6C9",
@@ -117,7 +111,7 @@ export default function MainDishRecipeDetail() {
 
   if (!fontLoaded || !recipe) {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <View style={styles.loader}>
         <Text>Cargando receta...</Text>
       </View>
     );
@@ -125,17 +119,16 @@ export default function MainDishRecipeDetail() {
 
   return (
     <LinearGradient
-      // un poquito más intenso para no matar el contraste global
-      colors={["#D8F3DC", "#B7E4C7", "#95D5B2"]}
+      colors={["#F3E8FF", "#E5CCFF", "#D0A2FF"]}
       style={{ flex: 1 }}
     >
       <ScrollView style={{ flex: 1, padding: 15 }}>
-        {/* HEADER */}
+
         <CategoryHeader
-          title="Comidas"
-          icon="🍽️"
-          color="#6ABF69"
-          titleColor="#FFFFFF"
+          title="Vegano"
+          icon="🥑"
+          color="#8A56CC"
+          titleColor="#F8F3FF"
           onBack={() => navigation.goBack()}
         />
 
@@ -148,7 +141,7 @@ export default function MainDishRecipeDetail() {
               <MaterialIcons
                 name={isFavorite ? "favorite" : "favorite-border"}
                 size={48}
-                color={isFavorite ? "red" : "black"}
+                color={isFavorite ? "#8A56CC" : "black"}
               />
             </Animated.View>
           </TouchableOpacity>
@@ -157,17 +150,16 @@ export default function MainDishRecipeDetail() {
         {/* IMAGES */}
         <ScrollView
           horizontal
-          showsHorizontalScrollIndicator={false}
           pagingEnabled
+          showsHorizontalScrollIndicator={false}
           style={styles.imageContainer}
         >
-          {recipe.images?.map((imgUrl, idx) => (
-            <TouchableOpacity key={idx} onPress={() => setSelectedImage(imgUrl)}>
+          {recipe.images?.map((path, idx) => (
+            <TouchableOpacity key={idx} onPress={() => setSelectedImage(path)}>
               <Image
-                source={getSafeImage(imgUrl)}
+                source={getSafeImage(path)}
                 style={styles.image}
                 contentFit="cover"
-                transition={300}
               />
             </TouchableOpacity>
           ))}
@@ -188,7 +180,7 @@ export default function MainDishRecipeDetail() {
           </TouchableWithoutFeedback>
         </Modal>
 
-        {/* INGREDIENTES + MULTIPLIER  */}
+        {/* INGREDIENTES */}
         <View style={styles.rowHeader}>
           <Text style={styles.sectionTitle}>Ingredientes</Text>
 
@@ -203,7 +195,7 @@ export default function MainDishRecipeDetail() {
           </TouchableOpacity>
         </View>
 
-        {/* TABLA INGREDIENTES */}
+        {/* TABLE */}
         <View style={styles.ingredientsContainer}>
           <View style={[styles.tableRow, styles.tableHeaderRow]}>
             <Text style={[styles.tableCellName, styles.tableHeader]}>
@@ -212,9 +204,7 @@ export default function MainDishRecipeDetail() {
             <Text style={[styles.tableCellQuantity, styles.tableHeader]}>
               Cantidad
             </Text>
-            <Text style={[styles.tableCellCheckbox, styles.tableHeader]}>
-              ✔
-            </Text>
+            <Text style={[styles.tableCellCheckbox, styles.tableHeader]}>✔</Text>
           </View>
 
           {recipe.ingredients?.map((ing, idx) => (
@@ -222,7 +212,7 @@ export default function MainDishRecipeDetail() {
               key={idx}
               style={[
                 styles.tableRow,
-                idx % 2 === 0 && styles.tableRowAlt, // zebra para más legibilidad
+                idx % 2 === 0 && styles.tableRowAlt,
               ]}
             >
               <Text style={styles.tableCellName}>{ing.name}</Text>
@@ -232,7 +222,7 @@ export default function MainDishRecipeDetail() {
               <View style={styles.tableCellCheckbox}>
                 <BouncyCheckbox
                   size={20}
-                  fillColor="green"
+                  fillColor="#8A56CC"
                   unFillColor="#fff"
                   disableBuiltInState
                 />
@@ -241,7 +231,7 @@ export default function MainDishRecipeDetail() {
           ))}
         </View>
 
-        {/* TIPS BTN */}
+        {/* TIPS */}
         {recipe.tips?.length > 0 && (
           <TouchableOpacity style={styles.tipsButton} onPress={openTipsModal}>
             <MaterialIcons name="lightbulb" size={28} color="white" />
@@ -263,7 +253,7 @@ export default function MainDishRecipeDetail() {
               <View style={styles.checkboxContainer}>
                 <BouncyCheckbox
                   size={24}
-                  fillColor="green"
+                  fillColor="#8A56CC"
                   unFillColor="#fff"
                   disableBuiltInState
                 />
@@ -273,65 +263,63 @@ export default function MainDishRecipeDetail() {
         </View>
       </ScrollView>
 
-      {/* MODAL TIPS */}
-<Modal
-  visible={tipsVisible}
-  transparent
-  animationType="fade"
-  onRequestClose={closeTipsModal}
->
-  <View style={styles.tipsModalOverlay} pointerEvents="box-none">
-
-    {/* CAPTURA TOQUE FUERA DEL MODAL */}
-    <TouchableWithoutFeedback onPress={closeTipsModal}>
-      <View style={StyleSheet.absoluteFill} />
-    </TouchableWithoutFeedback>
-
-    {/* CONTENIDO DEL MODAL — NO TOCARLO */}
-    <Animated.View
-      style={[
-        styles.tipsModal,
-        { opacity: fadeAnim, transform: [{ scale: fadeAnim }] },
-      ]}
-      pointerEvents="box-none"
-    >
-      <Text style={styles.tipsTitle}>💡 Consejos útiles</Text>
-
-      <ScrollView
-        style={{ maxHeight: "70%" }}
-        showsVerticalScrollIndicator={false}
+      {/* MODAL TIPS FIXED */}
+      <Modal
+        visible={tipsVisible}
+        transparent
+        animationType="fade"
+        onRequestClose={closeTipsModal}
       >
-        {recipe.tips?.map((tip, idx) => (
-          <LinearGradient
-            key={idx}
-            colors={[
-              tipColors[idx % tipColors.length] + "FF",
-              tipColors[idx % tipColors.length] + "CC",
+        <View style={styles.tipsModalOverlay} pointerEvents="box-none">
+          <TouchableWithoutFeedback onPress={closeTipsModal}>
+            <View style={StyleSheet.absoluteFill} />
+          </TouchableWithoutFeedback>
+
+          <Animated.View
+            style={[
+              styles.tipsModal,
+              { opacity: fadeAnim, transform: [{ scale: fadeAnim }] },
             ]}
-            style={styles.tipCard}
+            pointerEvents="box-none"
           >
-            <Text style={styles.tipTitle}>{tip.title}</Text>
-            <Text style={styles.tipDescription}>{tip.description}</Text>
-          </LinearGradient>
-        ))}
-      </ScrollView>
+            <Text style={styles.tipsTitle}>💡 Consejos útiles</Text>
 
-      <TouchableOpacity
-        style={styles.closeTipsButton}
-        onPress={closeTipsModal}
-      >
-        <Text style={styles.closeTipsText}>Cerrar</Text>
-      </TouchableOpacity>
-    </Animated.View>
-  </View>
-</Modal>
+            <ScrollView
+              style={{ maxHeight: "70%" }}
+              showsVerticalScrollIndicator={false}
+            >
+              {recipe.tips?.map((tip, idx) => (
+                <LinearGradient
+                  key={idx}
+                  colors={[
+                    tipColors[idx % tipColors.length] + "FF",
+                    tipColors[idx % tipColors.length] + "CC",
+                  ]}
+                  style={styles.tipCard}
+                >
+                  <Text style={styles.tipTitle}>{tip.title}</Text>
+                  <Text style={styles.tipDescription}>{tip.description}</Text>
+                </LinearGradient>
+              ))}
+            </ScrollView>
 
+            <TouchableOpacity
+              style={styles.closeTipsButton}
+              onPress={closeTipsModal}
+            >
+              <Text style={styles.closeTipsText}>Cerrar</Text>
+            </TouchableOpacity>
+          </Animated.View>
+        </View>
+      </Modal>
     </LinearGradient>
   );
 }
 
-// --- STYLES (MISMA UI, MÁS CONTRASTE) ---
+// === STYLES VEGAN (PÚRPURA PREMIUM) ===
 const styles = StyleSheet.create({
+  loader: { flex: 1, justifyContent: "center", alignItems: "center" },
+
   headerContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -349,32 +337,27 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 12,
     backgroundColor: "rgba(255,255,255,0.96)",
-    borderColor: "#4E7748",
-    color: "#243B2E", // texto bien oscuro
-    textShadowColor: "rgba(0,0,0,0.18)",
+    borderColor: "#8A56CC",
+    color: "#2B1F39",
+    textShadowColor: "rgba(0,0,0,0.15)",
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 2,
   },
 
-  favoriteIcon: {
-    marginLeft: 10,
-  },
+  favoriteIcon: { marginLeft: 10 },
 
-  imageContainer: {
-    flexDirection: "row",
-    marginBottom: 20,
-  },
+  imageContainer: { flexDirection: "row", marginBottom: 20 },
 
   image: {
     width: 150,
     height: 150,
-    marginHorizontal: 10,
     borderRadius: 10,
+    marginHorizontal: 10,
   },
 
   modalBackground: {
     flex: 1,
-    backgroundColor: "rgba(0,0,0,0.8)",
+    backgroundColor: "rgba(0,0,0,0.7)",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -387,8 +370,8 @@ const styles = StyleSheet.create({
 
   rowHeader: {
     flexDirection: "row",
-    alignItems: "center",
     justifyContent: "space-between",
+    alignItems: "center",
     marginTop: 10,
     marginBottom: 10,
   },
@@ -400,8 +383,8 @@ const styles = StyleSheet.create({
     flex: 1,
     borderBottomWidth: 3,
     paddingBottom: 4,
-    borderBottomColor: "#4E7748",
-    color: "#1F3B18", // más oscuro
+    borderBottomColor: "#8A56CC",
+    color: "#2B1F39",
   },
 
   multiplicarButton: {
@@ -411,33 +394,32 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    color: "#fff",
+    color: "white",
     fontWeight: "bold",
     fontStyle: "italic",
     fontSize: 20,
-    padding:5
   },
 
   ingredientsContainer: {
-    backgroundColor: "#FAFFF7",
+    backgroundColor: "#FAF5FF",
     borderRadius: 12,
-    overflow: "hidden",
     borderWidth: 1,
-    borderColor: "#9DB68A",
+    borderColor: "#C5B3E6",
+    overflow: "hidden",
   },
 
   tableRow: {
     flexDirection: "row",
     borderBottomWidth: 1,
-    borderBottomColor: "#a0c298ff",
+    borderBottomColor: "#E1D8F6",
   },
 
   tableHeaderRow: {
-    backgroundColor: "#8bca81ff",
+    backgroundColor: "#E9D5FF",
   },
 
   tableRowAlt: {
-    backgroundColor: "rgba(185, 223, 178, 0.9)", // zebra
+    backgroundColor: "rgba(233, 213, 255, 0.7)",
   },
 
   tableCellName: {
@@ -445,7 +427,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 8,
     fontSize: 14,
-    color: "#243B2E",
+    color: "#2B1F39",
   },
 
   tableCellQuantity: {
@@ -454,7 +436,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 4,
     fontSize: 14,
-    color: "#243B2E",
+    color: "#2B1F39",
   },
 
   tableCellCheckbox: {
@@ -467,7 +449,7 @@ const styles = StyleSheet.create({
   tableHeader: {
     fontWeight: "bold",
     fontSize: 14,
-    color: "#1F3B18",
+    color: "#2B1F39",
   },
 
   stepsContainer: {
@@ -477,30 +459,27 @@ const styles = StyleSheet.create({
 
   stepItem: {
     flexDirection: "row",
-    backgroundColor: "#FAFFF7",
+    backgroundColor: "#FAF5FF",
     padding: 14,
     borderRadius: 14,
     marginBottom: 12,
     borderWidth: 1,
-    borderColor: "#C5D8BD",
+    borderColor: "#D9C6F6",
   },
 
-  stepTextContainer: {
-    flex: 0.85,
-  },
+  stepTextContainer: { flex: 0.85 },
 
   stepNumber: {
     fontWeight: "bold",
-    marginBottom: 4,
     fontSize: 16,
-    color: "#1F3B18",
-        textDecorationLine: 'underline',
-
+    textDecorationLine: "underline",
+    marginBottom: 4,
+    color: "#2B1F39",
   },
 
   stepDescription: {
     fontSize: 15,
-    color: "#25352B",
+    color: "#3B2B4F",
     lineHeight: 21,
   },
 
@@ -513,18 +492,16 @@ const styles = StyleSheet.create({
   tipsButton: {
     flexDirection: "row",
     justifyContent: "center",
-    backgroundColor: "#ff6b35",
+    backgroundColor: "#8A56CC",
     paddingVertical: 12,
     borderRadius: 30,
     width: "60%",
     alignSelf: "center",
     marginVertical: 35,
-    marginBottom: 20,
-    elevation: 3,
   },
 
   tipsButtonText: {
-    color: "#fff",
+    color: "white",
     fontWeight: "bold",
     marginLeft: 8,
     fontSize: 18,
@@ -532,7 +509,7 @@ const styles = StyleSheet.create({
 
   tipsModalOverlay: {
     flex: 1,
-    backgroundColor: "rgba(0,0,0,0.6)",
+    backgroundColor: "rgba(0,0,0,0.5)",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -548,10 +525,9 @@ const styles = StyleSheet.create({
   tipsTitle: {
     fontSize: 22,
     fontWeight: "bold",
-    marginBottom: 10,
     textAlign: "center",
-        color: "#222121ff"
-
+    marginBottom: 10,
+    color: "#2B1F39",
   },
 
   tipCard: {
@@ -561,22 +537,21 @@ const styles = StyleSheet.create({
   },
 
   tipTitle: {
-    fontWeight: "bold",
     fontSize: 16,
-    color: "black",
-    textDecorationLine: 'underline',
-    marginBottom:5
+    fontWeight: "bold",
+    textDecorationLine: "underline",
+    color: "#2B1F39",
+    marginBottom: 5,
   },
 
   tipDescription: {
     fontSize: 14,
+    color: "#2B1F39",
     lineHeight: 20,
-    color: "#222121ff"
-
   },
 
   closeTipsButton: {
-    backgroundColor: "#333",
+    backgroundColor: "#8A56CC",
     padding: 10,
     borderRadius: 10,
     marginTop: 10,
@@ -585,7 +560,7 @@ const styles = StyleSheet.create({
   },
 
   closeTipsText: {
-    color: "#fff",
+    color: "white",
     textAlign: "center",
     fontWeight: "bold",
   },

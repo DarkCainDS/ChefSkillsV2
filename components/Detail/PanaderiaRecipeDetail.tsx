@@ -274,52 +274,58 @@ export default function PanaderiaRecipeDetail() {
       </ScrollView>
 
       {/* MODAL TIPS */}
-      <Modal
-        visible={tipsVisible}
-        transparent
-        animationType="fade"
-        onRequestClose={closeTipsModal}
+<Modal
+  visible={tipsVisible}
+  transparent
+  animationType="fade"
+  onRequestClose={closeTipsModal}
+>
+  <View style={styles.tipsModalOverlay} pointerEvents="box-none">
+
+    {/* Cerrar al tocar FUERA del modal */}
+    <TouchableWithoutFeedback onPress={closeTipsModal}>
+      <View style={StyleSheet.absoluteFill} />
+    </TouchableWithoutFeedback>
+
+    {/* CONTENIDO DEL MODAL — NO ENVOLVER EN TOUCHABLE */}
+    <Animated.View
+      style={[
+        styles.tipsModal,
+        { opacity: fadeAnim, transform: [{ scale: fadeAnim }] },
+      ]}
+      pointerEvents="box-none"
+    >
+      <Text style={styles.tipsTitle}>💡 Consejos útiles</Text>
+
+      <ScrollView
+        style={{ maxHeight: "70%" }}
+        showsVerticalScrollIndicator={false}
       >
-        <TouchableWithoutFeedback onPress={closeTipsModal}>
-          <View style={styles.tipsModalOverlay}>
-            <TouchableWithoutFeedback>
-              <Animated.View
-                style={[
-                  styles.tipsModal,
-                  { opacity: fadeAnim, transform: [{ scale: fadeAnim }] },
-                ]}
-              >
-                <Text style={styles.tipsTitle}>💡 Consejos útiles</Text>
+        {recipe.tips?.map((tip, idx) => (
+          <LinearGradient
+            key={idx}
+            colors={[
+              tipColors[idx % tipColors.length] + "FF",
+              tipColors[idx % tipColors.length] + "CC",
+            ]}
+            style={styles.tipCard}
+          >
+            <Text style={styles.tipTitle}>{tip.title}</Text>
+            <Text style={styles.tipDescription}>{tip.description}</Text>
+          </LinearGradient>
+        ))}
+      </ScrollView>
 
-                <ScrollView showsVerticalScrollIndicator={false}>
-                  {recipe.tips?.map((tip, idx) => (
-                    <LinearGradient
-                      key={idx}
-                      colors={[
-                        tipColors[idx % tipColors.length] + "FF",
-                        tipColors[idx % tipColors.length] + "CC",
-                      ]}
-                      style={styles.tipCard}
-                    >
-                      <Text style={styles.tipTitle}>{tip.title}</Text>
-                      <Text style={styles.tipDescription}>
-                        {tip.description}
-                      </Text>
-                    </LinearGradient>
-                  ))}
-                </ScrollView>
+      <TouchableOpacity
+        style={styles.closeTipsButton}
+        onPress={closeTipsModal}
+      >
+        <Text style={styles.closeTipsText}>Cerrar</Text>
+      </TouchableOpacity>
+    </Animated.View>
+  </View>
+</Modal>
 
-                <TouchableOpacity
-                  style={styles.closeTipsButton}
-                  onPress={closeTipsModal}
-                >
-                  <Text style={styles.closeTipsText}>Cerrar</Text>
-                </TouchableOpacity>
-              </Animated.View>
-            </TouchableWithoutFeedback>
-          </View>
-        </TouchableWithoutFeedback>
-      </Modal>
     </LinearGradient>
   );
 }

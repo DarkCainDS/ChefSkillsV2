@@ -4,52 +4,39 @@
   "id": 1,
   "uid": "P-AN_000001",
   "name": "Masa Perfecta para Gyoza, Dumplings y Empanadillas Chinas",
-  "description": "Una masa elástica, suave y fácil de trabajar, ideal para preparar gyozas, dumplings o empanadillas chinas. Su textura es el secreto de un sellado perfecto y una cocción uniforme.",
+  "description": "Masa elástica y suave ideal para gyozas, dumplings o empanadillas chinas. Se estira fácil, no se rompe y logra sellado perfecto.",
   "imageUrl": "https://example.com/masa-perfecta-gyoza.jpg",
-  "detailedInfo": "Esta masa es la base esencial para empanadillas asiáticas como gyozas japonesas, dumplings chinos o guotie. Al usar agua caliente en lugar de fría, la harina se gelatiniza parcialmente, dando una textura más elástica y maleable. Tras el reposo, la masa se vuelve lisa y manejable, perfecta para estirar en discos finos que no se rompen al rellenar ni durante la cocción.",
+  "detailedInfo": "Masa base asiática elaborada con harina y agua caliente para gelatinizar parte del almidón, logrando elasticidad y resistencia. Tras reposar, se estira sin romperse y permite discos finos ideales para rellenar y cocinar al vapor, salteados o fritos.",
   "ingredients": [
-    {
-      "name": "Harina de trigo multiuso",
-      "quantity": "200 g",
-      "notes": "Base principal de la masa."
-    },
-    {
-      "name": "Agua caliente (no hirviendo)",
-      "quantity": "90 ml (+10 ml extra si es necesario)",
-      "notes": "Usar caliente para lograr una textura elástica."
-    },
-    {
-      "name": "Sal",
-      "quantity": "10 g",
-      "notes": "Aporta sabor y estructura."
-    },
-    {
-      "name": "Maicena (fécula de maíz)",
-      "quantity": "50 g",
-      "notes": "Para enharinar y evitar que las tortillas se peguen."
-    }
+    { "name": "Harina de trigo multiuso", "quantity": "200 g" },
+    { "name": "Agua caliente", "quantity": "90-100 ml" },
+    { "name": "Sal", "quantity": "5 g" },
+    { "name": "Maicena (para espolvorear)", "quantity": "50 g" }
   ],
   "steps": [
-    { "step": "Colocar la harina de trigo multiuso en un bol y mezclar con la sal." },
-    { "step": "Añadir el agua caliente poco a poco mientras se remueve para integrar." },
-    { "step": "Trabajar la masa con la mano hasta formar una bola homogénea y despegar la harina del bol." },
-    { "step": "Pasar la masa a una superficie lisa y amasar durante unos 10 minutos hasta obtener una textura suave y elástica." },
-    { "step": "Envolver la masa en papel film y dejar reposar 2 horas a temperatura ambiente, o en refrigeración hasta el día siguiente." },
-    { "step": "Dividir la masa en dos partes y formar un cilindro con una de ellas, manteniendo la otra envuelta para que no se seque." },
-    { "step": "Cortar el cilindro en 14 piezas iguales, cubrir con un paño húmedo y aplanar cada una con la mano." },
-    { "step": "Espolvorear maicena sobre cada pieza y estirar con rodillo hasta obtener discos finos." }
+    { "step": "Mezclar la harina con la sal en un bol amplio." },
+    { "step": "Agregar el agua caliente poco a poco mientras se integra con palillos o cuchara." },
+    { "step": "Amasar hasta obtener una masa homogénea que se despegue del bol." },
+    { "step": "Transferir a la mesa y amasar 10 minutos hasta lograr textura elástica y suave." },
+    { "step": "Envolver en film y dejar reposar 2 horas a temperatura ambiente o refrigerar hasta el día siguiente." },
+    { "step": "Dividir la masa en dos. Mantener una parte cubierta para que no se seque." },
+    { "step": "Formar un cilindro con la mitad, cortar 14 piezas iguales y mantenerlas bajo un paño húmedo." },
+    { "step": "Aplastar ligeramente cada pieza, espolvorear maicena y estirar con rodillo hasta obtener discos finos (centro más grueso que los bordes)." }
   ],
   "tips": [
-    "Usar agua caliente (no hirviendo) ayuda a gelatinizar la harina y mejora la textura.",
-    "Durante el estirado, dejar la parte central del disco ligeramente más gruesa que los bordes para evitar roturas.",
-    "Cubrir siempre las piezas que no se estén trabajando con un paño húmedo para evitar que se sequen.",
-    "Si la masa queda seca, añadir pequeñas cantidades de agua caliente adicional hasta obtener la textura deseada."
+    { "title": "Agua caliente, no hirviendo", "description": "Ayuda a gelatinizar la harina y obtener una masa más elástica." },
+    { "title": "Centro grueso", "description": "Deja el centro del disco un poco más grueso para evitar roturas al rellenar." },
+    { "title": "Mantener humedad", "description": "Cubrir las piezas con paño húmedo para que no se sequen mientras se estiran." },
+    { "title": "Ajuste de agua", "description": "Si la masa queda seca, agregar 5-10 ml extra de agua caliente hasta lograr la textura ideal." }
   ],
   "images": [
     "https://example.com/masa-gyoza-1.webp",
     "https://example.com/masa-gyoza-2.webp"
   ],
-  "rating": null
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
 },
     {
       "id": 2,
