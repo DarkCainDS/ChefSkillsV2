@@ -1,3 +1,4 @@
+// LoadingScreen.tsx
 import React, { useEffect, useRef, useState } from "react";
 import {
   ActivityIndicator,
@@ -14,22 +15,15 @@ import { useDispatch } from "react-redux";
 import { AppDispatch } from "../store/Index";
 import { setUser, setPremium, setSubscriptionResolved } from "../store/Slices/userSlice";
 
-import {
-  GoogleSignin,
-  statusCodes,
-} from "@react-native-google-signin/google-signin";
-
-import {
-  getAuth,
-  GoogleAuthProvider,
-  signInWithCredential,
-} from "firebase/auth";
-
+import { GoogleSignin, statusCodes } from "@react-native-google-signin/google-signin";
+import { getAuth, GoogleAuthProvider, signInWithCredential } from "firebase/auth";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { checkSubscriptionStatus } from "../services/subscriptionService";
-
 import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
 import { db } from "../services/firebaseConfig";
+
+// ⭐ SOLO PARA DESCARGAR JSON (NO WATCHDOG)
+import { downloadAllJson } from "../utils/cache/cacheManager";
 
 const AnimatedImageBackground = Animated.createAnimatedComponent(ImageBackground);
 
@@ -38,6 +32,11 @@ const LoadingScreen = () => {
   const [message, setMessage] = useState("");
   const dispatch = useDispatch<AppDispatch>();
   const fadeAnim = useRef(new Animated.Value(0)).current;
+
+  
+  // ------------------------------------------------------------
+  // Imagen de fondo random
+  // ------------------------------------------------------------
 
   const loadingImages = [
     require("../assets/LoadingImages/1.webp"),
@@ -67,11 +66,9 @@ const LoadingScreen = () => {
     require("../assets/LoadingImages/25.webp"),
   ];
 
+
   const [backgroundImage, setBackgroundImage] = useState(loadingImages[0]);
 
-  // ------------------------------------------------------------
-  // Fondo animado
-  // ------------------------------------------------------------
   useEffect(() => {
     const random = Math.floor(Math.random() * loadingImages.length);
     setBackgroundImage(loadingImages[random]);
@@ -82,19 +79,54 @@ const LoadingScreen = () => {
     }).start();
   }, []);
 
+
+// ⭐ WATCHDOG REFRESH — LO PRIMERO
+useEffect(() => {
+  const refreshIfNeeded = async () => {
+    const flag = await AsyncStorage.getItem("CS_FORCE_FULL_REFRESH");
+
+    if (flag === "1") {
+      setLoading(true);
+      setMessage("Actualizando datos...");
+
+      await downloadAllJson();
+      await AsyncStorage.removeItem("CS_FORCE_FULL_REFRESH");
+
+      setMessage("Datos listos ✔");
+      setLoading(false);
+    }
+  };
+
+  refreshIfNeeded();
+}, []);
+
+
+
   // ------------------------------------------------------------
-  // Config Google
+  // ⭐ CHECK SI APP.TSX PIDIÓ "FULL REFRESH"
   // ------------------------------------------------------------
   useEffect(() => {
-    GoogleSignin.configure({
-      webClientId:
-        "409946165927-k9u22r4jj9epr83f903d3ojdlnih12ee.apps.googleusercontent.com",
-      offlineAccess: false,
-    });
+    const refreshIfNeeded = async () => {
+      const flag = await AsyncStorage.getItem("CS_FORCE_FULL_REFRESH");
+
+      if (flag === "1") {
+        setLoading(true);
+        setMessage("Actualizando datos...");
+
+        await downloadAllJson();
+
+        await AsyncStorage.removeItem("CS_FORCE_FULL_REFRESH");
+
+        setMessage("Datos listos ✔");
+        setLoading(false);
+      }
+    };
+
+    refreshIfNeeded();
   }, []);
 
   // ------------------------------------------------------------
-  // (A) Crear / Actualizar usuario
+  // Crear / Actualizar usuario
   // ------------------------------------------------------------
   const createOrUpdateUser = async (user: any) => {
     const ref = doc(db, "users", user.uid);
@@ -114,24 +146,21 @@ const LoadingScreen = () => {
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp(),
       });
-      console.log("👤 Usuario creado en Firestore");
     } else {
       await setDoc(ref, { updatedAt: serverTimestamp() }, { merge: true });
     }
   };
 
   // ------------------------------------------------------------
-  // (B) Maneja login tanto del botón como restauración
+  // Manejar login
   // ------------------------------------------------------------
   const handleFirebaseUser = async (firebaseUser: any) => {
     try {
       setLoading(true);
-      setMessage("Cargando datos del usuario...");
+      setMessage("Cargando usuario...");
 
-      // Crear o actualizar en Firestore
       await createOrUpdateUser(firebaseUser);
 
-      // Guardar en Redux
       dispatch(
         setUser({
           uid: firebaseUser.uid,
@@ -141,11 +170,8 @@ const LoadingScreen = () => {
         })
       );
 
-      // Verificar suscripción
       const subData = await checkSubscriptionStatus(firebaseUser.uid, dispatch);
-
-      const premiumStatus = !!subData?.isActive;
-      dispatch(setPremium(premiumStatus));
+      dispatch(setPremium(!!subData?.isActive));
 
       if (subData) {
         await AsyncStorage.setItem("subscriptionData", JSON.stringify(subData));
@@ -154,65 +180,45 @@ const LoadingScreen = () => {
       }
 
       dispatch(setSubscriptionResolved());
-      setMessage("¡Sesión iniciada con éxito!");
+      setMessage("¡Listo!");
 
     } catch (err) {
-      console.error("❌ ERROR handleFirebaseUser:", err);
-      setMessage("Error cargando tu sesión.");
+      setMessage("Error cargando usuario.");
     } finally {
       setLoading(false);
     }
   };
 
-  // ------------------------------------------------------------
-  // (C) Restauración de sesión → Crear usuario si no existe
-  // ------------------------------------------------------------
+  // Restaurar sesión
   useEffect(() => {
     const auth = getAuth();
-    const currentUser = auth.currentUser;
-
-    if (currentUser) {
-      console.log("🔄 Sesión ya activa en Firebase → creando usuario...");
-      handleFirebaseUser(currentUser);
+    if (auth.currentUser) {
+      handleFirebaseUser(auth.currentUser);
     }
   }, []);
 
-  // ------------------------------------------------------------
-  // (D) Login manual con Google
-  // ------------------------------------------------------------
+  // Login manual
   const signInWithGoogle = async () => {
     setLoading(true);
-    setMessage("Iniciando sesión con Google...");
+    setMessage("Iniciando sesión...");
+
     try {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
+      const idToken = userInfo.idToken;
 
-      const idToken = userInfo.idToken || userInfo.data?.idToken;
-      if (!idToken) throw new Error("No se pudo obtener idToken de Google");
-
-      const auth = getAuth();
       const credential = GoogleAuthProvider.credential(idToken);
-      const firebaseUser = (await signInWithCredential(auth, credential)).user;
+      const firebaseUser = (await signInWithCredential(getAuth(), credential)).user;
 
       await handleFirebaseUser(firebaseUser);
 
     } catch (error: any) {
-      console.error("[ERROR] Google Sign-In:", error);
-      if (error.code === statusCodes.SIGN_IN_CANCELLED)
-        setMessage("Inicio cancelado por el usuario.");
-      else if (error.code === statusCodes.IN_PROGRESS)
-        setMessage("Inicio ya en progreso.");
-      else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE)
-        setMessage("Google Play Services no disponible.");
-      else setMessage(error.message || "Error inesperado al iniciar sesión.");
+      setMessage(error.message || "Error al iniciar sesión.");
     } finally {
       setLoading(false);
     }
   };
 
-  // ------------------------------------------------------------
-  // UI
-  // ------------------------------------------------------------
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
@@ -226,7 +232,7 @@ const LoadingScreen = () => {
       <View style={styles.innerContainer}>
         {loading ? (
           <>
-            <Text style={styles.loadingText}>{message || "Cargando..."}</Text>
+            <Text style={styles.loadingText}>{message}</Text>
             <ActivityIndicator size="large" color="#40E0D0" style={{ marginTop: 20 }} />
           </>
         ) : (
@@ -234,7 +240,6 @@ const LoadingScreen = () => {
             <Text style={styles.loginText}>Iniciar sesión con Google</Text>
           </Pressable>
         )}
-        {message ? <Text style={styles.messageText}>{message}</Text> : null}
       </View>
     </SafeAreaView>
   );
@@ -266,13 +271,6 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 18,
     fontWeight: "bold",
-  },
-  messageText: {
-    color: "white",
-    marginTop: 20,
-    fontSize: 16,
-    textAlign: "center",
-    fontWeight: "500",
   },
 });
 

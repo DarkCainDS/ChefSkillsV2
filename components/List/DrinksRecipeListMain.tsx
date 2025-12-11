@@ -16,6 +16,7 @@ import drinksData from "../../assets/Json/Drink.json";
 
 // 🟢 Util universal
 import { getSafeImage } from "../../utils/getImageSource";
+import { getVersionedImageSync } from "../../utils/versionedImage";
 
 // 🔍 Normalización inteligente
 const normalizeText = (text: string) =>
@@ -70,7 +71,7 @@ function DrinksRecipeListMain() {
         onPress={() => navigation.navigate("DrinkRecipeDetail", { recipe: item })}
       >
         <Image
-          source={getSafeImage(item.imageUrl, item.images)}
+          source={getVersionedImageSync(item.imageUrl)}
           style={styles.image}
           contentFit="cover"
           transition={300}

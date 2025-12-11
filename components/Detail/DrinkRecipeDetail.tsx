@@ -23,6 +23,7 @@ import { getSafeImage } from "../../utils/getImageSource";
 import { useFavoriteToggle } from "../hooks/useFavoriteToggle";
 
 import type { Recipe } from "../../store/Slices/FavoriteSlice";
+import { getVersionedImageSync } from "../../utils/versionedImage"
 
 // NAV TYPES
 type RootStackParamList = {
@@ -164,7 +165,7 @@ export default function TragosRecipeDetail() {
           {recipe.images?.map((path, idx) => (
             <TouchableOpacity key={idx} onPress={() => setSelectedImage(path)}>
               <Image
-                source={getSafeImage(path)}
+                source={getVersionedImageSync(path)}
                 style={styles.image}
                 contentFit="cover"
               />
@@ -178,7 +179,7 @@ export default function TragosRecipeDetail() {
             <View style={styles.modalBackground}>
               {selectedImage && (
                 <Image
-                  source={getSafeImage(selectedImage)}
+                  source={getVersionedImageSync(selectedImage)}
                   style={styles.modalImageLarge}
                   contentFit="contain"
                 />

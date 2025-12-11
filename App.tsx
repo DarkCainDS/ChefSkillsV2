@@ -57,11 +57,19 @@ import SaladRecipeDetail from "./components/Detail/SaladRecipeDetail";
 import SoupRecipeDetail from "./components/Detail/SoupRecipeDetail";
 import DrinkRecipeDetail from "./components/Detail/DrinkRecipeDetail";
 import FavoriteRecipeDetail from "./components/Detail/FavoriteRecipeDetail";
+import FavoritePastryDetail from "./components/Detail/FavoritePastryDetail";
+
 import Menu from "./components/Menu";
 
 // ADS
 import InterstitialAdManager from "./components/ads/InterstitialAdManager";
 import VeganRecipeDetail from "./components/Detail/VeganRecipeDetail";
+
+
+
+import { watchdogCheck, clearAllJsonCache, downloadAllJson, markVersion } 
+from "./utils/cache/cacheManager";
+
 
 const Stack = createStackNavigator();
 
@@ -109,6 +117,46 @@ const AppContent = () => {
     "Agitando la olla mágica... paciencia 🪄🍲",
     "Verificando que no se queme el código 🔥💻😂",
   ];
+
+
+// ============================================================
+// WATCHDOG GLOBAL (14 días o primer uso)
+// ============================================================
+useEffect(() => {
+  const runWatchdog = async () => {
+    try {
+      const result = await watchdogCheck();
+
+      if (result.action === "RESET") {
+        console.log("🛑 Watchdog: Se requiere refresco completo.");
+
+        // 1. Borrar JSON viejos
+        await clearAllJsonCache();
+
+        // 2. Guardar nueva versión para romper caché de imágenes
+        await markVersion(result.newVersion);
+
+        // 3. Marcar para que LoadingScreen descargue TODO
+        await AsyncStorage.setItem("CS_FORCE_FULL_REFRESH", "1");
+
+        // 4. FORZAR NAVEGACIÓN A LOADING
+        navigationRef.current?.reset({
+          index: 0,
+          routes: [{ name: "Loading" }],
+        });
+
+        return; // detener flujo normal
+      }
+
+      console.log("⏳ Watchdog: No necesita refresco.");
+    } catch (e) {
+      console.log("❌ Error en watchdog global:", e);
+    }
+  };
+
+  runWatchdog();
+}, []);
+
 
   // ============================================================
   //    GLOBAL AUTH WATCHER
@@ -203,6 +251,9 @@ const AppContent = () => {
     return () => unsub();
   }, [dispatch]);
 
+
+
+
   // ============================================================
   // LOADING SCREEN
   // ============================================================
@@ -275,6 +326,7 @@ const AppContent = () => {
         <Stack.Screen name="DrinkRecipeDetail" component={DrinkRecipeDetail} />
         <Stack.Screen name="VeganRecipeDetail" component={VeganRecipeDetail} />
         <Stack.Screen name="FavoriteRecipeDetail" component={FavoriteRecipeDetail} />
+        <Stack.Screen name="FavoritePastryDetail" component={FavoritePastryDetail} />
         <Stack.Screen name="Menu" component={Menu} />
       </Stack.Navigator>
 

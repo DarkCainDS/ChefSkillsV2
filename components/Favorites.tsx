@@ -44,7 +44,7 @@ const Favorites: React.FC = () => {
   const used = favoritesRecipes.length;
   const isFull = used >= maxSlots;
   useFavoritesWatchdog(true)
-  
+
   useEffect(() => {
     (async () => {
       const stored = await loadFavoritesFromStorage();
@@ -81,9 +81,14 @@ const Favorites: React.FC = () => {
           renderItem={({ item }) => (
             <FavoriteCard
               item={item}
-              onPress={() =>
-                navigation.navigate("FavoriteRecipeDetail", { recipe: item })
-              }
+              onPress={() => {
+                if (item.uid.startsWith("P-STY")) {
+                  navigation.navigate("FavoritePastryDetail", { recipe: item });
+                } else {
+                  navigation.navigate("FavoriteRecipeDetail", { recipe: item });
+                }
+              }}
+
             />
           )}
           showsVerticalScrollIndicator={false}
@@ -140,7 +145,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     marginBottom: 6,
-    color:"black"
+    color: "black"
   },
 
   divider: {

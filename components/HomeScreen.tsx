@@ -1,3 +1,7 @@
+// ===============================================
+// HomeScreen.tsx — Versión Final con Watchdog + Redirect
+// ===============================================
+
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'expo-status-bar';
@@ -13,9 +17,11 @@ import {
   View,
   ImageSourcePropType,
 } from 'react-native';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../store/Index';
 import { setPremium } from '../store/Slices/userSlice';
+
 import { loadFavoritesFromStorage } from '../store/storage/FavoriteStorage';
 import { auth } from '../services/firebaseConfig';
 import { subscribeUser } from '../services/subscriptionService';
@@ -34,6 +40,7 @@ import Favorites from './Favorites';
 import Marketplace from '../components/MarketPlace';
 
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { useNavigation } from "@react-navigation/native";
 
 type Plan = {
   id: string;
@@ -80,6 +87,8 @@ enum Sections {
 }
 
 export default function HomeScreen({ navigation }: HomeScreenProps) {
+
+  const nav = useNavigation<any>();
   const dispatch = useDispatch<AppDispatch>();
   const { isPremium, subscriptionResolved } = useSelector((state: RootState) => state.user);
 
@@ -90,7 +99,47 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
   const [flatListBackgroundColor, setFlatListBackgroundColor] = useState('#2A5D55');
   const [isLoading, setIsLoading] = useState(false);
 
-  // 🎨 Themes gratuitos
+
+
+  // ============================================================
+  // ⭐ PASO 1: REDIRIGIR SI NO HAY JSON O WATCHDOG MANDÓ REFRESH
+  // ============================================================
+  useEffect(() => {
+    const ensureJsonReady = async () => {
+      const force = await AsyncStorage.getItem("CS_FORCE_FULL_REFRESH");
+
+      if (force === "1") {
+        // 🛑 Ir directo a Loading
+        nav.reset({
+          index: 0,
+          routes: [{ name: "Loading" }],
+        });
+        return;
+      }
+
+      // Buscar si existen JSON en cache
+      const keys = await AsyncStorage.getAllKeys();
+      const hasJson = keys.some(k => k.startsWith("CACHE_"));
+
+      if (!hasJson) {
+        // 🛑 Si no hay JSON → Loading
+        nav.reset({
+          index: 0,
+          routes: [{ name: "Loading" }],
+        });
+        return;
+      }
+    };
+
+    ensureJsonReady();
+  }, []);
+
+
+
+  // ============================================================
+  // 🎨 THEMES
+  // ============================================================
+
   const themesFree: Theme[] = [
     { gradientColors: ['#16eec8', '#16ee5d', '#16ee49', '#2bee16'], buttonColor: ['#97D5CB', '#07996b'], flatListColor: '#2A5D55' },
     { gradientColors: ['#f9f9f9', '#e0e0e0', '#d0d0d0', '#b0b0b0'], buttonColor: ['#ffffff', '#cccccc'], flatListColor: '#90CAF9' },
@@ -101,7 +150,6 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
     { gradientColors: ['#9f5f80', '#69306d', '#7a4b8c', '#5b2a60'], buttonColor: ['#b185a7', '#5d1451'], flatListColor: '#B79F00' },
   ];
 
-  // 🎨 Themes premium (incluye todos los free + nuevos)
   const themesPremium: Theme[] = [
     ...themesFree,
     { gradientColors: ['#ffe0f0', '#ffcad4', '#ffb3c1', '#ff99a6'], buttonColor: ['#ffb6c1', '#ff7f9c'], flatListColor: '#FFDDEE' },
@@ -137,14 +185,22 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
     require('../assets/MarketPlaceIcon/9.webp'),
   ];
 
+
+  // ============================================================
+  // ICON RANDOM
+  // ============================================================
   useEffect(() => {
     const randomIcon = marketplaceIcons[Math.floor(Math.random() * marketplaceIcons.length)];
     setMarketplaceIcon(randomIcon);
   }, []);
 
-  // 🟢 Cargar el último tema usado según el tipo de usuario
+
+  // ============================================================
+  // THEME HANDLING
+  // ============================================================
   useEffect(() => {
     const key = isPremium ? 'themeIndexPremium' : 'themeIndexFree';
+
     const loadTheme = async () => {
       try {
         const savedThemeIndex = await AsyncStorage.getItem(key);
@@ -153,47 +209,66 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
           setThemeIndex(Number(savedThemeIndex));
           setFlatListBackgroundColor(savedFlatListColor || availableThemes[0].flatListColor);
         }
-      } catch (error) {
-        console.error('Error loading theme', error);
+      } catch (e) {
+        console.log("Theme load error:", e);
       }
     };
+
     loadTheme();
   }, [isPremium]);
 
-  // 🟡 Cambiar tema y guardar preferencia
   const changeTheme = () => {
     setIsLoading(true);
     const newThemeIndex = (themeIndex + 1) % availableThemes.length;
     setThemeIndex(newThemeIndex);
     setFlatListBackgroundColor(availableThemes[newThemeIndex].flatListColor);
+
     const key = isPremium ? 'themeIndexPremium' : 'themeIndexFree';
     AsyncStorage.setItem(key, newThemeIndex.toString());
     AsyncStorage.setItem(`${key}_color`, availableThemes[newThemeIndex].flatListColor);
+
     setIsLoading(false);
   };
 
 
-  // 🔄 Cargar favoritos
+  // ============================================================
+  // FAVORITOS
+  // ============================================================
   useEffect(() => {
-    const initFavorites = async () => {
-      await loadFavoritesFromStorage();
-    };
-    initFavorites();
+    loadFavoritesFromStorage();
   }, []);
 
+
+  // ============================================================
+  // SUSCRIPCIÓN
+  // ============================================================
   const handleSubscribe = async (plan: Plan) => {
     try {
       const user = auth.currentUser;
       if (!user) return;
-      const payload = { planId: plan.id, planName: plan.name, pricePaid: plan.price, currency: plan.currency, purchaseProvider: 'server', flashSaleApplied: false };
+
+      const payload = {
+        planId: plan.id,
+        planName: plan.name,
+        pricePaid: plan.price,
+        currency: plan.currency,
+        purchaseProvider: 'server',
+        flashSaleApplied: false,
+      };
+
       await subscribeUser(user.uid, payload);
       dispatch(setPremium(true));
       setModalVisible(false);
+
     } catch (err) {
       console.error('Error al suscribirse:', err);
     }
   };
 
+
+  // ============================================================
+  // SI SUB NO ESTÁ LISTA → LOADING
+  // ============================================================
   if (!subscriptionResolved) {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#000' }}>
@@ -203,6 +278,10 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
     );
   }
 
+
+  // ============================================================
+  // RENDER
+  // ============================================================
   return (
     <LinearGradient colors={currentTheme.gradientColors} style={styles.container}>
       <View style={styles.headerContainer}>
@@ -211,10 +290,28 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
             <Image source={marketplaceIcon} style={styles.marketplaceIcon} resizeMode="contain" />
           </TouchableOpacity>
         )}
-        <Marketplace visible={modalVisible} onClose={() => setModalVisible(false)} onSubscribe={handleSubscribe} />
-        <Image source={require('../assets/usedImages/Logo.png')} style={styles.logoImage} resizeMode="contain" />
-        <TouchableOpacity style={styles.profileButton} onPress={() => navigation.navigate('Menu')}>
-          <Image source={require('../assets/usedImages/Setting.png')} style={styles.buttonImage} resizeMode="contain" />
+
+        <Marketplace
+          visible={modalVisible}
+          onClose={() => setModalVisible(false)}
+          onSubscribe={handleSubscribe}
+        />
+
+        <Image
+          source={require('../assets/usedImages/Logo.png')}
+          style={styles.logoImage}
+          resizeMode="contain"
+        />
+
+        <TouchableOpacity
+          style={styles.profileButton}
+          onPress={() => navigation.navigate('Menu')}
+        >
+          <Image
+            source={require('../assets/usedImages/Setting.png')}
+            style={styles.buttonImage}
+            resizeMode="contain"
+          />
         </TouchableOpacity>
       </View>
 
@@ -226,7 +323,6 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
           ]}
           onPress={changeTheme}
         >
-          <Text style={styles.buttonText}></Text>
         </Pressable>
 
         <View style={[styles.flatListWrapper, { backgroundColor: flatListBackgroundColor }]}>
@@ -251,6 +347,7 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
       {isLoading && <ActivityIndicator size="large" color="blue" style={styles.loadingIndicator} />}
 
       <View style={[styles.container2, { backgroundColor: flatListBackgroundColor }]}>
+
         {activeComponent === Sections.Cocina && <MainDishRecipeListMain />}
         {activeComponent === Sections.Pasteleria && <PastryRecipeListMain />}
         {activeComponent === Sections.Panaderia && <PanaderiaRecipeListMain />}
@@ -259,9 +356,15 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
         {activeComponent === Sections.Ensaladas && <SaladRecipeListMain />}
         {activeComponent === Sections.Tragos && <DrinksRecipeListMain />}
         {activeComponent === Sections.Vegan && <VeganListMain />}
+
         {activeComponent === Sections.Tecnicas && (
-          <TechniqueList onPressTechnique={(item: any) => item && navigation.navigate('TechniqueDetails', { ...item })} />
+          <TechniqueList
+            onPressTechnique={(item: any) =>
+              item && navigation.navigate('TechniqueDetails', { ...item })
+            }
+          />
         )}
+
         {activeComponent === Sections.Favoritos && <Favorites />}
       </View>
 
@@ -270,6 +373,11 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
   );
 }
 
+
+
+// ============================================================
+// 🔥 ESTILOS
+// ============================================================
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 20 },
   headerContainer: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10, marginTop: 15 },

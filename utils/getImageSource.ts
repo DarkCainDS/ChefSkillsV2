@@ -19,32 +19,23 @@ export const placeholderImages = [
   require("../assets/404/placeholder16.webp"),
 ];
 
-// 🔥 FUNCIÓN MEJORADA
-export function getSafeImage(
-  mainUrl?: string,
-  imagesArray?: string[]
-) {
-  const placeholders = placeholderImages;
-  const randomPlaceholder =
-    placeholders[Math.floor(Math.random() * placeholders.length)];
+export function getSafeImage(mainUrl?: string, imagesArray?: string[]) {
+  const fallbacks = placeholderImages;
 
-  // --- PRIORIDAD 1: imageUrl principal ---
+  const urls: ImageSource[] = [];
+
+  // Prioridad 1: imagen principal
   if (mainUrl && typeof mainUrl === "string") {
-    if (mainUrl.startsWith("http://") || mainUrl.startsWith("https://")) {
-      return { uri: encodeURI(mainUrl) }; // encode fix
-    }
+    urls.push({ uri: mainUrl });
   }
 
-  // --- PRIORIDAD 2: primera imagen del array ---
-  if (imagesArray && Array.isArray(imagesArray) && imagesArray.length > 0) {
-    const url = imagesArray[0];
-    if (url && typeof url === "string") {
-      if (url.startsWith("http://") || url.startsWith("https://")) {
-        return { uri: encodeURI(url) };
-      }
-    }
+  // Prioridad 2: primera imagen del array (si existe)
+  if (imagesArray && imagesArray.length > 0) {
+    urls.push({ uri: imagesArray[0] });
   }
 
-  // --- FALLBACK: placeholder aleatorio ---
-  return randomPlaceholder;
+  // Fallbacks
+  urls.push(...fallbacks);
+
+  return urls;
 }
