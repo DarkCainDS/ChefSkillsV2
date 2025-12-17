@@ -1,3 +1,4 @@
+import { getVersionedImageSync } from "../../utils/versionedImage";
 // screens/SoupRecipeListMain.tsx
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
@@ -15,7 +16,7 @@ import {
 import soupsData from "../../assets/Json/Soup.json";
 
 // 🟢 Util estándar para imágenes seguras
-import { getSafeImage } from "../../utils/getImageSource";
+import { getSafeVersionedImage } from "../../utils/imageSource";
 
 // 🔎 Normalizador completo
 const normalizeText = (text: string) =>
@@ -72,12 +73,15 @@ function SoupRecipeListMain() {
           navigation.navigate("SoupRecipeDetail", { recipe: item })
         }
       >
-        <Image
-          source={getSafeImage(item.imageUrl, item.images)}
-          style={styles.image}
-          contentFit="cover"
-          transition={300}
-        />
+<Image
+  source={getSafeVersionedImage(
+    item.imageUrl,
+    item.images
+  )}
+  style={styles.image}
+  contentFit="cover"
+  transition={300}
+/>
 
         <View style={styles.info}>
           <Text style={styles.title}>{item.name}</Text>

@@ -1,19 +1,18 @@
 // scripts/applyVersionedImage.js
 // 🔥 Automatiza reemplazo de imágenes para usar getVersionedImageSync()
+console.time("⏱️ Auditoría completa");
 
 const fs = require("fs");
 const path = require("path");
 
-const projectDir = path.resolve(__dirname, ".."); // raíz del proyecto
+// raíz del proyecto
+const projectDir = path.resolve(__dirname, "..");
 
 // Extensiones a procesar
 const EXT = [".tsx", ".ts"];
 
 // Expresión que detecta imageUrl clásicos
 const REGEX_IMAGE = /source\s*=\s*{{?\s*uri:\s*([A-Za-z0-9_."'/\-]+)/g;
-
-// Import requerido
-const IMPORT_VERSIONED = `import { getVersionedImageSync } from "../utils/versionedImage";`;
 
 function walk(dir, filelist = []) {
   const files = fs.readdirSync(dir);
@@ -23,14 +22,9 @@ function walk(dir, filelist = []) {
     const stat = fs.statSync(fullname);
 
     if (stat.isDirectory()) {
-      // Ignorar node_modules
-      if (!fullname.includes("node_modules")) {
-        walk(fullname, filelist);
-      }
+      if (!fullname.includes("node_modules")) walk(fullname, filelist);
     } else {
-      if (EXT.includes(path.extname(fullname))) {
-        filelist.push(fullname);
-      }
+      if (EXT.includes(path.extname(fullname))) filelist.push(fullname);
     }
   });
 
@@ -38,26 +32,27 @@ function walk(dir, filelist = []) {
 }
 
 function relativeImport(fullPath) {
-  // calcular ruta correcta
-  const depth = fullPath.split(path.sep).length - projectDir.split(path.sep).length - 1;
+  const depth =
+    fullPath.split(path.sep).length - projectDir.split(path.sep).length - 1;
+
   const prefix = "../".repeat(depth);
+
   return `import { getVersionedImageSync } from "${prefix}utils/versionedImage";`;
 }
 
 function processFile(file) {
   let content = fs.readFileSync(file, "utf8");
-  let original = content;
+  const original = content;
 
-  // Saltar archivos sin uso de <Image
   if (!content.includes("<Image")) return null;
 
-  // 1) Insertar import si falta
+  // Insertar import si falta
   if (!content.includes("getVersionedImageSync")) {
-    const importLine = relativeImport(file);
-    content = importLine + "\n" + content;
+    const imp = relativeImport(file);
+    content = imp + "\n" + content;
   }
 
-  // 2) Reemplazar source={{ uri: IMAGE }}
+  // Reemplazar source={{ uri: ... }}
   content = content.replace(REGEX_IMAGE, (match, p1) => {
     return `source={getVersionedImageSync(${p1})}`;
   });
@@ -73,7 +68,7 @@ function processFile(file) {
 // ------------------------------------------------------------
 // RUN
 // ------------------------------------------------------------
-console.log("🚀 Analizando proyecto...");
+console.log("🚀 Analizando y reemplazando imágenes...");
 const files = walk(projectDir);
 
 let changed = [];
@@ -85,9 +80,10 @@ files.forEach((file) => {
 
 console.log("✨ Reemplazo completado.");
 console.log("📂 Archivos modificados:");
-
 changed.forEach((file) => console.log("🔧", file));
 
 if (changed.length === 0) {
   console.log("✔ No se encontraron imágenes para convertir.");
 }
+
+console.timeEnd("⏱️ Auditoría completa");

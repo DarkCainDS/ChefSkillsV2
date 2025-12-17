@@ -1,3 +1,4 @@
+import { getVersionedImageSync } from "../../utils/versionedImage";
 // screens/FavoritePastryDetail.tsx
 import { MaterialIcons } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
@@ -19,9 +20,10 @@ import LinearGradient from "react-native-linear-gradient";
 import { useRoute, RouteProp, useNavigation } from "@react-navigation/native";
 
 import CategoryHeader from "../UI/CSHeader_ModernPro";
-import { getSafeImage } from "../../utils/getImageSource";
 import { useFavoriteToggle } from "../hooks/useFavoriteToggle";
 import type { Recipe } from "../../store/Slices/FavoriteSlice";
+import { getSafeVersionedImage } from "../../utils/imageSource";
+
 
 type RootStackParamList = {
   FavoritePastryDetail: { recipe: Recipe };
@@ -74,7 +76,7 @@ export default function FavoritePastryDetail() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [multiplier, setMultiplier] = useState<number>(1);
   const [buttonText, setButtonText] = useState<string>("x1");
-  
+
   // Lógica del Modal (Traída de tu código funcional)
   const [tipsVisible, setTipsVisible] = useState<boolean>(false);
   const fadeAnim = useRef(new Animated.Value(0)).current;
@@ -149,6 +151,10 @@ export default function FavoritePastryDetail() {
       </View>
     );
   }
+  const imageSources = getSafeVersionedImage(
+    recipe.imageUrl,
+    recipe.images
+  );
 
   // =========================================================
   //                           RENDER
@@ -156,10 +162,10 @@ export default function FavoritePastryDetail() {
   return (
     // 1. Fondo Amarillo Dorado Suave
     <LinearGradient colors={["#FFE8C2", "#FFD891", "#F5C03A"]} style={{ flex: 1 }}>
-<ScrollView 
-        style={{ flex: 1 }} 
+      <ScrollView
+        style={{ flex: 1 }}
         contentContainerStyle={{ padding: 15, paddingBottom: 50 }}
-      >        
+      >
         {/* HEADER */}
         <CategoryHeader
           title="Favorito"
@@ -179,26 +185,27 @@ export default function FavoritePastryDetail() {
                 name={isFavorite ? "favorite" : "favorite-border"}
                 size={46}
                 // Corazón rojo si es fav, Marrón Oscuro si no
-                color={isFavorite ? "#FF2F81" : "#5C3B22"} 
+                color={isFavorite ? "#FF2F81" : "#5C3B22"}
               />
             </Animated.View>
           </TouchableOpacity>
         </View>
 
         {/* IMAGE CAROUSEL */}
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          pagingEnabled
-          style={styles.imageContainer}
-        >
-          {recipe.images?.map((imgUrl, idx) => (
-            <TouchableOpacity key={idx} onPress={() => setSelectedImage(imgUrl)}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          {imageSources.map((src, idx) => (
+            <TouchableOpacity
+              key={idx}
+              onPress={() =>
+                typeof src === "object" && "uri" in src
+                  ? setSelectedImage(src.uri)
+                  : null
+              }
+            >
               <Image
-                source={getSafeImage(imgUrl)}
+                source={src}
                 style={styles.image}
                 contentFit="cover"
-                transition={300}
               />
             </TouchableOpacity>
           ))}
@@ -210,7 +217,7 @@ export default function FavoritePastryDetail() {
             <View style={styles.modalBackground}>
               {selectedImage && (
                 <Image
-                  source={getSafeImage(selectedImage)}
+                  source={getSafeVersionedImage(selectedImage)[0]}
                   style={styles.modalImageLarge}
                   contentFit="contain"
                 />
@@ -231,7 +238,7 @@ export default function FavoritePastryDetail() {
         <View style={styles.miniHeaderWrapper}>
           <LinearGradient
             // 5. Naranja Brillante Gradient
-            colors={["#F07400", "#FF8A1A", "#FFC56A"]} 
+            colors={["#F07400", "#FF8A1A", "#FFC56A"]}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 1 }}
             style={styles.miniHeader}
@@ -281,7 +288,7 @@ export default function FavoritePastryDetail() {
                       <BouncyCheckbox
                         size={20}
                         // Checkbox Naranja Brillante
-                        fillColor="#F07400" 
+                        fillColor="#F07400"
                         unFillColor="#fff"
                         disableBuiltInState
                       />
@@ -410,9 +417,9 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     backgroundColor: "rgba(255,255,255,0.96)",
     // 3. Ámbar profundo borde
-    borderColor: "#D48A2B", 
+    borderColor: "#D48A2B",
     // 4. Gris marrón oscuro texto
-    color: "#5C3B22", 
+    color: "#5C3B22",
   },
 
   favoriteIcon: { marginLeft: 10 },
@@ -487,7 +494,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     borderWidth: 1,
     // 3. Borde Ámbar profundo
-    borderColor: "#D48A2B", 
+    borderColor: "#D48A2B",
     marginBottom: 15,
     overflow: "hidden",
   },
@@ -497,7 +504,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     padding: 12,
     // 2. Naranja pastel suave fondo
-    backgroundColor: "#FFCF99", 
+    backgroundColor: "#FFCF99",
     alignItems: "center",
   },
 
@@ -505,13 +512,13 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     // 4. Texto Gris Marrón Oscuro
-    color: "#5C3B22", 
+    color: "#5C3B22",
   },
 
   accordionContent: {
     padding: 12,
     // 1. Fondo interno Amarillo dorado muy suave
-    backgroundColor: "#FFF8E7", 
+    backgroundColor: "#FFF8E7",
   },
 
   ingredientsContainer: {
@@ -528,22 +535,22 @@ const styles = StyleSheet.create({
     borderBottomColor: "#F3E0B5",
   },
 
-  tableHeaderRow: { 
+  tableHeaderRow: {
     // 2. Encabezado de tabla Naranja Pastel
-    backgroundColor: "#FFCF99" 
+    backgroundColor: "#FFCF99"
   },
 
-  tableRowAlt: { 
+  tableRowAlt: {
     // Alternancia suave amarilla
-    backgroundColor: "rgba(255, 232, 194, 0.4)" 
+    backgroundColor: "rgba(255, 232, 194, 0.4)"
   },
 
-  tableCellName: { 
-    flex: 1.2, 
-    padding: 10, 
-    fontSize: 14, 
+  tableCellName: {
+    flex: 1.2,
+    padding: 10,
+    fontSize: 14,
     // 4. Texto Marrón
-    color: "#5C3B22" 
+    color: "#5C3B22"
   },
 
   tableCellQuantity: {
@@ -585,8 +592,8 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     borderWidth: 1,
     // Borde suave naranja
-    borderColor: "#FFCF99", 
-    
+    borderColor: "#FFCF99",
+
   },
 
   stepTextContainer: { flex: 0.85 },
@@ -596,13 +603,13 @@ const styles = StyleSheet.create({
     marginBottom: 4,
     fontSize: 16,
     // Numero de paso: Ámbar Profundo
-    color: "#D48A2B", 
+    color: "#D48A2B",
   },
 
   stepDescription: {
     fontSize: 15,
     // Descripción: Marrón Oscuro
-    color: "#5C3B22", 
+    color: "#5C3B22",
     lineHeight: 21,
   },
 
@@ -617,7 +624,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     // 5. Botón Naranja Brillante
-    backgroundColor: "#F07400", 
+    backgroundColor: "#F07400",
     paddingVertical: 12,
     borderRadius: 30,
     width: "60%",

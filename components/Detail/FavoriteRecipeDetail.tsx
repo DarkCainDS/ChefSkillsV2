@@ -1,3 +1,4 @@
+import { getVersionedImageSync } from "../../utils/versionedImage";
 // screens/FavoriteRecipeDetail.tsx
 import { MaterialIcons } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
@@ -18,7 +19,7 @@ import LinearGradient from "react-native-linear-gradient";
 import { useRoute, RouteProp, useNavigation } from "@react-navigation/native";
 
 import CategoryHeader from "../UI/CSHeader_ModernPro";
-import { getSafeImage } from "../../utils/getImageSource";
+import { getSafeVersionedImage } from "../../utils/imageSource";
 import type { Recipe } from "../../store/Slices/FavoriteSlice";
 import { useFavoriteToggle } from "../hooks/useFavoriteToggle";
 
@@ -115,6 +116,11 @@ export default function FavoriteRecipeDetail() {
       </View>
     );
   }
+  const imageSources = getSafeVersionedImage(
+    recipe.imageUrl,
+    recipe.images
+  );
+
 
   return (
     <LinearGradient
@@ -147,11 +153,18 @@ export default function FavoriteRecipeDetail() {
         </View>
 
         {/* IMAGENES */}
-        <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} style={styles.imageContainer}>
-          {recipe.images?.map((imgUrl, idx) => (
-            <TouchableOpacity key={idx} onPress={() => setSelectedImage(imgUrl)}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          {imageSources.map((src, idx) => (
+            <TouchableOpacity
+              key={idx}
+              onPress={() =>
+                typeof src === "object" && "uri" in src
+                  ? setSelectedImage(src.uri)
+                  : null
+              }
+            >
               <Image
-                source={getSafeImage(imgUrl)}
+                source={src}
                 style={styles.image}
                 contentFit="cover"
               />
@@ -159,17 +172,19 @@ export default function FavoriteRecipeDetail() {
           ))}
         </ScrollView>
 
+
         {/* MODAL IMG */}
         <Modal visible={!!selectedImage} transparent animationType="fade">
           <TouchableWithoutFeedback onPress={() => setSelectedImage(null)}>
             <View style={styles.modalBackground}>
               {selectedImage && (
                 <Image
-                  source={getSafeImage(selectedImage)}
+                  source={getSafeVersionedImage(selectedImage)[0]}
                   style={styles.modalImageLarge}
                   contentFit="contain"
                 />
               )}
+
             </View>
           </TouchableWithoutFeedback>
         </Modal>

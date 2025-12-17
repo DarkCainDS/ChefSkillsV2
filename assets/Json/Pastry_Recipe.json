@@ -1531,7 +1531,7 @@
   "rating": null,
   "servings": null,
   "time": null,
-  "difficulty": null
+  "difficulty": null 
 },
 {
   "id": 19,
@@ -7263,18 +7263,18 @@
         "Formar cilindros con la masa de cacao.",
         "Aplanar cada porción de masa blanca formando un rectángulo.",
         "Envolver el cilindro oscuro con la masa blanca sellando bien.",
-        "Cortar rodajas de 2–3 cm y colocarlas en bandeja con el espiral hacia arriba."
+        "Cortar rodajas de 2-3 cm y colocarlas en bandeja con el espiral hacia arriba."
       ]
     },
 
     {
       "title": "Horneado y Baño Final",
       "ingredients": [
-        { "name": "Piezas formadas", "quantity": "20–25 unidades" },
+        { "name": "Piezas formadas", "quantity": "20-25 unidades" },
         { "name": "Almíbar frío", "quantity": "c/n" }
       ],
       "steps": [
-        "Hornear a 160°C durante 20–25 minutos o hasta dorado suave.",
+        "Hornear a 160°C durante 20-25 minutos o hasta dorado suave.",
         "Al salir del horno, verter el almíbar frío sobre los dulces calientes.",
         "Dejar reposar al menos 2 horas para que absorban el almíbar por completo."
       ]
@@ -7346,7 +7346,7 @@
         { "name": "Aceite vegetal", "quantity": "150 ml" },
         { "name": "Huevos", "quantity": "2 unidades" },
         { "name": "Polvo de hornear", "quantity": "1/2 cdta" },
-        { "name": "Jugo de naranja", "quantity": "50–60 ml" },
+        { "name": "Jugo de naranja", "quantity": "50-60 ml" },
         { "name": "Canela en polvo", "quantity": "1/2 cdta" },
         { "name": "Vainilla", "quantity": "2 sobres o 1 cdta" },
         { "name": "Ralladura de naranja", "quantity": "1 unidad" },
@@ -7383,13 +7383,13 @@
         "Estirar la masa blanca en forma de rectángulo largo.",
         "Modelar la masa de cacao en un cilindro del mismo largo.",
         "Colocar el cilindro sobre el borde del rectángulo y enrollar firmemente.",
-        "Cortar rodajas de 2–3 cm y colocarlas en bandeja con papel."
+        "Cortar rodajas de 2-3 cm y colocarlas en bandeja con papel."
       ]
     }
   ],
 
   "montage": [
-    "Hornear los rollitos a 180–200°C durante 20–25 minutos hasta dorar intensamente.",
+    "Hornear los rollitos a 180-200°C durante 20-25 minutos hasta dorar intensamente.",
     "Retirar del horno y verter de inmediato el almíbar tibio/frío sobre los bollitos calientes.",
     "Dejar reposar mínimo 6 horas para lograr la textura jugosa tradicional.",
     "Dar vuelta a mitad del reposo para asegurar absorción pareja."
@@ -7440,14 +7440,14 @@
       "title": "Dulce de Cereza",
       "ingredients": [
         { "name": "Cerezas frescas", "quantity": "900 g, sin tallos y deshuesadas" },
-        { "name": "Azúcar blanca", "quantity": "800–900 g" },
+        { "name": "Azúcar blanca", "quantity": "800-900 g" },
         { "name": "Agua", "quantity": "250 ml" },
         { "name": "Jugo de limón", "quantity": "2 cdas" },
         { "name": "Vainilla", "quantity": "1 cdta" }
       ],
       "steps": [
         "Remojar los huesos de cereza en el agua para extraer sabor y colar el líquido.",
-        "Mezclar en olla las cerezas, el azúcar, el agua colada y el jugo de limón. Reposar 8–12 h en refrigeración.",
+        "Mezclar en olla las cerezas, el azúcar, el agua colada y el jugo de limón. Reposar 8-12 h en refrigeración.",
         "Cocinar a fuego medio retirando la espuma superficial hasta que el almíbar tome cuerpo (aprox. 25 min).",
         "Añadir la vainilla fuera del fuego y dejar enfriar completamente.",
         "Transferir a frascos limpios con su almíbar."
@@ -7464,7 +7464,7 @@
   "tips": [
     {
       "title": "Control del almíbar",
-      "description": "Si al enfriar queda muy líquido, retirar las cerezas y hervir el almíbar 5–10 minutos más antes de reincorporarlas."
+      "description": "Si al enfriar queda muy líquido, retirar las cerezas y hervir el almíbar 5-10 minutos más antes de reincorporarlas."
     },
     {
       "title": "Color intenso",
@@ -7501,20 +7501,20 @@
     {
       "title": "Dulce de Naranja",
       "ingredients": [
-        { "name": "Naranjas enteras", "quantity": "5–6 unidades" },
+        { "name": "Naranjas enteras", "quantity": "5-6 unidades" },
         { "name": "Agua para hervir", "quantity": "c/n" },
         { "name": "Vinagre", "quantity": "1 chorrito" },
         { "name": "Bicarbonato de sodio", "quantity": "1 cdta" },
         { "name": "Azúcar blanca", "quantity": "80% del peso de las naranjas cocidas" },
-        { "name": "Jugo de limón", "quantity": "1–2 cdas" }
+        { "name": "Jugo de limón", "quantity": "1-2 cdas" }
       ],
       "steps": [
         "Lavar las naranjas y remojarlas en agua con vinagre y bicarbonato durante 30 minutos. Enjuagar.",
-        "Hervir las naranjas enteras en agua limpia durante 45–60 minutos hasta que estén tiernas. Enfriar completamente.",
+        "Hervir las naranjas enteras en agua limpia durante 45-60 minutos hasta que estén tiernas. Enfriar completamente.",
         "Cortar en mitades y luego en rodajas finas o medias lunas, retirando semillas. Conservar el jugo que suelten.",
         "Pesar la fruta cortada con su jugo y calcular el azúcar equivalente al 80% del peso obtenido.",
         "Colocar fruta, jugo y azúcar en una olla amplia y cocinar a fuego muy bajo hasta disolver el azúcar.",
-        "Aumentar ligeramente el fuego y hervir suavemente 20–30 minutos hasta que el almíbar espese ligeramente.",
+        "Aumentar ligeramente el fuego y hervir suavemente 20-30 minutos hasta que el almíbar espese ligeramente.",
         "Agregar el jugo de limón, mezclar y retirar del fuego. Enfriar a temperatura ambiente."
       ]
     }
@@ -7570,7 +7570,7 @@
         { "name": "Sal", "quantity": "1 pizca" },
         { "name": "Leche entera", "quantity": "4 tazas" },
         { "name": "Crema de leche", "quantity": "1 taza" },
-        { "name": "Azúcar", "quantity": "3/4–1 taza" },
+        { "name": "Azúcar", "quantity": "3/4-1 taza" },
         { "name": "Maicena", "quantity": "2 cdas, disueltas en agua fría" },
         { "name": "Vainilla", "quantity": "2 cditas" },
         { "name": "Canela", "quantity": "c/n, para espolvorear" }
@@ -7646,7 +7646,7 @@
       "steps": [
         "Combinar arroz, agua, leche y crema en una olla profunda.",
         "Mezclar el azúcar con cardamomo molido e incorporarlo junto a las ramas de canela.",
-        "Llevar a hervor suave y cocinar 20–25 minutos removiendo con frecuencia para liberar almidón.",
+        "Llevar a hervor suave y cocinar 20-25 minutos removiendo con frecuencia para liberar almidón.",
         "Retirar del fuego cuando la mezcla esté cremosa pero aún fluida.",
         "Reposar 5 minutos tapado antes de servir."
       ]
@@ -7668,7 +7668,7 @@
       ],
       "steps": [
         "Cocinar arroz, agua, leche y leche de coco juntos removiendo regularmente.",
-        "Añadir azúcar, especias y mantener hervor suave 20–25 minutos.",
+        "Añadir azúcar, especias y mantener hervor suave 20-25 minutos.",
         "Retirar cuando esté cremoso y dejar reposar 5 minutos.",
         "Servir con mango fresco, pistachos y un hilo de miel."
       ]
@@ -7725,7 +7725,7 @@
         { "name": "Sal", "quantity": "1/4 cdta" },
         { "name": "Extracto de almendra", "quantity": "1 cdta" },
         { "name": "Extracto de vainilla", "quantity": "1 cdta" },
-        { "name": "Harina de almendra blanqueada", "quantity": "400–450 g (4 tazas)" }
+        { "name": "Harina de almendra blanqueada", "quantity": "400-450 g (4 tazas)" }
       ],
       "steps": [
         "Batir las claras con la sal hasta que estén espumosas y comiencen a tomar cuerpo.",
@@ -7734,7 +7734,7 @@
         "Agregar la harina de almendra poco a poco, mezclando con espátula hasta obtener una masa densa y pegajosa.",
         "Transferir la masa a una manga con boquilla de estrella abierta.",
         "Formar rosetas o espirales sobre bandeja con papel de horno, dejando leve separación.",
-        "Hornear a 175°C por 3 minutos y bajar a 160°C para completar 15–20 minutos hasta que los bordes tomen leve dorado."
+        "Hornear a 175°C por 3 minutos y bajar a 160°C para completar 15-20 minutos hasta que los bordes tomen leve dorado."
       ]
     }
   ],
@@ -7795,7 +7795,7 @@
       "steps": [
         "Batir las claras con la sal y agregar el azúcar hasta obtener un merengue firme.",
         "Incorporar la harina de almendra junto con los extractos hasta formar una masa densa y pegajosa.",
-        "Formar bolitas de 35–40 g y rebozarlas completamente en azúcar glas."
+        "Formar bolitas de 35-40 g y rebozarlas completamente en azúcar glas."
       ]
     }
   ],
@@ -7803,7 +7803,7 @@
   "montage": [
     "Disponer las bolitas rebozadas sobre bandeja con papel de horno.",
     "Hacer una hendidura en el centro y colocar una cereza marrasquino bien seca.",
-    "Hornear a 175 °C por 15–18 minutos hasta que la base dore ligeramente.",
+    "Hornear a 175 °C por 15-18 minutos hasta que la base dore ligeramente.",
     "Dejar enfriar para que la textura se asiente."
   ],
 
@@ -7814,7 +7814,7 @@
     },
     {
       "title": "Textura ajustable",
-      "description": "Para galletas más masticables, hornear 15 minutos; para más crujientes, 18–20 minutos."
+      "description": "Para galletas más masticables, hornear 15 minutos; para más crujientes, 18-20 minutos."
     },
     {
       "title": "Base de chocolate",
@@ -7832,49 +7832,7 @@
   "time": null,
   "difficulty": null
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Leche no frita
-//Miguelitos
-//Conos de hojaldre
-//Tortas
-
-
-
-
-
-
-
-
-
+    
 
     ]
   }

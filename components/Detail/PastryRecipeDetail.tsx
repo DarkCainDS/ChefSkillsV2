@@ -1,3 +1,4 @@
+import { getVersionedImageSync } from "../../utils/versionedImage";
 // screens/PastryRecipeDetail.tsx
 import { MaterialIcons } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
@@ -19,7 +20,7 @@ import LinearGradient from "react-native-linear-gradient";
 import { useRoute, RouteProp, useNavigation } from "@react-navigation/native";
 
 import CategoryHeader from "../UI/CSHeader_ModernPro";
-import { getSafeImage } from "../../utils/getImageSource";
+import { getSafeVersionedImage } from "../../utils/imageSource";
 import { useFavoriteToggle } from "../hooks/useFavoriteToggle";
 
 import type { Recipe } from "../../store/Slices/FavoriteSlice";
@@ -150,16 +151,21 @@ export default function PastryRecipeDetail() {
       </View>
     );
   }
+  const imageSources = getSafeVersionedImage(
+    recipe.imageUrl,
+    recipe.images
+  );
+
 
 
 
   return (
     <LinearGradient colors={["#FFE6EF", "#FFD4E3", "#F8C3D8"]} style={{ flex: 1 }}>
-      <ScrollView 
-        style={{ flex: 1 }} 
+      <ScrollView
+        style={{ flex: 1 }}
         contentContainerStyle={{ padding: 15, paddingBottom: 50 }}
       >
-        
+
         {/* HEADER PRINCIPAL */}
         <CategoryHeader
           title="Pastelería"
@@ -185,23 +191,25 @@ export default function PastryRecipeDetail() {
         </View>
 
         {/* GALERÍA */}
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          pagingEnabled
-          style={styles.imageContainer}
-        >
-          {recipe.images?.map((imgUrl, idx) => (
-            <TouchableOpacity key={idx} onPress={() => setSelectedImage(imgUrl)}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          {imageSources.map((src, idx) => (
+            <TouchableOpacity
+              key={idx}
+              onPress={() =>
+                typeof src === "object" && "uri" in src
+                  ? setSelectedImage(src.uri)
+                  : null
+              }
+            >
               <Image
-                source={getSafeImage(imgUrl)}
+                source={src}
                 style={styles.image}
                 contentFit="cover"
-                transition={300}
               />
             </TouchableOpacity>
           ))}
         </ScrollView>
+
 
         {/* MODAL IMAGEN */}
         <Modal visible={!!selectedImage} transparent animationType="fade">
@@ -209,16 +217,17 @@ export default function PastryRecipeDetail() {
             <View style={styles.modalBackground}>
               {selectedImage && (
                 <Image
-                  source={getSafeImage(selectedImage)}
+                  source={getSafeVersionedImage(selectedImage)[0]}
                   style={styles.modalImageLarge}
                   contentFit="contain"
                 />
               )}
+
             </View>
           </TouchableWithoutFeedback>
         </Modal>
 
-        
+
         {/* BOTÓN TIPS */}
         {recipe.tips && recipe.tips.length > 0 && (
           <TouchableOpacity style={styles.tipsButton} onPress={openTipsModal}>
@@ -227,34 +236,34 @@ export default function PastryRecipeDetail() {
           </TouchableOpacity>
         )}
 
-{/* ⭐ MINI-HEADER PREMIUM COMPLETO — Preparaciones + Multiplicador + Glossy */}
-<View style={styles.miniHeaderWrapper}>
-  <LinearGradient
-    colors={["#6A1BFF", "#3A0F78", "#000000"]}
-    start={{ x: 0, y: 0 }}
-    end={{ x: 1, y: 1 }}
-    style={styles.miniHeader}
-  >
-    {/* ICONO */}
-    <MaterialIcons name="content-paste" size={24} color="#fff" />
+        {/* ⭐ MINI-HEADER PREMIUM COMPLETO — Preparaciones + Multiplicador + Glossy */}
+        <View style={styles.miniHeaderWrapper}>
+          <LinearGradient
+            colors={["#6A1BFF", "#3A0F78", "#000000"]}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            style={styles.miniHeader}
+          >
+            {/* ICONO */}
+            <MaterialIcons name="content-paste" size={24} color="#fff" />
 
-    {/* TEXTO */}
-    <Text style={styles.miniHeaderText}>Preparaciones</Text>
+            {/* TEXTO */}
+            <Text style={styles.miniHeaderText}>Preparaciones</Text>
 
-    {/* BOTÓN MULTIPLICADOR */}
-    <TouchableOpacity
-      style={[
-        styles.multiplierMini,
-        { backgroundColor: getButtonColor(multiplier) },
-      ]}
-      onPress={handleButtonPress}
-    >
-      <Text style={styles.multiplierMiniText}>{buttonText}</Text>
-    </TouchableOpacity>
+            {/* BOTÓN MULTIPLICADOR */}
+            <TouchableOpacity
+              style={[
+                styles.multiplierMini,
+                { backgroundColor: getButtonColor(multiplier) },
+              ]}
+              onPress={handleButtonPress}
+            >
+              <Text style={styles.multiplierMiniText}>{buttonText}</Text>
+            </TouchableOpacity>
 
 
-  </LinearGradient>
-</View>
+          </LinearGradient>
+        </View>
 
 
         {/* SECCIONES */}
@@ -366,56 +375,56 @@ export default function PastryRecipeDetail() {
       </ScrollView>
 
       {/* MODAL TIPS */}
-<Modal
-  visible={tipsVisible}
-  transparent
-  animationType="fade"
-  onRequestClose={closeTipsModal}
->
-  <View style={styles.tipsModalOverlay} pointerEvents="box-none">
-    
-    {/* Cerrar cuando tocas FUERA del modal */}
-    <TouchableWithoutFeedback onPress={closeTipsModal}>
-      <View style={StyleSheet.absoluteFill} />
-    </TouchableWithoutFeedback>
-
-    <Animated.View
-      style={[
-        styles.tipsModal,
-        { opacity: fadeAnim, transform: [{ scale: fadeAnim }] },
-      ]}
-      pointerEvents="box-none"
-    >
-      <Text style={styles.tipsTitle}>💡 Consejos útiles</Text>
-
-      <ScrollView
-        style={{ maxHeight: "70%" }}
-        showsVerticalScrollIndicator={false}
+      <Modal
+        visible={tipsVisible}
+        transparent
+        animationType="fade"
+        onRequestClose={closeTipsModal}
       >
-        {recipe.tips?.map((tip, idx) => (
-          <LinearGradient
-            key={idx}
-            colors={[
-              tipColors[idx % tipColors.length] + "FF",
-              tipColors[idx % tipColors.length] + "CC",
+        <View style={styles.tipsModalOverlay} pointerEvents="box-none">
+
+          {/* Cerrar cuando tocas FUERA del modal */}
+          <TouchableWithoutFeedback onPress={closeTipsModal}>
+            <View style={StyleSheet.absoluteFill} />
+          </TouchableWithoutFeedback>
+
+          <Animated.View
+            style={[
+              styles.tipsModal,
+              { opacity: fadeAnim, transform: [{ scale: fadeAnim }] },
             ]}
-            style={styles.tipCard}
+            pointerEvents="box-none"
           >
-            <Text style={styles.tipTitle}>{tip.title}</Text>
-            <Text style={styles.tipDescription}>{tip.description}</Text>
-          </LinearGradient>
-        ))}
-      </ScrollView>
+            <Text style={styles.tipsTitle}>💡 Consejos útiles</Text>
 
-      <TouchableOpacity
-        style={styles.closeTipsButton}
-        onPress={closeTipsModal}
-      >
-        <Text style={styles.closeTipsText}>Cerrar</Text>
-      </TouchableOpacity>
-    </Animated.View>
-  </View>
-</Modal>
+            <ScrollView
+              style={{ maxHeight: "70%" }}
+              showsVerticalScrollIndicator={false}
+            >
+              {recipe.tips?.map((tip, idx) => (
+                <LinearGradient
+                  key={idx}
+                  colors={[
+                    tipColors[idx % tipColors.length] + "FF",
+                    tipColors[idx % tipColors.length] + "CC",
+                  ]}
+                  style={styles.tipCard}
+                >
+                  <Text style={styles.tipTitle}>{tip.title}</Text>
+                  <Text style={styles.tipDescription}>{tip.description}</Text>
+                </LinearGradient>
+              ))}
+            </ScrollView>
+
+            <TouchableOpacity
+              style={styles.closeTipsButton}
+              onPress={closeTipsModal}
+            >
+              <Text style={styles.closeTipsText}>Cerrar</Text>
+            </TouchableOpacity>
+          </Animated.View>
+        </View>
+      </Modal>
 
     </LinearGradient>
   );
@@ -703,50 +712,50 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   miniHeaderWrapper: {
-  marginTop: 10,
-  marginBottom: 16,
-},
+    marginTop: 10,
+    marginBottom: 16,
+  },
 
-miniHeader: {
-  flexDirection: "row",
-  alignItems: "center",
-  paddingVertical: 12,
-  paddingHorizontal: 16,
-  borderRadius: 14,
-  elevation: 6,
-  overflow: "hidden",
-},
+  miniHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 14,
+    elevation: 6,
+    overflow: "hidden",
+  },
 
-miniHeaderText: {
-  flex: 1,
-  marginLeft: 8,
-  fontFamily: "MateSC",
-  fontSize: 22,
-  color: "#FFFFFF",
-  letterSpacing: 1,
-},
+  miniHeaderText: {
+    flex: 1,
+    marginLeft: 8,
+    fontFamily: "MateSC",
+    fontSize: 22,
+    color: "#FFFFFF",
+    letterSpacing: 1,
+  },
 
-multiplierMini: {
-  paddingVertical: 6,
-  paddingHorizontal: 14,
-  borderRadius: 10,
-},
+  multiplierMini: {
+    paddingVertical: 6,
+    paddingHorizontal: 14,
+    borderRadius: 10,
+  },
 
-multiplierMiniText: {
-  color: "#fff",
-  fontWeight: "bold",
-  fontSize: 20,
-},
+  multiplierMiniText: {
+    color: "#fff",
+    fontWeight: "bold",
+    fontSize: 20,
+  },
 
-glossy: {
-  position: "absolute",
-  top: 0,
-  bottom: 0,
-  width: 80,
-  backgroundColor: "rgba(255,255,255,0.35)",
-  opacity: 0.5,
-  borderRadius: 20,
-  transform: [{ rotate: "25deg" }],
-},
+  glossy: {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    width: 80,
+    backgroundColor: "rgba(255,255,255,0.35)",
+    opacity: 0.5,
+    borderRadius: 20,
+    transform: [{ rotate: "25deg" }],
+  },
 
 });

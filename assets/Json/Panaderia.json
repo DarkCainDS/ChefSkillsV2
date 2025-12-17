@@ -38,594 +38,3189 @@
   "time": null,
   "difficulty": null
 },
-    {
-      "id": 2,
-      "uid": "R-B_000002",
-      "name": "Croissant",
-      "description": "Masa hojaldrada y mantequillosa, ideal para desayuno.",
-      "imageUrl": "https://example.com/croissant.jpg",
-      "detailedInfo": "El croissant es un bollo francés elaborado con masa laminada con mantequilla, logrando capas crujientes y aireadas.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "250g" },
-        { "name": "Mantequilla fría", "quantity": "150g" },
-        { "name": "Levadura seca", "quantity": "5g" },
-        { "name": "Azúcar", "quantity": "25g" },
-        { "name": "Sal", "quantity": "5g" },
-        { "name": "Leche", "quantity": "125ml" }
-      ],
-      "steps": [
-        { "step": "Mezcla harina, levadura, azúcar, sal y leche hasta formar masa." },
-        { "step": "Refrigera 30 min, luego añade mantequilla y lamina varias veces." },
-        { "step": "Forma croissants y deja levar 1 hora." },
-        { "step": "Hornea a 200°C por 15-20 min hasta dorar." }
-      ],
-      "images": [
-        "https://example.com/croissant1.webp",
-        "https://example.com/croissant2.webp"
-      ],
-      "rating": null
-    },
-    {
-      "id": 3,
-      "uid": "R-B_000003",
-      "name": "Pan de Chocolate",
-      "description": "Bollo dulce relleno de chocolate, perfecto para desayuno o merienda.",
-      "imageUrl": "https://example.com/pan-chocolate.jpg",
-      "detailedInfo": "Pan dulce elaborado con masa enriquecida y relleno de chocolate, con corteza dorada y textura suave y esponjosa.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "300g" },
-        { "name": "Levadura fresca", "quantity": "10g" },
-        { "name": "Azúcar", "quantity": "50g" },
-        { "name": "Leche", "quantity": "150ml" },
-        { "name": "Mantequilla", "quantity": "50g" },
-        { "name": "Chocolate para relleno", "quantity": "100g" },
-        { "name": "Sal", "quantity": "5g" }
-      ],
-      "steps": [
-        { "step": "Mezcla harina, levadura, azúcar, sal y leche hasta formar masa." },
-        { "step": "Añade mantequilla y amasa hasta integrar." },
-        { "step": "Deja levar 1 hora hasta que doble tamaño." },
-        { "step": "Forma bollos y coloca chocolate en el centro." },
-        { "step": "Hornea a 180°C por 20-25 min hasta dorar." }
-      ],
-      "images": [
-        "https://example.com/pan-chocolate1.webp",
-        "https://example.com/pan-chocolate2.webp"
-      ],
-      "rating": null
-    },
-    {
-      "id": 4,
-      "uid": "R-B_000004",
-      "name": "Muffins de Arándanos",
-      "description": "Bollos individuales con arándanos frescos y textura esponjosa.",
-      "imageUrl": "https://example.com/muffins-arandanos.jpg",
-      "detailedInfo": "Los muffins son pequeños bollos dulces elaborados con harina, huevos, leche y arándanos, ideales para desayunos o meriendas.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "250g" },
-        { "name": "Azúcar", "quantity": "100g" },
-        { "name": "Huevos", "quantity": "2 U" },
-        { "name": "Leche", "quantity": "125ml" },
-        { "name": "Mantequilla derretida", "quantity": "50g" },
-        { "name": "Arándanos", "quantity": "100g" },
-        { "name": "Polvo de hornear", "quantity": "10g" },
-        { "name": "Sal", "quantity": "1 pizca" }
-      ],
-      "steps": [
-        { "step": "Mezcla harina, azúcar, polvo de hornear y sal." },
-        { "step": "Bate huevos, leche y mantequilla; añade a los secos." },
-        { "step": "Incorpora arándanos con cuidado." },
-        { "step": "Llena moldes para muffins hasta 3/4 de capacidad." },
-        { "step": "Hornea a 180°C por 20-25 min hasta dorar." }
-      ],
-      "images": [
-        "https://example.com/muffins1.webp",
-        "https://example.com/muffins2.webp"
-      ],
-      "rating": null
-    },
-    {
-      "id": 5,
-      "uid": "R-B_000005",
-      "name": "Brioche",
-      "description": "Pan dulce francés con textura suave, mantequillosa y ligeramente dulce.",
-      "imageUrl": "https://example.com/brioche.jpg",
-      "detailedInfo": "El brioche es un pan enriquecido con mantequilla y huevos, caracterizado por su textura tierna, esponjosa y sabor ligeramente dulce.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "300g" },
-        { "name": "Azúcar", "quantity": "50g" },
-        { "name": "Levadura seca", "quantity": "7g" },
-        { "name": "Huevos", "quantity": "3 U" },
-        { "name": "Mantequilla", "quantity": "100g" },
-        { "name": "Leche", "quantity": "100ml" },
-        { "name": "Sal", "quantity": "5g" }
-      ],
-      "steps": [
-        { "step": "Mezcla harina, azúcar, sal y levadura." },
-        { "step": "Añade huevos y leche, amasa hasta obtener masa suave." },
-        { "step": "Incorpora mantequilla poco a poco y amasa 10 min más." },
-        { "step": "Deja levar 1-2 horas hasta duplicar tamaño." },
-        { "step": "Forma brioche, deja levar 30 min y hornea a 180°C por 25-30 min." }
-      ],
-      "images": [
-        "https://example.com/brioche1.webp",
-        "https://example.com/brioche2.webp"
-      ],
-      "rating": null
-    },
-     {
-      "id": 6,
-      "uid": "R-B_000006",
-      "name": "Pan Francés",
-      "description": "Pan crujiente por fuera y suave por dentro, clásico en desayunos.",
-      "imageUrl": "https://example.com/pan-frances.jpg",
-      "detailedInfo": "Conocido como baguette, se elabora con harina, agua, sal y levadura, amasado y fermentado correctamente para obtener su textura característica.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "500g" },
-        { "name": "Agua", "quantity": "325ml" },
-        { "name": "Levadura fresca", "quantity": "15g" },
-        { "name": "Sal", "quantity": "10g" }
-      ],
-      "steps": [
-        { "step": "Mezclar harina, agua y levadura hasta formar una masa suave." },
-        { "step": "Dejar reposar 30 min (autólisis)." },
-        { "step": "Agregar sal y amasar 10 min." },
-        { "step": "Fermentar 1-2 horas hasta duplicar volumen." },
-        { "step": "Formar baguettes, hacer cortes superficiales y fermentar 30 min más." },
-        { "step": "Hornear a 230°C con vapor los primeros 10-15 min." }
-      ]
-    },
-    {
-      "id": 7,
-      "uid": "R-B_000007",
-      "name": "Hallulla",
-      "description": "Pan tradicional chileno, redondo y suave, ideal para acompañar comidas.",
-      "imageUrl": "https://example.com/hallulla.jpg",
-      "detailedInfo": "Su miga es esponjosa y se caracteriza por ser plana y redonda. Se puede comer sola o con pebre y mantequilla.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "500g" },
-        { "name": "Agua", "quantity": "250ml" },
-        { "name": "Levadura seca", "quantity": "7g" },
-        { "name": "Aceite", "quantity": "50ml" },
-        { "name": "Sal", "quantity": "10g" },
-        { "name": "Azúcar", "quantity": "10g" }
-      ],
-      "steps": [
-        { "step": "Disolver levadura y azúcar en agua tibia." },
-        { "step": "Mezclar con harina, aceite y sal hasta formar masa suave." },
-        { "step": "Amasar 10 min y dejar fermentar 1 hora." },
-        { "step": "Formar bollos redondos, aplastar ligeramente y dejar reposar 20-30 min." },
-        { "step": "Hornear a 200°C por 20-25 min hasta dorar." }
-      ]
-    },
-    {
-      "id": 8,
-      "uid": "R-B_000008",
-      "name": "Brioche de Chocolate",
-      "description": "Versión dulce del brioche con pepitas de chocolate.",
-      "imageUrl": "https://example.com/brioche-chocolate.jpg",
-      "detailedInfo": "Su miga es muy tierna y aromática, ideal para desayunos o meriendas, con toques de cacao o chocolate en trozos.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "500g" },
-        { "name": "Huevos", "quantity": "4" },
-        { "name": "Mantequilla", "quantity": "100g" },
-        { "name": "Levadura fresca", "quantity": "20g" },
-        { "name": "Azúcar", "quantity": "50g" },
-        { "name": "Sal", "quantity": "10g" },
-        { "name": "Chispas de chocolate", "quantity": "100g" }
-      ],
-      "steps": [
-        { "step": "Mezclar harina, azúcar y levadura disuelta en un poco de leche tibia." },
-        { "step": "Agregar huevos y amasar hasta obtener masa elástica." },
-        { "step": "Incorporar mantequilla y continuar amasando." },
-        { "step": "Añadir chocolate y mezclar suavemente." },
-        { "step": "Fermentar 1-2 horas hasta duplicar volumen." },
-        { "step": "Formar bollos o pan en molde y hornear a 180°C por 25-30 min." }
-      ]
-    },
-    {
-      "id": 9,
-      "uid": "R-B_000009",
-      "name": "Focaccia Italiana",
-      "description": "Pan plano italiano, aromatizado con aceite de oliva y hierbas.",
-      "imageUrl": "https://example.com/focaccia.jpg",
-      "detailedInfo": "Pan muy suave y esponjoso, se puede cubrir con romero, sal gruesa, aceitunas u otros ingredientes al gusto.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "500g" },
-        { "name": "Agua", "quantity": "300ml" },
-        { "name": "Levadura seca", "quantity": "7g" },
-        { "name": "Aceite de oliva", "quantity": "50ml" },
-        { "name": "Sal", "quantity": "10g" },
-        { "name": "Romero fresco", "quantity": "al gusto" }
-      ],
-      "steps": [
-        { "step": "Disolver levadura en agua tibia y mezclar con harina y aceite." },
-        { "step": "Amasar 10 min y dejar fermentar 1 hora." },
-        { "step": "Extender la masa en bandeja, presionando con dedos para formar hoyuelos." },
-        { "step": "Añadir aceite, sal y romero por encima." },
-        { "step": "Dejar reposar 20-30 min y hornear a 220°C por 20-25 min." }
-      ]
-    },
-    {
-      "id": 10,
-      "uid": "R-B_000010",
-      "name": "Bagel Clásico",
-      "description": "Pan redondo con agujero central, cocido y luego horneado.",
-      "imageUrl": "https://example.com/bagel.jpg",
-      "detailedInfo": "Típico pan de desayuno neoyorquino, denso y masticable, ideal para untar con queso crema o acompañar con salmón ahumado.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "500g" },
-        { "name": "Agua", "quantity": "250ml" },
-        { "name": "Levadura seca", "quantity": "7g" },
-        { "name": "Azúcar", "quantity": "25g" },
-        { "name": "Sal", "quantity": "10g" },
-        { "name": "Miel o maltosa", "quantity": "1 cucharada" }
-      ],
-      "steps": [
-        { "step": "Mezclar harina, levadura, azúcar, sal y agua hasta formar masa." },
-        { "step": "Amasar 10 min y fermentar 1 hora." },
-        { "step": "Formar bollos con agujero central y reposar 20 min." },
-        { "step": "Hervir cada bagel 1 min por lado en agua con miel." },
-        { "step": "Hornear a 200°C por 15-20 min hasta dorar." }
-      ]
-    },
-    {
-      "id": 11,
-      "uid": "R-B_000011",
-      "name": "Pan de Molde Integral",
-      "description": "Pan suave y nutritivo, perfecto para sándwiches.",
-      "imageUrl": "https://example.com/pan-molde-integral.jpg",
-      "detailedInfo": "El pan integral tiene un sabor más profundo y fibra adicional, ideal para desayunos saludables.",
-      "ingredients": [
-        { "name": "Harina integral", "quantity": "400g" },
-        { "name": "Harina de trigo", "quantity": "100g" },
-        { "name": "Agua", "quantity": "300ml" },
-        { "name": "Levadura seca", "quantity": "7g" },
-        { "name": "Azúcar", "quantity": "20g" },
-        { "name": "Sal", "quantity": "10g" },
-        { "name": "Aceite", "quantity": "30ml" }
-      ],
-      "steps": [
-        { "step": "Mezclar harinas, levadura, azúcar y agua hasta formar masa." },
-        { "step": "Agregar sal y aceite, amasar 10 min." },
-        { "step": "Fermentar 1 hora hasta duplicar volumen." },
-        { "step": "Formar pan en molde y dejar reposar 30 min." },
-        { "step": "Hornear a 180°C por 35-40 min." }
-      ]
-    },
-    {
-      "id": 12,
-      "uid": "R-B_000012",
-      "name": "Pan de Ajo",
-      "description": "Pan aromático con mantequilla y ajo, ideal como acompañamiento.",
-      "imageUrl": "https://example.com/pan-de-ajo.jpg",
-      "detailedInfo": "El pan de ajo combina una textura esponjosa con el sabor intenso del ajo y hierbas.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "500g" },
-        { "name": "Agua", "quantity": "300ml" },
-        { "name": "Levadura seca", "quantity": "7g" },
-        { "name": "Sal", "quantity": "10g" },
-        { "name": "Mantequilla", "quantity": "50g" },
-        { "name": "Ajo picado", "quantity": "2 dientes" },
-        { "name": "Perejil picado", "quantity": "al gusto" }
-      ],
-      "steps": [
-        { "step": "Preparar masa con harina, levadura, agua y sal." },
-        { "step": "Amasar 10 min y fermentar 1 hora." },
-        { "step": "Formar pan y colocar mezcla de mantequilla, ajo y perejil encima." },
-        { "step": "Hornear a 200°C por 25-30 min hasta dorar." }
-      ]
-    },
-    {
-      "id": 13,
-      "uid": "R-B_000013",
-      "name": "Croissant Clásico",
-      "description": "Pan francés hojaldrado, mantecoso y crujiente.",
-      "imageUrl": "https://example.com/croissant.jpg",
-      "detailedInfo": "El croissant requiere un laminado preciso de la masa con mantequilla para crear las capas características.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "500g" },
-        { "name": "Levadura fresca", "quantity": "20g" },
-        { "name": "Azúcar", "quantity": "50g" },
-        { "name": "Sal", "quantity": "10g" },
-        { "name": "Leche", "quantity": "250ml" },
-        { "name": "Mantequilla", "quantity": "250g" }
-      ],
-      "steps": [
-        { "step": "Preparar masa madre con harina, levadura, leche, azúcar y sal." },
-        { "step": "Dejar reposar 1 hora." },
-        { "step": "Laminado: incorporar mantequilla y plegar 3 veces con reposo en frío." },
-        { "step": "Cortar y formar croissants, fermentar 1-2 horas." },
-        { "step": "Hornear a 200°C por 15-20 min hasta dorar." }
-      ]
-    },
-    {
-      "id": 14,
-      "uid": "R-B_000014",
-      "name": "Pan Ciabatta",
-      "description": "Pan italiano alargado, con corteza crujiente y miga alveolada.",
-      "imageUrl": "https://example.com/ciabatta.jpg",
-      "detailedInfo": "La ciabatta se caracteriza por su hidratación alta, lo que genera una miga abierta y burbujeante.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "500g" },
-        { "name": "Agua", "quantity": "400ml" },
-        { "name": "Levadura seca", "quantity": "7g" },
-        { "name": "Aceite de oliva", "quantity": "30ml" },
-        { "name": "Sal", "quantity": "10g" }
-      ],
-      "steps": [
-        { "step": "Mezclar todos los ingredientes hasta obtener masa pegajosa." },
-        { "step": "Fermentar 1 hora, hacer pliegues y dejar 30 min más." },
-        { "step": "Formar panes alargados y dejar reposar 20 min." },
-        { "step": "Hornear a 220°C con vapor 20-25 min." }
-      ]
-    },
-    {
-      "id": 15,
-      "uid": "R-B_000015",
-      "name": "Pan de Centeno",
-      "description": "Pan oscuro, con sabor profundo y ligeramente ácido.",
-      "imageUrl": "https://example.com/pan-centeno.jpg",
-      "detailedInfo": "Ideal para sándwiches fuertes, combina harina de centeno con trigo y masa madre opcional.",
-      "ingredients": [
-        { "name": "Harina de centeno", "quantity": "300g" },
-        { "name": "Harina de trigo", "quantity": "200g" },
-        { "name": "Agua", "quantity": "350ml" },
-        { "name": "Levadura seca", "quantity": "7g" },
-        { "name": "Sal", "quantity": "10g" }
-      ],
-      "steps": [
-        { "step": "Mezclar harinas, agua y levadura hasta formar masa." },
-        { "step": "Amasar 10 min, fermentar 1 hora." },
-        { "step": "Formar pan y dejar reposar 30 min." },
-        { "step": "Hornear a 200°C por 30-35 min." }
-      ]
-    },
-    {
-      "id": 16,
-      "uid": "R-B_000016",
-      "name": "Pan de Molde Blanco",
-      "description": "Pan clásico, suave y esponjoso para sandwiches o tostadas.",
-      "imageUrl": "https://example.com/pan-molde-blanco.jpg",
-      "detailedInfo": "Perfecto para el desayuno, con miga uniforme y corteza ligera.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "500g" },
-        { "name": "Agua", "quantity": "300ml" },
-        { "name": "Levadura seca", "quantity": "7g" },
-        { "name": "Azúcar", "quantity": "20g" },
-        { "name": "Sal", "quantity": "10g" },
-        { "name": "Mantequilla", "quantity": "30g" }
-      ],
-      "steps": [
-        { "step": "Mezclar harina, levadura, azúcar y agua." },
-        { "step": "Agregar sal y mantequilla, amasar 10 min." },
-        { "step": "Fermentar 1 hora, formar pan y reposar 20 min." },
-        { "step": "Hornear a 180°C por 35 min." }
-      ]
-    },
-    {
-      "id": 17,
-      "uid": "R-B_000017",
-      "name": "Pan de Nuez y Pasas",
-      "description": "Pan dulce con trozos de nuez y pasas, ideal para acompañar té o café.",
-      "imageUrl": "https://example.com/pan-nuez-pasas.jpg",
-      "detailedInfo": "El pan combina masa enriquecida con mantequilla, azúcar y frutas secas.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "500g" },
-        { "name": "Agua", "quantity": "200ml" },
-        { "name": "Levadura fresca", "quantity": "20g" },
-        { "name": "Azúcar", "quantity": "50g" },
-        { "name": "Mantequilla", "quantity": "50g" },
-        { "name": "Nueces picadas", "quantity": "100g" },
-        { "name": "Pasas", "quantity": "100g" }
-      ],
-      "steps": [
-        { "step": "Preparar masa con harina, levadura, azúcar y agua." },
-        { "step": "Agregar mantequilla y amasar hasta incorporar." },
-        { "step": "Añadir nueces y pasas, mezclar suavemente." },
-        { "step": "Fermentar 1-2 horas, formar pan y hornear a 180°C por 30 min." }
-      ]
-    },
-    {
-      "id": 18,
-      "uid": "R-B_000018",
-      "name": "Pan de Leche",
-      "description": "Pan suave y ligeramente dulce, perfecto para niños y meriendas.",
-      "imageUrl": "https://example.com/pan-de-leche.jpg",
-      "detailedInfo": "Muy tierno, con miga fina y corteza ligera, se puede rellenar con mermelada o chocolate.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "500g" },
-        { "name": "Leche", "quantity": "250ml" },
-        { "name": "Levadura seca", "quantity": "7g" },
-        { "name": "Azúcar", "quantity": "50g" },
-        { "name": "Sal", "quantity": "10g" },
-        { "name": "Mantequilla", "quantity": "50g" }
-      ],
-      "steps": [
-        { "step": "Mezclar harina, levadura, azúcar y leche." },
-        { "step": "Agregar sal y mantequilla, amasar 10 min." },
-        { "step": "Fermentar 1 hora, formar pan y reposar 20 min." },
-        { "step": "Hornear a 180°C por 25-30 min." }
-      ],
-            "tips": [
-        {
-          "title": "Marinar el tiempo suficiente",
-          "description": "Aunque 8 horas es el mínimo, se recomienda dejarlo uno o dos días en la nevera para intensificar el sabor."
-        },
-        {
-          "title": "Atemperar la carne",
-          "description": "Dejar que la carne alcance temperatura ambiente antes de hornear asegura una cocción uniforme."
-        },
-        {
-          "title": "Usar una base de cebolla",
-          "description": "Las cebollas evitan que la carne toque directamente la bandeja y ayudan a mantenerla jugosa."
-        },
-        {
-          "title": "No exceder el tiempo de cocción inicial",
-          "description": "Hornea 35 minutos por kilo durante la primera cocción para evitar que el lomo quede seco."
-        },
-        {
-          "title": "Dejar reposar antes de cortar",
-          "description": "Reposar 10 minutos tras sacarlo del horno evita que se pierdan los jugos y mejora la textura."
-        }
-      ]
-    },
-    {
-      "id": 19,
-      "uid": "R-B_000019",
-      "name": "Pan de Campo",
-      "description": "Pan rústico, con corteza crujiente y miga densa.",
-      "imageUrl": "https://example.com/pan-de-campo.jpg",
-      "detailedInfo": "Ideal para acompañar guisos o sopas, mezcla harinas blanca y integral para un sabor más profundo.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "300g" },
-        { "name": "Harina integral", "quantity": "200g" },
-        { "name": "Agua", "quantity": "300ml" },
-        { "name": "Levadura seca", "quantity": "7g" },
-        { "name": "Sal", "quantity": "10g" }
-      ],
-      "steps": [
-        { "step": "Mezclar harinas, agua y levadura hasta formar masa." },
-        { "step": "Amasar 10 min y fermentar 1 hora." },
-        { "step": "Formar pan, reposar 30 min y hornear a 220°C por 30 min." }
-      ]
-    },
-    {
-      "id": 20,
-      "uid": "R-B_000020",
-      "name": "Pan de Olivas",
-      "description": "Pan aromático con aceitunas, perfecto para picadas o aperitivos.",
-      "imageUrl": "https://example.com/pan-olivas.jpg",
-      "detailedInfo": "Ideal para acompañar quesos o embutidos, con masa suave y trozos de aceituna integrados.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "500g" },
-        { "name": "Agua", "quantity": "300ml" },
-        { "name": "Levadura seca", "quantity": "7g" },
-        { "name": "Aceitunas negras picadas", "quantity": "150g" },
-        { "name": "Aceite de oliva", "quantity": "30ml" },
-        { "name": "Sal", "quantity": "10g" }
-      ],
-      "steps": [
-        { "step": "Preparar masa con harina, agua, levadura y sal." },
-        { "step": "Amasar 10 min e incorporar aceitunas y aceite." },
-        { "step": "Fermentar 1 hora, formar pan y reposar 20 min." },
-        { "step": "Hornear a 200°C por 25-30 min." }
-      ]
-    },
-    {
-      "id": 21,
-      "uid": "R-B_000021",
-      "name": "Brioche Clásico",
-      "description": "Pan dulce francés, muy esponjoso y mantecoso.",
-      "imageUrl": "https://example.com/brioche.jpg",
-      "detailedInfo": "Masa enriquecida con mantequilla y huevos, ideal para desayunos o tostadas francesas.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "500g" },
-        { "name": "Huevos", "quantity": "4" },
-        { "name": "Levadura fresca", "quantity": "20g" },
-        { "name": "Azúcar", "quantity": "50g" },
-        { "name": "Mantequilla", "quantity": "200g" },
-        { "name": "Sal", "quantity": "10g" },
-        { "name": "Leche", "quantity": "100ml" }
-      ],
-      "steps": [
-        { "step": "Mezclar harina, levadura, azúcar, sal, huevos y leche." },
-        { "step": "Amasar y agregar mantequilla poco a poco, hasta masa suave." },
-        { "step": "Fermentar 1-2 horas hasta duplicar volumen." },
-        { "step": "Formar bollos o trenzas, reposar 1 hora." },
-        { "step": "Hornear a 180°C por 25-30 min." }
-      ]
-    },
-    {
-      "id": 22,
-      "uid": "R-B_000022",
-      "name": "Hallulla",
-      "description": "Pan chileno redondo y plano, ideal para acompañar comidas.",
-      "imageUrl": "https://example.com/hallulla.jpg",
-      "detailedInfo": "Su corteza es ligeramente crujiente y miga suave, perfecta para empanadas y sánguches.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "500g" },
-        { "name": "Agua", "quantity": "250ml" },
-        { "name": "Levadura fresca", "quantity": "15g" },
-        { "name": "Azúcar", "quantity": "10g" },
-        { "name": "Sal", "quantity": "10g" },
-        { "name": "Manteca", "quantity": "30g" }
-      ],
-      "steps": [
-        { "step": "Mezclar harina, levadura, azúcar y agua hasta formar masa." },
-        { "step": "Agregar manteca y sal, amasar 10 min." },
-        { "step": "Fermentar 1 hora." },
-        { "step": "Formar discos planos y reposar 20 min." },
-        { "step": "Hornear a 200°C por 20-25 min." }
-      ]
-    },
-    {
-      "id": 23,
-      "uid": "R-B_000023",
-      "name": "Pan Frances (Baguette)",
-      "description": "Pan largo y delgado, con corteza dorada y crujiente.",
-      "imageUrl": "https://example.com/baguette.jpg",
-      "detailedInfo": "La baguette clásica tiene miga ligera y alveolada, con corteza crujiente.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "500g" },
-        { "name": "Agua", "quantity": "350ml" },
-        { "name": "Levadura seca", "quantity": "7g" },
-        { "name": "Sal", "quantity": "10g" }
-      ],
-      "steps": [
-        { "step": "Mezclar harina, agua y levadura hasta formar masa." },
-        { "step": "Agregar sal y amasar 10 min." },
-        { "step": "Fermentar 1 hora, hacer pliegues y reposar 30 min." },
-        { "step": "Formar baguettes, reposar 20 min." },
-        { "step": "Hornear a 220°C con vapor 20-25 min." }
-      ]
-    },
-    {
-      "id": 24,
-      "uid": "R-B_000024",
-      "name": "Pan de Chocolate",
-      "description": "Pan dulce relleno de chocolate, perfecto para merienda.",
-      "imageUrl": "https://example.com/pan-chocolate.jpg",
-      "detailedInfo": "Masa enriquecida y esponjosa, con trozos o barras de chocolate en su interior.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "500g" },
-        { "name": "Agua", "quantity": "200ml" },
-        { "name": "Levadura fresca", "quantity": "20g" },
-        { "name": "Azúcar", "quantity": "50g" },
-        { "name": "Mantequilla", "quantity": "50g" },
-        { "name": "Chocolate negro", "quantity": "150g" },
-        { "name": "Sal", "quantity": "5g" }
-      ],
-      "steps": [
-        { "step": "Preparar masa con harina, levadura, azúcar y agua." },
-        { "step": "Agregar mantequilla y sal, amasar hasta integrar." },
-        { "step": "Fermentar 1 hora." },
-        { "step": "Formar bollos y rellenar con chocolate, reposar 30 min." },
-        { "step": "Hornear a 180°C por 20-25 min." }
-      ]
-    },
-    {
-      "id": 25,
-      "uid": "R-B_000025",
-      "name": "Pan de Queso",
-      "description": "Pan suave con trozos de queso, ideal para acompañar sopas.",
-      "imageUrl": "https://example.com/pan-queso.jpg",
-      "detailedInfo": "Masa esponjosa con queso rallado, se puede servir caliente o frío.",
-      "ingredients": [
-        { "name": "Harina de trigo", "quantity": "500g" },
-        { "name": "Agua", "quantity": "250ml" },
-        { "name": "Levadura seca", "quantity": "7g" },
-        { "name": "Sal", "quantity": "10g" },
-        { "name": "Mantequilla", "quantity": "50g" },
-        { "name": "Queso rallado", "quantity": "150g" }
-      ],
-      "steps": [
-        { "step": "Mezclar harina, levadura, sal y agua hasta formar masa." },
-        { "step": "Agregar mantequilla y amasar 10 min." },
-        { "step": "Fermentar 1 hora." },
-        { "step": "Incorporar el queso, formar bollos y reposar 20 min." },
-        { "step": "Hornear a 200°C por 20-25 min." }
-      ]
-    }
+{
+  "id": 2,
+  "uid": "P-AN_000002",
+  "name": "Pan Blanco Casero Básico",
+  "description": "Pan simple y confiable, de miga suave y corteza fina, ideal para uso diario.",
+  "imageUrl": "https://example.com/pan-blanco.jpg",
+  "detailedInfo": "Pan clásico elaborado con harina de trigo, agua, levadura y sal. Es una receta base fundamental en panadería, perfecta para entender el proceso de amasado, fermentación y horneado antes de avanzar a técnicas más complejas.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua tibia", "quantity": "300 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Disolver la levadura en el agua tibia y dejar reposar 5 minutos." },
+    { "step": "Mezclar la harina con la sal en un bol amplio." },
+    { "step": "Agregar el agua con levadura y mezclar hasta formar una masa." },
+    { "step": "Amasar 10 minutos hasta lograr una textura lisa y elástica." },
+    { "step": "Dejar fermentar tapado hasta duplicar volumen." },
+    { "step": "Formar el pan, reposar 30 minutos y hornear a 200 °C hasta dorar." }
+  ],
+  "tips": [
+    { "title": "Amasado correcto", "description": "Un buen amasado desarrolla el gluten y mejora la estructura de la miga." },
+    { "title": "Fermentación", "description": "No apures el levado; el sabor mejora con fermentaciones completas." }
+  ],
+  "images": [
+    "https://example.com/pan-blanco-1.webp",
+    "https://example.com/pan-blanco-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 3,
+  "uid": "P-AN_000003",
+  "name": "Pan de Molde Clásico",
+  "description": "Pan tierno y parejo, ideal para tostadas y sándwiches.",
+  "imageUrl": "https://example.com/pan-molde.jpg",
+  "detailedInfo": "Este pan se caracteriza por su miga uniforme y corteza suave. Se hornea en molde, lo que controla la expansión y da una forma regular, muy usada en panadería doméstica y comercial.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Leche tibia", "quantity": "250 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Azúcar", "quantity": "20 g" },
+    { "name": "Mantequilla", "quantity": "40 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Disolver la levadura y el azúcar en la leche tibia." },
+    { "step": "Mezclar con la harina y la sal hasta formar masa." },
+    { "step": "Incorporar la mantequilla y amasar hasta integrar." },
+    { "step": "Fermentar hasta duplicar volumen." },
+    { "step": "Colocar en molde, reposar y hornear a 180 °C." }
+  ],
+  "tips": [
+    { "title": "Molde engrasado", "description": "Evita que el pan se adhiera y mejora el desmolde." },
+    { "title": "Miga pareja", "description": "Un amasado uniforme ayuda a obtener una textura regular." }
+  ],
+  "images": [
+    "https://example.com/pan-molde-1.webp",
+    "https://example.com/pan-molde-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 4,
+  "uid": "P-AN_000004",
+  "name": "Pan Amasado Tradicional",
+  "description": "Pan rústico de corteza crujiente y miga densa, típico de cocina casera.",
+  "imageUrl": "https://example.com/pan-amasado.jpg",
+  "detailedInfo": "Pan trabajado intensamente a mano, con grasa incorporada para dar sabor y resistencia. Muy común en panadería tradicional latinoamericana.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua tibia", "quantity": "250 ml" },
+    { "name": "Levadura fresca", "quantity": "20 g" },
+    { "name": "Manteca o aceite", "quantity": "50 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Disolver la levadura en el agua tibia." },
+    { "step": "Mezclar con la harina y la sal." },
+    { "step": "Agregar la grasa y amasar enérgicamente." },
+    { "step": "Fermentar hasta duplicar volumen." },
+    { "step": "Formar discos y hornear a 200 °C." }
+  ],
+  "tips": [
+    { "title": "Amasado intenso", "description": "Este pan mejora con un amasado fuerte y prolongado." },
+    { "title": "Corteza", "description": "Un horno bien caliente ayuda a lograr una buena corteza." }
+  ],
+  "images": [
+    "https://example.com/pan-amasado-1.webp",
+    "https://example.com/pan-amasado-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 5,
+  "uid": "P-AN_000005",
+  "name": "Pan de Molde Integral",
+  "description": "Pan nutritivo de miga suave y sabor profundo, ideal para consumo diario.",
+  "imageUrl": "https://example.com/pan-molde-integral.jpg",
+  "detailedInfo": "Versión integral del pan de molde clásico. La combinación de harinas aporta fibra y un sabor más complejo, manteniendo una textura tierna gracias al uso de grasa y fermentación controlada.",
+  "ingredients": [
+    { "name": "Harina integral", "quantity": "350 g" },
+    { "name": "Harina de trigo", "quantity": "150 g" },
+    { "name": "Agua tibia", "quantity": "300 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Aceite vegetal", "quantity": "30 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Disolver la levadura en el agua tibia." },
+    { "step": "Mezclar las harinas con la sal." },
+    { "step": "Agregar el agua con levadura y el aceite." },
+    { "step": "Amasar hasta obtener una masa homogénea." },
+    { "step": "Fermentar hasta duplicar volumen." },
+    { "step": "Colocar en molde y hornear a 180 °C." }
+  ],
+  "tips": [
+    { "title": "Hidratación", "description": "La harina integral absorbe más agua; ajusta si la masa queda seca." },
+    { "title": "Fermentación larga", "description": "Mejora sabor y digestibilidad del pan." }
+  ],
+  "images": [
+    "https://example.com/pan-molde-integral-1.webp",
+    "https://example.com/pan-molde-integral-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 6,
+  "uid": "P-AN_000006",
+  "name": "Pan de Leche",
+  "description": "Pan tierno y ligeramente dulce, ideal para desayunos y meriendas.",
+  "imageUrl": "https://example.com/pan-leche.jpg",
+  "detailedInfo": "Pan enriquecido con leche y grasa, lo que aporta suavidad y una miga muy fina. Es una excelente base para bollos y panes de desayuno.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Leche tibia", "quantity": "250 ml" },
+    { "name": "Azúcar", "quantity": "40 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Mantequilla", "quantity": "50 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Disolver la levadura y el azúcar en la leche tibia." },
+    { "step": "Mezclar con la harina y la sal." },
+    { "step": "Agregar la mantequilla y amasar hasta integrar." },
+    { "step": "Fermentar hasta duplicar volumen." },
+    { "step": "Formar pan y hornear a 180 °C." }
+  ],
+  "tips": [
+    { "title": "Textura suave", "description": "No exceder la harina durante el amasado." },
+    { "title": "Color parejo", "description": "Pincelar con leche antes de hornear." }
+  ],
+  "images": [
+    "https://example.com/pan-leche-1.webp",
+    "https://example.com/pan-leche-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 7,
+  "uid": "P-AN_000007",
+  "name": "Baguette Tradicional",
+  "description": "Pan francés alargado de corteza crujiente y miga alveolada.",
+  "imageUrl": "https://example.com/baguette.jpg",
+  "detailedInfo": "Pan clásico de alta hidratación y fermentación controlada. Requiere manejo cuidadoso de la masa para lograr una estructura abierta y ligera.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "350 ml" },
+    { "name": "Levadura seca", "quantity": "5 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar harina y agua y reposar 30 minutos." },
+    { "step": "Agregar levadura y sal, mezclar suavemente." },
+    { "step": "Fermentar con pliegues cada 30 minutos." },
+    { "step": "Formar baguettes y reposar." },
+    { "step": "Hornear a 230 °C con vapor." }
+  ],
+  "tips": [
+    { "title": "Vapor inicial", "description": "Ayuda a una mejor expansión y corteza." },
+    { "title": "Pliegues", "description": "Fortalecen la masa sin amasado intenso." }
+  ],
+  "images": [
+    "https://example.com/baguette-1.webp",
+    "https://example.com/baguette-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 8,
+  "uid": "P-AN_000008",
+  "name": "Pan Ciabatta",
+  "description": "Pan italiano de alta hidratación y miga muy abierta.",
+  "imageUrl": "https://example.com/ciabatta.jpg",
+  "detailedInfo": "La ciabatta se caracteriza por una masa muy húmeda y mínima manipulación. Produce una miga irregular y una corteza crujiente.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "400 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Aceite de oliva", "quantity": "20 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar todos los ingredientes sin amasar en exceso." },
+    { "step": "Fermentar con pliegues suaves." },
+    { "step": "Dividir la masa con cuidado." },
+    { "step": "Hornear a alta temperatura." }
+  ],
+  "tips": [
+    { "title": "Masa húmeda", "description": "No agregar harina extra; usar manos húmedas." },
+    { "title": "Manipulación mínima", "description": "Conserva los alveolos internos." }
+  ],
+  "images": [
+    "https://example.com/ciabatta-1.webp",
+    "https://example.com/ciabatta-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 9,
+  "uid": "P-AN_000009",
+  "name": "Focaccia Italiana",
+  "description": "Pan plano aromatizado con aceite de oliva y hierbas.",
+  "imageUrl": "https://example.com/focaccia.jpg",
+  "detailedInfo": "Pan esponjoso y muy aromático, ideal como acompañamiento o base para rellenos. Su característica principal son los hoyuelos en la superficie.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "320 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Aceite de oliva", "quantity": "60 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes y amasar suavemente." },
+    { "step": "Fermentar hasta duplicar volumen." },
+    { "step": "Extender en bandeja y hacer hoyuelos." },
+    { "step": "Agregar aceite y hornear a 220 °C." }
+  ],
+  "tips": [
+    { "title": "Aceite generoso", "description": "Clave para sabor y textura." },
+    { "title": "Hoyuelos", "description": "Evitan burbujas grandes al hornear." }
+  ],
+  "images": [
+    "https://example.com/focaccia-1.webp",
+    "https://example.com/focaccia-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 10,
+  "uid": "P-AN_000010",
+  "name": "Brioche Clásico",
+  "description": "Pan francés enriquecido, muy suave y mantecoso.",
+  "imageUrl": "https://example.com/brioche.jpg",
+  "detailedInfo": "Pan de fermentación lenta con alto contenido de mantequilla y huevos, que da como resultado una miga fina y delicada.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Huevos", "quantity": "4 U" },
+    { "name": "Mantequilla", "quantity": "200 g" },
+    { "name": "Azúcar", "quantity": "50 g" },
+    { "name": "Levadura fresca", "quantity": "20 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar harina, huevos, azúcar y levadura." },
+    { "step": "Amasar e incorporar mantequilla poco a poco." },
+    { "step": "Fermentar en frío." },
+    { "step": "Formar y hornear a 180 °C." }
+  ],
+  "tips": [
+    { "title": "Frío", "description": "Facilita el manejo de la masa." },
+    { "title": "Mantequilla blanda", "description": "Se integra mejor durante el amasado." }
+  ],
+  "images": [
+    "https://example.com/brioche-1.webp",
+    "https://example.com/brioche-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 11,
+  "uid": "P-AN_000011",
+  "name": "Pan de Centeno Mixto",
+  "description": "Pan de sabor profundo y miga densa.",
+  "imageUrl": "https://example.com/pan-centeno.jpg",
+  "detailedInfo": "El centeno aporta sabor y color, mientras el trigo asegura estructura. Ideal para acompañar quesos y fiambres.",
+  "ingredients": [
+    { "name": "Harina de centeno", "quantity": "300 g" },
+    { "name": "Harina de trigo", "quantity": "200 g" },
+    { "name": "Agua", "quantity": "350 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes hasta formar masa." },
+    { "step": "Amasar brevemente." },
+    { "step": "Fermentar y hornear a 200 °C." }
+  ],
+  "tips": [
+    { "title": "Amasado corto", "description": "El centeno no desarrolla gluten como el trigo." },
+    { "title": "Humedad", "description": "Este pan retiene más agua." }
+  ],
+  "images": [
+    "https://example.com/pan-centeno-1.webp",
+    "https://example.com/pan-centeno-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 12,
+  "uid": "P-AN_000012",
+  "name": "Pan de Ajo",
+  "description": "Pan aromático ideal como acompañamiento.",
+  "imageUrl": "https://example.com/pan-ajo.jpg",
+  "detailedInfo": "Pan sencillo enriquecido con mantequilla, ajo y hierbas, perfecto para servir caliente.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "280 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Mantequilla", "quantity": "60 g" },
+    { "name": "Ajo", "quantity": "2 dientes" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa básica y fermentar." },
+    { "step": "Mezclar mantequilla con ajo." },
+    { "step": "Agregar al pan antes de hornear." }
+  ],
+  "tips": [
+    { "title": "Ajo suave", "description": "Saltear ligeramente el ajo antes de usar." },
+    { "title": "Servicio", "description": "Servir recién horneado." }
+  ],
+  "images": [
+    "https://example.com/pan-ajo-1.webp",
+    "https://example.com/pan-ajo-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 13,
+  "uid": "P-AN_000013",
+  "name": "Pan de Queso",
+  "description": "Pan suave con sabor intenso a queso.",
+  "imageUrl": "https://example.com/pan-queso.jpg",
+  "detailedInfo": "Pan enriquecido con queso rallado incorporado a la masa, ideal como acompañamiento o snack.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "250 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Queso rallado", "quantity": "150 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa básica." },
+    { "step": "Incorporar el queso al final del amasado." },
+    { "step": "Fermentar y hornear a 200 °C." }
+  ],
+  "tips": [
+    { "title": "Tipo de queso", "description": "Usar quesos que fundan bien." },
+    { "title": "Corteza", "description": "Horno bien caliente para mejor dorado." }
+  ],
+  "images": [
+    "https://example.com/pan-queso-1.webp",
+    "https://example.com/pan-queso-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 14,
+  "uid": "P-AN_000014",
+  "name": "Pan de Aceitunas",
+  "description": "Pan aromático con aceitunas integradas.",
+  "imageUrl": "https://example.com/pan-aceitunas.jpg",
+  "detailedInfo": "Pan mediterráneo con trozos de aceituna que aportan sabor y humedad a la miga.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Aceitunas", "quantity": "150 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa base." },
+    { "step": "Agregar aceitunas al final del amasado." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Escurrir aceitunas", "description": "Evita exceso de humedad." },
+    { "title": "Corte limpio", "description": "Usar cuchillo bien afilado." }
+  ],
+  "images": [
+    "https://example.com/pan-aceitunas-1.webp",
+    "https://example.com/pan-aceitunas-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 15,
+  "uid": "P-AN_000015",
+  "name": "Pan Multigrano",
+  "description": "Pan nutritivo con mezcla de granos y semillas.",
+  "imageUrl": "https://example.com/pan-multigrano.jpg",
+  "detailedInfo": "Pan de sabor complejo y textura variada, ideal para desayunos y dietas equilibradas.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "400 g" },
+    { "name": "Mezcla de semillas", "quantity": "100 g" },
+    { "name": "Agua", "quantity": "320 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes secos." },
+    { "step": "Agregar agua y amasar." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Semillas", "description": "Tostar ligeramente antes de usar." },
+    { "title": "Hidratación", "description": "Ajustar según absorción." }
+  ],
+  "images": [
+    "https://example.com/pan-multigrano-1.webp",
+    "https://example.com/pan-multigrano-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 16,
+  "uid": "P-AN_000016",
+  "name": "Pan Rústico de Campo",
+  "description": "Pan de corteza gruesa y miga irregular.",
+  "imageUrl": "https://example.com/pan-rustico.jpg",
+  "detailedInfo": "Pan de fermentación lenta, con carácter artesanal y sabor profundo, ideal para acompañar comidas fuertes.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "350 ml" },
+    { "name": "Levadura seca", "quantity": "5 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes y reposar." },
+    { "step": "Fermentar lentamente." },
+    { "step": "Hornear a alta temperatura." }
+  ],
+  "tips": [
+    { "title": "Fermentación larga", "description": "Desarrolla mejor sabor." },
+    { "title": "Corteza", "description": "Horno bien precalentado." }
+  ],
+  "images": [
+    "https://example.com/pan-rustico-1.webp",
+    "https://example.com/pan-rustico-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+}
+,{
+  "id": 17,
+  "uid": "P-AN_000017",
+  "name": "Pan de Viena",
+  "description": "Pan suave y ligeramente dulce, muy popular en panadería clásica.",
+  "imageUrl": "https://example.com/pan-viena.jpg",
+  "detailedInfo": "El pan de Viena es un pan enriquecido con leche y azúcar, de miga fina y corteza suave. Se utiliza tanto para sándwiches como para acompañar comidas.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Leche tibia", "quantity": "250 ml" },
+    { "name": "Azúcar", "quantity": "30 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Mantequilla", "quantity": "40 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Disolver la levadura y el azúcar en la leche tibia." },
+    { "step": "Mezclar con la harina y la sal." },
+    { "step": "Agregar mantequilla y amasar hasta integrar." },
+    { "step": "Fermentar hasta duplicar volumen." },
+    { "step": "Formar panes y hornear a 180 °C." }
+  ],
+  "tips": [
+    { "title": "Miga fina", "description": "Amasar hasta lograr una textura muy lisa." },
+    { "title": "Color parejo", "description": "Pincelar con leche antes de hornear." }
+  ],
+  "images": [
+    "https://example.com/pan-viena-1.webp",
+    "https://example.com/pan-viena-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 18,
+  "uid": "P-AN_000018",
+  "name": "Pan de Yema",
+  "description": "Pan tierno y aromático elaborado con yemas de huevo.",
+  "imageUrl": "https://example.com/pan-yema.jpg",
+  "detailedInfo": "Pan tradicional enriquecido con yemas que aportan color, suavidad y sabor profundo. Muy utilizado en panadería artesanal.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Leche", "quantity": "220 ml" },
+    { "name": "Yemas de huevo", "quantity": "4 U" },
+    { "name": "Azúcar", "quantity": "40 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Mantequilla", "quantity": "50 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Disolver la levadura en la leche tibia." },
+    { "step": "Agregar yemas, azúcar y harina." },
+    { "step": "Incorporar mantequilla y sal." },
+    { "step": "Amasar hasta lograr masa suave." },
+    { "step": "Fermentar y hornear a 180 °C." }
+  ],
+  "tips": [
+    { "title": "Color intenso", "description": "Usar yemas frescas mejora el resultado." },
+    { "title": "Textura", "description": "No exceder la harina durante el amasado." }
+  ],
+  "images": [
+    "https://example.com/pan-yema-1.webp",
+    "https://example.com/pan-yema-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 19,
+  "uid": "P-AN_000019",
+  "name": "Pan Batido Tradicional",
+  "description": "Pan chileno crujiente por fuera y aireado por dentro.",
+  "imageUrl": "https://example.com/pan-batido.jpg",
+  "detailedInfo": "También conocido como marraqueta, se caracteriza por una fermentación bien desarrollada y una corteza firme.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes hasta formar masa." },
+    { "step": "Amasar intensamente." },
+    { "step": "Fermentar y dividir." },
+    { "step": "Hornear a alta temperatura." }
+  ],
+  "tips": [
+    { "title": "Amasado fuerte", "description": "Clave para la estructura interna." },
+    { "title": "Corte", "description": "Marcar división central antes de hornear." }
+  ],
+  "images": [
+    "https://example.com/pan-batido-1.webp",
+    "https://example.com/pan-batido-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 20,
+  "uid": "P-AN_000020",
+  "name": "Pan de Campo Integral",
+  "description": "Pan rústico con mezcla de harinas blancas e integrales.",
+  "imageUrl": "https://example.com/pan-campo-integral.jpg",
+  "detailedInfo": "Pan de sabor profundo y textura firme, ideal para acompañar platos contundentes.",
+  "ingredients": [
+    { "name": "Harina integral", "quantity": "300 g" },
+    { "name": "Harina de trigo", "quantity": "200 g" },
+    { "name": "Agua", "quantity": "330 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes y reposar." },
+    { "step": "Amasar y fermentar lentamente." },
+    { "step": "Formar pan y hornear." }
+  ],
+  "tips": [
+    { "title": "Fermentación lenta", "description": "Mejora aroma y sabor." },
+    { "title": "Corteza", "description": "Horno bien caliente." }
+  ],
+  "images": [
+    "https://example.com/pan-campo-integral-1.webp",
+    "https://example.com/pan-campo-integral-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 21,
+  "uid": "P-AN_000021",
+  "name": "Pan Trenzado Clásico",
+  "description": "Pan decorativo de miga suave y forma trenzada.",
+  "imageUrl": "https://example.com/pan-trenzado.jpg",
+  "detailedInfo": "Pan elaborado a partir de una masa enriquecida, cuya trenza aporta estética sin afectar la cocción.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Leche", "quantity": "250 ml" },
+    { "name": "Azúcar", "quantity": "30 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Mantequilla", "quantity": "40 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa enriquecida." },
+    { "step": "Dividir en tiras y trenzar." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Trenza pareja", "description": "Tiras del mismo grosor." },
+    { "title": "Brillo", "description": "Pincelar con huevo antes de hornear." }
+  ],
+  "images": [
+    "https://example.com/pan-trenzado-1.webp",
+    "https://example.com/pan-trenzado-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 22,
+  "uid": "P-AN_000022",
+  "name": "Pan de Avena",
+  "description": "Pan suave y nutritivo con avena incorporada.",
+  "imageUrl": "https://example.com/pan-avena.jpg",
+  "detailedInfo": "La avena aporta fibra y humedad, resultando en un pan más tierno y de sabor suave.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "400 g" },
+    { "name": "Avena en hojuelas", "quantity": "100 g" },
+    { "name": "Agua", "quantity": "320 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes secos." },
+    { "step": "Agregar agua y amasar." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Avena hidratada", "description": "Remojar previamente mejora textura." },
+    { "title": "Miga", "description": "Resultado más húmedo que pan blanco." }
+  ],
+  "images": [
+    "https://example.com/pan-avena-1.webp",
+    "https://example.com/pan-avena-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 23,
+  "uid": "P-AN_000023",
+  "name": "Pan de Papa",
+  "description": "Pan muy tierno gracias a la incorporación de papa cocida.",
+  "imageUrl": "https://example.com/pan-papa.jpg",
+  "detailedInfo": "La papa aporta humedad y suavidad prolongada, ideal para panes de larga vida útil.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "450 g" },
+    { "name": "Papa cocida", "quantity": "150 g" },
+    { "name": "Agua", "quantity": "250 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Hacer puré la papa." },
+    { "step": "Mezclar con harina y agua." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Puré fino", "description": "Evita grumos en la miga." },
+    { "title": "Humedad", "description": "Reduce el resecamiento." }
+  ],
+  "images": [
+    "https://example.com/pan-papa-1.webp",
+    "https://example.com/pan-papa-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 24,
+  "uid": "P-AN_000024",
+  "name": "Pan de Maíz",
+  "description": "Pan de sabor suave con harina de maíz.",
+  "imageUrl": "https://example.com/pan-maiz.jpg",
+  "detailedInfo": "Pan mixto que combina harina de trigo y maíz para una miga tierna y aroma característico.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "350 g" },
+    { "name": "Harina de maíz", "quantity": "150 g" },
+    { "name": "Agua", "quantity": "320 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar harinas y agua." },
+    { "step": "Amasar suavemente." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Textura", "description": "No amasar en exceso." },
+    { "title": "Sabor", "description": "Ideal con mantequilla." }
+  ],
+  "images": [
+    "https://example.com/pan-maiz-1.webp",
+    "https://example.com/pan-maiz-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 25,
+  "uid": "P-AN_000025",
+  "name": "Pan de Cebolla",
+  "description": "Pan aromático con cebolla incorporada.",
+  "imageUrl": "https://example.com/pan-cebolla.jpg",
+  "detailedInfo": "La cebolla aporta dulzor natural y aroma intenso, ideal para acompañar carnes y quesos.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "280 ml" },
+    { "name": "Cebolla salteada", "quantity": "120 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa base." },
+    { "step": "Incorporar cebolla fría." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Cebolla fría", "description": "Evita afectar la fermentación." },
+    { "title": "Drenado", "description": "Eliminar exceso de aceite." }
+  ],
+  "images": [
+    "https://example.com/pan-cebolla-1.webp",
+    "https://example.com/pan-cebolla-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 26,
+  "uid": "P-AN_000026",
+  "name": "Pan de Hierbas",
+  "description": "Pan aromático con mezcla de hierbas secas.",
+  "imageUrl": "https://example.com/pan-hierbas.jpg",
+  "detailedInfo": "Pan versátil que incorpora hierbas como orégano, tomillo o romero para un perfil mediterráneo.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Hierbas secas", "quantity": "2 cucharaditas" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes secos." },
+    { "step": "Agregar agua y amasar." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Hierbas secas", "description": "Usar poca cantidad para no dominar el sabor." },
+    { "title": "Aroma", "description": "Activar hierbas con aceite si se desea." }
+  ],
+  "images": [
+    "https://example.com/pan-hierbas-1.webp",
+    "https://example.com/pan-hierbas-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 27,
+  "uid": "P-AN_000027",
+  "name": "Pan de Manteca",
+  "description": "Pan clásico de miga cerrada y sabor intenso.",
+  "imageUrl": "https://example.com/pan-manteca.jpg",
+  "detailedInfo": "La manteca aporta una textura firme y un sabor tradicional muy usado en panadería antigua.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "260 ml" },
+    { "name": "Manteca", "quantity": "60 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar harina y agua." },
+    { "step": "Agregar manteca y amasar." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Manteca blanda", "description": "Facilita la integración." },
+    { "title": "Sabor", "description": "Ideal para tostadas." }
+  ],
+  "images": [
+    "https://example.com/pan-manteca-1.webp",
+    "https://example.com/pan-manteca-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 28,
+  "uid": "P-AN_000028",
+  "name": "Pan de Calabaza",
+  "description": "Pan suave y ligeramente dulce elaborado con puré de calabaza.",
+  "imageUrl": "https://example.com/pan-calabaza.jpg",
+  "detailedInfo": "La calabaza aporta color, humedad y dulzor natural, ideal para panes de otoño.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "450 g" },
+    { "name": "Puré de calabaza", "quantity": "150 g" },
+    { "name": "Agua", "quantity": "200 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar puré con agua." },
+    { "step": "Agregar harina y levadura." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Puré espeso", "description": "Evita exceso de humedad." },
+    { "title": "Color", "description": "No sobrehornear." }
+  ],
+  "images": [
+    "https://example.com/pan-calabaza-1.webp",
+    "https://example.com/pan-calabaza-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 29,
+  "uid": "P-AN_000029",
+  "name": "Pan de Remolacha",
+  "description": "Pan de color intenso y sabor suave.",
+  "imageUrl": "https://example.com/pan-remolacha.jpg",
+  "detailedInfo": "La remolacha aporta color natural y ligera dulzura, ideal para panes especiales.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "450 g" },
+    { "name": "Puré de remolacha", "quantity": "150 g" },
+    { "name": "Agua", "quantity": "180 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar puré con agua." },
+    { "step": "Agregar harina y amasar." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Color", "description": "No exceder temperatura." },
+    { "title": "Sabor", "description": "Combina bien con quesos." }
+  ],
+  "images": [
+    "https://example.com/pan-remolacha-1.webp",
+    "https://example.com/pan-remolacha-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 30,
+  "uid": "P-AN_000030",
+  "name": "Pan de Espinaca",
+  "description": "Pan verde aromático y nutritivo.",
+  "imageUrl": "https://example.com/pan-espinaca.jpg",
+  "detailedInfo": "La espinaca aporta color y minerales, resultando en un pan visualmente atractivo.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "450 g" },
+    { "name": "Espinaca cocida", "quantity": "150 g" },
+    { "name": "Agua", "quantity": "200 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Procesar la espinaca." },
+    { "step": "Mezclar con harina y agua." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Escurrido", "description": "Eliminar exceso de agua." },
+    { "title": "Color", "description": "Hornear sin sobrepasar." }
+  ],
+  "images": [
+    "https://example.com/pan-espinaca-1.webp",
+    "https://example.com/pan-espinaca-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 31,
+  "uid": "P-AN_000031",
+  "name": "Pan de Zanahoria",
+  "description": "Pan ligeramente dulce y de miga húmeda.",
+  "imageUrl": "https://example.com/pan-zanahoria.jpg",
+  "detailedInfo": "La zanahoria aporta dulzor natural y color cálido a la miga.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "450 g" },
+    { "name": "Zanahoria rallada", "quantity": "150 g" },
+    { "name": "Agua", "quantity": "200 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar zanahoria con agua." },
+    { "step": "Agregar harina y levadura." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Rallado fino", "description": "Mejor integración." },
+    { "title": "Sabor", "description": "Ideal con semillas." }
+  ],
+  "images": [
+    "https://example.com/pan-zanahoria-1.webp",
+    "https://example.com/pan-zanahoria-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 32,
+  "uid": "P-AN_000032",
+  "name": "Pan Rústico de Fermentación Lenta",
+  "description": "Pan artesanal de sabor profundo y corteza marcada.",
+  "imageUrl": "https://example.com/pan-fermentacion-lenta.jpg",
+  "detailedInfo": "Pan trabajado con poca levadura y largos tiempos de fermentación para desarrollar aroma y estructura.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "360 ml" },
+    { "name": "Levadura seca", "quantity": "3 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes y reposar." },
+    { "step": "Fermentar lentamente varias horas." },
+    { "step": "Hornear a alta temperatura." }
+  ],
+  "tips": [
+    { "title": "Poca levadura", "description": "Clave para fermentación larga." },
+    { "title": "Sabor", "description": "Mejora con reposo en frío." }
+  ],
+  "images": [
+    "https://example.com/pan-fermentacion-lenta-1.webp",
+    "https://example.com/pan-fermentacion-lenta-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 33,
+  "uid": "P-AN_000033",
+  "name": "Pan Campesino Clásico",
+  "description": "Pan rústico de miga irregular y corteza crujiente.",
+  "imageUrl": "https://example.com/pan-campesino.jpg",
+  "detailedInfo": "Pan de estilo rural elaborado con fermentación media y manejo simple. Ideal para introducir técnicas artesanales sin complejidad excesiva.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "340 ml" },
+    { "name": "Levadura seca", "quantity": "5 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar todos los ingredientes hasta integrar." },
+    { "step": "Reposar y fermentar hasta duplicar volumen." },
+    { "step": "Formar pan rústico y hornear a alta temperatura." }
+  ],
+  "tips": [
+    { "title": "Corte superficial", "description": "Permite una mejor expansión en el horno." },
+    { "title": "Vapor", "description": "Mejora la corteza inicial." }
+  ],
+  "images": [
+    "https://example.com/pan-campesino-1.webp",
+    "https://example.com/pan-campesino-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 34,
+  "uid": "P-AN_000034",
+  "name": "Pan de Semillas Mixtas",
+  "description": "Pan nutritivo con semillas integradas en la miga.",
+  "imageUrl": "https://example.com/pan-semillas.jpg",
+  "detailedInfo": "Pan equilibrado que incorpora semillas para textura, sabor y valor nutricional sin comprometer la estructura.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "450 g" },
+    { "name": "Mezcla de semillas", "quantity": "100 g" },
+    { "name": "Agua", "quantity": "330 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar harina y semillas." },
+    { "step": "Agregar agua y amasar." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Semillas tostadas", "description": "Potencian el aroma." },
+    { "title": "Hidratación", "description": "Ajustar según absorción." }
+  ],
+  "images": [
+    "https://example.com/pan-semillas-1.webp",
+    "https://example.com/pan-semillas-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 35,
+  "uid": "P-AN_000035",
+  "name": "Pan de Trigo Sarraceno",
+  "description": "Pan de sabor profundo y carácter rústico.",
+  "imageUrl": "https://example.com/pan-sarraceno.jpg",
+  "detailedInfo": "El trigo sarraceno aporta un perfil terroso y oscuro, combinado con trigo para mantener estructura.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "350 g" },
+    { "name": "Harina de trigo sarraceno", "quantity": "150 g" },
+    { "name": "Agua", "quantity": "360 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar harinas y agua." },
+    { "step": "Amasar suavemente." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Amasado corto", "description": "Evita endurecer la miga." },
+    { "title": "Sabor", "description": "Ideal con quesos fuertes." }
+  ],
+  "images": [
+    "https://example.com/pan-sarraceno-1.webp",
+    "https://example.com/pan-sarraceno-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 36,
+  "uid": "P-AN_000036",
+  "name": "Pan de Cerveza",
+  "description": "Pan aromático con notas maltosas.",
+  "imageUrl": "https://example.com/pan-cerveza.jpg",
+  "detailedInfo": "La cerveza reemplaza parte del agua, aportando aroma y un leve amargor equilibrado.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Cerveza", "quantity": "330 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar harina y cerveza." },
+    { "step": "Agregar levadura y sal." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Cerveza sin gas", "description": "Evita interferencias en la fermentación." },
+    { "title": "Aroma", "description": "Cerveza negra aporta más carácter." }
+  ],
+  "images": [
+    "https://example.com/pan-cerveza-1.webp",
+    "https://example.com/pan-cerveza-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 37,
+  "uid": "P-AN_000037",
+  "name": "Pan de Suero de Leche",
+  "description": "Pan tierno elaborado con suero.",
+  "imageUrl": "https://example.com/pan-suero.jpg",
+  "detailedInfo": "El suero aporta suavidad y mejora la conservación del pan.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Suero de leche", "quantity": "300 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar harina y suero." },
+    { "step": "Amasar y fermentar." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Suero frío", "description": "Ajusta tiempos de fermentación." },
+    { "title": "Textura", "description": "Miga más tierna." }
+  ],
+  "images": [
+    "https://example.com/pan-suero-1.webp",
+    "https://example.com/pan-suero-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 38,
+  "uid": "P-AN_000038",
+  "name": "Pan de Alforfón",
+  "description": "Pan oscuro de sabor intenso.",
+  "imageUrl": "https://example.com/pan-alforfon.jpg",
+  "detailedInfo": "Pan alternativo con harina de alforfón, combinado para mantener estructura.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "300 g" },
+    { "name": "Harina de alforfón", "quantity": "200 g" },
+    { "name": "Agua", "quantity": "360 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes." },
+    { "step": "Fermentar." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Miga densa", "description": "Resultado natural del alforfón." },
+    { "title": "Uso", "description": "Ideal para panes abiertos." }
+  ],
+  "images": [
+    "https://example.com/pan-alforfon-1.webp",
+    "https://example.com/pan-alforfon-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 39,
+  "uid": "P-AN_000039",
+  "name": "Pan de Miel",
+  "description": "Pan suave con dulzor natural.",
+  "imageUrl": "https://example.com/pan-miel.jpg",
+  "detailedInfo": "La miel aporta aroma, color y mejora la conservación del pan.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "280 ml" },
+    { "name": "Miel", "quantity": "40 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Disolver miel en agua." },
+    { "step": "Agregar harina y amasar." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Dorado", "description": "Controlar color durante horneado." },
+    { "title": "Sabor", "description": "Ideal para desayunos." }
+  ],
+  "images": [
+    "https://example.com/pan-miel-1.webp",
+    "https://example.com/pan-miel-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 40,
+  "uid": "P-AN_000040",
+  "name": "Pan de Mostaza",
+  "description": "Pan aromático con notas especiadas.",
+  "imageUrl": "https://example.com/pan-mostaza.jpg",
+  "detailedInfo": "La mostaza aporta carácter sin dominar el sabor del pan.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Mostaza", "quantity": "30 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Disolver mostaza en agua." },
+    { "step": "Mezclar con harina." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Mostaza suave", "description": "Evita sabores agresivos." },
+    { "title": "Uso", "description": "Excelente con carnes." }
+  ],
+  "images": [
+    "https://example.com/pan-mostaza-1.webp",
+    "https://example.com/pan-mostaza-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 41,
+  "uid": "P-AN_000041",
+  "name": "Pan de Tomate Seco",
+  "description": "Pan mediterráneo intenso y aromático.",
+  "imageUrl": "https://example.com/pan-tomate-seco.jpg",
+  "detailedInfo": "Los tomates secos aportan umami y color a la miga.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "280 ml" },
+    { "name": "Tomate seco", "quantity": "100 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Hidratar tomates." },
+    { "step": "Incorporar a la masa." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Escurrido", "description": "Evita exceso de humedad." },
+    { "title": "Aceite", "description": "Usar aceite aromatizado." }
+  ],
+  "images": [
+    "https://example.com/pan-tomate-seco-1.webp",
+    "https://example.com/pan-tomate-seco-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 42,
+  "uid": "P-AN_000042",
+  "name": "Pan de Pimentón",
+  "description": "Pan de color cálido y aroma ahumado.",
+  "imageUrl": "https://example.com/pan-pimenton.jpg",
+  "detailedInfo": "El pimentón aporta color y un fondo aromático suave.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Pimentón", "quantity": "2 cucharaditas" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes secos." },
+    { "step": "Agregar agua y amasar." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Pimentón dulce", "description": "Evita amargor." },
+    { "title": "Color", "description": "No sobrehornear." }
+  ],
+  "images": [
+    "https://example.com/pan-pimenton-1.webp",
+    "https://example.com/pan-pimenton-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 43,
+  "uid": "P-AN_000043",
+  "name": "Pan de Curry Suave",
+  "description": "Pan especiado de perfil cálido.",
+  "imageUrl": "https://example.com/pan-curry.jpg",
+  "detailedInfo": "El curry aporta notas especiadas equilibradas sin dominar la miga.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Curry suave", "quantity": "1 cucharadita" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar curry con harina." },
+    { "step": "Agregar agua y amasar." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Cantidad moderada", "description": "Evita sabores invasivos." },
+    { "title": "Aroma", "description": "Ideal para panes especiales." }
+  ],
+  "images": [
+    "https://example.com/pan-curry-1.webp",
+    "https://example.com/pan-curry-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 44,
+  "uid": "P-AN_000044",
+  "name": "Pan de Yogur",
+  "description": "Pan tierno y ligeramente ácido.",
+  "imageUrl": "https://example.com/pan-yogur.jpg",
+  "detailedInfo": "El yogur aporta suavidad y mejora la textura final.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Yogur natural", "quantity": "200 g" },
+    { "name": "Agua", "quantity": "120 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar yogur y agua." },
+    { "step": "Agregar harina y amasar." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Yogur natural", "description": "Sin azúcar ni saborizantes." },
+    { "title": "Miga", "description": "Resultado más húmedo." }
+  ],
+  "images": [
+    "https://example.com/pan-yogur-1.webp",
+    "https://example.com/pan-yogur-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 45,
+  "uid": "P-AN_000045",
+  "name": "Pan de Nuez",
+  "description": "Pan aromático con nueces integradas.",
+  "imageUrl": "https://example.com/pan-nuez.jpg",
+  "detailedInfo": "Las nueces aportan textura y un sabor profundo, ideal para quesos.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "450 g" },
+    { "name": "Nueces picadas", "quantity": "100 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa base." },
+    { "step": "Incorporar nueces al final." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Nueces tostadas", "description": "Mayor aroma." },
+    { "title": "Corte limpio", "description": "Usar cuchillo serrado." }
+  ],
+  "images": [
+    "https://example.com/pan-nuez-1.webp",
+    "https://example.com/pan-nuez-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 46,
+  "uid": "P-AN_000046",
+  "name": "Pan de Pasas",
+  "description": "Pan suave con notas dulces.",
+  "imageUrl": "https://example.com/pan-pasas.jpg",
+  "detailedInfo": "Las pasas aportan dulzor natural y contraste en la miga.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "450 g" },
+    { "name": "Pasas", "quantity": "120 g" },
+    { "name": "Agua", "quantity": "280 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Hidratar pasas." },
+    { "step": "Incorporar a la masa." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Pasas escurridas", "description": "Evita exceso de humedad." },
+    { "title": "Uso", "description": "Ideal para desayunos." }
+  ],
+  "images": [
+    "https://example.com/pan-pasas-1.webp",
+    "https://example.com/pan-pasas-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 47,
+  "uid": "P-AN_000047",
+  "name": "Pan Dulce Enriquecido",
+  "description": "Pan suave y aromático de miga tierna.",
+  "imageUrl": "https://example.com/pan-dulce.jpg",
+  "detailedInfo": "Pan base enriquecido con azúcar y grasa, adaptable a múltiples variantes.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Leche", "quantity": "250 ml" },
+    { "name": "Azúcar", "quantity": "60 g" },
+    { "name": "Mantequilla", "quantity": "60 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa enriquecida." },
+    { "step": "Fermentar lentamente." },
+    { "step": "Hornear a 180 °C." }
+  ],
+  "tips": [
+    { "title": "Amasado", "description": "Desarrolla mejor la miga." },
+    { "title": "Variantes", "description": "Base para rellenos." }
+  ],
+  "images": [
+    "https://example.com/pan-dulce-1.webp",
+    "https://example.com/pan-dulce-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 48,
+  "uid": "P-AN_000048",
+  "name": "Pan Artesanal de Hogaza",
+  "description": "Pan grande de fermentación controlada.",
+  "imageUrl": "https://example.com/pan-hogaza.jpg",
+  "detailedInfo": "Hogaza clásica de panadería artesanal, con miga abierta y corteza marcada.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "360 ml" },
+    { "name": "Levadura seca", "quantity": "4 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes y reposar." },
+    { "step": "Fermentar lentamente." },
+    { "step": "Formar hogaza y hornear." }
+  ],
+  "tips": [
+    { "title": "Corte profundo", "description": "Permite expansión controlada." },
+    { "title": "Reposo", "description": "Mejora estructura interna." }
+  ],
+  "images": [
+    "https://example.com/pan-hogaza-1.webp",
+    "https://example.com/pan-hogaza-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 49,
+  "uid": "P-AN_000049",
+  "name": "Pan de Masa Madre Básico",
+  "description": "Pan artesanal de fermentación natural y sabor profundo.",
+  "imageUrl": "https://example.com/pan-masa-madre.jpg",
+  "detailedInfo": "Pan elaborado con masa madre activa, fermentado lentamente para desarrollar aroma, acidez equilibrada y miga abierta.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "350 ml" },
+    { "name": "Masa madre activa", "quantity": "100 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar harina y agua y reposar 30 minutos." },
+    { "step": "Agregar masa madre y sal, integrar sin amasar en exceso." },
+    { "step": "Realizar pliegues cada 30 minutos durante 2 horas." },
+    { "step": "Fermentar en frío 12–18 horas." },
+    { "step": "Hornear a 240 °C con vapor los primeros 15 minutos." }
+  ],
+  "tips": [
+    { "title": "Masa madre activa", "description": "Debe estar en su punto máximo de fermentación." },
+    { "title": "Paciencia", "description": "El tiempo es clave para el sabor." }
+  ],
+  "images": [
+    "https://example.com/pan-masa-madre-1.webp",
+    "https://example.com/pan-masa-madre-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 50,
+  "uid": "P-AN_000050",
+  "name": "Pan de Espelta",
+  "description": "Pan rústico de sabor suave y digestión ligera.",
+  "imageUrl": "https://example.com/pan-espelta.jpg",
+  "detailedInfo": "La espelta es un trigo antiguo con menor fuerza, ideal para panes de fermentación corta y miga tierna.",
+  "ingredients": [
+    { "name": "Harina de espelta", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "320 ml" },
+    { "name": "Levadura seca", "quantity": "6 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes sin amasar intensamente." },
+    { "step": "Fermentar hasta duplicar volumen." },
+    { "step": "Formar y hornear a 220 °C." }
+  ],
+  "tips": [
+    { "title": "Amasado corto", "description": "La espelta se rompe si se trabaja en exceso." },
+    { "title": "Hidratación", "description": "Ajustar según absorción." }
+  ],
+  "images": [
+    "https://example.com/pan-espelta-1.webp",
+    "https://example.com/pan-espelta-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 51,
+  "uid": "P-AN_000051",
+  "name": "Pan de Kamut",
+  "description": "Pan de grano antiguo con sabor tostado.",
+  "imageUrl": "https://example.com/pan-kamut.jpg",
+  "detailedInfo": "El kamut aporta notas dulces y una miga firme, ideal para panes rústicos.",
+  "ingredients": [
+    { "name": "Harina de kamut", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "340 ml" },
+    { "name": "Levadura seca", "quantity": "6 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes y reposar 20 minutos." },
+    { "step": "Amasar suavemente." },
+    { "step": "Fermentar y hornear a 220 °C." }
+  ],
+  "tips": [
+    { "title": "Sabor", "description": "Excelente para tostadas." },
+    { "title": "Textura", "description": "Miga más compacta." }
+  ],
+  "images": [
+    "https://example.com/pan-kamut-1.webp",
+    "https://example.com/pan-kamut-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 52,
+  "uid": "P-AN_000052",
+  "name": "Pan de Arroz Mixto",
+  "description": "Pan ligero con mezcla de harina de arroz y trigo.",
+  "imageUrl": "https://example.com/pan-arroz.jpg",
+  "detailedInfo": "La harina de arroz suaviza la miga y aporta un perfil neutro.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "350 g" },
+    { "name": "Harina de arroz", "quantity": "150 g" },
+    { "name": "Agua", "quantity": "340 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar harinas y agua." },
+    { "step": "Amasar suavemente." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Estructura", "description": "No eliminar completamente el trigo." },
+    { "title": "Textura", "description": "Miga más suave." }
+  ],
+  "images": [
+    "https://example.com/pan-arroz-1.webp",
+    "https://example.com/pan-arroz-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 53,
+  "uid": "P-AN_000053",
+  "name": "Pan de Cacao Salado",
+  "description": "Pan oscuro con notas amargas y profundas.",
+  "imageUrl": "https://example.com/pan-cacao.jpg",
+  "detailedInfo": "El cacao puro aporta color y complejidad, ideal para acompañar quesos.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "480 g" },
+    { "name": "Cacao amargo", "quantity": "20 g" },
+    { "name": "Agua", "quantity": "330 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes secos." },
+    { "step": "Agregar agua y amasar." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Cacao sin azúcar", "description": "Evita sabores dulces no deseados." },
+    { "title": "Maridaje", "description": "Ideal con quesos maduros." }
+  ],
+  "images": [
+    "https://example.com/pan-cacao-1.webp",
+    "https://example.com/pan-cacao-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 54,
+  "uid": "P-AN_000054",
+  "name": "Pan de Carbón Vegetal",
+  "description": "Pan negro de estética moderna.",
+  "imageUrl": "https://example.com/pan-carbon.jpg",
+  "detailedInfo": "El carbón vegetal aporta color sin modificar significativamente el sabor.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "330 ml" },
+    { "name": "Carbón vegetal alimentario", "quantity": "5 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar carbón con harina." },
+    { "step": "Agregar agua y amasar." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Dosificación", "description": "Usar muy poca cantidad." },
+    { "title": "Presentación", "description": "Impacto visual alto." }
+  ],
+  "images": [
+    "https://example.com/pan-carbon-1.webp",
+    "https://example.com/pan-carbon-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 55,
+  "uid": "P-AN_000055",
+  "name": "Pan de Ajo Negro",
+  "description": "Pan aromático de sabor profundo y dulce.",
+  "imageUrl": "https://example.com/pan-ajo-negro.jpg",
+  "detailedInfo": "El ajo negro aporta umami y dulzor natural, sin agresividad.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Ajo negro", "quantity": "40 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Triturar ajo negro con agua." },
+    { "step": "Mezclar con harina." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Sabor equilibrado", "description": "No exceder cantidad." },
+    { "title": "Uso", "description": "Ideal para panes gourmet." }
+  ],
+  "images": [
+    "https://example.com/pan-ajo-negro-1.webp",
+    "https://example.com/pan-ajo-negro-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 56,
+  "uid": "P-AN_000056",
+  "name": "Pan de Aceite de Oliva",
+  "description": "Pan mediterráneo de miga suave.",
+  "imageUrl": "https://example.com/pan-aceite-oliva.jpg",
+  "detailedInfo": "El aceite de oliva aporta aroma y suavidad prolongada.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Aceite de oliva", "quantity": "50 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes." },
+    { "step": "Amasar hasta masa lisa." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Aceite suave", "description": "Evita dominar el sabor." },
+    { "title": "Textura", "description": "Miga más tierna." }
+  ],
+  "images": [
+    "https://example.com/pan-aceite-oliva-1.webp",
+    "https://example.com/pan-aceite-oliva-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 57,
+  "uid": "P-AN_000057",
+  "name": "Pan de Castañas",
+  "description": "Pan otoñal de sabor dulce y terroso.",
+  "imageUrl": "https://example.com/pan-castanas.jpg",
+  "detailedInfo": "Las castañas aportan dulzor natural y una miga suave.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "420 g" },
+    { "name": "Harina de castaña", "quantity": "80 g" },
+    { "name": "Agua", "quantity": "320 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar harinas." },
+    { "step": "Agregar agua y amasar." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Harina delicada", "description": "No sobretrabajar." },
+    { "title": "Sabor", "description": "Ideal con mantequilla." }
+  ],
+  "images": [
+    "https://example.com/pan-castanas-1.webp",
+    "https://example.com/pan-castanas-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 58,
+  "uid": "P-AN_000058",
+  "name": "Pan de Higo Seco",
+  "description": "Pan dulce-salado de perfil mediterráneo.",
+  "imageUrl": "https://example.com/pan-higo.jpg",
+  "detailedInfo": "Los higos aportan dulzor natural y textura.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "450 g" },
+    { "name": "Higos secos", "quantity": "120 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Trocear higos." },
+    { "step": "Incorporar a la masa." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Higos blandos", "description": "Facilitan integración." },
+    { "title": "Maridaje", "description": "Perfecto con quesos." }
+  ],
+  "images": [
+    "https://example.com/pan-higo-1.webp",
+    "https://example.com/pan-higo-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 59,
+  "uid": "P-AN_000059",
+  "name": "Pan de Anís",
+  "description": "Pan aromático de notas dulces.",
+  "imageUrl": "https://example.com/pan-anis.jpg",
+  "detailedInfo": "El anís aporta aroma clásico sin modificar la estructura.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Semillas de anís", "quantity": "1 cucharadita" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Tostar ligeramente el anís." },
+    { "step": "Mezclar ingredientes." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Cantidad justa", "description": "Evita sabores dominantes." },
+    { "title": "Uso", "description": "Pan tradicional." }
+  ],
+  "images": [
+    "https://example.com/pan-anis-1.webp",
+    "https://example.com/pan-anis-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 60,
+  "uid": "P-AN_000060",
+  "name": "Pan de Comino",
+  "description": "Pan especiado de perfil cálido.",
+  "imageUrl": "https://example.com/pan-comino.jpg",
+  "detailedInfo": "El comino aporta carácter sin dominar el sabor base.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Comino", "quantity": "1 cucharadita" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Tostar comino suavemente." },
+    { "step": "Mezclar con harina." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Comino molido", "description": "Mejor distribución." },
+    { "title": "Aroma", "description": "Ideal para platos salados." }
+  ],
+  "images": [
+    "https://example.com/pan-comino-1.webp",
+    "https://example.com/pan-comino-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 61,
+  "uid": "P-AN_000061",
+  "name": "Pan de Algarroba",
+  "description": "Pan oscuro de sabor naturalmente dulce.",
+  "imageUrl": "https://example.com/pan-algarroba.jpg",
+  "detailedInfo": "La algarroba aporta dulzor y color sin amargor.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "460 g" },
+    { "name": "Harina de algarroba", "quantity": "40 g" },
+    { "name": "Agua", "quantity": "320 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar harinas." },
+    { "step": "Agregar agua y amasar." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Color", "description": "No sobrehornear." },
+    { "title": "Sabor", "description": "Ideal para pan dulce." }
+  ],
+  "images": [
+    "https://example.com/pan-algarroba-1.webp",
+    "https://example.com/pan-algarroba-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 62,
+  "uid": "P-AN_000062",
+  "name": "Pan de Sésamo",
+  "description": "Pan aromático cubierto con semillas de sésamo.",
+  "imageUrl": "https://example.com/pan-sesamo.jpg",
+  "detailedInfo": "El sésamo aporta aroma, textura y un leve sabor tostado.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Sésamo", "quantity": "40 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa base." },
+    { "step": "Cubrir con sésamo antes de hornear." },
+    { "step": "Hornear a 220 °C." }
+  ],
+  "tips": [
+    { "title": "Sésamo tostado", "description": "Mayor aroma." },
+    { "title": "Adherencia", "description": "Humedecer superficie." }
+  ],
+  "images": [
+    "https://example.com/pan-sesamo-1.webp",
+    "https://example.com/pan-sesamo-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 63,
+  "uid": "P-AN_000063",
+  "name": "Pan de Amapola",
+  "description": "Pan suave con semillas crujientes.",
+  "imageUrl": "https://example.com/pan-amapola.jpg",
+  "detailedInfo": "Las semillas de amapola aportan textura y contraste.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Semillas de amapola", "quantity": "30 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar semillas con harina." },
+    { "step": "Agregar agua y amasar." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Distribución", "description": "Mezclar bien las semillas." },
+    { "title": "Textura", "description": "Aporta crocancia." }
+  ],
+  "images": [
+    "https://example.com/pan-amapola-1.webp",
+    "https://example.com/pan-amapola-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 64,
+  "uid": "P-AN_000064",
+  "name": "Pan Rústico de Harina Blanca",
+  "description": "Pan simple de uso diario.",
+  "imageUrl": "https://example.com/pan-blanco-rustico.jpg",
+  "detailedInfo": "Pan base de panadería, versátil y adaptable.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "320 ml" },
+    { "name": "Levadura seca", "quantity": "6 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes." },
+    { "step": "Fermentar hasta duplicar volumen." },
+    { "step": "Hornear a 220 °C." }
+  ],
+  "tips": [
+    { "title": "Base", "description": "Ideal para personalizar." },
+    { "title": "Corteza", "description": "Vapor inicial recomendado." }
+  ],
+  "images": [
+    "https://example.com/pan-blanco-rustico-1.webp",
+    "https://example.com/pan-blanco-rustico-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 65,
+  "uid": "P-AN_000065",
+  "name": "Pan Pita Tradicional",
+  "description": "Pan plano árabe con interior hueco.",
+  "imageUrl": "https://example.com/pan-pita.jpg",
+  "detailedInfo": "Pan de rápida cocción que infla en el horno, formando una cavidad interna ideal para rellenos.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes y amasar brevemente." },
+    { "step": "Fermentar hasta duplicar volumen." },
+    { "step": "Formar discos y hornear a 250 °C." }
+  ],
+  "tips": [
+    { "title": "Horno muy caliente", "description": "Clave para que el pan se infle." },
+    { "title": "Reposo corto", "description": "Evita que pierda elasticidad." }
+  ],
+  "images": [
+    "https://example.com/pan-pita-1.webp",
+    "https://example.com/pan-pita-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 66,
+  "uid": "P-AN_000066",
+  "name": "Naan Clásico",
+  "description": "Pan plano indio suave y flexible.",
+  "imageUrl": "https://example.com/naan.jpg",
+  "detailedInfo": "Pan enriquecido con yogur que aporta suavidad y sabor característico.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Yogur natural", "quantity": "120 g" },
+    { "name": "Agua", "quantity": "180 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes y amasar." },
+    { "step": "Fermentar hasta volumen doble." },
+    { "step": "Cocer en plancha o horno muy caliente." }
+  ],
+  "tips": [
+    { "title": "Cocción rápida", "description": "Evita que se seque." },
+    { "title": "Grasa final", "description": "Pincelar con mantequilla." }
+  ],
+  "images": [
+    "https://example.com/naan-1.webp",
+    "https://example.com/naan-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 67,
+  "uid": "P-AN_000067",
+  "name": "Pan Bao Básico",
+  "description": "Pan asiático al vapor, muy suave.",
+  "imageUrl": "https://example.com/pan-bao.jpg",
+  "detailedInfo": "Pan blanco al vapor de textura extremadamente tierna, base para rellenos salados o dulces.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "260 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Azúcar", "quantity": "30 g" },
+    { "name": "Aceite", "quantity": "20 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar y amasar hasta masa lisa." },
+    { "step": "Fermentar hasta duplicar volumen." },
+    { "step": "Formar bollos y cocer al vapor." }
+  ],
+  "tips": [
+    { "title": "Fermentación suave", "description": "Evita sabores fuertes." },
+    { "title": "Vapor constante", "description": "Text inkluder la suavidad." }
+  ],
+  "images": [
+    "https://example.com/pan-bao-1.webp",
+    "https://example.com/pan-bao-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 68,
+  "uid": "P-AN_000068",
+  "name": "Bagel Clásico",
+  "description": "Pan denso y masticable de origen judío.",
+  "imageUrl": "https://example.com/bagel.jpg",
+  "detailedInfo": "Bagel hervido y luego horneado, característico por su textura firme.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "260 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Azúcar", "quantity": "30 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa firme." },
+    { "step": "Formar aros y hervir brevemente." },
+    { "step": "Hornear a 220 °C." }
+  ],
+  "tips": [
+    { "title": "Hervido corto", "description": "Controla textura." },
+    { "title": "Corteza", "description": "Brillante y firme." }
+  ],
+  "images": [
+    "https://example.com/bagel-1.webp",
+    "https://example.com/bagel-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 69,
+  "uid": "P-AN_000069",
+  "name": "Pretzel Alemán",
+  "description": "Pan salado de superficie brillante.",
+  "imageUrl": "https://example.com/pretzel.jpg",
+  "detailedInfo": "Pretzel tradicional con baño alcalino previo al horneado.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "280 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" },
+    { "name": "Bicarbonato", "quantity": "30 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa y formar pretzels." },
+    { "step": "Baño alcalino breve." },
+    { "step": "Hornear a 220 °C." }
+  ],
+  "tips": [
+    { "title": "Baño corto", "description": "Evita amargor." },
+    { "title": "Sal gruesa", "description": "Clásica cobertura." }
+  ],
+  "images": [
+    "https://example.com/pretzel-1.webp",
+    "https://example.com/pretzel-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 70,
+  "uid": "P-AN_000070",
+  "name": "Pan de Hamburguesa",
+  "description": "Pan suave y esponjoso para burgers.",
+  "imageUrl": "https://example.com/pan-hamburguesa.jpg",
+  "detailedInfo": "Pan enriquecido diseñado para soportar rellenos jugosos.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Leche", "quantity": "250 ml" },
+    { "name": "Azúcar", "quantity": "40 g" },
+    { "name": "Mantequilla", "quantity": "50 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa enriquecida." },
+    { "step": "Formar bollos." },
+    { "step": "Hornear a 180 °C." }
+  ],
+  "tips": [
+    { "title": "Miga cerrada", "description": "Evita que se rompa." },
+    { "title": "Brillo", "description": "Pincelar con huevo." }
+  ],
+  "images": [
+    "https://example.com/pan-hamburguesa-1.webp",
+    "https://example.com/pan-hamburguesa-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 71,
+  "uid": "P-AN_000071",
+  "name": "Pan de Hot Dog",
+  "description": "Pan alargado y blando.",
+  "imageUrl": "https://example.com/pan-hotdog.jpg",
+  "detailedInfo": "Pan suave diseñado para contener salchichas sin romperse.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Leche", "quantity": "240 ml" },
+    { "name": "Azúcar", "quantity": "30 g" },
+    { "name": "Mantequilla", "quantity": "40 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa suave." },
+    { "step": "Formar cilindros." },
+    { "step": "Hornear a 180 °C." }
+  ],
+  "tips": [
+    { "title": "Textura", "description": "Muy tierna." },
+    { "title": "Forma", "description": "Enrollar bien." }
+  ],
+  "images": [
+    "https://example.com/pan-hotdog-1.webp",
+    "https://example.com/pan-hotdog-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 72,
+  "uid": "P-AN_000072",
+  "name": "Pan Lavash",
+  "description": "Pan plano muy fino.",
+  "imageUrl": "https://example.com/lavash.jpg",
+  "detailedInfo": "Pan tradicional de Medio Oriente, flexible y delgado.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "280 ml" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Amasar hasta masa lisa." },
+    { "step": "Estirar muy fino." },
+    { "step": "Cocer rápidamente." }
+  ],
+  "tips": [
+    { "title": "Espesor", "description": "Muy fino." },
+    { "title": "Cocción", "description": "Segundos por lado." }
+  ],
+  "images": [
+    "https://example.com/lavash-1.webp",
+    "https://example.com/lavash-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 73,
+  "uid": "P-AN_000073",
+  "name": "Pan Chapati",
+  "description": "Pan indio sin levadura.",
+  "imageUrl": "https://example.com/chapati.jpg",
+  "detailedInfo": "Pan plano básico cocido en sartén.",
+  "ingredients": [
+    { "name": "Harina integral", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Sal", "quantity": "5 g" }
+  ],
+  "steps": [
+    { "step": "Amasar hasta masa flexible." },
+    { "step": "Formar discos." },
+    { "step": "Cocer en sartén caliente." }
+  ],
+  "tips": [
+    { "title": "Reposo", "description": "Mejora elasticidad." },
+    { "title": "Cocción seca", "description": "Sin grasa." }
+  ],
+  "images": [
+    "https://example.com/chapati-1.webp",
+    "https://example.com/chapati-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 74,
+  "uid": "P-AN_000074",
+  "name": "Pan Focaccia Rellena",
+  "description": "Focaccia rellena tipo sándwich.",
+  "imageUrl": "https://example.com/focaccia-rellena.jpg",
+  "detailedInfo": "Formato grueso ideal para rellenos fríos o calientes.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "320 ml" },
+    { "name": "Aceite de oliva", "quantity": "60 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa de focaccia." },
+    { "step": "Hornear y cortar." },
+    { "step": "Rellenar al gusto." }
+  ],
+  "tips": [
+    { "title": "Corte limpio", "description": "Facilita relleno." },
+    { "title": "Reposo", "description": "Antes de cortar." }
+  ],
+  "images": [
+    "https://example.com/focaccia-rellena-1.webp",
+    "https://example.com/focaccia-rellena-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 75,
+  "uid": "P-AN_000075",
+  "name": "Pan de Pizza",
+  "description": "Masa básica para pizzas.",
+  "imageUrl": "https://example.com/masa-pizza.jpg",
+  "detailedInfo": "Base fermentada para pizzas de estilo clásico.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Levadura seca", "quantity": "5 g" },
+    { "name": "Aceite de oliva", "quantity": "30 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes." },
+    { "step": "Fermentar." },
+    { "step": "Formar discos." }
+  ],
+  "tips": [
+    { "title": "Reposo", "description": "Mejora elasticidad." },
+    { "title": "Horno fuerte", "description": "Mejor resultado." }
+  ],
+  "images": [
+    "https://example.com/masa-pizza-1.webp",
+    "https://example.com/masa-pizza-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 76,
+  "uid": "P-AN_000076",
+  "name": "Pan Stromboli",
+  "description": "Pan enrollado relleno.",
+  "imageUrl": "https://example.com/stromboli.jpg",
+  "detailedInfo": "Formato enrollado de masa tipo pizza con relleno interno.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Levadura seca", "quantity": "5 g" },
+    { "name": "Aceite de oliva", "quantity": "30 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa base." },
+    { "step": "Rellenar y enrollar." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Sellado", "description": "Evita fugas." },
+    { "title": "Corte", "description": "Dejar reposar." }
+  ],
+  "images": [
+    "https://example.com/stromboli-1.webp",
+    "https://example.com/stromboli-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 77,
+  "uid": "P-AN_000077",
+  "name": "Pan Calzone",
+  "description": "Masa plegada tipo empanada gigante.",
+  "imageUrl": "https://example.com/calzone.jpg",
+  "detailedInfo": "Pan relleno basado en masa de pizza.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Levadura seca", "quantity": "5 g" },
+    { "name": "Aceite de oliva", "quantity": "30 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa." },
+    { "step": "Rellenar y plegar." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Sellado", "description": "Importante para el relleno." },
+    { "title": "Vapor interno", "description": "Pinchar ligeramente." }
+  ],
+  "images": [
+    "https://example.com/calzone-1.webp",
+    "https://example.com/calzone-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 78,
+  "uid": "P-AN_000078",
+  "name": "Pan Simit",
+  "description": "Pan turco cubierto de sésamo.",
+  "imageUrl": "https://example.com/simit.jpg",
+  "detailedInfo": "Pan en forma de aro con cobertura generosa de sésamo.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "280 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Melaza", "quantity": "40 g" },
+    { "name": "Sésamo", "quantity": "80 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa." },
+    { "step": "Baño de melaza y agua." },
+    { "step": "Cubrir con sésamo y hornear." }
+  ],
+  "tips": [
+    { "title": "Sésamo abundante", "description": "Característico." },
+    { "title": "Horno caliente", "description": "Mejor color." }
+  ],
+  "images": [
+    "https://example.com/simit-1.webp",
+    "https://example.com/simit-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 79,
+  "uid": "P-AN_000079",
+  "name": "Pan Matnakash",
+  "description": "Pan armenio plano y marcado.",
+  "imageUrl": "https://example.com/matnakash.jpg",
+  "detailedInfo": "Pan tradicional con marcas profundas y miga suave.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa." },
+    { "step": "Marcar superficie." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Marcado", "description": "Característico del pan." },
+    { "title": "Textura", "description": "Suave interior." }
+  ],
+  "images": [
+    "https://example.com/matnakash-1.webp",
+    "https://example.com/matnakash-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 80,
+  "uid": "P-AN_000080",
+  "name": "Pan Plano de Yogur",
+  "description": "Pan rápido y flexible.",
+  "imageUrl": "https://example.com/pan-yogur-plano.jpg",
+  "detailedInfo": "Pan sin horno, cocido en sartén, ideal para wraps.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Yogur natural", "quantity": "250 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Amasar hasta masa homogénea." },
+    { "step": "Formar discos." },
+    { "step": "Cocer en sartén caliente." }
+  ],
+  "tips": [
+    { "title": "Cocción seca", "description": "Sin aceite." },
+    { "title": "Flexibilidad", "description": "Servir caliente." }
+  ],
+  "images": [
+    "https://example.com/pan-yogur-plano-1.webp",
+    "https://example.com/pan-yogur-plano-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 81,
+  "uid": "P-AN_000081",
+  "name": "Pan de Campo Rústico",
+  "description": "Pan grande de corteza gruesa y miga irregular.",
+  "imageUrl": "https://example.com/pan-campo.jpg",
+  "detailedInfo": "Pan tradicional de fermentación lenta, con sabor profundo y estructura rústica.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "1 kg" },
+    { "name": "Agua", "quantity": "650 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "20 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes y reposar." },
+    { "step": "Fermentar lentamente." },
+    { "step": "Formar y hornear fuerte." }
+  ],
+  "tips": [
+    { "title": "Fermentación larga", "description": "Mejora sabor y miga." },
+    { "title": "Corte profundo", "description": "Controla expansión." }
+  ],
+  "images": [
+    "https://example.com/pan-campo-1.webp",
+    "https://example.com/pan-campo-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 82,
+  "uid": "P-AN_000082",
+  "name": "Pan Integral Básico",
+  "description": "Pan nutritivo de miga compacta.",
+  "imageUrl": "https://example.com/pan-integral.jpg",
+  "detailedInfo": "Pan elaborado con harina integral, rico en fibra y sabor.",
+  "ingredients": [
+    { "name": "Harina integral", "quantity": "600 g" },
+    { "name": "Agua", "quantity": "400 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "12 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes." },
+    { "step": "Amasar suavemente." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Hidratación", "description": "La harina integral absorbe más agua." },
+    { "title": "Reposo", "description": "Clave para buena miga." }
+  ],
+  "images": [
+    "https://example.com/pan-integral-1.webp",
+    "https://example.com/pan-integral-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 83,
+  "uid": "P-AN_000083",
+  "name": "Pan Multigrano",
+  "description": "Pan con mezcla de semillas y granos.",
+  "imageUrl": "https://example.com/pan-multigrano.jpg",
+  "detailedInfo": "Pan aromático y nutritivo con semillas integradas.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Mezcla de semillas", "quantity": "120 g" },
+    { "name": "Agua", "quantity": "320 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar masa base." },
+    { "step": "Incorporar semillas." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Semillas hidratadas", "description": "Mejor textura." },
+    { "title": "Corteza", "description": "Crujiente." }
+  ],
+  "images": [
+    "https://example.com/pan-multigrano-1.webp",
+    "https://example.com/pan-multigrano-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 84,
+  "uid": "P-AN_000084",
+  "name": "Pan de Centeno Suave",
+  "description": "Pan oscuro de sabor profundo.",
+  "imageUrl": "https://example.com/pan-centeno.jpg",
+  "detailedInfo": "Pan mezclado de centeno y trigo, con miga húmeda.",
+  "ingredients": [
+    { "name": "Harina de centeno", "quantity": "400 g" },
+    { "name": "Harina de trigo", "quantity": "300 g" },
+    { "name": "Agua", "quantity": "500 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "12 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes." },
+    { "step": "Fermentar." },
+    { "step": "Hornear lentamente." }
+  ],
+  "tips": [
+    { "title": "Miga húmeda", "description": "Normal en centeno." },
+    { "title": "Corte fino", "description": "Para servir." }
+  ],
+  "images": [
+    "https://example.com/pan-centeno-1.webp",
+    "https://example.com/pan-centeno-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 85,
+  "uid": "P-AN_000085",
+  "name": "Pan de Papa",
+  "description": "Pan muy tierno y húmedo.",
+  "imageUrl": "https://example.com/pan-papa.jpg",
+  "detailedInfo": "La papa aporta suavidad y mayor duración.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Puré de papa", "quantity": "200 g" },
+    { "name": "Agua", "quantity": "200 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes." },
+    { "step": "Amasar hasta integrar." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Papa fría", "description": "Evita exceso de humedad." },
+    { "title": "Textura", "description": "Muy suave." }
+  ],
+  "images": [
+    "https://example.com/pan-papa-1.webp",
+    "https://example.com/pan-papa-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 86,
+  "uid": "P-AN_000086",
+  "name": "Pan de Queso",
+  "description": "Pan aromático con queso integrado.",
+  "imageUrl": "https://example.com/pan-queso.jpg",
+  "detailedInfo": "Pan enriquecido ideal para acompañar comidas.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Queso rallado", "quantity": "200 g" },
+    { "name": "Agua", "quantity": "280 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa." },
+    { "step": "Incorporar queso." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Queso firme", "description": "Mejor resultado." },
+    { "title": "Gratinado", "description": "Superficie dorada." }
+  ],
+  "images": [
+    "https://example.com/pan-queso-1.webp",
+    "https://example.com/pan-queso-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 87,
+  "uid": "P-AN_000087",
+  "name": "Pan de Aceitunas",
+  "description": "Pan mediterráneo aromático.",
+  "imageUrl": "https://example.com/pan-aceitunas.jpg",
+  "detailedInfo": "Pan salado con aceitunas picadas en la miga.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Aceitunas", "quantity": "150 g" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa base." },
+    { "step": "Incorporar aceitunas." },
+    { "step": "Fermentar y hornear." }
+  ],
+  "tips": [
+    { "title": "Aceitunas secas", "description": "Evita exceso de humedad." },
+    { "title": "Sabor intenso", "description": "Ideal con aceite." }
+  ],
+  "images": [
+    "https://example.com/pan-aceitunas-1.webp",
+    "https://example.com/pan-aceitunas-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 88,
+  "uid": "P-AN_000088",
+  "name": "Pan de Hierbas",
+  "description": "Pan aromático con hierbas secas.",
+  "imageUrl": "https://example.com/pan-hierbas.jpg",
+  "detailedInfo": "Pan versátil ideal como acompañamiento.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Hierbas secas", "quantity": "2 cdas" },
+    { "name": "Agua", "quantity": "300 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar masa." },
+    { "step": "Incorporar hierbas." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Hierbas secas", "description": "Más estables." },
+    { "title": "Reposo", "description": "Realza aroma." }
+  ],
+  "images": [
+    "https://example.com/pan-hierbas-1.webp",
+    "https://example.com/pan-hierbas-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 89,
+  "uid": "P-AN_000089",
+  "name": "Pan Dulce Básico",
+  "description": "Pan ligeramente dulce.",
+  "imageUrl": "https://example.com/pan-dulce.jpg",
+  "detailedInfo": "Base para rellenos o consumo simple.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Azúcar", "quantity": "80 g" },
+    { "name": "Leche", "quantity": "250 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa dulce." },
+    { "step": "Fermentar." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Azúcar moderada", "description": "No inhibir levadura." },
+    { "title": "Textura", "description": "Miga suave." }
+  ],
+  "images": [
+    "https://example.com/pan-dulce-1.webp",
+    "https://example.com/pan-dulce-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 90,
+  "uid": "P-AN_000090",
+  "name": "Pan Trenzado",
+  "description": "Pan decorativo de mesa.",
+  "imageUrl": "https://example.com/pan-trenzado.jpg",
+  "detailedInfo": "Pan formado en trenza para presentación.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "280 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa." },
+    { "step": "Dividir y trenzar." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Trenza firme", "description": "Mantiene forma." },
+    { "title": "Brillo", "description": "Pincelar." }
+  ],
+  "images": [
+    "https://example.com/pan-trenzado-1.webp",
+    "https://example.com/pan-trenzado-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 91,
+  "uid": "P-AN_000091",
+  "name": "Pan de Yema",
+  "description": "Pan amarillo y tierno.",
+  "imageUrl": "https://example.com/pan-yema.jpg",
+  "detailedInfo": "Pan enriquecido con yemas de huevo.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Yemas", "quantity": "6 U" },
+    { "name": "Leche", "quantity": "200 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa." },
+    { "step": "Fermentar." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Color", "description": "Natural por yemas." },
+    { "title": "Miga", "description": "Muy suave." }
+  ],
+  "images": [
+    "https://example.com/pan-yema-1.webp",
+    "https://example.com/pan-yema-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 92,
+  "uid": "P-AN_000092",
+  "name": "Pan Vienés",
+  "description": "Pan fino y delicado.",
+  "imageUrl": "https://example.com/pan-vienes.jpg",
+  "detailedInfo": "Pan blanco refinado de origen europeo.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Leche", "quantity": "250 ml" },
+    { "name": "Mantequilla", "quantity": "50 g" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa enriquecida." },
+    { "step": "Fermentar." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Textura", "description": "Muy fina." },
+    { "title": "Uso", "description": "Ideal desayunos." }
+  ],
+  "images": [
+    "https://example.com/pan-vienes-1.webp",
+    "https://example.com/pan-vienes-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 93,
+  "uid": "P-AN_000093",
+  "name": "Pan de Manteca",
+  "description": "Pan suave y sabroso.",
+  "imageUrl": "https://example.com/pan-manteca.jpg",
+  "detailedInfo": "Pan tradicional enriquecido con grasa.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Manteca", "quantity": "80 g" },
+    { "name": "Agua", "quantity": "260 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa." },
+    { "step": "Amasar bien." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Grasa integrada", "description": "Mejor textura." },
+    { "title": "Miga", "description": "Tierna." }
+  ],
+  "images": [
+    "https://example.com/pan-manteca-1.webp",
+    "https://example.com/pan-manteca-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 94,
+  "uid": "P-AN_000094",
+  "name": "Pan de Cebolla",
+  "description": "Pan aromático con cebolla.",
+  "imageUrl": "https://example.com/pan-cebolla.jpg",
+  "detailedInfo": "Pan sabroso ideal para carnes.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Cebolla salteada", "quantity": "200 g" },
+    { "name": "Agua", "quantity": "280 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa." },
+    { "step": "Incorporar cebolla." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Cebolla fría", "description": "No inhibir levadura." },
+    { "title": "Aroma", "description": "Muy marcado." }
+  ],
+  "images": [
+    "https://example.com/pan-cebolla-1.webp",
+    "https://example.com/pan-cebolla-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 95,
+  "uid": "P-AN_000095",
+  "name": "Pan de Zanahoria",
+  "description": "Pan húmedo y ligeramente dulce.",
+  "imageUrl": "https://example.com/pan-zanahoria.jpg",
+  "detailedInfo": "Pan enriquecido con zanahoria rallada.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Zanahoria rallada", "quantity": "200 g" },
+    { "name": "Agua", "quantity": "250 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa." },
+    { "step": "Incorporar zanahoria." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Zanahoria fina", "description": "Mejor integración." },
+    { "title": "Miga", "description": "Jugosa." }
+  ],
+  "images": [
+    "https://example.com/pan-zanahoria-1.webp",
+    "https://example.com/pan-zanahoria-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 96,
+  "uid": "P-AN_000096",
+  "name": "Pan de Calabaza",
+  "description": "Pan suave de color anaranjado.",
+  "imageUrl": "https://example.com/pan-calabaza.jpg",
+  "detailedInfo": "Pan otoñal con puré de calabaza.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Puré de calabaza", "quantity": "250 g" },
+    { "name": "Agua", "quantity": "200 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar masa." },
+    { "step": "Fermentar." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Puré espeso", "description": "Controla humedad." },
+    { "title": "Color", "description": "Natural." }
+  ],
+  "images": [
+    "https://example.com/pan-calabaza-1.webp",
+    "https://example.com/pan-calabaza-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 97,
+  "uid": "P-AN_000097",
+  "name": "Pan de Avena",
+  "description": "Pan nutritivo y suave.",
+  "imageUrl": "https://example.com/pan-avena.jpg",
+  "detailedInfo": "Pan con avena incorporada para textura y fibra.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "400 g" },
+    { "name": "Avena", "quantity": "150 g" },
+    { "name": "Agua", "quantity": "320 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa." },
+    { "step": "Incorporar avena." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Avena hidratada", "description": "Mejor textura." },
+    { "title": "Miga", "description": "Suave." }
+  ],
+  "images": [
+    "https://example.com/pan-avena-1.webp",
+    "https://example.com/pan-avena-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 98,
+  "uid": "P-AN_000098",
+  "name": "Pan de Maíz",
+  "description": "Pan amarillo de sabor suave.",
+  "imageUrl": "https://example.com/pan-maiz.jpg",
+  "detailedInfo": "Pan mezclado de trigo y maíz.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "350 g" },
+    { "name": "Harina de maíz", "quantity": "200 g" },
+    { "name": "Agua", "quantity": "350 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ingredientes." },
+    { "step": "Fermentar." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Maíz fino", "description": "Mejor estructura." },
+    { "title": "Miga", "description": "Más cerrada." }
+  ],
+  "images": [
+    "https://example.com/pan-maiz-1.webp",
+    "https://example.com/pan-maiz-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 99,
+  "uid": "P-AN_000099",
+  "name": "Pan de Remolacha",
+  "description": "Pan colorido y húmedo.",
+  "imageUrl": "https://example.com/pan-remolacha.jpg",
+  "detailedInfo": "Pan vegetal con color natural.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Puré de remolacha", "quantity": "200 g" },
+    { "name": "Agua", "quantity": "220 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "8 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa." },
+    { "step": "Incorporar puré." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Color natural", "description": "No usar demasiado puré." },
+    { "title": "Miga", "description": "Tierna." }
+  ],
+  "images": [
+    "https://example.com/pan-remolacha-1.webp",
+    "https://example.com/pan-remolacha-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 100,
+  "uid": "P-AN_000100",
+  "name": "Pan Festivo de Mesa",
+  "description": "Pan decorativo para celebraciones.",
+  "imageUrl": "https://example.com/pan-festivo.jpg",
+  "detailedInfo": "Pan especial pensado para presentación final.",
+  "ingredients": [
+    { "name": "Harina de trigo", "quantity": "500 g" },
+    { "name": "Agua", "quantity": "280 ml" },
+    { "name": "Levadura seca", "quantity": "7 g" },
+    { "name": "Sal", "quantity": "10 g" }
+  ],
+  "steps": [
+    { "step": "Preparar masa." },
+    { "step": "Dar forma decorativa." },
+    { "step": "Hornear." }
+  ],
+  "tips": [
+    { "title": "Forma", "description": "Creatividad libre." },
+    { "title": "Presentación", "description": "Ideal para mesa." }
+  ],
+  "images": [
+    "https://example.com/pan-festivo-1.webp",
+    "https://example.com/pan-festivo-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+}
+
+
+
+
+
   ]
 }

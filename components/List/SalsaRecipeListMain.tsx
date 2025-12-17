@@ -1,3 +1,4 @@
+import { getVersionedImageSync } from "../../utils/versionedImage";
 // screens/SalsaRecipeListMain.tsx
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
@@ -15,7 +16,7 @@ import {
 import salsasData from "../../assets/Json/Salsas.json";
 
 // 🟢 Util estándar compartido
-import { getSafeImage } from "../../utils/getImageSource";
+import { getSafeVersionedImage } from "../../utils/imageSource";
 
 // 🔎 Normalizador ultra PRO
 const normalizeText = (text: string) =>
@@ -71,12 +72,15 @@ function SalsaRecipeListMain() {
           navigation.navigate("SalsaRecipeDetail", { recipe: item })
         }
       >
-        <Image
-          source={getSafeImage(item.imageUrl, item.images)}
-          style={styles.image}
-          contentFit="cover"
-          transition={300}
-        />
+<Image
+  source={getSafeVersionedImage(
+    item.imageUrl,
+    item.images
+  )}
+  style={styles.image}
+  contentFit="cover"
+  transition={300}
+/>
 
         <View style={styles.info}>
           <Text style={styles.title}>{item.name}</Text>

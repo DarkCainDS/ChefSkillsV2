@@ -24,15 +24,16 @@ import { AppDispatch, RootState } from "../store/Index";
 import { clearUser } from "../store/Slices/userSlice";
 
 import CSHeader from "../components/CSHeader";
+import { getVersionedImageSync } from "../utils/versionedImage"; // Asumo que esto existe en tu proyecto
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
 
 /* ============================================================================================
-   📌 RESPONSIVE HELPERS (proporcional tipo iPhone XR)
+   📌 RESPONSIVE HELPERS
 ============================================================================================ */
 
-const guidelineBaseWidth = 414;   // iPhone XR ancho
-const guidelineBaseHeight = 896;  // iPhone XR alto
+const guidelineBaseWidth = 414;
+const guidelineBaseHeight = 896;
 
 const scaleW = (size: number) => (SCREEN_WIDTH / guidelineBaseWidth) * size;
 const scaleH = (size: number) => (SCREEN_HEIGHT / guidelineBaseHeight) * size;
@@ -194,64 +195,108 @@ const Ash = ({ left, delay }: any) => {
 };
 
 /* ============================================================================================
-   🔥 SUBSCRIPTION TIMER
+   🔥 SUBSCRIPTION TIMER PRO (REDUX + LIVE ANIMATION)
 ============================================================================================ */
 
 const SubscriptionTimer = () => {
   const isFocused = useIsFocused();
-  const [remaining, setRemaining] = useState<any>(null);
-  const [planName, setPlanName] = useState<string | null>(null);
+  
+  // 1. LEEMOS DE REDUX (No AsyncStorage)
+  const subscription = useSelector((state: RootState) => state.subscription);
+
+  const [remaining, setRemaining] = useState<{
+    days: number;
+    hours: number;
+    minutes: number;
+    seconds: number;
+    totalMs: number;
+  } | null>(null);
+
+  // Animación de latido para cuando queda poco tiempo
+  const pulseAnim = useRef(new Animated.Value(1)).current;
 
   useEffect(() => {
-    const load = async () => {
-      const data = await AsyncStorage.getItem("subscriptionData");
-      if (!data) {
+    // Si no hay fecha de expiración en Redux, es que no hay sub
+    if (!subscription?.expiresAt) {
+      setRemaining(null);
+      return;
+    }
+
+    const update = () => {
+      // Calculamos diferencia
+      const expiresTime = new Date(subscription.expiresAt).getTime(); // Aseguramos que sea número
+      const diff = expiresTime - Date.now();
+
+      if (diff <= 0) {
         setRemaining(null);
         return;
       }
 
-      const sub = JSON.parse(data);
-      setPlanName(sub.planName);
-
-      const update = () => {
-        const expiresAt = new Date(sub.expiresAt).getTime();
-        const diff = expiresAt - Date.now();
-        if (diff <= 0) return setRemaining(null);
-
-        setRemaining({
-          days: Math.floor(diff / 86400000),
-          hours: Math.floor((diff / 3600000) % 24),
-          minutes: Math.floor((diff / 60000) % 60),
-          seconds: Math.floor((diff / 1000) % 60),
-        });
-      };
-
-      update();
-      const interval = setInterval(update, 1000);
-      return () => clearInterval(interval);
+      setRemaining({
+        totalMs: diff,
+        days: Math.floor(diff / 86400000),
+        hours: Math.floor((diff / 3600000) % 24),
+        minutes: Math.floor((diff / 60000) % 60),
+        seconds: Math.floor((diff / 1000) % 60),
+      });
     };
 
-    if (isFocused) load();
-  }, [isFocused]);
+    update();
+    const interval = setInterval(update, 1000); // Loop de 1 segundo
+    return () => clearInterval(interval);
+  }, [subscription, isFocused]);
 
-  if (!remaining)
+  // ANIMACIÓN DE LATIDO (Solo si queda menos de 24 horas)
+  useEffect(() => {
+    if (remaining && remaining.totalMs < 86400000) {
+      // Latido "crítico"
+      Animated.loop(
+        Animated.sequence([
+          Animated.timing(pulseAnim, { toValue: 1.03, duration: 800, useNativeDriver: true }),
+          Animated.timing(pulseAnim, { toValue: 1, duration: 800, useNativeDriver: true }),
+        ])
+      ).start();
+    } else {
+      pulseAnim.stopAnimation();
+      pulseAnim.setValue(1);
+    }
+  }, [remaining?.totalMs < 86400000]); // Dependencia inteligente
+
+  // RENDER: NO SUSCRITO
+  if (!remaining) {
     return (
       <View style={styles.timerCard}>
         <Text style={[styles.timerLabel, { color: "#ff784e" }]}>No suscrito</Text>
         <Text style={styles.timerSub}>Activa ChefSkills+</Text>
       </View>
     );
+  }
+
+  // RENDER: SUSCRITO (Con lógica de colores)
+  const isCritical = remaining.totalMs < 86400000; // Menos de 24h
+  const isWarning = remaining.totalMs < 259200000 && !isCritical; // Menos de 3 días
+
+  // Definimos colores según urgencia
+  let gradientColors = ["rgba(255, 90, 0, 0.25)", "rgba(255, 50, 0, 0.1)"]; // Normal
+  let statusText = `🔥 ${subscription.planName || "Plan"} activo`;
+
+  if (isCritical) {
+    gradientColors = ["rgba(255, 0, 0, 0.35)", "rgba(100, 0, 0, 0.2)"]; // Rojo alerta
+    statusText = "⏰ Últimas horas";
+  } else if (isWarning) {
+    gradientColors = ["rgba(255, 160, 0, 0.25)", "rgba(200, 100, 0, 0.15)"]; // Naranja/Amarillo aviso
+    statusText = "⚠️ Expira pronto";
+  }
 
   return (
-    <LinearGradient
-      colors={["rgba(255, 90, 0, 0.25)", "rgba(255, 50, 0, 0.1)"]}
-      style={styles.timerCard}
-    >
-      <Text style={styles.timerLabel}>🔥 {planName} activo</Text>
-      <Text style={styles.timerSub}>
-        {remaining.days}d {remaining.hours}h {remaining.minutes}m {remaining.seconds}s
-      </Text>
-    </LinearGradient>
+    <Animated.View style={{ transform: [{ scale: pulseAnim }], width: "100%", alignItems: "center" }}>
+      <LinearGradient colors={gradientColors} style={styles.timerCard}>
+        <Text style={styles.timerLabel}>{statusText}</Text>
+        <Text style={styles.timerSub}>
+          {remaining.days}d {remaining.hours}h {remaining.minutes}m {remaining.seconds}s
+        </Text>
+      </LinearGradient>
+    </Animated.View>
   );
 };
 
@@ -266,7 +311,6 @@ const Menu_LavaElite_ParticlesV6_Ultra = ({ navigation }) => {
 
   const modalAnim = useRef(new Animated.Value(0.7)).current;
   const auraAnim = useRef(new Animated.Value(0)).current;
-  const confirmScale = useRef(new Animated.Value(1)).current;
 
   const user = useSelector((state: RootState) => state.user);
   const dispatch = useDispatch<AppDispatch>();
@@ -344,6 +388,7 @@ const Menu_LavaElite_ParticlesV6_Ultra = ({ navigation }) => {
           <Text style={styles.email}>{user?.email}</Text>
         </View>
 
+        {/* 🚀 TIMER PRO INTEGRADO AQUÍ */}
         <SubscriptionTimer />
 
         {/* LOGOUT BUTTON */}
@@ -492,6 +537,8 @@ const styles = StyleSheet.create({
     marginTop: scaleH(15),
     borderWidth: 1,
     borderColor: "rgba(255,90,0,0.4)",
+    // Agregamos minWidth para que no salte de tamaño al cambiar números
+    minWidth: scaleW(280), 
   },
 
   timerLabel: {
@@ -504,6 +551,7 @@ const styles = StyleSheet.create({
   timerSub: {
     color: "#ffcbb2",
     fontSize: scaleFont(14),
+    fontVariant: ["tabular-nums"], // IMPORTANTE: Evita que los números "bailen" al cambiar
   },
 
   logoutContainer: { alignItems: "center" },

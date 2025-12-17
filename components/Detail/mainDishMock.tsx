@@ -1,3 +1,4 @@
+import { getVersionedImageSync } from "../../utils/versionedImage";
 // screens/MainDishRecipeDetail.tsx
 import { MaterialIcons } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';

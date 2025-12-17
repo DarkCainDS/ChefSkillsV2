@@ -1,280 +1,2914 @@
 {
   "recipes": [
+  {
+    "id": 1,
+    "uid": "R-Vegan_000001",
+    "name": "Buddha Bowl de Quinoa y Verduras Asadas",
+    "description": "Bowl nutritivo con quinoa, verduras asadas y aderezo simple.",
+    "imageUrl": "https://example.com/vegan-001.jpg",
+    "detailedInfo": "Bowl balanceado donde la quinoa aporta proteína vegetal y las verduras asadas concentran sabor. Ideal como plato base vegano.",
+    "ingredients": [
+      { "name": "Quinoa", "quantity": "1 taza" },
+      { "name": "Zapallo", "quantity": "200 g" },
+      { "name": "Brócoli", "quantity": "1 taza" },
+      { "name": "Aceite de oliva", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Cuece la quinoa hasta que quede suelta." },
+      { "step": "Asa zapallo y brócoli con aceite y sal." },
+      { "step": "Sirve todo en un bowl." }
+    ],
+    "tips": [
+      { "title": "Quinoa", "description": "Lavar bien elimina el amargor." },
+      { "title": "Asado", "description": "El dorado aporta sabor." }
+    ],
+    "images": [
+      "https://example.com/vegan-001-1.webp",
+      "https://example.com/vegan-001-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 2,
+    "uid": "R-Vegan_000002",
+    "name": "Bowl Tibio de Lentejas y Verduras",
+    "description": "Plato reconfortante con lentejas y vegetales salteados.",
+    "imageUrl": "https://example.com/vegan-002.jpg",
+    "detailedInfo": "Las lentejas funcionan como base proteica y se combinan con verduras salteadas para un bowl simple y saciante.",
+    "ingredients": [
+      { "name": "Lentejas cocidas", "quantity": "1 taza" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1/2 unidad" },
+      { "name": "Aceite vegetal", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Saltea cebolla y zanahoria." },
+      { "step": "Agrega las lentejas y calienta." },
+      { "step": "Sirve tibio." }
+    ],
+    "tips": [
+      { "title": "Textura", "description": "No sobrecocer las lentejas." },
+      { "title": "Sabor", "description": "Un chorrito de limón realza el plato." }
+    ],
+    "images": [
+      "https://example.com/vegan-002-1.webp",
+      "https://example.com/vegan-002-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 3,
+    "uid": "R-Vegan_000003",
+    "name": "Poke Vegano de Tofu",
+    "description": "Bowl fresco con tofu marinado y vegetales.",
+    "imageUrl": "https://example.com/vegan-003.jpg",
+    "detailedInfo": "Versión vegana del poke, usando tofu firme marinado como proteína principal.",
+    "ingredients": [
+      { "name": "Tofu firme", "quantity": "200 g" },
+      { "name": "Arroz blanco", "quantity": "1 taza cocida" },
+      { "name": "Pepino", "quantity": "1/2 unidad" },
+      { "name": "Salsa de soya", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Corta y marina el tofu." },
+      { "step": "Sirve sobre arroz con pepino." },
+      { "step": "Ajusta soya al final." }
+    ],
+    "tips": [
+      { "title": "Tofu", "description": "Usar tofu firme mejora textura." },
+      { "title": "Marinado", "description": "Pocos minutos son suficientes." }
+    ],
+    "images": [
+      "https://example.com/vegan-003-1.webp",
+      "https://example.com/vegan-003-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 4,
+    "uid": "R-Vegan_000004",
+    "name": "Bowl de Garbanzos al Horno",
+    "description": "Garbanzos crocantes con vegetales frescos.",
+    "imageUrl": "https://example.com/vegan-004.jpg",
+    "detailedInfo": "Los garbanzos al horno aportan textura crujiente y proteína vegetal.",
+    "ingredients": [
+      { "name": "Garbanzos cocidos", "quantity": "1 taza" },
+      { "name": "Pimentón", "quantity": "1/2 unidad" },
+      { "name": "Aceite de oliva", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Hornea los garbanzos con aceite y sal." },
+      { "step": "Corta el pimentón." },
+      { "step": "Sirve todo junto." }
+    ],
+    "tips": [
+      { "title": "Crocancia", "description": "Secar bien los garbanzos antes de hornear." },
+      { "title": "Especias", "description": "Puedes agregar pimentón o comino." }
+    ],
+    "images": [
+      "https://example.com/vegan-004-1.webp",
+      "https://example.com/vegan-004-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 5,
+    "uid": "R-Vegan_000005",
+    "name": "Bowl de Arroz Integral y Palta",
+    "description": "Plato simple y nutritivo de arroz y palta.",
+    "imageUrl": "https://example.com/vegan-005.jpg",
+    "detailedInfo": "Bowl básico ideal como base vegana rápida.",
+    "ingredients": [
+      { "name": "Arroz integral", "quantity": "1 taza cocida" },
+      { "name": "Palta", "quantity": "1 unidad" },
+      { "name": "Limón", "quantity": "Al gusto" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Cuece el arroz integral." },
+      { "step": "Corta la palta." },
+      { "step": "Sirve con limón y sal." }
+    ],
+    "tips": [
+      { "title": "Arroz", "description": "El integral aporta más fibra." },
+      { "title": "Oxidación", "description": "El limón mantiene el color." }
+    ],
+    "images": [
+      "https://example.com/vegan-005-1.webp",
+      "https://example.com/vegan-005-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 6,
+    "uid": "R-Vegan_000006",
+    "name": "Bowl de Cous Cous y Verduras",
+    "description": "Cous cous liviano con verduras salteadas.",
+    "imageUrl": "https://example.com/vegan-006.jpg",
+    "detailedInfo": "Plato rápido donde el cous cous se hidrata y combina con vegetales.",
+    "ingredients": [
+      { "name": "Cous cous", "quantity": "1 taza" },
+      { "name": "Zapallito", "quantity": "1 unidad" },
+      { "name": "Aceite vegetal", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Hidrata el cous cous." },
+      { "step": "Saltea el zapallito." },
+      { "step": "Mezcla y sirve." }
+    ],
+    "tips": [
+      { "title": "Hidratación", "description": "No exceder el líquido." },
+      { "title": "Textura", "description": "Soltar con tenedor." }
+    ],
+    "images": [
+      "https://example.com/vegan-006-1.webp",
+      "https://example.com/vegan-006-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 7,
+    "uid": "R-Vegan_000007",
+    "name": "Bowl de Porotos Negros y Maíz",
+    "description": "Plato colorido y saciante.",
+    "imageUrl": "https://example.com/vegan-007.jpg",
+    "detailedInfo": "Los porotos negros aportan proteína y el maíz dulzor natural.",
+    "ingredients": [
+      { "name": "Porotos negros cocidos", "quantity": "1 taza" },
+      { "name": "Maíz", "quantity": "1/2 taza" },
+      { "name": "Cebolla morada", "quantity": "Al gusto" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Calienta los porotos." },
+      { "step": "Mezcla con maíz y cebolla." },
+      { "step": "Ajusta sal." }
+    ],
+    "tips": [
+      { "title": "Balance", "description": "El maíz suaviza el sabor." },
+      { "title": "Frescura", "description": "Agregar limón opcional." }
+    ],
+    "images": [
+      "https://example.com/vegan-007-1.webp",
+      "https://example.com/vegan-007-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 8,
+    "uid": "R-Vegan_000008",
+    "name": "Bowl de Verduras al Wok",
+    "description": "Verduras salteadas rápidas y aromáticas.",
+    "imageUrl": "https://example.com/vegan-008.jpg",
+    "detailedInfo": "Plato vegano rápido donde el wok mantiene textura y color.",
+    "ingredients": [
+      { "name": "Mix de verduras", "quantity": "2 tazas" },
+      { "name": "Aceite vegetal", "quantity": "Cantidad necesaria" },
+      { "name": "Salsa de soya", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Calienta el wok." },
+      { "step": "Saltea las verduras a fuego alto." },
+      { "step": "Agrega soya y sirve." }
+    ],
+    "tips": [
+      { "title": "Fuego", "description": "Alto para sellar rápido." },
+      { "title": "Textura", "description": "No sobrecargar el wok." }
+    ],
+    "images": [
+      "https://example.com/vegan-008-1.webp",
+      "https://example.com/vegan-008-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 9,
+    "uid": "R-Vegan_000009",
+    "name": "Bowl de Fideos de Arroz y Vegetales",
+    "description": "Plato liviano con fideos y verduras.",
+    "imageUrl": "https://example.com/vegan-009.jpg",
+    "detailedInfo": "Los fideos de arroz funcionan como base neutra para vegetales.",
+    "ingredients": [
+      { "name": "Fideos de arroz", "quantity": "150 g" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Aceite vegetal", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Hidrata los fideos." },
+      { "step": "Saltea la zanahoria." },
+      { "step": "Mezcla y sirve." }
+    ],
+    "tips": [
+      { "title": "Fideos", "description": "No sobrehidratar." },
+      { "title": "Sabor", "description": "Agregar soya opcional." }
+    ],
+    "images": [
+      "https://example.com/vegan-009-1.webp",
+      "https://example.com/vegan-009-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 10,
+    "uid": "R-Vegan_000010",
+    "name": "Bowl Base Vegano ChefSkills",
+    "description": "Base neutra vegana adaptable.",
+    "imageUrl": "https://example.com/vegan-010.jpg",
+    "detailedInfo": "Receta base pensada como lienzo vegano para combinar granos, legumbres y verduras.",
+    "ingredients": [
+      { "name": "Grano cocido", "quantity": "1 taza" },
+      { "name": "Verduras", "quantity": "A elección" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Prepara el grano base." },
+      { "step": "Agrega verduras." },
+      { "step": "Ajusta sal y aceite." }
+    ],
+    "tips": [
+      { "title": "Versatilidad", "description": "Admite infinitas combinaciones." },
+      { "title": "Planificación", "description": "Ideal para meal prep." }
+    ],
+    "images": [
+      "https://example.com/vegan-010-1.webp",
+      "https://example.com/vegan-010-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
     {
-      "id": 1,
-      "uid": "R-Vegan_000001",
-      "name": "Poke Bowl de Tofu",
-      "description": "Poke bowl fresco y saludable con tofu marinado, arroz integral y toppings vegetales y frutales. Ideal para veganos y vegetarianos.",
-      "imageUrl": "https://example.com/poke-bowl-tofu.jpg",
-      "detailedInfo": "Este poke bowl utiliza tofu como proteína principal, marinado brevemente para potenciar su sabor neutro. Se combina con arroz integral como base y toppings frescos como aguacate, pepino, zanahoria y fresas. Es una opción ligera, nutritiva y versátil.",
-      "ingredients": [
-        { "name": "Arroz integral cocido", "quantity": "1 bol (al gusto)" },
-        { "name": "Tofu", "quantity": "100 g" },
-        { "name": "Salsa de soja", "quantity": "1 cucharada" },
-        { "name": "Especias picantes", "quantity": "1 pizca" },
-        { "name": "Aguacate", "quantity": "Al gusto" },
-        { "name": "Pepino", "quantity": "Al gusto" },
-        { "name": "Zanahoria", "quantity": "Al gusto" },
-        { "name": "Fresas", "quantity": "Al gusto" }
-      ],
-      "steps": [
-        { "step": "Corta el tofu en cubos y mézclalo con salsa de soja y especias picantes." },
-        { "step": "Deja marinar el tofu durante 15 minutos." },
-        { "step": "Prepara los toppings cortando aguacate, pepino, zanahoria y fresas." },
-        { "step": "Saltea el tofu marinado en una sartén hasta que esté dorado." },
-        { "step": "Arma el bowl colocando el arroz integral como base y encima el tofu y los toppings." }
-      ],
-      "tips": [
-        { "title": "Marinado rápido", "description": "El tofu absorbe sabor en pocos minutos, no necesita marinar mucho tiempo." },
-        { "title": "Opción proteica", "description": "Puedes sustituir el tofu por pollo, salmón o atún si prefieres una versión no vegana." },
-        { "title": "Toque frutal", "description": "Las fresas aportan frescura y equilibran los sabores salados." },
-        { "title": "Textura ideal", "description": "Dora el tofu a fuego medio para lograr un exterior crujiente y un interior suave." }
-      ],
-      "images": [
-        "https://example.com/poke-bowl-tofu1.webp",
-        "https://example.com/poke-bowl-tofu2.webp"
-      ],
-      "rating": null,
-      "servings": null,
-      "time": null,
-      "difficulty": null
-    },
+    "id": 11,
+    "uid": "R-Vegan_000011",
+    "name": "Arroz Integral con Verduras Salteadas",
+    "description": "Plato base vegano simple y nutritivo.",
+    "imageUrl": "https://example.com/vegan-011.jpg",
+    "detailedInfo": "El arroz integral aporta fibra y estructura, mientras las verduras salteadas entregan sabor y textura.",
+    "ingredients": [
+      { "name": "Arroz integral", "quantity": "1 taza cocida" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Brócoli", "quantity": "1 taza" },
+      { "name": "Aceite vegetal", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Cuece el arroz integral hasta que esté tierno." },
+      { "step": "Saltea zanahoria y brócoli." },
+      { "step": "Mezcla con el arroz y ajusta sal." }
+    ],
+    "tips": [
+      { "title": "Arroz", "description": "Cocer con anticipación facilita el salteado." },
+      { "title": "Textura", "description": "Verduras crocantes equilibran el plato." }
+    ],
+    "images": [
+      "https://example.com/vegan-011-1.webp",
+      "https://example.com/vegan-011-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 12,
+    "uid": "R-Vegan_000012",
+    "name": "Arroz Blanco con Garbanzos Especiados",
+    "description": "Plato vegano sencillo con legumbres.",
+    "imageUrl": "https://example.com/vegan-012.jpg",
+    "detailedInfo": "Los garbanzos especiados aportan proteína y sabor al arroz blanco.",
+    "ingredients": [
+      { "name": "Arroz blanco", "quantity": "1 taza cocida" },
+      { "name": "Garbanzos cocidos", "quantity": "1 taza" },
+      { "name": "Comino", "quantity": "Un toque" },
+      { "name": "Aceite vegetal", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Saltea los garbanzos con comino." },
+      { "step": "Sirve sobre el arroz caliente." }
+    ],
+    "tips": [
+      { "title": "Especias", "description": "Tostar el comino potencia aroma." },
+      { "title": "Base", "description": "Funciona como plato o acompañamiento." }
+    ],
+    "images": [
+      "https://example.com/vegan-012-1.webp",
+      "https://example.com/vegan-012-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 13,
+    "uid": "R-Vegan_000013",
+    "name": "Quinoa Salteada con Verduras",
+    "description": "Plato liviano y proteico.",
+    "imageUrl": "https://example.com/vegan-013.jpg",
+    "detailedInfo": "La quinoa salteada permite reutilizar granos cocidos con mejor textura.",
+    "ingredients": [
+      { "name": "Quinoa cocida", "quantity": "1 taza" },
+      { "name": "Pimentón", "quantity": "1/2 unidad" },
+      { "name": "Zapallito", "quantity": "1 unidad" },
+      { "name": "Aceite vegetal", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Saltea las verduras." },
+      { "step": "Agrega la quinoa y mezcla." }
+    ],
+    "tips": [
+      { "title": "Quinoa", "description": "Usar fría evita que se pegue." },
+      { "title": "Fuego", "description": "Medio-alto para mejor sellado." }
+    ],
+    "images": [
+      "https://example.com/vegan-013-1.webp",
+      "https://example.com/vegan-013-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 14,
+    "uid": "R-Vegan_000014",
+    "name": "Cous Cous con Verduras y Limón",
+    "description": "Grano liviano con perfil fresco.",
+    "imageUrl": "https://example.com/vegan-014.jpg",
+    "detailedInfo": "El cous cous se hidrata rápidamente y combina bien con vegetales y acidez.",
+    "ingredients": [
+      { "name": "Cous cous", "quantity": "1 taza" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Limón", "quantity": "Al gusto" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Hidrata el cous cous." },
+      { "step": "Mezcla con zanahoria rallada y limón." }
+    ],
+    "tips": [
+      { "title": "Acidez", "description": "El limón equilibra el grano." },
+      { "title": "Textura", "description": "Soltar con tenedor." }
+    ],
+    "images": [
+      "https://example.com/vegan-014-1.webp",
+      "https://example.com/vegan-014-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 15,
+    "uid": "R-Vegan_000015",
+    "name": "Arroz Jazmín con Verduras al Vapor",
+    "description": "Plato aromático y suave.",
+    "imageUrl": "https://example.com/vegan-015.jpg",
+    "detailedInfo": "El arroz jazmín aporta aroma y funciona bien con verduras suaves.",
+    "ingredients": [
+      { "name": "Arroz jazmín", "quantity": "1 taza cocida" },
+      { "name": "Brócoli", "quantity": "1 taza" },
+      { "name": "Zanahoria", "quantity": "1 unidad" }
+    ],
+    "steps": [
+      { "step": "Cuece el arroz jazmín." },
+      { "step": "Cocina las verduras al vapor." },
+      { "step": "Sirve juntas." }
+    ],
+    "tips": [
+      { "title": "Aroma", "description": "No sobrecocer el arroz." },
+      { "title": "Ligereza", "description": "Ideal para comidas suaves." }
+    ],
+    "images": [
+      "https://example.com/vegan-015-1.webp",
+      "https://example.com/vegan-015-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 16,
+    "uid": "R-Vegan_000016",
+    "name": "Trigo Mote Salteado con Verduras",
+    "description": "Grano tradicional en versión vegana.",
+    "imageUrl": "https://example.com/vegan-016.jpg",
+    "detailedInfo": "El trigo mote aporta textura firme y sabor neutro.",
+    "ingredients": [
+      { "name": "Trigo mote cocido", "quantity": "1 taza" },
+      { "name": "Cebolla", "quantity": "1/2 unidad" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Saltea la cebolla." },
+      { "step": "Agrega el trigo mote y mezcla." }
+    ],
+    "tips": [
+      { "title": "Cocción", "description": "Debe estar bien cocido antes." },
+      { "title": "Textura", "description": "Queda firme y saciante." }
+    ],
+    "images": [
+      "https://example.com/vegan-016-1.webp",
+      "https://example.com/vegan-016-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 17,
+    "uid": "R-Vegan_000017",
+    "name": "Arroz con Verduras y Soya",
+    "description": "Salteado vegano rápido.",
+    "imageUrl": "https://example.com/vegan-017.jpg",
+    "detailedInfo": "Plato simple tipo arroz frito, sin ingredientes animales.",
+    "ingredients": [
+      { "name": "Arroz cocido", "quantity": "1 taza" },
+      { "name": "Mix de verduras", "quantity": "1 taza" },
+      { "name": "Salsa de soya", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Saltea las verduras." },
+      { "step": "Agrega el arroz y la soya." }
+    ],
+    "tips": [
+      { "title": "Arroz", "description": "Usar arroz frío mejora el salteado." },
+      { "title": "Sodio", "description": "No exceder la soya." }
+    ],
+    "images": [
+      "https://example.com/vegan-017-1.webp",
+      "https://example.com/vegan-017-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 18,
+    "uid": "R-Vegan_000018",
+    "name": "Quinoa con Zapallo Asado",
+    "description": "Plato vegano reconfortante.",
+    "imageUrl": "https://example.com/vegan-018.jpg",
+    "detailedInfo": "El zapallo asado aporta dulzor natural a la quinoa.",
+    "ingredients": [
+      { "name": "Quinoa cocida", "quantity": "1 taza" },
+      { "name": "Zapallo", "quantity": "200 g" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Asa el zapallo." },
+      { "step": "Mezcla con la quinoa." }
+    ],
+    "tips": [
+      { "title": "Asado", "description": "El dorado mejora sabor." },
+      { "title": "Balance", "description": "Dulzor natural sin azúcar." }
+    ],
+    "images": [
+      "https://example.com/vegan-018-1.webp",
+      "https://example.com/vegan-018-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 19,
+    "uid": "R-Vegan_000019",
+    "name": "Arroz con Lentejas Estilo Casero",
+    "description": "Combinación clásica vegana.",
+    "imageUrl": "https://example.com/vegan-019.jpg",
+    "detailedInfo": "Arroz y lentejas forman un plato completo y económico.",
+    "ingredients": [
+      { "name": "Arroz blanco", "quantity": "1 taza cocida" },
+      { "name": "Lentejas cocidas", "quantity": "1 taza" },
+      { "name": "Cebolla", "quantity": "1/2 unidad" }
+    ],
+    "steps": [
+      { "step": "Saltea la cebolla." },
+      { "step": "Mezcla con arroz y lentejas." }
+    ],
+    "tips": [
+      { "title": "Proteína", "description": "Combinación vegetal completa." },
+      { "title": "Textura", "description": "Servir bien caliente." }
+    ],
+    "images": [
+      "https://example.com/vegan-019-1.webp",
+      "https://example.com/vegan-019-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 20,
+    "uid": "R-Vegan_000020",
+    "name": "Base de Granos Vegana ChefSkills",
+    "description": "Preparación base para múltiples platos.",
+    "imageUrl": "https://example.com/vegan-020.jpg",
+    "detailedInfo": "Receta base pensada para reutilizar granos cocidos en la semana.",
+    "ingredients": [
+      { "name": "Grano cocido", "quantity": "1 taza" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Calienta el grano." },
+      { "step": "Ajusta aceite y sal." }
+    ],
+    "tips": [
+      { "title": "Batch cooking", "description": "Ideal para planificación semanal." },
+      { "title": "Versátil", "description": "Base neutra adaptable." }
+    ],
+    "images": [
+      "https://example.com/vegan-020-1.webp",
+      "https://example.com/vegan-020-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 21,
+    "uid": "R-Vegan_000021",
+    "name": "Guiso Vegano de Lentejas Clásico",
+    "description": "Guiso reconfortante a base de lentejas y verduras.",
+    "imageUrl": "https://example.com/vegan-021.jpg",
+    "detailedInfo": "Preparación tradicional donde la lenteja es protagonista, ligada naturalmente por su propio almidón.",
+    "ingredients": [
+      { "name": "Lentejas", "quantity": "1 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Aceite vegetal", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofríe cebolla y zanahoria." },
+      { "step": "Agrega lentejas y agua." },
+      { "step": "Cocina hasta que estén tiernas." }
+    ],
+    "tips": [
+      { "title": "Espesor", "description": "Machacar algunas lentejas espesa el guiso." },
+      { "title": "Reposo", "description": "Mejora el sabor al día siguiente." }
+    ],
+    "images": [
+      "https://example.com/vegan-021-1.webp",
+      "https://example.com/vegan-021-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 22,
+    "uid": "R-Vegan_000022",
+    "name": "Garbanzos Salteados con Pimentón",
+    "description": "Legumbre dorada y especiada.",
+    "imageUrl": "https://example.com/vegan-022.jpg",
+    "detailedInfo": "Los garbanzos se doran para lograr textura firme y sabor profundo.",
+    "ingredients": [
+      { "name": "Garbanzos cocidos", "quantity": "1 taza" },
+      { "name": "Pimentón rojo", "quantity": "1/2 unidad" },
+      { "name": "Aceite vegetal", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Saltea los garbanzos hasta dorar." },
+      { "step": "Agrega pimentón y cocina brevemente." }
+    ],
+    "tips": [
+      { "title": "Dorado", "description": "No mover demasiado al inicio." },
+      { "title": "Uso", "description": "Sirve como plato o topping." }
+    ],
+    "images": [
+      "https://example.com/vegan-022-1.webp",
+      "https://example.com/vegan-022-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 23,
+    "uid": "R-Vegan_000023",
+    "name": "Porotos Negros Guisados",
+    "description": "Plato vegano profundo y saciante.",
+    "imageUrl": "https://example.com/vegan-023.jpg",
+    "detailedInfo": "Los porotos negros se cocinan lentamente para desarrollar sabor y textura cremosa.",
+    "ingredients": [
+      { "name": "Porotos negros cocidos", "quantity": "1 taza" },
+      { "name": "Cebolla", "quantity": "1/2 unidad" },
+      { "name": "Ajo", "quantity": "1/2 diente" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Sofríe cebolla y ajo." },
+      { "step": "Agrega porotos y cocina suave." }
+    ],
+    "tips": [
+      { "title": "Textura", "description": "Aplastar algunos porotos espesa." },
+      { "title": "Sabor", "description": "El reposo intensifica." }
+    ],
+    "images": [
+      "https://example.com/vegan-023-1.webp",
+      "https://example.com/vegan-023-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 24,
+    "uid": "R-Vegan_000024",
+    "name": "Curry Vegano de Garbanzos",
+    "description": "Plato especiado y aromático.",
+    "imageUrl": "https://example.com/vegan-024.jpg",
+    "detailedInfo": "Curry suave donde los garbanzos absorben especias y líquido.",
+    "ingredients": [
+      { "name": "Garbanzos cocidos", "quantity": "1 taza" },
+      { "name": "Curry", "quantity": "1 cucharadita" },
+      { "name": "Cebolla", "quantity": "1/2 unidad" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Sofríe cebolla con curry." },
+      { "step": "Agrega garbanzos y cocina." }
+    ],
+    "tips": [
+      { "title": "Especias", "description": "Tostar brevemente activa aromas." },
+      { "title": "Picor", "description": "Ajustar al gusto." }
+    ],
+    "images": [
+      "https://example.com/vegan-024-1.webp",
+      "https://example.com/vegan-024-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 25,
+    "uid": "R-Vegan_000025",
+    "name": "Lentejas Estofadas con Verduras",
+    "description": "Estofado vegano suave y nutritivo.",
+    "imageUrl": "https://example.com/vegan-025.jpg",
+    "detailedInfo": "Las lentejas se cocinan lentamente con verduras para una textura cremosa.",
+    "ingredients": [
+      { "name": "Lentejas", "quantity": "1 taza" },
+      { "name": "Zapallo", "quantity": "150 g" },
+      { "name": "Zanahoria", "quantity": "1 unidad" }
+    ],
+    "steps": [
+      { "step": "Cuece lentejas con verduras." },
+      { "step": "Cocina hasta espesar." }
+    ],
+    "tips": [
+      { "title": "Ligado", "description": "El zapallo ayuda a espesar." },
+      { "title": "Calor", "description": "Ideal para días fríos." }
+    ],
+    "images": [
+      "https://example.com/vegan-025-1.webp",
+      "https://example.com/vegan-025-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 26,
+    "uid": "R-Vegan_000026",
+    "name": "Garbanzos al Horno Especiados",
+    "description": "Snack o plato crocante.",
+    "imageUrl": "https://example.com/vegan-026.jpg",
+    "detailedInfo": "Los garbanzos al horno desarrollan textura crujiente y sabor concentrado.",
+    "ingredients": [
+      { "name": "Garbanzos cocidos", "quantity": "1 taza" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" },
+      { "name": "Especias", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Seca los garbanzos." },
+      { "step": "Hornea hasta crocantes." }
+    ],
+    "tips": [
+      { "title": "Secado", "description": "Clave para crocancia." },
+      { "title": "Uso", "description": "Sirven como topping." }
+    ],
+    "images": [
+      "https://example.com/vegan-026-1.webp",
+      "https://example.com/vegan-026-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 27,
+    "uid": "R-Vegan_000027",
+    "name": "Porotos Blancos Guisados",
+    "description": "Plato vegano suave y cremoso.",
+    "imageUrl": "https://example.com/vegan-027.jpg",
+    "detailedInfo": "Los porotos blancos aportan textura mantecosa.",
+    "ingredients": [
+      { "name": "Porotos blancos cocidos", "quantity": "1 taza" },
+      { "name": "Cebolla", "quantity": "1/2 unidad" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Sofríe cebolla." },
+      { "step": "Agrega porotos y cocina suave." }
+    ],
+    "tips": [
+      { "title": "Cremosidad", "description": "Romper algunos porotos." },
+      { "title": "Simplicidad", "description": "Menos es más." }
+    ],
+    "images": [
+      "https://example.com/vegan-027-1.webp",
+      "https://example.com/vegan-027-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 28,
+    "uid": "R-Vegan_000028",
+    "name": "Mix de Legumbres Salteadas",
+    "description": "Plato energético y completo.",
+    "imageUrl": "https://example.com/vegan-028.jpg",
+    "detailedInfo": "Combinación de legumbres para un plato vegetal potente.",
+    "ingredients": [
+      { "name": "Legumbres cocidas", "quantity": "2 tazas" },
+      { "name": "Cebolla", "quantity": "1/2 unidad" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Saltea cebolla." },
+      { "step": "Agrega legumbres y calienta." }
+    ],
+    "tips": [
+      { "title": "Combinación", "description": "Usar diferentes texturas." },
+      { "title": "Nutrición", "description": "Plato muy saciante." }
+    ],
+    "images": [
+      "https://example.com/vegan-028-1.webp",
+      "https://example.com/vegan-028-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 29,
+    "uid": "R-Vegan_000029",
+    "name": "Lentejas Crocantes al Sartén",
+    "description": "Lentejas doradas y firmes.",
+    "imageUrl": "https://example.com/vegan-029.jpg",
+    "detailedInfo": "Las lentejas se doran para cambiar su textura habitual.",
+    "ingredients": [
+      { "name": "Lentejas cocidas", "quantity": "1 taza" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Saltea lentejas a fuego alto." }
+    ],
+    "tips": [
+      { "title": "Dorado", "description": "No mover constantemente." },
+      { "title": "Uso", "description": "Excelente topping." }
+    ],
+    "images": [
+      "https://example.com/vegan-029-1.webp",
+      "https://example.com/vegan-029-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 30,
+    "uid": "R-Vegan_000030",
+    "name": "Base de Legumbres Vegana ChefSkills",
+    "description": "Preparación base reutilizable.",
+    "imageUrl": "https://example.com/vegan-030.jpg",
+    "detailedInfo": "Receta base pensada para reutilizar legumbres en múltiples platos.",
+    "ingredients": [
+      { "name": "Legumbres cocidas", "quantity": "1 taza" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Calienta las legumbres." },
+      { "step": "Ajusta aceite y sal." }
+    ],
+    "tips": [
+      { "title": "Batch cooking", "description": "Ideal para planificación." },
+      { "title": "Versatilidad", "description": "Base para muchos platos." }
+    ],
+    "images": [
+      "https://example.com/vegan-030-1.webp",
+      "https://example.com/vegan-030-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
     {
-      "id": 2,
-      "uid": "R-Vegan_000002",
-      "name": "Poke Bowl Vegano con Sandía Marinada",
-      "description": "Un poke bowl fresco y colorido donde la sandía se transforma en una alternativa vegetal al pescado marinado. Ligero, sorprendente e ideal para días calurosos.",
-      "imageUrl": "https://example.com/poke-bowl-sandia.jpg",
-      "detailedInfo": "La sandía, al marinarse con tahini, soja, limón y especias, y luego hornearse lentamente, adquiere una textura firme y un sabor umami que recuerda al pescado. Se sirve sobre arroz con toppings frescos como edamame, pepino, cebolla y zanahoria, logrando un bowl vegano equilibrado y lleno de sabor.",
-      "ingredients": [
-        { "name": "Sandía en cubos", "quantity": "450 g" },
-        { "name": "Tahini", "quantity": "1 cucharadita" },
-        { "name": "Salsa de soja o tamari", "quantity": "2 cucharadas" },
-        { "name": "Vinagre de arroz", "quantity": "1 cucharada" },
-        { "name": "Jugo de limón", "quantity": "1 cucharada" },
-        { "name": "Salsa de humo", "quantity": "1/8 cucharadita" },
-        { "name": "Ajo en polvo", "quantity": "1/4 cucharadita" },
-        { "name": "Cebolla en polvo", "quantity": "1/4 cucharadita" },
-        { "name": "Jengibre en polvo", "quantity": "1/8 cucharadita" },
-        { "name": "Arroz blanco", "quantity": "200 g" },
-        { "name": "Edamame cocido", "quantity": "100 g" },
-        { "name": "Pepino", "quantity": "1/2 unidad" },
-        { "name": "Cebolla roja", "quantity": "1/2 unidad" },
-        { "name": "Zanahoria", "quantity": "2 unidades" },
-        { "name": "Granada", "quantity": "1/2 unidad" },
-        { "name": "Aguacate", "quantity": "1/2 unidad" },
-        { "name": "Mango", "quantity": "1/2 unidad" },
-        { "name": "Alga wakame", "quantity": "Al gusto" },
-        { "name": "Sésamo negro", "quantity": "Al gusto" },
-        { "name": "Limón", "quantity": "Al gusto" }
-      ],
-      "steps": [
-        { "step": "Cortar la sandía en cubos parejos y colocarlos en una fuente apta para horno." },
-        { "step": "Mezclar tahini, salsa de soja, vinagre, jugo de limón, salsa de humo y las especias hasta obtener una marinada homogénea." },
-        { "step": "Cubrir los cubos de sandía con la marinada y mezclar para que todos queden impregnados." },
-        { "step": "Marinar por 30 minutos o hasta 24 horas para un sabor más intenso." },
-        { "step": "Hornear la sandía a 180°C por 1 hora. Si suelta agua, retirar el exceso y continuar horneando unos minutos." },
-        { "step": "Dejar enfriar completamente unos 30 minutos para que tome consistencia." },
-        { "step": "Cocinar el arroz y preparar los toppings: pepino, cebolla, zanahoria, granada, edamame, mango y aguacate." },
-        { "step": "Montar el bowl colocando el arroz como base y distribuyendo los toppings alrededor." },
-        { "step": "Poner la sandía marinada encima y decorar con sésamo negro y un chorrito de limón." }
-      ],
-      "tips": [
-        { "title": "Sandía más firme", "description": "Deja enfriar completamente después del horneado para mejorar la textura." },
-        { "title": "Marinado profundo", "description": "Si buscas sabor más intenso, deja reposar la sandía toda la noche antes de hornear." },
-        { "title": "Ahumado opcional", "description": "La salsa de humo potencia el umami y da un efecto más 'marino'." },
-        { "title": "Toppings equilibrados", "description": "Añadir mango o aguacate aporta contraste dulce y cremoso." },
-        { "title": "Sustitutos útiles", "description": "Si no tienes vinagre de arroz, usa vinagre de manzana suave." }
-      ],
-      "images": [
-        "https://example.com/poke-bowl-sandia1.webp",
-        "https://example.com/poke-bowl-sandia2.webp"
-      ],
-      "rating": null,
-      "servings": null,
-      "time": null,
-      "difficulty": null
-    },
+    "id": 31,
+    "uid": "R-Vegan_000031",
+    "name": "Crema Vegana de Zapallo",
+    "description": "Crema suave y naturalmente espesa.",
+    "imageUrl": "https://example.com/vegan-031.jpg",
+    "detailedInfo": "El zapallo aporta dulzor y cuerpo sin necesidad de lácteos.",
+    "ingredients": [
+      { "name": "Zapallo", "quantity": "500 g" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Agua", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofríe la cebolla." },
+      { "step": "Agrega zapallo y agua." },
+      { "step": "Cocina y procesa." }
+    ],
+    "tips": [
+      { "title": "Espesor", "description": "Procesar en caliente logra mayor cremosidad." },
+      { "title": "Dulzor", "description": "No necesita azúcar." }
+    ],
+    "images": [
+      "https://example.com/vegan-031-1.webp",
+      "https://example.com/vegan-031-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 32,
+    "uid": "R-Vegan_000032",
+    "name": "Sopa Vegana de Verduras Clásica",
+    "description": "Sopa ligera y reconfortante.",
+    "imageUrl": "https://example.com/vegan-032.jpg",
+    "detailedInfo": "Sopa base con verduras cortadas y cocción suave.",
+    "ingredients": [
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Papa", "quantity": "1 unidad" },
+      { "name": "Apio", "quantity": "1 rama" },
+      { "name": "Agua", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Corta las verduras." },
+      { "step": "Cuece en agua hasta tiernas." }
+    ],
+    "tips": [
+      { "title": "Corte", "description": "Uniforme para cocción pareja." },
+      { "title": "Ligereza", "description": "Ideal como base." }
+    ],
+    "images": [
+      "https://example.com/vegan-032-1.webp",
+      "https://example.com/vegan-032-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 33,
+    "uid": "R-Vegan_000033",
+    "name": "Crema Vegana de Zanahoria",
+    "description": "Crema vegetal dulce y aromática.",
+    "imageUrl": "https://example.com/vegan-033.jpg",
+    "detailedInfo": "La zanahoria aporta color y dulzor natural.",
+    "ingredients": [
+      { "name": "Zanahoria", "quantity": "500 g" },
+      { "name": "Cebolla", "quantity": "1/2 unidad" },
+      { "name": "Agua", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Cuece zanahoria y cebolla." },
+      { "step": "Procesa hasta liso." }
+    ],
+    "tips": [
+      { "title": "Color", "description": "No sobrecocer para mantenerlo." },
+      { "title": "Textura", "description": "Agregar agua gradualmente." }
+    ],
+    "images": [
+      "https://example.com/vegan-033-1.webp",
+      "https://example.com/vegan-033-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 34,
+    "uid": "R-Vegan_000034",
+    "name": "Crema Vegana de Papa",
+    "description": "Crema espesa y reconfortante.",
+    "imageUrl": "https://example.com/vegan-034.jpg",
+    "detailedInfo": "La papa actúa como espesante natural.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "500 g" },
+      { "name": "Cebolla", "quantity": "1/2 unidad" },
+      { "name": "Agua", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Cuece la papa con cebolla." },
+      { "step": "Procesa hasta cremoso." }
+    ],
+    "tips": [
+      { "title": "Espesor", "description": "No agregar demasiada agua." },
+      { "title": "Base", "description": "Sirve como crema neutra." }
+    ],
+    "images": [
+      "https://example.com/vegan-034-1.webp",
+      "https://example.com/vegan-034-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 35,
+    "uid": "R-Vegan_000035",
+    "name": "Sopa Vegana de Lentejas",
+    "description": "Sopa nutritiva y saciante.",
+    "imageUrl": "https://example.com/vegan-035.jpg",
+    "detailedInfo": "Las lentejas aportan cuerpo y proteína vegetal.",
+    "ingredients": [
+      { "name": "Lentejas", "quantity": "1 taza" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Agua", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Cuece las lentejas con verduras." },
+      { "step": "Ajusta textura." }
+    ],
+    "tips": [
+      { "title": "Ligado", "description": "Procesar una parte espesa la sopa." },
+      { "title": "Reposo", "description": "Mejora sabor." }
+    ],
+    "images": [
+      "https://example.com/vegan-035-1.webp",
+      "https://example.com/vegan-035-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 36,
+    "uid": "R-Vegan_000036",
+    "name": "Crema Vegana de Brócoli",
+    "description": "Crema vegetal verde y suave.",
+    "imageUrl": "https://example.com/vegan-036.jpg",
+    "detailedInfo": "El brócoli aporta sabor vegetal intenso.",
+    "ingredients": [
+      { "name": "Brócoli", "quantity": "1 unidad" },
+      { "name": "Papa", "quantity": "1 unidad" },
+      { "name": "Agua", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Cuece brócoli y papa." },
+      { "step": "Procesa hasta liso." }
+    ],
+    "tips": [
+      { "title": "Color", "description": "Cocción breve mantiene verde." },
+      { "title": "Textura", "description": "La papa suaviza." }
+    ],
+    "images": [
+      "https://example.com/vegan-036-1.webp",
+      "https://example.com/vegan-036-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 37,
+    "uid": "R-Vegan_000037",
+    "name": "Sopa Vegana de Avena",
+    "description": "Sopa espesa y reconfortante.",
+    "imageUrl": "https://example.com/vegan-037.jpg",
+    "detailedInfo": "La avena actúa como espesante natural.",
+    "ingredients": [
+      { "name": "Avena", "quantity": "1/2 taza" },
+      { "name": "Cebolla", "quantity": "1/2 unidad" },
+      { "name": "Agua", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Cuece avena con cebolla." },
+      { "step": "Procesa si deseas." }
+    ],
+    "tips": [
+      { "title": "Textura", "description": "Se espesa al reposar." },
+      { "title": "Uso", "description": "Ideal para climas fríos." }
+    ],
+    "images": [
+      "https://example.com/vegan-037-1.webp",
+      "https://example.com/vegan-037-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 38,
+    "uid": "R-Vegan_000038",
+    "name": "Crema Vegana de Coliflor",
+    "description": "Crema blanca y suave.",
+    "imageUrl": "https://example.com/vegan-038.jpg",
+    "detailedInfo": "La coliflor logra textura sedosa sin lácteos.",
+    "ingredients": [
+      { "name": "Coliflor", "quantity": "1 unidad pequeña" },
+      { "name": "Papa", "quantity": "1 unidad" },
+      { "name": "Agua", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Cuece coliflor y papa." },
+      { "step": "Procesa hasta cremoso." }
+    ],
+    "tips": [
+      { "title": "Sabor", "description": "Suave y neutro." },
+      { "title": "Base", "description": "Ideal para variar." }
+    ],
+    "images": [
+      "https://example.com/vegan-038-1.webp",
+      "https://example.com/vegan-038-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 39,
+    "uid": "R-Vegan_000039",
+    "name": "Sopa Vegana de Arroz",
+    "description": "Sopa simple y liviana.",
+    "imageUrl": "https://example.com/vegan-039.jpg",
+    "detailedInfo": "El arroz espesa suavemente el caldo.",
+    "ingredients": [
+      { "name": "Arroz", "quantity": "1/2 taza" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Agua", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Cuece arroz con verduras." }
+    ],
+    "tips": [
+      { "title": "Espesor", "description": "Procesar una parte si se desea." },
+      { "title": "Ligereza", "description": "Ideal digestiva." }
+    ],
+    "images": [
+      "https://example.com/vegan-039-1.webp",
+      "https://example.com/vegan-039-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 40,
+    "uid": "R-Vegan_000040",
+    "name": "Base de Sopa Vegana ChefSkills",
+    "description": "Base neutra para sopas y cremas.",
+    "imageUrl": "https://example.com/vegan-040.jpg",
+    "detailedInfo": "Preparación base para múltiples sopas veganas.",
+    "ingredients": [
+      { "name": "Verduras", "quantity": "A elección" },
+      { "name": "Agua", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Cuece verduras en agua." },
+      { "step": "Ajusta sal." }
+    ],
+    "tips": [
+      { "title": "Versátil", "description": "Base para infinitas variaciones." },
+      { "title": "Planificación", "description": "Ideal para batch cooking." }
+    ],
+    "images": [
+      "https://example.com/vegan-040-1.webp",
+      "https://example.com/vegan-040-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
     {
-      "id": 3,
-      "uid": "R-Vegan_000003",
-      "name": "Arroz a la Jardinera Vegano",
-      "description": "Versión vegana del clásico arroz peruano, lleno de color, verduras frescas y el característico toque amarillo del palillo.",
-      "imageUrl": "https://example.com/arroz-jardinera-vegan.jpg",
-      "detailedInfo": "Un arroz vibrante y aromático preparado exclusivamente con ingredientes vegetales. El sofrito de cebolla y ajo aporta profundidad, mientras que las verduras —zanahoria, choclo, arvejas y pimiento— suman textura y dulzor natural. El palillo brinda su tono amarillo clásico y el caldo vegetal realza el sabor sin necesidad de productos animales. Ideal como acompañamiento o plato principal.",
-      "ingredients": [
-        { "name": "Arroz blanco", "quantity": "3 tazas" },
-        { "name": "Caldo vegetal", "quantity": "4 tazas" },
-        { "name": "Cebolla", "quantity": "1 unidad" },
-        { "name": "Ajo molido", "quantity": "2 cucharadas" },
-        { "name": "Choclo", "quantity": "1 unidad" },
-        { "name": "Zanahoria", "quantity": "1 unidad" },
-        { "name": "Arvejas", "quantity": "100 g" },
-        { "name": "Pimiento", "quantity": "1 unidad" },
-        { "name": "Palillo", "quantity": "1 cucharadita" },
-        { "name": "Sal", "quantity": "Al gusto" },
-        { "name": "Pimienta", "quantity": "Al gusto" },
-        { "name": "Comino", "quantity": "Al gusto" },
-        { "name": "Aceite vegetal", "quantity": "2 cucharadas" },
-        { "name": "Culantro fresco", "quantity": "2 cucharadas" }
-      ],
-      "steps": [
-        { "step": "Calienta el aceite y sofríe la cebolla y el ajo molido hasta que estén ligeramente dorados." },
-        { "step": "Agrega sal, pimienta, comino y el palillo. Mezcla para integrar el color y el aroma." },
-        { "step": "Incorpora la zanahoria y las arvejas, cocinando unos minutos hasta que comiencen a ablandarse." },
-        { "step": "Añade el arroz previamente lavado y mézclalo para impregnarlo del sofrito." },
-        { "step": "Vierte el caldo vegetal y agrega el choclo. Tapa y cocina a fuego bajo hasta que el arroz esté cocido y suelto." },
-        { "step": "Añade el pimiento picado y el culantro fresco justo antes de servir para mantener su color y aroma." }
-      ],
-      "tips": [
-        { "title": "Color natural", "description": "El palillo da un amarillo intenso sin necesidad de colorantes artificiales." },
-        { "title": "Más sabor vegetal", "description": "Usa caldo vegetal casero para un resultado más aromático." },
-        { "title": "Textura perfecta", "description": "Lava el arroz hasta que el agua salga casi transparente para que quede más suelto." },
-        { "title": "Extra crunchy", "description": "Agrega tiras finas de pimiento justo al final para que mantengan crocancia." }
-      ],
-      "images": [
-        "https://example.com/arroz-jardinera-vegan1.webp",
-        "https://example.com/arroz-jardinera-vegan2.webp"
-      ],
-      "rating": null,
-      "servings": null,
-      "time": null,
-      "difficulty": null
-    },
+    "id": 41,
+    "uid": "R-Vegan_000041",
+    "name": "Salteado Vegano de Verduras al Wok",
+    "description": "Verduras crocantes salteadas a fuego alto.",
+    "imageUrl": "https://example.com/vegan-041.jpg",
+    "detailedInfo": "Salteado rápido que mantiene color, textura y sabor vegetal mediante fuego alto y poco tiempo.",
+    "ingredients": [
+      { "name": "Mix de verduras", "quantity": "2 tazas" },
+      { "name": "Aceite vegetal", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Calienta el wok a fuego alto." },
+      { "step": "Saltea las verduras rápidamente." },
+      { "step": "Ajusta sal y sirve." }
+    ],
+    "tips": [
+      { "title": "Fuego", "description": "Alto para sellar sin cocer de más." },
+      { "title": "Carga", "description": "No sobrecargar el wok." }
+    ],
+    "images": [
+      "https://example.com/vegan-041-1.webp",
+      "https://example.com/vegan-041-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 42,
+    "uid": "R-Vegan_000042",
+    "name": "Salteado de Tofu y Verduras",
+    "description": "Tofu dorado con vegetales.",
+    "imageUrl": "https://example.com/vegan-042.jpg",
+    "detailedInfo": "El tofu firme se dora para mejorar textura y absorber sabores del salteado.",
+    "ingredients": [
+      { "name": "Tofu firme", "quantity": "200 g" },
+      { "name": "Verduras", "quantity": "1 taza" },
+      { "name": "Aceite vegetal", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Dora el tofu en cubos." },
+      { "step": "Agrega verduras y saltea." }
+    ],
+    "tips": [
+      { "title": "Tofu", "description": "Secar antes de dorar." },
+      { "title": "Textura", "description": "No mover al inicio." }
+    ],
+    "images": [
+      "https://example.com/vegan-042-1.webp",
+      "https://example.com/vegan-042-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 43,
+    "uid": "R-Vegan_000043",
+    "name": "Salteado Vegano con Salsa de Soya",
+    "description": "Clásico rápido y sabroso.",
+    "imageUrl": "https://example.com/vegan-043.jpg",
+    "detailedInfo": "Salteado simple donde la soya aporta umami y salinidad.",
+    "ingredients": [
+      { "name": "Verduras", "quantity": "2 tazas" },
+      { "name": "Salsa de soya", "quantity": "Al gusto" },
+      { "name": "Aceite vegetal", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Saltea verduras a fuego alto." },
+      { "step": "Agrega soya al final." }
+    ],
+    "tips": [
+      { "title": "Sodio", "description": "Agregar soya con moderación." },
+      { "title": "Tiempo", "description": "Cocción breve mantiene crocante." }
+    ],
+    "images": [
+      "https://example.com/vegan-043-1.webp",
+      "https://example.com/vegan-043-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 44,
+    "uid": "R-Vegan_000044",
+    "name": "Wok Vegano de Brócoli y Zanahoria",
+    "description": "Salteado colorido y nutritivo.",
+    "imageUrl": "https://example.com/vegan-044.jpg",
+    "detailedInfo": "Combinación clásica de verduras con cocción rápida.",
+    "ingredients": [
+      { "name": "Brócoli", "quantity": "1 taza" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Saltea zanahoria primero." },
+      { "step": "Agrega brócoli y cocina breve." }
+    ],
+    "tips": [
+      { "title": "Orden", "description": "Verduras duras primero." },
+      { "title": "Color", "description": "No sobrecocer." }
+    ],
+    "images": [
+      "https://example.com/vegan-044-1.webp",
+      "https://example.com/vegan-044-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 45,
+    "uid": "R-Vegan_000045",
+    "name": "Salteado Vegano de Champiñones",
+    "description": "Champiñones dorados y jugosos.",
+    "imageUrl": "https://example.com/vegan-045.jpg",
+    "detailedInfo": "Los champiñones desarrollan sabor profundo al dorarse correctamente.",
+    "ingredients": [
+      { "name": "Champiñones", "quantity": "200 g" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Saltea champiñones sin mover." },
+      { "step": "Ajusta sal al final." }
+    ],
+    "tips": [
+      { "title": "Dorado", "description": "No salar al inicio." },
+      { "title": "Umami", "description": "Ideal como base." }
+    ],
+    "images": [
+      "https://example.com/vegan-045-1.webp",
+      "https://example.com/vegan-045-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 46,
+    "uid": "R-Vegan_000046",
+    "name": "Wok Vegano de Repollo",
+    "description": "Repollo salteado rápido.",
+    "imageUrl": "https://example.com/vegan-046.jpg",
+    "detailedInfo": "El repollo se vuelve dulce y tierno con cocción breve.",
+    "ingredients": [
+      { "name": "Repollo", "quantity": "2 tazas" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Saltea repollo a fuego alto." }
+    ],
+    "tips": [
+      { "title": "Tiempo", "description": "Cocción corta evita amargor." },
+      { "title": "Textura", "description": "Debe quedar ligeramente crocante." }
+    ],
+    "images": [
+      "https://example.com/vegan-046-1.webp",
+      "https://example.com/vegan-046-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 47,
+    "uid": "R-Vegan_000047",
+    "name": "Salteado Vegano de Zapallito",
+    "description": "Plato vegetal ligero.",
+    "imageUrl": "https://example.com/vegan-047.jpg",
+    "detailedInfo": "El zapallito se cocina rápido para mantener firmeza.",
+    "ingredients": [
+      { "name": "Zapallito", "quantity": "2 unidades" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Saltea zapallito a fuego medio-alto." }
+    ],
+    "tips": [
+      { "title": "Agua", "description": "Evitar que suelte exceso." },
+      { "title": "Uso", "description": "Sirve como base o acompañamiento." }
+    ],
+    "images": [
+      "https://example.com/vegan-047-1.webp",
+      "https://example.com/vegan-047-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 48,
+    "uid": "R-Vegan_000048",
+    "name": "Wok Vegano de Verduras Congeladas",
+    "description": "Salteado práctico y rápido.",
+    "imageUrl": "https://example.com/vegan-048.jpg",
+    "detailedInfo": "Las verduras congeladas se saltean directamente sin descongelar.",
+    "ingredients": [
+      { "name": "Verduras congeladas", "quantity": "2 tazas" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Saltea verduras congeladas a fuego alto." }
+    ],
+    "tips": [
+      { "title": "Descongelado", "description": "No descongelar previamente." },
+      { "title": "Fuego", "description": "Alto para evaporar agua." }
+    ],
+    "images": [
+      "https://example.com/vegan-048-1.webp",
+      "https://example.com/vegan-048-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 49,
+    "uid": "R-Vegan_000049",
+    "name": "Salteado Vegano de Verduras y Jengibre",
+    "description": "Salteado aromático y fresco.",
+    "imageUrl": "https://example.com/vegan-049.jpg",
+    "detailedInfo": "El jengibre aporta aroma y picor suave.",
+    "ingredients": [
+      { "name": "Verduras", "quantity": "2 tazas" },
+      { "name": "Jengibre", "quantity": "Un toque" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Saltea jengibre brevemente." },
+      { "step": "Agrega verduras y cocina rápido." }
+    ],
+    "tips": [
+      { "title": "Jengibre", "description": "No quemar." },
+      { "title": "Aroma", "description": "Agregar al inicio." }
+    ],
+    "images": [
+      "https://example.com/vegan-049-1.webp",
+      "https://example.com/vegan-049-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 50,
+    "uid": "R-Vegan_000050",
+    "name": "Base de Salteado Vegano ChefSkills",
+    "description": "Preparación base para woks veganos.",
+    "imageUrl": "https://example.com/vegan-050.jpg",
+    "detailedInfo": "Base neutra pensada para variar verduras y condimentos.",
+    "ingredients": [
+      { "name": "Verduras", "quantity": "2 tazas" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Calienta aceite." },
+      { "step": "Saltea verduras rápidamente." }
+    ],
+    "tips": [
+      { "title": "Versatilidad", "description": "Admite múltiples combinaciones." },
+      { "title": "Tiempo", "description": "Clave para textura." }
+    ],
+    "images": [
+      "https://example.com/vegan-050-1.webp",
+      "https://example.com/vegan-050-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
     {
-      "id": 4,
-      "uid": "R-Vegan_000004",
-      "name": "Arroz Primavera Vegano",
-      "description": "Un arroz colorido, fresco y totalmente vegano. Dorado con sofrito de ajo y cebolla para lograr granos sueltos y una textura perfecta.",
-      "imageUrl": "https://example.com/arroz-primavera-vegan.jpg",
-      "detailedInfo": "Versión vegana del clásico Arroz Primavera. El arroz se remoja 20 minutos para mejorar la cocción y luego se dora en sofrito para asegurar graneado perfecto. Se cocina con caldo vegetal y se mezcla con zanahoria, chícharos, elote y pimiento. El cilantro aporta frescura al final.",
-      "ingredients": [
-        { "name": "Arroz", "quantity": "2 tazas (aprox. 400 g)" },
-        { "name": "Caldo vegetal", "quantity": "4 tazas (aprox. 1000 ml)" },
-        { "name": "Chícharos (guisantes)", "quantity": "1/2 taza (75–80 g)" },
-        { "name": "Zanahoria", "quantity": "1 unidad (60–80 g)" },
-        { "name": "Pimiento morrón", "quantity": "1 unidad mediana (150 g)" },
-        { "name": "Elote (maíz dulce)", "quantity": "1 lata pequeña (140–150 g drenado)" },
-        { "name": "Ajo", "quantity": "1 diente" },
-        { "name": "Cebolla", "quantity": "1/4 unidad (30–40 g)" },
-        { "name": "Aceite vegetal", "quantity": "2–3 cucharadas (30–45 ml)" },
-        { "name": "Sal", "quantity": "Al gusto" },
-        { "name": "Cilantro fresco", "quantity": "Hojitas al gusto" }
-      ],
-      "steps": [
-        { "step": "Remoja el arroz en agua caliente durante 20 minutos. Enjuágalo y escúrrelo muy bien." },
-        { "step": "Pica la zanahoria y cocina la zanahoria junto con los chícharos hasta que estén suaves. Escurre y reserva." },
-        { "step": "Pica el pimiento morrón, el ajo y la cebolla en cubos pequeños." },
-        { "step": "En una olla caliente, agrega el aceite vegetal y sofríe el ajo y la cebolla hasta que suelten aroma." },
-        { "step": "Agrega el arroz escurrido y dóralo moviendo constantemente hasta que tome un color ligeramente tostado." },
-        { "step": "Vierte el caldo vegetal (1000 ml) y añade el pimiento, el elote escurrido, la zanahoria y los chícharos." },
-        { "step": "Añade sal al gusto, tapa la olla y cocina a fuego medio-bajo durante 20–25 minutos hasta que el arroz esté suave y graneado." },
-        { "step": "Agrega cilantro fresco justo al final para darle aroma y color." }
-      ],
-      "tips": [
-        { "title": "Remojo clave", "description": "Remojar el arroz mejora la cocción y ayuda a que quede más suelto." },
-        { "title": "Textura graneada", "description": "Dorar el arroz es clave para lograr un resultado perfecto." },
-        { "title": "Proporción ideal", "description": "2 tazas de arroz → 4 tazas (1000 ml) de caldo vegetal." },
-        { "title": "No lo muevas", "description": "Evita remover el arroz después de agregar el caldo para que no se bata." }
-      ],
-      "images": [
-        "https://example.com/arroz-primavera-vegan1.webp",
-        "https://example.com/arroz-primavera-vegan2.webp"
-      ],
-      "rating": null,
-      "servings": null,
-      "time": null,
-      "difficulty": null
-    },
+    "id": 51,
+    "uid": "R-Vegan_000051",
+    "name": "Pastel de Papa Vegano",
+    "description": "Clásico reconfortante en versión 100 % vegetal.",
+    "imageUrl": "https://example.com/vegan-051.jpg",
+    "detailedInfo": "Versión vegana del pastel de papa, donde el relleno de legumbres y verduras reemplaza la carne sin perder profundidad.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "800 g" },
+      { "name": "Lentejas cocidas", "quantity": "1 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Cuece y pisa las papas." },
+      { "step": "Sofríe cebolla con lentejas." },
+      { "step": "Arma capas y hornea." }
+    ],
+    "tips": [
+      { "title": "Purê", "description": "Debe quedar espeso para cubrir bien." },
+      { "title": "Reposo", "description": "Asentar antes de servir." }
+    ],
+    "images": [
+      "https://example.com/vegan-051-1.webp",
+      "https://example.com/vegan-051-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 52,
+    "uid": "R-Vegan_000052",
+    "name": "Lasaña Vegana de Verduras",
+    "description": "Lasaña vegetal sin lácteos.",
+    "imageUrl": "https://example.com/vegan-052.jpg",
+    "detailedInfo": "Capas de verduras salteadas y salsa vegetal ligadas naturalmente.",
+    "ingredients": [
+      { "name": "Placas de lasaña", "quantity": "Cantidad necesaria" },
+      { "name": "Verduras salteadas", "quantity": "2 tazas" },
+      { "name": "Salsa de tomate", "quantity": "1 taza" }
+    ],
+    "steps": [
+      { "step": "Saltea las verduras." },
+      { "step": "Arma capas con salsa." },
+      { "step": "Hornea hasta burbujear." }
+    ],
+    "tips": [
+      { "title": "Humedad", "description": "La salsa evita resequedad." },
+      { "title": "Reposo", "description": "Cortar una vez asentada." }
+    ],
+    "images": [
+      "https://example.com/vegan-052-1.webp",
+      "https://example.com/vegan-052-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 53,
+    "uid": "R-Vegan_000053",
+    "name": "Hamburguesas Veganas de Lentejas",
+    "description": "Hamburguesas vegetales firmes y sabrosas.",
+    "imageUrl": "https://example.com/vegan-053.jpg",
+    "detailedInfo": "Las lentejas actúan como base proteica y ligante natural.",
+    "ingredients": [
+      { "name": "Lentejas cocidas", "quantity": "1 taza" },
+      { "name": "Cebolla", "quantity": "1/2 unidad" },
+      { "name": "Avena", "quantity": "1/2 taza" }
+    ],
+    "steps": [
+      { "step": "Procesa los ingredientes." },
+      { "step": "Forma hamburguesas." },
+      { "step": "Dora en sartén." }
+    ],
+    "tips": [
+      { "title": "Reposo", "description": "Refrigerar mejora firmeza." },
+      { "title": "Cocción", "description": "Fuego medio para dorar." }
+    ],
+    "images": [
+      "https://example.com/vegan-053-1.webp",
+      "https://example.com/vegan-053-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 54,
+    "uid": "R-Vegan_000054",
+    "name": "Empanadas Veganas de Verduras",
+    "description": "Empanadas vegetales jugosas.",
+    "imageUrl": "https://example.com/vegan-054.jpg",
+    "detailedInfo": "Relleno vegetal bien condimentado envuelto en masa crujiente.",
+    "ingredients": [
+      { "name": "Masa para empanadas", "quantity": "Cantidad necesaria" },
+      { "name": "Verduras salteadas", "quantity": "2 tazas" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Prepara el relleno." },
+      { "step": "Rellena y cierra empanadas." },
+      { "step": "Hornea hasta dorar." }
+    ],
+    "tips": [
+      { "title": "Relleno", "description": "Debe estar frío al armar." },
+      { "title": "Sellado", "description": "Cerrar bien evita fugas." }
+    ],
+    "images": [
+      "https://example.com/vegan-054-1.webp",
+      "https://example.com/vegan-054-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 55,
+    "uid": "R-Vegan_000055",
+    "name": "Chili Vegano de Porotos",
+    "description": "Chili vegetal intenso y especiado.",
+    "imageUrl": "https://example.com/vegan-055.jpg",
+    "detailedInfo": "Los porotos aportan cuerpo y proteína en este clásico versionado.",
+    "ingredients": [
+      { "name": "Porotos cocidos", "quantity": "2 tazas" },
+      { "name": "Tomate triturado", "quantity": "1 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" }
+    ],
+    "steps": [
+      { "step": "Sofríe cebolla." },
+      { "step": "Agrega tomate y porotos." },
+      { "step": "Cocina hasta espesar." }
+    ],
+    "tips": [
+      { "title": "Especias", "description": "Agregar al sofrito." },
+      { "title": "Reposo", "description": "Mejora intensidad." }
+    ],
+    "images": [
+      "https://example.com/vegan-055-1.webp",
+      "https://example.com/vegan-055-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 56,
+    "uid": "R-Vegan_000056",
+    "name": "Albóndigas Veganas de Garbanzos",
+    "description": "Albóndigas vegetales firmes.",
+    "imageUrl": "https://example.com/vegan-056.jpg",
+    "detailedInfo": "Los garbanzos se procesan para formar albóndigas doradas.",
+    "ingredients": [
+      { "name": "Garbanzos cocidos", "quantity": "1 taza" },
+      { "name": "Avena", "quantity": "1/2 taza" },
+      { "name": "Cebolla", "quantity": "1/2 unidad" }
+    ],
+    "steps": [
+      { "step": "Procesa ingredientes." },
+      { "step": "Forma albóndigas." },
+      { "step": "Dora en sartén." }
+    ],
+    "tips": [
+      { "title": "Textura", "description": "No sobreprocesar." },
+      { "title": "Cocción", "description": "Dorar sin mover." }
+    ],
+    "images": [
+      "https://example.com/vegan-056-1.webp",
+      "https://example.com/vegan-056-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 57,
+    "uid": "R-Vegan_000057",
+    "name": "Tortilla Vegana de Papas",
+    "description": "Versión vegetal del clásico.",
+    "imageUrl": "https://example.com/vegan-057.jpg",
+    "detailedInfo": "La papa se liga sin huevo mediante técnica y reposo.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "600 g" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Cocina papas y cebolla." },
+      { "step": "Compacta y dora." }
+    ],
+    "tips": [
+      { "title": "Ligado", "description": "Presionar bien." },
+      { "title": "Corte", "description": "Servir una vez firme." }
+    ],
+    "images": [
+      "https://example.com/vegan-057-1.webp",
+      "https://example.com/vegan-057-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 58,
+    "uid": "R-Vegan_000058",
+    "name": "Fideos Veganos con Salsa de Tomate",
+    "description": "Pasta clásica sin ingredientes animales.",
+    "imageUrl": "https://example.com/vegan-058.jpg",
+    "detailedInfo": "Plato simple donde el tomate aporta cuerpo y acidez.",
+    "ingredients": [
+      { "name": "Pasta", "quantity": "200 g" },
+      { "name": "Salsa de tomate", "quantity": "1 taza" }
+    ],
+    "steps": [
+      { "step": "Cuece la pasta." },
+      { "step": "Mezcla con salsa caliente." }
+    ],
+    "tips": [
+      { "title": "Punto", "description": "Cocer al dente." },
+      { "title": "Ligado", "description": "Agregar un poco de agua de cocción." }
+    ],
+    "images": [
+      "https://example.com/vegan-058-1.webp",
+      "https://example.com/vegan-058-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 59,
+    "uid": "R-Vegan_000059",
+    "name": "Salteado Vegano Tipo Chop Suey",
+    "description": "Clásico adaptado a base vegetal.",
+    "imageUrl": "https://example.com/vegan-059.jpg",
+    "detailedInfo": "Verduras variadas salteadas rápidamente.",
+    "ingredients": [
+      { "name": "Verduras", "quantity": "2 tazas" },
+      { "name": "Salsa de soya", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Saltea verduras a fuego alto." },
+      { "step": "Agrega soya al final." }
+    ],
+    "tips": [
+      { "title": "Textura", "description": "Verduras crocantes." },
+      { "title": "Tiempo", "description": "Cocción breve." }
+    ],
+    "images": [
+      "https://example.com/vegan-059-1.webp",
+      "https://example.com/vegan-059-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 60,
+    "uid": "R-Vegan_000060",
+    "name": "Base de Clásico Vegano ChefSkills",
+    "description": "Preparación base para versiones veganas.",
+    "imageUrl": "https://example.com/vegan-060.jpg",
+    "detailedInfo": "Base neutra pensada para adaptar recetas tradicionales al mundo vegano.",
+    "ingredients": [
+      { "name": "Verduras o legumbres", "quantity": "A elección" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Prepara la base vegetal." },
+      { "step": "Ajusta sazón." }
+    ],
+    "tips": [
+      { "title": "Creatividad", "description": "Adaptar sin imitar mal." },
+      { "title": "Respeto", "description": "El vegetal manda." }
+    ],
+    "images": [
+      "https://example.com/vegan-060-1.webp",
+      "https://example.com/vegan-060-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
     {
-      "id": 5,
-      "uid": "R-Vegan_000005",
-      "name": "Sopa de Verduras Saludable",
-      "description": "Sopa fácil, económica y sabrosa, con un truco de licuado de zanahoria y tomate para lograr textura cremosa.",
-      "imageUrl": "https://example.com/sopa-verduras1.webp",
-      "detailedInfo": "Una sopa casera rica en vegetales, con un licuado de zanahoria y tomate tatemado que aporta textura y sabor.",
-      "ingredients": [
-        { "name": "Habichuelas", "quantity": "1 puñado" },
-        { "name": "Pimentón rojo", "quantity": "1 unidad" },
-        { "name": "Cebolla blanca", "quantity": "1 unidad" },
-        { "name": "Zanahoria", "quantity": "1 unidad" },
-        { "name": "Cebolla larga", "quantity": "2 ramas" },
-        { "name": "Arvejas", "quantity": "Al gusto" },
-        { "name": "Papa", "quantity": "1 unidad" },
-        { "name": "Ajo", "quantity": "3 dientes" },
-        { "name": "Aceite", "quantity": "1 chorrito" },
-        { "name": "Agua", "quantity": "1.5 litros" },
-        { "name": "Tomate", "quantity": "1 unidad" },
-        { "name": "Caldo", "quantity": "1-2 cucharadas" },
-        { "name": "Sal", "quantity": "Al gusto" },
-        { "name": "Pimienta negra", "quantity": "Al gusto" },
-        { "name": "Comino", "quantity": "1 cucharadita" },
-        { "name": "Orégano", "quantity": "1 cucharadita" },
-        { "name": "Cilantro", "quantity": "Al gusto" },
-        { "name": "Pimienta de cayena", "quantity": "1 pizca" }
-      ],
-      "steps": [
-        { "step": "Picar todas las verduras y preparar la olla con aceite." },
-        { "step": "Sofreír el ajo y agregar agua, sal y pimienta." },
-        { "step": "Incorporar todas las verduras picadas y cocinar a fuego medio." },
-        { "step": "Tatemar el tomate y licuarlo con media zanahoria y un poco de caldo." },
-        { "step": "Agregar el licuado en la olla y mezclar bien." },
-        { "step": "Añadir cilantro y cocinar 10 minutos más." }
-      ],
-      "tips": [
-        { "title": "Más espesor", "description": "Ajusta la cantidad de licuado según tu gusto." },
-        { "title": "Para niños", "description": "Omitir la cayena reduce el picante." },
-        { "title": "Aromas", "description": "El cilantro potencia frescura y color." }
-      ],
-      "images": [
-        "https://example.com/sopa-verduras1.webp",
-        "https://example.com/sopa-verduras2.webp"
-      ],
-      "rating": null,
-      "servings": null,
-      "time": null,
-      "difficulty": null
-    },
+    "id": 61,
+    "uid": "R-Vegan_000061",
+    "name": "Ensalada Vegana de Garbanzos y Tomate",
+    "description": "Ensalada fresca y saciante a base de legumbres.",
+    "imageUrl": "https://example.com/vegan-061.jpg",
+    "detailedInfo": "Los garbanzos aportan proteína vegetal y el tomate frescura y acidez natural.",
+    "ingredients": [
+      { "name": "Garbanzos cocidos", "quantity": "1 taza" },
+      { "name": "Tomate", "quantity": "2 unidades" },
+      { "name": "Aceite de oliva", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Corta los tomates." },
+      { "step": "Mezcla con garbanzos, aceite y sal." }
+    ],
+    "tips": [
+      { "title": "Textura", "description": "Usar garbanzos bien escurridos." },
+      { "title": "Frescura", "description": "Servir recién preparada." }
+    ],
+    "images": [
+      "https://example.com/vegan-061-1.webp",
+      "https://example.com/vegan-061-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 62,
+    "uid": "R-Vegan_000062",
+    "name": "Ensalada Vegana de Quinoa Fría",
+    "description": "Ensalada ligera y nutritiva.",
+    "imageUrl": "https://example.com/vegan-062.jpg",
+    "detailedInfo": "La quinoa fría funciona como base neutra para verduras frescas.",
+    "ingredients": [
+      { "name": "Quinoa cocida", "quantity": "1 taza" },
+      { "name": "Pepino", "quantity": "1/2 unidad" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" },
+      { "name": "Limón", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Enfría la quinoa." },
+      { "step": "Mezcla con pepino, aceite y limón." }
+    ],
+    "tips": [
+      { "title": "Temperatura", "description": "Debe estar bien fría." },
+      { "title": "Equilibrio", "description": "Ajustar acidez al final." }
+    ],
+    "images": [
+      "https://example.com/vegan-062-1.webp",
+      "https://example.com/vegan-062-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 63,
+    "uid": "R-Vegan_000063",
+    "name": "Ensalada Vegana de Lentejas",
+    "description": "Plato frío nutritivo y simple.",
+    "imageUrl": "https://example.com/vegan-063.jpg",
+    "detailedInfo": "Las lentejas frías mantienen textura firme y sabor suave.",
+    "ingredients": [
+      { "name": "Lentejas cocidas", "quantity": "1 taza" },
+      { "name": "Cebolla morada", "quantity": "Al gusto" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Mezcla lentejas con cebolla." },
+      { "step": "Agrega aceite y sal." }
+    ],
+    "tips": [
+      { "title": "Cocción", "description": "No sobrecocer las lentejas." },
+      { "title": "Reposo", "description": "Mejora integración." }
+    ],
+    "images": [
+      "https://example.com/vegan-063-1.webp",
+      "https://example.com/vegan-063-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 64,
+    "uid": "R-Vegan_000064",
+    "name": "Ensalada Vegana de Arroz Integral",
+    "description": "Ensalada fría de grano entero.",
+    "imageUrl": "https://example.com/vegan-064.jpg",
+    "detailedInfo": "El arroz integral aporta cuerpo y saciedad.",
+    "ingredients": [
+      { "name": "Arroz integral cocido", "quantity": "1 taza" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Enfría el arroz." },
+      { "step": "Mezcla con zanahoria rallada." }
+    ],
+    "tips": [
+      { "title": "Textura", "description": "Usar arroz suelto." },
+      { "title": "Uso", "description": "Ideal para picnic." }
+    ],
+    "images": [
+      "https://example.com/vegan-064-1.webp",
+      "https://example.com/vegan-064-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 65,
+    "uid": "R-Vegan_000065",
+    "name": "Ensalada Vegana de Porotos Blancos",
+    "description": "Ensalada cremosa sin lácteos.",
+    "imageUrl": "https://example.com/vegan-065.jpg",
+    "detailedInfo": "Los porotos blancos aportan textura mantecosa.",
+    "ingredients": [
+      { "name": "Porotos blancos cocidos", "quantity": "1 taza" },
+      { "name": "Cebolla", "quantity": "Al gusto" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Mezcla los porotos con cebolla." },
+      { "step": "Agrega aceite y sal." }
+    ],
+    "tips": [
+      { "title": "Textura", "description": "No machacar." },
+      { "title": "Sabor", "description": "Reposo breve mejora." }
+    ],
+    "images": [
+      "https://example.com/vegan-065-1.webp",
+      "https://example.com/vegan-065-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 66,
+    "uid": "R-Vegan_000066",
+    "name": "Ensalada Vegana de Cous Cous Frío",
+    "description": "Grano liviano con verduras frescas.",
+    "imageUrl": "https://example.com/vegan-066.jpg",
+    "detailedInfo": "El cous cous frío funciona como base rápida.",
+    "ingredients": [
+      { "name": "Cous cous", "quantity": "1 taza hidratada" },
+      { "name": "Pepino", "quantity": "1/2 unidad" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Hidrata y enfría el cous cous." },
+      { "step": "Mezcla con pepino." }
+    ],
+    "tips": [
+      { "title": "Grano", "description": "Soltar bien." },
+      { "title": "Frescura", "description": "Agregar limón opcional." }
+    ],
+    "images": [
+      "https://example.com/vegan-066-1.webp",
+      "https://example.com/vegan-066-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 67,
+    "uid": "R-Vegan_000067",
+    "name": "Ensalada Vegana de Papa Fría",
+    "description": "Clásico frío versionado.",
+    "imageUrl": "https://example.com/vegan-067.jpg",
+    "detailedInfo": "La papa fría cambia su textura y absorbe aderezos.",
+    "ingredients": [
+      { "name": "Papa cocida", "quantity": "2 unidades" },
+      { "name": "Cebolla", "quantity": "Al gusto" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Enfría la papa cocida." },
+      { "step": "Corta y mezcla." }
+    ],
+    "tips": [
+      { "title": "Temperatura", "description": "Servir fría." },
+      { "title": "Textura", "description": "No sobremezclar." }
+    ],
+    "images": [
+      "https://example.com/vegan-067-1.webp",
+      "https://example.com/vegan-067-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 68,
+    "uid": "R-Vegan_000068",
+    "name": "Ensalada Vegana de Porotos Negros",
+    "description": "Plato frío energético.",
+    "imageUrl": "https://example.com/vegan-068.jpg",
+    "detailedInfo": "Los porotos negros fríos mantienen cuerpo y sabor.",
+    "ingredients": [
+      { "name": "Porotos negros cocidos", "quantity": "1 taza" },
+      { "name": "Cebolla morada", "quantity": "Al gusto" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Mezcla porotos con cebolla." },
+      { "step": "Agrega aceite y sal." }
+    ],
+    "tips": [
+      { "title": "Balance", "description": "Agregar limón opcional." },
+      { "title": "Reposo", "description": "Integra sabores." }
+    ],
+    "images": [
+      "https://example.com/vegan-068-1.webp",
+      "https://example.com/vegan-068-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 69,
+    "uid": "R-Vegan_000069",
+    "name": "Ensalada Vegana de Verduras Asadas Frías",
+    "description": "Verduras asadas servidas frías.",
+    "imageUrl": "https://example.com/vegan-069.jpg",
+    "detailedInfo": "Las verduras asadas desarrollan sabor que se intensifica en frío.",
+    "ingredients": [
+      { "name": "Verduras asadas", "quantity": "2 tazas" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Asa las verduras." },
+      { "step": "Enfría y sirve." }
+    ],
+    "tips": [
+      { "title": "Sabor", "description": "Reposo potencia." },
+      { "title": "Uso", "description": "Ideal como entrada." }
+    ],
+    "images": [
+      "https://example.com/vegan-069-1.webp",
+      "https://example.com/vegan-069-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 70,
+    "uid": "R-Vegan_000070",
+    "name": "Base de Ensalada Vegana ChefSkills",
+    "description": "Base fría vegetal adaptable.",
+    "imageUrl": "https://example.com/vegan-070.jpg",
+    "detailedInfo": "Preparación base para ensaladas veganas.",
+    "ingredients": [
+      { "name": "Grano o legumbre", "quantity": "1 taza" },
+      { "name": "Verduras", "quantity": "A elección" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Combina ingredientes fríos." },
+      { "step": "Ajusta sazón." }
+    ],
+    "tips": [
+      { "title": "Versatilidad", "description": "Cambiar según estación." },
+      { "title": "Planificación", "description": "Ideal para meal prep." }
+    ],
+    "images": [
+      "https://example.com/vegan-070-1.webp",
+      "https://example.com/vegan-070-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
     {
-      "id": 6,
-      "uid": "R-Vegan_000006",
-      "name": "Sopa de Verduras Muy Fácil",
-      "description": "Sopa ligera y reconfortante, ideal para una cena caliente. Preparación rápida y sencilla.",
-      "imageUrl": "https://example.com/sopa-verduras-facil1.webp",
-      "detailedInfo": "Sopa suave y práctica con verduras básicas. Perfecta para una cena ligera.",
-      "ingredients": [
-        { "name": "Aceite", "quantity": "1 chorrito" },
-        { "name": "Caldo o agua", "quantity": "A gusto" },
-        { "name": "Cebolla", "quantity": "1 unidad" },
-        { "name": "Papa", "quantity": "1 unidad" },
-        { "name": "Zanahoria", "quantity": "1 unidad" },
-        { "name": "Ajo", "quantity": "1 diente" },
-        { "name": "Zapallo", "quantity": "1 trozo" },
-        { "name": "Zucchini", "quantity": "1 unidad" },
-        { "name": "Tomate", "quantity": "1 unidad" },
-        { "name": "Arvejas", "quantity": "Al gusto" },
-        { "name": "Sal y condimentos", "quantity": "Al gusto" }
-      ],
-      "steps": [
-        { "step": "Cortar todas las verduras en cubitos." },
-        { "step": "Sofreír cebolla, papa y zanahoria durante 5 minutos." },
-        { "step": "Agregar las demás verduras y cocinar 5 minutos más." },
-        { "step": "Añadir caldo o agua, condimentar y cocinar 30 minutos." }
-      ],
-      "tips": [
-        { "title": "Más cuerpo", "description": "Triturar parte de la sopa la vuelve más cremosa." },
-        { "title": "Bajo costo", "description": "Usa las verduras que tengas disponibles." }
-      ],
-      "images": [
-        "https://example.com/sopa-verduras-facil1.webp",
-        "https://example.com/sopa-verduras-facil2.webp"
-      ],
-      "rating": null,
-      "servings": null,
-      "time": null,
-      "difficulty": null
-    }
+    "id": 71,
+    "uid": "R-Vegan_000071",
+    "name": "Salteado Vegano Express de Verduras",
+    "description": "Plato rápido de verduras salteadas.",
+    "imageUrl": "https://example.com/vegan-071.jpg",
+    "detailedInfo": "Preparación express pensada para resolver una comida en minutos.",
+    "ingredients": [
+      { "name": "Verduras mixtas", "quantity": "2 tazas" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Calienta el aceite." },
+      { "step": "Saltea las verduras a fuego alto." }
+    ],
+    "tips": [
+      { "title": "Tiempo", "description": "No sobrecocer." },
+      { "title": "Corte", "description": "Parejo para cocción uniforme." }
+    ],
+    "images": [
+      "https://example.com/vegan-071-1.webp",
+      "https://example.com/vegan-071-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 72,
+    "uid": "R-Vegan_000072",
+    "name": "Pasta Vegana Express",
+    "description": "Pasta rápida con aceite y vegetales.",
+    "imageUrl": "https://example.com/vegan-072.jpg",
+    "detailedInfo": "Plato simple donde el aceite y las verduras resuelven la comida.",
+    "ingredients": [
+      { "name": "Pasta cocida", "quantity": "200 g" },
+      { "name": "Verduras", "quantity": "1 taza" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Cuece la pasta." },
+      { "step": "Mezcla con verduras salteadas." }
+    ],
+    "tips": [
+      { "title": "Punto", "description": "Al dente siempre." },
+      { "title": "Ligado", "description": "Usar agua de cocción." }
+    ],
+    "images": [
+      "https://example.com/vegan-072-1.webp",
+      "https://example.com/vegan-072-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 73,
+    "uid": "R-Vegan_000073",
+    "name": "Arroz Vegano Salteado Rápido",
+    "description": "Arroz salteado listo en minutos.",
+    "imageUrl": "https://example.com/vegan-073.jpg",
+    "detailedInfo": "Ideal para reutilizar arroz frío del día anterior.",
+    "ingredients": [
+      { "name": "Arroz cocido", "quantity": "1 taza" },
+      { "name": "Verduras", "quantity": "1/2 taza" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Saltea verduras." },
+      { "step": "Agrega arroz y mezcla." }
+    ],
+    "tips": [
+      { "title": "Arroz", "description": "Frío funciona mejor." },
+      { "title": "Fuego", "description": "Medio-alto." }
+    ],
+    "images": [
+      "https://example.com/vegan-073-1.webp",
+      "https://example.com/vegan-073-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 74,
+    "uid": "R-Vegan_000074",
+    "name": "Wrap Vegano Express",
+    "description": "Wrap rápido y funcional.",
+    "imageUrl": "https://example.com/vegan-074.jpg",
+    "detailedInfo": "Solución práctica para comidas rápidas.",
+    "ingredients": [
+      { "name": "Tortilla", "quantity": "1 unidad" },
+      { "name": "Verduras", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Rellena la tortilla." },
+      { "step": "Enrolla y sirve." }
+    ],
+    "tips": [
+      { "title": "Equilibrio", "description": "No sobrecargar." },
+      { "title": "Uso", "description": "Ideal para llevar." }
+    ],
+    "images": [
+      "https://example.com/vegan-074-1.webp",
+      "https://example.com/vegan-074-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 75,
+    "uid": "R-Vegan_000075",
+    "name": "Tostadas Veganas con Verduras",
+    "description": "Tostadas simples y rápidas.",
+    "imageUrl": "https://example.com/vegan-075.jpg",
+    "detailedInfo": "Base crujiente con topping vegetal.",
+    "ingredients": [
+      { "name": "Pan tostado", "quantity": "2 rebanadas" },
+      { "name": "Verduras", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Tuesta el pan." },
+      { "step": "Agrega verduras." }
+    ],
+    "tips": [
+      { "title": "Textura", "description": "Servir inmediato." },
+      { "title": "Variante", "description": "Admiten muchas combinaciones." }
+    ],
+    "images": [
+      "https://example.com/vegan-075-1.webp",
+      "https://example.com/vegan-075-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 76,
+    "uid": "R-Vegan_000076",
+    "name": "Bowl Vegano Express",
+    "description": "Bowl vegetal armado en minutos.",
+    "imageUrl": "https://example.com/vegan-076.jpg",
+    "detailedInfo": "Combinación libre de granos y verduras.",
+    "ingredients": [
+      { "name": "Grano cocido", "quantity": "1 taza" },
+      { "name": "Verduras", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Arma el bowl." }
+    ],
+    "tips": [
+      { "title": "Balance", "description": "Agregar algo crujiente." },
+      { "title": "Color", "description": "Variedad visual." }
+    ],
+    "images": [
+      "https://example.com/vegan-076-1.webp",
+      "https://example.com/vegan-076-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 77,
+    "uid": "R-Vegan_000077",
+    "name": "Sopa Vegana Instantánea",
+    "description": "Sopa rápida con ingredientes básicos.",
+    "imageUrl": "https://example.com/vegan-077.jpg",
+    "detailedInfo": "Preparación simple para resolver rápido.",
+    "ingredients": [
+      { "name": "Verduras", "quantity": "1 taza" },
+      { "name": "Agua caliente", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Hierve agua." },
+      { "step": "Agrega verduras." }
+    ],
+    "tips": [
+      { "title": "Corte", "description": "Pequeño para rapidez." },
+      { "title": "Uso", "description": "Base improvisada." }
+    ],
+    "images": [
+      "https://example.com/vegan-077-1.webp",
+      "https://example.com/vegan-077-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 78,
+    "uid": "R-Vegan_000078",
+    "name": "Salteado Vegano de Emergencia",
+    "description": "Plato rápido con lo que hay.",
+    "imageUrl": "https://example.com/vegan-078.jpg",
+    "detailedInfo": "Pensado para improvisar sin complicaciones.",
+    "ingredients": [
+      { "name": "Verduras disponibles", "quantity": "A elección" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Saltea todo junto." }
+    ],
+    "tips": [
+      { "title": "Orden", "description": "Duro primero." },
+      { "title": "Sencillez", "description": "No sobrepensar." }
+    ],
+    "images": [
+      "https://example.com/vegan-078-1.webp",
+      "https://example.com/vegan-078-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 79,
+    "uid": "R-Vegan_000079",
+    "name": "Puré Vegano Rápido",
+    "description": "Puré simple sin lácteos.",
+    "imageUrl": "https://example.com/vegan-079.jpg",
+    "detailedInfo": "La papa se transforma en puré solo con técnica.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "2 unidades" },
+      { "name": "Agua", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Cuece la papa." },
+      { "step": "Muele hasta liso." }
+    ],
+    "tips": [
+      { "title": "Textura", "description": "No licuar." },
+      { "title": "Base", "description": "Funciona como acompañamiento." }
+    ],
+    "images": [
+      "https://example.com/vegan-079-1.webp",
+      "https://example.com/vegan-079-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 80,
+    "uid": "R-Vegan_000080",
+    "name": "Base Vegana Express ChefSkills",
+    "description": "Base rápida para platos veganos.",
+    "imageUrl": "https://example.com/vegan-080.jpg",
+    "detailedInfo": "Preparación neutra para resolver comidas rápidas.",
+    "ingredients": [
+      { "name": "Ingrediente vegetal", "quantity": "A elección" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Cocina rápido y sirve." }
+    ],
+    "tips": [
+      { "title": "Velocidad", "description": "Clave del bloque." },
+      { "title": "Practicidad", "description": "Pensado para diario." }
+    ],
+    "images": [
+      "https://example.com/vegan-080-1.webp",
+      "https://example.com/vegan-080-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+    {
+    "id": 81,
+    "uid": "R-Vegan_000081",
+    "name": "Tacos Veganos de Garbanzos",
+    "description": "Tacos sabrosos con garbanzos sazonados.",
+    "imageUrl": "https://example.com/vegan-081.jpg",
+    "detailedInfo": "Garbanzos sazonados con especias para un taco lleno de sabor y textura.",
+    "ingredients": [
+      { "name": "Garbanzos cocidos", "quantity": "1 taza" },
+      { "name": "Tortillas", "quantity": "4 unidades" },
+      { "name": "Especias", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sazona y saltea los garbanzos." },
+      { "step": "Rellena las tortillas." }
+    ],
+    "tips": [
+      { "title": "Crispitud", "description": "Tostar un poco las tortillas." },
+      { "title": "Frescura", "description": "Servir con salsa fresca." }
+    ],
+    "images": [
+      "https://example.com/vegan-081-1.webp",
+      "https://example.com/vegan-081-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 82,
+    "uid": "R-Vegan_000082",
+    "name": "Falafel Vegano",
+    "description": "Bolas crujientes de garbanzo y hierbas.",
+    "imageUrl": "https://example.com/vegan-082.jpg",
+    "detailedInfo": "El falafel es una mezcla de garbanzos, hierbas y especias, ideal para freír o hornear.",
+    "ingredients": [
+      { "name": "Garbanzos cocidos", "quantity": "1 taza" },
+      { "name": "Cebolla", "quantity": "1/2 unidad" },
+      { "name": "Comino", "quantity": "1 cucharadita" }
+    ],
+    "steps": [
+      { "step": "Procesa los ingredientes." },
+      { "step": "Forma bolitas y fríe u hornea." }
+    ],
+    "tips": [
+      { "title": "Frito", "description": "Usar aceite caliente." },
+      { "title": "Horneado", "description": "Rociar con aceite para dorar." }
+    ],
+    "images": [
+      "https://example.com/vegan-082-1.webp",
+      "https://example.com/vegan-082-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 83,
+    "uid": "R-Vegan_000083",
+    "name": "Sopa Vegana de Tomate",
+    "description": "Sopa cremosa a base de tomate.",
+    "imageUrl": "https://example.com/vegan-083.jpg",
+    "detailedInfo": "Sopa rica y cremosa, sin lácteos, con tomates frescos o en conserva.",
+    "ingredients": [
+      { "name": "Tomate", "quantity": "4 unidades" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Ajo", "quantity": "1 diente" }
+    ],
+    "steps": [
+      { "step": "Sofríe cebolla y ajo." },
+      { "step": "Añade tomates y cocina." },
+      { "step": "Procesa hasta cremosa." }
+    ],
+    "tips": [
+      { "title": "Cremosa", "description": "Agregar caldo o agua para suavizar." },
+      { "title": "Tomate", "description": "Usar tomates frescos para más sabor." }
+    ],
+    "images": [
+      "https://example.com/vegan-083-1.webp",
+      "https://example.com/vegan-083-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 84,
+    "uid": "R-Vegan_000084",
+    "name": "Pizza Vegana Casera",
+    "description": "Pizza sin lácteos, con base de vegetales.",
+    "imageUrl": "https://example.com/vegan-084.jpg",
+    "detailedInfo": "Pizza con salsa de tomate, verduras frescas y queso vegano.",
+    "ingredients": [
+      { "name": "Masa para pizza", "quantity": "1 unidad" },
+      { "name": "Tomate", "quantity": "1 taza triturado" },
+      { "name": "Queso vegano", "quantity": "1 taza" }
+    ],
+    "steps": [
+      { "step": "Extiende la masa." },
+      { "step": "Añade salsa, verduras y queso." },
+      { "step": "Hornea a temperatura alta." }
+    ],
+    "tips": [
+      { "title": "Corte", "description": "Cortar en porciones uniformes." },
+      { "title": "Horneado", "description": "Usar piedra para mejor crocancia." }
+    ],
+    "images": [
+      "https://example.com/vegan-084-1.webp",
+      "https://example.com/vegan-084-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 85,
+    "uid": "R-Vegan_000085",
+    "name": "Tortillas Veganas de Maíz",
+    "description": "Tortillas suaves sin lácteos.",
+    "imageUrl": "https://example.com/vegan-085.jpg",
+    "detailedInfo": "Tortillas caseras sin aditivos lácteos, simples y sabrosas.",
+    "ingredients": [
+      { "name": "Harina de maíz", "quantity": "2 tazas" },
+      { "name": "Agua", "quantity": "1 taza" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Mezcla harina, agua y sal." },
+      { "step": "Forma bolitas y extiende." },
+      { "step": "Cocina en sartén." }
+    ],
+    "tips": [
+      { "title": "Cocción", "description": "Cocinar a fuego medio." },
+      { "title": "Textura", "description": "Debe quedar flexible." }
+    ],
+    "images": [
+      "https://example.com/vegan-085-1.webp",
+      "https://example.com/vegan-085-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 86,
+    "uid": "R-Vegan_000086",
+    "name": "Crema de Champiñones Vegana",
+    "description": "Crema suave sin lácteos.",
+    "imageUrl": "https://example.com/vegan-086.jpg",
+    "detailedInfo": "Sopa cremosa con champiñones frescos.",
+    "ingredients": [
+      { "name": "Champiñones", "quantity": "200 g" },
+      { "name": "Leche de almendra", "quantity": "1 taza" },
+      { "name": "Ajo", "quantity": "1 diente" }
+    ],
+    "steps": [
+      { "step": "Sofríe los champiñones y el ajo." },
+      { "step": "Agrega leche de almendra." },
+      { "step": "Procesa hasta suave." }
+    ],
+    "tips": [
+      { "title": "Suavidad", "description": "No cocinar demasiado." },
+      { "title": "Textura", "description": "Procesar para mayor cremosidad." }
+    ],
+    "images": [
+      "https://example.com/vegan-086-1.webp",
+      "https://example.com/vegan-086-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 87,
+    "uid": "R-Vegan_000087",
+    "name": "Salmón Vegano",
+    "description": "Salmón vegetal a base de algas y tofu.",
+    "imageUrl": "https://example.com/vegan-087.jpg",
+    "detailedInfo": "Salmón vegano con textura y sabor logrado con algas.",
+    "ingredients": [
+      { "name": "Tofu", "quantity": "200 g" },
+      { "name": "Algas nori", "quantity": "2 hojas" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Sazona el tofu." },
+      { "step": "Envuelve en algas nori." },
+      { "step": "Cocina en sartén." }
+    ],
+    "tips": [
+      { "title": "Corte", "description": "Cortar tofu en láminas finas." },
+      { "title": "Crocante", "description": "Asegúrate de dorar bien." }
+    ],
+    "images": [
+      "https://example.com/vegan-087-1.webp",
+      "https://example.com/vegan-087-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 88,
+    "uid": "R-Vegan_000088",
+    "name": "Tostadas Veganas de Aguacate",
+    "description": "Tostadas simples con aguacate y limón.",
+    "imageUrl": "https://example.com/vegan-088.jpg",
+    "detailedInfo": "Plato rápido con aguacate como base.",
+    "ingredients": [
+      { "name": "Aguacate", "quantity": "1 unidad" },
+      { "name": "Pan integral", "quantity": "2 rebanadas" },
+      { "name": "Limón", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Tuesta el pan." },
+      { "step": "Aplasta el aguacate y unta." }
+    ],
+    "tips": [
+      { "title": "Textura", "description": "No machacar demasiado el aguacate." },
+      { "title": "Frescura", "description": "Agregar limón para evitar oxidación." }
+    ],
+    "images": [
+      "https://example.com/vegan-088-1.webp",
+      "https://example.com/vegan-088-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 89,
+    "uid": "R-Vegan_000089",
+    "name": "Patacones Veganos",
+    "description": "Plátano verde frito.",
+    "imageUrl": "https://example.com/vegan-089.jpg",
+    "detailedInfo": "Plátanos verdes fritos para crear un snack crocante.",
+    "ingredients": [
+      { "name": "Plátano verde", "quantity": "2 unidades" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Corta el plátano en rodajas." },
+      { "step": "Fría hasta dorar." }
+    ],
+    "tips": [
+      { "title": "Fritura", "description": "Asegúrate de que el aceite esté caliente." },
+      { "title": "Textura", "description": "Presiona después de freír para darle forma." }
+    ],
+    "images": [
+      "https://example.com/vegan-089-1.webp",
+      "https://example.com/vegan-089-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 90,
+    "uid": "R-Vegan_000090",
+    "name": "Base Final Vegana ChefSkills",
+    "description": "Base universal para adaptar a cualquier plato.",
+    "imageUrl": "https://example.com/vegan-090.jpg",
+    "detailedInfo": "Base neutra que puede servir para una gran variedad de recetas.",
+    "ingredients": [
+      { "name": "Verduras o legumbres", "quantity": "A elección" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Cocina los ingredientes seleccionados." },
+      { "step": "Ajusta la sazón a gusto." }
+    ],
+    "tips": [
+      { "title": "Versatilidad", "description": "Puedes variar según lo que tengas." },
+      { "title": "Simplicidad", "description": "Ideal para soluciones rápidas." }
+    ],
+    "images": [
+      "https://example.com/vegan-090-1.webp",
+      "https://example.com/vegan-090-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+    {
+    "id": 91,
+    "uid": "R-Vegan_000091",
+    "name": "Sofrito Vegano Base",
+    "description": "Base aromática vegetal para múltiples preparaciones.",
+    "imageUrl": "https://example.com/vegan-091.jpg",
+    "detailedInfo": "Sofrito clásico de cebolla y ajo que sirve como punto de partida para guisos, arroces y salteados veganos.",
+    "ingredients": [
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Ajo", "quantity": "2 dientes" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Pica la cebolla y el ajo." },
+      { "step": "Sofríe a fuego medio hasta translucidez." }
+    ],
+    "tips": [
+      { "title": "Paciencia", "description": "No dorar en exceso." }
+    ],
+    "images": [
+      "https://example.com/vegan-091-1.webp",
+      "https://example.com/vegan-091-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 92,
+    "uid": "R-Vegan_000092",
+    "name": "Puré Vegano de Zapallo",
+    "description": "Puré vegetal suave y natural.",
+    "imageUrl": "https://example.com/vegan-092.jpg",
+    "detailedInfo": "El zapallo se cuece y se procesa sin lácteos, logrando una textura cremosa naturalmente.",
+    "ingredients": [
+      { "name": "Zapallo", "quantity": "500 g" },
+      { "name": "Agua", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Cuece el zapallo hasta tierno." },
+      { "step": "Procesa o pisa hasta suave." }
+    ],
+    "tips": [
+      { "title": "Textura", "description": "No agregar demasiada agua." }
+    ],
+    "images": [
+      "https://example.com/vegan-092-1.webp",
+      "https://example.com/vegan-092-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 93,
+    "uid": "R-Vegan_000093",
+    "name": "Arroz Blanco Vegano Perfecto",
+    "description": "Arroz simple, suelto y bien cocido.",
+    "imageUrl": "https://example.com/vegan-093.jpg",
+    "detailedInfo": "Método base para cocer arroz blanco sin grasas animales.",
+    "ingredients": [
+      { "name": "Arroz", "quantity": "1 taza" },
+      { "name": "Agua", "quantity": "2 tazas" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Hierve el agua con sal." },
+      { "step": "Agrega el arroz y cocina hasta absorber." }
+    ],
+    "tips": [
+      { "title": "Reposo", "description": "Tapar 5 minutos antes de servir." }
+    ],
+    "images": [
+      "https://example.com/vegan-093-1.webp",
+      "https://example.com/vegan-093-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 94,
+    "uid": "R-Vegan_000094",
+    "name": "Verduras Asadas Básicas",
+    "description": "Método base para asar verduras.",
+    "imageUrl": "https://example.com/vegan-094.jpg",
+    "detailedInfo": "Preparación fundamental para obtener verduras caramelizadas y sabrosas.",
+    "ingredients": [
+      { "name": "Verduras", "quantity": "A elección" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Corta las verduras." },
+      { "step": "Hornea hasta dorar." }
+    ],
+    "tips": [
+      { "title": "Espacio", "description": "No amontonar en la bandeja." }
+    ],
+    "images": [
+      "https://example.com/vegan-094-1.webp",
+      "https://example.com/vegan-094-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 95,
+    "uid": "R-Vegan_000095",
+    "name": "Legumbres Cocidas Base",
+    "description": "Método base para cocer legumbres.",
+    "imageUrl": "https://example.com/vegan-095.jpg",
+    "detailedInfo": "Base fundamental para garbanzos, porotos o lentejas veganas.",
+    "ingredients": [
+      { "name": "Legumbres secas", "quantity": "1 taza" },
+      { "name": "Agua", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Remoja si es necesario." },
+      { "step": "Cuece hasta tiernas." }
+    ],
+    "tips": [
+      { "title": "Sal", "description": "Agregar al final." }
+    ],
+    "images": [
+      "https://example.com/vegan-095-1.webp",
+      "https://example.com/vegan-095-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 96,
+    "uid": "R-Vegan_000096",
+    "name": "Puré Vegano de Papas",
+    "description": "Puré clásico sin lácteos.",
+    "imageUrl": "https://example.com/vegan-096.jpg",
+    "detailedInfo": "La papa se pisa en caliente para lograr textura cremosa sin mantequilla.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "3 unidades" },
+      { "name": "Agua", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Cuece las papas." },
+      { "step": "Pisa hasta liso." }
+    ],
+    "tips": [
+      { "title": "Herramienta", "description": "No usar licuadora." }
+    ],
+    "images": [
+      "https://example.com/vegan-096-1.webp",
+      "https://example.com/vegan-096-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 97,
+    "uid": "R-Vegan_000097",
+    "name": "Salteado Base de Verduras",
+    "description": "Base vegetal rápida para múltiples platos.",
+    "imageUrl": "https://example.com/vegan-097.jpg",
+    "detailedInfo": "Técnica base de salteado aplicable a cualquier verdura.",
+    "ingredients": [
+      { "name": "Verduras", "quantity": "2 tazas" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Saltea a fuego alto." }
+    ],
+    "tips": [
+      { "title": "Orden", "description": "Verduras duras primero." }
+    ],
+    "images": [
+      "https://example.com/vegan-097-1.webp",
+      "https://example.com/vegan-097-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 98,
+    "uid": "R-Vegan_000098",
+    "name": "Base de Bowl Vegano",
+    "description": "Composición base para bowls.",
+    "imageUrl": "https://example.com/vegan-098.jpg",
+    "detailedInfo": "Estructura simple: grano + vegetal + sazón.",
+    "ingredients": [
+      { "name": "Grano cocido", "quantity": "1 taza" },
+      { "name": "Verduras", "quantity": "A elección" }
+    ],
+    "steps": [
+      { "step": "Combina los ingredientes." }
+    ],
+    "tips": [
+      { "title": "Equilibrio", "description": "Buscar contraste de texturas." }
+    ],
+    "images": [
+      "https://example.com/vegan-098-1.webp",
+      "https://example.com/vegan-098-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 99,
+    "uid": "R-Vegan_000099",
+    "name": "Ensalada Vegana Universal",
+    "description": "Ensalada base adaptable.",
+    "imageUrl": "https://example.com/vegan-099.jpg",
+    "detailedInfo": "Base neutra para ensaladas veganas de cualquier estilo.",
+    "ingredients": [
+      { "name": "Verduras frescas", "quantity": "A elección" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Mezcla y sazona." }
+    ],
+    "tips": [
+      { "title": "Frescura", "description": "Preparar al momento." }
+    ],
+    "images": [
+      "https://example.com/vegan-099-1.webp",
+      "https://example.com/vegan-099-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 100,
+    "uid": "R-Vegan_000100",
+    "name": "Base Vegana Final ChefSkills",
+    "description": "Cierre del recetario vegano ChefSkills.",
+    "imageUrl": "https://example.com/vegan-100.jpg",
+    "detailedInfo": "Receta conceptual final que resume el enfoque ChefSkills: técnica, simplicidad y vegetal protagonista.",
+    "ingredients": [
+      { "name": "Ingrediente vegetal", "quantity": "A elección" },
+      { "name": "Aceite", "quantity": "Cantidad necesaria" }
+    ],
+    "steps": [
+      { "step": "Aplica técnica básica correctamente." }
+    ],
+    "tips": [
+      { "title": "Filosofía", "description": "Menos es más si está bien hecho." }
+    ],
+    "images": [
+      "https://example.com/vegan-100-1.webp",
+      "https://example.com/vegan-100-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  }
+
   ]
 }
 
-// ñoquis,Porotos.tomatican,lentejas

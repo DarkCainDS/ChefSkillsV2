@@ -1,3 +1,4 @@
+import { getVersionedImageSync } from "../utils/versionedImage";
 import { useFonts } from "expo-font";
 import { LinearGradient } from "expo-linear-gradient";
 import { getAuth } from "firebase/auth";

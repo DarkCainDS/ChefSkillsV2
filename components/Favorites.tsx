@@ -1,50 +1,82 @@
 // screens/Favorites.tsx
-import { useNavigation, NavigationProp } from '@react-navigation/native';
-import { Image } from 'expo-image';
-import React, { useEffect } from 'react';
-import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
-import { setFavorites } from '../store/Slices/FavoriteSlice';
-import { loadFavoritesFromStorage, saveFavoritesToStorage } from '../store/storage/FavoriteStorage';
-import { getSafeImage } from '../utils/getImageSource';
-import type { Recipe } from '../store/Slices/FavoriteSlice';
-import { useFavoritesWatchdog } from '../utils/favoritesWatchdog';
 
+import React, { useEffect, memo } from "react";
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
-const FavoriteCard: React.FC<{ item: Recipe; onPress: () => void }> = ({ item, onPress }) => (
-  <TouchableOpacity style={styles.card} activeOpacity={0.8} onPress={onPress}>
-    {/* 🔥 MISMO ESTILO QUE MAIN DISH */}
-    <Image
-      source={getSafeImage(item.images?.[0])}
-      style={styles.image}
-      contentFit="cover"
-      transition={200}
-      cachePolicy="memory-disk"
-    />
+import { Image } from "expo-image";
+import { useNavigation, NavigationProp } from "@react-navigation/native";
+import { useDispatch, useSelector } from "react-redux";
 
-    <View style={styles.info}>
-      <Text style={styles.title}>{item.name}</Text>
+import { setFavorites } from "../store/Slices/FavoriteSlice";
+import {
+  loadFavoritesFromStorage,
+  saveFavoritesToStorage,
+} from "../store/storage/FavoriteStorage";
 
-      <View style={styles.divider} />
+import { getSafeVersionedImage } from "../utils/imageSource";
+import { useFavoritesWatchdog } from "../utils/favoritesWatchdog";
 
-      <Text style={styles.description} numberOfLines={2}>
-        {item.description}
-      </Text>
-    </View>
-  </TouchableOpacity>
-);
+import type { Recipe } from "../store/Slices/FavoriteSlice";
+import type { RootState } from "../store/Index";
+
+/* ============================================================
+   🧩 FAVORITE CARD
+============================================================ */
+
+interface FavoriteCardProps {
+  item: Recipe;
+  onPress: () => void;
+}
+
+const FavoriteCard = memo(({ item, onPress }: FavoriteCardProps) => {
+  return (
+    <TouchableOpacity style={styles.card} activeOpacity={0.85} onPress={onPress}>
+      <Image
+        source={getSafeVersionedImage(item.imageUrl, item.images)}
+        style={styles.image}
+        contentFit="cover"
+        transition={200}
+      />
+
+      <View style={styles.info}>
+        <Text style={styles.title}>{item.name}</Text>
+        <View style={styles.divider} />
+        <Text style={styles.description} numberOfLines={2}>
+          {item.description}
+        </Text>
+      </View>
+    </TouchableOpacity>
+  );
+});
+
+/* ============================================================
+   ⭐ FAVORITES SCREEN
+============================================================ */
 
 const Favorites: React.FC = () => {
   const navigation = useNavigation<NavigationProp<any>>();
   const dispatch = useDispatch();
 
-  const favoritesRecipes = useSelector((state: any) => state.favorites.recipes) as Recipe[];
-  const maxSlots = useSelector((state: any) => state.favorites.maxFavorites) as number;
+  const favoritesRecipes = useSelector(
+    (state: RootState) => state.favorites.recipes
+  );
+
+  const maxSlots = useSelector(
+    (state: RootState) => state.favorites.maxFavorites
+  );
 
   const used = favoritesRecipes.length;
   const isFull = used >= maxSlots;
-  useFavoritesWatchdog(true)
 
+  useFavoritesWatchdog(true);
+
+  // 🔄 Load favorites once
   useEffect(() => {
     (async () => {
       const stored = await loadFavoritesFromStorage();
@@ -52,17 +84,18 @@ const Favorites: React.FC = () => {
     })();
   }, [dispatch]);
 
+  // 💾 Persist favorites
   useEffect(() => {
     saveFavoritesToStorage(favoritesRecipes);
   }, [favoritesRecipes]);
 
   return (
     <View style={styles.container}>
-      {/* 🔥 Contador de favoritos */}
+      {/* 🔢 COUNTER */}
       <View
         style={[
           styles.counterContainer,
-          { backgroundColor: isFull ? "#d32f2f" : "#8e44ad" }
+          { backgroundColor: isFull ? "#d32f2f" : "#8e44ad" },
         ]}
       >
         <Text style={styles.favoriteCount}>
@@ -72,12 +105,14 @@ const Favorites: React.FC = () => {
 
       {used === 0 ? (
         <View style={styles.emptyContainer}>
-          <Text style={styles.emptyText}>No tienes recetas favoritas aún.</Text>
+          <Text style={styles.emptyText}>
+            No tienes recetas favoritas aún.
+          </Text>
         </View>
       ) : (
         <FlatList
           data={favoritesRecipes}
-          keyExtractor={(item) => item.uid.toString()}
+          keyExtractor={(item) => item.uid}
           renderItem={({ item }) => (
             <FavoriteCard
               item={item}
@@ -88,7 +123,6 @@ const Favorites: React.FC = () => {
                   navigation.navigate("FavoriteRecipeDetail", { recipe: item });
                 }
               }}
-
             />
           )}
           showsVerticalScrollIndicator={false}
@@ -97,6 +131,12 @@ const Favorites: React.FC = () => {
     </View>
   );
 };
+
+export default Favorites;
+
+/* ============================================================
+   🎨 STYLES
+============================================================ */
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 15 },
@@ -111,28 +151,27 @@ const styles = StyleSheet.create({
     zIndex: 10,
     elevation: 8,
   },
+
   favoriteCount: {
     fontSize: 14,
     fontWeight: "bold",
     color: "#fff",
   },
 
-  // ======== CARD IGUAL A MAIN DISH =========
   card: {
     flexDirection: "row",
     backgroundColor: "#ebeaeaff",
     borderRadius: 10,
     padding: 10,
-    marginVertical: 3,
     marginBottom: 15,
     elevation: 5,
     height: 105,
   },
+
   image: {
     width: 80,
     height: 80,
     borderRadius: 10,
-    resizeMode: "cover",
   },
 
   info: {
@@ -145,7 +184,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     marginBottom: 6,
-    color: "black"
+    color: "#000",
   },
 
   divider: {
@@ -159,11 +198,16 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontStyle: "italic",
     color: "#333",
-    marginLeft: 2,
   },
 
-  emptyContainer: { flex: 1, justifyContent: "center", alignItems: "center" },
-  emptyText: { fontSize: 16, color: "#555" },
-});
+  emptyContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
 
-export default Favorites;
+  emptyText: {
+    fontSize: 16,
+    color: "#555",
+  },
+});

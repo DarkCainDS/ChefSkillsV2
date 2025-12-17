@@ -1,3 +1,4 @@
+import { getVersionedImageSync } from "../../utils/versionedImage";
 import { useFonts } from "expo-font";
 import { Image } from "expo-image";
 import React, { useState } from "react";
@@ -33,7 +34,7 @@ export default function TipDetail({ route }) {
         <ScrollView horizontal showsHorizontalScrollIndicator={false} pagingEnabled style={styles.gallery}>
           {images.map((url, index) => (
             <TouchableOpacity key={index} onPress={() => openModal(index)}>
-              <Image source={{ uri: url }} style={styles.image} transition={300} contentFit="contain" cachePolicy="memory-disk" />
+              <Image source={getVersionedImageSync(url)} }} style={styles.image} transition={300} contentFit="contain" cachePolicy="memory-disk" />
             </TouchableOpacity>
           ))}
         </ScrollView>
@@ -47,7 +48,7 @@ export default function TipDetail({ route }) {
             <TouchableWithoutFeedback>
               {selectedImageIndex !== null && (
                 <Image
-                  source={{ uri: images[selectedImageIndex] }}
+                  source={getVersionedImageSync(images)}[selectedImageIndex] }}
                   style={styles.fullImage}
                   transition={300}
                   contentFit="contain"

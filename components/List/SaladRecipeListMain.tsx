@@ -1,3 +1,4 @@
+import { getVersionedImageSync } from "../../utils/versionedImage";
 // screens/SaladRecipeListMain.tsx
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
@@ -15,7 +16,7 @@ import {
 import saladsData from "../../assets/Json/Salad.json";
 
 // 🟢 Util universal para imágenes seguras
-import { getSafeImage } from "../../utils/getImageSource";
+import { getSafeVersionedImage } from "../../utils/imageSource";
 
 // 🔎 Normalización PRO para búsqueda
 const normalizeText = (text: string) =>
@@ -71,12 +72,15 @@ function SaladRecipeListMain() {
           navigation.navigate("SaladRecipeDetail", { recipe: item })
         }
       >
-        <Image
-          source={getSafeImage(item.imageUrl, item.images)}
-          style={styles.image}
-          contentFit="cover"
-          transition={300}
-        />
+<Image
+  source={getSafeVersionedImage(
+    item.imageUrl,
+    item.images
+  )}
+  style={styles.image}
+  contentFit="cover"
+  transition={300}
+/>
 
         <View style={styles.info}>
           <Text style={styles.title}>{item.name}</Text>

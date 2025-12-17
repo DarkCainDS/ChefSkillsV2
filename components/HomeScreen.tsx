@@ -1,3 +1,4 @@
+import { getVersionedImageSync } from "../utils/versionedImage";
 // ===============================================
 // HomeScreen.tsx — Versión Final con Watchdog + Redirect
 // ===============================================
@@ -101,38 +102,7 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
 
 
 
-  // ============================================================
-  // ⭐ PASO 1: REDIRIGIR SI NO HAY JSON O WATCHDOG MANDÓ REFRESH
-  // ============================================================
-  useEffect(() => {
-    const ensureJsonReady = async () => {
-      const force = await AsyncStorage.getItem("CS_FORCE_FULL_REFRESH");
 
-      if (force === "1") {
-        // 🛑 Ir directo a Loading
-        nav.reset({
-          index: 0,
-          routes: [{ name: "Loading" }],
-        });
-        return;
-      }
-
-      // Buscar si existen JSON en cache
-      const keys = await AsyncStorage.getAllKeys();
-      const hasJson = keys.some(k => k.startsWith("CACHE_"));
-
-      if (!hasJson) {
-        // 🛑 Si no hay JSON → Loading
-        nav.reset({
-          index: 0,
-          routes: [{ name: "Loading" }],
-        });
-        return;
-      }
-    };
-
-    ensureJsonReady();
-  }, []);
 
 
 

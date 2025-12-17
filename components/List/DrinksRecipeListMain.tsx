@@ -12,11 +12,9 @@ import {
   View,
 } from "react-native";
 
-import drinksData from "../../assets/Json/Drink.json"; 
+import drinksData from "../../assets/Json/Drink.json";
+import { getSafeVersionedImage } from "../../utils/imageSource";
 
-// 🟢 Util universal
-import { getSafeImage } from "../../utils/getImageSource";
-import { getVersionedImageSync } from "../../utils/versionedImage";
 
 // 🔍 Normalización inteligente
 const normalizeText = (text: string) =>
@@ -71,7 +69,10 @@ function DrinksRecipeListMain() {
         onPress={() => navigation.navigate("DrinkRecipeDetail", { recipe: item })}
       >
         <Image
-          source={getVersionedImageSync(item.imageUrl)}
+          source={getSafeVersionedImage(
+            item.imageUrl,
+            item.images
+          )}
           style={styles.image}
           contentFit="cover"
           transition={300}

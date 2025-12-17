@@ -1,3 +1,4 @@
+import { getVersionedImageSync } from "../../utils/versionedImage";
 // screens/MainDishRecipeListMain.tsx
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
@@ -14,7 +15,7 @@ import {
 import recipesData from '../../assets/Json/Main_Dish.json';
 
 // 👇 USAMOS tu util universal
-import { getSafeImage } from '../../utils/getImageSource';
+import { getSafeVersionedImage } from "../../utils/imageSource";
 
 // --- Normalizador PRO para búsqueda smart ---
 const normalizeText = (text: string) => {
@@ -72,8 +73,11 @@ const MainDishRecipeListMain = () => {
             navigation.navigate('MainDishRecipeDetail', { recipe: item })
           }
         >
-          <Image
-            source={getSafeImage(item.imageUrl, item.images)}
+        <Image
+          source={getSafeVersionedImage(
+            item.imageUrl,
+            item.images
+          )}
             style={styles.image}
             contentFit="cover"
             transition={300}

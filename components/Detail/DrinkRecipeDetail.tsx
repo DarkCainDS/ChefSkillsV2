@@ -19,11 +19,10 @@ import LinearGradient from "react-native-linear-gradient";
 import { useRoute, RouteProp, useNavigation } from "@react-navigation/native";
 
 import CategoryHeader from "../UI/CSHeader_ModernPro";
-import { getSafeImage } from "../../utils/getImageSource";
 import { useFavoriteToggle } from "../hooks/useFavoriteToggle";
+import { getSafeVersionedImage } from "../../utils/imageSource";
 
 import type { Recipe } from "../../store/Slices/FavoriteSlice";
-import { getVersionedImageSync } from "../../utils/versionedImage"
 
 // NAV TYPES
 type RootStackParamList = {
@@ -125,6 +124,11 @@ export default function TragosRecipeDetail() {
       </View>
     );
   }
+  const imageSources = getSafeVersionedImage(
+    recipe.imageUrl,
+    recipe.images
+  );
+
 
   return (
     <LinearGradient
@@ -156,16 +160,18 @@ export default function TragosRecipeDetail() {
         </View>
 
         {/* IMAGES */}
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          pagingEnabled
-          style={styles.imageContainer}
-        >
-          {recipe.images?.map((path, idx) => (
-            <TouchableOpacity key={idx} onPress={() => setSelectedImage(path)}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          {imageSources.map((src, idx) => (
+            <TouchableOpacity
+              key={idx}
+              onPress={() =>
+                typeof src === "object" && "uri" in src
+                  ? setSelectedImage(src.uri)
+                  : null
+              }
+            >
               <Image
-                source={getVersionedImageSync(path)}
+                source={src}
                 style={styles.image}
                 contentFit="cover"
               />
@@ -173,13 +179,15 @@ export default function TragosRecipeDetail() {
           ))}
         </ScrollView>
 
+
+
         {/* MODAL */}
         <Modal visible={!!selectedImage} transparent animationType="fade">
           <TouchableWithoutFeedback onPress={() => setSelectedImage(null)}>
             <View style={styles.modalBackground}>
               {selectedImage && (
                 <Image
-                  source={getVersionedImageSync(selectedImage)}
+                  source={getSafeVersionedImage(selectedImage)[0]}
                   style={styles.modalImageLarge}
                   contentFit="contain"
                 />
@@ -274,59 +282,59 @@ export default function TragosRecipeDetail() {
       </ScrollView>
 
       {/* MODAL TIPS */}
-<Modal
-  visible={tipsVisible}
-  transparent
-  animationType="fade"
-  onRequestClose={closeTipsModal}
->
-  <View style={styles.tipsModalOverlay} pointerEvents="box-none">
-
-    {/* TAP FUERA = CERRAR */}
-    <TouchableWithoutFeedback onPress={closeTipsModal}>
-      <View style={StyleSheet.absoluteFill} />
-    </TouchableWithoutFeedback>
-
-    {/* CONTENIDO DEL MODAL (scroll sin obstáculos) */}
-    <Animated.View
-      style={[
-        styles.tipsModal,
-        { opacity: fadeAnim, transform: [{ scale: fadeAnim }] },
-      ]}
-      pointerEvents="box-none"
-    >
-      <Text style={styles.tipsTitle}>💡 Consejos útiles</Text>
-
-      <ScrollView
-        style={{ maxHeight: "70%" }}
-        showsVerticalScrollIndicator={false}
+      <Modal
+        visible={tipsVisible}
+        transparent
+        animationType="fade"
+        onRequestClose={closeTipsModal}
       >
-        {recipe.tips?.map((tip, idx) => (
-          <LinearGradient
-            key={idx}
-            colors={[
-              tipColors[idx % tipColors.length] + "FF",
-              tipColors[idx % tipColors.length] + "CC",
+        <View style={styles.tipsModalOverlay} pointerEvents="box-none">
+
+          {/* TAP FUERA = CERRAR */}
+          <TouchableWithoutFeedback onPress={closeTipsModal}>
+            <View style={StyleSheet.absoluteFill} />
+          </TouchableWithoutFeedback>
+
+          {/* CONTENIDO DEL MODAL (scroll sin obstáculos) */}
+          <Animated.View
+            style={[
+              styles.tipsModal,
+              { opacity: fadeAnim, transform: [{ scale: fadeAnim }] },
             ]}
-            style={styles.tipCard}
+            pointerEvents="box-none"
           >
-            <Text style={styles.tipTitle}>{tip.title}</Text>
-            <Text style={styles.tipDescription}>
-              {tip.description}
-            </Text>
-          </LinearGradient>
-        ))}
-      </ScrollView>
+            <Text style={styles.tipsTitle}>💡 Consejos útiles</Text>
 
-      <TouchableOpacity
-        style={styles.closeTipsButton}
-        onPress={closeTipsModal}
-      >
-        <Text style={styles.closeTipsText}>Cerrar</Text>
-      </TouchableOpacity>
-    </Animated.View>
-  </View>
-</Modal>
+            <ScrollView
+              style={{ maxHeight: "70%" }}
+              showsVerticalScrollIndicator={false}
+            >
+              {recipe.tips?.map((tip, idx) => (
+                <LinearGradient
+                  key={idx}
+                  colors={[
+                    tipColors[idx % tipColors.length] + "FF",
+                    tipColors[idx % tipColors.length] + "CC",
+                  ]}
+                  style={styles.tipCard}
+                >
+                  <Text style={styles.tipTitle}>{tip.title}</Text>
+                  <Text style={styles.tipDescription}>
+                    {tip.description}
+                  </Text>
+                </LinearGradient>
+              ))}
+            </ScrollView>
+
+            <TouchableOpacity
+              style={styles.closeTipsButton}
+              onPress={closeTipsModal}
+            >
+              <Text style={styles.closeTipsText}>Cerrar</Text>
+            </TouchableOpacity>
+          </Animated.View>
+        </View>
+      </Modal>
 
     </LinearGradient>
   );

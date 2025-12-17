@@ -1,3 +1,4 @@
+import { getVersionedImageSync } from "../../utils/versionedImage";
 import { useFonts } from "expo-font";
 import { Image } from "expo-image";
 import React, { useState } from "react";
@@ -40,7 +41,7 @@ export default function FoodNoteDetail({ route }: any) {
           {images.map((url, index) => (
             <TouchableOpacity key={index} onPress={() => openModal(index)}>
               <Image
-                source={{ uri: url }}
+                source={getVersionedImageSync(url)} }}
                 style={styles.image}
                 transition={300}
                 contentFit="contain"
@@ -87,7 +88,7 @@ export default function FoodNoteDetail({ route }: any) {
             <TouchableWithoutFeedback>
               {selectedImageIndex !== null && (
                 <Image
-                  source={{ uri: images[selectedImageIndex] }}
+                  source={getVersionedImageSync(images)}[selectedImageIndex] }}
                   style={styles.fullImage}
                   transition={300}
                   contentFit="contain"

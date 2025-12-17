@@ -1,6 +1,8 @@
-// utils/getImageSource.ts
+import { ImageSource } from "expo-image";
+import { getVersionedImageSync } from "./versionedImage";
 
-export const placeholderImages = [
+// placeholders locales
+export const PLACEHOLDERS: ImageSource[] = [
   require("../assets/404/placeholder1.webp"),
   require("../assets/404/placeholder2.webp"),
   require("../assets/404/placeholder3.webp"),
@@ -19,23 +21,25 @@ export const placeholderImages = [
   require("../assets/404/placeholder16.webp"),
 ];
 
-export function getSafeImage(mainUrl?: string, imagesArray?: string[]) {
-  const fallbacks = placeholderImages;
+// ✅ FUNCIÓN FINAL
+export function getSafeVersionedImage(
+  mainUrl?: string,
+  imagesArray?: string[]
+): ImageSource[] {
+  const sources: ImageSource[] = [];
 
-  const urls: ImageSource[] = [];
-
-  // Prioridad 1: imagen principal
-  if (mainUrl && typeof mainUrl === "string") {
-    urls.push({ uri: mainUrl });
+  // prioridad 1: imagen principal
+  if (mainUrl) {
+    sources.push(getVersionedImageSync(mainUrl));
   }
 
-  // Prioridad 2: primera imagen del array (si existe)
-  if (imagesArray && imagesArray.length > 0) {
-    urls.push({ uri: imagesArray[0] });
+  // prioridad 2: primera del array
+  if (imagesArray?.length) {
+    sources.push(getVersionedImageSync(imagesArray[0]));
   }
 
-  // Fallbacks
-  urls.push(...fallbacks);
+  // fallback local
+  sources.push(...PLACEHOLDERS);
 
-  return urls;
+  return sources;
 }

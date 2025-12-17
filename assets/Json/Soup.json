@@ -3,484 +3,3556 @@
 {
   "id": 1,
   "uid": "R-SOUP_000001",
-  "name": "Sopa de Verduras Saludable",
-  "description": "Sopa fácil, económica y sabrosa, con un truco de licuado de zanahoria y tomate tatemado para lograr una textura cremosa.",
+  "name": "Sopa de Verduras Saludable con Base Licuada",
+  "description": "Sopa casera, económica y reconfortante, con una base cremosa natural lograda al licuar zanahoria y tomate tatemado, sin necesidad de crema.",
   "imageUrl": "https://example.com/sopa-verduras-saludable.jpg",
-  "detailedInfo": "Una sopa casera ideal para cualquier día, rica en vegetales y con una textura suave y natural gracias al licuado de zanahoria y tomate tatemado.",
+  "detailedInfo": "Esta sopa de verduras es una preparación cotidiana y versátil, ideal para aprovechar vegetales frescos y lograr un plato nutritivo y sabroso. El secreto está en licuar parte de la zanahoria junto con tomate tatemado, lo que aporta cuerpo, color y profundidad de sabor sin añadir lácteos ni espesantes artificiales. Es perfecta como plato principal ligero, entrada caliente o base para variaciones con legumbres, fideos o arroz.",
   "ingredients": [
-    { "name": "Habichuelas (ejotes)", "quantity": "1 puñado", "notes": "Picadas finamente en rodajitas" },
-    { "name": "Pimentón rojo mediano", "quantity": "1 unidad", "notes": "Picado en cuadritos pequeños" },
-    { "name": "Cebolla blanca mediana", "quantity": "1 unidad", "notes": "Picada en cuadritos o julianas" },
-    { "name": "Zanahoria grande", "quantity": "1 unidad", "notes": "Mitad picada y mitad reservada" },
-    { "name": "Cebolla larga (cebolleta)", "quantity": "2 ramas", "notes": "Cortadas en rodajitas" },
-    { "name": "Arvejas (chícharos)", "quantity": "Al gusto", "notes": "" },
-    { "name": "Papa", "quantity": "1 unidad", "notes": "Picada en cubos medianos" },
+    { "name": "Habichuelas (ejotes)", "quantity": "1 puñado", "notes": "Picadas en rodajas finas" },
+    { "name": "Pimentón rojo", "quantity": "1 unidad", "notes": "Cortado en cubos pequeños" },
+    { "name": "Cebolla blanca", "quantity": "1 unidad", "notes": "Picada en cubos o juliana" },
+    { "name": "Zanahoria", "quantity": "1 unidad grande", "notes": "Mitad picada y mitad entera para licuar" },
+    { "name": "Cebolla larga (cebolleta)", "quantity": "2 ramas", "notes": "Cortadas en rodajas" },
+    { "name": "Arvejas", "quantity": "Al gusto", "notes": "" },
+    { "name": "Papa", "quantity": "1 unidad", "notes": "Cortada en cubos medianos" },
     { "name": "Ajo", "quantity": "3 dientes", "notes": "Finamente picados" },
-    { "name": "Aceite de oliva o vegetal", "quantity": "1 chorrito", "notes": "Para sofreír" },
-    { "name": "Agua", "quantity": "1.5 litros", "notes": "Ajustar según porciones" },
+    { "name": "Aceite", "quantity": "1 chorrito", "notes": "Para sofreír" },
+    { "name": "Agua", "quantity": "1.5 litros", "notes": "Ajustar según consistencia deseada" },
     { "name": "Tomate", "quantity": "1 unidad", "notes": "Tatemado en sartén" },
-    { "name": "Caldo de la sopa", "quantity": "1-2 cucharadas", "notes": "Usado para licuar" },
     { "name": "Sal", "quantity": "Al gusto", "notes": "" },
     { "name": "Pimienta negra", "quantity": "Al gusto", "notes": "Recién molida" },
     { "name": "Comino molido", "quantity": "1 cucharadita", "notes": "" },
     { "name": "Orégano seco", "quantity": "1 cucharadita", "notes": "" },
-    { "name": "Cilantro", "quantity": "Al gusto", "notes": "Finamente picado" },
-    { "name": "Pimienta de cayena", "quantity": "1 pizca (opcional)", "notes": "Omitir si hay niños" }
+    { "name": "Cilantro fresco", "quantity": "Al gusto", "notes": "Finamente picado" },
+    { "name": "Pimienta de cayena", "quantity": "1 pizca (opcional)", "notes": "Omitir si se desea una sopa suave" }
   ],
   "steps": [
-    { "step": "Picar finamente las habichuelas, el pimentón, la cebolla blanca, la mitad de la zanahoria y la cebolla larga. Cortar la papa en cubos y reservar la otra mitad de la zanahoria." },
-    { "step": "En una olla amplia, calentar un chorrito de aceite y sofreír el ajo picado sin dejar que se queme." },
-    { "step": "Agregar el agua, sal y pimienta al gusto. Cuando hierva, añadir las verduras: zanahoria, arvejas, pimentón, habichuelas, cebolla blanca, papa y cebolla larga." },
-    { "step": "Condimentar con comino, orégano y pimienta de cayena opcional. Cocinar a fuego medio." },
-    { "step": "Tatemar el tomate en sartén hasta que tome color asado, sin quemarse." },
-    { "step": "Retirar la media zanahoria entera de la sopa junto con el tomate tatemado, licuar con 1-2 cucharadas del caldo hasta obtener una mezcla suave." },
-    { "step": "Verter el licuado en la olla para espesar la sopa y mezclar bien." },
-    { "step": "Agregar cilantro picado, cocinar 10 minutos más y ajustar sal o condimentos al gusto." },
-    { "step": "Servir caliente, opcionalmente con trocitos de queso o parte verde de cebolla larga picada." }
+    {
+      "step": "Preparar todos los vegetales: picar las habichuelas, el pimentón, la cebolla blanca, la mitad de la zanahoria y la cebolla larga. Cortar la papa en cubos medianos y reservar la otra mitad de la zanahoria entera."
+    },
+    {
+      "step": "En una olla amplia, calentar un chorrito de aceite a fuego medio y sofreír el ajo picado hasta que esté fragante, evitando que se dore en exceso."
+    },
+    {
+      "step": "Agregar el agua, sal y pimienta. Llevar a hervor suave y añadir las verduras: zanahoria picada, arvejas, pimentón, habichuelas, cebolla blanca, papa y cebolla larga."
+    },
+    {
+      "step": "Condimentar con comino, orégano y pimienta de cayena opcional. Cocinar a fuego medio hasta que las verduras estén tiernas pero no deshechas."
+    },
+    {
+      "step": "Mientras la sopa hierve, tatemar el tomate en una sartén caliente hasta que la piel esté ligeramente quemada y el interior blando."
+    },
+    {
+      "step": "Retirar de la olla la zanahoria entera reservada y el tomate tatemado. Licuarlos con un poco del caldo caliente hasta obtener una mezcla suave y homogénea."
+    },
+    {
+      "step": "Incorporar el licuado nuevamente a la olla, mezclando bien para espesar la sopa y unificar sabores."
+    },
+    {
+      "step": "Agregar el cilantro picado, cocinar 10 minutos más a fuego bajo y ajustar sal o condimentos si es necesario."
+    },
+    {
+      "step": "Servir caliente. Opcionalmente acompañar con queso fresco, pan tostado o cebolla larga picada."
+    }
+  ],
+  "tips": [
+    {
+      "title": "Espesor natural sin crema",
+      "description": "Licuar zanahoria y tomate permite espesar la sopa sin usar crema ni harinas, manteniéndola liviana y saludable."
+    },
+    {
+      "title": "Tatemar aporta profundidad",
+      "description": "El tomate tatemado añade notas ahumadas suaves que elevan el sabor final sin complicar la receta."
+    },
+    {
+      "title": "Verduras al dente",
+      "description": "Evita sobrecocer las verduras para conservar mejor textura, color y nutrientes."
+    },
+    {
+      "title": "Sopa base versátil",
+      "description": "Puedes agregar arroz, fideos, lentejas o garbanzos a esta sopa sin modificar la técnica principal."
+    },
+    {
+      "title": "Ideal para niños",
+      "description": "Omitiendo la cayena y licuando una mayor cantidad de verduras, se obtiene una sopa suave y amigable."
+    }
   ],
   "images": [
     "https://example.com/sopa-verduras1.webp",
     "https://example.com/sopa-verduras2.webp"
   ],
-              "tips": [
-        {
-          "title": "Marinar el tiempo suficiente",
-          "description": "Aunque 8 horas es el mínimo, se recomienda dejarlo uno o dos días en la nevera para intensificar el sabor."
-        },
-        {
-          "title": "Atemperar la carne",
-          "description": "Dejar que la carne alcance temperatura ambiente antes de hornear asegura una cocción uniforme."
-        },
-        {
-          "title": "Usar una base de cebolla",
-          "description": "Las cebollas evitan que la carne toque directamente la bandeja y ayudan a mantenerla jugosa."
-        },
-        {
-          "title": "No exceder el tiempo de cocción inicial",
-          "description": "Hornea 35 minutos por kilo durante la primera cocción para evitar que el lomo quede seco."
-        },
-        {
-          "title": "Dejar reposar antes de cortar",
-          "description": "Reposar 10 minutos tras sacarlo del horno evita que se pierdan los jugos y mejora la textura."
-        }
-      ],
-  "rating": null
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
 },
-{
-  "id": 2,
-  "uid": "R-SOUP_000002",
-  "name": "Sopa de Verduras Muy Fácil",
-  "description": "Sopa ligera y reconfortante, ideal para una cena caliente. Su preparación es rápida y sencilla, perfecta para cualquier día.",
-  "imageUrl": "https://example.com/sopa-verduras-facil.jpg",
-  "detailedInfo": "Una receta práctica que utiliza verduras comunes y condimentos simples para crear una sopa casera nutritiva y suave.",
+  {
+    "id": 2,
+    "uid": "R-SOUP_000002",
+    "name": "Sopa de Verduras con Zapallo Licuado",
+    "description": "Sopa espesa y reconfortante con zapallo como base cremosa natural.",
+    "imageUrl": "https://example.com/soup-002.jpg",
+    "detailedInfo": "El zapallo se cocina hasta estar muy tierno y se licua parcialmente para dar una textura aterciopelada. Es una sopa económica, rendidora y muy fácil de dominar.",
+    "ingredients": [
+      { "name": "Zapallo", "quantity": "300 g" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua o caldo", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla hasta blanda." },
+      { "step": "Agregar zapallo y zanahoria en cubos." },
+      { "step": "Cubrir con líquido y cocinar hasta muy tierno." },
+      { "step": "Licuar una parte y reincorporar." }
+    ],
+    "tips": [
+      {
+        "title": "Zapallo bien cocido",
+        "description": "Mientras más blando esté, más cremosa quedará la sopa."
+      }
+    ],
+    "images": [
+      "https://example.com/soup-002-1.webp",
+      "https://example.com/soup-002-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 3,
+    "uid": "R-SOUP_000003",
+    "name": "Sopa de Verduras con Tomate Asado",
+    "description": "Sopa liviana con profundidad de sabor gracias al tomate asado.",
+    "imageUrl": "https://example.com/soup-003.jpg",
+    "detailedInfo": "El tomate asado aporta notas dulces y levemente ahumadas. Al licuarse con caldo, genera una base intensa que realza verduras simples.",
+    "ingredients": [
+      { "name": "Tomate", "quantity": "2 unidades" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Asar los tomates en sartén o horno hasta dorar." },
+      { "step": "Sofreír cebolla y zanahoria." },
+      { "step": "Agregar agua y cocinar." },
+      { "step": "Licuar el tomate con caldo y reincorporar." }
+    ],
+    "tips": [
+      {
+        "title": "Más sabor",
+        "description": "Asar el tomate concentra azúcares naturales."
+      }
+    ],
+    "images": [
+      "https://example.com/soup-003-1.webp",
+      "https://example.com/soup-003-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 4,
+    "uid": "R-SOUP_000004",
+    "name": "Sopa Verde Licuada Suave",
+    "description": "Sopa fresca y ligera elaborada con verduras verdes licuadas.",
+    "imageUrl": "https://example.com/soup-004.jpg",
+    "detailedInfo": "Ideal para quienes buscan una sopa liviana. Se licúan verduras verdes cocidas para obtener un color vivo y textura homogénea.",
+    "ingredients": [
+      { "name": "Zapallito", "quantity": "1 unidad" },
+      { "name": "Espinaca", "quantity": "1 puñado" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla." },
+      { "step": "Agregar zapallito y agua, cocinar hasta blando." },
+      { "step": "Añadir espinaca y licuar todo." }
+    ],
+    "tips": [
+      {
+        "title": "Color intenso",
+        "description": "No sobrecocer las hojas verdes."
+      }
+    ],
+    "images": [
+      "https://example.com/soup-004-1.webp",
+      "https://example.com/soup-004-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 5,
+    "uid": "R-SOUP_000005",
+    "name": "Sopa de Papa Espesa Casera",
+    "description": "Sopa clásica y cremosa gracias al almidón natural de la papa.",
+    "imageUrl": "https://example.com/soup-005.jpg",
+    "detailedInfo": "La papa se deshace parcialmente durante la cocción, generando una sopa espesa sin necesidad de licuar todo.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "2 unidades" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Ajo", "quantity": "1 diente" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla y ajo." },
+      { "step": "Agregar papa en cubos y agua." },
+      { "step": "Cocinar hasta que la papa comience a deshacerse." }
+    ],
+    "tips": [
+      {
+        "title": "Espesor natural",
+        "description": "Aplasta algunas papas con cuchara para más cuerpo."
+      }
+    ],
+    "images": [
+      "https://example.com/soup-005-1.webp",
+      "https://example.com/soup-005-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 6,
+    "uid": "R-SOUP_000006",
+    "name": "Sopa de Verduras con Base de Zapallo Licuado",
+    "description": "Sopa suave y naturalmente cremosa gracias al zapallo licuado, ideal para principiantes.",
+    "imageUrl": "https://example.com/sopa-zapallo-6.jpg",
+    "detailedInfo": "Esta sopa utiliza el zapallo como base principal para aportar dulzor, color y cuerpo. Parte del zapallo se licua con caldo caliente y se reincorpora, logrando una textura homogénea sin necesidad de crema ni harinas. Es una preparación simple que enseña a usar vegetales ricos en almidón como espesantes naturales.",
+    "ingredients": [
+      { "name": "Zapallo", "quantity": "300 g" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Ajo", "quantity": "1 diente" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua o caldo vegetal", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla y el ajo en aceite a fuego medio hasta que estén suaves." },
+      { "step": "Agregar el zapallo y la zanahoria en cubos, mezclar brevemente." },
+      { "step": "Cubrir con el líquido y cocinar hasta que el zapallo esté muy tierno." },
+      { "step": "LicuAR una parte del zapallo con caldo y reincorporar a la olla." },
+      { "step": "Mezclar bien, ajustar sal y servir caliente." }
+    ],
+    "tips": [
+      {
+        "title": "Zapallo bien blando",
+        "description": "Cuanto más tierno esté el zapallo, más cremosa quedará la sopa."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-zapallo-6-1.webp",
+      "https://example.com/sopa-zapallo-6-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 7,
+    "uid": "R-SOUP_000007",
+    "name": "Sopa de Verduras con Tomate Tatemado",
+    "description": "Sopa ligera con base de tomate tatemado que aporta profundidad y aroma.",
+    "imageUrl": "https://example.com/sopa-tomate-7.jpg",
+    "detailedInfo": "El tomate tatemado se utiliza como base licuada para intensificar el sabor de una sopa simple de verduras. El tostado superficial concentra los azúcares naturales del tomate y aporta notas ahumadas suaves, ideales para elevar una preparación básica.",
+    "ingredients": [
+      { "name": "Tomate", "quantity": "2 unidades" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Ajo", "quantity": "2 dientes" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Tatemar los tomates en una sartén caliente hasta que la piel esté dorada." },
+      { "step": "Sofreír la cebolla y el ajo en una olla." },
+      { "step": "Agregar zanahoria y agua, cocinar hasta que esté tierna." },
+      { "step": "LicuAR el tomate tatemado con parte del caldo." },
+      { "step": "Incorporar el licuado a la olla y ajustar sal." }
+    ],
+    "tips": [
+      {
+        "title": "Tatemado controlado",
+        "description": "No quemes en exceso el tomate para evitar sabores amargos."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-tomate-7-1.webp",
+      "https://example.com/sopa-tomate-7-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 8,
+    "uid": "R-SOUP_000008",
+    "name": "Sopa Verde Licuada de Zapallito y Espinaca",
+    "description": "Sopa fresca y liviana elaborada con verduras verdes licuadas.",
+    "imageUrl": "https://example.com/sopa-verde-8.jpg",
+    "detailedInfo": "Esta sopa enseña a trabajar verduras verdes sin perder color ni frescura. El zapallito aporta volumen y la espinaca refuerza el color y los nutrientes. Todo se licua para obtener una textura uniforme y suave.",
+    "ingredients": [
+      { "name": "Zapallito", "quantity": "1 unidad" },
+      { "name": "Espinaca fresca", "quantity": "1 puñado grande" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla en aceite hasta que esté transparente." },
+      { "step": "Agregar el zapallito en cubos y el agua." },
+      { "step": "Cocinar hasta que el zapallito esté blando." },
+      { "step": "Añadir la espinaca y licuar inmediatamente." }
+    ],
+    "tips": [
+      {
+        "title": "Color vibrante",
+        "description": "Licuar la espinaca justo al final evita que pierda color."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-verde-8-1.webp",
+      "https://example.com/sopa-verde-8-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 9,
+    "uid": "R-SOUP_000009",
+    "name": "Sopa de Verduras con Papa Espesada Naturalmente",
+    "description": "Sopa clásica donde la papa aporta cuerpo y textura sin licuado total.",
+    "imageUrl": "https://example.com/sopa-papa-9.jpg",
+    "detailedInfo": "La papa se cocina hasta comenzar a deshacerse, liberando su almidón y espesando el caldo de forma natural. Esta técnica enseña a espesar sopas sin licuadora y con ingredientes simples.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "2 unidades" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla hasta blanda." },
+      { "step": "Agregar papa y zanahoria en cubos." },
+      { "step": "Cubrir con agua y cocinar hasta que la papa esté muy tierna." },
+      { "step": "Aplastar algunas papas dentro de la olla para espesar." }
+    ],
+    "tips": [
+      {
+        "title": "Sin licuadora",
+        "description": "Aplastar papas es suficiente para lograr cuerpo."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-papa-9-1.webp",
+      "https://example.com/sopa-papa-9-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 10,
+    "uid": "R-SOUP_000010",
+    "name": "Sopa de Verduras Mixtas con Base Licuada",
+    "description": "Sopa equilibrada de verduras variadas con base licuada suave.",
+    "imageUrl": "https://example.com/sopa-mixta-10.jpg",
+    "detailedInfo": "Esta sopa combina varias verduras comunes y utiliza una parte licuada para unir sabores y texturas. Es ideal para aprender a balancear ingredientes y lograr una sopa armónica sin complicaciones.",
+    "ingredients": [
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Papa", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Arvejas", "quantity": "1/2 taza" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.6 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla en aceite." },
+      { "step": "Agregar zanahoria, papa y arvejas." },
+      { "step": "Cubrir con agua y cocinar hasta tierno." },
+      { "step": "LicuAR una parte de las verduras con caldo y reincorporar." }
+    ],
+    "tips": [
+      {
+        "title": "Sopa base",
+        "description": "Sirve como punto de partida para agregar arroz, fideos o legumbres."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-mixta-10-1.webp",
+      "https://example.com/sopa-mixta-10-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 11,
+    "uid": "R-SOUP_000011",
+    "name": "Sopa de Zanahoria y Papa con Base Licuada",
+    "description": "Sopa suave y reconfortante con zanahoria y papa, espesa de forma natural.",
+    "imageUrl": "https://example.com/sopa-11.jpg",
+    "detailedInfo": "Esta sopa combina zanahoria y papa para lograr una textura cremosa sin necesidad de crema. Parte de los vegetales se licuan con caldo caliente y se reincorporan, enseñando una técnica básica de espesado natural ideal para principiantes.",
+    "ingredients": [
+      { "name": "Zanahoria", "quantity": "2 unidades" },
+      { "name": "Papa", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua o caldo", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla en aceite hasta blanda." },
+      { "step": "Agregar zanahoria y papa en cubos." },
+      { "step": "Cubrir con el líquido y cocinar hasta muy tierno." },
+      { "step": "Licuar una parte de los vegetales y reincorporar." }
+    ],
+    "tips": [
+      {
+        "title": "Doble espesor",
+        "description": "La combinación de papa y zanahoria da cuerpo sin sabor pesado."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-11-1.webp",
+      "https://example.com/sopa-11-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 12,
+    "uid": "R-SOUP_000012",
+    "name": "Sopa de Verduras con Zapallo y Cebolla Suave",
+    "description": "Sopa cremosa de zapallo con base licuada y sofrito delicado.",
+    "imageUrl": "https://example.com/sopa-12.jpg",
+    "detailedInfo": "El zapallo se cocina lentamente junto a cebolla hasta estar muy tierno, luego se licua parcialmente para obtener una sopa aterciopelada. Es ideal para aprender a equilibrar dulzor natural y salinidad.",
+    "ingredients": [
+      { "name": "Zapallo", "quantity": "350 g" },
+      { "name": "Cebolla", "quantity": "1 unidad grande" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua o caldo", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla a fuego medio hasta transparente." },
+      { "step": "Agregar el zapallo en cubos y el líquido." },
+      { "step": "Cocinar hasta que el zapallo esté muy blando." },
+      { "step": "Licuar una parte y reincorporar." }
+    ],
+    "tips": [
+      {
+        "title": "Dulzor equilibrado",
+        "description": "Ajusta la sal al final para realzar el sabor del zapallo."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-12-1.webp",
+      "https://example.com/sopa-12-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 13,
+    "uid": "R-SOUP_000013",
+    "name": "Sopa de Verduras con Tomate Asado y Zanahoria",
+    "description": "Sopa aromática con tomate asado como base de sabor.",
+    "imageUrl": "https://example.com/sopa-13.jpg",
+    "detailedInfo": "El tomate asado aporta profundidad y notas dulces que se integran con zanahoria y cebolla. Al licuarse con caldo caliente, se obtiene una base intensa pero equilibrada.",
+    "ingredients": [
+      { "name": "Tomate", "quantity": "2 unidades" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Asar o tatemar los tomates hasta dorar la piel." },
+      { "step": "Sofreír la cebolla y zanahoria." },
+      { "step": "Agregar agua y cocinar hasta tierno." },
+      { "step": "Licuar el tomate con parte del caldo y reincorporar." }
+    ],
+    "tips": [
+      {
+        "title": "Sabor profundo",
+        "description": "El asado del tomate concentra su dulzor natural."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-13-1.webp",
+      "https://example.com/sopa-13-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 14,
+    "uid": "R-SOUP_000014",
+    "name": "Sopa Verde Suave de Zapallito",
+    "description": "Sopa liviana de zapallito con textura homogénea.",
+    "imageUrl": "https://example.com/sopa-14.jpg",
+    "detailedInfo": "Una sopa simple que enseña a trabajar verduras verdes sin sobrecocerlas. El zapallito aporta volumen y suavidad, ideal para una preparación ligera.",
+    "ingredients": [
+      { "name": "Zapallito", "quantity": "2 unidades" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.4 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla en aceite." },
+      { "step": "Agregar zapallito y agua." },
+      { "step": "Cocinar hasta blando y licuar todo." }
+    ],
+    "tips": [
+      {
+        "title": "Textura ligera",
+        "description": "Evita hervir en exceso para mantener frescura."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-14-1.webp",
+      "https://example.com/sopa-14-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 15,
+    "uid": "R-SOUP_000015",
+    "name": "Sopa de Verduras Casera Espesa Natural",
+    "description": "Sopa base de verduras con espesado natural mediante licuado parcial.",
+    "imageUrl": "https://example.com/sopa-15.jpg",
+    "detailedInfo": "Esta sopa funciona como cierre del bloque base: verduras comunes, técnica clara y resultado confiable. Parte de los vegetales se licuan para unir sabores y lograr una textura equilibrada.",
+    "ingredients": [
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Papa", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.6 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla en aceite." },
+      { "step": "Agregar zanahoria y papa en cubos." },
+      { "step": "Cubrir con agua y cocinar hasta tierno." },
+      { "step": "Licuar una parte y reincorporar para espesar." }
+    ],
+    "tips": [
+      {
+        "title": "Base reutilizable",
+        "description": "Puedes agregar arroz, fideos o legumbres sin cambiar la técnica."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-15-1.webp",
+      "https://example.com/sopa-15-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 16,
+    "uid": "R-SOUP_000016",
+    "name": "Sopa de Lentejas Suaves Especiadas",
+    "description": "Sopa nutritiva de lentejas con especias suaves y textura parcialmente cremosa.",
+    "imageUrl": "https://example.com/sopa-lentejas-16.jpg",
+    "detailedInfo": "Esta sopa de lentejas está pensada como introducción a las legumbres en preparaciones líquidas. Parte de las lentejas se licuan con el caldo para dar cuerpo, mientras el resto se mantiene entero, logrando una textura equilibrada. Las especias se usan con moderación para aportar profundidad sin dominar el sabor.",
+    "ingredients": [
+      { "name": "Lentejas secas", "quantity": "1 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Ajo", "quantity": "2 dientes" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua o caldo vegetal", "quantity": "1.7 litros" },
+      { "name": "Comino", "quantity": "1 cucharadita" },
+      { "name": "Pimentón dulce", "quantity": "1 cucharadita" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla y el ajo en aceite hasta transparentar." },
+      { "step": "Agregar zanahoria picada, lentejas y especias." },
+      { "step": "Cubrir con líquido y cocinar hasta que las lentejas estén muy tiernas." },
+      { "step": "LicuAR una parte de la sopa y reincorporar para espesar." }
+    ],
+    "tips": [
+      {
+        "title": "Espesor controlado",
+        "description": "Licuar solo una parte mantiene textura y evita una sopa pesada."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-lentejas-16-1.webp",
+      "https://example.com/sopa-lentejas-16-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 17,
+    "uid": "R-SOUP_000017",
+    "name": "Sopa Cremosa de Garbanzos sin Crema",
+    "description": "Sopa espesa y reconfortante elaborada con garbanzos licuados.",
+    "imageUrl": "https://example.com/sopa-garbanzos-17.jpg",
+    "detailedInfo": "Los garbanzos, al licuarse con caldo caliente, generan una textura naturalmente cremosa. Esta sopa enseña a lograr cuerpo usando legumbres bien cocidas, sin recurrir a lácteos ni espesantes externos.",
+    "ingredients": [
+      { "name": "Garbanzos cocidos", "quantity": "2 tazas" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Ajo", "quantity": "2 dientes" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua o caldo", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla y ajo hasta suaves." },
+      { "step": "Agregar garbanzos y líquido caliente." },
+      { "step": "Cocinar 10 minutos para integrar sabores." },
+      { "step": "LicuAR completamente hasta obtener una sopa homogénea." }
+    ],
+    "tips": [
+      {
+        "title": "Garbanzos bien cocidos",
+        "description": "Mientras más tiernos estén, más fina será la textura final."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-garbanzos-17-1.webp",
+      "https://example.com/sopa-garbanzos-17-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 18,
+    "uid": "R-SOUP_000018",
+    "name": "Sopa de Porotos Blancos con Verduras",
+    "description": "Sopa rústica de porotos blancos con verduras suaves.",
+    "imageUrl": "https://example.com/sopa-porotos-18.jpg",
+    "detailedInfo": "Esta sopa mantiene los porotos enteros para una textura rústica y reconfortante. Las verduras aportan aroma y equilibrio, sin ocultar el sabor principal de la legumbre.",
+    "ingredients": [
+      { "name": "Porotos blancos cocidos", "quantity": "2 tazas" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua o caldo", "quantity": "1.7 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla y zanahoria." },
+      { "step": "Agregar porotos y líquido." },
+      { "step": "Cocinar a fuego medio para integrar sabores." }
+    ],
+    "tips": [
+      {
+        "title": "Textura rústica",
+        "description": "No licuar mantiene identidad y mordida de la legumbre."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-porotos-18-1.webp",
+      "https://example.com/sopa-porotos-18-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 19,
+    "uid": "R-SOUP_000019",
+    "name": "Sopa Mixta de Lentejas Parcialmente Licuadas",
+    "description": "Sopa equilibrada con lentejas enteras y base espesa licuada.",
+    "imageUrl": "https://example.com/sopa-lentejas-19.jpg",
+    "detailedInfo": "Esta preparación muestra cómo combinar dos texturas en una misma sopa: una base cremosa obtenida al licuar parte de la legumbre y un cuerpo rústico con lentejas enteras.",
+    "ingredients": [
+      { "name": "Lentejas cocidas", "quantity": "2 tazas" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Ajo", "quantity": "1 diente" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.6 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla y ajo." },
+      { "step": "Agregar lentejas y agua." },
+      { "step": "LicuAR una parte y reincorporar." }
+    ],
+    "tips": [
+      {
+        "title": "Contraste de texturas",
+        "description": "Combinar licuado y entero hace la sopa más interesante."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-lentejas-19-1.webp",
+      "https://example.com/sopa-lentejas-19-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 20,
+    "uid": "R-SOUP_000020",
+    "name": "Sopa Suave de Garbanzos y Verduras",
+    "description": "Sopa liviana de garbanzos con verduras, parcialmente licuada.",
+    "imageUrl": "https://example.com/sopa-garbanzos-20.jpg",
+    "detailedInfo": "Una sopa equilibrada que utiliza los garbanzos como base de cuerpo, manteniendo parte de las verduras enteras para textura y frescura.",
+    "ingredients": [
+      { "name": "Garbanzos cocidos", "quantity": "1.5 tazas" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.6 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar zanahoria, garbanzos y agua." },
+      { "step": "Cocinar y licuar parcialmente." }
+    ],
+    "tips": [
+      {
+        "title": "Ligera pero saciante",
+        "description": "El garbanzo aporta cuerpo sin volverla pesada."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-garbanzos-20-1.webp",
+      "https://example.com/sopa-garbanzos-20-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+  "id": 21,
+  "uid": "R-SOUP_000021",
+  "name": "Sopa de Lentejas Rústicas con Verduras",
+  "description": "Sopa contundente de lentejas enteras con verduras, de textura rústica y reconfortante.",
+  "imageUrl": "https://example.com/sopa-21.jpg",
+  "detailedInfo": "Esta sopa mantiene las lentejas mayoritariamente enteras para lograr una textura rústica y casera. El sofrito suave de cebolla y zanahoria aporta dulzor y profundidad sin necesidad de especias intensas. Ideal para aprender a trabajar legumbres sin licuado.",
   "ingredients": [
-    { "name": "Aceite", "quantity": "1 chorrito", "notes": "Para sofreír" },
-    { "name": "Caldo o agua", "quantity": "A gusto", "notes": "Suficiente para cubrir las verduras" },
-    { "name": "Cebolla", "quantity": "1 unidad", "notes": "Picada en cubitos" },
-    { "name": "Papa", "quantity": "1 unidad", "notes": "Picada en cubos pequeños" },
-    { "name": "Zanahoria", "quantity": "1 unidad", "notes": "Picada en cubos pequeños" },
-    { "name": "Ajo", "quantity": "1 diente", "notes": "Finamente picado" },
-    { "name": "Zapallo (calabaza)", "quantity": "1 trozo", "notes": "Cortado en cubitos" },
-    { "name": "Zapallito verde (zucchini)", "quantity": "1 unidad", "notes": "Cortado en cubitos" },
-    { "name": "Tomate", "quantity": "1 unidad", "notes": "Picado" },
-    { "name": "Arvejas (guisantes)", "quantity": "Al gusto", "notes": "" },
-    { "name": "Sal y condimentos", "quantity": "Al gusto", "notes": "Agregar junto con el líquido" }
+    { "name": "Lentejas", "quantity": "1 taza" },
+    { "name": "Zanahoria", "quantity": "1 unidad" },
+    { "name": "Cebolla", "quantity": "1 unidad" },
+    { "name": "Aceite", "quantity": "1 cucharada" },
+    { "name": "Agua o caldo", "quantity": "1.7 litros" },
+    { "name": "Sal", "quantity": "Al gusto" }
   ],
   "steps": [
-    { "step": "Cortar todas las verduras en cubitos de tamaño uniforme." },
-    { "step": "En una olla con un chorrito de aceite, agregar la cebolla, papa y zanahoria. Sofreír por 5 minutos." },
-    { "step": "Añadir el ajo, el zapallo, el zapallito verde, el tomate y las arvejas. Cocinar 5 minutos más." },
-    { "step": "Incorporar el caldo o agua, condimentar con sal y especias al gusto, tapar y cocinar a fuego medio durante 30 minutos." },
-    { "step": "Servir caliente, ideal para la cena." }
+    { "step": "Sofreír la cebolla y zanahoria picadas en aceite." },
+    { "step": "Agregar las lentejas lavadas y el líquido." },
+    { "step": "Cocinar a fuego medio hasta que las lentejas estén tiernas." }
   ],
-  "images": [
-    "https://example.com/sopa-verduras-facil1.webp",
-    "https://example.com/sopa-verduras-facil2.webp"
-  ],
-  "rating": null
-},
-{
-  "id": 3,
-  "uid": "R-SOUP_000003",
-  "name": "Sopa de Verduras y Fideos",
-  "description": "Sopa sencilla y rápida, con verduras salteadas que extraen todo su sabor y fideos al dente para una textura perfecta.",
-  "imageUrl": "https://example.com/sopa-verduras-fideos.jpg",
-  "detailedInfo": "Receta ligera para 4 personas, con un sofrito inicial que potencia los aromas y el sabor de las verduras.",
-  "ingredients": [
-    { "name": "Caldo de pollo", "quantity": "1.5 L", "notes": "Se puede usar caldo de puchero, carne o verduras; se recomienda de calidad" },
-    { "name": "Calabacín", "quantity": "½ unidad", "notes": "Picado en dados pequeños" },
-    { "name": "Puerro", "quantity": "¼ unidad", "notes": "Picado en dados pequeños" },
-    { "name": "Judías verdes", "quantity": "6 unidades", "notes": "Picadas en dados pequeños" },
-    { "name": "Zanahorias", "quantity": "2 unidades", "notes": "Picadas en dados pequeños" },
-    { "name": "Pimiento amarillo", "quantity": "¼ unidad", "notes": "Picado en dados pequeños" },
-    { "name": "Rama de apio", "quantity": "¼ unidad", "notes": "Picada en dados pequeños" },
-    { "name": "Tomillo fresco", "quantity": "2 ramas", "notes": "Para aromatizar; retirar antes de añadir los fideos" },
-    { "name": "Fideos nº4", "quantity": "100 g", "notes": "Se pueden usar otros fideos al gusto" },
-    { "name": "Aceite de oliva", "quantity": "1 chorrito", "notes": "Para sofrito" },
-    { "name": "Sal", "quantity": "Al gusto", "notes": "" }
-  ],
-  "steps": [
-    { "step": "Picar todas las verduras en dados pequeños y lavarlas bien." },
-    { "step": "En una cazuela amplia, cubrir el fondo con aceite de oliva caliente y añadir las verduras picadas. Remover durante unos segundos." },
-    { "step": "Agregar las ramitas de tomillo fresco para aromatizar." },
-    { "step": "Cocinar a fuego vivo durante 5 minutos, removiendo continuamente, hasta que las verduras comiencen a dorarse ligeramente." },
-    { "step": "Verter el caldo de pollo, subir el fuego y sazonar con sal al gusto. Cuando hierva, bajar el fuego y mantener un hervor suave durante 15 minutos." },
-    { "step": "Retirar las ramas de tomillo y añadir los fideos. Cocer 6-7 minutos hasta que estén al dente." },
-    { "step": "Apagar el fuego y dejar reposar un par de minutos antes de servir." }
-  ],
-  "images": [
-    "https://example.com/sopa-verduras-fideos1.webp",
-    "https://example.com/sopa-verduras-fideos2.webp"
-  ],
-  "rating": null
-},
-{
-  "id": 4,
-  "uid": "R-SOUP_000004",
-  "name": "Sopa de Verduras Ligera y Deliciosa",
-  "description": "Sopa saludable y ligera, fácil de preparar con verduras disponibles en casa, con un sabor natural y reconfortante.",
-  "imageUrl": "https://example.com/sopa-verduras-ligera.jpg",
-  "detailedInfo": "Receta flexible que permite usar distintas verduras según disponibilidad, aromatizada con hojas de verduras para un sabor más intenso.",
-  "ingredients": [
-    { "name": "Agua o caldo de pollo/verduras", "quantity": "A gusto", "notes": "Suficiente para cubrir las verduras" },
-    { "name": "Zanahoria", "quantity": "1-2 unidades", "notes": "Picadas en cubos medianos" },
-    { "name": "Apio", "quantity": "2 ramas", "notes": "Picado en cubos o rodajas" },
-    { "name": "Choclo/Maíz", "quantity": "½ taza", "notes": "Puede ser fresco o congelado" },
-    { "name": "Vainitas (ejotes/judías verdes)", "quantity": "½ taza", "notes": "Picadas" },
-    { "name": "Zapallo/Calabaza", "quantity": "½ unidad", "notes": "Picada en cubos medianos" },
-    { "name": "Papa", "quantity": "1 unidad", "notes": "Picada en cubos" },
-    { "name": "Hojas de verduras (apio, zanahoria)", "quantity": "Al gusto", "notes": "Para aromatizar" },
-    { "name": "Sal y pimienta", "quantity": "Al gusto", "notes": "" },
-    { "name": "Tostadas o pan frito", "quantity": "Opcional", "notes": "Para acompañar al servir" }
-  ],
-  "steps": [
-    { "step": "Picar todas las verduras en cubos o trozos medianos." },
-    { "step": "En una olla grande, poner a hervir el agua o caldo." },
-    { "step": "Agregar las hojas de las verduras al caldo para que suelten aroma." },
-    { "step": "Incorporar primero las verduras más duras (zanahoria, papa) y luego las más blandas (arvejas, choclo). Cocinar hasta que estén tiernas." },
-    { "step": "Ajustar la sal y la pimienta al gusto." },
-    { "step": "Servir caliente, acompañado de tostadas o pan frito si se desea." }
-  ],
-  "images": [
-    "https://example.com/sopa-verduras-ligera1.webp",
-    "https://example.com/sopa-verduras-ligera2.webp"
-  ],
-  "rating": null
-},
-{
-  "id": 5,
-  "uid": "R-SOUP_000005",
-  "name": "Sopa de Verduras Rápida (Olla a Presión)",
-  "description": "Sopa saludable y rápida, preparada en olla a presión con un orden específico de rehogado para maximizar el sabor y la textura de las verduras.",
-  "imageUrl": "https://example.com/sopa-verduras-rapida.jpg",
-  "detailedInfo": "Receta práctica que permite tener una sopa lista en pocos minutos, conservando el sabor y la textura de cada verdura.",
-  "ingredients": [
-    { "name": "Calabaza", "quantity": "500 g", "notes": "Cortada en taquitos" },
-    { "name": "Calabacín", "quantity": "1 unidad", "notes": "Cortado en dados" },
-    { "name": "Coliflor", "quantity": "½ unidad", "notes": "Cortada en taquitos" },
-    { "name": "Puerro", "quantity": "1 unidad", "notes": "Cortado en taquitos, incluir parte del tallo verde" },
-    { "name": "Agua o caldo de verduras", "quantity": "1.2 L", "notes": "Suficiente para cubrir las verduras" },
-    { "name": "Aceite", "quantity": "2 cucharadas", "notes": "Para rehogar" },
-    { "name": "Sal", "quantity": "Al gusto", "notes": "" },
-    { "name": "Ajo en polvo con pimienta", "quantity": "1 cucharadita", "notes": "" }
-  ],
-  "steps": [
-    { "step": "Cortar todas las verduras en dados o taquitos." },
-    { "step": "En la olla a presión, calentar el aceite y rehogar primero la coliflor y la calabaza durante 5 minutos." },
-    { "step": "Añadir el calabacín y saltear por 5 minutos más." },
-    { "step": "Incorporar finalmente el puerro y continuar rehogando hasta que las verduras estén blanditas." },
-    { "step": "Agregar sal y la cucharadita de ajo en polvo con pimienta. Remover bien durante unos minutos." },
-    { "step": "Verter el agua o caldo, cerrar la olla y poner a hervir a fuego fuerte hasta que suba la presión." },
-    { "step": "Bajar el fuego al mínimo y cocinar 10 minutos. Apagar el fuego y dejar reposar unos minutos antes de servir." }
-  ],
-  "images": [
-    "https://example.com/sopa-verduras-rapida1.webp",
-    "https://example.com/sopa-verduras-rapida2.webp"
-  ],
-  "rating": null
-},
-     {
-      "id": 6,
-      "uid": "R-SOUP_000006",
-      "name": "Sopa de Champiñones",
-      "description": "Sopa cremosa y aromática de champiñones frescos.",
-      "imageUrl": "https://example.com/sopa-champinones.jpg",
-      "detailedInfo": "Ideal como entrada elegante o acompañamiento para pan tostado.",
-      "ingredients": [
-        { "name": "Champiñones", "quantity": "200g" },
-        { "name": "Cebolla", "quantity": "50g" },
-        { "name": "Ajo", "quantity": "1 diente" },
-        { "name": "Caldo de verduras", "quantity": "500ml" },
-        { "name": "Crema de leche", "quantity": "50ml" },
-        { "name": "Aceite de oliva", "quantity": "15ml" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
-      ],
-      "steps": [
-        { "step": "Sofríe cebolla y ajo en aceite." },
-        { "step": "Agrega champiñones y cocina 5-7 min." },
-        { "step": "Añade caldo y cocina 10 min." },
-        { "step": "Licúa y añade crema, sazona al gusto." }
-      ],
-      "images": [
-        "https://example.com/champinones1.webp",
-        "https://example.com/champinones2.webp"
-      ],
-      "rating": null
-    },
+  "tips": [
     {
-      "id": 7,
-      "uid": "R-SOUP_000007",
-      "name": "Sopa de Mariscos",
-      "description": "Sopa ligera y sabrosa con camarones, mejillones y pescado.",
-      "imageUrl": "https://example.com/sopa-mariscos.jpg",
-      "detailedInfo": "Perfecta para cenas elegantes o como plato principal de mariscos.",
-      "ingredients": [
-        { "name": "Camarones", "quantity": "100g" },
-        { "name": "Mejillones", "quantity": "100g" },
-        { "name": "Filete de pescado", "quantity": "100g" },
-        { "name": "Cebolla", "quantity": "50g" },
-        { "name": "Ajo", "quantity": "1 diente" },
-        { "name": "Caldo de pescado", "quantity": "500ml" },
-        { "name": "Pimiento rojo", "quantity": "50g" },
-        { "name": "Perejil fresco", "quantity": "5g" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
-      ],
-      "steps": [
-        { "step": "Sofríe cebolla, ajo y pimiento en aceite." },
-        { "step": "Agrega el pescado y cocina 5 min." },
-        { "step": "Añade caldo y cocina 10 min." },
-        { "step": "Incorpora mariscos, cocina 5 min y sazona al gusto." },
-        { "step": "Decora con perejil fresco antes de servir." }
-      ],
-      "images": [
-        "https://example.com/mariscos1.webp",
-        "https://example.com/mariscos2.webp"
-      ],
-      "rating": null
-    },
-    {
-      "id": 8,
-      "uid": "R-SOUP_000008",
-      "name": "Sopa de Caldo Verde",
-      "description": "Sopa portuguesa de patata y col rizada con chorizo.",
-      "imageUrl": "https://example.com/caldo-verde.jpg",
-      "detailedInfo": "Rica y tradicional, perfecta para acompañar pan rústico.",
-      "ingredients": [
-        { "name": "Patatas", "quantity": "200g" },
-        { "name": "Cebolla", "quantity": "50g" },
-        { "name": "Ajo", "quantity": "1 diente" },
-        { "name": "Col rizada", "quantity": "50g" },
-        { "name": "Chorizo", "quantity": "50g" },
-        { "name": "Caldo de verduras", "quantity": "500ml" },
-        { "name": "Aceite de oliva", "quantity": "15ml" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
-      ],
-      "steps": [
-        { "step": "Sofríe cebolla y ajo en aceite." },
-        { "step": "Añade patatas y caldo, cocina hasta ablandar." },
-        { "step": "Tritura ligeramente las patatas para espesar." },
-        { "step": "Añade col y chorizo en rodajas, cocina 5 min." },
-        { "step": "Sazona y sirve caliente." }
-      ],
-      "images": [
-        "https://example.com/caldoverde1.webp",
-        "https://example.com/caldoverde2.webp"
-      ],
-      "rating": null
-    },
-    {
-      "id": 9,
-      "uid": "R-SOUP_000009",
-      "name": "Sopa de Cebolla Francesa",
-      "description": "Sopa tradicional con cebolla caramelizada y queso gratinado.",
-      "imageUrl": "https://example.com/sopa-cebolla.jpg",
-      "detailedInfo": "Perfecta como entrada elegante, gratinada con pan y queso.",
-      "ingredients": [
-        { "name": "Cebolla", "quantity": "200g" },
-        { "name": "Mantequilla", "quantity": "20g" },
-        { "name": "Caldo de res", "quantity": "500ml" },
-        { "name": "Pan", "quantity": "2 rebanadas" },
-        { "name": "Queso gruyere rallado", "quantity": "50g" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
-      ],
-      "steps": [
-        { "step": "Carameliza cebolla en mantequilla a fuego medio-bajo." },
-        { "step": "Añade caldo y cocina 10 min." },
-        { "step": "Vierte la sopa en tazones resistentes al horno." },
-        { "step": "Coloca pan y queso encima, gratina hasta dorar." }
-      ],
-      "images": [
-        "https://example.com/cebolla1.webp",
-        "https://example.com/cebolla2.webp"
-      ],
-      "rating": null
-    },
-    {
-      "id": 10,
-      "uid": "R-SOUP_000010",
-      "name": "Sopa Tom Yum",
-      "description": "Sopa tailandesa picante y ácida con camarones y hierbas aromáticas.",
-      "imageUrl": "https://example.com/tom-yum.jpg",
-      "detailedInfo": "Perfecta para los amantes de sabores intensos y exóticos.",
-      "ingredients": [
-        { "name": "Camarones", "quantity": "100g" },
-        { "name": "Setas", "quantity": "50g" },
-        { "name": "Caldo de pollo", "quantity": "500ml" },
-        { "name": "Hierba limón (lemongrass)", "quantity": "1 tallo" },
-        { "name": "Hojas de lima kaffir", "quantity": "3" },
-        { "name": "Galanga", "quantity": "1 rodaja" },
-        { "name": "Chiles", "quantity": "2" },
-        { "name": "Jugo de lima", "quantity": "1 cda" },
-        { "name": "Salsa de pescado", "quantity": "1 cdita" }
-      ],
-      "steps": [
-        { "step": "Hierve caldo con hierba limón, hojas de lima y galanga." },
-        { "step": "Agrega setas y cocina 5 min." },
-        { "step": "Añade camarones y chiles, cocina 3 min." },
-        { "step": "Retira del fuego, añade jugo de lima y salsa de pescado." }
-      ],
-      "images": [
-        "https://example.com/tomyum1.webp",
-        "https://example.com/tomyum2.webp"
-      ],
-      "rating": null
-    },
-    {
-      "id": 11,
-      "uid": "R-SOUP_000011",
-      "name": "Sopa de Zanahoria y Jengibre",
-      "description": "Sopa cremosa con sabor dulce y picante.",
-      "imageUrl": "https://example.com/sopa-zanahoria-jengibre.jpg",
-      "detailedInfo": "Perfecta como entrada ligera o reconfortante en días fríos.",
-      "ingredients": [
-        { "name": "Zanahoria", "quantity": "200g" },
-        { "name": "Cebolla", "quantity": "50g" },
-        { "name": "Jengibre fresco", "quantity": "10g" },
-        { "name": "Caldo de verduras", "quantity": "500ml" },
-        { "name": "Crema de leche", "quantity": "50ml" },
-        { "name": "Aceite de oliva", "quantity": "15ml" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
-      ],
-      "steps": [
-        { "step": "Sofríe cebolla y jengibre en aceite." },
-        { "step": "Añade zanahoria y caldo, cocina 20 min." },
-        { "step": "Licúa, añade crema y sazona al gusto." }
-      ],
-      "images": [
-        "https://example.com/zanahoria1.webp",
-        "https://example.com/zanahoria2.webp"
-      ],
-      "rating": null
-    },
-    {
-      "id": 12,
-      "uid": "R-SOUP_000012",
-      "name": "Sopa de Calabacín y Puerro",
-      "description": "Sopa suave y ligera de verduras verdes.",
-      "imageUrl": "https://example.com/sopa-calabacin-puerro.jpg",
-      "detailedInfo": "Apta para dietas ligeras, muy digestiva y fresca.",
-      "ingredients": [
-        { "name": "Calabacín", "quantity": "200g" },
-        { "name": "Puerro", "quantity": "50g" },
-        { "name": "Patata", "quantity": "50g" },
-        { "name": "Caldo de verduras", "quantity": "500ml" },
-        { "name": "Aceite de oliva", "quantity": "15ml" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
-      ],
-      "steps": [
-        { "step": "Sofríe puerro y patata en aceite." },
-        { "step": "Añade calabacín y caldo, cocina 15 min." },
-        { "step": "Licúa y sazona al gusto." }
-      ],
-      "images": [
-        "https://example.com/calabacin1.webp",
-        "https://example.com/calabacin2.webp"
-      ],
-      "rating": null
-    },
-    {
-      "id": 13,
-      "uid": "R-SOUP_000013",
-      "name": "Sopa de Brócoli y Queso",
-      "description": "Sopa cremosa y reconfortante de brócoli con queso cheddar.",
-      "imageUrl": "https://example.com/sopa-brocoli-queso.jpg",
-      "detailedInfo": "Ideal como plato principal ligero o acompañamiento de pan tostado.",
-      "ingredients": [
-        { "name": "Brócoli", "quantity": "200g" },
-        { "name": "Cebolla", "quantity": "50g" },
-        { "name": "Caldo de verduras", "quantity": "500ml" },
-        { "name": "Queso cheddar rallado", "quantity": "50g" },
-        { "name": "Crema de leche", "quantity": "50ml" },
-        { "name": "Aceite de oliva", "quantity": "15ml" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
-      ],
-      "steps": [
-        { "step": "Sofríe cebolla en aceite." },
-        { "step": "Añade brócoli y caldo, cocina 10 min." },
-        { "step": "Licúa, añade queso y crema, sazona al gusto." }
-      ],
-      "images": [
-        "https://example.com/brocoli1.webp",
-        "https://example.com/brocoli2.webp"
-      ],
-      "rating": null
-    },
-    {
-      "id": 14,
-      "uid": "R-SOUP_000014",
-      "name": "Sopa de Papa y Ajo Asado",
-      "description": "Sopa cremosa con sabor intenso a ajo asado.",
-      "imageUrl": "https://example.com/sopa-papa-ajo.jpg",
-      "detailedInfo": "Perfecta para noches frías, acompañada de pan rústico.",
-      "ingredients": [
-        { "name": "Papas", "quantity": "200g" },
-        { "name": "Ajo", "quantity": "5 dientes" },
-        { "name": "Cebolla", "quantity": "50g" },
-        { "name": "Caldo de verduras", "quantity": "500ml" },
-        { "name": "Aceite de oliva", "quantity": "15ml" },
-        { "name": "Crema de leche", "quantity": "50ml" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
-      ],
-      "steps": [
-        { "step": "Asa el ajo hasta dorar." },
-        { "step": "Sofríe cebolla en aceite." },
-        { "step": "Añade papas, ajo asado y caldo, cocina 15 min." },
-        { "step": "Licúa, añade crema y sazona al gusto." }
-      ],
-      "images": [
-        "https://example.com/papaajo1.webp",
-        "https://example.com/papaajo2.webp"
-      ],
-      "rating": null
-    },
-    {
-      "id": 15,
-      "uid": "R-SOUP_000015",
-      "name": "Sopa Ramen",
-      "description": "Sopa japonesa con caldo sabroso, fideos y toppings variados.",
-      "imageUrl": "https://example.com/sopa-ramen.jpg",
-      "detailedInfo": "Ideal para los amantes de la cocina asiática, con sabores intensos.",
-      "ingredients": [
-        { "name": "Fideos ramen", "quantity": "100g" },
-        { "name": "Caldo de pollo", "quantity": "500ml" },
-        { "name": "Huevo", "quantity": "1" },
-        { "name": "Cebolla de verdeo", "quantity": "10g" },
-        { "name": "Setas", "quantity": "50g" },
-        { "name": "Salsa de soja", "quantity": "1 cda" },
-        { "name": "Aceite de sésamo", "quantity": "5ml" },
-        { "name": "Pechuga de pollo o cerdo", "quantity": "50g" }
-      ],
-      "steps": [
-        { "step": "Cocina fideos según instrucciones." },
-        { "step": "Hierve caldo con pollo o cerdo y setas." },
-        { "step": "Añade fideos al caldo y sazona con soja y aceite de sésamo." },
-        { "step": "Agrega huevo cocido y cebolla de verdeo antes de servir." }
-      ],
-      "images": [
-        "https://example.com/ramen1.webp",
-        "https://example.com/ramen2.webp"
-      ],
-      "rating": null
+      "title": "Textura rústica",
+      "description": "No licuar permite apreciar mejor la legumbre."
     }
+  ],
+  "images": [
+    "https://example.com/sopa-21-1.webp",
+    "https://example.com/sopa-21-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 22,
+  "uid": "R-SOUP_000022",
+  "name": "Sopa Cremosa de Lentejas Licuadas",
+  "description": "Sopa suave y espesa elaborada con lentejas completamente licuadas.",
+  "imageUrl": "https://example.com/sopa-22.jpg",
+  "detailedInfo": "En esta preparación, las lentejas se cocinan hasta estar muy blandas y luego se licuan por completo, generando una sopa homogénea y cremosa sin lácteos. Enseña a usar legumbres como espesante principal.",
+  "ingredients": [
+    { "name": "Lentejas cocidas", "quantity": "2 tazas" },
+    { "name": "Cebolla", "quantity": "1 unidad" },
+    { "name": "Ajo", "quantity": "1 diente" },
+    { "name": "Aceite", "quantity": "1 cucharada" },
+    { "name": "Agua", "quantity": "1.5 litros" },
+    { "name": "Sal", "quantity": "Al gusto" }
+  ],
+  "steps": [
+    { "step": "Sofreír la cebolla y el ajo." },
+    { "step": "Agregar lentejas y agua caliente." },
+    { "step": "Cocinar 10 minutos y licuar completamente." }
+  ],
+  "tips": [
+    {
+      "title": "Más fina",
+      "description": "Licuando en caliente se logra mejor textura."
+    }
+  ],
+  "images": [
+    "https://example.com/sopa-22-1.webp",
+    "https://example.com/sopa-22-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 23,
+  "uid": "R-SOUP_000023",
+  "name": "Sopa de Garbanzos con Base Parcialmente Licuada",
+  "description": "Sopa equilibrada de garbanzos con parte licuada y parte entera.",
+  "imageUrl": "https://example.com/sopa-23.jpg",
+  "detailedInfo": "Esta sopa combina garbanzos enteros con una base licuada hecha a partir de la misma legumbre. El resultado es una textura espesa pero con mordida, ideal para aprender control de cuerpo.",
+  "ingredients": [
+    { "name": "Garbanzos cocidos", "quantity": "2 tazas" },
+    { "name": "Cebolla", "quantity": "1 unidad" },
+    { "name": "Zanahoria", "quantity": "1 unidad" },
+    { "name": "Aceite", "quantity": "1 cucharada" },
+    { "name": "Agua", "quantity": "1.6 litros" },
+    { "name": "Sal", "quantity": "Al gusto" }
+  ],
+  "steps": [
+    { "step": "Sofreír la cebolla y zanahoria." },
+    { "step": "Agregar garbanzos y agua." },
+    { "step": "LicuAR una parte de la sopa y reincorporar." }
+  ],
+  "tips": [
+    {
+      "title": "Buen equilibrio",
+      "description": "La mezcla de texturas evita una sopa pesada."
+    }
+  ],
+  "images": [
+    "https://example.com/sopa-23-1.webp",
+    "https://example.com/sopa-23-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 24,
+  "uid": "R-SOUP_000024",
+  "name": "Sopa de Garbanzos Rústica con Verduras",
+  "description": "Sopa casera de garbanzos enteros y verduras suaves.",
+  "imageUrl": "https://example.com/sopa-24.jpg",
+  "detailedInfo": "Preparación sencilla y reconfortante donde los garbanzos se mantienen enteros. Ideal para quienes buscan una sopa sustanciosa sin técnicas complejas.",
+  "ingredients": [
+    { "name": "Garbanzos cocidos", "quantity": "2 tazas" },
+    { "name": "Cebolla", "quantity": "1 unidad" },
+    { "name": "Papa", "quantity": "1 unidad" },
+    { "name": "Aceite", "quantity": "1 cucharada" },
+    { "name": "Agua", "quantity": "1.7 litros" },
+    { "name": "Sal", "quantity": "Al gusto" }
+  ],
+  "steps": [
+    { "step": "Sofreír la cebolla." },
+    { "step": "Agregar papa, garbanzos y agua." },
+    { "step": "Cocinar hasta que la papa esté tierna." }
+  ],
+  "tips": [
+    {
+      "title": "Sustanciosa",
+      "description": "Ideal como plato único."
+    }
+  ],
+  "images": [
+    "https://example.com/sopa-24-1.webp",
+    "https://example.com/sopa-24-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 25,
+  "uid": "R-SOUP_000025",
+  "name": "Sopa Cremosa de Porotos Blancos",
+  "description": "Sopa espesa y suave de porotos blancos licuados.",
+  "imageUrl": "https://example.com/sopa-25.jpg",
+  "detailedInfo": "Los porotos blancos, al licuarse, generan una textura cremosa y elegante. Esta sopa enseña cómo transformar una legumbre simple en una preparación suave y uniforme.",
+  "ingredients": [
+    { "name": "Porotos blancos cocidos", "quantity": "2 tazas" },
+    { "name": "Cebolla", "quantity": "1 unidad" },
+    { "name": "Aceite", "quantity": "1 cucharada" },
+    { "name": "Agua", "quantity": "1.5 litros" },
+    { "name": "Sal", "quantity": "Al gusto" }
+  ],
+  "steps": [
+    { "step": "Sofreír la cebolla." },
+    { "step": "Agregar porotos y agua caliente." },
+    { "step": "LicuAR completamente hasta homogéneo." }
+  ],
+  "tips": [
+    {
+      "title": "Textura fina",
+      "description": "Ideal para una sopa más elegante."
+    }
+  ],
+  "images": [
+    "https://example.com/sopa-25-1.webp",
+    "https://example.com/sopa-25-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 26,
+  "uid": "R-SOUP_000026",
+  "name": "Sopa de Porotos Blancos con Zanahoria",
+  "description": "Sopa suave con porotos enteros y verduras.",
+  "imageUrl": "https://example.com/sopa-26.jpg",
+  "detailedInfo": "Esta sopa combina porotos blancos con zanahoria y cebolla, manteniendo una textura rústica pero equilibrada.",
+  "ingredients": [
+    { "name": "Porotos blancos cocidos", "quantity": "2 tazas" },
+    { "name": "Zanahoria", "quantity": "1 unidad" },
+    { "name": "Cebolla", "quantity": "1 unidad" },
+    { "name": "Aceite", "quantity": "1 cucharada" },
+    { "name": "Agua", "quantity": "1.6 litros" },
+    { "name": "Sal", "quantity": "Al gusto" }
+  ],
+  "steps": [
+    { "step": "Sofreír cebolla y zanahoria." },
+    { "step": "Agregar porotos y agua." },
+    { "step": "Cocinar hasta integrar sabores." }
+  ],
+  "tips": [
+    {
+      "title": "Equilibrio",
+      "description": "Las verduras suavizan el sabor del poroto."
+    }
+  ],
+  "images": [
+    "https://example.com/sopa-26-1.webp",
+    "https://example.com/sopa-26-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 27,
+  "uid": "R-SOUP_000027",
+  "name": "Sopa Mixta de Legumbres Parcialmente Licuadas",
+  "description": "Sopa espesa con mezcla de legumbres y textura balanceada.",
+  "imageUrl": "https://example.com/sopa-27.jpg",
+  "detailedInfo": "Esta sopa combina distintas legumbres cocidas, licuando solo una parte para obtener cuerpo sin perder identidad.",
+  "ingredients": [
+    { "name": "Lentejas cocidas", "quantity": "1 taza" },
+    { "name": "Garbanzos cocidos", "quantity": "1 taza" },
+    { "name": "Cebolla", "quantity": "1 unidad" },
+    { "name": "Aceite", "quantity": "1 cucharada" },
+    { "name": "Agua", "quantity": "1.7 litros" },
+    { "name": "Sal", "quantity": "Al gusto" }
+  ],
+  "steps": [
+    { "step": "Sofreír la cebolla." },
+    { "step": "Agregar legumbres y agua." },
+    { "step": "LicuAR una parte y reincorporar." }
+  ],
+  "tips": [
+    {
+      "title": "Textura interesante",
+      "description": "Combinar legumbres mejora cuerpo y sabor."
+    }
+  ],
+  "images": [
+    "https://example.com/sopa-27-1.webp",
+    "https://example.com/sopa-27-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 28,
+  "uid": "R-SOUP_000028",
+  "name": "Sopa Suave de Lentejas y Zanahoria",
+  "description": "Sopa ligera de lentejas con zanahoria, parcialmente licuada.",
+  "imageUrl": "https://example.com/sopa-28.jpg",
+  "detailedInfo": "Una sopa liviana que utiliza la zanahoria para suavizar el sabor de la lenteja y aportar color y dulzor natural.",
+  "ingredients": [
+    { "name": "Lentejas cocidas", "quantity": "2 tazas" },
+    { "name": "Zanahoria", "quantity": "1 unidad" },
+    { "name": "Cebolla", "quantity": "1 unidad" },
+    { "name": "Aceite", "quantity": "1 cucharada" },
+    { "name": "Agua", "quantity": "1.5 litros" },
+    { "name": "Sal", "quantity": "Al gusto" }
+  ],
+  "steps": [
+    { "step": "Sofreír cebolla y zanahoria." },
+    { "step": "Agregar lentejas y agua." },
+    { "step": "LicuAR parcialmente para suavizar textura." }
+  ],
+  "tips": [
+    {
+      "title": "Más liviana",
+      "description": "Ideal para una comida nocturna."
+    }
+  ],
+  "images": [
+    "https://example.com/sopa-28-1.webp",
+    "https://example.com/sopa-28-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 29,
+  "uid": "R-SOUP_000029",
+  "name": "Sopa de Porotos Blancos Parcialmente Licuados",
+  "description": "Sopa cremosa con porotos blancos y textura equilibrada.",
+  "imageUrl": "https://example.com/sopa-29.jpg",
+  "detailedInfo": "Parte de los porotos se licua para dar cuerpo, mientras el resto se mantiene entero, logrando una sopa sustanciosa pero agradable.",
+  "ingredients": [
+    { "name": "Porotos blancos cocidos", "quantity": "2 tazas" },
+    { "name": "Cebolla", "quantity": "1 unidad" },
+    { "name": "Aceite", "quantity": "1 cucharada" },
+    { "name": "Agua", "quantity": "1.6 litros" },
+    { "name": "Sal", "quantity": "Al gusto" }
+  ],
+  "steps": [
+    { "step": "Sofreír la cebolla." },
+    { "step": "Agregar porotos y agua." },
+    { "step": "LicuAR una parte y reincorporar." }
+  ],
+  "tips": [
+    {
+      "title": "Buen cuerpo",
+      "description": "Controla cuánta cantidad licúas según espesor deseado."
+    }
+  ],
+  "images": [
+    "https://example.com/sopa-29-1.webp",
+    "https://example.com/sopa-29-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 30,
+  "uid": "R-SOUP_000030",
+  "name": "Sopa de Legumbres Casera Equilibrada",
+  "description": "Sopa base de legumbres con textura media y sabor suave.",
+  "imageUrl": "https://example.com/sopa-30.jpg",
+  "detailedInfo": "Esta sopa cierra el bloque de legumbres combinando técnicas rústicas y licuadas. Es una preparación base, adaptable y muy nutritiva.",
+  "ingredients": [
+    { "name": "Lentejas cocidas", "quantity": "1 taza" },
+    { "name": "Garbanzos cocidos", "quantity": "1 taza" },
+    { "name": "Cebolla", "quantity": "1 unidad" },
+    { "name": "Aceite", "quantity": "1 cucharada" },
+    { "name": "Agua", "quantity": "1.7 litros" },
+    { "name": "Sal", "quantity": "Al gusto" }
+  ],
+  "steps": [
+    { "step": "Sofreír la cebolla." },
+    { "step": "Agregar legumbres y agua." },
+    { "step": "Cocinar y licuar parcialmente para unir sabores." }
+  ],
+  "tips": [
+    {
+      "title": "Base flexible",
+      "description": "Puedes variar proporciones según legumbre disponible."
+    }
+  ],
+  "images": [
+    "https://example.com/sopa-30-1.webp",
+    "https://example.com/sopa-30-2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+  {
+    "id": 31,
+    "uid": "R-SOUP_000031",
+    "name": "Sopa de Papa Clásica Espesada Naturalmente",
+    "description": "Sopa suave y reconfortante donde la papa aporta cuerpo de forma natural.",
+    "imageUrl": "https://example.com/sopa-31.jpg",
+    "detailedInfo": "La papa se cocina hasta comenzar a deshacerse, liberando almidón que espesa el caldo sin necesidad de licuar completamente. Es una sopa base ideal para aprender espesado natural.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "3 unidades" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.6 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla hasta blanda." },
+      { "step": "Agregar papa en cubos y agua." },
+      { "step": "Cocinar hasta que la papa empiece a deshacerse." }
+    ],
+    "tips": [
+      {
+        "title": "Espesor natural",
+        "description": "Aplastar algunas papas dentro de la olla intensifica la textura."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-31-1.webp",
+      "https://example.com/sopa-31-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 32,
+    "uid": "R-SOUP_000032",
+    "name": "Sopa Cremosa de Papa Licuada",
+    "description": "Sopa homogénea y espesa elaborada con papa completamente licuada.",
+    "imageUrl": "https://example.com/sopa-32.jpg",
+    "detailedInfo": "Al licuar completamente la papa cocida con caldo caliente se obtiene una sopa muy suave y uniforme. Enseña el uso del almidón como base cremosa.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "3 unidades" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar papa y agua, cocinar hasta muy tierno." },
+      { "step": "Licuar completamente hasta textura lisa." }
+    ],
+    "tips": [
+      {
+        "title": "Sopa fina",
+        "description": "Licuando la papa completamente se obtiene una textura suave."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-32-1.webp",
+      "https://example.com/sopa-32-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 33,
+    "uid": "R-SOUP_000033",
+    "name": "Sopa de Zapallo con Papa Espesada Naturalmente",
+    "description": "Sopa suave y cremosa gracias al zapallo y la papa que aportan cuerpo natural.",
+    "imageUrl": "https://example.com/sopa-33.jpg",
+    "detailedInfo": "El zapallo y la papa cocidos se licuan parcialmente, generando una sopa espesa pero suave. Es una receta ideal para quienes desean aprender a espesar sopas sin usar crema.",
+    "ingredients": [
+      { "name": "Zapallo", "quantity": "300 g" },
+      { "name": "Papa", "quantity": "2 unidades" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.7 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla en aceite hasta blanda." },
+      { "step": "Agregar zapallo y papa en cubos, cubrir con agua." },
+      { "step": "Cocinar hasta que las verduras estén tiernas." },
+      { "step": "LicuAR una parte y reincorporar para espesar." }
+    ],
+    "tips": [
+      {
+        "title": "Más espesa",
+        "description": "Aplasta una parte de la papa y zapallo para mayor cuerpo."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-33-1.webp",
+      "https://example.com/sopa-33-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 34,
+    "uid": "R-SOUP_000034",
+    "name": "Sopa de Papa y Puerro Cremosa",
+    "description": "Sopa suave de papa y puerro con base licuada que aporta textura cremosa.",
+    "imageUrl": "https://example.com/sopa-34.jpg",
+    "detailedInfo": "El puerro y la papa son la base de esta sopa cremosa. Al licuar las verduras, se logra una textura suave, ideal para quienes buscan una sopa ligera y reconfortante.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "3 unidades" },
+      { "name": "Puerro", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla y puerro hasta transparentes." },
+      { "step": "Agregar papa en cubos y agua, cocinar hasta tierna." },
+      { "step": "Licuar hasta obtener una sopa cremosa." }
+    ],
+    "tips": [
+      {
+        "title": "Textura ligera",
+        "description": "Licuar solo hasta que se forme una crema, no más."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-34-1.webp",
+      "https://example.com/sopa-34-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 35,
+    "uid": "R-SOUP_000035",
+    "name": "Sopa de Papa y Zanahoria con Base Licuada",
+    "description": "Sopa suave y espesa con una base licuada de papa y zanahoria.",
+    "imageUrl": "https://example.com/sopa-35.jpg",
+    "detailedInfo": "La papa y la zanahoria se cocinan y se licúan parcialmente para espesar la sopa de manera natural. Es un platillo básico ideal para aprender a manejar las texturas sin complicarse.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "2 unidades" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla hasta blanda." },
+      { "step": "Agregar papa y zanahoria, cubrir con agua." },
+      { "step": "Cocinar hasta que las verduras estén tiernas." },
+      { "step": "Licuar una parte de las verduras y reincorporar para espesar." }
+    ],
+    "tips": [
+      {
+        "title": "Licuado parcial",
+        "description": "Licuar una parte ayuda a conseguir textura sin perder trozos."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-35-1.webp",
+      "https://example.com/sopa-35-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 36,
+    "uid": "R-SOUP_000036",
+    "name": "Sopa de Papas y Acelga con Base Licuada",
+    "description": "Sopa verde y suave de papas y acelga, espesa por licuado parcial.",
+    "imageUrl": "https://example.com/sopa-36.jpg",
+    "detailedInfo": "La acelga aporta frescura mientras la papa da cuerpo. Esta sopa es excelente para aprender a usar vegetales verdes sin sobrecocerlos.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "2 unidades" },
+      { "name": "Acelga", "quantity": "1 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar papa y agua, cocinar hasta tierna." },
+      { "step": "Añadir acelga y licuar parcialmente." }
+    ],
+    "tips": [
+      {
+        "title": "Acelga fresca",
+        "description": "Evita cocinar en exceso para mantener su color y nutrientes."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-36-1.webp",
+      "https://example.com/sopa-36-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+    {
+    "id": 37,
+    "uid": "R-SOUP_000037",
+    "name": "Sopa de Papa y Cebolla Caramelizada",
+    "description": "Sopa profunda y reconfortante donde la cebolla caramelizada aporta dulzor natural.",
+    "imageUrl": "https://example.com/sopa-37.jpg",
+    "detailedInfo": "La cebolla se cocina lentamente hasta caramelizar, liberando azúcares naturales que enriquecen el sabor. La papa aporta cuerpo gracias a su almidón, logrando una sopa espesa sin necesidad de crema.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "3 unidades" },
+      { "name": "Cebolla", "quantity": "2 unidades" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.6 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Cocinar la cebolla a fuego bajo hasta caramelizar." },
+      { "step": "Agregar la papa en cubos y el agua." },
+      { "step": "Cocinar hasta que la papa esté muy tierna." },
+      { "step": "Aplastar parte de la papa para espesar." }
+    ],
+    "tips": [
+      {
+        "title": "Caramelizado lento",
+        "description": "No subas el fuego para evitar sabores amargos."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-37-1.webp",
+      "https://example.com/sopa-37-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 38,
+    "uid": "R-SOUP_000038",
+    "name": "Sopa de Papa y Puerro Clásica",
+    "description": "Sopa suave y cremosa de papa y puerro con textura equilibrada.",
+    "imageUrl": "https://example.com/sopa-38.jpg",
+    "detailedInfo": "El puerro aporta un sabor delicado que combina perfectamente con la papa. Parte de la sopa se licua para lograr una textura homogénea sin perder cuerpo.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "3 unidades" },
+      { "name": "Puerro", "quantity": "1 unidad grande" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla y puerro hasta suaves." },
+      { "step": "Agregar papa y agua, cocinar hasta tierno." },
+      { "step": "Licuar parcialmente para espesar." }
+    ],
+    "tips": [
+      {
+        "title": "Sabor delicado",
+        "description": "Evita dorar demasiado el puerro."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-38-1.webp",
+      "https://example.com/sopa-38-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 39,
+    "uid": "R-SOUP_000039",
+    "name": "Sopa de Papa y Zanahoria Espesada Naturalmente",
+    "description": "Sopa clásica con dulzor natural y textura espesa.",
+    "imageUrl": "https://example.com/sopa-39.jpg",
+    "detailedInfo": "La zanahoria aporta dulzor y color, mientras la papa libera almidón que espesa el caldo de forma natural. Ideal para aprender balance de sabor y cuerpo.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "2 unidades" },
+      { "name": "Zanahoria", "quantity": "2 unidades" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.6 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla." },
+      { "step": "Agregar papa y zanahoria en cubos." },
+      { "step": "Cubrir con agua y cocinar hasta muy tierno." },
+      { "step": "Aplastar parte de la papa." }
+    ],
+    "tips": [
+      {
+        "title": "Color y dulzor",
+        "description": "La zanahoria suaviza el sabor de la papa."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-39-1.webp",
+      "https://example.com/sopa-39-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 40,
+    "uid": "R-SOUP_000040",
+    "name": "Sopa de Camote Suave Especiada",
+    "description": "Sopa cremosa de camote con especias suaves.",
+    "imageUrl": "https://example.com/sopa-40.jpg",
+    "detailedInfo": "El camote aporta dulzor y una textura naturalmente cremosa. Las especias se usan con moderación para no opacar el sabor principal.",
+    "ingredients": [
+      { "name": "Camote", "quantity": "2 unidades grandes" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Comino", "quantity": "1 pizca" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla." },
+      { "step": "Agregar camote en cubos y agua." },
+      { "step": "Cocinar hasta muy tierno y licuar parcialmente." }
+    ],
+    "tips": [
+      {
+        "title": "Especias suaves",
+        "description": "Usa poca cantidad para no cubrir el dulzor del camote."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-40-1.webp",
+      "https://example.com/sopa-40-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 41,
+    "uid": "R-SOUP_000041",
+    "name": "Sopa de Papa con Ajo Suave",
+    "description": "Sopa simple de papa con aroma delicado a ajo.",
+    "imageUrl": "https://example.com/sopa-41.jpg",
+    "detailedInfo": "El ajo se cocina suavemente para aportar aroma sin agresividad. La papa espesa la sopa gracias a su almidón.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "3 unidades" },
+      { "name": "Ajo", "quantity": "2 dientes" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla y ajo sin dorar." },
+      { "step": "Agregar papa y agua." },
+      { "step": "Cocinar hasta tierno y aplastar parte de la papa." }
+    ],
+    "tips": [
+      {
+        "title": "Ajo sin quemar",
+        "description": "El ajo dorado amarga la sopa."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-41-1.webp",
+      "https://example.com/sopa-41-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 42,
+    "uid": "R-SOUP_000042",
+    "name": "Sopa de Papa Rústica con Cubos",
+    "description": "Sopa rústica con papa en cubos y caldo espeso.",
+    "imageUrl": "https://example.com/sopa-42.jpg",
+    "detailedInfo": "La papa se mantiene mayormente en cubos, pero parte se deshace durante la cocción, generando una textura espesa y casera.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "3 unidades" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.7 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar papa en cubos y agua." },
+      { "step": "Cocinar hasta que algunos cubos se rompan." }
+    ],
+    "tips": [
+      {
+        "title": "Textura casera",
+        "description": "No remuevas en exceso para mantener cubos."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-42-1.webp",
+      "https://example.com/sopa-42-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 43,
+    "uid": "R-SOUP_000043",
+    "name": "Sopa de Papa y Apio Suave",
+    "description": "Sopa ligera con aroma fresco de apio.",
+    "imageUrl": "https://example.com/sopa-43.jpg",
+    "detailedInfo": "El apio aporta notas frescas que equilibran el almidón de la papa. Parte de la sopa se licua para integrar sabores.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "2 unidades" },
+      { "name": "Apio", "quantity": "2 ramas" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla y apio." },
+      { "step": "Agregar papa y agua." },
+      { "step": "Cocinar y licuar parcialmente." }
+    ],
+    "tips": [
+      {
+        "title": "Aroma equilibrado",
+        "description": "El apio debe sentirse, no dominar."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-43-1.webp",
+      "https://example.com/sopa-43-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 44,
+    "uid": "R-SOUP_000044",
+    "name": "Sopa de Papa y Puerro Rústica",
+    "description": "Versión rústica de papa y puerro con trozos visibles.",
+    "imageUrl": "https://example.com/sopa-44.jpg",
+    "detailedInfo": "A diferencia de la versión cremosa, esta sopa mantiene los vegetales en trozos, permitiendo apreciar textura y mordida.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "3 unidades" },
+      { "name": "Puerro", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.6 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír el puerro." },
+      { "step": "Agregar papa y agua." },
+      { "step": "Cocinar hasta tierno sin licuar." }
+    ],
+    "tips": [
+      {
+        "title": "Versión más casera",
+        "description": "Ideal si no quieres usar licuadora."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-44-1.webp",
+      "https://example.com/sopa-44-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 45,
+    "uid": "R-SOUP_000045",
+    "name": "Sopa de Tubérculos Mixtos Espesa",
+    "description": "Sopa final del bloque con mezcla de papa y camote.",
+    "imageUrl": "https://example.com/sopa-45.jpg",
+    "detailedInfo": "Esta sopa combina distintos tubérculos para lograr una textura espesa y un sabor equilibrado. Parte se licua para unir sabores y cerrar el bloque con una preparación completa.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "2 unidades" },
+      { "name": "Camote", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.7 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla." },
+      { "step": "Agregar tubérculos y agua." },
+      { "step": "Cocinar hasta tierno y licuar parcialmente." }
+    ],
+    "tips": [
+      {
+        "title": "Buen cierre",
+        "description": "Mezclar tubérculos da complejidad sin dificultad."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-45-1.webp",
+      "https://example.com/sopa-45-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+    {
+    "id": 46,
+    "uid": "R-SOUP_000046",
+    "name": "Sopa de Arroz Casera Clásica",
+    "description": "Sopa sencilla y reconfortante con arroz como base.",
+    "imageUrl": "https://example.com/sopa-46.jpg",
+    "detailedInfo": "Esta sopa enseña la técnica básica de cocción de arroz en caldo. El grano libera parte de su almidón, dando cuerpo al líquido sin volverlo pesado. Es una base ideal para múltiples variaciones.",
+    "ingredients": [
+      { "name": "Arroz blanco", "quantity": "1/2 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua o caldo", "quantity": "1.8 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla y zanahoria." },
+      { "step": "Agregar el arroz y mezclar brevemente." },
+      { "step": "Incorporar el líquido y cocinar hasta que el arroz esté tierno." }
+    ],
+    "tips": [
+      {
+        "title": "Arroz justo",
+        "description": "No excedas la cantidad para evitar una sopa demasiado espesa."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-46-1.webp",
+      "https://example.com/sopa-46-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 47,
+    "uid": "R-SOUP_000047",
+    "name": "Sopa de Arroz Cremosa Natural",
+    "description": "Sopa suave donde el arroz aporta cremosidad sin licuado.",
+    "imageUrl": "https://example.com/sopa-47.jpg",
+    "detailedInfo": "Al cocinar el arroz por más tiempo y remover suavemente, se libera más almidón, generando una textura cremosa de forma natural.",
+    "ingredients": [
+      { "name": "Arroz blanco", "quantity": "3/4 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla." },
+      { "step": "Agregar arroz y agua." },
+      { "step": "Cocinar removiendo ocasionalmente hasta textura cremosa." }
+    ],
+    "tips": [
+      {
+        "title": "Remover suave",
+        "description": "Remover libera almidón sin romper el grano."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-47-1.webp",
+      "https://example.com/sopa-47-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 48,
+    "uid": "R-SOUP_000048",
+    "name": "Sopa de Arroz con Verduras Suave",
+    "description": "Sopa ligera con arroz y verduras, ideal como base.",
+    "imageUrl": "https://example.com/sopa-48.jpg",
+    "detailedInfo": "Una versión equilibrada donde el arroz acompaña a las verduras sin dominar la textura del caldo.",
+    "ingredients": [
+      { "name": "Arroz", "quantity": "1/2 taza" },
+      { "name": "Papa", "quantity": "1 unidad" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.9 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla." },
+      { "step": "Agregar verduras, arroz y agua." },
+      { "step": "Cocinar hasta arroz tierno." }
+    ],
+    "tips": [
+      {
+        "title": "Equilibrio",
+        "description": "Mantén proporción para que el arroz no opaque verduras."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-48-1.webp",
+      "https://example.com/sopa-48-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 49,
+    "uid": "R-SOUP_000049",
+    "name": "Sopa de Cebada con Verduras",
+    "description": "Sopa nutritiva con cebada perlada y verduras.",
+    "imageUrl": "https://example.com/sopa-49.jpg",
+    "detailedInfo": "La cebada aporta textura firme y sensación saciante. Esta sopa enseña tiempos de cocción más largos y control del grano entero.",
+    "ingredients": [
+      { "name": "Cebada perlada", "quantity": "1/2 taza" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla y zanahoria." },
+      { "step": "Agregar cebada y agua." },
+      { "step": "Cocinar hasta cebada tierna." }
+    ],
+    "tips": [
+      {
+        "title": "Tiempo",
+        "description": "La cebada requiere más cocción que el arroz."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-49-1.webp",
+      "https://example.com/sopa-49-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 50,
+    "uid": "R-SOUP_000050",
+    "name": "Sopa de Cebada Espesa Natural",
+    "description": "Sopa con cebada parcialmente cremosa por liberación de almidón.",
+    "imageUrl": "https://example.com/sopa-50.jpg",
+    "detailedInfo": "Al remover la cebada durante la cocción, se libera parte del almidón, generando una sopa más espesa y envolvente.",
+    "ingredients": [
+      { "name": "Cebada perlada", "quantity": "3/4 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar cebada y agua." },
+      { "step": "Cocinar removiendo ocasionalmente hasta espesar." }
+    ],
+    "tips": [
+      {
+        "title": "Cuerpo natural",
+        "description": "La cebada espesa sin necesidad de licuado."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-50-1.webp",
+      "https://example.com/sopa-50-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 51,
+    "uid": "R-SOUP_000051",
+    "name": "Sopa de Quinoa Ligera",
+    "description": "Sopa liviana con quinoa y verduras.",
+    "imageUrl": "https://example.com/sopa-51.jpg",
+    "detailedInfo": "La quinoa se cocina directamente en el caldo, aportando proteína y una textura ligera. Ideal para sopas nutritivas y suaves.",
+    "ingredients": [
+      { "name": "Quinoa", "quantity": "1/2 taza" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.8 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Lavar bien la quinoa." },
+      { "step": "Sofreír cebolla y zanahoria." },
+      { "step": "Agregar quinoa y agua, cocinar hasta que abra." }
+    ],
+    "tips": [
+      {
+        "title": "Lavado previo",
+        "description": "Eliminar saponinas evita sabor amargo."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-51-1.webp",
+      "https://example.com/sopa-51-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 52,
+    "uid": "R-SOUP_000052",
+    "name": "Sopa de Quinoa con Verduras Suaves",
+    "description": "Sopa equilibrada con quinoa y vegetales.",
+    "imageUrl": "https://example.com/sopa-52.jpg",
+    "detailedInfo": "La quinoa acompaña a las verduras sin espesar demasiado el caldo, logrando una sopa balanceada.",
+    "ingredients": [
+      { "name": "Quinoa", "quantity": "1/2 taza" },
+      { "name": "Papa", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.9 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar papa, quinoa y agua." },
+      { "step": "Cocinar hasta quinoa tierna." }
+    ],
+    "tips": [
+      {
+        "title": "Textura balanceada",
+        "description": "La quinoa no debe romperse."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-52-1.webp",
+      "https://example.com/sopa-52-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 53,
+    "uid": "R-SOUP_000053",
+    "name": "Sopa de Avena Salada Educativa",
+    "description": "Sopa cremosa y nutritiva a base de avena.",
+    "imageUrl": "https://example.com/sopa-53.jpg",
+    "detailedInfo": "La avena se hidrata y libera almidón rápidamente, generando una textura cremosa. Esta sopa enseña un uso poco común del cereal.",
+    "ingredients": [
+      { "name": "Avena tradicional", "quantity": "1/2 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.6 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar avena y agua." },
+      { "step": "Cocinar removiendo hasta espesar." }
+    ],
+    "tips": [
+      {
+        "title": "Remover siempre",
+        "description": "La avena se pega con facilidad."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-53-1.webp",
+      "https://example.com/sopa-53-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 54,
+    "uid": "R-SOUP_000054",
+    "name": "Sopa de Avena con Verduras",
+    "description": "Sopa espesa de avena con verduras suaves.",
+    "imageUrl": "https://example.com/sopa-54.jpg",
+    "detailedInfo": "Una versión más completa donde la avena espesa el caldo y las verduras aportan sabor y equilibrio.",
+    "ingredients": [
+      { "name": "Avena tradicional", "quantity": "1/2 taza" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.7 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla y zanahoria." },
+      { "step": "Agregar avena y agua." },
+      { "step": "Cocinar removiendo hasta espesar." }
+    ],
+    "tips": [
+      {
+        "title": "Textura controlada",
+        "description": "Ajusta agua si espesa demasiado."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-54-1.webp",
+      "https://example.com/sopa-54-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 55,
+    "uid": "R-SOUP_000055",
+    "name": "Sopa de Arroz Integral Ligera",
+    "description": "Sopa nutritiva con arroz integral y caldo claro.",
+    "imageUrl": "https://example.com/sopa-55.jpg",
+    "detailedInfo": "El arroz integral requiere más tiempo de cocción y aporta una textura firme y sabor más profundo.",
+    "ingredients": [
+      { "name": "Arroz integral", "quantity": "1/2 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla y zanahoria." },
+      { "step": "Agregar arroz integral y agua." },
+      { "step": "Cocinar hasta grano tierno." }
+    ],
+    "tips": [
+      {
+        "title": "Más tiempo",
+        "description": "El arroz integral necesita cocción prolongada."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-55-1.webp",
+      "https://example.com/sopa-55-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 56,
+    "uid": "R-SOUP_000056",
+    "name": "Sopa de Quinoa Espesa Parcial",
+    "description": "Sopa con quinoa parcialmente licuada para mayor cuerpo.",
+    "imageUrl": "https://example.com/sopa-56.jpg",
+    "detailedInfo": "Parte de la quinoa se licua junto al caldo, logrando una textura más espesa sin perder grano.",
+    "ingredients": [
+      { "name": "Quinoa cocida", "quantity": "1 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.7 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar quinoa y agua." },
+      { "step": "Licuar una parte y reincorporar." }
+    ],
+    "tips": [
+      {
+        "title": "Espesor moderno",
+        "description": "Licuado parcial mantiene textura interesante."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-56-1.webp",
+      "https://example.com/sopa-56-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 57,
+    "uid": "R-SOUP_000057",
+    "name": "Sopa de Cebada Ligera",
+    "description": "Sopa clara con cebada y verduras suaves.",
+    "imageUrl": "https://example.com/sopa-57.jpg",
+    "detailedInfo": "Una versión más liviana donde la cebada se mantiene entera y el caldo es protagonista.",
+    "ingredients": [
+      { "name": "Cebada perlada", "quantity": "1/3 taza" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla y zanahoria." },
+      { "step": "Agregar cebada y agua." },
+      { "step": "Cocinar hasta cebada tierna." }
+    ],
+    "tips": [
+      {
+        "title": "Más liviana",
+        "description": "Usa menos cebada para caldo claro."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-57-1.webp",
+      "https://example.com/sopa-57-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 58,
+    "uid": "R-SOUP_000058",
+    "name": "Sopa de Avena Suave y Reconfortante",
+    "description": "Sopa cremosa de avena de textura muy suave.",
+    "imageUrl": "https://example.com/sopa-58.jpg",
+    "detailedInfo": "Pensada para paladares sensibles, esta sopa aprovecha la capacidad espesante de la avena sin recargar sabores.",
+    "ingredients": [
+      { "name": "Avena tradicional", "quantity": "1/3 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.6 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar avena y agua." },
+      { "step": "Cocinar removiendo suavemente." }
+    ],
+    "tips": [
+      {
+        "title": "Muy suave",
+        "description": "Ideal para comidas nocturnas."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-58-1.webp",
+      "https://example.com/sopa-58-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 59,
+    "uid": "R-SOUP_000059",
+    "name": "Sopa de Quinoa y Arroz Mixta",
+    "description": "Sopa equilibrada que combina dos cereales.",
+    "imageUrl": "https://example.com/sopa-59.jpg",
+    "detailedInfo": "La combinación de arroz y quinoa aporta textura variada y mayor valor nutricional sin complicar la preparación.",
+    "ingredients": [
+      { "name": "Arroz blanco", "quantity": "1/3 taza" },
+      { "name": "Quinoa", "quantity": "1/3 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar arroz, quinoa y agua." },
+      { "step": "Cocinar hasta granos tiernos." }
+    ],
+    "tips": [
+      {
+        "title": "Textura combinada",
+        "description": "Equilibra tiempos de cocción."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-59-1.webp",
+      "https://example.com/sopa-59-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 60,
+    "uid": "R-SOUP_000060",
+    "name": "Sopa Base de Cereales Educativa",
+    "description": "Sopa final del bloque que resume técnicas con cereales.",
+    "imageUrl": "https://example.com/sopa-60.jpg",
+    "detailedInfo": "Esta sopa cierra el bloque mostrando cómo ajustar proporciones de cereal y líquido para controlar cuerpo y textura.",
+    "ingredients": [
+      { "name": "Cereal mixto (arroz, quinoa o cebada)", "quantity": "1/2 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar cereal y agua." },
+      { "step": "Cocinar ajustando textura según necesidad." }
+    ],
+    "tips": [
+      {
+        "title": "Control total",
+        "description": "Menos cereal = caldo más ligero."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-60-1.webp",
+      "https://example.com/sopa-60-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+    {
+    "id": 61,
+    "uid": "R-SOUP_000061",
+    "name": "Sopa Cremosa de Zapallo sin Crema",
+    "description": "Sopa suave y naturalmente cremosa elaborada solo con zapallo.",
+    "imageUrl": "https://example.com/sopa-61.jpg",
+    "detailedInfo": "El zapallo, al cocinarse completamente y licuarse en caliente, genera una textura cremosa gracias a su fibra y almidones naturales. Esta sopa enseña la base de las cremosas modernas sin lácteos.",
+    "ingredients": [
+      { "name": "Zapallo", "quantity": "500 g" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír la cebolla hasta blanda." },
+      { "step": "Agregar zapallo en cubos y agua." },
+      { "step": "Cocinar hasta muy tierno y licuar completamente." }
+    ],
+    "tips": [
+      {
+        "title": "Textura perfecta",
+        "description": "Licuar en caliente logra una crema más fina."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-61-1.webp",
+      "https://example.com/sopa-61-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 62,
+    "uid": "R-SOUP_000062",
+    "name": "Sopa Cremosa de Coliflor Natural",
+    "description": "Sopa blanca y suave con coliflor como base cremosa.",
+    "imageUrl": "https://example.com/sopa-62.jpg",
+    "detailedInfo": "La coliflor cocida y licuada genera una textura sedosa. Esta sopa enseña cómo obtener cremosidad con vegetales bajos en almidón usando licuado correcto.",
+    "ingredients": [
+      { "name": "Coliflor", "quantity": "1 unidad pequeña" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.6 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar coliflor y agua." },
+      { "step": "Cocinar hasta muy tierno y licuar." }
+    ],
+    "tips": [
+      {
+        "title": "Sabor suave",
+        "description": "Ideal como base para variaciones."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-62-1.webp",
+      "https://example.com/sopa-62-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 63,
+    "uid": "R-SOUP_000063",
+    "name": "Sopa Cremosa de Brócoli sin Lácteos",
+    "description": "Sopa verde intensa y cremosa solo con brócoli.",
+    "imageUrl": "https://example.com/sopa-63.jpg",
+    "detailedInfo": "El brócoli se cocina lo justo para mantener color y se licua en caliente. La fibra vegetal aporta cuerpo sin necesidad de crema.",
+    "ingredients": [
+      { "name": "Brócoli", "quantity": "400 g" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.4 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar brócoli y agua." },
+      { "step": "Cocinar brevemente y licuar." }
+    ],
+    "tips": [
+      {
+        "title": "Color vivo",
+        "description": "No sobrecocer el brócoli."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-63-1.webp",
+      "https://example.com/sopa-63-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 64,
+    "uid": "R-SOUP_000064",
+    "name": "Sopa Cremosa de Zanahoria Especiada",
+    "description": "Sopa cremosa con zanahoria y especias suaves.",
+    "imageUrl": "https://example.com/sopa-64.jpg",
+    "detailedInfo": "La zanahoria aporta dulzor y cuerpo. Las especias se usan con moderación para enseñar balance sin opacar el vegetal.",
+    "ingredients": [
+      { "name": "Zanahoria", "quantity": "500 g" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Comino", "quantity": "1 pizca" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla y especias." },
+      { "step": "Agregar zanahoria y agua." },
+      { "step": "Cocinar hasta tierno y licuar." }
+    ],
+    "tips": [
+      {
+        "title": "Especias sutiles",
+        "description": "La zanahoria debe seguir siendo protagonista."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-64-1.webp",
+      "https://example.com/sopa-64-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 65,
+    "uid": "R-SOUP_000065",
+    "name": "Sopa Cremosa de Zapallo y Zanahoria",
+    "description": "Sopa espesa y equilibrada de zapallo y zanahoria.",
+    "imageUrl": "https://example.com/sopa-65.jpg",
+    "detailedInfo": "La combinación de zapallo y zanahoria genera una crema vegetal estable y sabrosa sin necesidad de emulsiones externas.",
+    "ingredients": [
+      { "name": "Zapallo", "quantity": "300 g" },
+      { "name": "Zanahoria", "quantity": "2 unidades" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.6 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar vegetales y agua." },
+      { "step": "Cocinar y licuar completamente." }
+    ],
+    "tips": [
+      {
+        "title": "Textura estable",
+        "description": "Ideal para recalentar sin cortar."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-65-1.webp",
+      "https://example.com/sopa-65-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 66,
+    "uid": "R-SOUP_000066",
+    "name": "Sopa Cremosa de Papa sin Crema",
+    "description": "Sopa blanca y espesa usando solo papa como base.",
+    "imageUrl": "https://example.com/sopa-66.jpg",
+    "detailedInfo": "La papa, bien cocida y licuada, emulsiona naturalmente con el caldo, creando una textura cremosa y estable.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "4 unidades" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar papa y agua." },
+      { "step": "Cocinar hasta muy tierno y licuar." }
+    ],
+    "tips": [
+      {
+        "title": "Emulsión natural",
+        "description": "Licuado prolongado mejora la cremosidad."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-66-1.webp",
+      "https://example.com/sopa-66-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 67,
+    "uid": "R-SOUP_000067",
+    "name": "Sopa Cremosa de Zapallito",
+    "description": "Sopa ligera y cremosa de zapallito sin lácteos.",
+    "imageUrl": "https://example.com/sopa-67.jpg",
+    "detailedInfo": "El zapallito aporta volumen y suavidad. Licuado correcto evita textura aguada.",
+    "ingredients": [
+      { "name": "Zapallito", "quantity": "3 unidades" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.4 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar zapallito y agua." },
+      { "step": "Cocinar y licuar." }
+    ],
+    "tips": [
+      {
+        "title": "No aguada",
+        "description": "Usa poca agua al inicio."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-67-1.webp",
+      "https://example.com/sopa-67-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 68,
+    "uid": "R-SOUP_000068",
+    "name": "Sopa Cremosa de Coliflor y Papa",
+    "description": "Sopa cremosa vegetal con mayor cuerpo.",
+    "imageUrl": "https://example.com/sopa-68.jpg",
+    "detailedInfo": "La papa refuerza la textura de la coliflor, logrando una crema más estable sin crema.",
+    "ingredients": [
+      { "name": "Coliflor", "quantity": "1/2 unidad" },
+      { "name": "Papa", "quantity": "2 unidades" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.6 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar vegetales y agua." },
+      { "step": "Cocinar y licuar." }
+    ],
+    "tips": [
+      {
+        "title": "Más cuerpo",
+        "description": "La papa estabiliza la crema."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-68-1.webp",
+      "https://example.com/sopa-68-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 69,
+    "uid": "R-SOUP_000069",
+    "name": "Sopa Cremosa de Brócoli y Papa",
+    "description": "Sopa verde cremosa con textura equilibrada.",
+    "imageUrl": "https://example.com/sopa-69.jpg",
+    "detailedInfo": "La papa suaviza la intensidad del brócoli y mejora la textura final.",
+    "ingredients": [
+      { "name": "Brócoli", "quantity": "300 g" },
+      { "name": "Papa", "quantity": "2 unidades" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar vegetales y agua." },
+      { "step": "Cocinar y licuar." }
+    ],
+    "tips": [
+      {
+        "title": "Equilibrio",
+        "description": "La papa baja la intensidad del brócoli."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-69-1.webp",
+      "https://example.com/sopa-69-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 70,
+    "uid": "R-SOUP_000070",
+    "name": "Sopa Cremosa de Zanahoria y Jengibre Suave",
+    "description": "Sopa vegetal con toque fresco de jengibre.",
+    "imageUrl": "https://example.com/sopa-70.jpg",
+    "detailedInfo": "El jengibre se usa en mínima cantidad para aportar frescura sin dominar.",
+    "ingredients": [
+      { "name": "Zanahoria", "quantity": "500 g" },
+      { "name": "Jengibre fresco", "quantity": "1 rodaja pequeña" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.6 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla y jengibre." },
+      { "step": "Agregar zanahoria y agua." },
+      { "step": "Cocinar y licuar." }
+    ],
+    "tips": [
+      {
+        "title": "Jengibre sutil",
+        "description": "Menos es más."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-70-1.webp",
+      "https://example.com/sopa-70-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 71,
+    "uid": "R-SOUP_000071",
+    "name": "Sopa Cremosa de Betarraga Suave",
+    "description": "Sopa cremosa de betarraga de color intenso.",
+    "imageUrl": "https://example.com/sopa-71.jpg",
+    "detailedInfo": "La betarraga aporta color, dulzor y textura cremosa al licuarse.",
+    "ingredients": [
+      { "name": "Betarraga cocida", "quantity": "400 g" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.4 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar betarraga y agua." },
+      { "step": "Licuar hasta homogéneo." }
+    ],
+    "tips": [
+      {
+        "title": "Color limpio",
+        "description": "No sobrecargar de condimentos."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-71-1.webp",
+      "https://example.com/sopa-71-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 72,
+    "uid": "R-SOUP_000072",
+    "name": "Sopa Cremosa de Zapallo Asado",
+    "description": "Sopa intensa y cremosa con zapallo asado.",
+    "imageUrl": "https://example.com/sopa-72.jpg",
+    "detailedInfo": "Asar el zapallo concentra sabores y mejora la textura final.",
+    "ingredients": [
+      { "name": "Zapallo asado", "quantity": "500 g" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Asar el zapallo previamente." },
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar zapallo y agua, licuar." }
+    ],
+    "tips": [
+      {
+        "title": "Sabor profundo",
+        "description": "El asado intensifica el vegetal."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-72-1.webp",
+      "https://example.com/sopa-72-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 73,
+    "uid": "R-SOUP_000073",
+    "name": "Sopa Cremosa de Zanahoria y Papa",
+    "description": "Crema vegetal estable y suave.",
+    "imageUrl": "https://example.com/sopa-73.jpg",
+    "detailedInfo": "La papa estabiliza la zanahoria logrando una textura más espesa.",
+    "ingredients": [
+      { "name": "Zanahoria", "quantity": "400 g" },
+      { "name": "Papa", "quantity": "2 unidades" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.6 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar vegetales y agua." },
+      { "step": "Cocinar y licuar." }
+    ],
+    "tips": [
+      {
+        "title": "Textura firme",
+        "description": "Ideal para recalentar."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-73-1.webp",
+      "https://example.com/sopa-73-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 74,
+    "uid": "R-SOUP_000074",
+    "name": "Sopa Cremosa Verde de Espinaca",
+    "description": "Sopa verde cremosa y liviana.",
+    "imageUrl": "https://example.com/sopa-74.jpg",
+    "detailedInfo": "La espinaca se licua al final para conservar color y textura.",
+    "ingredients": [
+      { "name": "Espinaca", "quantity": "2 tazas" },
+      { "name": "Papa", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.4 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Cocinar papa y cebolla." },
+      { "step": "Agregar espinaca y licuar inmediatamente." }
+    ],
+    "tips": [
+      {
+        "title": "Color brillante",
+        "description": "Licuar al final es clave."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-74-1.webp",
+      "https://example.com/sopa-74-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 75,
+    "uid": "R-SOUP_000075",
+    "name": "Sopa Cremosa Vegetal Base ChefSkills",
+    "description": "Sopa base que resume la técnica de cremosas sin crema.",
+    "imageUrl": "https://example.com/sopa-75.jpg",
+    "detailedInfo": "Esta sopa cierra el bloque enseñando cómo ajustar proporción de vegetal y líquido para lograr cremosidad estable sin ingredientes externos.",
+    "ingredients": [
+      { "name": "Vegetal base (zapallo, zanahoria o coliflor)", "quantity": "500 g" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar vegetal base y agua." },
+      { "step": "Cocinar y licuar ajustando textura." }
+    ],
+    "tips": [
+      {
+        "title": "Base universal",
+        "description": "Sirve para infinitas variaciones."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-75-1.webp",
+      "https://example.com/sopa-75-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+    {
+    "id": 76,
+    "uid": "R-SOUP_000076",
+    "name": "Sopa de Fideos Casera",
+    "description": "Sopa tradicional de fideos cortos en caldo suave.",
+    "imageUrl": "https://example.com/sopa-76.jpg",
+    "detailedInfo": "Una sopa clásica de hogar, donde el fideo se cocina directamente en el caldo, aportando cuerpo y sensación reconfortante. Ideal para enseñar tiempos de cocción básicos.",
+    "ingredients": [
+      { "name": "Fideos cortos", "quantity": "1 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla y zanahoria." },
+      { "step": "Agregar agua y llevar a hervor." },
+      { "step": "Incorporar fideos y cocinar hasta al dente." }
+    ],
+    "tips": [
+      {
+        "title": "No sobrecocer",
+        "description": "El fideo pasado arruina la textura."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-76-1.webp",
+      "https://example.com/sopa-76-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 77,
+    "uid": "R-SOUP_000077",
+    "name": "Caldo Vegetal Tradicional",
+    "description": "Caldo base de verduras de sabor limpio.",
+    "imageUrl": "https://example.com/sopa-77.jpg",
+    "detailedInfo": "Este caldo enseña la técnica de extracción de sabor sin hervir en exceso. Es base para múltiples preparaciones.",
+    "ingredients": [
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Apio", "quantity": "2 ramas" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír ligeramente las verduras." },
+      { "step": "Agregar agua y cocinar a hervor suave." },
+      { "step": "Colar o usar directamente." }
+    ],
+    "tips": [
+      {
+        "title": "Hervor suave",
+        "description": "Evita sabores amargos."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-77-1.webp",
+      "https://example.com/sopa-77-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 78,
+    "uid": "R-SOUP_000078",
+    "name": "Sopa Campesina de Verduras",
+    "description": "Sopa rústica con verduras de estación.",
+    "imageUrl": "https://example.com/sopa-78.jpg",
+    "detailedInfo": "Una sopa simple y nutritiva, pensada para aprovechar lo disponible. Enseña cocina flexible y casera.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "1 unidad" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar verduras y agua." },
+      { "step": "Cocinar hasta tierno." }
+    ],
+    "tips": [
+      {
+        "title": "Versátil",
+        "description": "Admite cualquier verdura disponible."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-78-1.webp",
+      "https://example.com/sopa-78-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 79,
+    "uid": "R-SOUP_000079",
+    "name": "Sopa Andina Simple",
+    "description": "Sopa básica inspirada en la cocina andina.",
+    "imageUrl": "https://example.com/sopa-79.jpg",
+    "detailedInfo": "Utiliza papa y verduras simples para lograr una sopa reconfortante, representativa de zonas altas.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "2 unidades" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar papa y agua." },
+      { "step": "Cocinar hasta papa tierna." }
+    ],
+    "tips": [
+      {
+        "title": "Sencillez",
+        "description": "Menos ingredientes, más identidad."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-79-1.webp",
+      "https://example.com/sopa-79-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 80,
+    "uid": "R-SOUP_000080",
+    "name": "Sopa de Arroz Tradicional",
+    "description": "Sopa casera con arroz y caldo claro.",
+    "imageUrl": "https://example.com/sopa-80.jpg",
+    "detailedInfo": "Un clásico regional donde el arroz se cocina directo en el caldo, aportando cuerpo y suavidad.",
+    "ingredients": [
+      { "name": "Arroz", "quantity": "1/2 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar arroz y agua." },
+      { "step": "Cocinar hasta arroz tierno." }
+    ],
+    "tips": [
+      {
+        "title": "Textura justa",
+        "description": "No sobrecargar de arroz."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-80-1.webp",
+      "https://example.com/sopa-80-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 81,
+    "uid": "R-SOUP_000081",
+    "name": "Sopa de Pan Casera",
+    "description": "Sopa tradicional de aprovechamiento con pan.",
+    "imageUrl": "https://example.com/sopa-81.jpg",
+    "detailedInfo": "El pan se integra al caldo, aportando cuerpo y sabor. Enseña cocina de aprovechamiento.",
+    "ingredients": [
+      { "name": "Pan duro", "quantity": "2 rebanadas" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "1.8 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar pan y agua." },
+      { "step": "Cocinar hasta que el pan se integre." }
+    ],
+    "tips": [
+      {
+        "title": "Aprovechamiento",
+        "description": "Ideal para pan del día anterior."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-81-1.webp",
+      "https://example.com/sopa-81-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 82,
+    "uid": "R-SOUP_000082",
+    "name": "Sopa de Papa y Fideos",
+    "description": "Sopa mixta clásica de papa y fideos.",
+    "imageUrl": "https://example.com/sopa-82.jpg",
+    "detailedInfo": "Combina dos bases tradicionales en una sopa completa y reconfortante.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "1 unidad" },
+      { "name": "Fideos cortos", "quantity": "1/2 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar papa y agua." },
+      { "step": "Incorporar fideos al final." }
+    ],
+    "tips": [
+      {
+        "title": "Orden",
+        "description": "Primero papa, luego fideos."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-82-1.webp",
+      "https://example.com/sopa-82-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 83,
+    "uid": "R-SOUP_000083",
+    "name": "Sopa Casera de Verduras Picadas",
+    "description": "Sopa clara con verduras finamente picadas.",
+    "imageUrl": "https://example.com/sopa-83.jpg",
+    "detailedInfo": "Enseña corte pequeño y cocción rápida para una sopa liviana.",
+    "ingredients": [
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Apio", "quantity": "1 rama" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar verduras picadas y agua." },
+      { "step": "Cocinar brevemente." }
+    ],
+    "tips": [
+      {
+        "title": "Corte fino",
+        "description": "Acelera la cocción."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-83-1.webp",
+      "https://example.com/sopa-83-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 84,
+    "uid": "R-SOUP_000084",
+    "name": "Caldo Casero Reforzado",
+    "description": "Caldo vegetal con sabor más concentrado.",
+    "imageUrl": "https://example.com/sopa-84.jpg",
+    "detailedInfo": "Se refuerza el caldo con mayor proporción de verduras, enseñando intensidad sin cubos comerciales.",
+    "ingredients": [
+      { "name": "Cebolla", "quantity": "2 unidades" },
+      { "name": "Zanahoria", "quantity": "2 unidades" },
+      { "name": "Apio", "quantity": "2 ramas" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "3 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír verduras." },
+      { "step": "Agregar agua y cocinar largo." }
+    ],
+    "tips": [
+      {
+        "title": "Concentración",
+        "description": "Más verdura = más sabor."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-84-1.webp",
+      "https://example.com/sopa-84-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 85,
+    "uid": "R-SOUP_000085",
+    "name": "Sopa de Sémola Tradicional",
+    "description": "Sopa sencilla y nutritiva con sémola.",
+    "imageUrl": "https://example.com/sopa-85.jpg",
+    "detailedInfo": "La sémola se cocina directo en el caldo, espesando suavemente.",
+    "ingredients": [
+      { "name": "Sémola", "quantity": "1/3 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar agua." },
+      { "step": "Incorporar sémola en forma de lluvia." }
+    ],
+    "tips": [
+      {
+        "title": "Sin grumos",
+        "description": "Agregar la sémola lentamente."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-85-1.webp",
+      "https://example.com/sopa-85-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 86,
+    "uid": "R-SOUP_000086",
+    "name": "Sopa Casera de Avena Regional",
+    "description": "Versión tradicional de sopa de avena.",
+    "imageUrl": "https://example.com/sopa-86.jpg",
+    "detailedInfo": "Uso regional de la avena como espesante suave.",
+    "ingredients": [
+      { "name": "Avena", "quantity": "1/3 taza" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar agua y avena." },
+      { "step": "Cocinar removiendo." }
+    ],
+    "tips": [
+      {
+        "title": "Textura",
+        "description": "Espesa rápido."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-86-1.webp",
+      "https://example.com/sopa-86-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 87,
+    "uid": "R-SOUP_000087",
+    "name": "Sopa Rural de Papa",
+    "description": "Sopa rústica de papa, muy simple.",
+    "imageUrl": "https://example.com/sopa-87.jpg",
+    "detailedInfo": "Papa, agua y cebolla: cocina mínima con máximo confort.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "3 unidades" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla." },
+      { "step": "Agregar papa y agua." },
+      { "step": "Cocinar hasta tierna." }
+    ],
+    "tips": [
+      {
+        "title": "Minimalismo",
+        "description": "El sabor está en la papa."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-87-1.webp",
+      "https://example.com/sopa-87-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 88,
+    "uid": "R-SOUP_000088",
+    "name": "Sopa Casera de Verduras y Arroz",
+    "description": "Sopa tradicional de verduras con arroz.",
+    "imageUrl": "https://example.com/sopa-88.jpg",
+    "detailedInfo": "Una sopa familiar que combina verduras y arroz de forma equilibrada.",
+    "ingredients": [
+      { "name": "Arroz", "quantity": "1/3 taza" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír cebolla y zanahoria." },
+      { "step": "Agregar arroz y agua." },
+      { "step": "Cocinar hasta arroz tierno." }
+    ],
+    "tips": [
+      {
+        "title": "Proporción",
+        "description": "Poco arroz mantiene la sopa liviana."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-88-1.webp",
+      "https://example.com/sopa-88-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 89,
+    "uid": "R-SOUP_000089",
+    "name": "Sopa Casera de Caldo Claro",
+    "description": "Caldo simple para comidas livianas.",
+    "imageUrl": "https://example.com/sopa-89.jpg",
+    "detailedInfo": "Una sopa mínima pensada para digestión y recuperación.",
+    "ingredients": [
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Apio", "quantity": "1 rama" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2.5 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Hervir todos los ingredientes suavemente." }
+    ],
+    "tips": [
+      {
+        "title": "Muy suave",
+        "description": "Ideal para estómagos sensibles."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-89-1.webp",
+      "https://example.com/sopa-89-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+
+  {
+    "id": 90,
+    "uid": "R-SOUP_000090",
+    "name": "Sopa Regional Base ChefSkills",
+    "description": "Sopa final del bloque regional.",
+    "imageUrl": "https://example.com/sopa-90.jpg",
+    "detailedInfo": "Resume las técnicas regionales simples y tradicionales sin complicaciones.",
+    "ingredients": [
+      { "name": "Verduras base", "quantity": "A elección" },
+      { "name": "Aceite", "quantity": "1 cucharada" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Sofreír verduras." },
+      { "step": "Agregar agua y cocinar suavemente." }
+    ],
+    "tips": [
+      {
+        "title": "Base cultural",
+        "description": "Simple, honesta y funcional."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-90-1.webp",
+      "https://example.com/sopa-90-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+    {
+    "id": 91,
+    "uid": "R-SOUP_000091",
+    "name": "Sopa Suave de Verduras para Niños",
+    "description": "Sopa muy suave, de fácil digestión y sabor amable.",
+    "imageUrl": "https://example.com/sopa-91.jpg",
+    "detailedInfo": "Pensada para paladares sensibles, esta sopa utiliza verduras bien cocidas y licuadas para lograr una textura homogénea y sin trozos. Ideal para niños o personas con poco apetito.",
+    "ingredients": [
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Papa", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1/2 unidad" },
+      { "name": "Aceite", "quantity": "1 cucharadita" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Muy poca" }
+    ],
+    "steps": [
+      { "step": "Cocinar todos los vegetales hasta muy tiernos." },
+      { "step": "Licuar completamente hasta textura lisa." }
+    ],
+    "tips": [
+      {
+        "title": "Textura homogénea",
+        "description": "Colar si se necesita aún más suavidad."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-91-1.webp",
+      "https://example.com/sopa-91-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 92,
+    "uid": "R-SOUP_000092",
+    "name": "Caldo Digestivo de Verduras",
+    "description": "Caldo liviano pensado para digestión y descanso gástrico.",
+    "imageUrl": "https://example.com/sopa-92.jpg",
+    "detailedInfo": "Este caldo se cocina a hervor suave para extraer sabor sin pesadez. Ideal después de comidas abundantes o en periodos de malestar digestivo.",
+    "ingredients": [
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Apio", "quantity": "1 rama" },
+      { "name": "Agua", "quantity": "2.5 litros" },
+      { "name": "Sal", "quantity": "Poca" }
+    ],
+    "steps": [
+      { "step": "Hervir todos los ingredientes a fuego bajo." },
+      { "step": "Colar antes de servir." }
+    ],
+    "tips": [
+      {
+        "title": "Hervor suave",
+        "description": "Evita sabores fuertes."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-92-1.webp",
+      "https://example.com/sopa-92-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 93,
+    "uid": "R-SOUP_000093",
+    "name": "Sopa Suave para Resfrío",
+    "description": "Sopa reconfortante para estados gripales.",
+    "imageUrl": "https://example.com/sopa-93.jpg",
+    "detailedInfo": "Utiliza ingredientes simples y calientes que reconfortan sin irritar. No es medicinal, pero aporta hidratación y calor.",
+    "ingredients": [
+      { "name": "Papa", "quantity": "1 unidad" },
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Ajo", "quantity": "1 diente" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Al gusto" }
+    ],
+    "steps": [
+      { "step": "Cocinar todos los ingredientes hasta muy tiernos." },
+      { "step": "Servir bien caliente." }
+    ],
+    "tips": [
+      {
+        "title": "Bien caliente",
+        "description": "El calor aporta alivio."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-93-1.webp",
+      "https://example.com/sopa-93-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 94,
+    "uid": "R-SOUP_000094",
+    "name": "Sopa Nocturna Liviana",
+    "description": "Sopa ligera ideal para la noche.",
+    "imageUrl": "https://example.com/sopa-94.jpg",
+    "detailedInfo": "Pensada para cenas livianas, con bajo contenido graso y fácil digestión.",
+    "ingredients": [
+      { "name": "Zapallito", "quantity": "1 unidad" },
+      { "name": "Papa", "quantity": "1/2 unidad" },
+      { "name": "Cebolla", "quantity": "1/2 unidad" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Poca" }
+    ],
+    "steps": [
+      { "step": "Cocinar verduras hasta tiernas." },
+      { "step": "Licuar ligeramente o dejar rústica." }
+    ],
+    "tips": [
+      {
+        "title": "Cena liviana",
+        "description": "Evita ingredientes pesados."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-94-1.webp",
+      "https://example.com/sopa-94-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 95,
+    "uid": "R-SOUP_000095",
+    "name": "Caldo Claro de Recuperación",
+    "description": "Caldo simple para hidratar y reconfortar.",
+    "imageUrl": "https://example.com/sopa-95.jpg",
+    "detailedInfo": "Ideal para días de cansancio o poco apetito, aporta líquidos y sales.",
+    "ingredients": [
+      { "name": "Cebolla", "quantity": "1 unidad" },
+      { "name": "Apio", "quantity": "1 rama" },
+      { "name": "Agua", "quantity": "3 litros" },
+      { "name": "Sal", "quantity": "Muy poca" }
+    ],
+    "steps": [
+      { "step": "Hervir suavemente y colar." }
+    ],
+    "tips": [
+      {
+        "title": "Hidratación",
+        "description": "Beber caliente y despacio."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-95-1.webp",
+      "https://example.com/sopa-95-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 96,
+    "uid": "R-SOUP_000096",
+    "name": "Sopa Detox Real de Verduras",
+    "description": "Sopa vegetal ligera, sin promesas irreales.",
+    "imageUrl": "https://example.com/sopa-96.jpg",
+    "detailedInfo": "Aporta verduras, agua y calor. No desintoxica mágicamente, pero apoya una alimentación liviana.",
+    "ingredients": [
+      { "name": "Zanahoria", "quantity": "1 unidad" },
+      { "name": "Apio", "quantity": "1 rama" },
+      { "name": "Zapallito", "quantity": "1 unidad" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Poca" }
+    ],
+    "steps": [
+      { "step": "Cocinar verduras y servir sin licuar." }
+    ],
+    "tips": [
+      {
+        "title": "Sin humo",
+        "description": "Es solo comida simple y honesta."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-96-1.webp",
+      "https://example.com/sopa-96-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 97,
+    "uid": "R-SOUP_000097",
+    "name": "Sopa Ligera de Avena",
+    "description": "Sopa suave de avena para digestión fácil.",
+    "imageUrl": "https://example.com/sopa-97.jpg",
+    "detailedInfo": "La avena aporta suavidad y ligera saciedad sin pesadez.",
+    "ingredients": [
+      { "name": "Avena", "quantity": "2 cucharadas" },
+      { "name": "Agua", "quantity": "1.5 litros" },
+      { "name": "Sal", "quantity": "Pizca" }
+    ],
+    "steps": [
+      { "step": "Cocinar avena en agua removiendo." }
+    ],
+    "tips": [
+      {
+        "title": "Textura suave",
+        "description": "No espesar demasiado."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-97-1.webp",
+      "https://example.com/sopa-97-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 98,
+    "uid": "R-SOUP_000098",
+    "name": "Sopa Suave de Arroz Blanco",
+    "description": "Sopa muy simple y liviana con arroz.",
+    "imageUrl": "https://example.com/sopa-98.jpg",
+    "detailedInfo": "El arroz se cocina largo para liberar almidón y suavizar el caldo.",
+    "ingredients": [
+      { "name": "Arroz", "quantity": "2 cucharadas" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Poca" }
+    ],
+    "steps": [
+      { "step": "Cocinar arroz hasta muy blando." }
+    ],
+    "tips": [
+      {
+        "title": "Muy suave",
+        "description": "Ideal para estómagos delicados."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-98-1.webp",
+      "https://example.com/sopa-98-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 99,
+    "uid": "R-SOUP_000099",
+    "name": "Caldo Tibio de Verduras Verdes",
+    "description": "Caldo liviano de verduras verdes.",
+    "imageUrl": "https://example.com/sopa-99.jpg",
+    "detailedInfo": "Aporta minerales y frescura, servido tibio.",
+    "ingredients": [
+      { "name": "Espinaca", "quantity": "1 taza" },
+      { "name": "Apio", "quantity": "1 rama" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Pizca" }
+    ],
+    "steps": [
+      { "step": "Hervir suavemente y colar." }
+    ],
+    "tips": [
+      {
+        "title": "Servir tibio",
+        "description": "No muy caliente."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-99-1.webp",
+      "https://example.com/sopa-99-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  },
+  {
+    "id": 100,
+    "uid": "R-SOUP_000100",
+    "name": "Sopa Funcional Base ChefSkills",
+    "description": "Sopa simple y consciente.",
+    "imageUrl": "https://example.com/sopa-100.jpg",
+    "detailedInfo": "Cierra el bloque y el catálogo de sopas con una preparación honesta, adaptable y funcional.",
+    "ingredients": [
+      { "name": "Verduras suaves", "quantity": "A elección" },
+      { "name": "Agua", "quantity": "2 litros" },
+      { "name": "Sal", "quantity": "Poca" }
+    ],
+    "steps": [
+      { "step": "Cocinar suavemente y servir caliente o tibio." }
+    ],
+    "tips": [
+      {
+        "title": "Cierre consciente",
+        "description": "La simplicidad también es técnica."
+      }
+    ],
+    "images": [
+      "https://example.com/sopa-100-1.webp",
+      "https://example.com/sopa-100-2.webp"
+    ],
+    "rating": null,
+    "servings": null,
+    "time": null,
+    "difficulty": null
+  }
+
+
+
+
+
+
+
+
+
+
+
   ]
 }

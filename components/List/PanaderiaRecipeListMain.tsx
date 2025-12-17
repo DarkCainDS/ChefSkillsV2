@@ -1,3 +1,4 @@
+import { getVersionedImageSync } from "../../utils/versionedImage";
 // screens/PanaderiaRecipeListMain.tsx
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
@@ -15,7 +16,8 @@ import {
 import panaderiaData from "../../assets/Json/Panaderia.json";
 
 // 🟢 Util unificado
-import { getSafeImage } from "../../utils/getImageSource";
+import { getSafeVersionedImage } from "../../utils/imageSource";
+
 
 // 🔎 Normalizador PRO
 const normalizeText = (text: string) =>
@@ -72,12 +74,15 @@ function PanaderiaRecipeListMain() {
           navigation.navigate("PanaderiaRecipeDetail", { recipe: item })
         }
       >
-        <Image
-          source={getSafeImage(item.imageUrl, item.images)}
-          style={styles.image}
-          contentFit="cover"
-          transition={300}
-        />
+<Image
+  source={getSafeVersionedImage(
+    item.imageUrl,
+    item.images
+  )}
+  style={styles.image}
+  contentFit="cover"
+  transition={300}
+/>
 
         <View style={styles.info}>
           <Text style={styles.title}>{item.name}</Text>

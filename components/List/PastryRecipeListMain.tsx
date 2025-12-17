@@ -1,3 +1,4 @@
+import { getVersionedImageSync } from "../../utils/versionedImage";
 // screens/PastryRecipeListMain.tsx
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
@@ -15,7 +16,7 @@ import {
 import recipesData from "../../assets/Json/Pastry_Recipe.json";
 
 // 🟣 Util universal de imágenes seguras
-import { getSafeImage } from "../../utils/getImageSource";
+import { getSafeVersionedImage } from "../../utils/imageSource";
 
 // 🧠 Normalizador PRO para búsquedas inteligentes
 const normalizeText = (text: string) =>
@@ -72,12 +73,15 @@ function PastryRecipeListMain() {
           navigation.navigate("PastryRecipeDetail", { recipe: item })
         }
       >
-        <Image
-          source={getSafeImage(item.imageUrl, item.images)}
-          style={styles.image}
-          contentFit="cover"
-          transition={300}
-        />
+<Image
+  source={getSafeVersionedImage(
+    item.imageUrl,
+    item.images
+  )}
+  style={styles.image}
+  contentFit="cover"
+  transition={300}
+/>
 
         <View style={styles.info}>
           <Text style={styles.title}>{item.name}</Text>

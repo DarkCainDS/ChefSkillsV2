@@ -7,22 +7,21 @@ const REFRESH_INTERVAL = 14 * 24 * 60 * 60 * 1000; // 14 días
 const KEY_LAST = "CS_LAST_REFRESH";
 const KEY_VERSION = "CS_VERSION";
 
-// Nombre correcto de los archivos JSON en AWS
+// 🔹 Nombres EXACTOS de los archivos en S3 (case-sensitive)
 const FILES = [
   "Main_Dish.json",
   "Pastry_Recipe.json",
   "Panaderia.json",
   "Soup.json",
-  "Salsas.json",   // ✅
+  "Salsas.json",
   "Salad.json",
-  "Drink.json",    // ✅
+  "Drink.json",
   "Vegan.json",
   "Techniques.json",
 ];
 
-
 const BASE_URL = "https://d3rbsa8yi0571o.cloudfront.net/Json/";
-
+const cacheKey = (name: string) => `CACHE_JSON_${name}`;
 
 // ===============================================================
 // 🧠 1) WATCHDOG — decide si hay que refrescar o no
@@ -32,7 +31,7 @@ export async function watchdogCheck() {
     const last = Number(await AsyncStorage.getItem(KEY_LAST) || 0);
     const now = Date.now();
 
-    // 👉 Primer uso
+    // 👉 Primer uso REAL (no hay timestamp)
     if (!last) {
       console.log("⚠️ Primer uso → refresco obligatorio.");
       const v = await bumpVersion();
@@ -46,16 +45,14 @@ export async function watchdogCheck() {
       return { action: "RESET", newVersion: v };
     }
 
-    // 👉 Todo OK
     return { action: "NONE" };
   } catch (e) {
     console.log("❌ Error en watchdogCheck:", e);
-
-    // Por seguridad forzamos refresco
     const v = await bumpVersion();
     return { action: "RESET", newVersion: v };
   }
 }
+
 
 
 // ===============================================================
@@ -80,7 +77,6 @@ export async function clearAllJsonCache() {
   }
 }
 
-
 // ===============================================================
 // 📥 3) DESCARGAR TODOS LOS JSON
 // ===============================================================
@@ -89,12 +85,13 @@ export async function downloadAllJson() {
 
   for (const file of FILES) {
     const url = BASE_URL + file;
-    const key = "CACHE_JSON_" + file;
+    const key = cacheKey(file);
 
     try {
       const res = await fetch(url);
-      const json = await res.json();
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
+      const json = await res.json();
       await AsyncStorage.setItem(key, JSON.stringify(json));
 
       console.log("📥 Descargado OK →", file);
@@ -103,30 +100,39 @@ export async function downloadAllJson() {
     }
   }
 
-  // Guardamos timestamp del refresh
-  await AsyncStorage.setItem(KEY_LAST, String(Date.now()));
-}
+  // 🕒 Refresh global exitoso
+await AsyncStorage.setItem(KEY_LAST, String(Date.now()));
+await AsyncStorage.removeItem("CS_FORCE_FULL_REFRESH");
 
+console.log("✅ Bootstrap completo");
+
+}
 
 // ===============================================================
 // 📦 4) OBTENER JSON SEGÚN NOMBRE
 // ===============================================================
 export async function getJson(name: string) {
-  const key = "CACHE_JSON_" + name;
+  const key = cacheKey(name);
   const data = await AsyncStorage.getItem(key);
 
+  // ✅ Cache hit
   if (data) return JSON.parse(data);
 
-  // Si NO existe → descargamos SOLO ese archivo
   console.log(`⚠️ ${name} no existe en cache → descargando...`);
 
   try {
     const url = BASE_URL + name;
     const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
     const json = await res.json();
 
     await AsyncStorage.setItem(key, JSON.stringify(json));
 
+    // 🕒 IMPORTANTE: actualizar timestamp global
+    await AsyncStorage.setItem(KEY_LAST, String(Date.now()));
+
+    console.log(`📥 ${name} descargado y cacheado`);
     return json;
   } catch (e) {
     console.log("❌ Error obteniendo JSON puntual:", name, e);
@@ -134,15 +140,13 @@ export async function getJson(name: string) {
   }
 }
 
-
 // ===============================================================
 // 🔍 5) ¿Están todos los JSON listos?
 // ===============================================================
 export async function isJsonReady() {
   const keys = await AsyncStorage.getAllKeys();
-  return FILES.every(f => keys.includes("CACHE_JSON_" + f));
+  return FILES.every(f => keys.includes(cacheKey(f)));
 }
-
 
 // ===============================================================
 // 🧨 6) FORZAR REFRESH MANUAL
@@ -151,14 +155,11 @@ export async function forceFullRefresh() {
   console.log("🛑 Refresco manual forzado.");
 
   await clearAllJsonCache();
+  await AsyncStorage.removeItem(KEY_LAST);
 
   const version = await bumpVersion();
-
-  await AsyncStorage.setItem("CS_FORCE_FULL_REFRESH", "1");
-
   return version;
 }
-
 
 // ===============================================================
 // ♻ 7) CONTROL DE VERSIONES (para invalidar imágenes)
@@ -168,11 +169,20 @@ export async function bumpVersion() {
   const newV = v ? Number(v) + 1 : 1;
 
   await AsyncStorage.setItem(KEY_VERSION, String(newV));
-
   return newV;
 }
 
 export async function getVersion() {
   const v = await AsyncStorage.getItem(KEY_VERSION);
   return v ? Number(v) : 0;
+}
+
+export async function isRefreshExpired(): Promise<boolean> {
+  const last = Number(await AsyncStorage.getItem(KEY_LAST) || 0);
+  if (!last) return true;
+  return Date.now() - last > REFRESH_INTERVAL;
+}
+
+export async function markRefreshDone() {
+  await AsyncStorage.setItem(KEY_LAST, String(Date.now()));
 }

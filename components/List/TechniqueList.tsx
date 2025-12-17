@@ -1,7 +1,9 @@
+import { getVersionedImageSync } from "../../utils/versionedImage";
 import React, { useMemo, useCallback } from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Image } from 'expo-image';
 import techniquesData from '../../assets/Json/Techniques.json';
+import { getSafeVersionedImage } from "../../utils/imageSource";
 
 type TechniquesArray = NonNullable<typeof techniquesData.techniques>;
 export type Technique = NonNullable<TechniquesArray[number]>;
@@ -47,11 +49,13 @@ const TechniqueList: React.FC<TechniqueListProps> = ({ onPressTechnique }) => {
     return (
       <TouchableOpacity style={styles.card} onPress={() => onPressTechnique(item)} activeOpacity={0.8}>
         <Image
-          source={imageSource}
+          source={getSafeVersionedImage(
+            item.imageUrls?.[0],   // imagen principal
+            item.imageUrls         // respaldo
+          )}
           style={styles.image}
+          contentFit="cover"
           transition={300}
-          contentFit="contain"
-          cachePolicy="memory-disk"
         />
         <View style={styles.info}>
           <Text numberOfLines={1} style={styles.title}>{item.name}</Text>

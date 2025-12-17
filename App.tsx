@@ -1,7 +1,7 @@
 // App.tsx
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ActivityIndicator, View, Text, Image } from "react-native";
-import { Provider, useDispatch, useSelector } from "react-redux";
+import { Provider, useDispatch } from "react-redux";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import {
   NavigationContainer,
@@ -9,13 +9,11 @@ import {
 } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { GoogleSignin } from "@react-native-google-signin/google-signin";
 
-import { GoogleSignin } from "@react-native-google-signin/google-signin";  // ⭐ IMPORTANTE
+import store, { AppDispatch } from "./store/Index";
 
-import store, { AppDispatch, RootState } from "./store/Index";
-
-// USER
+// ---------------- USER ----------------
 import {
   setUser,
   setPlan,
@@ -23,31 +21,34 @@ import {
   setSubscriptionResolved,
 } from "./store/Slices/userSlice";
 
-// SUBSCRIPTION
+// ---------------- SUBS ----------------
 import {
   unsubscribe as clearSubRedux,
   subscribePlan as setSubscriptionUI,
 } from "./store/Slices/subscriptionSlice";
 
-// FAVORITES
+// ---------------- FAVORITES ----------------
 import {
   setMaxFavorites,
   clearFavorites,
-  setFavorites,
 } from "./store/Slices/FavoriteSlice";
 
-// FAVORITES STORAGE
-import {
-  loadFavoritesFromStorage,
-  saveFavoritesToStorage,
-} from "./store/storage/FavoriteStorage";
-
-// SERVICES
+// ---------------- SERVICES ----------------
 import { checkSubscriptionStatus } from "./services/subscriptionService";
 
-// SCREENS
+// ---------------- WATCHDOG ----------------
+import {
+  isRefreshExpired,
+  clearAllJsonCache,
+  downloadAllJson,
+  markRefreshDone,
+} from "./utils/watchdog";
+
+// ---------------- SCREENS ----------------
 import HomeScreen from "./components/HomeScreen";
 import LoadingScreen from "./components/LoadingScreen";
+
+// ---------------- DETAILS ----------------
 import TechniqueDetails from "./components/Detail/TechniqueDetails";
 import MainDishRecipeDetail from "./components/Detail/MainDishRecipeDetail";
 import PastryRecipeDetail from "./components/Detail/PastryRecipeDetail";
@@ -56,146 +57,78 @@ import SalsaRecipeDetail from "./components/Detail/SalsaRecipeDetail";
 import SaladRecipeDetail from "./components/Detail/SaladRecipeDetail";
 import SoupRecipeDetail from "./components/Detail/SoupRecipeDetail";
 import DrinkRecipeDetail from "./components/Detail/DrinkRecipeDetail";
+import VeganRecipeDetail from "./components/Detail/VeganRecipeDetail";
 import FavoriteRecipeDetail from "./components/Detail/FavoriteRecipeDetail";
 import FavoritePastryDetail from "./components/Detail/FavoritePastryDetail";
 
 import Menu from "./components/Menu";
-
-// ADS
 import InterstitialAdManager from "./components/ads/InterstitialAdManager";
-import VeganRecipeDetail from "./components/Detail/VeganRecipeDetail";
-
-
-
-import { watchdogCheck, clearAllJsonCache, downloadAllJson, markVersion } 
-from "./utils/cache/cacheManager";
-
 
 const Stack = createStackNavigator();
 
 // ============================================================
-//   ⭐ GOOGLE SIGN-IN CONFIGURADO GLOBALMENTE
+// 🔑 GOOGLE SIGN-IN (GLOBAL)
 // ============================================================
 GoogleSignin.configure({
   webClientId:
     "409946165927-k9u22r4jj9epr83f903d3ojdlnih12ee.apps.googleusercontent.com",
-  offlineAccess: true,
+  offlineAccess: false,
 });
 
 // ============================================================
-//    MAIN APP CONTROLLER
+// FRASES SPLASH
+// ============================================================
+const SPLASH_PHRASES = [
+  "Preparando tu cocina virtual 🍳",
+  "Afilando los cuchillos 🔪",
+  "Calentando los sartenes 🔥",
+  "Revisando recetas favoritas 📖",
+  "Ordenando la despensa 🧺",
+  "Emplatando la experiencia ✨",
+  "Cargando sabores increíbles 😋",
+  "El chef está probando la salsa 🍝",
+];
+
+// ============================================================
+// APP CONTENT
 // ============================================================
 const AppContent = () => {
   const dispatch = useDispatch<AppDispatch>();
   const navigationRef = useNavigationContainerRef();
 
-  const [initializing, setInitializing] = useState(true);
   const [firebaseUser, setFirebaseUser] = useState<any>(null);
-  const [currentRouteName, setCurrentRouteName] = useState("Unknown");
+  const [initializing, setInitializing] = useState(true);
+  const [currentRoute, setCurrentRoute] = useState<string | null>(null);
 
-  const favoritesLimit = useSelector(
-    (state: RootState) => state.favorites.maxFavorites
-  );
-  const subscriptionResolved = useSelector(
-    (state: RootState) => state.user.subscriptionResolved
-  );
+ 
 
-  const frases = [
-    "Quizá estamos batiendo algo 👨‍🍳✨",
-    "Preparando tu cocina virtual 🔧🔥",
-    "Cargando tus recetas favoritas 🍲💙",
-    "Nuestro chef está ajustando el horno 🍞🔥",
-    "Si tarda mucho, quizá el internet se fue a cocinar 🍳",
-    "Calentando los sartenes... con cariño 🥘💖",
-    "Amasando los últimos detalles 🍞👐",
-    "Cortando vegetales imaginarios 🥕🔪",
-    "Removiendo bits y bytes a fuego lento 💻🍲",
-    "Preparando un menú digno de ti 👑✨",
-    "Sazonando la experiencia... casi listo 🌿🔥",
-    "El chef pidió un minuto para probar la salsa 🍝😌",
-    "Precalentando tu aventura culinaria 🔥🍽️",
-    "Agitando la olla mágica... paciencia 🪄🍲",
-    "Verificando que no se queme el código 🔥💻😂",
-  ];
-
-
-// ============================================================
-// WATCHDOG GLOBAL (14 días o primer uso)
-// ============================================================
-useEffect(() => {
-  const runWatchdog = async () => {
-    try {
-      const result = await watchdogCheck();
-
-      if (result.action === "RESET") {
-        console.log("🛑 Watchdog: Se requiere refresco completo.");
-
-        // 1. Borrar JSON viejos
-        await clearAllJsonCache();
-
-        // 2. Guardar nueva versión para romper caché de imágenes
-        await markVersion(result.newVersion);
-
-        // 3. Marcar para que LoadingScreen descargue TODO
-        await AsyncStorage.setItem("CS_FORCE_FULL_REFRESH", "1");
-
-        // 4. FORZAR NAVEGACIÓN A LOADING
-        navigationRef.current?.reset({
-          index: 0,
-          routes: [{ name: "Loading" }],
-        });
-
-        return; // detener flujo normal
-      }
-
-      console.log("⏳ Watchdog: No necesita refresco.");
-    } catch (e) {
-      console.log("❌ Error en watchdog global:", e);
-    }
-  };
-
-  runWatchdog();
-}, []);
-
+  const phrase =
+    SPLASH_PHRASES[Math.floor(Math.random() * SPLASH_PHRASES.length)];
 
   // ============================================================
-  //    GLOBAL AUTH WATCHER
+  // 🔐 AUTH + WATCHDOG
   // ============================================================
   useEffect(() => {
     const auth = getAuth();
 
     const unsub = onAuthStateChanged(auth, async (user) => {
+
+
       setFirebaseUser(user);
 
-      // LOGGED OUT
+      // ---------------- LOGOUT ----------------
       if (!user) {
-        console.log("👤 Sesión cerrada");
-
         dispatch(clearSubRedux());
         dispatch(clearFavorites());
-        dispatch(
-          setUser({
-            uid: null,
-            name: null,
-            email: null,
-            photo: null,
-          })
-        );
-
         dispatch(setPremium(false));
         dispatch(setPlan({ planId: null, favoritesLimit: 10 }));
         dispatch(setMaxFavorites(10));
         dispatch(setSubscriptionResolved());
-
-        await AsyncStorage.removeItem("subscriptionData");
-
         setInitializing(false);
         return;
       }
 
-      // LOGGED IN
-      console.log("✅ Sesión restaurada:", user.email);
-
+      // ---------------- USER ----------------
       dispatch(
         setUser({
           uid: user.uid,
@@ -205,57 +138,46 @@ useEffect(() => {
         })
       );
 
-      // 🔎 Check subscription in Firestore
-      const subData = await checkSubscriptionStatus(user.uid, dispatch);
+      // ---------------- SUBS ----------------
+      const sub = await checkSubscriptionStatus(user.uid, dispatch);
 
-      if (!subData) {
-        dispatch(setPremium(false));
-        dispatch(setPlan({ planId: null, favoritesLimit: 10 }));
-        dispatch(setMaxFavorites(10));
-        await AsyncStorage.removeItem("subscriptionData");
-      } else {
+      if (sub) {
         dispatch(setPremium(true));
-
-        dispatch(
-          setPlan({
-            planId: subData.planId,
-            favoritesLimit: subData.favoritesLimit,
-          })
-        );
-
-        dispatch(setMaxFavorites(subData.favoritesLimit));
-
+        dispatch(setPlan(sub));
+        dispatch(setMaxFavorites(sub.favoritesLimit));
         dispatch(
           setSubscriptionUI({
-            id: subData.planId,
-            name: subData.planName,
-            price: subData.pricePaid,
-            currency: subData.currency,
-            expiresAt: subData.expiresAt,
-          })
-        );
-
-        await AsyncStorage.setItem(
-          "subscriptionData",
-          JSON.stringify({
-            planName: subData.planName,
-            expiresAt: subData.expiresAt,
+            id: sub.planId,
+            name: sub.planName,
+            price: sub.pricePaid,
+            currency: sub.currency,
+            expiresAt: sub.expiresAt,
           })
         );
       }
 
       dispatch(setSubscriptionResolved());
+
+      // ---------------- 🔁 WATCHDOG 14 DÍAS ----------------
+      try {
+        const expired = await isRefreshExpired();
+        if (expired) {
+          await clearAllJsonCache();
+          await downloadAllJson();
+          await markRefreshDone();
+        }
+      } catch (e) {
+        console.log("❌ Watchdog error:", e);
+      }
+
       setInitializing(false);
     });
 
     return () => unsub();
   }, [dispatch]);
 
-
-
-
   // ============================================================
-  // LOADING SCREEN
+  // SPLASH INICIAL (CON FRASES)
   // ============================================================
   if (initializing) {
     return (
@@ -273,49 +195,44 @@ useEffect(() => {
           style={{ width: 140, height: 140, marginBottom: 25 }}
           resizeMode="contain"
         />
+
         <ActivityIndicator size="large" color="#40E0D0" />
-        <Text style={{ color: "white", marginTop: 15, fontSize: 16 }}>
-          Cargando sesión...
+
+        <Text style={{ color: "#aaa", marginTop: 15, fontSize: 16 }}>
+          Cargando sesión…
         </Text>
+
         <Text
           style={{
-            color: "#aaaaaa",
+            color: "#777",
             marginTop: 10,
-            fontSize: 12,
+            fontSize: 13,
             textAlign: "center",
-            lineHeight: 16,
           }}
         >
-          {frases[Math.floor(Math.random() * frases.length)]}
+          {phrase}
         </Text>
       </View>
     );
   }
 
   // ============================================================
-  // NAVIGATION + ADS
+  // NAVIGATION
   // ============================================================
   return (
     <NavigationContainer
       ref={navigationRef}
-      onReady={() =>
-        setCurrentRouteName(
-          navigationRef.getCurrentRoute()?.name ?? "Unknown"
-        )
+      onStateChange={() =>
+        setCurrentRoute(navigationRef.getCurrentRoute()?.name ?? null)
       }
-      onStateChange={() => {
-        const route = navigationRef.getCurrentRoute()?.name;
-        if (route) setCurrentRouteName(route);
-      }}
     >
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {firebaseUser ? (
-          <Stack.Screen name="Home" component={HomeScreen} />
-        ) : (
+        {!firebaseUser ? (
           <Stack.Screen name="Loading" component={LoadingScreen} />
+        ) : (
+          <Stack.Screen name="Home" component={HomeScreen} />
         )}
 
-        {/* DETAILS */}
         <Stack.Screen name="TechniqueDetails" component={TechniqueDetails} />
         <Stack.Screen name="MainDishRecipeDetail" component={MainDishRecipeDetail} />
         <Stack.Screen name="PastryRecipeDetail" component={PastryRecipeDetail} />
@@ -330,23 +247,22 @@ useEffect(() => {
         <Stack.Screen name="Menu" component={Menu} />
       </Stack.Navigator>
 
-      {firebaseUser && currentRouteName !== "Loading" && (
-        <InterstitialAdManager currentRoute={currentRouteName} />
+      {firebaseUser && currentRoute && currentRoute !== "Loading" && (
+        <InterstitialAdManager currentRoute={currentRoute} />
       )}
-
     </NavigationContainer>
   );
 };
 
 // ============================================================
-// ROOT WRAPPER
+// ROOT
 // ============================================================
-export default function App() {
-  return (
-    <Provider store={store}>
-      <SafeAreaProvider>
-        <AppContent />
-      </SafeAreaProvider>
-    </Provider>
-  );
-}
+const App = () => (
+  <Provider store={store}>
+    <SafeAreaProvider>
+      <AppContent />
+    </SafeAreaProvider>
+  </Provider>
+);
+
+export default App;

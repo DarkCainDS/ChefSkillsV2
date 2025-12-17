@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "files": {
+    "Main_Dish.json": { "hash": "1" },
+    "Pastry_Recipe.json": { "hash": "1" },
+    "Panaderia.json": { "hash": "1" },
+    "Soup.json": { "hash": "1" },
+    "Salsas.json": { "hash": "1" },
+    "Salad.json": { "hash": "1" },
+    "Drink.json": { "hash": "1" },
+    "Vegan.json": { "hash": "1" },
+    "Techniques.json": { "hash": "1" }
+  }
+}

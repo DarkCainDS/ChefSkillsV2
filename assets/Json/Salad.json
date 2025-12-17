@@ -1,686 +1,3105 @@
 {
   "recipes": [
-{
-  "id": 1,
-  "uid": "R-SAL_000001",
-  "name": "Ensalada Mediterránea de Garbanzos",
-  "description": "Una ensalada fresca y colorida con garbanzos, vegetales crujientes y un aderezo de limón y miel, inspirada en los sabores del Mediterráneo.",
-  "imageUrl": "https://example.com/ensalada-mediterranea.jpg",
-  "detailedInfo": "Esta ensalada es altamente personalizable y combina garbanzos, pepino, tomates, pimientos y cebolla morada con un toque de hierbas frescas, queso feta y aceitunas Kalamata. El aderezo de limón, miel y aceite de oliva le da un equilibrio perfecto entre frescura y acidez. Ideal para preparar con antelación y disfrutar durante la semana.",
-  "ingredients": [
-    { "name": "Garbanzos", "quantity": "850 g (≈2 latas de 425 g cada una)", "notes": "Enjuagados y escurridos." },
-    { "name": "Tomates cherry o uva", "quantity": "150 g (≈1 pinta)", "notes": "Cortados por la mitad o en cuartos si son grandes." },
-    { "name": "Pepino inglés", "quantity": "1 unidad (≈200 g)", "notes": "Cortar en cubos." },
-    { "name": "Pimiento morrón verde", "quantity": "1 unidad (≈120 g)", "notes": "Cortar en trozos pequeños del tamaño de un bocado." },
-    { "name": "Cebolla roja", "quantity": "1 pequeña (≈50 g)", "notes": "Cortar en rodajas finas." },
-    { "name": "Aceitunas Kalamata", "quantity": "70 g (≈½ taza)", "notes": "Cortadas en rodajas." },
-    { "name": "Queso feta", "quantity": "70 g (≈½ taza)", "notes": "Desmoronado." },
-    { "name": "Albahaca fresca", "quantity": "2 cucharadas (≈5 g)", "notes": "Picada finamente; solo las hojas." },
-    { "name": "Menta fresca", "quantity": "2 cucharadas (≈5 g)", "notes": "Picada finamente; solo las hojas." }
-  ],
-  "dressing": [
-    { "name": "Miel", "quantity": "30 g (≈2 cucharadas)", "notes": "Se puede calentar 10 segundos para facilitar la mezcla." },
-    { "name": "Aceite de oliva extra virgen", "quantity": "45 ml (≈3 cucharadas)", "notes": "Buena calidad." },
-    { "name": "Jugo de limón", "quantity": "30 ml (≈2 cucharadas)", "notes": "Recién exprimido." },
-    { "name": "Vinagre de vino blanco", "quantity": "30 ml (≈2 cucharadas)", "notes": "Opcional: puede usarse vinagre tinto." },
-    { "name": "Sal", "quantity": "1 g (¼ cucharadita)", "notes": "Agregar con moderación por el contenido salado de feta y aceitunas." },
-    { "name": "Pimienta negra", "quantity": "1 g (¼ cucharadita)", "notes": "Al gusto." }
-  ],
-  "steps": [
-    { "step": "En un tazón grande mezcla garbanzos, tomates, pepino, pimiento, cebolla roja, aceitunas, queso feta, albahaca y menta." },
-    { "step": "Para el aderezo, coloca la miel en un recipiente apto para microondas y calienta 10-15 segundos para licuar." },
-    { "step": "Añade aceite de oliva, jugo de limón, vinagre, sal y pimienta. Mezcla bien hasta emulsionar." },
-    { "step": "Vierte el aderezo sobre la ensalada y mezcla suavemente hasta integrar todos los ingredientes." },
-    { "step": "Refrigera hasta el momento de servir." }
-  ],
-  "tips": [
-    "Corta todos los ingredientes en trozos uniformes para una textura equilibrada.",
-    "Puedes sustituir albahaca o menta por perejil fresco si lo deseas.",
-    "Prueba la ensalada antes de ajustar la sal del aderezo.",
-    "Calienta ligeramente la miel para facilitar su mezcla en la vinagreta.",
-    "Se conserva bien en el refrigerador varios días, ideal para preparar con antelación."
-  ],
-  "images": [
-    "https://example.com/ensalada-mediterranea1.webp",
-    "https://example.com/ensalada-mediterranea2.webp"
-  ],
-  "rating": null
-},
-{
-  "id": 2,
-  "uid": "R-SAL_000002",
-  "name": "Ensalada Griega (Horiatiki)",
-  "description": "Ensalada rústica con vegetales frescos, aceitunas Kalamata y queso feta, aderezada con el jugo natural del tomate, aceite de oliva y vinagre.",
-  "imageUrl": "https://example.com/ensalada-griega.jpg",
-  "detailedInfo": "Esta ensalada se caracteriza por su rusticidad y sabor intenso. Los vegetales se cortan en trozos grandes para mantener textura, y el líquido que se forma con el jugo del tomate, el aceite de oliva y el vinagre sirve como vinagreta natural. El queso feta se desmorona al final para conservar su textura.",
-  "ingredients": [
-    { "name": "Tomates", "quantity": "3 unidades (≈450 g)", "notes": "Cortar en trozos rústicos, sin pelar ni quitar semillas." },
-    { "name": "Queso feta", "quantity": "45 g (≈3 cucharadas)", "notes": "Desmoronar a mano sobre la ensalada al final." },
-    { "name": "Aceitunas Kalamata", "quantity": "45 g (≈3 cucharadas)", "notes": "Cortar por la mitad; opcional quitar semilla." },
-    { "name": "Cebolla roja", "quantity": "1 unidad (≈50 g)", "notes": "Cortar lo más fina posible." },
-    { "name": "Orégano fresco", "quantity": "1 cucharadita (≈1 g)", "notes": "Usar solo las hojas, retirar del tallo." },
-    { "name": "Pepino europeo", "quantity": "1 unidad (≈150 g)", "notes": "Cortar en cubos grandes de 2 cm, dejar piel." }
-  ],
-  "dressing": [
-    { "name": "Aceite de oliva extra virgen", "quantity": "30-45 ml", "notes": "Buen chorro; se puede ajustar al gusto." },
-    { "name": "Vinagre de vino tinto", "quantity": "30-45 ml", "notes": "Buen chorro; se puede ajustar al gusto." },
-    { "name": "Sal", "quantity": "1 g (al gusto)", "notes": "Agregar con moderación; el queso feta aporta salinidad." },
-    { "name": "Pimienta negra", "quantity": "1 g (al gusto)", "notes": "Opcional." }
-  ],
-  "steps": [
-    { "step": "Corta los tomates en trozos rústicos." },
-    { "step": "Corta la cebolla roja lo más fina posible." },
-    { "step": "Corta las aceitunas Kalamata por la mitad y retira las hojas de orégano del tallo." },
-    { "step": "Corta el pepino en cubos grandes de aproximadamente 2 cm." },
-    { "step": "Coloca los vegetales y el orégano en un bowl, agrega sal y pimienta al gusto." },
-    { "step": "Añade un buen chorro de aceite de oliva extra virgen y vinagre de vino tinto." },
-    { "step": "Revuelve bien la ensalada con las manos limpias para integrar los sabores." },
-    { "step": "Desmorona el queso feta sobre la ensalada con las manos." },
-    { "step": "Sirve asegurándote de verter el líquido que se forma con el tomate, vinagre y aceite sobre la ensalada." }
-  ],
-  "tips": [
-    "Cortar los ingredientes en trozos grandes conserva textura y rusticidad.",
-    "Usa un cuchillo de sierra para los tomates para no dañar el filo del cuchillo de chef.",
-    "No excederse con la sal; el queso feta aporta bastante salinidad.",
-    "Agregar el queso feta al final mantiene su textura y presentación.",
-    "No descartar el líquido que se acumula en el fondo del bowl; es la vinagreta natural."
-  ],
-  "images": [
-    "https://example.com/ensalada-griega1.webp",
-    "https://example.com/ensalada-griega2.webp"
-  ],
-  "rating": null
-},
-{
-  "id": 3,
-  "uid": "R-SAL_000003",
-  "name": "Ensalada de Pasta con Aderezo Cremoso de Palta",
-  "description": "Ensalada cremosa y fresca que reutiliza fideos del día anterior y se complementa con un aderezo de palta y mayonesa.",
-  "imageUrl": "https://example.com/ensalada-pasta-palta.jpg",
-  "detailedInfo": "Esta ensalada es perfecta para aprovechar la pasta sobrante. Combina fideos cortos con atún, vegetales crujientes y un aderezo de palta que le aporta cremosidad y un color verde vibrante. La inclusión de apio y zanahoria rallada añade textura y el jugo de limón evita que la palta se oxide.",
-  "ingredients": [
-    { "name": "Fideos o pasta corta", "quantity": "200-250 g (sobrantes del día anterior)", "notes": "Cualquier pasta corta funciona; asegúrate de que no estén pegados." },
-    { "name": "Atún en lata", "quantity": "2 latas (aprox. 280 g escurrido)", "notes": "Escurrido antes de mezclar." },
-    { "name": "Cebolla morada", "quantity": "50 g", "notes": "Picada finamente." },
-    { "name": "Pimiento morrón rojo", "quantity": "80 g", "notes": "Cortado en cubitos pequeños." },
-    { "name": "Apio", "quantity": "50 g", "notes": "Picado finamente o en juliana." },
-    { "name": "Zanahoria cruda", "quantity": "50 g", "notes": "Rallada para dar crunch." },
-    { "name": "Verdeo/Cebolleta", "quantity": "10 g", "notes": "Picado fino." },
-    { "name": "Maíz o choclo en grano", "quantity": "70 g", "notes": "Cocido o de lata, escurrido." }
-  ],
-  "dressing": [
-    { "name": "Mayonesa", "quantity": "60-80 g", "notes": "Para darle cuerpo y sabor a la base del aderezo." },
-    { "name": "Palta (aguacate)", "quantity": "1 unidad (≈150 g pulpa)", "notes": "Aporta cremosidad y color verde." },
-    { "name": "Jugo de limón", "quantity": "15 ml (1 cucharada)", "notes": "Evita que la palta se oxide." },
-    { "name": "Sal", "quantity": "1 g (al gusto)", "notes": "" },
-    { "name": "Pimienta negra", "quantity": "1 g (al gusto)", "notes": "" },
-    { "name": "Ajo en polvo", "quantity": "1 g (½ cucharadita)", "notes": "Opcional para aroma." },
-    { "name": "Leche", "quantity": "15 ml", "notes": "Para aligerar y suavizar la mezcla." }
-  ],
-  "steps": [
-    { "step": "En un bowl grande, mezcla los fideos sobrantes con el atún escurrido." },
-    { "step": "Agrega la cebolla morada picada, el pimiento rojo en cubitos, el apio, la zanahoria rallada, el verdeo y el maíz." },
-    { "step": "En una licuadora o con minipimer, mezcla la mayonesa, la palta, el jugo de limón, sal, pimienta, ajo en polvo y un poco de leche hasta obtener un aderezo cremoso." },
-    { "step": "Agrega el aderezo a la ensalada junto con un chorrito de aceite de oliva y mezcla bien." },
-    { "step": "Sirve con un poco de perejil o cilantro fresco por encima." }
-  ],
-  "tips": [
-    "Ideal para reutilizar fideos sobrantes del día anterior; asegúrate de que no estén pegados.",
-    "El aderezo cremoso de palta es el secreto de la ensalada: mantiene el color verde y aporta cremosidad.",
-    "Incluye apio y zanahoria rallada para dar textura crujiente.",
-    "Corta la cebolla y el pimiento rojo bien pequeños para que los sabores se integren uniformemente."
-  ],
-  "images": [
-    "https://example.com/ensalada-pasta-palta1.webp",
-    "https://example.com/ensalada-pasta-palta2.webp"
-  ],
-  "rating": null
-},
-{
-  "id": 4,
-  "uid": "R-SAL_000004",
-  "name": "Ensalada de Pasta con Atún y Aderezo Cremoso",
-  "description": "Ensalada de pasta con atún y vegetales frescos, combinada con un aderezo cremoso a base de mayonesa, mostaza, ketchup y salsa de soja/inglesa.",
-  "imageUrl": "https://example.com/ensalada-pasta-atun.jpg",
-  "detailedInfo": "Esta ensalada destaca por la frescura de sus vegetales, la textura de la pasta perfectamente enfriada y un aderezo cremoso que combina mayonesa, mostaza, ketchup y salsa de soya. Escurrir bien el atún y enjuagar la pasta después de cocerla es clave para evitar exceso de líquido y mantener la textura perfecta.",
-  "ingredients": [
-    { "name": "Pasta (corta, tipo codos)", "quantity": "340 g", "notes": "Cocer con agua y sal; enjuagar con agua fría después de cocer." },
-    { "name": "Atún en lata", "quantity": "2 latas (aprox. 280 g escurrido)", "notes": "Escurrir completamente antes de añadir." },
-    { "name": "Pepino", "quantity": "130 g (≈1 taza picada)", "notes": "Usar con cáscara y picado finamente." },
-    { "name": "Maíz precocido", "quantity": "150 g (≈1 taza)", "notes": "Cocido o de lata, escurrido." },
-    { "name": "Pimiento verde", "quantity": "60 g (½ taza picado)", "notes": "" },
-    { "name": "Pimiento rojo", "quantity": "60 g (½ taza picado)", "notes": "" },
-    { "name": "Cebolla blanca", "quantity": "60 g (½ taza picada)", "notes": "" },
-    { "name": "Sal", "quantity": "10 g (1 cucharadita para pasta + 1 cucharadita para ensalada)", "notes": "" },
-    { "name": "Pimienta negra", "quantity": "1 g (al gusto)", "notes": "" }
-  ],
-  "dressing": [
-    { "name": "Jugo de limón", "quantity": "30 ml (2 cucharadas)", "notes": "" },
-    { "name": "Salsa soya o inglesa", "quantity": "15 ml (1 cucharada)", "notes": "" },
-    { "name": "Mostaza", "quantity": "30 ml (2 cucharadas)", "notes": "" },
-    { "name": "Ketchup", "quantity": "15 g (3 cucharaditas)", "notes": "" },
-    { "name": "Mayonesa", "quantity": "45 g (3 cucharadas)", "notes": "Clave para la cremosidad." },
-    { "name": "Aceite de oliva", "quantity": "15 ml (1 cucharada)", "notes": "Ayuda a mantener frescura." },
-    { "name": "Sal", "quantity": "2 g (½ cucharadita)", "notes": "Opcional, ajustar al gusto." },
-    { "name": "Pimienta negra", "quantity": "1 g (¼ cucharadita)", "notes": "Opcional, ajustar al gusto." }
-  ],
-  "steps": [
-    { "step": "Cocina la pasta en agua hirviendo con sal hasta que esté al dente." },
-    { "step": "Enjuaga la pasta con agua fría para detener la cocción y evitar que se pegue. Escurre bien." },
-    { "step": "Mezcla todos los ingredientes del aderezo en un bowl hasta integrar completamente." },
-    { "step": "En un recipiente grande, agrega la pasta enfriada, el pepino, los pimientos, la cebolla y el maíz." },
-    { "step": "Añade el atún escurrido y mezcla suavemente." },
-    { "step": "Vierte el aderezo sobre la ensalada y mezcla hasta que todos los ingredientes estén bien cubiertos." },
-    { "step": "Tapa el recipiente y refrigera por al menos 2 horas antes de servir." }
-  ],
-  "tips": [
-    "Enjuagar la pasta con agua fría después de cocerla evita que se vuelva pegajosa.",
-    "Escurrir completamente el atún es crucial para evitar que la ensalada quede aguada.",
-    "Agregar una cucharada de aceite de oliva al aderezo ayuda a mantener la frescura durante varios días.",
-    "El aderezo cremoso combina mayonesa, mostaza, ketchup y salsa de soya para un sabor único.",
-    "Dejar la cáscara del pepino aporta beneficios y textura a la ensalada."
-  ],
-  "images": [
-    "https://example.com/ensalada-pasta-atun1.webp",
-    "https://example.com/ensalada-pasta-atun2.webp"
-  ],
-  "rating": null
-},
     {
-      "id": 7,
-      "uid": "R-SAL_000007",
-      "name": "Ensalada de Lentejas",
-      "description": "Ensalada nutritiva con lentejas, zanahoria y pimientos.",
-      "imageUrl": "https://example.com/lentejas.jpg",
-      "detailedInfo": "Perfecta para una comida completa, rica en proteínas y fibra vegetal, fácil de preparar.",
+      "id": 1,
+      "uid": "R-SAL_000001",
+      "name": "Ensalada Mediterránea de Garbanzos",
+      "description": "Ensalada fresca con garbanzos, vegetales crujientes y aderezo cítrico.",
+      "imageUrl": "https://example.com/ensalada-mediterranea.jpg",
+      "detailedInfo": "Combina garbanzos con pepino, tomate, pimiento, aceitunas y queso feta. El aderezo de limón, miel y aceite de oliva equilibra frescura y acidez. Ideal como plato principal ligero o acompañamiento.",
       "ingredients": [
-        { "name": "Lentejas cocidas", "quantity": "200g" },
-        { "name": "Zanahoria rallada", "quantity": "50g" },
-        { "name": "Pimiento rojo", "quantity": "50g" },
-        { "name": "Cebolla", "quantity": "30g" },
-        { "name": "Aceite de oliva", "quantity": "20ml" },
-        { "name": "Vinagre balsámico", "quantity": "10ml" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+        {
+          "name": "Garbanzos cocidos",
+          "quantity": "850 g"
+        },
+        {
+          "name": "Tomates cherry",
+          "quantity": "150 g"
+        },
+        {
+          "name": "Pepino",
+          "quantity": "1 unidad"
+        },
+        {
+          "name": "Pimiento verde",
+          "quantity": "1 unidad"
+        },
+        {
+          "name": "Cebolla morada",
+          "quantity": "1 pequeña"
+        },
+        {
+          "name": "Aceitunas negras",
+          "quantity": "70 g"
+        },
+        {
+          "name": "Queso feta",
+          "quantity": "70 g"
+        },
+        {
+          "name": "Limón",
+          "quantity": "1 unidad"
+        },
+        {
+          "name": "Aceite de oliva",
+          "quantity": "3 cdas"
+        },
+        {
+          "name": "Miel",
+          "quantity": "1 cda"
+        }
       ],
       "steps": [
-        { "step": "Mezcla lentejas cocidas con las verduras cortadas o ralladas." },
-        { "step": "Aliña con aceite de oliva, vinagre, sal y pimienta." },
-        { "step": "Refrigera 10 minutos antes de servir." }
+        {
+          "step": "Mezclar garbanzos, vegetales, aceitunas y queso en un bol."
+        },
+        {
+          "step": "Batir limón, aceite y miel."
+        },
+        {
+          "step": "Agregar el aderezo y mezclar suavemente."
+        },
+        {
+          "step": "Refrigerar antes de servir."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Reposo",
+          "description": "Mejora el sabor tras 20 minutos."
+        },
+        {
+          "title": "Versión vegana",
+          "description": "Omitir el queso."
+        }
+      ],
+      "images": [
+        "https://example.com/ensalada-mediterranea1.webp",
+        "https://example.com/ensalada-mediterranea2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 2,
+      "uid": "R-SAL_000002",
+      "name": "Ensalada Tibia de Papas y Mostaza",
+      "description": "Ensalada reconfortante con papas y aderezo de mostaza.",
+      "imageUrl": "https://example.com/ensalada-papas-mostaza.jpg",
+      "detailedInfo": "Papas cocidas mezcladas con cebolla, perejil y un aderezo tibio de mostaza y vinagre.",
+      "ingredients": [
+        {
+          "name": "Papas",
+          "quantity": "800 g"
+        },
+        {
+          "name": "Cebolla blanca",
+          "quantity": "1 unidad"
+        },
+        {
+          "name": "Mostaza",
+          "quantity": "2 cdas"
+        },
+        {
+          "name": "Vinagre de manzana",
+          "quantity": "2 cdas"
+        },
+        {
+          "name": "Aceite vegetal",
+          "quantity": "3 cdas"
+        },
+        {
+          "name": "Perejil",
+          "quantity": "Al gusto"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Cocer las papas y cortar en cubos."
+        },
+        {
+          "step": "Mezclar mostaza, vinagre y aceite."
+        },
+        {
+          "step": "Unir todo en caliente y ajustar sal."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Temperatura",
+          "description": "Servir tibia."
+        },
+        {
+          "title": "Textura",
+          "description": "No sobrecocer papas."
+        }
+      ],
+      "images": [
+        "https://example.com/papas1.webp",
+        "https://example.com/papas2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 3,
+      "uid": "R-SAL_000003",
+      "name": "Ensalada de Lentejas y Verduras Asadas",
+      "description": "Ensalada nutritiva con legumbres y vegetales.",
+      "imageUrl": "https://example.com/ensalada-lentejas.jpg",
+      "detailedInfo": "Lentejas cocidas combinadas con verduras asadas y aderezo suave.",
+      "ingredients": [
+        {
+          "name": "Lentejas cocidas",
+          "quantity": "400 g"
+        },
+        {
+          "name": "Zanahoria",
+          "quantity": "2 unidades"
+        },
+        {
+          "name": "Zapallo",
+          "quantity": "300 g"
+        },
+        {
+          "name": "Aceite de oliva",
+          "quantity": "3 cdas"
+        },
+        {
+          "name": "Vinagre balsámico",
+          "quantity": "1 cda"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Asar las verduras hasta dorar."
+        },
+        {
+          "step": "Mezclar con lentejas."
+        },
+        {
+          "step": "Agregar aceite y vinagre."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Sabor",
+          "description": "Ideal con comino."
+        },
+        {
+          "title": "Consistencia",
+          "description": "Lentejas firmes."
+        }
       ],
       "images": [
         "https://example.com/lentejas1.webp",
         "https://example.com/lentejas2.webp"
       ],
-      "rating": null
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
     },
     {
-      "id": 8,
-      "uid": "R-SAL_000008",
-      "name": "Ensalada Tabulé",
-      "description": "Ensalada de trigo bulgur, perejil y menta fresca.",
-      "imageUrl": "https://example.com/tabule.jpg",
-      "detailedInfo": "Refrescante y ligera, perfecta como acompañamiento o plato principal en verano.",
+      "id": 4,
+      "uid": "R-SAL_000004",
+      "name": "Ensalada César con Pollo",
+      "description": "Clásica ensalada cremosa con pollo.",
+      "imageUrl": "https://example.com/cesar-pollo.jpg",
+      "detailedInfo": "Lechuga, pollo dorado, crutones y aderezo cremoso.",
       "ingredients": [
-        { "name": "Trigo bulgur", "quantity": "100g" },
-        { "name": "Perejil fresco", "quantity": "30g" },
-        { "name": "Menta fresca", "quantity": "10g" },
-        { "name": "Tomate", "quantity": "100g" },
-        { "name": "Pepino", "quantity": "50g" },
-        { "name": "Aceite de oliva", "quantity": "20ml" },
-        { "name": "Jugo de limón", "quantity": "10ml" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+        {
+          "name": "Lechuga romana",
+          "quantity": "1 unidad"
+        },
+        {
+          "name": "Pechuga de pollo",
+          "quantity": "300 g"
+        },
+        {
+          "name": "Crutones",
+          "quantity": "1 taza"
+        },
+        {
+          "name": "Queso parmesano",
+          "quantity": "50 g"
+        },
+        {
+          "name": "Aderezo César",
+          "quantity": "Al gusto"
+        }
       ],
       "steps": [
-        { "step": "Hidrata el bulgur según instrucciones del paquete." },
-        { "step": "Corta verduras y hierbas y mézclalas con el bulgur." },
-        { "step": "Aliña con aceite de oliva, limón, sal y pimienta." }
+        {
+          "step": "Dorar el pollo y cortar."
+        },
+        {
+          "step": "Mezclar lechuga, pollo y crutones."
+        },
+        {
+          "step": "Agregar aderezo y queso."
+        }
       ],
-      "images": [
-        "https://example.com/tabule1.webp",
-        "https://example.com/tabule2.webp"
-      ],
-      "rating": null
-    },
-    {
-      "id": 9,
-      "uid": "R-SAL_000009",
-      "name": "Ensalada de Arroz Integral",
-      "description": "Ensalada completa con arroz integral, maíz y pimientos.",
-      "imageUrl": "https://example.com/arroz-integral.jpg",
-      "detailedInfo": "Rápida de preparar, ideal para llevar al trabajo o picnic.",
-      "ingredients": [
-        { "name": "Arroz integral cocido", "quantity": "150g" },
-        { "name": "Maíz dulce", "quantity": "50g" },
-        { "name": "Pimiento rojo", "quantity": "50g" },
-        { "name": "Aceitunas verdes", "quantity": "20g" },
-        { "name": "Aceite de oliva", "quantity": "20ml" },
-        { "name": "Vinagre", "quantity": "10ml" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
-      ],
-      "steps": [
-        { "step": "Mezcla el arroz cocido con todas las verduras y aceitunas." },
-        { "step": "Aliña con aceite, vinagre, sal y pimienta." }
-      ],
-      "images": [
-        "https://example.com/arroz1.webp",
-        "https://example.com/arroz2.webp"
-      ],
-      "rating": null
-    },
-    {
-      "id": 10,
-      "uid": "R-SAL_000010",
-      "name": "Ensalada de Espinacas y Fresas",
-      "description": "Ensalada fresca con espinacas, fresas y nueces.",
-      "imageUrl": "https://example.com/espinacas-fresas.jpg",
-      "detailedInfo": "Combinación dulce y salada, ideal para un almuerzo ligero o acompañamiento elegante.",
-      "ingredients": [
-        { "name": "Espinacas frescas", "quantity": "100g" },
-        { "name": "Fresas", "quantity": "100g" },
-        { "name": "Nueces", "quantity": "30g" },
-        { "name": "Queso de cabra", "quantity": "30g" },
-        { "name": "Vinagreta balsámica", "quantity": "20ml" }
-      ],
-      "steps": [
-        { "step": "Coloca las espinacas en un bol." },
-        { "step": "Añade fresas cortadas, nueces y queso de cabra." },
-        { "step": "Aliña con vinagreta y sirve inmediatamente." }
-      ],
-      "images": [
-        "https://example.com/espinacas-fresas1.webp",
-        "https://example.com/espinacas-fresas2.webp"
-      ],
-      "rating": null
-    },
-    {
-      "id": 11,
-      "uid": "R-SAL_000011",
-      "name": "Ensalada César",
-      "description": "Clásica ensalada con lechuga, croutons y aderezo César.",
-      "imageUrl": "https://example.com/cesar.jpg",
-      "detailedInfo": "Perfecta como acompañamiento o plato principal con pollo a la parrilla.",
-      "ingredients": [
-        { "name": "Lechuga romana", "quantity": "100g" },
-        { "name": "Croutons", "quantity": "30g" },
-        { "name": "Queso parmesano rallado", "quantity": "20g" },
-        { "name": "Aderezo César", "quantity": "30ml" },
-        { "name": "Pollo a la parrilla (opcional)", "quantity": "100g" }
-      ],
-      "steps": [
-        { "step": "Lava y corta la lechuga." },
-        { "step": "Añade croutons, queso y pollo si deseas." },
-        { "step": "Vierte el aderezo y mezcla suavemente." }
+      "tips": [
+        {
+          "title": "Crujiente",
+          "description": "Agregar crutones al final."
+        },
+        {
+          "title": "Pollo",
+          "description": "No sobrecocer."
+        }
       ],
       "images": [
         "https://example.com/cesar1.webp",
         "https://example.com/cesar2.webp"
       ],
-      "rating": null
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
     },
     {
-      "id": 12,
-      "uid": "R-SAL_000012",
-      "name": "Ensalada Caprese",
-      "description": "Ensalada italiana con tomate, mozzarella y albahaca.",
-      "imageUrl": "https://example.com/caprese.jpg",
-      "detailedInfo": "Refrescante y sencilla, ideal como entrada o acompañamiento de pasta.",
-      "ingredients": [
-        { "name": "Tomates maduros", "quantity": "150g" },
-        { "name": "Mozzarella fresca", "quantity": "100g" },
-        { "name": "Hojas de albahaca", "quantity": "10g" },
-        { "name": "Aceite de oliva virgen", "quantity": "20ml" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
-      ],
-      "steps": [
-        { "step": "Corta tomates y mozzarella en rodajas." },
-        { "step": "Intercala rodajas de tomate y mozzarella en un plato." },
-        { "step": "Decora con albahaca, sal, pimienta y aceite de oliva." }
-      ],
-      "images": [
-        "https://example.com/caprese1.webp",
-        "https://example.com/caprese2.webp"
-      ],
-      "rating": null
-    },
-    {
-      "id": 13,
-      "uid": "R-SAL_000013",
-      "name": "Ensalada de Quinoa",
-      "description": "Ensalada nutritiva con quinoa, aguacate y vegetales frescos.",
+      "id": 5,
+      "uid": "R-SAL_000005",
+      "name": "Ensalada de Quinoa y Verduras",
+      "description": "Ensalada ligera y completa.",
       "imageUrl": "https://example.com/quinoa.jpg",
-      "detailedInfo": "Rica en proteínas y fibra, perfecta para comidas saludables y completas.",
+      "detailedInfo": "Quinoa cocida con verduras frescas y aderezo cítrico.",
       "ingredients": [
-        { "name": "Quinoa cocida", "quantity": "150g" },
-        { "name": "Aguacate", "quantity": "1 mediano" },
-        { "name": "Tomate cherry", "quantity": "100g" },
-        { "name": "Pepino", "quantity": "50g" },
-        { "name": "Aceite de oliva", "quantity": "20ml" },
-        { "name": "Jugo de limón", "quantity": "10ml" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+        {
+          "name": "Quinoa cocida",
+          "quantity": "250 g"
+        },
+        {
+          "name": "Tomate",
+          "quantity": "2 unidades"
+        },
+        {
+          "name": "Pepino",
+          "quantity": "1 unidad"
+        },
+        {
+          "name": "Limón",
+          "quantity": "1 unidad"
+        },
+        {
+          "name": "Aceite de oliva",
+          "quantity": "3 cdas"
+        }
       ],
       "steps": [
-        { "step": "Corta los vegetales y el aguacate en cubos." },
-        { "step": "Mezcla con la quinoa cocida." },
-        { "step": "Aliña con aceite de oliva, limón, sal y pimienta." }
+        {
+          "step": "Enfriar la quinoa."
+        },
+        {
+          "step": "Mezclar con vegetales."
+        },
+        {
+          "step": "Agregar limón y aceite."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Quinoa suelta",
+          "description": "Enfriar bien."
+        },
+        {
+          "title": "Frescura",
+          "description": "Servir fría."
+        }
       ],
       "images": [
         "https://example.com/quinoa1.webp",
         "https://example.com/quinoa2.webp"
       ],
-      "rating": null
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 6,
+      "uid": "R-SAL_000006",
+      "name": "Ensalada Rusa Clásica",
+      "description": "Ensalada cremosa tradicional.",
+      "imageUrl": "https://example.com/ensalada-rusa.jpg",
+      "detailedInfo": "Papas, zanahoria y arvejas unidas con mayonesa.",
+      "ingredients": [
+        {
+          "name": "Papas",
+          "quantity": "600 g"
+        },
+        {
+          "name": "Zanahoria",
+          "quantity": "200 g"
+        },
+        {
+          "name": "Arvejas",
+          "quantity": "150 g"
+        },
+        {
+          "name": "Mayonesa",
+          "quantity": "200 g"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Cocer verduras y enfriar."
+        },
+        {
+          "step": "Cortar en cubos."
+        },
+        {
+          "step": "Mezclar con mayonesa."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Fría",
+          "description": "Reposar antes de servir."
+        },
+        {
+          "title": "Textura",
+          "description": "Cortes parejos."
+        }
+      ],
+      "images": [
+        "https://example.com/rusa1.webp",
+        "https://example.com/rusa2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 7,
+      "uid": "R-SAL_000007",
+      "name": "Ensalada de Porotos Negros",
+      "description": "Ensalada fresca con legumbres.",
+      "imageUrl": "https://example.com/porotos-negros.jpg",
+      "detailedInfo": "Porotos negros con cebolla, pimiento y limón.",
+      "ingredients": [
+        {
+          "name": "Porotos negros cocidos",
+          "quantity": "400 g"
+        },
+        {
+          "name": "Pimiento rojo",
+          "quantity": "1 unidad"
+        },
+        {
+          "name": "Cebolla morada",
+          "quantity": "1 pequeña"
+        },
+        {
+          "name": "Limón",
+          "quantity": "1 unidad"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Mezclar todos los ingredientes."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Frescura",
+          "description": "Ideal verano."
+        },
+        {
+          "title": "Proteína",
+          "description": "Muy saciante."
+        }
+      ],
+      "images": [
+        "https://example.com/negros1.webp",
+        "https://example.com/negros2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 8,
+      "uid": "R-SAL_000008",
+      "name": "Ensalada de Papas y Atún",
+      "description": "Ensalada completa y saciante.",
+      "imageUrl": "https://example.com/papas-atun.jpg",
+      "detailedInfo": "Papas cocidas con atún y cebolla.",
+      "ingredients": [
+        {
+          "name": "Papas",
+          "quantity": "600 g"
+        },
+        {
+          "name": "Atún en agua",
+          "quantity": "2 latas"
+        },
+        {
+          "name": "Cebolla",
+          "quantity": "1 unidad"
+        },
+        {
+          "name": "Aceite de oliva",
+          "quantity": "3 cdas"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Cocer papas y cortar."
+        },
+        {
+          "step": "Agregar atún y cebolla."
+        },
+        {
+          "step": "Aliñar y mezclar."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Atún",
+          "description": "Bien escurrido."
+        },
+        {
+          "title": "Textura",
+          "description": "No aplastar papas."
+        }
+      ],
+      "images": [
+        "https://example.com/atun1.webp",
+        "https://example.com/atun2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 9,
+      "uid": "R-SAL_000009",
+      "name": "Ensalada de Cous Cous",
+      "description": "Ensalada liviana y aromática.",
+      "imageUrl": "https://example.com/couscous.jpg",
+      "detailedInfo": "Cous cous hidratado con vegetales y limón.",
+      "ingredients": [
+        {
+          "name": "Cous cous",
+          "quantity": "200 g"
+        },
+        {
+          "name": "Agua caliente",
+          "quantity": "200 ml"
+        },
+        {
+          "name": "Tomate",
+          "quantity": "2 unidades"
+        },
+        {
+          "name": "Limón",
+          "quantity": "1 unidad"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Hidratar el cous cous."
+        },
+        {
+          "step": "Mezclar con vegetales."
+        },
+        {
+          "step": "Aliñar y servir."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Textura",
+          "description": "Soltar con tenedor."
+        },
+        {
+          "title": "Fresca",
+          "description": "Servir fría."
+        }
+      ],
+      "images": [
+        "https://example.com/cous1.webp",
+        "https://example.com/cous2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 10,
+      "uid": "R-SAL_000010",
+      "name": "Ensalada de Repollo y Zanahoria",
+      "description": "Ensalada crocante y fresca.",
+      "imageUrl": "https://example.com/coleslaw.jpg",
+      "detailedInfo": "Repollo rallado con zanahoria y aderezo suave.",
+      "ingredients": [
+        {
+          "name": "Repollo",
+          "quantity": "400 g"
+        },
+        {
+          "name": "Zanahoria",
+          "quantity": "2 unidades"
+        },
+        {
+          "name": "Mayonesa",
+          "quantity": "120 g"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Rallar vegetales."
+        },
+        {
+          "step": "Mezclar con mayonesa."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Crujiente",
+          "description": "Reposar poco."
+        },
+        {
+          "title": "Balance",
+          "description": "No exceder mayonesa."
+        }
+      ],
+      "images": [
+        "https://example.com/repollo1.webp",
+        "https://example.com/repollo2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 11,
+      "uid": "R-SAL_000011",
+      "name": "Ensalada de Arroz Integral",
+      "description": "Ensalada energética y liviana.",
+      "imageUrl": "https://example.com/arroz-integral.jpg",
+      "detailedInfo": "Arroz integral con vegetales frescos.",
+      "ingredients": [
+        {
+          "name": "Arroz integral cocido",
+          "quantity": "300 g"
+        },
+        {
+          "name": "Pimiento",
+          "quantity": "1 unidad"
+        },
+        {
+          "name": "Pepino",
+          "quantity": "1 unidad"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Mezclar arroz con vegetales."
+        },
+        {
+          "step": "Aliñar al gusto."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Grano suelto",
+          "description": "Enfriar arroz."
+        },
+        {
+          "title": "Ligera",
+          "description": "Ideal verano."
+        }
+      ],
+      "images": [
+        "https://example.com/arroz1.webp",
+        "https://example.com/arroz2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 12,
+      "uid": "R-SAL_000012",
+      "name": "Ensalada de Huevo y Papas",
+      "description": "Ensalada simple y reconfortante.",
+      "imageUrl": "https://example.com/huevo-papa.jpg",
+      "detailedInfo": "Huevos duros con papas y aderezo suave.",
+      "ingredients": [
+        {
+          "name": "Papas",
+          "quantity": "600 g"
+        },
+        {
+          "name": "Huevos",
+          "quantity": "4 unidades"
+        },
+        {
+          "name": "Mayonesa",
+          "quantity": "150 g"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Cocer papas y huevos."
+        },
+        {
+          "step": "Cortar y mezclar con mayonesa."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Huevos",
+          "description": "Yema firme."
+        },
+        {
+          "title": "Reposo",
+          "description": "Mejor fría."
+        }
+      ],
+      "images": [
+        "https://example.com/huevo1.webp",
+        "https://example.com/huevo2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 13,
+      "uid": "R-SAL_000013",
+      "name": "Ensalada de Tomate y Palta",
+      "description": "Ensalada fresca y cremosa.",
+      "imageUrl": "https://example.com/tomate-palta.jpg",
+      "detailedInfo": "Tomates jugosos con palta madura.",
+      "ingredients": [
+        {
+          "name": "Tomates",
+          "quantity": "3 unidades"
+        },
+        {
+          "name": "Palta",
+          "quantity": "2 unidades"
+        },
+        {
+          "name": "Limón",
+          "quantity": "1 unidad"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Cortar ingredientes."
+        },
+        {
+          "step": "Aliñar y servir."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Palta",
+          "description": "Madura."
+        },
+        {
+          "title": "Último momento",
+          "description": "No oxidar."
+        }
+      ],
+      "images": [
+        "https://example.com/palta1.webp",
+        "https://example.com/palta2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
     },
     {
       "id": 14,
       "uid": "R-SAL_000014",
-      "name": "Ensalada de Couscous",
-      "description": "Ensalada ligera con couscous, verduras y hierbas frescas.",
-      "imageUrl": "https://example.com/couscous.jpg",
-      "detailedInfo": "Ideal como acompañamiento frío o plato principal vegetariano.",
+      "name": "Ensalada de Betarraga",
+      "description": "Ensalada dulce y terrosa.",
+      "imageUrl": "https://example.com/betarraga.jpg",
+      "detailedInfo": "Betarragas cocidas con aceite y limón.",
       "ingredients": [
-        { "name": "Couscous cocido", "quantity": "150g" },
-        { "name": "Pimiento rojo", "quantity": "50g" },
-        { "name": "Pepino", "quantity": "50g" },
-        { "name": "Cebolla morada", "quantity": "30g" },
-        { "name": "Perejil fresco", "quantity": "10g" },
-        { "name": "Aceite de oliva", "quantity": "20ml" },
-        { "name": "Jugo de limón", "quantity": "10ml" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+        {
+          "name": "Betarragas cocidas",
+          "quantity": "500 g"
+        },
+        {
+          "name": "Limón",
+          "quantity": "1 unidad"
+        },
+        {
+          "name": "Aceite",
+          "quantity": "3 cdas"
+        }
       ],
       "steps": [
-        { "step": "Mezcla el couscous con las verduras cortadas en cubos pequeños." },
-        { "step": "Añade perejil picado y aliña con aceite y limón." }
+        {
+          "step": "Cortar betarragas."
+        },
+        {
+          "step": "Aliñar y servir."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Color",
+          "description": "Servir fría."
+        },
+        {
+          "title": "Sabor",
+          "description": "Combina con nuez."
+        }
       ],
       "images": [
-        "https://example.com/couscous1.webp",
-        "https://example.com/couscous2.webp"
+        "https://example.com/beta1.webp",
+        "https://example.com/beta2.webp"
       ],
-      "rating": null
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
     },
     {
       "id": 15,
       "uid": "R-SAL_000015",
-      "name": "Ensalada Griega",
-      "description": "Ensalada mediterránea con queso feta, aceitunas y pepino.",
-      "imageUrl": "https://example.com/greca.jpg",
-      "detailedInfo": "Sabor fresco y equilibrado, excelente como acompañamiento o plato principal ligero.",
+      "name": "Ensalada de Fideos Fríos",
+      "description": "Ensalada fresca y saciante.",
+      "imageUrl": "https://example.com/fideos.jpg",
+      "detailedInfo": "Fideos cocidos con vegetales y aliño suave.",
       "ingredients": [
-        { "name": "Pepino", "quantity": "100g" },
-        { "name": "Tomate", "quantity": "100g" },
-        { "name": "Cebolla morada", "quantity": "30g" },
-        { "name": "Queso feta", "quantity": "50g" },
-        { "name": "Aceitunas negras", "quantity": "20g" },
-        { "name": "Aceite de oliva", "quantity": "20ml" },
-        { "name": "Orégano seco", "quantity": "Al gusto" }
+        {
+          "name": "Fideos",
+          "quantity": "250 g"
+        },
+        {
+          "name": "Zanahoria",
+          "quantity": "1 unidad"
+        },
+        {
+          "name": "Pepino",
+          "quantity": "1 unidad"
+        }
       ],
       "steps": [
-        { "step": "Corta todos los vegetales en cubos y mezcla en un bol." },
-        { "step": "Añade queso feta desmenuzado y aceitunas." },
-        { "step": "Aliña con aceite de oliva y orégano." }
+        {
+          "step": "Cocer fideos y enfriar."
+        },
+        {
+          "step": "Mezclar con vegetales."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Fría",
+          "description": "Servir."
+        },
+        {
+          "title": "Textura",
+          "description": "No sobrecocer."
+        }
       ],
       "images": [
-        "https://example.com/greca1.webp",
-        "https://example.com/greca2.webp"
+        "https://example.com/fideos1.webp",
+        "https://example.com/fideos2.webp"
       ],
-      "rating": null
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
     },
     {
       "id": 16,
       "uid": "R-SAL_000016",
-      "name": "Ensalada de Remolacha y Queso de Cabra",
-      "description": "Ensalada colorida con remolacha asada y queso de cabra.",
-      "imageUrl": "https://example.com/remolacha.jpg",
-      "detailedInfo": "Excelente combinación de sabores dulces y salados, ideal para un plato gourmet.",
+      "name": "Ensalada de Garbanzos y Papas",
+      "description": "Ensalada rústica y completa.",
+      "imageUrl": "https://example.com/garbanzos-papas.jpg",
+      "detailedInfo": "Garbanzos con papas cocidas y aliño simple.",
       "ingredients": [
-        { "name": "Remolacha asada", "quantity": "150g" },
-        { "name": "Queso de cabra", "quantity": "50g" },
-        { "name": "Nueces", "quantity": "30g" },
-        { "name": "Lechuga mixta", "quantity": "100g" },
-        { "name": "Aceite de oliva", "quantity": "20ml" },
-        { "name": "Vinagre balsámico", "quantity": "10ml" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+        {
+          "name": "Garbanzos cocidos",
+          "quantity": "400 g"
+        },
+        {
+          "name": "Papas",
+          "quantity": "500 g"
+        },
+        {
+          "name": "Aceite de oliva",
+          "quantity": "3 cdas"
+        },
+        {
+          "name": "Limón",
+          "quantity": "1 unidad"
+        }
       ],
       "steps": [
-        { "step": "Corta la remolacha en cubos y mézclala con la lechuga." },
-        { "step": "Añade queso de cabra desmenuzado y nueces." },
-        { "step": "Aliña con aceite de oliva y vinagre balsámico." }
+        {
+          "step": "Cocer papas y cortar."
+        },
+        {
+          "step": "Mezclar con garbanzos."
+        },
+        {
+          "step": "Aliñar y servir."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Rústica",
+          "description": "Cortes grandes."
+        },
+        {
+          "title": "Saciante",
+          "description": "Plato único."
+        }
       ],
       "images": [
-        "https://example.com/remolacha1.webp",
-        "https://example.com/remolacha2.webp"
+        "https://example.com/garba1.webp",
+        "https://example.com/garba2.webp"
       ],
-      "rating": null
-    },
-     {
-      "id": 17,
-      "uid": "R-SAL_000017",
-      "name": "Ensalada de Espinaca y Fresas",
-      "description": "Ensalada fresca con espinacas, fresas y nueces.",
-      "imageUrl": "https://example.com/espinaca-fresas.jpg",
-      "detailedInfo": "Ideal para un almuerzo ligero o acompañamiento de carnes blancas.",
-      "ingredients": [
-        { "name": "Espinaca fresca", "quantity": "100g" },
-        { "name": "Fresas", "quantity": "100g" },
-        { "name": "Nueces", "quantity": "30g" },
-        { "name": "Queso feta", "quantity": "30g" },
-        { "name": "Vinagre balsámico", "quantity": "10ml" },
-        { "name": "Aceite de oliva", "quantity": "20ml" }
-      ],
-      "steps": [
-        { "step": "Lava las espinacas y fresas, corta las fresas en rodajas." },
-        { "step": "Mezcla todos los ingredientes en un bol." },
-        { "step": "Aliña con aceite de oliva y vinagre balsámico." }
-      ],
-      "images": [
-        "https://example.com/espinaca-fresas1.webp",
-        "https://example.com/espinaca-fresas2.webp"
-      ],
-      "rating": null
-    },
-    {
-      "id": 18,
-      "uid": "R-SAL_000018",
-      "name": "Ensalada de Garbanzos y Atún",
-      "description": "Ensalada proteica con garbanzos, atún y vegetales frescos.",
-      "imageUrl": "https://example.com/garbanzos-atun.jpg",
-      "detailedInfo": "Rápida y nutritiva, ideal para comidas saludables y completas.",
-      "ingredients": [
-        { "name": "Garbanzos cocidos", "quantity": "150g" },
-        { "name": "Atún en aceite", "quantity": "100g" },
-        { "name": "Tomate", "quantity": "100g" },
-        { "name": "Cebolla morada", "quantity": "30g" },
-        { "name": "Aceite de oliva", "quantity": "20ml" },
-        { "name": "Jugo de limón", "quantity": "10ml" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
-      ],
-      "steps": [
-        { "step": "Mezcla garbanzos, atún y vegetales en un bol." },
-        { "step": "Aliña con aceite de oliva, limón, sal y pimienta." }
-      ],
-      "images": [
-        "https://example.com/garbanzos1.webp",
-        "https://example.com/garbanzos2.webp"
-      ],
-      "rating": null
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
     },
     {
-      "id": 19,
-      "uid": "R-SAL_000019",
-      "name": "Ensalada de Pollo y Aguacate",
-      "description": "Ensalada cremosa con pollo, aguacate y lechuga.",
-      "imageUrl": "https://example.com/pollo-aguacate.jpg",
-      "detailedInfo": "Ideal para un almuerzo completo y saludable.",
+      "id": 33,
+      "uid": "R-SAL_000033",
+      "name": "Ensalada Tibia de Papas y Champiñones",
+      "description": "Ensalada tibia, aromática y reconfortante.",
+      "imageUrl": "https://example.com/papas-champ.jpg",
+      "detailedInfo": "Papas doradas combinadas con champiñones salteados y aliño simple.",
       "ingredients": [
-        { "name": "Lechuga", "quantity": "100g" },
-        { "name": "Pollo cocido", "quantity": "150g" },
-        { "name": "Aguacate", "quantity": "1 mediano" },
-        { "name": "Tomate cherry", "quantity": "100g" },
-        { "name": "Mayonesa ligera", "quantity": "20ml" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+        {
+          "name": "Papas",
+          "quantity": "600 g"
+        },
+        {
+          "name": "Champiñones",
+          "quantity": "300 g"
+        },
+        {
+          "name": "Aceite de oliva",
+          "quantity": "3 cdas"
+        }
       ],
       "steps": [
-        { "step": "Corta pollo, aguacate y tomates en cubos." },
-        { "step": "Mezcla con lechuga y adereza con mayonesa, sal y pimienta." }
+        {
+          "step": "Cocer y dorar las papas."
+        },
+        {
+          "step": "Saltear los champiñones."
+        },
+        {
+          "step": "Mezclar y servir tibia."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Dorado",
+          "description": "No mover demasiado."
+        },
+        {
+          "title": "Sabor",
+          "description": "Ideal con ajo."
+        }
       ],
       "images": [
-        "https://example.com/pollo-aguacate1.webp",
-        "https://example.com/pollo-aguacate2.webp"
+        "https://example.com/papachamp1.webp",
+        "https://example.com/papachamp2.webp"
       ],
-      "rating": null
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
     },
     {
-      "id": 20,
-      "uid": "R-SAL_000020",
-      "name": "Ensalada de Manzana y Apio",
-      "description": "Ensalada crujiente y fresca con manzana, apio y nueces.",
-      "imageUrl": "https://example.com/manzana-apio.jpg",
-      "detailedInfo": "Perfecta como entrante o acompañamiento ligero.",
+      "id": 34,
+      "uid": "R-SAL_000034",
+      "name": "Ensalada de Garbanzos y Espinaca",
+      "description": "Ensalada fresca y nutritiva.",
+      "imageUrl": "https://example.com/garbanzo-espinaca.jpg",
+      "detailedInfo": "Garbanzos cocidos con espinaca fresca y limón.",
       "ingredients": [
-        { "name": "Manzana", "quantity": "1 mediana" },
-        { "name": "Apio", "quantity": "50g" },
-        { "name": "Nueces", "quantity": "30g" },
-        { "name": "Yogur natural", "quantity": "30ml" },
-        { "name": "Jugo de limón", "quantity": "10ml" }
+        {
+          "name": "Garbanzos cocidos",
+          "quantity": "400 g"
+        },
+        {
+          "name": "Espinaca fresca",
+          "quantity": "120 g"
+        },
+        {
+          "name": "Limón",
+          "quantity": "1 unidad"
+        }
       ],
       "steps": [
-        { "step": "Corta la manzana y el apio en cubos pequeños." },
-        { "step": "Mezcla con nueces y aliña con yogur y limón." }
+        {
+          "step": "Mezclar garbanzos y espinaca."
+        },
+        {
+          "step": "Aliñar y servir."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Espinaca",
+          "description": "Agregar al final."
+        },
+        {
+          "title": "Ligera",
+          "description": "Ideal verano."
+        }
       ],
       "images": [
-        "https://example.com/manzana-apio1.webp",
-        "https://example.com/manzana-apio2.webp"
+        "https://example.com/garbesp1.webp",
+        "https://example.com/garbesp2.webp"
       ],
-      "rating": null
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
     },
     {
-      "id": 21,
-      "uid": "R-SAL_000021",
-      "name": "Ensalada Mediterránea",
-      "description": "Ensalada fresca con pepino, tomate, aceitunas y queso feta.",
-      "imageUrl": "https://example.com/mediterranea.jpg",
-      "detailedInfo": "Sabor fresco y aromático, ideal para acompañar carnes o pastas.",
+      "id": 35,
+      "uid": "R-SAL_000035",
+      "name": "Ensalada de Arroz y Lentejas",
+      "description": "Ensalada completa y balanceada.",
+      "imageUrl": "https://example.com/arroz-lentejas.jpg",
+      "detailedInfo": "Arroz cocido combinado con lentejas y vegetales suaves.",
       "ingredients": [
-        { "name": "Pepino", "quantity": "100g" },
-        { "name": "Tomate", "quantity": "100g" },
-        { "name": "Cebolla roja", "quantity": "30g" },
-        { "name": "Aceitunas negras", "quantity": "20g" },
-        { "name": "Queso feta", "quantity": "50g" },
-        { "name": "Aceite de oliva", "quantity": "20ml" },
-        { "name": "Orégano", "quantity": "Al gusto" }
+        {
+          "name": "Arroz cocido",
+          "quantity": "300 g"
+        },
+        {
+          "name": "Lentejas cocidas",
+          "quantity": "300 g"
+        },
+        {
+          "name": "Aceite vegetal",
+          "quantity": "3 cdas"
+        }
       ],
       "steps": [
-        { "step": "Corta vegetales y mezcla en un bol." },
-        { "step": "Añade queso feta y aceitunas." },
-        { "step": "Aliña con aceite y orégano." }
+        {
+          "step": "Mezclar arroz y lentejas."
+        },
+        {
+          "step": "Aliñar y servir."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Sustanciosa",
+          "description": "Plato único."
+        },
+        {
+          "title": "Textura",
+          "description": "Granos firmes."
+        }
       ],
       "images": [
-        "https://example.com/mediterranea1.webp",
-        "https://example.com/mediterranea2.webp"
+        "https://example.com/arrolen1.webp",
+        "https://example.com/arrolen2.webp"
       ],
-      "rating": null
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
     },
     {
-      "id": 22,
-      "uid": "R-SAL_000022",
-      "name": "Ensalada de Remolacha y Naranja",
-      "description": "Ensalada refrescante con remolacha cocida y naranja.",
-      "imageUrl": "https://example.com/remolacha-naranja.jpg",
-      "detailedInfo": "Combinación dulce y ácida, ideal como entrante ligero.",
+      "id": 36,
+      "uid": "R-SAL_000036",
+      "name": "Ensalada de Papas, Arvejas y Zanahoria",
+      "description": "Ensalada clásica y colorida.",
+      "imageUrl": "https://example.com/papas-arvejas.jpg",
+      "detailedInfo": "Papas cocidas con arvejas y zanahoria.",
       "ingredients": [
-        { "name": "Remolacha cocida", "quantity": "150g" },
-        { "name": "Naranja", "quantity": "1 mediana" },
-        { "name": "Lechuga mixta", "quantity": "100g" },
-        { "name": "Aceite de oliva", "quantity": "15ml" },
-        { "name": "Vinagre balsámico", "quantity": "10ml" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+        {
+          "name": "Papas",
+          "quantity": "600 g"
+        },
+        {
+          "name": "Arvejas",
+          "quantity": "200 g"
+        },
+        {
+          "name": "Zanahoria",
+          "quantity": "2 unidades"
+        }
       ],
       "steps": [
-        { "step": "Corta la remolacha y la naranja en cubos o rodajas." },
-        { "step": "Mezcla con la lechuga y aliña con aceite y vinagre." }
+        {
+          "step": "Cocer verduras y enfriar."
+        },
+        {
+          "step": "Mezclar y aliñar."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Color",
+          "description": "Corte parejo."
+        },
+        {
+          "title": "Textura",
+          "description": "Verduras firmes."
+        }
       ],
       "images": [
-        "https://example.com/remolacha-naranja1.webp",
-        "https://example.com/remolacha-naranja2.webp"
+        "https://example.com/paparv1.webp",
+        "https://example.com/paparv2.webp"
       ],
-      "rating": null
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
     },
     {
-      "id": 23,
-      "uid": "R-SAL_000023",
-      "name": "Ensalada de Pasta Fría",
-      "description": "Ensalada colorida con pasta, vegetales y aderezo ligero.",
-      "imageUrl": "https://example.com/pasta-fria.jpg",
-      "detailedInfo": "Perfecta para picnic o almuerzos frescos.",
+      "id": 37,
+      "uid": "R-SAL_000037",
+      "name": "Ensalada de Porotos Rojos y Cebolla",
+      "description": "Ensalada simple y proteica.",
+      "imageUrl": "https://example.com/porotos-rojos.jpg",
+      "detailedInfo": "Porotos rojos cocidos con cebolla y limón.",
       "ingredients": [
-        { "name": "Pasta cocida", "quantity": "150g" },
-        { "name": "Tomate cherry", "quantity": "100g" },
-        { "name": "Pepino", "quantity": "50g" },
-        { "name": "Aceitunas", "quantity": "20g" },
-        { "name": "Queso rallado", "quantity": "30g" },
-        { "name": "Aceite de oliva", "quantity": "20ml" },
-        { "name": "Jugo de limón", "quantity": "10ml" }
+        {
+          "name": "Porotos rojos cocidos",
+          "quantity": "400 g"
+        },
+        {
+          "name": "Cebolla morada",
+          "quantity": "1 pequeña"
+        },
+        {
+          "name": "Limón",
+          "quantity": "1 unidad"
+        }
       ],
       "steps": [
-        { "step": "Mezcla la pasta con los vegetales y queso." },
-        { "step": "Aliña con aceite de oliva y jugo de limón." }
+        {
+          "step": "Mezclar todos los ingredientes."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Reposo",
+          "description": "Mejora sabor."
+        },
+        {
+          "title": "Proteica",
+          "description": "Muy saciante."
+        }
       ],
       "images": [
-        "https://example.com/pasta-fria1.webp",
-        "https://example.com/pasta-fria2.webp"
+        "https://example.com/pororojo1.webp",
+        "https://example.com/pororojo2.webp"
       ],
-      "rating": null
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
     },
     {
-      "id": 24,
-      "uid": "R-SAL_000024",
-      "name": "Ensalada de Mango y Aguacate",
-      "description": "Ensalada tropical con mango, aguacate y lechuga.",
-      "imageUrl": "https://example.com/mango-aguacate.jpg",
-      "detailedInfo": "Fresca y ligera, ideal para días calurosos.",
+      "id": 38,
+      "uid": "R-SAL_000038",
+      "name": "Ensalada de Quinoa y Papas",
+      "description": "Ensalada energética y suave.",
+      "imageUrl": "https://example.com/quinoa-papas.jpg",
+      "detailedInfo": "Quinoa cocida combinada con papas.",
       "ingredients": [
-        { "name": "Mango", "quantity": "1 mediano" },
-        { "name": "Aguacate", "quantity": "1 mediano" },
-        { "name": "Lechuga mixta", "quantity": "100g" },
-        { "name": "Cilantro fresco", "quantity": "5g" },
-        { "name": "Aceite de oliva", "quantity": "15ml" },
-        { "name": "Jugo de limón", "quantity": "10ml" },
-        { "name": "Sal y pimienta", "quantity": "Al gusto" }
+        {
+          "name": "Quinoa cocida",
+          "quantity": "250 g"
+        },
+        {
+          "name": "Papas",
+          "quantity": "500 g"
+        },
+        {
+          "name": "Aceite de oliva",
+          "quantity": "3 cdas"
+        }
       ],
       "steps": [
-        { "step": "Corta mango y aguacate en cubos." },
-        { "step": "Mezcla con la lechuga y el cilantro." },
-        { "step": "Aliña con aceite, limón, sal y pimienta." }
+        {
+          "step": "Cocer papas y cortar."
+        },
+        {
+          "step": "Mezclar con quinoa y aliñar."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Equilibrio",
+          "description": "Muy saciante."
+        },
+        {
+          "title": "Textura",
+          "description": "Quinoa suelta."
+        }
       ],
       "images": [
-        "https://example.com/mango-aguacate1.webp",
-        "https://example.com/mango-aguacate2.webp"
+        "https://example.com/quinpapa1.webp",
+        "https://example.com/quinpapa2.webp"
       ],
-      "rating": null
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
     },
     {
-      "id": 25,
-      "uid": "R-SAL_000025",
-      "name": "Ensalada de Kale y Manzana",
-      "description": "Ensalada nutritiva con kale, manzana y frutos secos.",
-      "imageUrl": "https://example.com/kale-manzana.jpg",
-      "detailedInfo": "Rica en vitaminas y antioxidantes, ideal como plato principal saludable.",
+      "id": 39,
+      "uid": "R-SAL_000039",
+      "name": "Ensalada de Repollo y Manzana",
+      "description": "Ensalada fresca y crocante.",
+      "imageUrl": "https://example.com/repollo-manzana.jpg",
+      "detailedInfo": "Repollo rallado con manzana fresca.",
       "ingredients": [
-        { "name": "Kale", "quantity": "100g" },
-        { "name": "Manzana", "quantity": "1 mediana" },
-        { "name": "Nueces", "quantity": "30g" },
-        { "name": "Queso rallado", "quantity": "20g" },
-        { "name": "Aceite de oliva", "quantity": "15ml" },
-        { "name": "Jugo de limón", "quantity": "10ml" }
+        {
+          "name": "Repollo",
+          "quantity": "400 g"
+        },
+        {
+          "name": "Manzana",
+          "quantity": "1 unidad"
+        },
+        {
+          "name": "Limón",
+          "quantity": "1 unidad"
+        }
       ],
       "steps": [
-        { "step": "Lava y trocea el kale." },
-        { "step": "Corta la manzana en cubos y mezcla con el kale." },
-        { "step": "Añade nueces, queso y aliña con aceite y limón." }
+        {
+          "step": "Rallar repollo y manzana."
+        },
+        {
+          "step": "Aliñar y servir."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Crujiente",
+          "description": "Manzana fresca."
+        },
+        {
+          "title": "Equilibrio",
+          "description": "Ácido-dulce."
+        }
       ],
       "images": [
-        "https://example.com/kale-manzana1.webp",
-        "https://example.com/kale-manzana2.webp"
+        "https://example.com/repman1.webp",
+        "https://example.com/repman2.webp"
       ],
-      "rating": null
-    }
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 40,
+      "uid": "R-SAL_000040",
+      "name": "Ensalada de Fideos y Garbanzos",
+      "description": "Ensalada fresca y completa.",
+      "imageUrl": "https://example.com/fideos-garbanzos.jpg",
+      "detailedInfo": "Fideos fríos combinados con garbanzos.",
+      "ingredients": [
+        {
+          "name": "Fideos cocidos",
+          "quantity": "250 g"
+        },
+        {
+          "name": "Garbanzos cocidos",
+          "quantity": "300 g"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Mezclar fideos y garbanzos."
+        },
+        {
+          "step": "Aliñar y servir."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Textura",
+          "description": "Fideos al dente."
+        },
+        {
+          "title": "Saciante",
+          "description": "Plato único."
+        }
+      ],
+      "images": [
+        "https://example.com/fidgar1.webp",
+        "https://example.com/fidgar2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 41,
+      "uid": "R-SAL_000041",
+      "name": "Ensalada de Papas y Espinaca",
+      "description": "Ensalada tibia y suave.",
+      "imageUrl": "https://example.com/papas-espinaca.jpg",
+      "detailedInfo": "Papas cocidas con espinaca fresca.",
+      "ingredients": [
+        {
+          "name": "Papas",
+          "quantity": "600 g"
+        },
+        {
+          "name": "Espinaca",
+          "quantity": "120 g"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Cocer papas."
+        },
+        {
+          "step": "Agregar espinaca y aliñar."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Espinaca",
+          "description": "Agregar al final."
+        },
+        {
+          "title": "Tibia",
+          "description": "Mejor sabor."
+        }
+      ],
+      "images": [
+        "https://example.com/papesp1.webp",
+        "https://example.com/papesp2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 42,
+      "uid": "R-SAL_000042",
+      "name": "Ensalada de Trigo y Verduras",
+      "description": "Ensalada rústica y nutritiva.",
+      "imageUrl": "https://example.com/trigo-verduras.jpg",
+      "detailedInfo": "Trigo cocido con verduras frescas.",
+      "ingredients": [
+        {
+          "name": "Trigo cocido",
+          "quantity": "300 g"
+        },
+        {
+          "name": "Pepino",
+          "quantity": "1 unidad"
+        },
+        {
+          "name": "Tomate",
+          "quantity": "2 unidades"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Mezclar todos los ingredientes."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Grano",
+          "description": "Bien cocido."
+        },
+        {
+          "title": "Ligera",
+          "description": "Ideal verano."
+        }
+      ],
+      "images": [
+        "https://example.com/trigover1.webp",
+        "https://example.com/trigover2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 43,
+      "uid": "R-SAL_000043",
+      "name": "Ensalada de Arroz Integral y Verduras",
+      "description": "Ensalada liviana y energética.",
+      "imageUrl": "https://example.com/arroz-verduras.jpg",
+      "detailedInfo": "Arroz integral cocido con vegetales simples.",
+      "ingredients": [
+        {
+          "name": "Arroz integral cocido",
+          "quantity": "300 g"
+        },
+        {
+          "name": "Zanahoria",
+          "quantity": "1 unidad"
+        },
+        {
+          "name": "Pepino",
+          "quantity": "1 unidad"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Mezclar arroz y vegetales."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Grano",
+          "description": "Bien frío."
+        },
+        {
+          "title": "Textura",
+          "description": "No pastoso."
+        }
+      ],
+      "images": [
+        "https://example.com/arrver1.webp",
+        "https://example.com/arrver2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 44,
+      "uid": "R-SAL_000044",
+      "name": "Ensalada de Papas y Lentejas",
+      "description": "Ensalada rústica y completa.",
+      "imageUrl": "https://example.com/papas-lentejas.jpg",
+      "detailedInfo": "Papas cocidas combinadas con lentejas.",
+      "ingredients": [
+        {
+          "name": "Papas",
+          "quantity": "500 g"
+        },
+        {
+          "name": "Lentejas cocidas",
+          "quantity": "400 g"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Cocer papas y cortar."
+        },
+        {
+          "step": "Mezclar con lentejas y aliñar."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Plato único",
+          "description": "Muy saciante."
+        },
+        {
+          "title": "Textura",
+          "description": "Granos firmes."
+        }
+      ],
+      "images": [
+        "https://example.com/paplent1.webp",
+        "https://example.com/paplent2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 45,
+      "uid": "R-SAL_000045",
+      "name": "Ensalada de Porotos Verdes y Papas",
+      "description": "Ensalada clásica y balanceada.",
+      "imageUrl": "https://example.com/porotos-papas.jpg",
+      "detailedInfo": "Porotos verdes con papas cocidas.",
+      "ingredients": [
+        {
+          "name": "Porotos verdes",
+          "quantity": "300 g"
+        },
+        {
+          "name": "Papas",
+          "quantity": "600 g"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Cocer verduras."
+        },
+        {
+          "step": "Mezclar y aliñar."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Cocción",
+          "description": "Verduras firmes."
+        },
+        {
+          "title": "Simple",
+          "description": "Ideal acompañamiento."
+        }
+      ],
+      "images": [
+        "https://example.com/porpap1.webp",
+        "https://example.com/porpap2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 46,
+      "uid": "R-SAL_000046",
+      "name": "Ensalada de Cous Cous y Verduras Asadas",
+      "description": "Ensalada tibia y aromática.",
+      "imageUrl": "https://example.com/cous-asado.jpg",
+      "detailedInfo": "Cous cous con verduras asadas.",
+      "ingredients": [
+        {
+          "name": "Cous cous",
+          "quantity": "200 g"
+        },
+        {
+          "name": "Verduras asadas",
+          "quantity": "300 g"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Hidratar cous cous."
+        },
+        {
+          "step": "Mezclar con verduras asadas."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Aromas",
+          "description": "Usar especias."
+        },
+        {
+          "title": "Tibia",
+          "description": "Mejor sabor."
+        }
+      ],
+      "images": [
+        "https://example.com/cousas1.webp",
+        "https://example.com/cousas2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 47,
+      "uid": "R-SAL_000047",
+      "name": "Ensalada de Arroz, Papas y Zanahoria",
+      "description": "Ensalada completa y suave.",
+      "imageUrl": "https://example.com/arroz-papas-zanahoria.jpg",
+      "detailedInfo": "Arroz cocido con papas y zanahoria.",
+      "ingredients": [
+        {
+          "name": "Arroz cocido",
+          "quantity": "300 g"
+        },
+        {
+          "name": "Papas",
+          "quantity": "400 g"
+        },
+        {
+          "name": "Zanahoria",
+          "quantity": "2 unidades"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Cocer verduras y arroz."
+        },
+        {
+          "step": "Mezclar y aliñar."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Textura",
+          "description": "Cortes parejos."
+        },
+        {
+          "title": "Suave",
+          "description": "Ideal fría."
+        }
+      ],
+      "images": [
+        "https://example.com/arrpaz1.webp",
+        "https://example.com/arrpaz2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+      "id": 48,
+      "uid": "R-SAL_000048",
+      "name": "Ensalada de Garbanzos y Betarraga",
+      "description": "Ensalada colorida y nutritiva.",
+      "imageUrl": "https://example.com/garbanzo-betarraga.jpg",
+      "detailedInfo": "Garbanzos cocidos con betarraga y aliño simple.",
+      "ingredients": [
+        {
+          "name": "Garbanzos cocidos",
+          "quantity": "400 g"
+        },
+        {
+          "name": "Betarragas cocidas",
+          "quantity": "400 g"
+        }
+      ],
+      "steps": [
+        {
+          "step": "Cortar betarraga."
+        },
+        {
+          "step": "Mezclar con garbanzos y aliñar."
+        }
+      ],
+      "tips": [
+        {
+          "title": "Color",
+          "description": "Muy vistosa."
+        },
+        {
+          "title": "Textura",
+          "description": "Cortes medianos."
+        }
+      ],
+      "images": [
+        "https://example.com/garbeta1.webp",
+        "https://example.com/garbeta2.webp"
+      ],
+      "rating": null,
+      "servings": null,
+      "time": null,
+      "difficulty": null
+    },
+    {
+  "id": 49,
+  "uid": "R-SAL_000049",
+  "name": "Ensalada Tibia de Papas y Cebolla Morada",
+  "description": "Ensalada tibia, simple y aromática.",
+  "imageUrl": "https://example.com/papas-cebolla-morada.jpg",
+  "detailedInfo": "Papas cocidas mezcladas con cebolla morada y aliño suave de aceite y vinagre.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "700 g" },
+    { "name": "Cebolla morada", "quantity": "1 unidad" },
+    { "name": "Aceite de oliva", "quantity": "3 cdas" },
+    { "name": "Vinagre", "quantity": "1 cda" }
+  ],
+  "steps": [
+    { "step": "Cocer las papas y cortar en cubos." },
+    { "step": "Agregar cebolla y aliñar." },
+    { "step": "Servir tibia." }
+  ],
+  "tips": [
+    { "title": "Cebolla", "description": "Cortar fina para suavizar." },
+    { "title": "Reposo", "description": "Mejora el sabor." }
+  ],
+  "images": [
+    "https://example.com/papasceb1.webp",
+    "https://example.com/papasceb2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 50,
+  "uid": "R-SAL_000050",
+  "name": "Ensalada de Garbanzos y Espinaca Tibia",
+  "description": "Ensalada vegetal, nutritiva y suave.",
+  "imageUrl": "https://example.com/garbanzos-espinaca-tibia.jpg",
+  "detailedInfo": "Garbanzos salteados levemente con espinaca fresca.",
+  "ingredients": [
+    { "name": "Garbanzos cocidos", "quantity": "400 g" },
+    { "name": "Espinaca", "quantity": "120 g" },
+    { "name": "Aceite de oliva", "quantity": "2 cdas" }
+  ],
+  "steps": [
+    { "step": "Saltear brevemente los garbanzos." },
+    { "step": "Agregar espinaca y mezclar." }
+  ],
+  "tips": [
+    { "title": "Espinaca", "description": "Agregar al final." },
+    { "title": "Textura", "description": "No sobrecocer." }
+  ],
+  "images": [
+    "https://example.com/garbespt1.webp",
+    "https://example.com/garbespt2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 51,
+  "uid": "R-SAL_000051",
+  "name": "Ensalada de Arroz, Porotos Negros y Maíz",
+  "description": "Ensalada completa y colorida.",
+  "imageUrl": "https://example.com/arroz-porotos-mais.jpg",
+  "detailedInfo": "Arroz cocido combinado con porotos negros y maíz.",
+  "ingredients": [
+    { "name": "Arroz cocido", "quantity": "300 g" },
+    { "name": "Porotos negros cocidos", "quantity": "300 g" },
+    { "name": "Maíz", "quantity": "200 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar todos los ingredientes." },
+    { "step": "Aliñar al gusto." }
+  ],
+  "tips": [
+    { "title": "Color", "description": "Muy vistosa." },
+    { "title": "Plato único", "description": "Muy saciante." }
+  ],
+  "images": [
+    "https://example.com/arropor1.webp",
+    "https://example.com/arropor2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 52,
+  "uid": "R-SAL_000052",
+  "name": "Ensalada de Papas y Porotos Blancos",
+  "description": "Ensalada rústica y nutritiva.",
+  "imageUrl": "https://example.com/papas-porotos-blancos.jpg",
+  "detailedInfo": "Papas cocidas mezcladas con porotos blancos.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "600 g" },
+    { "name": "Porotos blancos cocidos", "quantity": "400 g" }
+  ],
+  "steps": [
+    { "step": "Cocer papas y cortar." },
+    { "step": "Mezclar con porotos y aliñar." }
+  ],
+  "tips": [
+    { "title": "Textura", "description": "Cortes medianos." },
+    { "title": "Simple", "description": "Ideal acompañamiento." }
+  ],
+  "images": [
+    "https://example.com/papabl1.webp",
+    "https://example.com/papabl2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 53,
+  "uid": "R-SAL_000053",
+  "name": "Ensalada de Quinoa, Zanahoria y Pepino",
+  "description": "Ensalada fresca y liviana.",
+  "imageUrl": "https://example.com/quinoa-zanahoria.jpg",
+  "detailedInfo": "Quinoa cocida combinada con vegetales crudos.",
+  "ingredients": [
+    { "name": "Quinoa cocida", "quantity": "250 g" },
+    { "name": "Zanahoria", "quantity": "1 unidad" },
+    { "name": "Pepino", "quantity": "1 unidad" }
+  ],
+  "steps": [
+    { "step": "Mezclar quinoa y vegetales." },
+    { "step": "Aliñar y servir fría." }
+  ],
+  "tips": [
+    { "title": "Quinoa", "description": "Bien fría." },
+    { "title": "Frescura", "description": "Ideal verano." }
+  ],
+  "images": [
+    "https://example.com/quinoza1.webp",
+    "https://example.com/quinoza2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 54,
+  "uid": "R-SAL_000054",
+  "name": "Ensalada de Lentejas, Tomate y Cebolla",
+  "description": "Ensalada simple y nutritiva.",
+  "imageUrl": "https://example.com/lentejas-tomate.jpg",
+  "detailedInfo": "Lentejas cocidas con tomate fresco y cebolla.",
+  "ingredients": [
+    { "name": "Lentejas cocidas", "quantity": "400 g" },
+    { "name": "Tomate", "quantity": "2 unidades" },
+    { "name": "Cebolla", "quantity": "1 pequeña" }
+  ],
+  "steps": [
+    { "step": "Mezclar todos los ingredientes." },
+    { "step": "Aliñar y reposar." }
+  ],
+  "tips": [
+    { "title": "Reposo", "description": "Mejora sabor." },
+    { "title": "Textura", "description": "Lentejas firmes." }
+  ],
+  "images": [
+    "https://example.com/lentom1.webp",
+    "https://example.com/lentom2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 55,
+  "uid": "R-SAL_000055",
+  "name": "Ensalada de Papas Asadas y Zanahoria",
+  "description": "Ensalada tibia y dulce.",
+  "imageUrl": "https://example.com/papas-zanahoria-asadas.jpg",
+  "detailedInfo": "Papas y zanahorias asadas con aliño simple.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "500 g" },
+    { "name": "Zanahorias", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Asar verduras hasta dorar." },
+    { "step": "Aliñar y servir tibias." }
+  ],
+  "tips": [
+    { "title": "Horno", "description": "Bien caliente." },
+    { "title": "Dorado", "description": "No amontonar." }
+  ],
+  "images": [
+    "https://example.com/papazan1.webp",
+    "https://example.com/papazan2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 56,
+  "uid": "R-SAL_000056",
+  "name": "Ensalada de Arroz y Porotos Verdes",
+  "description": "Ensalada fresca y balanceada.",
+  "imageUrl": "https://example.com/arroz-porotos-verdes.jpg",
+  "detailedInfo": "Arroz cocido con porotos verdes.",
+  "ingredients": [
+    { "name": "Arroz cocido", "quantity": "300 g" },
+    { "name": "Porotos verdes", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Cocer porotos verdes." },
+    { "step": "Mezclar con arroz y aliñar." }
+  ],
+  "tips": [
+    { "title": "Textura", "description": "Verduras firmes." },
+    { "title": "Ligera", "description": "Ideal acompañamiento." }
+  ],
+  "images": [
+    "https://example.com/arrporv1.webp",
+    "https://example.com/arrporv2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 57,
+  "uid": "R-SAL_000057",
+  "name": "Ensalada de Cous Cous y Papas",
+  "description": "Ensalada suave y saciante.",
+  "imageUrl": "https://example.com/couscous-papas.jpg",
+  "detailedInfo": "Cous cous hidratado combinado con papas cocidas.",
+  "ingredients": [
+    { "name": "Cous cous", "quantity": "200 g" },
+    { "name": "Papas", "quantity": "400 g" }
+  ],
+  "steps": [
+    { "step": "Hidratar cous cous." },
+    { "step": "Mezclar con papas y aliñar." }
+  ],
+  "tips": [
+    { "title": "Grano suelto", "description": "Soltar con tenedor." },
+    { "title": "Equilibrada", "description": "Plato único." }
+  ],
+  "images": [
+    "https://example.com/couspapa1.webp",
+    "https://example.com/couspapa2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 58,
+  "uid": "R-SAL_000058",
+  "name": "Ensalada de Garbanzos, Tomate y Pepino",
+  "description": "Ensalada fresca y liviana.",
+  "imageUrl": "https://example.com/garbanzos-tomate-pepino.jpg",
+  "detailedInfo": "Garbanzos cocidos con vegetales frescos.",
+  "ingredients": [
+    { "name": "Garbanzos cocidos", "quantity": "400 g" },
+    { "name": "Tomate", "quantity": "2 unidades" },
+    { "name": "Pepino", "quantity": "1 unidad" }
+  ],
+  "steps": [
+    { "step": "Mezclar todos los ingredientes." }
+  ],
+  "tips": [
+    { "title": "Fresca", "description": "Ideal verano." },
+    { "title": "Proteica", "description": "Muy saciante." }
+  ],
+  "images": [
+    "https://example.com/garbape1.webp",
+    "https://example.com/garbape2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 59,
+  "uid": "R-SAL_000059",
+  "name": "Ensalada de Papas y Arroz",
+  "description": "Ensalada simple y contundente.",
+  "imageUrl": "https://example.com/papas-arroz.jpg",
+  "detailedInfo": "Papas cocidas combinadas con arroz.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "500 g" },
+    { "name": "Arroz cocido", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Cocer papas y arroz." },
+    { "step": "Mezclar y aliñar." }
+  ],
+  "tips": [
+    { "title": "Cortes", "description": "Parejos." },
+    { "title": "Saciante", "description": "Plato único." }
+  ],
+  "images": [
+    "https://example.com/paparroz1.webp",
+    "https://example.com/paparroz2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 60,
+  "uid": "R-SAL_000060",
+  "name": "Ensalada de Lentejas y Zapallo Asado",
+  "description": "Ensalada tibia y aromática.",
+  "imageUrl": "https://example.com/lentejas-zapallo.jpg",
+  "detailedInfo": "Lentejas cocidas con zapallo asado.",
+  "ingredients": [
+    { "name": "Lentejas cocidas", "quantity": "400 g" },
+    { "name": "Zapallo asado", "quantity": "400 g" }
+  ],
+  "steps": [
+    { "step": "Asar zapallo." },
+    { "step": "Mezclar con lentejas y aliñar." }
+  ],
+  "tips": [
+    { "title": "Aromas", "description": "Ideal con comino." },
+    { "title": "Tibia", "description": "Mejor sabor." }
+  ],
+  "images": [
+    "https://example.com/lenzap1.webp",
+    "https://example.com/lenzap2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 61,
+  "uid": "R-SAL_000061",
+  "name": "Ensalada de Arroz, Garbanzos y Zanahoria",
+  "description": "Ensalada balanceada y nutritiva.",
+  "imageUrl": "https://example.com/arroz-garbanzos-zanahoria.jpg",
+  "detailedInfo": "Arroz cocido combinado con garbanzos y zanahoria.",
+  "ingredients": [
+    { "name": "Arroz cocido", "quantity": "300 g" },
+    { "name": "Garbanzos cocidos", "quantity": "300 g" },
+    { "name": "Zanahoria", "quantity": "1 unidad" }
+  ],
+  "steps": [
+    { "step": "Mezclar todos los ingredientes." }
+  ],
+  "tips": [
+    { "title": "Color", "description": "Muy vistosa." },
+    { "title": "Plato único", "description": "Saciante." }
+  ],
+  "images": [
+    "https://example.com/arrgarza1.webp",
+    "https://example.com/arrgarza2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 62,
+  "uid": "R-SAL_000062",
+  "name": "Ensalada de Papas y Repollo",
+  "description": "Ensalada fresca y crocante.",
+  "imageUrl": "https://example.com/papas-repollo.jpg",
+  "detailedInfo": "Papas cocidas combinadas con repollo rallado.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "600 g" },
+    { "name": "Repollo", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Cocer papas y enfriar." },
+    { "step": "Mezclar con repollo y aliñar." }
+  ],
+  "tips": [
+    { "title": "Crujiente", "description": "Repollo fresco." },
+    { "title": "Contraste", "description": "Texturas." }
+  ],
+  "images": [
+    "https://example.com/paprep1.webp",
+    "https://example.com/paprep2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 63,
+  "uid": "R-SAL_000063",
+  "name": "Ensalada de Cous Cous, Garbanzos y Verduras",
+  "description": "Ensalada completa y aromática.",
+  "imageUrl": "https://example.com/couscous-garbanzos-verduras.jpg",
+  "detailedInfo": "Cous cous hidratado con garbanzos y vegetales.",
+  "ingredients": [
+    { "name": "Cous cous", "quantity": "200 g" },
+    { "name": "Garbanzos cocidos", "quantity": "300 g" },
+    { "name": "Verduras mixtas", "quantity": "200 g" }
+  ],
+  "steps": [
+    { "step": "Hidratar cous cous." },
+    { "step": "Mezclar con garbanzos y verduras." }
+  ],
+  "tips": [
+    { "title": "Aromas", "description": "Agregar especias." },
+    { "title": "Equilibrada", "description": "Plato único." }
+  ],
+  "images": [
+    "https://example.com/cousgarv1.webp",
+    "https://example.com/cousgarv2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 64,
+  "uid": "R-SAL_000064",
+  "name": "Ensalada de Papas, Lentejas y Zanahoria",
+  "description": "Ensalada rústica y nutritiva.",
+  "imageUrl": "https://example.com/papas-lentejas-zanahoria.jpg",
+  "detailedInfo": "Papas cocidas con lentejas y zanahoria.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "500 g" },
+    { "name": "Lentejas cocidas", "quantity": "400 g" },
+    { "name": "Zanahoria", "quantity": "1 unidad" }
+  ],
+  "steps": [
+    { "step": "Cocer verduras." },
+    { "step": "Mezclar con lentejas y aliñar." }
+  ],
+  "tips": [
+    { "title": "Plato único", "description": "Muy saciante." },
+    { "title": "Textura", "description": "Cortes medianos." }
+  ],
+  "images": [
+    "https://example.com/paplentza1.webp",
+    "https://example.com/paplentza2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 65,
+  "uid": "R-SAL_000065",
+  "name": "Ensalada de Papas, Arvejas y Huevo",
+  "description": "Ensalada suave y reconfortante.",
+  "imageUrl": "https://example.com/papas-arvejas-huevo.jpg",
+  "detailedInfo": "Papas cocidas combinadas con arvejas y huevo duro.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "600 g" },
+    { "name": "Arvejas", "quantity": "200 g" },
+    { "name": "Huevos duros", "quantity": "2 unidades" }
+  ],
+  "steps": [
+    { "step": "Cocer papas y huevos." },
+    { "step": "Mezclar con arvejas y aliñar." }
+  ],
+  "tips": [
+    { "title": "Huevos", "description": "Agregar al final." },
+    { "title": "Textura", "description": "Papas firmes." }
+  ],
+  "images": [
+    "https://example.com/paparv1.webp",
+    "https://example.com/paparv2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 66,
+  "uid": "R-SAL_000066",
+  "name": "Ensalada de Lentejas y Papa Asada",
+  "description": "Ensalada tibia y saciante.",
+  "imageUrl": "https://example.com/lentejas-papa-asada.jpg",
+  "detailedInfo": "Lentejas cocidas con papas asadas.",
+  "ingredients": [
+    { "name": "Lentejas cocidas", "quantity": "400 g" },
+    { "name": "Papas asadas", "quantity": "500 g" }
+  ],
+  "steps": [
+    { "step": "Asar papas hasta dorar." },
+    { "step": "Mezclar con lentejas y aliñar." }
+  ],
+  "tips": [
+    { "title": "Temperatura", "description": "Servir tibia." },
+    { "title": "Aromas", "description": "Agregar especias suaves." }
+  ],
+  "images": [
+    "https://example.com/lenpap1.webp",
+    "https://example.com/lenpap2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 67,
+  "uid": "R-SAL_000067",
+  "name": "Ensalada de Arroz Integral y Verduras",
+  "description": "Ensalada nutritiva y balanceada.",
+  "imageUrl": "https://example.com/arroz-integral-verduras.jpg",
+  "detailedInfo": "Arroz integral cocido con verduras variadas.",
+  "ingredients": [
+    { "name": "Arroz integral cocido", "quantity": "300 g" },
+    { "name": "Verduras mixtas", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Cocer arroz integral." },
+    { "step": "Mezclar con verduras y aliñar." }
+  ],
+  "tips": [
+    { "title": "Grano", "description": "Bien suelto." },
+    { "title": "Fibra", "description": "Muy saciante." }
+  ],
+  "images": [
+    "https://example.com/arrint1.webp",
+    "https://example.com/arrint2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 68,
+  "uid": "R-SAL_000068",
+  "name": "Ensalada de Garbanzos y Zapallo Asado",
+  "description": "Ensalada tibia y aromática.",
+  "imageUrl": "https://example.com/garbanzos-zapallo.jpg",
+  "detailedInfo": "Garbanzos cocidos combinados con zapallo asado.",
+  "ingredients": [
+    { "name": "Garbanzos cocidos", "quantity": "400 g" },
+    { "name": "Zapallo asado", "quantity": "400 g" }
+  ],
+  "steps": [
+    { "step": "Asar zapallo hasta dorar." },
+    { "step": "Mezclar con garbanzos y aliñar." }
+  ],
+  "tips": [
+    { "title": "Dorado", "description": "Mejor sabor." },
+    { "title": "Especias", "description": "Comino o paprika." }
+  ],
+  "images": [
+    "https://example.com/garzap1.webp",
+    "https://example.com/garzap2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 69,
+  "uid": "R-SAL_000069",
+  "name": "Ensalada de Papas, Porotos Verdes y Zanahoria",
+  "description": "Ensalada fresca y colorida.",
+  "imageUrl": "https://example.com/papas-porotos-verdes-zanahoria.jpg",
+  "detailedInfo": "Papas cocidas con porotos verdes y zanahoria.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "500 g" },
+    { "name": "Porotos verdes", "quantity": "250 g" },
+    { "name": "Zanahoria", "quantity": "1 unidad" }
+  ],
+  "steps": [
+    { "step": "Cocer verduras." },
+    { "step": "Mezclar y aliñar." }
+  ],
+  "tips": [
+    { "title": "Textura", "description": "Verduras firmes." },
+    { "title": "Color", "description": "Muy vistosa." }
+  ],
+  "images": [
+    "https://example.com/papverza1.webp",
+    "https://example.com/papverza2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 70,
+  "uid": "R-SAL_000070",
+  "name": "Ensalada de Cous Cous y Verduras Asadas",
+  "description": "Ensalada tibia y aromática.",
+  "imageUrl": "https://example.com/couscous-verduras-asadas.jpg",
+  "detailedInfo": "Cous cous hidratado con verduras asadas.",
+  "ingredients": [
+    { "name": "Cous cous", "quantity": "200 g" },
+    { "name": "Verduras asadas", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Hidratar cous cous." },
+    { "step": "Mezclar con verduras asadas." }
+  ],
+  "tips": [
+    { "title": "Aromas", "description": "Agregar hierbas." },
+    { "title": "Textura", "description": "Soltar grano." }
+  ],
+  "images": [
+    "https://example.com/cousverd1.webp",
+    "https://example.com/cousverd2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 71,
+  "uid": "R-SAL_000071",
+  "name": "Ensalada de Arroz y Lentejas",
+  "description": "Ensalada simple y completa.",
+  "imageUrl": "https://example.com/arroz-lentejas.jpg",
+  "detailedInfo": "Arroz cocido combinado con lentejas.",
+  "ingredients": [
+    { "name": "Arroz cocido", "quantity": "300 g" },
+    { "name": "Lentejas cocidas", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar arroz y lentejas." }
+  ],
+  "tips": [
+    { "title": "Plato único", "description": "Muy saciante." },
+    { "title": "Sencilla", "description": "Rápida." }
+  ],
+  "images": [
+    "https://example.com/arrlent1.webp",
+    "https://example.com/arrlent2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 72,
+  "uid": "R-SAL_000072",
+  "name": "Ensalada de Papas y Garbanzos",
+  "description": "Ensalada rústica y saciante.",
+  "imageUrl": "https://example.com/papas-garbanzos.jpg",
+  "detailedInfo": "Papas cocidas mezcladas con garbanzos.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "500 g" },
+    { "name": "Garbanzos cocidos", "quantity": "400 g" }
+  ],
+  "steps": [
+    { "step": "Cocer papas." },
+    { "step": "Mezclar con garbanzos y aliñar." }
+  ],
+  "tips": [
+    { "title": "Textura", "description": "Cortes medianos." },
+    { "title": "Proteica", "description": "Muy completa." }
+  ],
+  "images": [
+    "https://example.com/papgar1.webp",
+    "https://example.com/papgar2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 73,
+  "uid": "R-SAL_000073",
+  "name": "Ensalada de Quinoa y Papas",
+  "description": "Ensalada nutritiva y equilibrada.",
+  "imageUrl": "https://example.com/quinoa-papas.jpg",
+  "detailedInfo": "Quinoa cocida combinada con papas.",
+  "ingredients": [
+    { "name": "Quinoa cocida", "quantity": "250 g" },
+    { "name": "Papas", "quantity": "400 g" }
+  ],
+  "steps": [
+    { "step": "Cocer papas y quinoa." },
+    { "step": "Mezclar y aliñar." }
+  ],
+  "tips": [
+    { "title": "Equilibrio", "description": "Muy completa." },
+    { "title": "Textura", "description": "Grano suelto." }
+  ],
+  "images": [
+    "https://example.com/quinpap1.webp",
+    "https://example.com/quinpap2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 74,
+  "uid": "R-SAL_000074",
+  "name": "Ensalada de Papas y Remolacha",
+  "description": "Ensalada colorida y dulce.",
+  "imageUrl": "https://example.com/papas-remolacha.jpg",
+  "detailedInfo": "Papas cocidas con remolacha.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "500 g" },
+    { "name": "Remolacha cocida", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Cocer papas y remolacha." },
+    { "step": "Cortar y mezclar." }
+  ],
+  "tips": [
+    { "title": "Color", "description": "Muy vistosa." },
+    { "title": "Dulzor", "description": "Natural." }
+  ],
+  "images": [
+    "https://example.com/paprem1.webp",
+    "https://example.com/paprem2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 75,
+  "uid": "R-SAL_000075",
+  "name": "Ensalada de Garbanzos y Arroz Integral",
+  "description": "Ensalada energética y nutritiva.",
+  "imageUrl": "https://example.com/garbanzos-arroz-integral.jpg",
+  "detailedInfo": "Garbanzos combinados con arroz integral.",
+  "ingredients": [
+    { "name": "Garbanzos cocidos", "quantity": "400 g" },
+    { "name": "Arroz integral cocido", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar ambos ingredientes." }
+  ],
+  "tips": [
+    { "title": "Fibra", "description": "Alta saciedad." },
+    { "title": "Equilibrio", "description": "Muy completa." }
+  ],
+  "images": [
+    "https://example.com/gararr1.webp",
+    "https://example.com/gararr2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 76,
+  "uid": "R-SAL_000076",
+  "name": "Ensalada de Papas, Zanahoria y Arvejas",
+  "description": "Ensalada suave y colorida.",
+  "imageUrl": "https://example.com/papas-zanahoria-arvejas.jpg",
+  "detailedInfo": "Papas cocidas con zanahoria y arvejas.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "500 g" },
+    { "name": "Zanahoria", "quantity": "1 unidad" },
+    { "name": "Arvejas", "quantity": "200 g" }
+  ],
+  "steps": [
+    { "step": "Cocer verduras." },
+    { "step": "Mezclar y aliñar." }
+  ],
+  "tips": [
+    { "title": "Textura", "description": "Cortes parejos." },
+    { "title": "Suave", "description": "Ideal acompañamiento." }
+  ],
+  "images": [
+    "https://example.com/papzarv1.webp",
+    "https://example.com/papzarv2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 77,
+  "uid": "R-SAL_000077",
+  "name": "Ensalada de Cous Cous y Lentejas",
+  "description": "Ensalada completa y aromática.",
+  "imageUrl": "https://example.com/couscous-lentejas.jpg",
+  "detailedInfo": "Cous cous con lentejas cocidas.",
+  "ingredients": [
+    { "name": "Cous cous", "quantity": "200 g" },
+    { "name": "Lentejas cocidas", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Hidratar cous cous." },
+    { "step": "Mezclar con lentejas." }
+  ],
+  "tips": [
+    { "title": "Plato único", "description": "Muy saciante." },
+    { "title": "Textura", "description": "Grano suelto." }
+  ],
+  "images": [
+    "https://example.com/couslent1.webp",
+    "https://example.com/couslent2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 78,
+  "uid": "R-SAL_000078",
+  "name": "Ensalada de Papas y Porotos Negros",
+  "description": "Ensalada contundente y nutritiva.",
+  "imageUrl": "https://example.com/papas-porotos-negros.jpg",
+  "detailedInfo": "Papas cocidas con porotos negros.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "500 g" },
+    { "name": "Porotos negros cocidos", "quantity": "400 g" }
+  ],
+  "steps": [
+    { "step": "Cocer papas." },
+    { "step": "Mezclar con porotos y aliñar." }
+  ],
+  "tips": [
+    { "title": "Proteína", "description": "Muy saciante." },
+    { "title": "Textura", "description": "Cortes medianos." }
+  ],
+  "images": [
+    "https://example.com/papneg1.webp",
+    "https://example.com/papneg2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 79,
+  "uid": "R-SAL_000079",
+  "name": "Ensalada de Arroz, Papas y Zanahoria",
+  "description": "Ensalada simple y equilibrada.",
+  "imageUrl": "https://example.com/arroz-papas-zanahoria.jpg",
+  "detailedInfo": "Arroz cocido con papas y zanahoria.",
+  "ingredients": [
+    { "name": "Arroz cocido", "quantity": "300 g" },
+    { "name": "Papas", "quantity": "400 g" },
+    { "name": "Zanahoria", "quantity": "1 unidad" }
+  ],
+  "steps": [
+    { "step": "Cocer ingredientes." },
+    { "step": "Mezclar y aliñar." }
+  ],
+  "tips": [
+    { "title": "Plato único", "description": "Muy rendidora." },
+    { "title": "Textura", "description": "Cortes parejos." }
+  ],
+  "images": [
+    "https://example.com/arrpapza1.webp",
+    "https://example.com/arrpapza2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 80,
+  "uid": "R-SAL_000080",
+  "name": "Ensalada de Garbanzos y Papas Asadas",
+  "description": "Ensalada tibia y rústica.",
+  "imageUrl": "https://example.com/garbanzos-papas-asadas.jpg",
+  "detailedInfo": "Garbanzos cocidos combinados con papas asadas.",
+  "ingredients": [
+    { "name": "Garbanzos cocidos", "quantity": "400 g" },
+    { "name": "Papas asadas", "quantity": "500 g" }
+  ],
+  "steps": [
+    { "step": "Asar papas hasta dorar." },
+    { "step": "Mezclar con garbanzos y aliñar." }
+  ],
+  "tips": [
+    { "title": "Textura", "description": "Crujiente por fuera." },
+    { "title": "Tibia", "description": "Mejor sabor." }
+  ],
+  "images": [
+    "https://example.com/garpap1.webp",
+    "https://example.com/garpap2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 81,
+  "uid": "R-SAL_000081",
+  "name": "Ensalada de Papas, Hummus y Verduras",
+  "description": "Ensalada cremosa y nutritiva.",
+  "imageUrl": "https://example.com/papas-hummus-verduras.jpg",
+  "detailedInfo": "Papas cocidas combinadas con verduras frescas y hummus.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "500 g" },
+    { "name": "Hummus", "quantity": "150 g" },
+    { "name": "Verduras mixtas", "quantity": "200 g" }
+  ],
+  "steps": [
+    { "step": "Cocer papas y cortar." },
+    { "step": "Mezclar con verduras y hummus." }
+  ],
+  "tips": [
+    { "title": "Cremosidad", "description": "Agregar hummus poco a poco." },
+    { "title": "Textura", "description": "No sobremezclar." }
+  ],
+  "images": [
+    "https://example.com/paphum1.webp",
+    "https://example.com/paphum2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 82,
+  "uid": "R-SAL_000082",
+  "name": "Ensalada de Lentejas, Arroz y Verduras",
+  "description": "Ensalada completa y balanceada.",
+  "imageUrl": "https://example.com/lentejas-arroz-verduras.jpg",
+  "detailedInfo": "Lentejas y arroz cocidos combinados con verduras.",
+  "ingredients": [
+    { "name": "Lentejas cocidas", "quantity": "300 g" },
+    { "name": "Arroz cocido", "quantity": "300 g" },
+    { "name": "Verduras mixtas", "quantity": "200 g" }
+  ],
+  "steps": [
+    { "step": "Mezclar todos los ingredientes." }
+  ],
+  "tips": [
+    { "title": "Equilibrio", "description": "Muy saciante." },
+    { "title": "Reposo", "description": "Mejora el sabor." }
+  ],
+  "images": [
+    "https://example.com/lenarr1.webp",
+    "https://example.com/lenarr2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 83,
+  "uid": "R-SAL_000083",
+  "name": "Ensalada de Papas, Palta y Garbanzos",
+  "description": "Ensalada cremosa y fresca.",
+  "imageUrl": "https://example.com/papas-palta-garbanzos.jpg",
+  "detailedInfo": "Papas cocidas con palta y garbanzos.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "500 g" },
+    { "name": "Garbanzos cocidos", "quantity": "400 g" },
+    { "name": "Palta", "quantity": "1 unidad" }
+  ],
+  "steps": [
+    { "step": "Cocer papas y enfriar." },
+    { "step": "Mezclar con palta y garbanzos." }
+  ],
+  "tips": [
+    { "title": "Palta", "description": "Agregar al final." },
+    { "title": "Textura", "description": "Cortes medianos." }
+  ],
+  "images": [
+    "https://example.com/papalt1.webp",
+    "https://example.com/papalt2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 84,
+  "uid": "R-SAL_000084",
+  "name": "Ensalada de Arroz, Papas y Porotos Blancos",
+  "description": "Ensalada rústica y nutritiva.",
+  "imageUrl": "https://example.com/arroz-papas-porotos.jpg",
+  "detailedInfo": "Arroz cocido con papas y porotos blancos.",
+  "ingredients": [
+    { "name": "Arroz cocido", "quantity": "300 g" },
+    { "name": "Papas", "quantity": "400 g" },
+    { "name": "Porotos blancos cocidos", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Cocer ingredientes." },
+    { "step": "Mezclar y aliñar." }
+  ],
+  "tips": [
+    { "title": "Saciante", "description": "Ideal plato único." },
+    { "title": "Textura", "description": "Cortes parejos." }
+  ],
+  "images": [
+    "https://example.com/arrpapbl1.webp",
+    "https://example.com/arrpapbl2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 85,
+  "uid": "R-SAL_000085",
+  "name": "Ensalada de Papas Asadas y Porotos Verdes",
+  "description": "Ensalada tibia y crujiente.",
+  "imageUrl": "https://example.com/papas-asadas-porotos-verdes.jpg",
+  "detailedInfo": "Papas asadas combinadas con porotos verdes.",
+  "ingredients": [
+    { "name": "Papas asadas", "quantity": "500 g" },
+    { "name": "Porotos verdes", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Asar papas hasta dorar." },
+    { "step": "Mezclar con porotos verdes." }
+  ],
+  "tips": [
+    { "title": "Contraste", "description": "Crujiente y tierno." },
+    { "title": "Temperatura", "description": "Servir tibia." }
+  ],
+  "images": [
+    "https://example.com/papver1.webp",
+    "https://example.com/papver2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 86,
+  "uid": "R-SAL_000086",
+  "name": "Ensalada de Cous Cous, Papas y Garbanzos",
+  "description": "Ensalada completa y especiada.",
+  "imageUrl": "https://example.com/couscous-papas-garbanzos.jpg",
+  "detailedInfo": "Cous cous hidratado con papas y garbanzos.",
+  "ingredients": [
+    { "name": "Cous cous", "quantity": "200 g" },
+    { "name": "Papas", "quantity": "400 g" },
+    { "name": "Garbanzos cocidos", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Hidratar cous cous." },
+    { "step": "Mezclar con papas y garbanzos." }
+  ],
+  "tips": [
+    { "title": "Aromas", "description": "Agregar especias suaves." },
+    { "title": "Equilibrio", "description": "Muy rendidora." }
+  ],
+  "images": [
+    "https://example.com/couspapgar1.webp",
+    "https://example.com/couspapgar2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 87,
+  "uid": "R-SAL_000087",
+  "name": "Ensalada de Lentejas y Papas Cocidas",
+  "description": "Ensalada simple y saciante.",
+  "imageUrl": "https://example.com/lentejas-papas.jpg",
+  "detailedInfo": "Lentejas cocidas mezcladas con papas.",
+  "ingredients": [
+    { "name": "Lentejas cocidas", "quantity": "400 g" },
+    { "name": "Papas", "quantity": "500 g" }
+  ],
+  "steps": [
+    { "step": "Cocer papas." },
+    { "step": "Mezclar con lentejas y aliñar." }
+  ],
+  "tips": [
+    { "title": "Textura", "description": "Cortes medianos." },
+    { "title": "Plato único", "description": "Muy rendidora." }
+  ],
+  "images": [
+    "https://example.com/lenpap1.webp",
+    "https://example.com/lenpap2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 88,
+  "uid": "R-SAL_000088",
+  "name": "Ensalada de Arroz Integral, Papas y Zanahoria",
+  "description": "Ensalada nutritiva y equilibrada.",
+  "imageUrl": "https://example.com/arroz-integral-papas-zanahoria.jpg",
+  "detailedInfo": "Arroz integral con papas y zanahoria.",
+  "ingredients": [
+    { "name": "Arroz integral cocido", "quantity": "300 g" },
+    { "name": "Papas", "quantity": "400 g" },
+    { "name": "Zanahoria", "quantity": "1 unidad" }
+  ],
+  "steps": [
+    { "step": "Cocer ingredientes." },
+    { "step": "Mezclar y aliñar." }
+  ],
+  "tips": [
+    { "title": "Fibra", "description": "Alta saciedad." },
+    { "title": "Textura", "description": "Cortes parejos." }
+  ],
+  "images": [
+    "https://example.com/arrintpap1.webp",
+    "https://example.com/arrintpap2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 89,
+  "uid": "R-SAL_000089",
+  "name": "Ensalada de Garbanzos, Papas y Repollo",
+  "description": "Ensalada fresca y crocante.",
+  "imageUrl": "https://example.com/garbanzos-papas-repollo.jpg",
+  "detailedInfo": "Garbanzos cocidos combinados con papas y repollo.",
+  "ingredients": [
+    { "name": "Garbanzos cocidos", "quantity": "400 g" },
+    { "name": "Papas", "quantity": "400 g" },
+    { "name": "Repollo", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Cocer papas." },
+    { "step": "Mezclar con repollo y garbanzos." }
+  ],
+  "tips": [
+    { "title": "Crujiente", "description": "Repollo fresco." },
+    { "title": "Contraste", "description": "Texturas." }
+  ],
+  "images": [
+    "https://example.com/garpaprep1.webp",
+    "https://example.com/garpaprep2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 90,
+  "uid": "R-SAL_000090",
+  "name": "Ensalada de Papas, Quinoa y Verduras",
+  "description": "Ensalada completa y ligera.",
+  "imageUrl": "https://example.com/papas-quinoa-verduras.jpg",
+  "detailedInfo": "Papas cocidas combinadas con quinoa y verduras.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "400 g" },
+    { "name": "Quinoa cocida", "quantity": "250 g" },
+    { "name": "Verduras mixtas", "quantity": "200 g" }
+  ],
+  "steps": [
+    { "step": "Cocer papas." },
+    { "step": "Mezclar con quinoa y verduras." }
+  ],
+  "tips": [
+    { "title": "Equilibrio", "description": "Muy balanceada." },
+    { "title": "Textura", "description": "Grano suelto." }
+  ],
+  "images": [
+    "https://example.com/papquin1.webp",
+    "https://example.com/papquin2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 91,
+  "uid": "R-SAL_000091",
+  "name": "Ensalada de Lentejas, Arvejas y Papas",
+  "description": "Ensalada vegetal y nutritiva.",
+  "imageUrl": "https://example.com/lentejas-arvejas-papas.jpg",
+  "detailedInfo": "Lentejas cocidas con arvejas y papas.",
+  "ingredients": [
+    { "name": "Lentejas cocidas", "quantity": "350 g" },
+    { "name": "Arvejas", "quantity": "200 g" },
+    { "name": "Papas", "quantity": "400 g" }
+  ],
+  "steps": [
+    { "step": "Cocer papas." },
+    { "step": "Mezclar con lentejas y arvejas." }
+  ],
+  "tips": [
+    { "title": "Plato único", "description": "Muy rendidor." },
+    { "title": "Textura", "description": "Cortes medianos." }
+  ],
+  "images": [
+    "https://example.com/lenarvpap1.webp",
+    "https://example.com/lenarvpap2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 92,
+  "uid": "R-SAL_000092",
+  "name": "Ensalada de Arroz, Garbanzos y Papas",
+  "description": "Ensalada completa y energética.",
+  "imageUrl": "https://example.com/arroz-garbanzos-papas.jpg",
+  "detailedInfo": "Arroz cocido combinado con garbanzos y papas.",
+  "ingredients": [
+    { "name": "Arroz cocido", "quantity": "300 g" },
+    { "name": "Garbanzos cocidos", "quantity": "300 g" },
+    { "name": "Papas", "quantity": "400 g" }
+  ],
+  "steps": [
+    { "step": "Cocer papas." },
+    { "step": "Mezclar con arroz y garbanzos." }
+  ],
+  "tips": [
+    { "title": "Saciante", "description": "Muy completa." },
+    { "title": "Textura", "description": "Equilibrada." }
+  ],
+  "images": [
+    "https://example.com/arrgarpap1.webp",
+    "https://example.com/arrgarpap2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 93,
+  "uid": "R-SAL_000093",
+  "name": "Ensalada de Papas y Verduras Asadas",
+  "description": "Ensalada tibia y aromática.",
+  "imageUrl": "https://example.com/papas-verduras-asadas.jpg",
+  "detailedInfo": "Papas cocidas combinadas con verduras asadas.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "500 g" },
+    { "name": "Verduras asadas", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Asar verduras." },
+    { "step": "Mezclar con papas." }
+  ],
+  "tips": [
+    { "title": "Dorado", "description": "Más sabor." },
+    { "title": "Tibia", "description": "Ideal servir así." }
+  ],
+  "images": [
+    "https://example.com/papverd1.webp",
+    "https://example.com/papverd2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 94,
+  "uid": "R-SAL_000094",
+  "name": "Ensalada de Cous Cous, Arroz y Verduras",
+  "description": "Ensalada mixta y equilibrada.",
+  "imageUrl": "https://example.com/couscous-arroz-verduras.jpg",
+  "detailedInfo": "Cous cous y arroz combinados con verduras.",
+  "ingredients": [
+    { "name": "Cous cous", "quantity": "150 g" },
+    { "name": "Arroz cocido", "quantity": "250 g" },
+    { "name": "Verduras mixtas", "quantity": "200 g" }
+  ],
+  "steps": [
+    { "step": "Hidratar cous cous." },
+    { "step": "Mezclar con arroz y verduras." }
+  ],
+  "tips": [
+    { "title": "Textura", "description": "Granos sueltos." },
+    { "title": "Rendidora", "description": "Para varios." }
+  ],
+  "images": [
+    "https://example.com/cousarr1.webp",
+    "https://example.com/cousarr2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 95,
+  "uid": "R-SAL_000095",
+  "name": "Ensalada de Papas, Lentejas y Repollo",
+  "description": "Ensalada fresca y contundente.",
+  "imageUrl": "https://example.com/papas-lentejas-repollo.jpg",
+  "detailedInfo": "Papas cocidas con lentejas y repollo.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "400 g" },
+    { "name": "Lentejas cocidas", "quantity": "350 g" },
+    { "name": "Repollo", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Cocer papas." },
+    { "step": "Mezclar con lentejas y repollo." }
+  ],
+  "tips": [
+    { "title": "Crujiente", "description": "Repollo fresco." },
+    { "title": "Plato único", "description": "Muy rendidor." }
+  ],
+  "images": [
+    "https://example.com/paplentrep1.webp",
+    "https://example.com/paplentrep2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 96,
+  "uid": "R-SAL_000096",
+  "name": "Ensalada de Arroz, Papas y Garbanzos",
+  "description": "Ensalada balanceada y nutritiva.",
+  "imageUrl": "https://example.com/arroz-papas-garbanzos.jpg",
+  "detailedInfo": "Arroz cocido con papas y garbanzos.",
+  "ingredients": [
+    { "name": "Arroz cocido", "quantity": "300 g" },
+    { "name": "Papas", "quantity": "400 g" },
+    { "name": "Garbanzos cocidos", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Cocer papas." },
+    { "step": "Mezclar con arroz y garbanzos." }
+  ],
+  "tips": [
+    { "title": "Saciante", "description": "Muy completa." },
+    { "title": "Textura", "description": "Equilibrada." }
+  ],
+  "images": [
+    "https://example.com/arrpapgar1.webp",
+    "https://example.com/arrpapgar2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 97,
+  "uid": "R-SAL_000097",
+  "name": "Ensalada de Papas y Quinoa Roja",
+  "description": "Ensalada nutritiva y colorida.",
+  "imageUrl": "https://example.com/papas-quinoa-roja.jpg",
+  "detailedInfo": "Papas cocidas combinadas con quinoa roja.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "400 g" },
+    { "name": "Quinoa roja cocida", "quantity": "250 g" }
+  ],
+  "steps": [
+    { "step": "Cocer papas." },
+    { "step": "Mezclar con quinoa." }
+  ],
+  "tips": [
+    { "title": "Color", "description": "Muy vistosa." },
+    { "title": "Textura", "description": "Grano firme." }
+  ],
+  "images": [
+    "https://example.com/papquinr1.webp",
+    "https://example.com/papquinr2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 98,
+  "uid": "R-SAL_000098",
+  "name": "Ensalada de Lentejas y Verduras Asadas",
+  "description": "Ensalada tibia y aromática.",
+  "imageUrl": "https://example.com/lentejas-verduras-asadas.jpg",
+  "detailedInfo": "Lentejas cocidas combinadas con verduras asadas.",
+  "ingredients": [
+    { "name": "Lentejas cocidas", "quantity": "400 g" },
+    { "name": "Verduras asadas", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Asar verduras." },
+    { "step": "Mezclar con lentejas." }
+  ],
+  "tips": [
+    { "title": "Aromas", "description": "Hierbas o especias." },
+    { "title": "Tibia", "description": "Mejor sabor." }
+  ],
+  "images": [
+    "https://example.com/lenverd1.webp",
+    "https://example.com/lenverd2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 99,
+  "uid": "R-SAL_000099",
+  "name": "Ensalada de Arroz, Cous Cous y Garbanzos",
+  "description": "Ensalada energética y completa.",
+  "imageUrl": "https://example.com/arroz-couscous-garbanzos.jpg",
+  "detailedInfo": "Arroz y cous cous combinados con garbanzos.",
+  "ingredients": [
+    { "name": "Arroz cocido", "quantity": "250 g" },
+    { "name": "Cous cous", "quantity": "150 g" },
+    { "name": "Garbanzos cocidos", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Hidratar cous cous." },
+    { "step": "Mezclar con arroz y garbanzos." }
+  ],
+  "tips": [
+    { "title": "Rendidora", "description": "Para varios." },
+    { "title": "Equilibrio", "description": "Muy completa." }
+  ],
+  "images": [
+    "https://example.com/arrcousgar1.webp",
+    "https://example.com/arrcousgar2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+},
+{
+  "id": 100,
+  "uid": "R-SAL_000100",
+  "name": "Ensalada de Papas, Garbanzos y Verduras Asadas",
+  "description": "Ensalada final, tibia y muy completa.",
+  "imageUrl": "https://example.com/papas-garbanzos-verduras-asadas.jpg",
+  "detailedInfo": "Papas cocidas combinadas con garbanzos y verduras asadas.",
+  "ingredients": [
+    { "name": "Papas", "quantity": "400 g" },
+    { "name": "Garbanzos cocidos", "quantity": "400 g" },
+    { "name": "Verduras asadas", "quantity": "300 g" }
+  ],
+  "steps": [
+    { "step": "Asar verduras." },
+    { "step": "Mezclar con papas y garbanzos." }
+  ],
+  "tips": [
+    { "title": "Cierre perfecto", "description": "Plato único." },
+    { "title": "Textura", "description": "Equilibrio total." }
+  ],
+  "images": [
+    "https://example.com/papgarverd1.webp",
+    "https://example.com/papgarverd2.webp"
+  ],
+  "rating": null,
+  "servings": null,
+  "time": null,
+  "difficulty": null
+}
+
+
+
   ]
 }
