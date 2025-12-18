@@ -28,18 +28,19 @@ export function getSafeVersionedImage(
 ): ImageSource[] {
   const sources: ImageSource[] = [];
 
-  // prioridad 1: imagen principal
   if (mainUrl) {
     sources.push(getVersionedImageSync(mainUrl));
   }
 
-  // prioridad 2: primera del array
   if (imagesArray?.length) {
-    sources.push(getVersionedImageSync(imagesArray[0]));
+    imagesArray.forEach((url) => {
+      if (url && url !== mainUrl) {
+        sources.push(getVersionedImageSync(url));
+      }
+    });
   }
 
-  // fallback local
-  sources.push(...PLACEHOLDERS);
-
-  return sources;
+  return sources.length ? sources : [
+    PLACEHOLDERS[Math.floor(Math.random() * PLACEHOLDERS.length)]
+  ];
 }

@@ -161,24 +161,23 @@ export default function MainDishRecipeDetail() {
         </View>
 
         {/* IMAGES */}
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          {imageSources.map((src, idx) => (
-            <TouchableOpacity
-              key={idx}
-              onPress={() =>
-                typeof src === "object" && "uri" in src
-                  ? setSelectedImage(src.uri)
-                  : null
-              }
-            >
-              <Image
-                source={src}
-                style={styles.image}
-                contentFit="cover"
-              />
-            </TouchableOpacity>
-          ))}
-        </ScrollView>
+<ScrollView horizontal>
+  {imageSources.map((src, idx) => {
+    const isRemote = typeof src === "object" && "uri" in src;
+
+    return (
+      <TouchableOpacity
+        key={idx}
+        onPress={() => {
+          if (isRemote) setSelectedImage(src.uri);
+        }}
+      >
+        <Image source={src} style={styles.image} />
+      </TouchableOpacity>
+    );
+  })}
+</ScrollView>
+
 
 
         {/* IMAGE MODAL */}

@@ -176,45 +176,73 @@ const AppContent = () => {
     return () => unsub();
   }, [dispatch]);
 
-  // ============================================================
-  // SPLASH INICIAL (CON FRASES)
-  // ============================================================
-  if (initializing) {
-    return (
-      <View
+// SPLASH INICIAL (MEJORADO, SIMPLE, CONSISTENTE)
+if (initializing) {
+  return (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#000",
+        paddingHorizontal: 24,
+      }}
+    >
+      <Image
+        source={require("./assets/usedImages/Logo.png")}
+        style={{ width: 140, height: 140, marginBottom: 30 }}
+        resizeMode="contain"
+      />
+
+      <ActivityIndicator size="large" color="#40E0D0" />
+
+      <Text
         style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundColor: "#000",
-          paddingHorizontal: 20,
+          color: "#ddd",
+          marginTop: 18,
+          fontSize: 16,
+          fontWeight: "500",
         }}
       >
-        <Image
-          source={require("./assets/usedImages/Logo.png")}
-          style={{ width: 140, height: 140, marginBottom: 25 }}
-          resizeMode="contain"
-        />
+        Iniciando ChefSkills…
+      </Text>
 
-        <ActivityIndicator size="large" color="#40E0D0" />
+      <Text
+        style={{
+          color: "#8fdde5",
+          marginTop: 8,
+          fontSize: 13,
+          textAlign: "center",
+          opacity: 0.9,
+        }}
+      >
+        {phrase}
+      </Text>
 
-        <Text style={{ color: "#aaa", marginTop: 15, fontSize: 16 }}>
-          Cargando sesión…
-        </Text>
-
-        <Text
+      {/* fake progress */}
+      <View
+        style={{
+          width: "70%",
+          height: 6,
+          backgroundColor: "rgba(255,255,255,0.2)",
+          borderRadius: 10,
+          marginTop: 18,
+          overflow: "hidden",
+        }}
+      >
+        <View
           style={{
-            color: "#777",
-            marginTop: 10,
-            fontSize: 13,
-            textAlign: "center",
+            width: "60%",
+            height: "100%",
+            backgroundColor: "#40E0D0",
+            borderRadius: 10,
           }}
-        >
-          {phrase}
-        </Text>
+        />
       </View>
-    );
-  }
+    </View>
+  );
+}
+
 
   // ============================================================
   // NAVIGATION

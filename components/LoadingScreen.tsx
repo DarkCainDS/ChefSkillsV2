@@ -20,23 +20,34 @@ import {
 const AnimatedBG = Animated.createAnimatedComponent(ImageBackground);
 
 const STEPS = [
-  "Conectando con Google…",
+  "Conectando con Google… 🔐",
   "Validando sesión…",
-  "Preparando tu cocina…",
-  "Cargando recetas…",
-  "¡Todo listo!",
+  "Preparando tu cocina… 🔥",
+  "Cargando recetas… 📦",
+  "¡Todo listo! 👨‍🍳✨",
 ];
+
+const PHRASES = [
+  "Afilando cuchillos virtuales 🔪",
+  "Encendiendo los fogones 🔥",
+  "Revisando la despensa 📦",
+  "Probando la salsa… 👨‍🍳",
+  "Sirviendo el plato 🍽️",
+];
+
+const STEP_PROGRESS = [0.15, 0.35, 0.6, 0.85, 1];
 
 const LoadingScreen = () => {
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState(0);
+  const [phrase] = useState(
+    PHRASES[Math.floor(Math.random() * PHRASES.length)]
+  );
 
-  const fadeAnim = useRef(new Animated.Value(0)).current;
+  const fadeBG = useRef(new Animated.Value(0)).current;
   const progress = useRef(new Animated.Value(0)).current;
+  const textAnim = useRef(new Animated.Value(0)).current;
 
-  // ------------------------------------------------------------
-  // Fondo random
-  // ------------------------------------------------------------
   const images = [
     require("../assets/LoadingImages/1.webp"),
     require("../assets/LoadingImages/2.webp"),
@@ -47,33 +58,33 @@ const LoadingScreen = () => {
   const bg = images[Math.floor(Math.random() * images.length)];
 
   useEffect(() => {
-    Animated.timing(fadeAnim, {
+    Animated.timing(fadeBG, {
       toValue: 1,
       duration: 600,
       useNativeDriver: true,
     }).start();
   }, []);
 
-  // ------------------------------------------------------------
-  // PROGRESO FAKE (UX)
-  // ------------------------------------------------------------
-  const startProgress = () => {
-    progress.setValue(0);
-    Animated.timing(progress, {
+  useEffect(() => {
+    textAnim.setValue(0);
+    Animated.timing(textAnim, {
       toValue: 1,
-      duration: 2800,
+      duration: 350,
+      useNativeDriver: true,
+    }).start();
+
+    Animated.timing(progress, {
+      toValue: STEP_PROGRESS[step],
+      duration: 500,
       useNativeDriver: false,
     }).start();
-  };
+  }, [step]);
 
-  // ------------------------------------------------------------
-  // LOGIN GOOGLE
-  // ------------------------------------------------------------
   const signInWithGoogle = async () => {
     try {
       setLoading(true);
       setStep(0);
-      startProgress();
+      progress.setValue(0);
 
       await GoogleSignin.hasPlayServices();
       setStep(1);
@@ -88,7 +99,7 @@ const LoadingScreen = () => {
       await signInWithCredential(getAuth(), credential);
 
       setStep(4);
-    } catch (e: any) {
+    } catch (e) {
       console.warn("LOGIN ERROR:", e);
       setLoading(false);
       setStep(0);
@@ -100,9 +111,18 @@ const LoadingScreen = () => {
     outputRange: ["0%", "100%"],
   });
 
-  // ------------------------------------------------------------
-  // RENDER
-  // ------------------------------------------------------------
+  const textStyle = {
+    opacity: textAnim,
+    transform: [
+      {
+        translateY: textAnim.interpolate({
+          inputRange: [0, 1],
+          outputRange: [6, 0],
+        }),
+      },
+    ],
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
@@ -110,7 +130,7 @@ const LoadingScreen = () => {
       <AnimatedBG
         source={bg}
         resizeMode="cover"
-        style={[StyleSheet.absoluteFillObject, { opacity: fadeAnim }]}
+        style={[StyleSheet.absoluteFillObject, { opacity: fadeBG }]}
       />
 
       <View style={styles.overlay} />
@@ -122,9 +142,12 @@ const LoadingScreen = () => {
           </Pressable>
         ) : (
           <>
-            <Text style={styles.text}>{STEPS[step]}</Text>
+            <Animated.Text style={[styles.text, textStyle]}>
+              {STEPS[step]}
+            </Animated.Text>
 
-            {/* PROGRESS BAR */}
+            <Text style={styles.subText}>{phrase}</Text>
+
             <View style={styles.progressBar}>
               <Animated.View
                 style={[styles.progressFill, { width: progressWidth }]}
@@ -139,15 +162,12 @@ const LoadingScreen = () => {
 
 export default LoadingScreen;
 
-// ------------------------------------------------------------
-// STYLES
-// ------------------------------------------------------------
 const styles = StyleSheet.create({
   container: { flex: 1 },
 
   overlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.45)",
+    backgroundColor: "rgba(0,0,0,0.5)",
   },
 
   center: {
@@ -160,15 +180,24 @@ const styles = StyleSheet.create({
   text: {
     color: "#fff",
     fontSize: 18,
-    marginBottom: 20,
+    marginBottom: 8,
     textAlign: "center",
+    fontWeight: "600",
+  },
+
+  subText: {
+    color: "#cfefff",
+    fontSize: 14,
+    marginBottom: 18,
+    textAlign: "center",
+    opacity: 0.9,
   },
 
   button: {
     backgroundColor: "#4285F4",
     paddingVertical: 14,
-    paddingHorizontal: 32,
-    borderRadius: 12,
+    paddingHorizontal: 34,
+    borderRadius: 14,
     elevation: 6,
   },
 
