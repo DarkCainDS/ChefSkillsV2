@@ -3,36 +3,39 @@
     "name": "ChefSkills",
     "slug": "ChefSkills",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
+    "newArchEnabled": true, 
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.darkcainds.chefskills"
     },
     "android": {
       "package": "com.darkcainds.chefskills",
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
       "permissions": [
         "INTERNET",
         "VIBRATE",
-        "ACCESS_NETWORK_STATE"
+        "ACCESS_NETWORK_STATE",
+        "com.android.vending.BILLING"
       ]
     },
     "plugins": [
-      "expo-font"
+      "expo-font",
+      "react-native-iap",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "newArchEnabled": true,
+            "kotlinVersion": "2.0.20"
+          }
+        }
+      ],
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-7628046159186275~6657939549",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511"
+        }
+      ]
     ]
-  },
-  "react-native-google-mobile-ads": {
-    "android_app_id": "ca-app-pub-3940256099942544~3347511713",
-    "ios_app_id": "ca-app-pub-3940256099942544~1458002511"
   }
 }

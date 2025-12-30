@@ -10,7 +10,7 @@ export const AdUnitIds = {
   interstitial: __DEV__
     ? TestIds.INTERSTITIAL
     : Platform.select({
-        android: "ca-app-pub-7628046159186275~6657939549", // ← reemplaza con tu ID real
+        android: "ca-app-pub-7628046159186275/2459588829", // ← reemplaza con tu ID real
         ios: "ca-app-pub-7628046159186275/yyyyyyyyyy",
       }),
 };

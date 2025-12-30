@@ -11,8 +11,12 @@ export async function getActivePlans(): Promise<Plan[]> {
   );
 
   const snap = await getDocs(q);
-  return snap.docs.map((d) => d.data() as Plan);
+  return snap.docs.map((d) => ({
+    id: d.id,
+    ...(d.data() as Omit<Plan, "id">),
+  }));
 }
+
 
 // Trae un plan específico (por si lo necesitas en el watcher global)
 export async function getPlanById(planId: string): Promise<Plan | null> {

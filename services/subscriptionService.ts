@@ -16,24 +16,24 @@ import { setMaxFavorites } from "../store/Slices/FavoriteSlice";
 import { createTransaction } from "./transactionService";
 
 // ============================================================================
-// 🟩 FAVORITES LIMIT POR PLAN (no acumulativo por compra, SOLO por topPlan)
+// 🟩 FAVORITES LIMIT POR PLAN (NO acumulativo, SOLO topPlan)
 // ============================================================================
 export const getFavoritesLimitByPlan = (planId: string): number => {
   switch (planId) {
     case "plan_monthly_basic":
-      return 10;  // base 10 + 0
+      return 10;
     case "plan_quarterly_plus":
-      return 15;  // base 10 + 5
+      return 15;
     case "plan_semiannual_pro":
-      return 20;  // base 10 + 10
+      return 20;
     case "plan_annual_elite":
-      return 30;  // base 10 + 20
+      return 30;
     default:
-      return 10;  // FREE
+      return 10; // FREE
   }
 };
 
-// 🔢 Ranking de planes para saber cuál es "más alto"
+// 🔢 Ranking para determinar el plan MÁS ALTO activo
 const PLAN_RANK: Record<string, number> = {
   plan_monthly_basic: 1,
   plan_quarterly_plus: 2,
@@ -44,12 +44,22 @@ const PLAN_RANK: Record<string, number> = {
 const getPlanRank = (planId: string): number => PLAN_RANK[planId] ?? 0;
 
 // ============================================================================
-// 🟦 subscribeUser — CREA/ACTUALIZA LA SUBSCRIPCIÓN
-//   ✔ Acumula meses si la suscripción sigue activa
-//   ✔ Mantiene beneficios del plan MÁS ALTO mientras no expire
-//   ✔ Si se deja expirar → se resetea al plan que se compre
+// 🟦 subscribeUser — CREA / ACTUALIZA SUSCRIPCIÓN (GOOGLE PLAY REAL)
 // ============================================================================
-export const subscribeUser = async (userId: string, plan: any) => {
+export const subscribeUser = async (
+  userId: string,
+  plan: {
+    id: string;
+    name: string;
+    durationMonths: number;
+  },
+  billing: {
+    pricePaid: number;       // precio REAL (ej: 3490)
+    currency: string;        // CLP, USD, etc
+    purchaseToken: string;   // token Google Play
+    provider: "google_play";
+  }
+) => {
   try {
     const ref = doc(db, "subscriptions", userId);
     const now = new Date();
@@ -57,7 +67,7 @@ export const subscribeUser = async (userId: string, plan: any) => {
     const prevSnap = await getDoc(ref);
     const prevData = prevSnap.exists() ? prevSnap.data() : null;
 
-    // 1️⃣ Determinar si hay continuidad (expiresAt > ahora)
+    // 1️⃣ Continuidad
     let prevExpires: Date | null = null;
 
     if (prevData?.expiresAt) {
@@ -69,48 +79,43 @@ export const subscribeUser = async (userId: string, plan: any) => {
 
     const hasContinuity = !!(prevExpires && prevExpires > now);
 
-    // 2️⃣ Base para nueva expiración (si hay continuidad → desde prevExpires)
+    // 2️⃣ Nueva expiración
     const baseDate = hasContinuity ? prevExpires! : now;
-
     const expires = new Date(baseDate);
     expires.setMonth(expires.getMonth() + plan.durationMonths);
 
-    // 3️⃣ Determinar el "top plan" de la cadena continua
-    let previousTopPlanId: string | null =
+    // 3️⃣ Determinar topPlan
+    const previousTopPlanId: string | null =
       prevData?.topPlanId || prevData?.planId || null;
 
     let topPlanId: string;
 
     if (hasContinuity && previousTopPlanId) {
-      const prevRank = getPlanRank(previousTopPlanId);
-      const newRank = getPlanRank(plan.id);
-
-      topPlanId = newRank > prevRank ? plan.id : previousTopPlanId;
+      topPlanId =
+        getPlanRank(plan.id) > getPlanRank(previousTopPlanId)
+          ? plan.id
+          : previousTopPlanId;
     } else {
-      // No hay continuidad → se resetea el top al plan actual
       topPlanId = plan.id;
     }
 
     const favoritesLimit = getFavoritesLimitByPlan(topPlanId);
 
-    // 4️⃣ Data a guardar en Firestore
+    // 4️⃣ Guardar suscripción
     const data = {
       userId,
 
-      // Plan actual (último comprado, lo que verá el usuario en el menú)
       planId: plan.id,
       planName: plan.name,
 
-      // Plan más alto de la cadena continua (para beneficios reales)
       topPlanId,
-
       isActive: true,
 
-      favoritesLimit, // límite FINAL aplicado en la app
-
+      favoritesLimit,
       durationMonths: plan.durationMonths,
-      pricePaid: plan.basePriceCents / 100,
-      currency: plan.currency,
+
+      pricePaid: billing.pricePaid,
+      currency: billing.currency,
 
       expiresAt: expires.toISOString(),
 
@@ -120,19 +125,19 @@ export const subscribeUser = async (userId: string, plan: any) => {
 
     await setDoc(ref, data, { merge: true });
 
-    // 5️⃣ Guardar en historial de compras
+    // 5️⃣ Historial REAL
     await createTransaction(userId, {
       planId: plan.id,
       planName: plan.name,
       durationMonths: plan.durationMonths,
-      pricePaid: plan.basePriceCents / 100,
-      currency: plan.currency,
+      pricePaid: billing.pricePaid,
+      currency: billing.currency,
       expiresAt: expires.toISOString(),
-      paymentProvider: "internal", // luego "google_play"
-      purchaseToken: null,
+      paymentProvider: billing.provider,
+      purchaseToken: billing.purchaseToken,
     });
 
-    console.log("🔥 Suscripción creada/actualizada + historial:", data);
+    console.log("🔥 Suscripción PRO creada:", data);
     return data;
   } catch (error) {
     console.error("❌ Error en subscribeUser:", error);
@@ -141,7 +146,7 @@ export const subscribeUser = async (userId: string, plan: any) => {
 };
 
 // ============================================================================
-// 🟥 unsubscribeUser — DESACTIVAR SUBSCRIPCIÓN
+// 🟥 unsubscribeUser — DESACTIVA (NO BORRA)
 // ============================================================================
 export const unsubscribeUser = async (userId: string) => {
   try {
@@ -158,9 +163,7 @@ export const unsubscribeUser = async (userId: string) => {
 };
 
 // ============================================================================
-// 🟦 checkSubscriptionStatus — EJECUTADO EN App.tsx
-//   ✔ Respeta topPlanId
-//   ✔ Usa favoritesLimit guardado (si existe) o lo calcula
+// 🟦 checkSubscriptionStatus — RESTAURA ESTADO AL INICIAR APP
 // ============================================================================
 export const checkSubscriptionStatus = async (
   userId: string,
@@ -170,7 +173,7 @@ export const checkSubscriptionStatus = async (
     const ref = doc(db, "subscriptions", userId);
     const snap = await getDoc(ref);
 
-    // ❌ No existe → FREE
+    // ❌ FREE
     if (!snap.exists()) {
       dispatch(setSubscriptionPremium(false));
       dispatch(unsubscribeAction());
@@ -181,16 +184,12 @@ export const checkSubscriptionStatus = async (
 
     const data = snap.data();
 
-    // Expiración a Date
     const exp =
       typeof data.expiresAt === "string"
         ? new Date(data.expiresAt)
         : data.expiresAt?.toDate?.() ?? null;
 
-    const now = new Date();
-
-    // ❌ Expirada
-    if (!exp || now > exp) {
+    if (!exp || new Date() > exp) {
       await setDoc(
         ref,
         { isActive: false, updatedAt: serverTimestamp() },
@@ -204,25 +203,11 @@ export const checkSubscriptionStatus = async (
       return null;
     }
 
-    // ✔ Activa
-    const storedLimit =
-      typeof data.favoritesLimit === "number" ? data.favoritesLimit : null;
-
+    // ✔ ACTIVA
     const limit =
-      storedLimit ??
-      getFavoritesLimitByPlan(data.topPlanId || data.planId || "");
-
-    // Aseguramos que, si falta favoritesLimit, se re-escriba correcto
-    if (!storedLimit) {
-      await setDoc(
-        ref,
-        {
-          favoritesLimit: limit,
-          updatedAt: serverTimestamp(),
-        },
-        { merge: true }
-      );
-    }
+      typeof data.favoritesLimit === "number"
+        ? data.favoritesLimit
+        : getFavoritesLimitByPlan(data.topPlanId || data.planId);
 
     dispatch(
       subscribePlanAction({

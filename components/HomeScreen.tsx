@@ -25,7 +25,6 @@ import { setPremium } from '../store/Slices/userSlice';
 
 import { loadFavoritesFromStorage } from '../store/storage/FavoriteStorage';
 import { auth } from '../services/firebaseConfig';
-import { subscribeUser } from '../services/subscriptionService';
 
 import MainDishRecipeListMain from '../components/List/MainDishRecipeListMain';
 import PastryRecipeListMain from './List/PastryRecipeListMain';
@@ -43,12 +42,7 @@ import Marketplace from '../components/MarketPlace';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useNavigation } from "@react-navigation/native";
 
-type Plan = {
-  id: string;
-  name: string;
-  price: number;
-  currency: string;
-};
+
 
 type RootStackParamList = {
   Menu: undefined;
@@ -209,32 +203,7 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
   }, []);
 
 
-  // ============================================================
-  // SUSCRIPCIÓN
-  // ============================================================
-  const handleSubscribe = async (plan: Plan) => {
-    try {
-      const user = auth.currentUser;
-      if (!user) return;
-
-      const payload = {
-        planId: plan.id,
-        planName: plan.name,
-        pricePaid: plan.price,
-        currency: plan.currency,
-        purchaseProvider: 'server',
-        flashSaleApplied: false,
-      };
-
-      await subscribeUser(user.uid, payload);
-      dispatch(setPremium(true));
-      setModalVisible(false);
-
-    } catch (err) {
-      console.error('Error al suscribirse:', err);
-    }
-  };
-
+ 
 
   // ============================================================
   // SI SUB NO ESTÁ LISTA → LOADING
@@ -264,7 +233,6 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
         <Marketplace
           visible={modalVisible}
           onClose={() => setModalVisible(false)}
-          onSubscribe={handleSubscribe}
         />
 
         <Image
